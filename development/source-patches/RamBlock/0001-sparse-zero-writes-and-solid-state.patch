@@ -1,0 +1,210 @@
+diff --git a/NativeRamBlock.cpp b/NativeRamBlock.cpp
+index 4b96ff8..8a8945f 100644
+--- a/NativeRamBlock.cpp
++++ b/NativeRamBlock.cpp
+@@ -1,6 +1,7 @@
+ // SPDX-License-Identifier: BSD-2-Clause-Patent
+ #include <IOKit/IOLib.h>
+ #include <IOKit/storage/IOBlockStorageDevice.h>
++#include <IOKit/storage/IOStorageDeviceCharacteristics.h>
+ #include <IOKit/IODeviceTreeSupport.h>
+ #include <libkern/c++/OSData.h>
+ #include <libkern/c++/OSDictionary.h>
+@@ -28,6 +29,7 @@ volatile uint64_t native_ram_block_reads = 0;
+ volatile uint64_t native_ram_block_writes = 0;
+ volatile uint64_t native_ram_block_failures = 0;
+ volatile uint64_t native_ram_block_resident_bytes = 0;
++volatile uint64_t native_ram_block_zero_write_bytes = 0;
+ volatile uint32_t native_ram_block_sparse = 0;
+ uint8_t native_ram_block_seed_sha256[32];
+ // Optional persistence of the changed pages through a board-provided store window (see PersistOverlay.h). All weak: a build
+@@ -50,6 +52,7 @@ class NativeRamBlock : public IOBlockStorageDevice {
+   OSDeclareDefaultStructors(NativeRamBlock)
+   IOLock *gate = nullptr;
+   uint8_t *memory = nullptr;
++  uint8_t *writeScratch = nullptr;
+   uint64_t capacity = 0;
+   bool online = false;
+   RamSparseDisk sparse = {};
+@@ -185,7 +188,16 @@ OSDefineMetaClassAndStructors(NativeRamBlock, IOBlockStorageDevice)
+ 
+ bool NativeRamBlock::start(IOService *provider)
+ {
+-  if (!IOBlockStorageDevice::start(provider)) return false;
++  // RAM and the optional UFS-backed store have no rotational seek latency.
++  // Publish before the storage family creates IOMedia and serves DKIOCISSOLIDSTATE.
++  OSDictionary *characteristics = OSDictionary::withCapacity(1);
++  OSString *medium = OSString::withCString(kIOPropertyMediumTypeSolidStateKey);
++  bool published = characteristics && medium &&
++      characteristics->setObject(kIOPropertyMediumTypeKey, medium) &&
++      setProperty(kIOPropertyDeviceCharacteristicsKey, characteristics);
++  if (medium) medium->release();
++  if (characteristics) characteristics->release();
++  if (!published || !IOBlockStorageDevice::start(provider)) return false;
+   IORegistryEntry *map = IORegistryEntry::fromPath("/chosen/memory-map", gIODTPlane);
+   if (!map) return false;
+   OSData *packed = OSDynamicCast(OSData, map->getProperty("PackedRAMDisk"));
+@@ -220,6 +232,8 @@ bool NativeRamBlock::start(IOService *provider)
+       sparse.bytes=logical;
+       sparse.pages=static_cast<uint8_t **>(IOMallocZero((logical/4096)*sizeof(uint8_t *)));
+       if(!ramSparseImport(sparse,memory,bytes,ops))return false;
++      writeScratch=static_cast<uint8_t *>(IOMallocZero(4096));
++      if(!writeScratch)return false;
+     }
+   }
+   capacity = logical / 512;
+@@ -308,14 +322,19 @@ IOReturn NativeRamBlock::doAsyncReadWrite(IOMemoryDescriptor *buffer, UInt64 blo
+       }
+       if(write && actual){__atomic_fetch_add(&native_data_persist_writes,(actual+4095)/4096,__ATOMIC_RELAXED);__atomic_fetch_add(&native_data_persist_syncs,1,__ATOMIC_RELAXED);native_data_persist_present=overlay.present;}
+     } else {
+-    actual=ramSparseIO(sparse,write,block*512,bytes,ops,noMemory);
++    actual=ramSparseIO(sparse,write,block*512,bytes,ops,writeScratch,noMemory);
+     }
+     if(!direct && write && actual==bytes && overlay.active && !overlay.readOnly){
+       StoreOps store;
+       uint64_t firstPage=block*512/4096,lastPage=(block*512+bytes-1)/4096;
+       for(uint64_t i=firstPage;i<=lastPage && overlay.active;){
+         uint32_t n=0;
+-        while(n<kStagePages && i+n<=lastPage && sparse.pages[i+n]){memcpy(stage+(uint64_t)n*persist::kBlock,sparse.pages[i+n],persist::kBlock);++n;}
++        while(n<kStagePages && i+n<=lastPage){
++          uint8_t *dst=stage+(uint64_t)n*persist::kBlock;
++          if(sparse.pages[i+n])memcpy(dst,sparse.pages[i+n],persist::kBlock);
++          else memset(dst,0,persist::kBlock);
++          ++n;
++        }
+         if(!n || !overlay.writeRun(store,i,n,stage)){persistFailed();break;}
+         __atomic_fetch_add(&native_data_persist_writes,n,__ATOMIC_RELAXED);
+         __atomic_fetch_add(&native_data_persist_syncs,1,__ATOMIC_RELAXED);   // one run = one durable commit
+@@ -326,6 +345,7 @@ IOReturn NativeRamBlock::doAsyncReadWrite(IOMemoryDescriptor *buffer, UInt64 blo
+     if(write)__atomic_fetch_add(&native_ram_block_writes,1,__ATOMIC_RELAXED);
+     else __atomic_fetch_add(&native_ram_block_reads,1,__ATOMIC_RELAXED);
+     native_ram_block_resident_bytes=isBig?big.resident:sparse.resident;
++    native_ram_block_zero_write_bytes=sparse.zeroWriteBytes;
+   }else if (buffer->getDirection() == kIODirectionIn) {
+     actual = buffer->writeBytes(0, memory + block * 512, bytes);
+     __atomic_fetch_add(&native_ram_block_reads, 1, __ATOMIC_RELAXED);
+@@ -356,6 +376,7 @@ void NativeRamBlock::free()
+     if (big.page) IOFree(big.page, (big.capacity ? big.capacity : 1) * sizeof(uint8_t *));
+     big = {}; isBig = false;
+   }
++  if (writeScratch) { IOFree(writeScratch,4096); writeScratch=nullptr; }
+   if (gate) { IOLockFree(gate); gate = nullptr; }
+   if(sparse.pages){
+     for(uint64_t i=0;i<sparse.bytes/4096;++i)if(sparse.pages[i])IOFree(sparse.pages[i],4096);
+diff --git a/README.md b/README.md
+index d1d6b3d..266ef13 100644
+--- a/README.md
++++ b/README.md
+@@ -5,3 +5,7 @@ RAM-backed block device and sparse seed storage.
+ used for the RAM-backed Data volume and the optional persistent overlay.
+ 
+ Build and interface details: [documentation](https://unixnu.com/drivers/ram-block). Component sources and dependencies: [catalog](https://unixnu.com/reference/components).
++
++First zero-only writes to unallocated sparse pages keep them unallocated. A serialized 4KiB scratch buffer preserves partial/short-copy counts; nonzero writes allocate zero-filled pages. Write-through overlays still commit zero pages.
++
++Publishes standard solid-state medium characteristics for RAM and the optional UFS-backed store before storage-family startup. This lets the original kernel select its solid-state I/O periods; throttling policy is unchanged.
+diff --git a/SparseDisk.h b/SparseDisk.h
+index 20cd248..b6b0122 100644
+--- a/SparseDisk.h
++++ b/SparseDisk.h
+@@ -6,6 +6,7 @@
+ struct RamSparseDisk {
+   uint8_t **pages;
+   uint64_t bytes, resident;
++  uint64_t zeroWriteBytes = 0;
+   const uint8_t *find(uint64_t i) const { return pages ? pages[i] : nullptr; }
+ };
+ static uint32_t ramU32(const uint8_t *p){uint32_t v;memcpy(&v,p,4);return v;}
+@@ -40,20 +41,26 @@ template<class Ops> static bool ramSparseImport(RamSparseDisk &d,const uint8_t *
+   return true;
+ }
+ // Caller serializes I/O. Ops performs genuine descriptor reads/writes and
+-// zero-initialized allocation. Short copies preserve truthful byte counts.
+-template<class Ops> static uint64_t ramSparseIO(RamSparseDisk &d,bool write,uint64_t offset,uint64_t length,Ops &ops,bool &noMemory) {
++// zero-initialized allocation. Short copies preserve truthful byte counts. Caller supplies a serialized 4KiB
++// write scratch buffer; first writes of only zero bytes leave the page sparse.
++template<class Ops> static uint64_t ramSparseIO(RamSparseDisk &d,bool write,uint64_t offset,uint64_t length,Ops &ops,uint8_t *scratch,bool &noMemory) {
+   static const uint8_t zero[4096]={};noMemory=false;
+-  if(!d.pages || !length || offset>d.bytes || length>d.bytes-offset)return 0;
++  if(!d.pages || !length || offset>d.bytes || length>d.bytes-offset || (write && !scratch))return 0;
+   uint64_t done=0;
+   while(done<length){
+     uint64_t at=offset+done,index=at/4096,skip=at&4095,n=4096-skip;
+     if(n>length-done)n=length-done;
+     uint8_t *page=d.pages[index];
++    uint64_t actual;
+     if(write && !page){
+-      page=ops.allocate();if(!page){noMemory=true;break;}
+-      d.pages[index]=page;d.resident+=4096;
+-    }
+-    uint64_t actual=write?ops.read(done,page+skip,n):ops.copy(done,(page?page:zero)+skip,n);
++      actual=ops.read(done,scratch,n);
++      if(actual>n)break;
++      uint8_t any=0;for(uint64_t i=0;i<actual;++i)any|=scratch[i];
++      if(any){
++        page=ops.allocate();if(!page){noMemory=true;break;}
++        memcpy(page+skip,scratch,actual);d.pages[index]=page;d.resident+=4096;
++      }else d.zeroWriteBytes+=actual;
++    }else actual=write?ops.read(done,page+skip,n):ops.copy(done,(page?page:zero)+skip,n);
+     if(actual>n)break;
+     done+=actual;if(actual!=n)break;
+   }
+diff --git a/Test/sparse.cpp b/Test/sparse.cpp
+index 1a05d00..7c4d7da 100644
+--- a/Test/sparse.cpp
++++ b/Test/sparse.cpp
+@@ -21,7 +21,7 @@ int main(){
+   if(which==0)bad[0]=0;
+   if(which==1)put32(bad,8,2);
+   if(which==2)put32(bad,12,16384);
+-  if(which==3)put64(bad,16,0x80001000);
++  if(which==3)put64(bad,16,0x10000001000ULL);
+   if(which==4)put64(bad,24,65537);
+   if(which==5)put64(bad,32,1);
+   if(which==6)put64(bad,40,0);
+@@ -29,25 +29,38 @@ int main(){
+   if(which==8)bad.push_back(0);
+   assert(!ramPackedLayout(bad.data(),bad.size(),&logical));
+  }
++ uint8_t scratch[4096];
+  Ops op;RamSparseDisk d={static_cast<uint8_t **>(calloc(size/4096,sizeof(uint8_t*))),size,0};
+  assert(ramSparseImport(d,packed.data(),packed.size(),op)&&d.resident==4096);
+  std::vector<uint8_t> flat(size);flat[7*4096+9]=0xa5;uint64_t random=42;
+  for(unsigned i=0;i<4000;++i){random=random*6364136223846793005ULL+1;uint64_t at=random%size;
+   uint64_t n=1+((random>>32)%9000);if(n>size-at)n=size-at;
+   op.buffer.assign(n,0);bool write=(i%3)!=0;
+-  if(write)for(size_t j=0;j<n;++j)op.buffer[j]=static_cast<uint8_t>(i+j);
+-  bool oom=false;assert(ramSparseIO(d,write,at,n,op,oom)==n&&!oom);
++  if(write && i%5)for(size_t j=0;j<n;++j)op.buffer[j]=static_cast<uint8_t>(i+j);
++  bool oom=false;assert(ramSparseIO(d,write,at,n,op,scratch,oom)==n&&!oom);
+   if(write)memcpy(flat.data()+at,op.buffer.data(),n);else assert(!memcmp(flat.data()+at,op.buffer.data(),n));
+  }
+- op.buffer.assign(size,0);bool oom=false;assert(ramSparseIO(d,false,0,size,op,oom)==size && op.buffer==flat);
+- assert(ramSparseIO(d,false,UINT64_MAX,1,op,oom)==0);assert(ramSparseIO(d,true,size,1,op,oom)==0);cleanup(d);
++ op.buffer.assign(size,0);bool oom=false;assert(ramSparseIO(d,false,0,size,op,scratch,oom)==size && op.buffer==flat);
++ assert(ramSparseIO(d,false,UINT64_MAX,1,op,scratch,oom)==0);assert(ramSparseIO(d,true,size,1,op,scratch,oom)==0);cleanup(d);
+  d={static_cast<uint8_t **>(calloc(2,sizeof(uint8_t*))),8192,0};op.buffer.assign(8192,0x37);op.budget=1;
+- assert(ramSparseIO(d,true,0,8192,op,oom)==4096&&oom&&d.resident==4096&&!d.pages[1]);
+- op.buffer.assign(8192,0);op.budget=-1;assert(ramSparseIO(d,false,0,8192,op,oom)==8192&&!oom);
++ assert(ramSparseIO(d,true,0,8192,op,scratch,oom)==4096&&oom&&d.resident==4096&&!d.pages[1]);
++ op.buffer.assign(8192,0);op.budget=-1;assert(ramSparseIO(d,false,0,8192,op,scratch,oom)==8192&&!oom);
+  for(size_t i=0;i<8192;++i)assert(op.buffer[i]==(i<4096?0x37:0));
+- op.shortAt=100;op.buffer.assign(4096,0x55);assert(ramSparseIO(d,true,0,4096,op,oom)==100&&!oom);
++ op.shortAt=100;op.buffer.assign(4096,0x55);assert(ramSparseIO(d,true,0,4096,op,scratch,oom)==100&&!oom);
+  assert(d.pages[0][99]==0x55&&d.pages[0][100]==0x37);cleanup(d);
+  d={static_cast<uint8_t **>(calloc(size/4096,sizeof(uint8_t*))),size,0};op.budget=0;
+  assert(!ramSparseImport(d,packed.data(),packed.size(),op)&&d.resident==0);cleanup(d);
++ // Zero first writes need no data-page allocation, including partial and short writes.
++ d={static_cast<uint8_t **>(calloc(3,sizeof(uint8_t*))),12288,0};op.budget=0;op.shortAt=UINT64_MAX;op.buffer.assign(8192,0);
++ assert(ramSparseIO(d,true,512,8192,op,scratch,oom)==8192&&!oom&&d.resident==0&&d.zeroWriteBytes==8192);
++ for(int i=0;i<3;++i)assert(!d.pages[i]);
++ op.shortAt=700;assert(ramSparseIO(d,true,1024,4096,op,scratch,oom)==700&&!oom&&d.resident==0);
++ op.shortAt=0;assert(ramSparseIO(d,true,0,4096,op,scratch,oom)==0&&!oom&&d.resident==0);
++ op.shortAt=UINT64_MAX;op.buffer[0]=0x91;assert(ramSparseIO(d,true,4096,4096,op,scratch,oom)==0&&oom&&!d.pages[1]);
++ op.budget=1;op.shortAt=100;assert(ramSparseIO(d,true,4096+512,4096,op,scratch,oom)==100&&!oom&&d.resident==4096);
++ assert(d.pages[1][512]==0x91&&d.pages[1][511]==0&&d.pages[1][612]==0);
++ op.buffer.assign(8192,0);op.shortAt=UINT64_MAX;assert(ramSparseIO(d,true,0,8192,op,scratch,oom)==8192&&!oom);
++ assert(d.pages[1][512]==0); // Existing bytes must still be overwritten by zeros.
++ cleanup(d);
+  puts("PASS: actual sparse parser/import/I/O, 4000 differential operations, overflow/malformed/short-copy/allocation failures");
+ }

@@ -1,0 +1,3 @@
+repository = "https://github.com/UniXNU/RamBlock.git"
+base_revision = "25c57e0e9b68bf452dd1986914525edc9d2320bc"
+patches = ["0001-sparse-zero-writes-and-solid-state.patch"]

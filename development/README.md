@@ -16,7 +16,7 @@ ln -s "$SOC" "$WORK/UniXNU-sm8150-common"
 ln -s UniXNU-raphael/package/firmware "$WORK/uefi-raphael"
 ```
 
-Place separately obtained upstream sources at `$WORK/sources/`, using the exact commits in `sources.lock.json`. Packaging additionally uses the separate runtime pin in `board.toml`. Configure the ignored device `local.toml` from its example for this layout. Scripts that build diagnostic handset images also require the owner's private storage ABI, signed extent/root policies and original OS inputs described in the handoff. Those inputs and historical private artifact paths are intentionally unavailable in a public checkout.
+Place separately obtained upstream sources at `$WORK/sources/`, using the exact commits in `sources.lock.json`. Packaging additionally uses the separate runtime pin in `board.toml`. Apply the existing [RamBlock local source patch](source-patches/RamBlock/README.md) to the exact recorded component revision before a native diagnostic build. Configure the ignored device `local.toml` from its example for this layout. Scripts that build diagnostic handset images also require the owner's private storage ABI, signed extent/root policies and original OS inputs described in the handoff. Those inputs and historical private artifact paths are intentionally unavailable in a public checkout.
 
 Run checks from `$WORK`; for example:
 
