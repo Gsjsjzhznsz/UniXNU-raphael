@@ -1,0 +1,42 @@
+{
+  "passed": true,
+  "implementation_revision": "da16f56ebb77115157a6a6030e2a7396f4fb9c17",
+  "query": {
+    "private_report": "evidence/private/psci-query/20261028T194116Z/report.json",
+    "report_sha256": "47f1696e7152e0cea2333f5bd64dc62ed916d127b03faa819c0a50421353fc87",
+    "observation": {
+      "schema": 1,
+      "conduit": 1,
+      "psci_version": 65537,
+      "system_reset_feature": 0,
+      "current_el": 4,
+      "reset_called": 0,
+      "fdt_sha256": "91d3e532781b1d0edd0e6c3931ecf0b80ca00cdbcc94bbe7fe74f98764496d57"
+    },
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "reset_executed": false
+  },
+  "recovery": {
+    "private_report": "evidence/private/psci-reset-run/20261028T194548Z/report.json",
+    "report_sha256": "0ec992b1ae005dfc7b252c7a549995d5417dc5e2261dc76e86586e623059e53f",
+    "private_build": "evidence/private/psci-reset-build/20261028T194447.618611Z-_9iyomkd",
+    "image_sha256": "e994438d46152a46b6842249e944cd1901a47e32ce001bb95ef127e348518d34",
+    "standalone_image_sha256": "887c04fb1d3982ece6a86799265adb065d5d5aca6f49a51460a7318daacf6156",
+    "image_bytes": 65536,
+    "contains_original_android_kernel": false,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "new_android_boot": true,
+    "temporary_properties_cleared": true,
+    "seconds_after_fastboot_boot": 36.385,
+    "reset_instruction_trace_verified": false
+  },
+  "used_flash_or_erase": false,
+  "limits": [
+    "PSCI VERSION/FEATURES are nonce-matched EL1 SMC observations",
+    "Standalone image automatic Android return is operational recovery evidence; direct phone reset instruction trace unavailable",
+    "Not XNU or independent UEFI execution on phone"
+  ]
+}

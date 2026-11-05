@@ -1,0 +1,152 @@
+{
+  "request": "User-authorized one-time upstream sync including baseband and GPU",
+  "recorded_local": "2026-11-03 12:34:06 +08:00",
+  "source_sync_passed": true,
+  "main_revision": "3fa5ff5f409398c0555a9561d6437ce5d4c3b3b7",
+  "main_default_branch": "refs/heads/main",
+  "main_candidate": "artifacts/upstream-candidates/20261103T042258Z/UniXNU",
+  "baseband_branch": "feat/qcom-baseband",
+  "baseband_revision": "0ecc91f9c37ba931fe9b7f47cc44b71299e4100a",
+  "baseband_candidate": "artifacts/upstream-candidates/20261103T042258Z/UniXNU-baseband",
+  "baseband_component_revision": "6080e6a8ea22841073db050bf3292b9aad2aeb59",
+  "main_gitlink_submodules": 19,
+  "baseband_gitlink_submodules": 20,
+  "comparisons": {
+    "previous_candidate": {
+      "base": "c96b29975645b711dc06bc435c3ad27321ce817c",
+      "commits": 50,
+      "files_changed": 263
+    },
+    "active_backend": {
+      "base": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+      "commits": 335,
+      "files_changed": 482
+    }
+  },
+  "component_changes": [
+    {
+      "path": "drivers/Adreno740",
+      "old": "a9a2cbb43b89d672e2921e19721a6438b738b17f",
+      "new": "1030485546ef7ebb9abbfb7c17fbca93cca40971",
+      "changed_files": 26
+    },
+    {
+      "path": "drivers/AdrenoMetal",
+      "old": "a0f0287be80a5d8aef5c6b97a6cab62129e152bd",
+      "new": "816022307852de7e1741ac05ae9111982318763f",
+      "changed_files": 21
+    },
+    {
+      "path": "drivers/GopFramebuffer",
+      "old": "19ef3a75ad2c53da85b8d923553d922716fce377",
+      "new": "4cc8cb33f86baf4903c89f01a33872fb769d2457",
+      "changed_files": 4
+    },
+    {
+      "path": "kits/XnuPrelink",
+      "old": "b74ed7c74a07f0eb5f81089c660905ecc4cabb7f",
+      "new": "b1888c12456c46a2226d63c794465dfcee08d465",
+      "changed_files": 7
+    }
+  ],
+  "source_integrity": {
+    "passed": true,
+    "repositories": 41,
+    "files": 3544,
+    "report": "artifacts/upstream-refresh/20261103T042258Z/source-integrity.json"
+  },
+  "final_remote_check": {
+    "utc": "2026-11-03T04:32:03.690939+00:00",
+    "heads": {
+      "HEAD": "3fa5ff5f409398c0555a9561d6437ce5d4c3b3b7",
+      "refs/heads/feat/qcom-baseband": "0ecc91f9c37ba931fe9b7f47cc44b71299e4100a",
+      "refs/heads/main": "3fa5ff5f409398c0555a9561d6437ce5d4c3b3b7"
+    },
+    "unchanged_during_checks": true
+  },
+  "active_backend_revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+  "packaging_revision": "c96b29975645b711dc06bc435c3ad27321ce817c",
+  "active_backend_updated": false,
+  "packaging_backend_updated": false,
+  "hardware_configuration_imported": false,
+  "phone_experiment_performed": false,
+  "desktop_verified": false,
+  "handset_gpu_verified": false,
+  "handset_baseband_verified": false,
+  "validation": {
+    "python_unittests": {
+      "run": 125,
+      "passed": 124,
+      "skipped": 1
+    },
+    "actual_c_darwinboot_parsers": "Both passed using native Linux clang; initial cross-compiler PATH failures retained",
+    "gop_fence_wait": "Passed actual extracted methods under ASan/UBSan",
+    "metal_queue_priority": "Passed under ASan/UBSan",
+    "gpu_perf_counter_model": "Passed under ASan/UBSan; no hardware registers exercised",
+    "gpu_trace": "Functional test passed; strict ASan/LSan attempt reports 8880128 leaked bytes in repeated initialization host test",
+    "baseband_bridge_archive": "Passed one ARM64 object using existing selected OS/XNU C++ compile recipe; no Coachz adapter, link or handset load",
+    "baseband_functional_models": {
+      "run": 7,
+      "passed": 6,
+      "failed": [
+        "coachz_bb_model_test: card-status indication and legacy GetCsn cases"
+      ]
+    },
+    "baseband_sanitizers": "GCC Werror stops four models at type-limits warnings; three other models pass ASan/UBSan. Native clang ASan runtimes unavailable; strict failures retained",
+    "metal_macos_frontend": "Not executed: macOS Foundation/Metal/IOSurface and host Vulkan loader unavailable"
+  },
+  "private_logs": "artifacts/upstream-refresh/20261103T042258Z",
+  "backups": "artifacts/upstream-refresh/20261103T042258Z/workspace-source-before.tar.gz",
+  "next_actions": [
+    "Continue current post-watchdog/display-client evidence capture before adopting new runtime",
+    "Compare generic GOP fence/cancellation concepts against independent RaphaelDesktopDisplay ABI; no direct board-code import",
+    "Implement and qualify an A640/SM8150 backend before selecting A740-dependent Metal integration",
+    "Inventory actual SM8150 modem boot, firmware, DMA/SMMU, GLINK/QRTR and EFS/NV contracts before baseband integration",
+    "Resolve or explicitly bound imported protocol-model failures before cellular acceptance"
+  ],
+  "preservation": {
+    "passed": true,
+    "original_source_entries": 1355,
+    "changed_original_files": [
+      "TODO.md",
+      "docs/HANDOFF-20261101.zh-CN.md",
+      "docs/PROGRESS.zh-CN.md",
+      "docs/UPSTREAM-REFRESH.zh-CN.md"
+    ],
+    "only_authorized_tracking_docs_changed": true,
+    "repositories": {
+      "active": {
+        "revision_unchanged": true,
+        "status_unchanged": true,
+        "staged_and_unstaged_patch_identical": true,
+        "submodule_pins_identical": true,
+        "untracked_files_verified": 2
+      },
+      "packaging": {
+        "revision_unchanged": true,
+        "status_unchanged": true,
+        "staged_and_unstaged_patch_identical": true,
+        "submodule_pins_identical": true,
+        "untracked_files_verified": 0
+      }
+    }
+  },
+  "local_repository_checks": [
+    {
+      "name": "repository-layout",
+      "passed": true,
+      "log": "artifacts/upstream-refresh/20261103T042258Z/repository-layout.log"
+    },
+    {
+      "name": "porting-record",
+      "passed": true,
+      "log": "artifacts/upstream-refresh/20261103T042258Z/porting-record.log"
+    },
+    {
+      "name": "diff-check",
+      "passed": true,
+      "log": "artifacts/upstream-refresh/20261103T042258Z/diff-check.log"
+    }
+  ],
+  "passed": true
+}

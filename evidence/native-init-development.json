@@ -1,0 +1,71 @@
+{
+  "status": "original launchd exec and PID1 EL0 Unix syscall entry verified on handset",
+  "reports": [
+    "evidence/private/android-return-run/20261101T011142Z/report.json",
+    "evidence/private/android-return-run/20261101T012734Z/report.json"
+  ],
+  "apfs_root_mounted_verified": true,
+  "load_init_program_entered": true,
+  "systemos_lookup_stage": 2,
+  "scratch_user_va": 4096,
+  "scratch_allocate_result": 0,
+  "copyout_step": 5,
+  "exec_attempts": 2,
+  "pid1_el0_verified": true,
+  "desktop_verified": false,
+  "next_step": "Extend the original PID1 service observation from five to ten seconds below the unchanged twenty-second watchdog; original fcntl F_ADDFILESIGS_RETURN is performing storage reads at the current checkpoint.",
+  "latest_report": "evidence/private/android-return-run/20261101T024411Z/report.json",
+  "latest_experiment_passed": true,
+  "latest_unassisted_android_return": true,
+  "latest_cleanup_completed": true,
+  "systemos_mount_status": 0,
+  "systemos_stage": 6,
+  "systemos_readonly": 1,
+  "systemos_native_union": 1,
+  "systemos_root_recheck": 1,
+  "copyout_vm_fault_result": 0,
+  "copyout_sync_exception_count": 173,
+  "exec_calls": [
+    {
+      "sequence": 1,
+      "phase": 2,
+      "error": 2,
+      "path": "/usr/appleinternal/sbin/launchd.development"
+    },
+    {
+      "sequence": 2,
+      "phase": 2,
+      "error": 0,
+      "path": "/sbin/launchd"
+    }
+  ],
+  "trust_cache_candidate": {
+    "original_modules_unchanged": true,
+    "added_owner_cdhashes": false,
+    "apple_signature_chain_verified": false,
+    "entries": 2554,
+    "bytes": 61356,
+    "report": "artifacts/desktop-trust/20261030T081913Z/report.json",
+    "host_checks": "artifacts/session-logs/20261101-trust-contract-host.json",
+    "qemu_report": "artifacts/native-staging-qemu/20261101T020521.148473Z-2pdca_86/report.json",
+    "qemu_passed": true,
+    "qemu_trust_loaded_verified": true,
+    "negative_qemu_report": "artifacts/native-load-negative-qemu/20261101T020736.666722Z-u4ubn7ss/report.json",
+    "trust_corruption_rejected": true,
+    "handset_run": "evidence/private/android-return-run/20261101T020626Z/report.json",
+    "handset_status": "passed",
+    "handset_trust_loaded_verified": true,
+    "handset_exec_verified": true
+  },
+  "exec_loaded_verified": true,
+  "launchd_main_verified": false,
+  "last_unix_syscall": 92,
+  "historical_exec_security_policy_failure": {
+    "namespace": 9,
+    "code": 8,
+    "meaning": "OS_REASON_EXEC / EXEC_EXIT_REASON_SECURITY_POLICY"
+  },
+  "syscall_entries": 22,
+  "pan_fix_handset_verified": true,
+  "pan_evidence": "UniXNU-raphael/evidence/native-pid1-pan.json"
+}

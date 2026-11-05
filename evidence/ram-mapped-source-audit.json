@@ -1,0 +1,139 @@
+{
+  "passed": true,
+  "qemu_reports": {
+    "2": {
+      "path": "artifacts/sec-dxe-qemu/20261028T102433.631100Z-p69tfqtm/report.json",
+      "sha256": "12277b1b1a31a1d93aa025d84c2e65a2b8fd9a9a70ab43ba0da5a1cd8b9831a0"
+    },
+    "3": {
+      "path": "artifacts/sec-dxe-qemu/20261028T102433.631134Z-l_zndxbo/report.json",
+      "sha256": "abd8efd1bd08920804fd8447b6e3ea92666ba876d0ce4eec959287260f51523d"
+    }
+  },
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamRead.c",
+      "sha256": "f8429b13d0742a7769197e9bcd74985a334d5621ef082a0853b2dcd3941d25d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamReadAdapter.c",
+      "sha256": "16add0aa20ad2e2c85314327ab912b90e2bacbd67df962f6add31057836df728"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamMapped.c",
+      "sha256": "fef848c7d695291f7ea472048d0ae91ff8adc9ef83dfe604c34f609248fabde3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamMappedAdapter.c",
+      "sha256": "c8860ab12e486da3e074bd5ebe3064337517299533215449236cf12391543639"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "f969a0d92a6bd63df7d9e2bbb4a73847d6beea03a63ed670e3e170070c2d919b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamMapped.h",
+      "sha256": "342d0cc1e9aac2e0a5a3aad24a542bbacd9bd856a53f34fa937f569e135beda3"
+    }
+  ],
+  "mapped_load": {
+    "function_rva": 19124,
+    "load_rva": 19152,
+    "load_fd_offset": 27344,
+    "load_opcode": 4181721736,
+    "no_store_through_candidate": true,
+    "only_store_targets": [
+      "own stack",
+      "output pointer"
+    ],
+    "barriers": [
+      "dsb sy",
+      "dmb sy"
+    ],
+    "instruction_count": 14
+  },
+  "pre_map_load": {
+    "function_rva": 22120,
+    "load_rva": 22144,
+    "load_fd_offset": 30336,
+    "load_opcode": 4181721736,
+    "no_store_through_candidate": true,
+    "only_store_targets": [
+      "own stack",
+      "output pointer"
+    ],
+    "barriers": [
+      "dsb sy",
+      "dmb sy"
+    ],
+    "instruction_count": 13
+  },
+  "translation": {
+    "query_rva": 19020,
+    "restore_rva": 18980,
+    "s1e1r_queries": 1,
+    "s1e1w_queries": 1,
+    "permission_query_has_no_candidate_load_or_store": true,
+    "original_par_restored_with_isb": true,
+    "query_instructions": 26,
+    "restore_instructions": 10
+  },
+  "storage": {
+    "mRamMapped": {
+      "bytes": 216,
+      "rva": 61440,
+      "fd_offset": 69632,
+      "materialized_zero_data": true
+    },
+    "mSavedPar": {
+      "bytes": 8,
+      "rva": 61664,
+      "fd_offset": 69856,
+      "materialized_zero_data": true
+    },
+    "mParActive": {
+      "bytes": 8,
+      "rva": 61656,
+      "fd_offset": 69848,
+      "materialized_zero_data": true
+    }
+  },
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/Library/ArmLib.h",
+      "sha256": "45b870a9f883a953281bde367b8bc40aa1c79783d786d437a1a45bfdcbb8d97c"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/AArch64/AArch64Mmu.h",
+      "sha256": "bedbced47f3b95be2a3d286a773979837872e0d6d1207970b692500cdd1993b6"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c",
+      "sha256": "bf3be06245f00c6d1b24b94eb0068f607387780966297070836799fea2aa3521"
+    },
+    {
+      "repository": "sources/apple-xnu-native",
+      "revision": "d8b80295118ef25ac3a784134bcf95cd8e88109f",
+      "path": "osfmk/arm64/machine_routines_asm.s",
+      "sha256": "1d0b049d61a6827f02e6764a23fa0620d35c224e9925c9e2cd1036c4f6d1472d"
+    },
+    {
+      "repository": "sources/apple-xnu-native",
+      "revision": "d8b80295118ef25ac3a784134bcf95cd8e88109f",
+      "path": "osfmk/arm64/proc_reg.h",
+      "sha256": "ba73bb4e48d59d630d1d86493601355d57457025f03ba96294da48b80208c741"
+    }
+  ],
+  "decoder_sha256": "27ebb42f2fffd29759c6c7b2119bb2fb51444e49acc9cde9c1790140423e900b",
+  "runner_sha256": "f92cb11db39fdc32e9c4effc2b71ba8281596534ed0ce939b9acb16f58c3a093",
+  "fatal_mapped_load_udf_return_verified": true,
+  "real_data_abort_verified": false,
+  "handset_executed": false,
+  "allocator_enabled": false
+}

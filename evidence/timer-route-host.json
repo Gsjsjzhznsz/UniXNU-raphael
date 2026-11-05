@@ -1,0 +1,728 @@
+{
+  "passed": true,
+  "case_count": 107,
+  "cases": [
+    {
+      "name": "local source routed by independently computed model",
+      "status": 6,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "source expires between CTL and HPPIR sampling",
+      "status": 6,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "IRQ leaf after expiration between CTL and HPPIR sampling",
+      "status": 6,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "optional IRQ leaf runs only after HPPIR and pending proof",
+      "status": 6,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "optional IRQ leaf rejection still restores route",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "optional IRQ leaf skipped on PPI write ignored",
+      "status": 3,
+      "mmio_writes": 3,
+      "sys_writes": 5,
+      "passed": true
+    },
+    {
+      "name": "optional IRQ leaf needs a result pointer",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "delayed source withdrawal",
+      "status": 6,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "delayed distributor and redistributor RWP",
+      "status": 6,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "PPI write ignored",
+      "status": 3,
+      "mmio_writes": 3,
+      "sys_writes": 5,
+      "passed": true
+    },
+    {
+      "name": "distributor write ignored",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 5,
+      "passed": true
+    },
+    {
+      "name": "HPPIR unexpected interrupt stops experiment",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "no route reaches bounded timeout",
+      "status": 4,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "RWP never clears makes restore fail",
+      "status": 5,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "PPI clear ignored makes restore fail",
+      "status": 5,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "write trap after possible effect 1",
+      "status": 3,
+      "mmio_writes": 2,
+      "sys_writes": 5,
+      "passed": true
+    },
+    {
+      "name": "write trap after possible effect 2",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 6,
+      "passed": true
+    },
+    {
+      "name": "write trap after possible effect 3",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "restore write trap still attempts remaining operations 4",
+      "status": 5,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "restore write trap still attempts remaining operations 5",
+      "status": 5,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "restore write trap still attempts remaining operations 6",
+      "status": 5,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "restore write trap still attempts remaining operations 7",
+      "status": 5,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "fresh read trap 1",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh read trap 3",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh read trap 5",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh read trap 6",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "active read trap 7",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 6,
+      "passed": true
+    },
+    {
+      "name": "active read trap 8",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "active read trap 9",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "active read trap 10",
+      "status": 3,
+      "mmio_writes": 4,
+      "sys_writes": 7,
+      "passed": true
+    },
+    {
+      "name": "missing fdt",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing gic",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing icc",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing map",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing mr",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing mw",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing sr",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "missing sw",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects version",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects status",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects all_observed_disabled",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects enabled_spi_or",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects enabled_local_or",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects lpi_enabled_or",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects changed_words",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects frame_count",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects spi_words",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects read_count",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "map rejects distributor_after",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "nonzero map array with forged OR",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects version",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects status",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects trap_esr",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects completed",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 0",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 1",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 2",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 3",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 5",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 7",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 8",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 9",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 10",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejects value 15",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects version",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects status",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects pidr2",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects typer",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects gicd",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects gicr",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC rejects boot_index",
+      "status": 1,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects daif",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects igrpen",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects dist",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects enabled",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects pending",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects active",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects ctl",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects cval",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh rejects waker",
+      "status": 2,
+      "mmio_writes": 0,
+      "sys_writes": 0,
+      "passed": true
+    },
+    {
+      "name": "wire rejects version",
+      "passed": true
+    },
+    {
+      "name": "wire rejects status",
+      "passed": true
+    },
+    {
+      "name": "wire rejects reason",
+      "passed": true
+    },
+    {
+      "name": "wire rejects intid",
+      "passed": true
+    },
+    {
+      "name": "wire rejects flags",
+      "passed": true
+    },
+    {
+      "name": "wire rejects sgi_base",
+      "passed": true
+    },
+    {
+      "name": "wire rejects dist_during",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_dist",
+      "passed": true
+    },
+    {
+      "name": "wire rejects igrpen_during",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_igrpen",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_ctl",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_cval",
+      "passed": true
+    },
+    {
+      "name": "wire rejects deadline",
+      "passed": true
+    },
+    {
+      "name": "wire rejects ctl_during",
+      "passed": true
+    },
+    {
+      "name": "wire rejects hppir_during",
+      "passed": true
+    },
+    {
+      "name": "wire rejects hppir_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects pending_during",
+      "passed": true
+    },
+    {
+      "name": "wire rejects enabled_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects active_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects daif_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects polls",
+      "passed": true
+    },
+    {
+      "name": "wire rejects clear_polls",
+      "passed": true
+    },
+    {
+      "name": "wire rejects rwp_polls",
+      "passed": true
+    },
+    {
+      "name": "wire rejects mmio_writes",
+      "passed": true
+    },
+    {
+      "name": "wire rejects sys_writes",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restore_ok",
+      "passed": true
+    },
+    {
+      "name": "wire rejects trap_esr",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtCheckHeader=fdt_check_header",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtNextNode=fdt_next_node",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/TimerRoute.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/timer-route-host/20261028T014200.190590Z-92a90xn8/timer-route.so"
+  ],
+  "snapshot_bytes": 352,
+  "guard_canaries_verified": true,
+  "undefined_behavior_sanitizer": true,
+  "model_only": true,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerRoute.c",
+      "sha256": "4f4918c4d587153f30c3cf7f8c78da64c29966e6c0365b3195b1920cab9bfc11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+      "sha256": "019e5f9085adcc9b25a60fe6b0b3f831330a9defdb57e8603631ba612c97f605"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerRoute.h",
+      "sha256": "1938868ba1f22f840f1caf1efb3ed2acdcd22dbaed49b67ad06122331afbf49e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPpiProbe.h",
+      "sha256": "99a84c80068892c1faaf9763a368c5d6c06c18c0d29be61b26b2830fb812dd28"
+    }
+  ],
+  "decoder_sha256": "536483df1d2a2fe8c9d421de652303464667b002e378d394a74c9cd5f7459bac",
+  "runner_sha256": "98a904eb4d962f9d6feff80fb65bd1ce56bd1ceb70517d69512c630208a19530"
+}

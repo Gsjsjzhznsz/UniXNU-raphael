@@ -1,0 +1,252 @@
+{
+  "scope": "Current handset Android read-only observation, not ABL handoff or native UFS execution",
+  "controller_node": "/soc/ufshc@1d84000",
+  "registers": [
+    {
+      "base": 30949376,
+      "bytes": 9472
+    },
+    {
+      "base": 30998528,
+      "bytes": 32768
+    }
+  ],
+  "register_names": [
+    "ufs_mem",
+    "ufs_ice"
+  ],
+  "phy": {
+    "node": "/soc/ufsphy_mem@1d87000",
+    "arguments": [],
+    "properties": {
+      "reg": "01d8700000000da8",
+      "reg-names": "7068795f6d656d00",
+      "#phy-cells": "00000000",
+      "lanes-per-direction": "00000002",
+      "clock-names": "7265665f636c6b5f737263007265665f636c6b007265665f6175785f636c6b00",
+      "clocks": "00000025000000000000001b0000009b0000001b000000a3",
+      "status": "6f6b00",
+      "compatible": "71636f6d2c7566732d7068792d716d702d763400",
+      "vdda-phy-supply": "0000002b",
+      "vdda-phy-always-on": "",
+      "vdda-pll-supply": "0000002a",
+      "vdda-phy-max-microamp": "00016058",
+      "vdda-pll-max-microamp": "00004a38"
+    }
+  },
+  "clocks": [
+    {
+      "name": "core_clk",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        157
+      ]
+    },
+    {
+      "name": "bus_aggr_clk",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        3
+      ]
+    },
+    {
+      "name": "iface_clk",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        156
+      ]
+    },
+    {
+      "name": "core_clk_unipro",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        169
+      ]
+    },
+    {
+      "name": "core_clk_ice",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        160
+      ]
+    },
+    {
+      "name": "ref_clk",
+      "provider": "/soc/qcom,rpmhclk",
+      "arguments": [
+        0
+      ]
+    },
+    {
+      "name": "tx_lane0_sync_clk",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        168
+      ]
+    },
+    {
+      "name": "rx_lane0_sync_clk",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        166
+      ]
+    },
+    {
+      "name": "rx_lane1_sync_clk",
+      "provider": "/soc/qcom,gcc",
+      "arguments": [
+        167
+      ]
+    }
+  ],
+  "reset": {
+    "node": "/soc/qcom,gcc",
+    "arguments": [
+      25
+    ],
+    "properties": {
+      "compatible": "71636f6d2c6763632d736d383135302d763200737973636f6e00",
+      "reg": "00100000001f0000",
+      "reg-names": "63635f6261736500",
+      "vdd_cx-supply": "00000020",
+      "vdd_cx_ao-supply": "00000057",
+      "vdd_mm-supply": "0000001c",
+      "#clock-cells": "00000001",
+      "#reset-cells": "00000001"
+    }
+  },
+  "supplies": {
+    "vdd-hba-supply": {
+      "node": "/soc/qcom,gdsc@0x177004",
+      "arguments": [],
+      "properties": {
+        "compatible": "71636f6d2c6764736300",
+        "regulator-name": "7566735f7068795f6764736300",
+        "reg": "0017700400000004",
+        "status": "6f6b00"
+      }
+    },
+    "vcc-supply": {
+      "node": "/soc/rpmh-regulator-ldoa10/regulator-pm8150-l10",
+      "arguments": [],
+      "properties": {
+        "regulator-name": "706d383135305f6c313000",
+        "qcom,set": "00000003",
+        "regulator-min-microvolt": "00263540",
+        "regulator-max-microvolt": "002d2a80",
+        "qcom,init-voltage": "00263540",
+        "qcom,init-mode": "00000002"
+      }
+    },
+    "vccq2-supply": {
+      "node": "/soc/regulator-pm8150-s4",
+      "arguments": [],
+      "properties": {
+        "compatible": "71636f6d2c737475622d726567756c61746f7200",
+        "regulator-name": "706d383135305f733400",
+        "qcom,hpm-min-load": "000186a0",
+        "regulator-min-microvolt": "001b7740",
+        "regulator-max-microvolt": "001b7740"
+      }
+    },
+    "qcom,vddp-ref-clk-supply": {
+      "node": "/soc/rpmh-regulator-ldoa9/regulator-pm8150-l9",
+      "arguments": [],
+      "properties": {
+        "regulator-name": "706d383135305f6c3900",
+        "qcom,set": "00000003",
+        "regulator-min-microvolt": "00124f80",
+        "regulator-max-microvolt": "00124f80",
+        "qcom,init-voltage": "00124f80",
+        "qcom,init-mode": "00000002"
+      }
+    }
+  },
+  "interrupts": [
+    0,
+    265,
+    0
+  ],
+  "iommu_binding_present": false,
+  "iommu_binding_absence_is_bypass_proof": false,
+  "controller": {
+    "capabilities": 361169695,
+    "version": 768,
+    "hcs": 271,
+    "hce": 3,
+    "transfer_slots": 32,
+    "task_slots": 8,
+    "dma64": true
+  },
+  "geometry": [
+    {
+      "block": "sda",
+      "bytes": 249384927232,
+      "logical_block_bytes": 4096,
+      "physical_block_bytes": 4096,
+      "blocks": 60884992,
+      "vendor": "SAMSUNG",
+      "model": "KLUEG8U1EA-B0C1",
+      "source": "Android sysfs block size uses 512-byte sectors, independent of logical block size"
+    },
+    {
+      "block": "sdb",
+      "bytes": 8388608,
+      "logical_block_bytes": 4096,
+      "physical_block_bytes": 4096,
+      "blocks": 2048,
+      "vendor": "SAMSUNG",
+      "model": "KLUEG8U1EA-B0C1",
+      "source": "Android sysfs block size uses 512-byte sectors, independent of logical block size"
+    },
+    {
+      "block": "sdc",
+      "bytes": 8388608,
+      "logical_block_bytes": 4096,
+      "physical_block_bytes": 4096,
+      "blocks": 2048,
+      "vendor": "SAMSUNG",
+      "model": "KLUEG8U1EA-B0C1",
+      "source": "Android sysfs block size uses 512-byte sectors, independent of logical block size"
+    },
+    {
+      "block": "sdd",
+      "bytes": 33554432,
+      "logical_block_bytes": 4096,
+      "physical_block_bytes": 4096,
+      "blocks": 8192,
+      "vendor": "SAMSUNG",
+      "model": "KLUEG8U1EA-B0C1",
+      "source": "Android sysfs block size uses 512-byte sectors, independent of logical block size"
+    },
+    {
+      "block": "sde",
+      "bytes": 6442450944,
+      "logical_block_bytes": 4096,
+      "physical_block_bytes": 4096,
+      "blocks": 1572864,
+      "vendor": "SAMSUNG",
+      "model": "KLUEG8U1EA-B0C1",
+      "source": "Android sysfs block size uses 512-byte sectors, independent of logical block size"
+    },
+    {
+      "block": "sdf",
+      "bytes": 33554432,
+      "logical_block_bytes": 4096,
+      "physical_block_bytes": 4096,
+      "blocks": 8192,
+      "vendor": "SAMSUNG",
+      "model": "KLUEG8U1EA-B0C1",
+      "source": "Android sysfs block size uses 512-byte sectors, independent of logical block size"
+    }
+  ],
+  "source": "evidence/private/ufs-readonly/20261030T224241Z",
+  "unknown": [
+    "ABL handoff controller/link/PHY/clock state",
+    "Native DMA reachability and SMMU ownership",
+    "Exclusive request-list ownership at Image entry",
+    "OS/SystemOS on-device allocated storage",
+    "Persistent Data allocation and recovery"
+  ],
+  "handset_native_ufs_verified": false
+}

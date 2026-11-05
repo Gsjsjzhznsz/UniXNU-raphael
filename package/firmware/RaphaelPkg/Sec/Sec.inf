@@ -1,0 +1,151 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelSec
+  FILE_GUID = 6D94AE07-9854-451E-844C-A646DC1F1B33
+  MODULE_TYPE = SEC
+  VERSION_STRING = 0.1
+[Sources]
+  AndroidReturn.c
+  KernelWindow.c
+  Sec.c
+  RamCacheAdapter.c
+  RamMapped.c
+  RamMappedAdapter.c
+  RamRead.c
+  RamReadAdapter.c
+  RamWriteCheckpoint.S
+  QemuArch.c
+  UfsHandoff.c
+  UfsRead.cpp
+  UfsUncached.S
+  GicProbe.c
+  GicEnableMap.c
+  PpiProbe.c
+  IccProbe.c
+  IccReadAdapter.c
+  IccRead.S
+  TimerIrq.S
+  TimerRoute.c
+  TimerRouteAdapter.c
+  RouteAccess.S
+  TimerSource.c
+  TimerSourceAdapter.c
+  TimerAccess.S
+  Payload.c
+  DisplayProbe.c
+  SmmuProbe.c
+  PixelProbe.c
+  PixelWrite.c
+  GopRoute.c
+  InputProbe.c
+  SecEntry.S
+[Packages]
+  MdeModulePkg/MdeModulePkg.dec
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  RaphaelKeysLib
+  RaphaelRamWriteLib
+  ArmLib
+  ArmMmuLib
+  BaseMemoryLib
+  CacheMaintenanceLib
+  DebugLib
+  FdtLib
+  HobLib
+  PrePiLib
+  MemoryAllocationLib
+  RaphaelMemoryContractLib
+  RaphaelFramebufferLib
+[Guids]
+  gRaphaelAndroidReturnHobGuid
+  gEfiMemoryTypeInformationGuid
+  gRaphaelKernelWindowHobGuid
+  gRaphaelManagerUiHobGuid
+  gRaphaelPhysicalTimerHobGuid
+  gRaphaelDiagnosticHobGuid
+[FixedPcd]
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsWriteProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsPayload
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeFatBytes
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsExtents
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsResetOnError
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsQueryOnly
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsReadLba
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsRead
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsHandoff
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogHz
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeMmuTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativePlatformTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeEarlyTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeLoadTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeHandoff
+  gRaphaelTokenSpaceGuid.PcdRaphaelSparseArena
+  gRaphaelTokenSpaceGuid.PcdRaphaelDownloadedEnd
+  gRaphaelTokenSpaceGuid.PcdRaphaelAndroidReturn
+  gRaphaelTokenSpaceGuid.PcdRaphaelAndroidReturnQemu
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeBoot
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeQemuGate
+  gRaphaelTokenSpaceGuid.PcdRaphaelKernelWindow
+  gRaphaelTokenSpaceGuid.PcdRaphaelManagerKeys
+  gRaphaelTokenSpaceGuid.PcdRaphaelMenuTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelVisibleManager
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamCacheWritePages
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamWritePages
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamMappedProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamReadProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelPhysicalTimerArch
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerIrqTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerRouteFaultTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerRouteTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelGicEnableMap
+  gRaphaelTokenSpaceGuid.PcdRaphaelPpiEnableProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerSourceTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelIccProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelIccFaultTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelGicProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuArchTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuGicDBytes
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuGicRBytes
+  gArmTokenSpaceGuid.PcdGicDistributorBase
+  gArmTokenSpaceGuid.PcdGicRedistributorsBase
+  gArmTokenSpaceGuid.PcdArmArchTimerSecIntrNum
+  gArmTokenSpaceGuid.PcdArmArchTimerIntrNum
+  gArmTokenSpaceGuid.PcdArmArchTimerVirtIntrNum
+  gArmTokenSpaceGuid.PcdArmArchTimerHypIntrNum
+  gRaphaelTokenSpaceGuid.PcdRaphaelDarwinTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelPayloadTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelImageBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelImageSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelOriginalEntry
+  gRaphaelTokenSpaceGuid.PcdRaphaelOriginalInstruction
+  gRaphaelTokenSpaceGuid.PcdRaphaelExtentBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelExtentEnd
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelStackBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelStackSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelArenaBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelArenaSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdtBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdtSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelTestId
+  gRaphaelTokenSpaceGuid.PcdRaphaelStopAfterStage
+  gRaphaelTokenSpaceGuid.PcdRaphaelDisplayProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelSmmuProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelPixelProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelPixelWrite
+  gRaphaelTokenSpaceGuid.PcdRaphaelExperimentalGop
+  gRaphaelTokenSpaceGuid.PcdRaphaelInputProbe
+  gRaphaelTokenSpaceGuid.PcdRaphaelInputRead
+  gRaphaelTokenSpaceGuid.PcdRaphaelInputProtocol
+
+[BuildOptions]
+  # C++ build rules omit CC_XIPFLAGS; UFS also executes with M/C off.
+  CLANGPDB:*_CLANGPDB_AARCH64_CC_FLAGS = -mstrict-align

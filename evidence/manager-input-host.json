@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "case_count": 24,
+  "cases": [
+    "null state refused",
+    "zero frequency refused",
+    "unbounded duration refused",
+    "duration multiplication overflow refused",
+    "counter deadline overflow refused",
+    "event failure leaves no active handle",
+    "six-second absolute deadline",
+    "active event cannot be discarded",
+    "null read parameters refused",
+    "no signal or read while real event is not ready",
+    "pending event survives repeated wait without consuming another key",
+    "real key delivered unchanged",
+    "pending event survives repeated wait without consuming another key",
+    "real key delivered unchanged",
+    "pending event survives repeated wait without consuming another key",
+    "real key delivered unchanged",
+    "physical Up Down Enter have independent counts",
+    "reset cannot extend deadline or erase physical evidence",
+    "real event error recorded",
+    "absolute deadline delivers Enter even after physical activity or error",
+    "synthetic fallback cannot become physical Enter evidence",
+    "close failure retains event for retry",
+    "event closed after console restoration",
+    "ended wrapper cannot close twice"
+  ],
+  "command": [
+    "gcc",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/scripts/fixtures/manager_input_host.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/Input.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/manager-input-host/20261028T043300.889630Z-liq26s9i/host"
+  ],
+  "address_sanitizer": true,
+  "undefined_behavior_sanitizer": true,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "scripts/fixtures/manager_input_host.c",
+      "sha256": "a6af32383c4cabe4d0cf4d6c8c5c0641eee5dbb9cd30035aef1eede6d9d312e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/Input.c",
+      "sha256": "9667fc0572d5a078d7a92125f7968e1a1f5b6073459ee6d6a04fda142f1dea06"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelManagerInputLib.h",
+      "sha256": "997422d3298b33f98e875e010338377e212ba3347360f6ebfdd8c99bb493ff55"
+    },
+    {
+      "path": "scripts/validate_manager_input.py",
+      "sha256": "71bf52c693b11fb3e4a0f94e87cf2b6441b233954cef196c3f649ba3133529ad"
+    }
+  ]
+}

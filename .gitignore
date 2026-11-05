@@ -1,0 +1,27 @@
+# Local inputs and build outputs
+/local.toml
+/unixnu.local.toml
+/.cache/
+/.venv/
+/build/
+/out/
+/artifacts/
+/logs/
+/sources/
+/development/evidence/private/
+/evidence/private/
+__pycache__/
+*.py[cod]
+*.backup*
+*.img
+*.raw
+*.fd
+*.efi
+*.macho
+*.o
+*.a
+*.pem
+*.key
+*.p12
+*.pfx
+.DS_Store

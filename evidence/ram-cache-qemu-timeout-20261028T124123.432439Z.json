@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "handset_executed": false,
+  "run": "artifacts/sec-dxe-qemu/20261028T124123.432439Z-sod3fy3q",
+  "uncommitted_direct_loop_experiment": true,
+  "firmware_code_reverted": true,
+  "source_snapshot_sha256": "95a50cf2be39db2e1e2f81e237b5232f81c34ab751f64d35f63895a3e698c2a8",
+  "serial_sha256": "b12783bfbff2b384b9c4c4a745b848467decd378b584f3e4c6ff2bbd3a1023fb",
+  "requested_pages": 65536,
+  "completed_pages": 64961,
+  "restored_pages": 64961,
+  "dirty": 0,
+  "backup_words": 0,
+  "engine_status": 6,
+  "engine_reason": 6,
+  "elapsed_ms": 8000.00376,
+  "ro_map_restored": true,
+  "restore_denials": 256,
+  "receiver_verified_all_original_words": true,
+  "diagnostic_budget_seconds": 8,
+  "limits": "Failed simulator experiment only. No handset build or verified source audit of direct cache loop."
+}

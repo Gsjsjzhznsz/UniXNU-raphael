@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "qemu_only": true,
+  "handset_executed": false,
+  "source_report": "artifacts/native-early-c-qemu/20261028T235049.602686Z-uxxb1w8s/report.json",
+  "source_report_sha256": "f582e4e0106c1a1e06d190299b075f3d850ea1c22287527d5fefc1ac4b0bfbd9",
+  "kernel_sha256": "96d31e6d36abed20e48f337cf01040d35db8eecfe1b446d20636664bc7b0d722",
+  "stops": [
+    {
+      "label": "arm-init",
+      "changes": []
+    },
+    {
+      "label": "platform-first",
+      "changes": [
+        {
+          "name": "__DATA_CONST",
+          "changed_bytes": 52,
+          "dirty_pages": 2,
+          "segment_bytes": 901120,
+          "protection": 1
+        },
+        {
+          "name": "__DATA",
+          "changed_bytes": 25,
+          "dirty_pages": 1,
+          "segment_bytes": 1163264,
+          "protection": 3
+        },
+        {
+          "name": "__BOOTDATA",
+          "changed_bytes": 55,
+          "dirty_pages": 1,
+          "segment_bytes": 573440,
+          "protection": 3
+        }
+      ]
+    },
+    {
+      "label": "platform-returned",
+      "changes": [
+        {
+          "name": "__DATA_CONST",
+          "changed_bytes": 114,
+          "dirty_pages": 3,
+          "segment_bytes": 901120,
+          "protection": 1
+        },
+        {
+          "name": "__DATA",
+          "changed_bytes": 75,
+          "dirty_pages": 3,
+          "segment_bytes": 1163264,
+          "protection": 3
+        },
+        {
+          "name": "__BOOTDATA",
+          "changed_bytes": 437,
+          "dirty_pages": 1,
+          "segment_bytes": 573440,
+          "protection": 3
+        }
+      ]
+    },
+    {
+      "label": "rtclock-entry",
+      "changes": [
+        {
+          "name": "__DATA_CONST",
+          "changed_bytes": 142,
+          "dirty_pages": 5,
+          "segment_bytes": 901120,
+          "protection": 1
+        },
+        {
+          "name": "__DATA",
+          "changed_bytes": 121,
+          "dirty_pages": 6,
+          "segment_bytes": 1163264,
+          "protection": 3
+        },
+        {
+          "name": "__BOOTDATA",
+          "changed_bytes": 519,
+          "dirty_pages": 3,
+          "segment_bytes": 573440,
+          "protection": 3
+        }
+      ]
+    },
+    {
+      "label": "arm-vm-entry",
+      "changes": [
+        {
+          "name": "__DATA_CONST",
+          "changed_bytes": 173,
+          "dirty_pages": 9,
+          "segment_bytes": 901120,
+          "protection": 1
+        },
+        {
+          "name": "__DATA",
+          "changed_bytes": 7565,
+          "dirty_pages": 89,
+          "segment_bytes": 1163264,
+          "protection": 3
+        },
+        {
+          "name": "__BOOTDATA",
+          "changed_bytes": 26713,
+          "dirty_pages": 29,
+          "segment_bytes": 573440,
+          "protection": 3
+        }
+      ]
+    }
+  ],
+  "baseline_all_original_except_declared_mmu_instrumentation": true,
+  "all_bootstrap_tables_unchanged": true,
+  "mutable_segments": [
+    {
+      "name": "__DATA_CONST",
+      "va": 18446744005109006336,
+      "bytes": 901120,
+      "file_offset": 1474560,
+      "file_bytes": 901120,
+      "protection": 1
+    },
+    {
+      "name": "__DATA",
+      "va": 18446744005118164992,
+      "bytes": 1163264,
+      "file_offset": 10633216,
+      "file_bytes": 278528,
+      "protection": 3
+    },
+    {
+      "name": "__BOOTDATA",
+      "va": 18446744005119328256,
+      "bytes": 573440,
+      "file_offset": 10928128,
+      "file_bytes": 573440,
+      "protection": 3
+    }
+  ],
+  "scope": "Observed original C up to arm_vm_init entry; no C-stage phone or Android-return verification",
+  "verification_report": "artifacts/native-early-c-verification/20261028T235353.342174Z-cpbih7yo/report.json"
+}

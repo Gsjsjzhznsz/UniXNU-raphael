@@ -1,0 +1,43 @@
+{
+  "kind": "post-run host tooling Git blob binding",
+  "source_revision": "facee82465a67cad6032f23377f5b9e2e94ef62a",
+  "files": [
+    {
+      "path": "scripts/display_probe.py",
+      "sha256": "da1a8fc945654a14bee8b4851967731652b7c628224f5ff30dfcc6aedd861ab1"
+    },
+    {
+      "path": "scripts/run_sec_dxe.py",
+      "sha256": "a07baf90f586c4c1e4b336dd9a43bfc5f2a265ef684c8cfb30b4922f849ee3f5"
+    },
+    {
+      "path": "scripts/inspect_boot_display.py",
+      "sha256": "6da33be9d8dad1879aca0d6b3a08c8647fd10ff1942f7dece8bb69a8115564f7"
+    },
+    {
+      "path": "scripts/inspect_boot_route.py",
+      "sha256": "41971885e602c53fc8db9f5900a1765680181639a6e3bb2ec9539c915b5e3f00"
+    },
+    {
+      "path": "scripts/audit_display_sources.py",
+      "sha256": "879a9626dd278ea5248cdc02474c1431aa516c39cf0e326e1b7a29ae268a4595"
+    },
+    {
+      "path": "scripts/validate_display_probe.py",
+      "sha256": "7e5f50899d9f6087f8b0526922fc0be34efccd3e65eb9e601edd6862a4daaefc"
+    },
+    {
+      "path": "scripts/build_sec_dxe.py",
+      "sha256": "2ea7a3bc4b1e3f4d1f72637a6cc4071f07b327be644cea67afca48bb36d2a46a"
+    },
+    {
+      "path": "scripts/build_handset_sec_dxe.py",
+      "sha256": "a0f5cb49d0850530eff82b5fcecab05d4a586f1e20ae12973c7a33df31d4c599"
+    }
+  ],
+  "wire_version": 3,
+  "private_readback": "evidence/private/sec-dxe-run/20261027T161630Z",
+  "handoff_sha256": "0643710a53420cf44712d4d7c30aa663de654de014c2950a9d414748c6a0a302",
+  "route_observation_sha256": "1ce0027d741a6e51f43ab5438befc50d65e2e4b44ab8ba6a27ec46c04cca76bd",
+  "note": "Separate from firmware package input binding; source was compared after execution"
+}

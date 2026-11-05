@@ -1,0 +1,22 @@
+{
+  "passed": false,
+  "handset_executed": false,
+  "run": "artifacts/sec-dxe-qemu/20261028T123535.809285Z-7sfvk8jg",
+  "source_revision": "bec9798ff8c31d0df90160387f831d66cd18c889",
+  "serial_sha256": "705ba6fe49b9e427a5da6d84ccf9e7154b2a1bdb83828fa66353f79cadd0fa99",
+  "wire_sha256": "60a55fd682ddb8ab42ab05f1c7831be39d4bf89bb2ddb19b02ed8feb35d34f7f",
+  "requested_pages": 65536,
+  "completed_pages": 60118,
+  "restored_pages": 60118,
+  "dirty": 0,
+  "backup_words": 0,
+  "engine_status": 6,
+  "engine_reason": 6,
+  "elapsed_ms": 8000.023008,
+  "ro_map_restored": true,
+  "restore_denials": 256,
+  "receiver_verified_all_original_words": true,
+  "diagnostic_budget_seconds": 8,
+  "host_contention_effect_unknown": true,
+  "limits": "Timeout and recovery only; full-range test failed."
+}

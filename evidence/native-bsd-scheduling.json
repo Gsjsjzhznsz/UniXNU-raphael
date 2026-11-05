@@ -1,0 +1,29 @@
+{
+  "milestone": "Handset original BSD initialization and real timer-backed sleep/wake",
+  "report": "evidence/private/android-return-run/20261030T224923Z/report.json",
+  "build": "evidence/private/android-return-build/20261030T224755.064137Z-m09sdd9f",
+  "passed": true,
+  "checkpoint_id": 19,
+  "pc": "0xfffffff007a001e0",
+  "lr": "0xfffffff0076f3dac",
+  "cpu": {
+    "stage": 5,
+    "registered": 1,
+    "intid": 18,
+    "physical_timer": 1,
+    "last_irq": 1023,
+    "timer_irqs": 2,
+    "ipi_irqs": 0,
+    "eois": 2,
+    "dist_pa": 396361728,
+    "redist_pa": 396754944,
+    "frequency": 19200000,
+    "normal_xnu_irq_verified": true
+  },
+  "full_default_post_verified": true,
+  "bounded_recovery_verified": true,
+  "delta_bytes": 474828,
+  "wall_seconds_to_android": 101.77336498899967,
+  "root_volume_verified": false,
+  "handset_desktop_verified": false
+}

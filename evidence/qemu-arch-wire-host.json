@@ -1,0 +1,230 @@
+{
+  "passed": true,
+  "command": "python3 scripts/validate_qemu_arch_wire.py",
+  "check_count": 53,
+  "checks": [
+    {
+      "name": "actual stage 2",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261027T210948.322271Z-q_gzprmb/report.json",
+      "wire_sha256": "88a39477e1050c9d28b4c6ad6a3e8188c61812116e0c097cffa567cc0088c753"
+    },
+    {
+      "name": "actual stage 3",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261027T210948.322270Z-qqhszhy1/report.json",
+      "wire_sha256": "f2e2fd72a4fa28d8be9e585e7084f14532a50b498f12cd2d4b57364738388354"
+    },
+    {
+      "name": "actual stage 6",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261027T211003.805847Z-roccj35f/report.json",
+      "wire_sha256": "f6a9190292519cb8a7d14acb7f7cbaa564513f97f4b9c486186f5cc64323e575"
+    },
+    {
+      "name": "reject corrupted version",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted status",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted frequency",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted saved_ctl",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted cpu_protocol",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted interrupt_protocol",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_protocol",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted period",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted relative_fired",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted relative_ticks",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted periodic_count",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted periodic_ticks",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted cancel_stable",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted manager_completed",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted manager_ticks",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted sources_disabled",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_disabled",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_restored",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted cval_after",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted ctl_after",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted gicd",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted gicd_bytes",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted gicr",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted gicr_bytes",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_sec",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_phys",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_virt",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted timer_hyp",
+      "passed": true
+    },
+    {
+      "name": "reject truncated",
+      "passed": true
+    },
+    {
+      "name": "reject trailing",
+      "passed": true
+    },
+    {
+      "name": "reject late at early stage",
+      "passed": true
+    },
+    {
+      "name": "reject legacy BRK stage",
+      "passed": true
+    },
+    {
+      "name": "reject resource root board",
+      "passed": true
+    },
+    {
+      "name": "reject resource root cells",
+      "passed": true
+    },
+    {
+      "name": "reject resource root parent",
+      "passed": true
+    },
+    {
+      "name": "reject resource disabled GIC",
+      "passed": true
+    },
+    {
+      "name": "reject resource GIC cells",
+      "passed": true
+    },
+    {
+      "name": "reject resource multiple GICR",
+      "passed": true
+    },
+    {
+      "name": "reject resource bus translation",
+      "passed": true
+    },
+    {
+      "name": "reject resource zero GIC range",
+      "passed": true
+    },
+    {
+      "name": "reject resource overlap GIC range",
+      "passed": true
+    },
+    {
+      "name": "reject resource misaligned GIC range",
+      "passed": true
+    },
+    {
+      "name": "reject resource disabled timer",
+      "passed": true
+    },
+    {
+      "name": "reject resource override timer parent",
+      "passed": true
+    },
+    {
+      "name": "reject resource extended timer",
+      "passed": true
+    },
+    {
+      "name": "reject resource truncated interrupts",
+      "passed": true
+    },
+    {
+      "name": "reject resource SPI",
+      "passed": true
+    },
+    {
+      "name": "reject resource PPI range",
+      "passed": true
+    },
+    {
+      "name": "reject resource trigger",
+      "passed": true
+    },
+    {
+      "name": "reject resource duplicate PPI",
+      "passed": true
+    }
+  ],
+  "decoder_sha256": "139523ea449cbabeab657db116691989f34f7313d05a5f41746b95d58e7a7d0d",
+  "runner_sha256": "9d29ce4062884eeac3b4e3515ab63af685461f272bf798f89b8da6f03789873a",
+  "handset_executed": false,
+  "gic_full_restore_tested": false,
+  "xnu_executed": false
+}

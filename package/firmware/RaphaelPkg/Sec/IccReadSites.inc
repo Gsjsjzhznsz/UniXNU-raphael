@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: BSD-2-Clause-Patent
+// Fixed register encodings audited against primary architecture/kernel sources.
+RAPHAEL_READ_SITE(0,RaphaelReadCurrentEl,CurrentEL)
+RAPHAEL_READ_SITE(1,RaphaelReadDaif,DAIF)
+RAPHAEL_READ_SITE(2,RaphaelReadMpidr,MPIDR_EL1)
+RAPHAEL_READ_SITE(3,RaphaelReadSre,ICC_SRE_EL1)
+RAPHAEL_READ_SITE(4,RaphaelReadCtlr,ICC_CTLR_EL1)
+RAPHAEL_READ_SITE(5,RaphaelReadPmr,ICC_PMR_EL1)
+RAPHAEL_READ_SITE(6,RaphaelReadBpr1,ICC_BPR1_EL1)
+RAPHAEL_READ_SITE(7,RaphaelReadIgrpen1,ICC_IGRPEN1_EL1)
+RAPHAEL_READ_SITE(8,RaphaelReadRpr,ICC_RPR_EL1)
+RAPHAEL_READ_SITE(9,RaphaelReadHppir1,ICC_HPPIR1_EL1)
+RAPHAEL_READ_SITE(10,RaphaelReadCntpCtl,CNTP_CTL_EL0)
+RAPHAEL_READ_SITE(11,RaphaelReadCntpCval,CNTP_CVAL_EL0)
+RAPHAEL_READ_SITE(12,RaphaelReadCntvCtl,CNTV_CTL_EL0)
+RAPHAEL_READ_SITE(13,RaphaelReadCntvCval,CNTV_CVAL_EL0)
+RAPHAEL_READ_SITE(14,RaphaelReadCntkctl,CNTKCTL_EL1)
+RAPHAEL_READ_SITE(15,RaphaelReadCntfrq,CNTFRQ_EL0)

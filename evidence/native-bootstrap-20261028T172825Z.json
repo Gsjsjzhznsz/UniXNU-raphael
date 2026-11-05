@@ -1,0 +1,1526 @@
+{
+  "passed": false,
+  "native_compile_only": true,
+  "prelink_executed": false,
+  "handset_executed": false,
+  "source_revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+  "configuration": "raphael_platform_defconfig",
+  "source_crypto_evaluation": true,
+  "dt_platform_enabled": true,
+  "module_upstream_sync_executed": false,
+  "source_inputs": [
+    {
+      "path": "UniXNU-sm8150-common/README.md",
+      "sha256": "e1319841a5669a935ea56a900faffad4ebf5db03d0c45bab91fc201937a4ddf7"
+    },
+    {
+      "path": "UniXNU-sm8150-common/AGENTS.md",
+      "sha256": "fbd181a9ee97a6bb2232d2fe67fb3802409f9be52f2cd9afed2ad9005f763e88"
+    },
+    {
+      "path": "UniXNU-sm8150-common/soc.toml",
+      "sha256": "5172cdad78efda9d53cf68fbc97ef5c1650077aa2d25c4d75cac751dee909752"
+    },
+    {
+      "path": "UniXNU-sm8150-common/dts/sm8150-observed.dtsi",
+      "sha256": "04902c6542bc1282451e3c29164c8daea2849b9363992cb8e8a20a0f039ab3e5"
+    },
+    {
+      "path": "UniXNU-sm8150-common/configs/sm8150-bootstrap.config",
+      "sha256": "c6f6f8468d1aee40b7c09fd4b42a461d0ca9118b193e962c7ed77f54761fbc4c"
+    },
+    {
+      "path": "UniXNU-sm8150-common/patches/xnu/series",
+      "sha256": "a38dce1c8331a876296096fc19e5389c3ba749bbae2758aa227d06097c552abc"
+    },
+    {
+      "path": "UniXNU-raphael/board.toml",
+      "sha256": "5c20b2a5b1f43f6919a4726b406fd5c08e5b7ddabe49ee058efe9a0d213fc153"
+    },
+    {
+      "path": "UniXNU-raphael/.gitignore",
+      "sha256": "0823fa2fe0bd8a781362eb8267eff8952bb0b701db1bf76ffd9e4347fe2dd463"
+    },
+    {
+      "path": "UniXNU-raphael/README.md",
+      "sha256": "2d5980060cc7b65bb19c46bd1e387cfe98bc9d3ccf026d8bd765731896dacfca"
+    },
+    {
+      "path": "UniXNU-raphael/feeds.toml",
+      "sha256": "cd34b0584f4167164c75402b480a5a50228f67f544dd1892067c32f2333d1de9"
+    },
+    {
+      "path": "UniXNU-raphael/local.toml.example",
+      "sha256": "31974d75073e4175057b7d7c065ef234d8b8f55e1498b875a7187afb63d29333"
+    },
+    {
+      "path": "UniXNU-raphael/AGENTS.md",
+      "sha256": "7c6c12f6869d6b06cbb9a8cc0991229ef4428b6db19cabfc3d58e229df578cd1"
+    },
+    {
+      "path": "UniXNU-raphael/unixnu.lock",
+      "sha256": "411684fc1e938867ed9255fe3f72b5d08b42da8694410beea73f8a0ec08ea41f"
+    },
+    {
+      "path": "UniXNU-raphael/proprietary-inputs.json",
+      "sha256": "27029d9b5aa57be3777b2514da3cc4574aba46072ad232c426d52de409f1f87f"
+    },
+    {
+      "path": "UniXNU-raphael/dts/raphael-observed.dts",
+      "sha256": "71e723e88323ff9b4bca9c736564a26777de7e233e579df36436702bba9632c0"
+    },
+    {
+      "path": "UniXNU-raphael/scripts/build-raphael-platform.py",
+      "sha256": "832a58bf69c88451a9d364b9f82eb9828d1a2004b001c9f39818a1c930ef06af"
+    },
+    {
+      "path": "UniXNU-raphael/configs/raphael_platform_defconfig",
+      "sha256": "eca9160dedad32dce7d7182b2459d0e94417661b4a875212e6a9ae7de8577e6e"
+    },
+    {
+      "path": "UniXNU-raphael/configs/raphael_sourcecrypto_defconfig",
+      "sha256": "2155969d6c51d7a84d3ab8512fd7d9a380b9f62d9112222151d593bfcd8efbe7"
+    },
+    {
+      "path": "UniXNU-raphael/configs/raphael_bootstrap_defconfig",
+      "sha256": "0d17b1abb48f9f7506cda76b03a6d3eacddc21ee58cb1d3fa1175fe4a310f191"
+    },
+    {
+      "path": "UniXNU-raphael/patches/xnu/series",
+      "sha256": "915ec3a56dcbc3195fe93d37d1f9a94da78b664337dd46d3df02962e77b4120b"
+    },
+    {
+      "path": "UniXNU-raphael/patches/xnu/os-bootstrap.series",
+      "sha256": "652680141fee82d7eb40a4c5f53c4b69b1c531bae61bd917a2cae312ded1fd00"
+    }
+  ],
+  "artifact_directory": "artifacts/native-bootstrap-attempt/20261028T172825Z",
+  "backend": "pinned unixnu.kernel.build; no kernel.prelink invocation",
+  "runner_sha256": "a27d9d7348286aa68aad6a422808cd5715cf92cd4cc8064e5c47db32bbe30795",
+  "modules": [
+    {
+      "kind": "refer",
+      "name": "xnu",
+      "path": "/home/guo/work/raphael-fresh/sources/apple-xnu-native",
+      "commit": "d8b80295118ef25ac3a784134bcf95cd8e88109f"
+    },
+    {
+      "kind": "refer",
+      "name": "edk2",
+      "path": "/home/guo/work/raphael-fresh/sources/mu_basecore",
+      "commit": "cfb93724a06ff86ff5ba971413368a7809ee42a5"
+    },
+    {
+      "kind": "patch",
+      "name": "xnu",
+      "path": "/home/guo/work/raphael-fresh/UniXNU-raphael/patches/xnu",
+      "commit": "7e34fc5895f48e994e1b8166cc55d4ea14de83f9"
+    },
+    {
+      "kind": "patch",
+      "name": "libpthread",
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/libpthread",
+      "commit": "40d21cc65171c3a24faa130a2a8e899f85790485"
+    },
+    {
+      "kind": "patch",
+      "name": "mesa",
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/mesa",
+      "commit": "40d21cc65171c3a24faa130a2a8e899f85790485"
+    },
+    {
+      "kind": "package",
+      "name": "main",
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/package",
+      "commit": "40d21cc65171c3a24faa130a2a8e899f85790485"
+    },
+    {
+      "kind": "refer",
+      "name": "libplatform",
+      "path": "/home/guo/work/raphael-fresh/artifacts/native-bootstrap/feeds/libplatform-0f31118b",
+      "commit": "a00a4cc36da2110578bcf3b8eeeeb93dcc7f4e11"
+    },
+    {
+      "kind": "refer",
+      "name": "libdispatch",
+      "path": "/home/guo/work/raphael-fresh/artifacts/native-bootstrap/feeds/libdispatch-d8f167ce",
+      "commit": "30fe6a7d945340ce69cef121132f049e810089a5"
+    },
+    {
+      "kind": "refer",
+      "name": "AvailabilityVersions",
+      "path": "/home/guo/work/raphael-fresh/artifacts/native-bootstrap/feeds/AvailabilityVersions-6928d18a",
+      "commit": "933f9360f1b70dfbda5548386a3d65e0358b4f7d"
+    },
+    {
+      "kind": "refer",
+      "name": "libpthread",
+      "path": "/home/guo/work/raphael-fresh/artifacts/native-bootstrap/feeds/libpthread-9e5201bd",
+      "commit": "c0e60fb5ecfc54cf379c261d3f9572cc22ded891"
+    },
+    {
+      "kind": "refer",
+      "name": "corecrypto-2023",
+      "path": "/home/guo/work/raphael-fresh/artifacts/native-bootstrap/feeds/corecrypto-2023-c0651bae",
+      "commit": "11fba65b12d8830630e248dfa8344caf8b065f26"
+    },
+    {
+      "kind": "refer",
+      "name": "IOStorageFamily",
+      "path": "/home/guo/work/raphael-fresh/artifacts/native-bootstrap/feeds/IOStorageFamily-67f9003c",
+      "commit": "e45fbe30a7879e0b16e26dddb78538f1b00e0bff"
+    },
+    {
+      "kind": "kit",
+      "name": "XnuPrelink",
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/kits/XnuPrelink",
+      "commit": "f876e3ee62e18fc06653dd75ed7dafcfb3950ac0"
+    },
+    {
+      "kind": "driver",
+      "name": "DarwinBoot",
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/drivers/DarwinBoot",
+      "commit": "3325e352d7df68a9f9ad74832ed94a6acbbd7390"
+    }
+  ],
+  "patches": [
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/apple-only-cpu-tunables.patch",
+      "sha256": "91e431249a4d756bfca8b1800b4b283340c86d1899ec8196a2fe873e8d3c251e"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/architectural-timer-entry.patch",
+      "sha256": "809b0c951545d889a2a37c730189283e7e890340894bab6d937c914dbd20b8e5"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/armvirt-platform-personality.patch",
+      "sha256": "00e7054c9ff2ae82b66f27bfbefd7620e9000503ea5b38b80aa90aab1e4b7225"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/cxx-flag-dependencies.patch",
+      "sha256": "a435e8797ed24a8338db53d0eaac49c163f90170c1fb7946d0c5cdee9d7d4b52"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/disabled-deferred-reclaim.patch",
+      "sha256": "817a0b017aebb21f773aafe2b92a81be076abc66e29275d57220635339a407e1"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/external-archive-dependencies.patch",
+      "sha256": "0a571de8361845266d7d419b0b3d5ebadbef986840c7e06eb981c0960d7fe374"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/kernel-sdk-root.patch",
+      "sha256": "2bcf10f4bf171afbc358cb64e9bc742563dd21f5eadf0e7a17936e87fa8ba43d"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/local-availability.patch",
+      "sha256": "a051857d524f8836068fd2f1182ebe9e9d9ccf28b9560fb27ad634b0cb93270e"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/mockfs-intermediate-lookup.patch",
+      "sha256": "51a5b76873c2a39b777bd4f1f5e78730ce72e93d548de6fbe4655f107731fa00"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/mockfs-memory-device-width.patch",
+      "sha256": "506f4ba36e30a700f0d27370d07abbde6e2c689d13fbad3400a6b940569ae30a"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/mockfs-statfs.patch",
+      "sha256": "58c9a51909b12dca9cd1ac2fdb94be748b43be1c979383b9504a0304fb16a809"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/mockfs-test-file.patch",
+      "sha256": "4a1ef86e0bdca7b633f59885961be1939574f8ba9814d1d75ebbfd0a7a8bd919"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/mockfs-typed-allocation.patch",
+      "sha256": "44dfe8ea590336fae48a4d5f7b8fd478a435d591a34ba77fe1d0a961c630ad57"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-4k-bootstrap-capacity.patch",
+      "sha256": "4ac39b497d88b28432bc7844c7137c8d2acc1992bef53f68c3512523a80b13a3"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-4k-signature-hash-cache.patch",
+      "sha256": "a12be973c4eb525cb4309c759d5bae970b158f2928f284615ba6d6969f445eb4"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-4k-user-abi.patch",
+      "sha256": "981ac483ae898426486aab475e22b2286bc1d820ad047c566182c3fbf435f6d4"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-aes-personality.patch",
+      "sha256": "02fe52c87a6bd801e602d03b54ce51de1362a2f2c6f75f5fc08122d3901aefff"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-arm-pan.patch",
+      "sha256": "7948f0ca8ad0ac5313a32bc8d9377290f88a7d64c880bbfac8e2b4c092e916f6"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-dt-panic-region.patch",
+      "sha256": "b60c2a9a72ea23832f1e64348a5c5d1152cf05db6c156283dd8a93c804cd89cb"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-lookup-trace.patch",
+      "sha256": "a9636d507e1d03fa87e79ec28d6f2007bb5f2563052e863a0de5b75cef21717f"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-priv-work-interval.patch",
+      "sha256": "6250b487e67dd35e97da59cc79040aa5d73f11106fbe5bc07e81047c4c33e2ed"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-quiet-managed-page-report.patch",
+      "sha256": "3044601dad4bcb731a46285e65e82129bbc3a6d5e85138e29543b06f18d13a3c"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-text-fixup.patch",
+      "sha256": "c4dabb43d79fe23970ef24498f9cccaf15d1a9f6af23b7f2952bd75b3f248d9b"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-trust-cache-runtime.patch",
+      "sha256": "19e000ca6f70a8ddfefa503d2936894dd8315fae3ca2fb3e50d666d65252de79"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-union-getattrlistbulk.patch",
+      "sha256": "f5d665fd7250717cfacced8408a0b94f282eb2764e514f61a378f7d085c7a03b"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-union-lower-directory.patch",
+      "sha256": "b39e077b190134caae1842d07758795bf15b408eb637701a41b603825e5d563b"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-work-interval-soft-fail.patch",
+      "sha256": "b163b85e0340abf2da104527a3b5c3c4e72abe6cacabb3bacb6001e84a67f3fe"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-work-interval-trace.patch",
+      "sha256": "f2c11511c172929572c3b075b0b0f3b8ae2c63d6f229c489c0339acc4f39815c"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/native-work-interval-instance.patch",
+      "sha256": "807df62245701f999fb5c7033a9f03a4fab195e619a0c0607fd6481d19d4c1c8"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/non-apple-cache-monitor.patch",
+      "sha256": "116ee4e61fb68e4a403049e349ceb23334e2eff0bec0eb11dc3bd5f3259fabdf"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/non-apple-iommu-bootstrap.patch",
+      "sha256": "a53aaf1073976aed1561cb609763c7a4214e245a50fb534cc77b643808df9e70"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/non-apple-pmap-field.patch",
+      "sha256": "82fe0a5021d59ddb766884f802f960ad67d61be63596f0bde136bf3875ff3ff8"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/null-root-media.patch",
+      "sha256": "a67ce9afd5af8178e83089ace6ce5d21f5e820b69e4c70dfc2cdae1be274678a"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-component-load-probes.patch",
+      "sha256": "288ee8544fef056ebaf5da0d4740d0170788d3c14b6b3b78de140e7d966b8ecb"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-legacy-start.patch",
+      "sha256": "a6ed6012f215e2c13c09f1b89fe986616af0a0674b0f6e4afd2194d4b8de4c0c"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-native-gpu-broker.patch",
+      "sha256": "dc7590c3298ead78a843f098d3f47df57350e15b30746890b162a24b6eb182f5"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-owner-boot-manifest.patch",
+      "sha256": "840a73448459b0ddad1ad7d8525ffb3bd0826d58a7e732f8283a4222c2df175e"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-owner-cache-carrier.patch",
+      "sha256": "11b292274599c7161d5eaef627d11934166b136c5e8c31098bcabb2569da3d0e"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-owner-root-binding-audit.patch",
+      "sha256": "f77d07af625d8cf2404185717e58738841ff453735f260fd7dc3c4e8526a4e69"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-owner-root-crypto-probe.patch",
+      "sha256": "35415f0a13a2770d835f0e837ecc47e6fa51934a6faa1edfc6900e5f5d479e4d"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-owner-systemos-mount.patch",
+      "sha256": "42d5642e103d25955db2864ef4cb63a2c14ae94a43b71ac2418b1e587f8de46c"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-owner-z-air-init.patch",
+      "sha256": "5b1b1252a0614eee6926fb05def89c49008a6d891dc8760e7d126d1a444ac6d9"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/offline-pgz-alignment-probe.patch",
+      "sha256": "632daaab2392352c69226670750285ead5bbf5aa90ea93198a7c79525a23ea0f"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/pgz-aligned-validation.patch",
+      "sha256": "b1c0e2a78de033f9c9b234820e9be93756dcd6765af8a1ecb76b209476058f25"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/public-entitlements-header.patch",
+      "sha256": "c6922bcfde308a02b39570f5f9af8d24e4cf4d88254a80e80218b6d410a784b8"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/published-freezer-condition.patch",
+      "sha256": "644646451d10ea720414c8ed7b31a5aa63846018a3bb686b966565169fbc9688"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/source-corecrypto14-bootstrap.patch",
+      "sha256": "041f0d0627e83f5c276cfa87130cec04907cdd02682428d069af2a9af2a16ebd"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/source-machine-layer.patch",
+      "sha256": "1538783d2e5956f8ba65baeca4e9490711c43b8825123860847778b256291573"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/source-pthread-bootstrap.patch",
+      "sha256": "1bbf00cc2b4e8f227dddf2807818d10e07325beea8e6c2c0b12106228d31d643"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzw-native-adreno-sandbox-grant.patch",
+      "sha256": "07992b1f83014191fcf422d6924fa53b3008560d9eb73a4d2cf340941e564c56"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzwb-native-sandbox-grant-set-properties.patch",
+      "sha256": "20ceb08c197d4da0f30e59a42db6a0ab8a2a3109218c3204e67ee2956423381b"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzx-pmap-sync-64bit-pa.patch",
+      "sha256": "b8419e7779f49c9c5360a8ae8e9b52a78968511a9e24e43b9edb799793e04496"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzy-native-gpu-addon-mount.patch",
+      "sha256": "f80e8c86eb8aad7da6fa1849ddb108c6a553f7d221d99f695a1e10198832adeb"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzy-staged-system-apps.patch",
+      "sha256": "1103abc87d9611496d3458c9e5b36107fc27901739f19fec0de6da7cbd1c1844"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzyb-native-cryptex-os-view.patch",
+      "sha256": "299b2c9b2e25168512e95340864b7ae728103164b942f18bb700285267e4836a"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/patches/xnu/zzyc-owner-skip-launch-constraints.patch",
+      "sha256": "2f7393ccac3f8e5edd49a4fadf834544a5c4d1fdaff2e1dd67c49567bb1f5e4b"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/kits/XnuPrelink/patches/xnu-10063.141.1-security-init.patch",
+      "sha256": "f9ea76df15b01c8073c0fe8e38a1c05ac9db9202c393811756f6b616275b4675"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/sources/UniXNU/kits/XnuPrelink/patches/xnu-10063.141.1-sparse-index.patch",
+      "sha256": "d0a2da8ca1a0b4021629b0ecaadad20c0e6cf7b3205f8d780242a60034f44d91"
+    }
+  ],
+  "public_headers": {
+    "passed": true,
+    "headers": [
+      {
+        "path": "iokit/DriverKit/IOKernelReportStructs.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/IOKernelReportStructs.h",
+        "git_blob": "71c98a84650a7da3c66618d4306852d3df1c4d60",
+        "sha256": "8dd82930c349cde7023a05281ffb4d76823f20617bc5c45e7733a5688bc3d02d",
+        "bytes": 3824
+      },
+      {
+        "path": "iokit/DriverKit/IOKitKeys.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/IOKitKeys.h",
+        "git_blob": "f4c43e837eab552e6e308896775dd3b96656fe29",
+        "sha256": "0b322a2b4d81de7346c121c66512828aa3e8a9d9c3a8bc910ab29f548020f958",
+        "bytes": 15649
+      },
+      {
+        "path": "iokit/DriverKit/IORPC.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/IORPC.h",
+        "git_blob": "7ffc6b73e32ba98616e35c999945d367d2b8751d",
+        "sha256": "3463c83ffccead1f69c474d0d0ffcb5389cdcff923236d35600e31bcdbd229ce",
+        "bytes": 7377
+      },
+      {
+        "path": "iokit/DriverKit/IOReportTypes.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/IOReportTypes.h",
+        "git_blob": "dd81759a416ba5cc3b5f6b79f843554765053c22",
+        "sha256": "d6b1a66d6e5933416e025efada06367fe15e642b9120eb0c24c13196a76e705f",
+        "bytes": 17208
+      },
+      {
+        "path": "iokit/DriverKit/IOReturn.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/IOReturn.h",
+        "git_blob": "e36d37b374d1443c7721ade372a92ccc60d1d129",
+        "sha256": "4767dd8a847d4b7dcff0b74c7a67013f0462f3ea6313e5a483f49fe046f93ab1",
+        "bytes": 9741
+      },
+      {
+        "path": "iokit/DriverKit/IOTypes.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/IOTypes.h",
+        "git_blob": "661b05e764addaf97bee13e5f935b85aac3855da",
+        "sha256": "f79e7bf7b97a1afbcb9023a2bc97d4ec3a969182f0dc36d4b9ccc841196266ad",
+        "bytes": 6905
+      },
+      {
+        "path": "iokit/DriverKit/OSBoundedArray.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/OSBoundedArray.h",
+        "git_blob": "e413229b982880b91350e82520e4aaa6dfd18124",
+        "sha256": "69c9ba2a35afe782a6de410698ff23d70c11a466b6278fd201153a9c0470f157",
+        "bytes": 1882
+      },
+      {
+        "path": "iokit/DriverKit/OSBoundedArrayRef.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/OSBoundedArrayRef.h",
+        "git_blob": "4467f6b6ff2ff3e50f495bcfce751adb82bd72a4",
+        "sha256": "d716a3328942cc179f58c92768e9358e9a90b5a31049a6f4a78ce1f96e0b4f62",
+        "bytes": 1877
+      },
+      {
+        "path": "iokit/DriverKit/OSBoundedPtr.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/OSBoundedPtr.h",
+        "git_blob": "6ea9b1340603fbb5edf7072a276650aed2223f58",
+        "sha256": "9ac2ff2dd2700bde779b1eac359bc3ad252c1743b0b2a51bff8666c4601238df",
+        "bytes": 2116
+      },
+      {
+        "path": "iokit/DriverKit/OSBoundedPtrFwd.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/OSBoundedPtrFwd.h",
+        "git_blob": "04c4df48c508f6c9c1a3f53fbb613130ede06b2f",
+        "sha256": "fa359f42f2ee59354d571fdf9901faaaff9ebd23a34a87386d1cfdd390c24db6",
+        "bytes": 1889
+      },
+      {
+        "path": "iokit/DriverKit/bounded_array.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/bounded_array.h",
+        "git_blob": "57e102743d6f6039a27a6ff8310e9ce63d878d0e",
+        "sha256": "2941818ae1b1456aed888f6cf420aadd7da7aca3b3c3506f34913b113cc60292",
+        "bytes": 3274
+      },
+      {
+        "path": "iokit/DriverKit/bounded_array_ref.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/bounded_array_ref.h",
+        "git_blob": "fe060a6d72a9f6930071a701caf162d9bf275fff",
+        "sha256": "4354d784f1ebbd393d83df839d21def8329a34a9641d12ad4763843510c8d4e9",
+        "bytes": 10902
+      },
+      {
+        "path": "iokit/DriverKit/bounded_ptr.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/bounded_ptr.h",
+        "git_blob": "4c7de13f1a5bfe6d130413bde4c9c3de444a93ad",
+        "sha256": "29339515720513ba48414eae0869e80ae1d82bfec28d6b9692dc029d4e9f4255",
+        "bytes": 26488
+      },
+      {
+        "path": "iokit/DriverKit/bounded_ptr_fwd.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/bounded_ptr_fwd.h",
+        "git_blob": "9613279e9841fef46f10398d4d5ac0d2c44a589a",
+        "sha256": "40c619ee9a64a23e6a7ba662c83348ab6d7b5cd1199a8a8271db43970491750f",
+        "bytes": 1650
+      },
+      {
+        "path": "iokit/DriverKit/macro_help.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/macro_help.h",
+        "git_blob": "02fff0602846c259670822c9766424c106ea6a2b",
+        "sha256": "6bf35433d7fab3ea45dd0e19dd0998f59974bf87b2cf2b661be9d45ab3789d24",
+        "bytes": 3078
+      },
+      {
+        "path": "iokit/DriverKit/queue_implementation.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/queue_implementation.h",
+        "git_blob": "1d14efdeb7370869d2360a100ff07125c3055119",
+        "sha256": "c7b422e473562a7ecf5345bd4f739f7cfbfbcf4c7906fe7d6092675f4c12a5fd",
+        "bytes": 35417
+      },
+      {
+        "path": "iokit/DriverKit/safe_allocation.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/safe_allocation.h",
+        "git_blob": "1d4759b1ab36d76e7604adce3939ef5b6a56d12f",
+        "sha256": "24fd13492d10747f8b4f00a7cb5b8973fcf3e3aa780e8c4ce3bf3a4bbc897d7b",
+        "bytes": 16217
+      },
+      {
+        "path": "iokit/DriverKit/crypto/aes.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/crypto/aes.h",
+        "git_blob": "9e962a873c50d4bb5d37fb8e333c77985bbe532e",
+        "sha256": "e217855801b7232726d8e877bd74d07b626b0007193c697d7d976ed949dd6049",
+        "bytes": 5277
+      },
+      {
+        "path": "iokit/DriverKit/crypto/md5.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/crypto/md5.h",
+        "git_blob": "4ecd947d7a61464543059eb6265ec4cc548c84f6",
+        "sha256": "1f33a28ac6fb819ae949ac90d93652e1aa85d76cb149b7d264613d8eea981f1e",
+        "bytes": 2952
+      },
+      {
+        "path": "iokit/DriverKit/crypto/sha1.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/crypto/sha1.h",
+        "git_blob": "706d10f88a499090bbd9fe2b03b4028a6069f7ca",
+        "sha256": "d84151b54492a1988c68d9a220bd8eccdbc9040bc0498521bfafe90facc8f3ac",
+        "bytes": 2430
+      },
+      {
+        "path": "iokit/DriverKit/crypto/sha2.h",
+        "tag": "xnu-10063.121.3",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-10063.121.3/iokit/DriverKit/crypto/sha2.h",
+        "git_blob": "2e93f35d7cc6766f0996014362a7b6c57fa14f19",
+        "sha256": "bf0d9f345cc763fe926d7b9394585df445df146d2f4bc1a844727c8033d2fb94",
+        "bytes": 2932
+      },
+      {
+        "path": "EXTERNAL_HEADERS/TrustCache/API.h",
+        "tag": "xnu-8796.101.5",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.101.5/EXTERNAL_HEADERS/TrustCache/API.h",
+        "git_blob": "d13cddf36560638696223559c210797fa0442f5d",
+        "sha256": "a8e2994a5b6ec61e3aaab6516d82041f629322a76bb4ee1339a172aaea14417a",
+        "bytes": 6632
+      },
+      {
+        "path": "EXTERNAL_HEADERS/TrustCache/RawTypes.h",
+        "tag": "xnu-8796.101.5",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.101.5/EXTERNAL_HEADERS/TrustCache/RawTypes.h",
+        "git_blob": "16b684e219975b21f954813cad13bc243d2f6fe0",
+        "sha256": "03e945ba48a3b3400012d42fc1b97fb70bc59835985c2921e8173369e40301bf",
+        "bytes": 2490
+      },
+      {
+        "path": "EXTERNAL_HEADERS/TrustCache/Return.h",
+        "tag": "xnu-8796.101.5",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.101.5/EXTERNAL_HEADERS/TrustCache/Return.h",
+        "git_blob": "440a53c4f85a025155a9ac408b4f31acf04089d8",
+        "sha256": "d15cae97bb0c7cfa690b6ffa71805c7aa0c774e7c0bd23095d6684f564674b44",
+        "bytes": 3589
+      },
+      {
+        "path": "EXTERNAL_HEADERS/TrustCache/Types.h",
+        "tag": "xnu-8796.101.5",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.101.5/EXTERNAL_HEADERS/TrustCache/Types.h",
+        "git_blob": "f3412f3869c69d1d2e40a0f8883aa9e3f5b3c7ae",
+        "sha256": "68f179189fb0f5e37f6898c8a0daa80e44b4a05c5a7834e4ae68e05f1ef99c4a",
+        "bytes": 11720
+      },
+      {
+        "path": "EXTERNAL_HEADERS/TrustCache/TypesConfig.h",
+        "tag": "xnu-8796.101.5",
+        "download_url": "https://raw.githubusercontent.com/apple-oss-distributions/xnu/xnu-8796.101.5/EXTERNAL_HEADERS/TrustCache/TypesConfig.h",
+        "git_blob": "d93e8b09336ea508a968c563f2b2483e074e3cd4",
+        "sha256": "bb46daeff6efe7a7bc701741cbc73690b3ee5036aeac7096cbf269b751f0d1d3",
+        "bytes": 10421
+      }
+    ],
+    "api_snapshots": [
+      {
+        "path": "artifacts/native-public-headers/driverkit-api.json",
+        "sha256": "4c01e2721929c4787a7c13d640a0ec91ab2d710572b34ab73dbbfb1e6fc3ecd7"
+      },
+      {
+        "path": "artifacts/native-public-headers/driverkit-crypto-api.json",
+        "sha256": "744b6341533b44f861dfb5e9b1a97633d06884e1f9aeb09110ee35913534e232"
+      },
+      {
+        "path": "artifacts/native-public-headers/trustcache-api.json",
+        "sha256": "4f0a87d5b7ed233c53797da5fb490d9ad2b0d7b87f2a1bcb726e33e4e5601232"
+      }
+    ],
+    "generic_source_modified": false,
+    "uses_local_urls_only_for_verified_cache": true
+  },
+  "runtime_sources": [
+    {
+      "name": "llvm-project",
+      "url": "https://github.com/llvm/llvm-project",
+      "commit": "58c46bae21181fb4240cf964461bea738d96d50e",
+      "patterns": [
+        "/compiler-rt/lib/profile/",
+        "/compiler-rt/include/profile/"
+      ],
+      "files": [
+        {
+          "path": "CONTRIBUTING.md",
+          "sha256": "6863c0f9b719ea944a78d1714bf1a71e6d3c45b9f80b4319a50c68191997aa4a"
+        },
+        {
+          "path": ".gitignore",
+          "sha256": "9641f04f38411897911279db37a878fa0d07a6037c12f85c13f78e0004c01786"
+        },
+        {
+          "path": "CODE_OF_CONDUCT.md",
+          "sha256": "31892f9cb134542e017dcc642fcd86fcdd43c18cb11094a2b8bfcac0a82403b1"
+        },
+        {
+          "path": ".clang-format-ignore",
+          "sha256": "eaf559f2d9a7b3243dfa25e52282c7571aa15dae0cc10b12dbfbb5451c94d455"
+        },
+        {
+          "path": ".git-blame-ignore-revs",
+          "sha256": "094e26e6bf1ca8db5e0ab1a468e37065cfec41a61c5b9a6efc07297569e02458"
+        },
+        {
+          "path": "LICENSE.TXT",
+          "sha256": "8d85c1057d742e597985c7d4e6320b015a9139385cff4cbae06ffc0ebe89afee"
+        },
+        {
+          "path": ".gitattributes",
+          "sha256": "d37d94b781e46726a73e3defe68a92f08da33c186175d9a5e927913a79c4e1b7"
+        },
+        {
+          "path": "README.md",
+          "sha256": "65e36a40dd1936f1ab6b444d7209977740a35ff7be81db22a36eadfe2d3a8903"
+        },
+        {
+          "path": "SECURITY.md",
+          "sha256": "4eb8f01aafbf7ad22ec3292bd11d57367b1f0678aa2f937f9347f04ab92a196b"
+        },
+        {
+          "path": ".clang-format",
+          "sha256": "e689c70489e99ea76a8ae6f4f0db6aa1a14a87235bb0a72b2092318f89d08535"
+        },
+        {
+          "path": "pyproject.toml",
+          "sha256": "e8f099e819c649ae3fa5cae658bcd7f58d085a9d5949405204d73da906452dff"
+        },
+        {
+          "path": ".clang-tidy",
+          "sha256": "ca3e6bd261dc6084a0832cfb601b2b9d8fbd7f63a4f55c9696848c288bb72a45"
+        },
+        {
+          "path": ".mailmap",
+          "sha256": "db834cc3ef4dba7cffd24cdaa02d606ca991e33b68fc35171a681425e29a6d3d"
+        },
+        {
+          "path": "compiler-rt/README.txt",
+          "sha256": "a9ed6807100a66fd5e44d4af4a2bf2cb25c9243c896e7bf1d4941b7353b388e3"
+        },
+        {
+          "path": "compiler-rt/.gitignore",
+          "sha256": "f48046a6d96240517b84624b5bf022f069980d03e9ad9b776cc420324f8e83b0"
+        },
+        {
+          "path": "compiler-rt/LICENSE.TXT",
+          "sha256": "1a8f1058753f1ba890de984e48f0242a3a5c29a6a8f2ed9fd813f36985387e8d"
+        },
+        {
+          "path": "compiler-rt/CMakeLists.txt",
+          "sha256": "852e475cd3928de218a6882cc8bbf233ba7b450fae19de9ada5772a40c38ddf0"
+        },
+        {
+          "path": "compiler-rt/CREDITS.TXT",
+          "sha256": "a9901f47a089da41e4690682d00ce4cedaa2baf41fedbe79beee366d43ac2461"
+        },
+        {
+          "path": "compiler-rt/Maintainers.md",
+          "sha256": "c64383fa25ab7cb7a83a7ff76d2670d5c90fc286e82e97c1c7308389e78ff571"
+        },
+        {
+          "path": "compiler-rt/.clang-tidy",
+          "sha256": "b4af33c79812269e6e410873fac123977825b20e196903695a42c81be9fd906e"
+        },
+        {
+          "path": "compiler-rt/lib/CMakeLists.txt",
+          "sha256": "bc60a64dc27885c27ec4ad49af931040444841ee84f7c2174256b21928a745be"
+        },
+        {
+          "path": "compiler-rt/include/CMakeLists.txt",
+          "sha256": "8860a09eab0529f7b7362247cb97d42688466b800aa0a76ccbded2abb7b1389d"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingInternal.h",
+          "sha256": "c53135f76a7b75151920eb857f2b9b55a74e719ea0f013de98a3b7c46f39667d"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingUtil.c",
+          "sha256": "0057b49b3e05424aba15fff0df926847c3a1b1a30a5ee5d5a439aa23359e2aee"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformLinux.c",
+          "sha256": "006f62fac5291e878463e562502ee7d60fea11f03738d870edaa08483091f676"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingInternal.c",
+          "sha256": "bc9fd759ec4a14f5fe359a10266b62bb8d9a997217f7232d2c43054c733973ea"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingUtil.h",
+          "sha256": "8acefed462a4370ef552627de3267e1fd98ec309f93776cd51403e741b75740c"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformAIX.c",
+          "sha256": "9ab02ad8674cf7bda5cc7a3c577d63bc5883dc1b731294df8caa83f856122d6b"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingNameVar.c",
+          "sha256": "7f94805fe61285411f843db3b3c69d64e6d1f2bff10b4552d2254afd8a8a5f73"
+        },
+        {
+          "path": "compiler-rt/lib/profile/GCDAProfiling.c",
+          "sha256": "c1de63f526105f21dc5179e5e15c1f355e8d8387f8d504072626455db2524cea"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingMergeFile.c",
+          "sha256": "255aef89817dcde56961d6e51c2e7e4eb3259fa967f5c34c2aad963fce6b52eb"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingMerge.c",
+          "sha256": "1b8ff5b3c00b170d2d5b0b5c71f4d6ffb02600adfabe8e79c5035428ef9a704b"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformDarwin.c",
+          "sha256": "822112e1e740fae3e30fc8e13b9a4e3443fe77463910e3d8c6d7ef0e23baedbb"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingBuffer.c",
+          "sha256": "3cc2eb35f0d8872e809db2d297fb0dfea9aced3d18e0b29f1d0e42f030c0866f"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfiling.h",
+          "sha256": "a73115502570b136c44b24217527500c163b979e728081502d667483662c46f3"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformROCmInternal.h",
+          "sha256": "6517e467a28c08d07c69547523cbf72bc9ed02d462cd541038c4c1dd23744919"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfiling.c",
+          "sha256": "e0508f3456b03b75d861b75f6ae4c3ad5c5bd9a2295f3510b1cb411dc90f9eee"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformROCm.cpp",
+          "sha256": "8b790174500d03bcba479b0ef5a2afe744717a6f75607cc9d226d2789296b724"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformOther.c",
+          "sha256": "755dd9d64e8beca89b7970bba8b62e618dddb6cf73d58d3ad905341cd565262c"
+        },
+        {
+          "path": "compiler-rt/lib/profile/CMakeLists.txt",
+          "sha256": "8c9d97d3deba9d6f6d9c51ada07b388011c1ca31dbdb11345dc8c705f914e723"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingWriter.c",
+          "sha256": "816bb9bcd12cc433e59a5073f519dcc13571d21af3ddc280e943c33e7c118158"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingRuntime.cpp",
+          "sha256": "f390bc9d3fc6d517e4c23087a673a1c3e4609968acc2ff1548938a92b795a48c"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformGPU.c",
+          "sha256": "4f5671889469b5e8b79a4dbee7b121e9d2172040cf9e9021f0a8b1ebe77f0c3f"
+        },
+        {
+          "path": "compiler-rt/lib/profile/WindowsMMap.h",
+          "sha256": "4a311829a23ed5e744030626465c198925e067d18773aa93cc1ef15134be29f9"
+        },
+        {
+          "path": "compiler-rt/lib/profile/WindowsMMap.c",
+          "sha256": "e9f3d4d52b497a3dd7e811474301bb52d11ba8144992005420bbed52dd788787"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformWindows.c",
+          "sha256": "47952a5a8b6912ccf485195b7037f9c56acedfe89b6238dc22ac04ce1e3ccba9"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformROCmHSA.cpp",
+          "sha256": "7dba24f7a694766a502b8efe6b91c3a153ab1dc9a2d67b8ccb68a3a31077d6b5"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingValue.c",
+          "sha256": "f90000bb6b525d4bd7ede8dc9929bde7fc6ac51e8af80fd68443759e6a799857"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformROCmHSADefs.h",
+          "sha256": "e0f38d350a3dd718a61c4c527bb2ff74593d9721ae5bb377fefee966838111c4"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingVersionVar.c",
+          "sha256": "f13fe99b4a6cc607599569a4273013c69af24e68249203bf9d46f44930dbc525"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingFile.c",
+          "sha256": "151b35fed1a3de3115cda0a888032dd2388ee2684190450bcd590d44fa548156"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPort.h",
+          "sha256": "19055831ea9fd98b8d056b906a272323484ee4d948962ad597c263a77332fbb5"
+        },
+        {
+          "path": "compiler-rt/lib/profile/InstrProfilingPlatformFuchsia.c",
+          "sha256": "049096c1979b50cf50fe9a532f05cc7daaad5b8139396769bce2b4cd1de964d3"
+        },
+        {
+          "path": "compiler-rt/include/profile/MemProfData.inc",
+          "sha256": "436b2be03266c012dbc3f28d4f6e50e837e3812569fb49b84b62f1e9c7204b8c"
+        },
+        {
+          "path": "compiler-rt/include/profile/instr_prof_interface.h",
+          "sha256": "e799e4872db5104692980bd2a7349d383d1dfeee9fe02eb3e5ede302dc23c7e0"
+        },
+        {
+          "path": "compiler-rt/include/profile/MIBEntryDef.inc",
+          "sha256": "258f2f52ee8edfb65fc5013fedb528cf98435bc602efa3ddfd9f5c26107d458a"
+        },
+        {
+          "path": "compiler-rt/include/profile/InstrProfData.inc",
+          "sha256": "d05cf0aeefda190df340b848de8030b01b5ca78b00f5f716f28f81c48de5878a"
+        }
+      ]
+    },
+    {
+      "name": "Libc",
+      "url": "https://github.com/apple-oss-distributions/Libc.git",
+      "commit": "899a3b2d52d95d75e05fb286a5e64975ec3de757",
+      "patterns": [
+        "/include/"
+      ],
+      "files": [
+        {
+          "path": "osprivate_os_assumes.modulemap",
+          "sha256": "f06c977283d828b1379eb8402ee4e958307d537e142327f5dfc3a76799776084"
+        },
+        {
+          "path": ".upstream_base_commits",
+          "sha256": "f52a65df10bfa6e1e8e1f4c93cd697cd85bc462a340e392d2b21d93eb5769ac0"
+        },
+        {
+          "path": "APPLE_LICENSE",
+          "sha256": "e5881019d8766c1e88a5fe1dbca4ba40c78011d41fcb18f6e9f50df60182685b"
+        },
+        {
+          "path": "include/nlist.h",
+          "sha256": "7564a17f2d3cd77b58a833ab8e7b64879a0e26a3dd7099ef3f0490ec335ad50f"
+        },
+        {
+          "path": "include/termios.h",
+          "sha256": "1d6bc6c52e50903520e760ff7807d2a5f4597ec1cb1efb2edb02a7bd4cfc07b0"
+        },
+        {
+          "path": "include/printf.h",
+          "sha256": "f8fb0b76ef5a2f8cd3e90426fe14d0b1f1cd0af2e2fc11cc74c5c2dbe8c15da4"
+        },
+        {
+          "path": "include/secure.modulemap",
+          "sha256": "90a6a902bc9ef831aaf8e72497c55c3a390ad2f80f9073c09f1e340bf69e35d3"
+        },
+        {
+          "path": "include/fts.h",
+          "sha256": "f6d1f03515e648dbf1c2ed1a48d4c63deacda57121393f89aa9fd84f9b738f9f"
+        },
+        {
+          "path": "include/errno.h",
+          "sha256": "ff95a158e0799dcf0622e83882e64d88f1783b98a91d9b206bcba2a12f8425e6"
+        },
+        {
+          "path": "include/iso646.h",
+          "sha256": "6b78139356cf70a1fb264809f43a29ba2957722ca3d1b960d582b59fc1a16355"
+        },
+        {
+          "path": "include/struct.h",
+          "sha256": "a90d1ebefce065681c8957935170b76c7129b6da136804a0995b6ffc7e5cadbc"
+        },
+        {
+          "path": "include/fcntl.h",
+          "sha256": "289f3be20c07d8eae5589f43994cfdb5fb33b3b099a6aee67f63e00d90039a8f"
+        },
+        {
+          "path": "include/cpio.h",
+          "sha256": "04c640120057f2e70a5eb398c7b4b272934975f5a8b2a56a6291e5329fa77b63"
+        },
+        {
+          "path": "include/inttypes.h",
+          "sha256": "847d59aba887c30e20b4a7da51d49dba4f7ab4e1af7003d8fb0469eda5a5ef3c"
+        },
+        {
+          "path": "include/xlocale.h",
+          "sha256": "2a84aa0e90394b62f3959804927caea3bf093a5290b751f7ef2bce96ee72acb2"
+        },
+        {
+          "path": "include/_stdio.h",
+          "sha256": "d39b44b94dc518e0bf7099d57c63199239eeab37e5357e80207e3fee14c1aaeb"
+        },
+        {
+          "path": "include/tar.h",
+          "sha256": "0a7cbe1f6a732ac69b1fa96924960beca9a21c3ab3fa8feb313794ffbce1c68f"
+        },
+        {
+          "path": "include/poll.h",
+          "sha256": "dc10a7ff3e8952c80305a099fa247a572f636b5b8f9f6b82f7e6b7d999fc6af3"
+        },
+        {
+          "path": "include/stdint.h",
+          "sha256": "9d070aad02d9f2ba1f2248d093b4194b62cf8d363778c737d1110f4736e5ed3c"
+        },
+        {
+          "path": "include/sysexits.h",
+          "sha256": "4d0eaa701de793a14743bf35f77355ef04f5ae84bb4135bf9de5244026dd92f4"
+        },
+        {
+          "path": "include/vis.h",
+          "sha256": "cc17f2d43cdfe3f4e54d0495283eb889943566feb5e0c1d4c3043ccc13889368"
+        },
+        {
+          "path": "include/darwin_c_xlocale.modulemap",
+          "sha256": "bddcfba99572c1c1f0fb8768cb5ed800f8ef860b8e5d03dc4a990077e8218615"
+        },
+        {
+          "path": "include/memory.h",
+          "sha256": "55679ae8d56fa432458fb4fc59fde49d4c4bbe506ecbdf5b4cb06d001204d5ac"
+        },
+        {
+          "path": "include/_regex.h",
+          "sha256": "95037be39bf99898fccf60f031051e428cd4605d0b8e8a2f4e86a04e921a01f4"
+        },
+        {
+          "path": "include/ctype.h",
+          "sha256": "7c6bc8042901ed78a0dcfb77b06e3f889707830f4de578c32061af8535b2e665"
+        },
+        {
+          "path": "include/runetype.h",
+          "sha256": "09f62b87e4a53e4c8b0fe5f59da9da7e2c843a86aeb05d3c1215ca9fc7fb5bff"
+        },
+        {
+          "path": "include/libc.h",
+          "sha256": "ca1741192708b11704d421e8443908cdd181c63cab1aaf9f2c93106933c48503"
+        },
+        {
+          "path": "include/rune.h",
+          "sha256": "c3fefa9bad0ad70e5ae2aa26cc8541d0b972d4d99d52656e86d7e2ffc2ea3ef0"
+        },
+        {
+          "path": "include/fstab.h",
+          "sha256": "d2b29762c60ada862fc5c852890c82d1c332bf549949dbc1e829114f75391af5"
+        },
+        {
+          "path": "include/search.h",
+          "sha256": "91910590a3391ddfc11fdd1ded7de33ecc516d17ac14ed34a566478cec1cb8a8"
+        },
+        {
+          "path": "include/monitor.h",
+          "sha256": "61d3fccd551b7a562c4a12bc8802462f4b7913cc168f91fb011e9447133b4c81"
+        },
+        {
+          "path": "include/fnmatch.h",
+          "sha256": "33c8046acf082d2e065eab46cb178750bb679318d105ef91a2d04388f8953549"
+        },
+        {
+          "path": "include/sysexits.3",
+          "sha256": "35e69b39028332aef3c657d89eec8bc6b072a6543056acee9ba7356a0a4c4fe1"
+        },
+        {
+          "path": "include/stdio.h",
+          "sha256": "3030943cb407f45f75e9ca3a02c418808d19fad609219180354cce5701e62a70"
+        },
+        {
+          "path": "include/sgtty.h",
+          "sha256": "26f098527b5467e9df89cb9a949ac0fafccaeb9427fdff88ae44c775a2085f40"
+        },
+        {
+          "path": "include/stringlist.h",
+          "sha256": "7684a518f8df2ac5d144f50b9e731a3201dc8d6d40d2e85ea6c3fc872b594642"
+        },
+        {
+          "path": "include/alloca.h",
+          "sha256": "25869d3558b9ba1a1e3ce381784551d343a74f9640e7b4e19dfdfd89c1f84200"
+        },
+        {
+          "path": "include/asm.h",
+          "sha256": "07be39b52566b1cd9d7fcfabd8dfccd87eb5be4aec49ad8b366291982dcb1025"
+        },
+        {
+          "path": "include/signal.h",
+          "sha256": "b36ddac888e3cbf5202901588b0272360449f8a01363410c6c8fe4dd45f511d0"
+        },
+        {
+          "path": "include/disktab.h",
+          "sha256": "df318646aef8498ba773e6614c5c78eb4ca5766c7d6f5bc8277686ac46d94ec2"
+        },
+        {
+          "path": "include/__wctype.h",
+          "sha256": "71a3354d560db6875c7c7845c62e566ef41f3a9d2e52dbc1944af0956fd91edf"
+        },
+        {
+          "path": "include/langinfo.h",
+          "sha256": "cdd63f098b5a3c764be0b1edbd8f2794bae90ff11a6197331bc696d2e97caa6a"
+        },
+        {
+          "path": "include/dirent.h",
+          "sha256": "66a44b2dc634f08e4928ecc30b7babebee9364163f372d7564654813985a2942"
+        },
+        {
+          "path": "include/time.h",
+          "sha256": "8d42b1cb3b3b1e62343cd01affd1eb3de203b2523d7a3d3095accced84b73fd2"
+        },
+        {
+          "path": "include/fmtmsg.h",
+          "sha256": "0abf35ebec0097a9f6d30afdd35f50933ded41c631a7de6bb458b15fe78f2507"
+        },
+        {
+          "path": "include/paths.h",
+          "sha256": "96603992a31cd9bd9f5a0721d714d1aec4fff18131fbbe8204d4831b61cb75ff"
+        },
+        {
+          "path": "include/wordexp.h",
+          "sha256": "4deca26728260cea4b1fccd327db4a24a4a3d1cbd4dba4c6c6434c990441bfac"
+        },
+        {
+          "path": "include/ar.h",
+          "sha256": "98b3cd26d3e66546a92370abbc0c0a36a6c696ab9c9c6ab3fbce6aa008f5d65e"
+        },
+        {
+          "path": "include/wchar.h",
+          "sha256": "ef4565cbc29f526c20b803f5197997b7dcb63d2d852e801c19c7435ae2dbd99e"
+        },
+        {
+          "path": "include/_ctype.h",
+          "sha256": "ef352e8afa747552ca025004fcfd7e07bcac94bad9d7731d5047efabe138f6bc"
+        },
+        {
+          "path": "include/locale.h",
+          "sha256": "280067c9f446ff9ca65a0668d54142775425f4949793e86f1b2d2aee30792133"
+        },
+        {
+          "path": "include/syslog.h",
+          "sha256": "171758cbd3e9ea630810c6249c59a9f9190abb8dc5a0932c1c3bd2c12aa03080"
+        },
+        {
+          "path": "include/strhash.h",
+          "sha256": "bfaf33933c77cc9534a62c10ea248c5ca16acca3bc6ff531381a4ef42efdf3dc"
+        },
+        {
+          "path": "include/glob.h",
+          "sha256": "e373769e88b4350c5163f91ada84fd97b55674642f7e0e0abfa2851de6cb8169"
+        },
+        {
+          "path": "include/monetary.h",
+          "sha256": "2f6af82dd8a341c167dd5201a32739802b2afdea0ff9f6a3956bec588b66bbba"
+        },
+        {
+          "path": "include/ttyent.h",
+          "sha256": "b92f632a6e45816ff327271d2c9ad0bb12db108346be8a7108fced2260ed269a"
+        },
+        {
+          "path": "include/semaphore.h",
+          "sha256": "203aef4191a0bb7283892baa28f3b5e668a580c4ce6dcdc4e6cb64690a25b31f"
+        },
+        {
+          "path": "include/string.h",
+          "sha256": "23cdb5790e5c1a61a53dd0142d8b0bd582fa307e69b3dd1fb578c72fd2156082"
+        },
+        {
+          "path": "include/_xlocale.h",
+          "sha256": "7278eb8540e6063285f9dc0c793154837049acd1b851c86c646baa5f84953d70"
+        },
+        {
+          "path": "include/ndbm.h",
+          "sha256": "2aa542aebe7693649c237e7aed173c6bf915f3d1c6f4dd52c7d5bf0375923ded"
+        },
+        {
+          "path": "include/_types.h",
+          "sha256": "4699f774523a43c495aa9996c8f692a26f4f4d0a19b59883ac5df8eb2b9e3724"
+        },
+        {
+          "path": "include/_wctype.h",
+          "sha256": "3d7de0fb2369edc781e8a481c67a19a7f6e09cf7f54d2c8796585eb699a8d1dc"
+        },
+        {
+          "path": "include/_types.modulemap",
+          "sha256": "4e4b955c5a5b7cf3890bb261150f28d7a9c118df7df35282135cd80f3bd3cbbb"
+        },
+        {
+          "path": "include/assert.h",
+          "sha256": "d6d20581d2ec1722eda2ff8658b1f52915b42b2df9c33021589b1cd46b346958"
+        },
+        {
+          "path": "include/getopt.h",
+          "sha256": "f1e4aaea136da188d6cb2eefe4f94320695a9d264a3b00a7e04d56ea8da2f888"
+        },
+        {
+          "path": "include/_ctermid.h",
+          "sha256": "cbafbb83df2846ca1aac501eef0a40353be2a6653348cd4bbc5b3bb7e60f56aa"
+        },
+        {
+          "path": "include/regex.h",
+          "sha256": "6b3a879c4c7480a4223cb1e701ee49f04e2f495b750ef99f8b4d505ae4d1b5fb"
+        },
+        {
+          "path": "include/ulimit.h",
+          "sha256": "d00c4ba9baf893955347debeb4399342512e806a5488f7a82c9d677be96cc7a2"
+        },
+        {
+          "path": "include/ftw.h",
+          "sha256": "55e936e22985a488281005decce15bf2d45ff6eb09df5ca69546c63ae1558d21"
+        },
+        {
+          "path": "include/strings.h",
+          "sha256": "f774fe5d44f261c846bf597df2c5c55cf758c4666cc07b31d080fbc1d2dd6689"
+        },
+        {
+          "path": "include/standards.h",
+          "sha256": "39f14ca87175a740abcfa80fd3353d778b7a10478316dc44b1e0b9bc82db989c"
+        },
+        {
+          "path": "include/kvm.h",
+          "sha256": "20ae251c8eec41c7811e0f8c0a1c5e60e1e62e970d0e6055c113231dd5b756f8"
+        },
+        {
+          "path": "include/ranlib.h",
+          "sha256": "87152955331935de7e225acb94922c9ef8105dc0eed27bcd8974e2b4e3285e1a"
+        },
+        {
+          "path": "include/unistd.h",
+          "sha256": "5736dcb7a9ecffe5e9532dcff7270849d5237c529cf85c81abd2a0ef9ab22478"
+        },
+        {
+          "path": "include/stab.h",
+          "sha256": "2820c9d73a6b66a11a9d42e770f984560d8e64065531196788e28b7d5de5d987"
+        },
+        {
+          "path": "include/timeconv.h",
+          "sha256": "8b5d6943c2533c41a9481b50c939082a81bfc9fae97b8ab6469d3dd98a1f8003"
+        },
+        {
+          "path": "include/limits.h",
+          "sha256": "7f5c6640fb49fc1d6c0d88b94723418ab996a0768b81cbf8c1917ef5d0255088"
+        },
+        {
+          "path": "include/readpassphrase.h",
+          "sha256": "a48b1d77dfc40d8910711f3be1693e1ed1b83910abc74d5a0d5624533c93acd4"
+        },
+        {
+          "path": "include/authentication.h",
+          "sha256": "79521446b816d7137d80a3974407e1a9b84b55edaf006fa9865a5fdc55f967d4"
+        },
+        {
+          "path": "include/bitstring.h",
+          "sha256": "93e8bab19582f81e4f6ce79262d63c1402c95747244f821d32c9736e85a19664"
+        },
+        {
+          "path": "include/utmp.h",
+          "sha256": "071648c4348b708c9892ac1355e07bab359372c8720a962e67be8270906c375d"
+        },
+        {
+          "path": "include/_locale.h",
+          "sha256": "e19f82a7acc29e9a26be1dd1bb3a54dc90dbd5320a260472a13ea08c6724c58f"
+        },
+        {
+          "path": "include/util.h",
+          "sha256": "34a6194e86b7adbeb750c5665f5ab3e74fb84dc4fa6fedde075f611a50f00ddd"
+        },
+        {
+          "path": "include/stddef.h",
+          "sha256": "1e871643e931a1fe9ba76c2cc55dd32aa1a4b4cdf4584901b65b6203db321d2b"
+        },
+        {
+          "path": "include/crt_externs.h",
+          "sha256": "643134669924c7d44808a2eda468bc439ac55fecb5c26e396b6f3b4247988189"
+        },
+        {
+          "path": "include/libgen.h",
+          "sha256": "9cb8fde69e0531c30a7810814574d480982de2da6bd18653661995cca35ff468"
+        },
+        {
+          "path": "include/fsproperties.h",
+          "sha256": "78b11bea00d75c918e2ad884e245339156c81b1a627ae2b093994a47430dd389"
+        },
+        {
+          "path": "include/stdlib.h",
+          "sha256": "41266815ff7406b394141b6c818510a095aee63271858443e385490e5262f659"
+        },
+        {
+          "path": "include/db.h",
+          "sha256": "a4f7f680a110aef0777997381177750a1410ede28fba008cec5cd44d1b286afc"
+        },
+        {
+          "path": "include/aio.h",
+          "sha256": "6bf91518e250a34c0a91e9d70133d0ed3e28402d22847aec56b11cd8c5b09b49"
+        },
+        {
+          "path": "include/utime.h",
+          "sha256": "edc8ce6d4eb2df950c755404f3f876228b2a56d4457bcf68a8ee61974a4e8292"
+        },
+        {
+          "path": "include/mpool.h",
+          "sha256": "ca60c886fea5498f992991600c490fc0df866ac7ba25f6b53c9726b478ee1f55"
+        },
+        {
+          "path": "include/err.h",
+          "sha256": "7e75dbb413b6c47f464f5c9719ee7e920950ecf243345b30bbdbf37429e4381f"
+        },
+        {
+          "path": "include/wctype.h",
+          "sha256": "970d759dc5a249c702f25e161a3341fc8c90b232249499034c82db2349460f5b"
+        },
+        {
+          "path": "include/protocols/talkd.h",
+          "sha256": "dc47f21c27ab0eb84ff3536556ed792385f29123bc1ef16d3e293d82bae7cd38"
+        },
+        {
+          "path": "include/protocols/rwhod.h",
+          "sha256": "d88cfc8e5446ee46d23f076201ed3095138c3238fb970a2b91ce2beb2e23adf1"
+        },
+        {
+          "path": "include/protocols/timed.h",
+          "sha256": "70bfc3859ee40e5c59877af10b74707a8e321276160a1b6352cbc2ea9338b6f9"
+        },
+        {
+          "path": "include/protocols/routed.h",
+          "sha256": "0dbfb71386b1f3748ad8e67533e50597f557fc14e225267fac6a3059f43ddeed"
+        },
+        {
+          "path": "include/xlocale/_inttypes.h",
+          "sha256": "d1f6b2105fcad61b6dbb64a4295207761d73ff96856b50c0ffe31e44fd8dbed5"
+        },
+        {
+          "path": "include/xlocale/_stdio.h",
+          "sha256": "5e337f255391415b9d4df1f52afda3f485c4d7492c50ada8568502bf33b3825e"
+        },
+        {
+          "path": "include/xlocale/_regex.h",
+          "sha256": "2f0f21244aa41dbef30fe6e315112ca157bfe5ff42926793420f774ddac29dea"
+        },
+        {
+          "path": "include/xlocale/_langinfo.h",
+          "sha256": "8dc5cc83b81f8e80ea9256dfba2922065538665ad9910744c0f8b618a2fa1288"
+        },
+        {
+          "path": "include/xlocale/_wchar.h",
+          "sha256": "8038db5297ea2a36751c789ba6929adb9ec8e2273c5587b9ec3522ab71f71bbd"
+        },
+        {
+          "path": "include/xlocale/_string.h",
+          "sha256": "246ed023bbd261eb56a445ce31bb5d86f2f0703a5c3cb1700d54f703a9b3c264"
+        },
+        {
+          "path": "include/xlocale/__wctype.h",
+          "sha256": "6e09904d906b05fc3a7f88ef4f0346dbc3df8b0245e37bd468b8a45431d8fe24"
+        },
+        {
+          "path": "include/xlocale/_time.h",
+          "sha256": "fac28835f7f005c08c66aae87d0262d89a2b635a657595f4a2634dc4c70249dd"
+        },
+        {
+          "path": "include/xlocale/_ctype.h",
+          "sha256": "0310d5297522c97d7abbae1e8634840d18a14813003843ef3b18b16b45f06be8"
+        },
+        {
+          "path": "include/xlocale/_wctype.h",
+          "sha256": "f389322356ff5cbe36b2e8807b2e4ff101fcbee31647732e7a4bec92368b3d11"
+        },
+        {
+          "path": "include/xlocale/_monetary.h",
+          "sha256": "2b2c565f5e0397fa8d6f29863c1ead2515f211abe578167c7ec8d1d8d4c66bfc"
+        },
+        {
+          "path": "include/xlocale/_stdlib.h",
+          "sha256": "cad2d1c91fa74e156d7171a993051860c8cbf2390e8fe1877bb0a75aa09ee86b"
+        },
+        {
+          "path": "include/_types/_uint8_t.h",
+          "sha256": "0a5c0353c8410f5e502db7971d987ac83a9ec3148905f10984c78152f541de68"
+        },
+        {
+          "path": "include/_types/_wctrans_t.h",
+          "sha256": "655ae35284c01df972d14c66b999d64d745c1752cd781b274ac5e77b81d30e28"
+        },
+        {
+          "path": "include/_types/_uint64_t.h",
+          "sha256": "a5692cddb9c42d1b55ebcd6fa445b212c4b0c46db4583aaf3293ed6386d3d0d6"
+        },
+        {
+          "path": "include/_types/_nl_item.h",
+          "sha256": "eaf14f5409d35a80d094f471cdf5c4e83fe45cacf96acfc65bded01e8ed70cd6"
+        },
+        {
+          "path": "include/_types/_uint32_t.h",
+          "sha256": "951131475ec815813c8ff40d5e875029cd968334fd3a42d5a65fbe7851d1718c"
+        },
+        {
+          "path": "include/_types/_intmax_t.h",
+          "sha256": "215f90a4efdca4991735be55a1ff701964dde07d8b4a8382ec8ed41ecbf5f115"
+        },
+        {
+          "path": "include/_types/_uint16_t.h",
+          "sha256": "adf29323b0ecb87cbc43ac3ff25c096de7a214ceb90007c2828616151c66ad37"
+        },
+        {
+          "path": "include/_types/_wctype_t.h",
+          "sha256": "490ae498e1bbc1397b115d4fdf6b64ec1168360a0b4502381a5ef6a20c840e6c"
+        },
+        {
+          "path": "include/_types/_uintmax_t.h",
+          "sha256": "0b154b16a3945edff78f00321d90a662d522e197c08e7de3b68f0ea44ae0d042"
+        },
+        {
+          "path": "include/FreeBSD/nl_types.h",
+          "sha256": "30048cc1b061933ee946ea30da840378285324263a4e020996695ef33ec321d9"
+        },
+        {
+          "path": "include/secure/_stdio.h",
+          "sha256": "2915b2f8f3cfd95f3994d1fc85e1c1af22a05994079524511f2117b7d86ae11a"
+        },
+        {
+          "path": "include/secure/_strings.h",
+          "sha256": "1890a63b48ac29154da92b46dbdd25ed9c8e7ac014a9a8fa6bf6abe401be476d"
+        },
+        {
+          "path": "include/secure/_string.h",
+          "sha256": "b36f73997cc1bc7b38740318a1d5e78e2beca26878ed772d7ea8ed8015a0de7b"
+        },
+        {
+          "path": "include/secure/_common.h",
+          "sha256": "72a1279782c5353c6caa1ee300a9ca9d669fe20fc4b3337dc57041f0b1f2aec7"
+        },
+        {
+          "path": "include/libkern/OSThermalNotification.h",
+          "sha256": "011893e97879b2e456a787b6eeb11eb9c8bce910f65913a7b619267f946b51bf"
+        },
+        {
+          "path": "include/NetBSD/utmpx.h",
+          "sha256": "5c92c48c47c5b8626541e94e5eaa418354bdc465dec2ce7a6b6064c260231141"
+        },
+        {
+          "path": "include/arpa/telnet.h",
+          "sha256": "c9101f0117be1f686787a76cef2ac6e5baa0633d8ce2024f09e1b5383d70e4b1"
+        },
+        {
+          "path": "include/arpa/ftp.h",
+          "sha256": "acf461175e4d88f9f347cf4cb66e6c674b4b4de13c36bcd6e432d8390b163fa6"
+        },
+        {
+          "path": "include/arpa/nameser_compat.h",
+          "sha256": "a23abb2d0b9521eeba89a69ed9821834a5c39d0eff6393a2e458d7d36a70e91f"
+        },
+        {
+          "path": "include/arpa/tftp.h",
+          "sha256": "c53dc95e397392e82f921eae6c46036324cba59ed2e043710af31e1ea26b13ef"
+        },
+        {
+          "path": "include/arpa/inet.h",
+          "sha256": "ac05fcdaee8ed04bc0f8d71068e5bd7ab3dacf3048d377e3f163905d9f5132ef"
+        },
+        {
+          "path": "include/sys/statvfs.h",
+          "sha256": "809bea3fca5dc8d6faa2c8e8c19092ae445ff38b054088b7a36892706a17bab2"
+        },
+        {
+          "path": "include/sys/acl.h",
+          "sha256": "69168ac1fc912ea3980d8a2af5474d458fc6145abdb742e7737a5e349b1b099b"
+        },
+        {
+          "path": "include/sys/cdefs.h",
+          "sha256": "d9d66b6e1cbee8f082935124fbf82315672647260f0910e90e199714f9f17691"
+        },
+        {
+          "path": "include/sys/rbtree.h",
+          "sha256": "1e53fd2a567849e006cbc3f6f6ac977aaf34f9e9711b91f26d312984e4a5fbc8"
+        }
+      ]
+    }
+  ],
+  "failure": "Error: python3 failed (1); full log: /home/guo/work/raphael-fresh/artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/archive-03-build-raphael-platform.log",
+  "compile_records": 887,
+  "auxiliary_artifacts": [
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/build-report-namespaced.json",
+      "bytes": 87273,
+      "sha256": "85a4b57e4b4164da786ecc53c485b081590c7e8395b4a60daf3a6d5dc0627cb8"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/build-report.json",
+      "bytes": 87274,
+      "sha256": "3ff3caad99d2cab3058dfa8561bcd86f2683761a58aa9a571cc0bab93b4abdc2"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/compile-command-namespaced.json",
+      "bytes": 14493,
+      "sha256": "9dc049f8c03665375b34255cdc5518a8b86004c1920fcc97121b6298f755e81e"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/compile-command.json",
+      "bytes": 14332,
+      "sha256": "42d9fc8cb1444885df6cdf8c526208f4a4644f9069f1e75f781898a80f346c96"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/libcorecrypto_kernel_noasm-namespaced.a",
+      "bytes": 927664,
+      "sha256": "c452606bb13e619ac5d8629bc6e6ab48f5e863741c7498434fa3bbb5befdecd9"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/libcorecrypto_kernel_noasm.a",
+      "bytes": 924784,
+      "sha256": "ac71704c13ce065da5e05780125e352aafa06cbac31db59d691cc09779292616"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/link-survey-namespaced.json",
+      "bytes": 1087,
+      "sha256": "07364cfdc02d6d991d248d2390ad7431187f0b81eb2ac54a9d90a8b5d65ba515"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/link-survey.json",
+      "bytes": 2618,
+      "sha256": "7ca65532da4a5385bb2ac9ea4f379c27c2fd8da0aec2018521c0a496e1c410b4"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/namespace.h",
+      "bytes": 2869,
+      "sha256": "6667fe114298ff4032a9975904b99d7bc17d2e67d17d544404578c4d5fccdcd2"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/auxiliary/corecrypto-2023/project.json",
+      "bytes": 1766434,
+      "sha256": "9dfc3f50cfe30b8b73822d069939f9cec63e7bdd7aba66e2c1991ee12345e048"
+    }
+  ],
+  "logs": [
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/logs/archive-01-build-corecrypto-14.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/archive-01-build-corecrypto-14.log",
+      "sha256": "d7d092a49007486d63f51d0eba09f8589945c78ce95acc17ed41be184929e80d"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/logs/archive-02-build-corecrypto-14.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/archive-02-build-corecrypto-14.log",
+      "sha256": "7f2ad6e1d55abb196e9c8c08767eff66423a9af353b68ccab2153f36a737cc2d"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/logs/archive-03-build-raphael-platform.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/archive-03-build-raphael-platform.log",
+      "sha256": "34bb0c258d89237531157a985014cdd7e11864c78635dd036dca2dd66aa92fc5"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/logs/kernel-bootstrap.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/kernel-bootstrap.log",
+      "sha256": "eb2cc85169228f5161e2fe1318b2664634272a1f1e6c997a421bbda82f4de054"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/logs/kernel.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/kernel.log",
+      "sha256": "58378109a7e05a7f2993e934ffd589304f34c8d7cb6777eb47c37a6b6cdf98bb"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T172825Z/logs/storage-headers.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_platform/logs/storage-headers.log",
+      "sha256": "7fd4103f9811df96b8142a756b57a495c05ec355f4ebd6d2cf0229c0594f4cbd"
+    }
+  ]
+}

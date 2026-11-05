@@ -1,0 +1,10 @@
+{
+  "kernel": "artifacts/native-kernel-inspection/20261030T224144Z/native-kernel.macho",
+  "iokit_time_pc": "0xfffffff0078f1a94",
+  "first_instruction": "0x17e6463e",
+  "tail_branch_target": "0xfffffff00728338c",
+  "target_symbol": "_clock_initialize_calendar",
+  "rtc_wait_present_in_this_function": false,
+  "scope": "Actual linked handset diagnostic kernel; symbol and instruction decoded, no reliance on BCM2837 directory name or empty llvm-nm.log",
+  "compile_record_for_iokit_time_found": false
+}

@@ -1,0 +1,11 @@
+// SPDX-License-Identifier: BSD-2-Clause-Patent
+#ifndef RAPHAEL_UFS_READ_H
+#define RAPHAEL_UFS_READ_H
+#include <Uefi.h>
+#include <RaphaelUfsHandoff.h>
+#define RAPHAEL_UFS_READ_WORDS 32
+typedef struct {UINT64 Word[RAPHAEL_UFS_READ_WORDS];UINT8 Inquiry[40];UINT8 Block[4096];} RAPHAEL_UFS_READ;
+VOID RaphaelUfsReadOnly(CONST VOID *,CONST RAPHAEL_UFS_HANDOFF *,UINT64,UINT64,UINT64,UINT64,BOOLEAN,BOOLEAN,UINT64,UINT64,RAPHAEL_UFS_READ *);
+BOOLEAN RaphaelVerifyPayloadMemory(UINT64,UINT64);
+BOOLEAN RaphaelUfsEmergencyQuiesce(CONST RAPHAEL_UFS_HANDOFF *,RAPHAEL_UFS_READ *);
+#endif

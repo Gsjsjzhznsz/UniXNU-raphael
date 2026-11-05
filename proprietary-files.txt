@@ -1,0 +1,15 @@
+# Private source inventory; no binary redistribution or automatic extraction list.
+# Fields: input | source | bytes | sha256 | use
+# Original observations are retained in proprietary-inputs.json; these hashes are not newly measured.
+boot | /dev/block/bootdevice/by-name/boot | 134217728 | cbd91d814396ea0aab1cbca25d4f4f904805c69e4bb38b5a35a51b98858b96ec | Android-return reference and boot-format/DT input; modified source kernel, not factory stock
+dtbo | /dev/block/bootdevice/by-name/dtbo | 33554432 | 5b7622dde305405e1ded6cb33ed067b5ebcd007ddb4b7f6330b4bd70580bbe21 | reference-only; not linked into any artifact
+xbl | /dev/block/bootdevice/by-name/xbl | 7340032 | 2feb056c7224ff5a1ed27fdbfc2e527f05db40b1ac7754684da17d34a821e043 | reference-only; not linked into any artifact
+xbl_config | /dev/block/bootdevice/by-name/xbl_config | 524288 | 0c2f9ba541475ff0e65c65ff1bf842ee0d7f640d403cd5bb6e3b5f917eeda8ba | reference-only; not linked into any artifact
+abl | /dev/block/bootdevice/by-name/abl | 2097152 | 92a2a6ae392e3fea93ecf4bf662f7a35d87293fb6bcfc8ddecc2c41947befecc | reference-only; not linked into any artifact
+imagefv | /dev/block/bootdevice/by-name/imagefv | 2097152 | 31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186 | reference-only; not linked into any artifact
+uefisecapp | /dev/block/bootdevice/by-name/uefisecapp | 2097152 | af0074323f567eac6cce99b0845a88f5b1db4dd1f8e6a8c1ffb2bea86a97c2bd | reference-only; not linked into any artifact
+# Original Apple input: selected OS profile ipados-17.7.11-21H461; obtain independently from its pinned IPSW source.
+# Original trust-cache sidecar | selected IPSW StaticTrustCache + Cryptex1,SystemTrustCache | 61356 | 7416ca4f8377146626bb284e2133c76bee6cb4e3ee0af5d648b186235a7323a7 | 2554 original entries; not an Apple signature-chain proof.
+# OS/SystemOS images, kernelcache, owner-signed extent/root policies and keys remain private. Exact successful artifact inputs are indexed in the workspace handoff.
+# No complete production extraction/firmware recipe exists. Missing reproducible public input metadata remains an explicit firmware/packaging limit.
+# Device blobs consumed by a future standard recipe belong in ignored .cache/firmware. Existing private frozen evidence remains in place.

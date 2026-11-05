@@ -1,0 +1,32 @@
+{
+  "milestone": "Original XNU iokit-matched checkpoint on handset",
+  "report": "evidence/private/android-return-run/20261030T222939Z/report.json",
+  "build": "evidence/private/android-return-build/20261030T222831.524692Z-p1axn3zt",
+  "passed": true,
+  "pc": "0xfffffff007a001b8",
+  "lr": "0xfffffff0072d4854",
+  "spsr": "0x60000204",
+  "checkpoint_id": 18,
+  "full_default_post_verified": true,
+  "bounded_recovery_verified": true,
+  "exception_stack": {
+    "version": 1,
+    "status": 3,
+    "field_va": 18446744005118437504,
+    "field_pa": 3232147584,
+    "top": 18446744006468780032,
+    "bytes": 16384,
+    "first_pa": 3247210496,
+    "last_pa": 3247198208,
+    "original_allocated_exception_stack_verified": true
+  },
+  "saved_ranges": 5,
+  "restored_ranges": 5,
+  "delta_bytes": 461784,
+  "wall_seconds_to_android": 101.73535621199699,
+  "normal_xnu_irq_verified": false,
+  "machine_lockdown_executed": true,
+  "iokit_driver_matching_started": true,
+  "root_volume_verified": false,
+  "handset_desktop_verified": false
+}

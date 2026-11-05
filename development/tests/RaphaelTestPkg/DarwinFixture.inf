@@ -1,0 +1,27 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = DarwinFixture
+  FILE_GUID = 8A27BF56-4DB9-4027-8ABF-0B393CE4A39A
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = DarwinFixtureEntry
+[Sources]
+  DarwinFixture.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  DevicePathLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UniXNULib
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gUniXNULoaderProtocolGuid
+[Guids]
+  gEfiEventExitBootServicesGuid

@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "case_count": 31,
+  "cases": [
+    "null state",
+    "missing input",
+    "partial allocation cleanup",
+    "partial allocation cleanup",
+    "backup read failure cleanup",
+    "original framebuffer backed up",
+    "active backup cannot be discarded",
+    "changed manager frame restored exactly",
+    "all original pixels preserved",
+    "finished transaction cannot run twice",
+    "restart supported",
+    "unchanged manager output is rejected after restore",
+    "write failure setup",
+    "restore write failure retains original",
+    "retained original can be retried",
+    "restore mismatch setup",
+    "mismatch retains original for fatal fallback",
+    "mismatch retry restores original",
+    "row failure setup",
+    "row access error propagated",
+    "failed pre-scan still restores and releases original",
+    "row failure setup",
+    "row access error propagated",
+    "failed restoration readback retains backing memory",
+    "restoration readback retry preserves first changed-frame evidence",
+    "AAVMF Blt-only interface records no invented framebuffer",
+    "Blt-only transaction uses protocol for restore",
+    "physical phone expectation cannot match Blt-only interface",
+    "unbounded width refused",
+    "invalid stride refused",
+    "overflow framebuffer refused"
+  ],
+  "command": [
+    "gcc",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/AArch64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/ManagerUi.c",
+    "/home/guo/work/raphael-fresh/scripts/fixtures/manager_ui_host.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/manager-ui-host/20261028T043948.939155Z-54k8dkw3/host"
+  ],
+  "address_sanitizer": true,
+  "undefined_behavior_sanitizer": true,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/ManagerUi.c",
+      "sha256": "3357c62991d1bd534dce83db8a899eb8f3a2787adfe0835b5d81894aaa230fa0"
+    },
+    {
+      "path": "scripts/fixtures/manager_ui_host.c",
+      "sha256": "90b2b5677d34d0f92e7f03bb6934cdf63f0496f3297daf1590472bb5b0301de0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelManagerUiLib.h",
+      "sha256": "206d292c539db051f15a3c1ebf949dc9747752e26896195c8597b54790e46623"
+    },
+    {
+      "path": "scripts/validate_manager_ui.py",
+      "sha256": "4962dd30e082edd3ec10c5d89f446fab38bf36a911ce8f22b0998fad07efa55e"
+    }
+  ],
+  "handset_executed": false
+}

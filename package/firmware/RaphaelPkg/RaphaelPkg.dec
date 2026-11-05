@@ -1,0 +1,106 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  DEC_SPECIFICATION = 0x0001001B
+  PACKAGE_NAME = RaphaelPkg
+  PACKAGE_GUID = C20E74BD-71F7-4C0F-A982-A4AF92C55C3A
+  PACKAGE_VERSION = 0.1
+
+[Includes]
+  Include
+
+[LibraryClasses]
+  RaphaelRamAliasLib|Include/Library/RaphaelRamAliasLib.h
+  RaphaelRamWriteLib|Include/Library/RaphaelRamWriteLib.h
+  RaphaelManagerUiLib|Include/Library/RaphaelManagerUiLib.h
+  RaphaelMemoryContractLib|Include/Library/RaphaelMemoryContractLib.h
+  RaphaelFramebufferLib|Include/RaphaelFramebuffer.h
+  RaphaelKeysLib|Include/Library/RaphaelKeysLib.h
+  RaphaelGopLib|Include/Library/RaphaelGopLib.h
+
+[Guids]
+  gRaphaelAndroidReturnHobGuid = {0xf7c01dab,0x24f3,0x451b,{0x88,0xf1,0xe0,0x16,0x53,0x80,0x2b,0x77}}
+  gRaphaelKernelWindowHobGuid = {0x3e2aeb28,0x14f0,0x496b,{0x9d,0xf3,0x7a,0x74,0xc3,0x09,0x81,0x53}}
+  gRaphaelManagerUiHobGuid = {0x5f4dc663,0xa919,0x49bb,{0x92,0x0e,0x1b,0xba,0x70,0xd8,0x2c,0x04}}
+  gRaphaelPhysicalTimerHobGuid = {0xb1ff4c8d,0x58ef,0x4821,{0x85,0xc1,0x5b,0xb2,0x1d,0x54,0x17,0x06}}
+  gRaphaelTokenSpaceGuid = {0x52415048,0xc144,0x4654,{0x99,0xab,0x76,0x1d,0x13,0x62,0xb5,0xde}}
+  gRaphaelDiagnosticHobGuid = {0xe42259ae,0x8971,0x4b85,{0xb0,0x5f,0x39,0xd1,0xc0,0x68,0x3f,0x90}}
+
+[PcdsFixedAtBuild]
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsWriteProbe|FALSE|BOOLEAN|0x9e
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogSeconds|20|UINT32|0x9d
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsPayload|FALSE|BOOLEAN|0x9b
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeFatBytes|20971520|UINT32|0x9c
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsExtents|FALSE|BOOLEAN|0x9a
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsReadLba|0|UINT64|0x99
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsResetOnError|FALSE|BOOLEAN|0x98
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsQueryOnly|FALSE|BOOLEAN|0x97
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsRead|FALSE|BOOLEAN|0x96
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsHandoff|FALSE|BOOLEAN|0x95
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeVideo|FALSE|BOOLEAN|0x94
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogBase|0|UINT64|0x92
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogHz|0|UINT32|0x93
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeMmuTest|FALSE|BOOLEAN|0x8d
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeEarlyTest|FALSE|BOOLEAN|0x8e
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeKallocZones|0|UINT32|0x91
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativePlatformTest|FALSE|BOOLEAN|0x90
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativePmapTest|FALSE|BOOLEAN|0x8f
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeEntryTest|FALSE|BOOLEAN|0x8c
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeExitComplete|FALSE|BOOLEAN|0x8b
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeLoadTest|FALSE|BOOLEAN|0x8a
+  gRaphaelTokenSpaceGuid.PcdRaphaelSparseArena|FALSE|BOOLEAN|0x86
+  gRaphaelTokenSpaceGuid.PcdRaphaelDownloadedEnd|0|UINT64|0x87
+  gRaphaelTokenSpaceGuid.PcdRaphaelStagingKernelBytes|0|UINT32|0x88
+  gRaphaelTokenSpaceGuid.PcdRaphaelStagingKernelCrc|0|UINT32|0x89
+  gRaphaelTokenSpaceGuid.PcdRaphaelAndroidReturn|FALSE|BOOLEAN|0x84
+  gRaphaelTokenSpaceGuid.PcdRaphaelAndroidReturnQemu|FALSE|BOOLEAN|0x85
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeHandoff|FALSE|BOOLEAN|0x83
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeBoot|FALSE|BOOLEAN|0x81
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeQemuGate|FALSE|BOOLEAN|0x82
+  gRaphaelTokenSpaceGuid.PcdRaphaelKernelWindow|FALSE|BOOLEAN|0x80
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamCacheWritePages|0|UINT32|0x7f
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamMappedProbe|FALSE|BOOLEAN|0x7e
+  gRaphaelTokenSpaceGuid.PcdRaphaelVisibleManager|FALSE|BOOLEAN|0x7b
+  gRaphaelTokenSpaceGuid.PcdRaphaelManagerKeys|FALSE|BOOLEAN|0x7c
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamWritePages|0|UINT32|0x7d
+  gRaphaelTokenSpaceGuid.PcdRaphaelRamReadProbe|FALSE|BOOLEAN|0x7a
+  gRaphaelTokenSpaceGuid.PcdRaphaelPhysicalTimerArch|FALSE|BOOLEAN|0x79
+  gRaphaelTokenSpaceGuid.PcdRaphaelIccProbe|FALSE|BOOLEAN|0x00000071
+  gRaphaelTokenSpaceGuid.PcdRaphaelIccFaultTest|FALSE|BOOLEAN|0x00000072
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerSourceTest|FALSE|BOOLEAN|0x00000073
+  gRaphaelTokenSpaceGuid.PcdRaphaelPpiEnableProbe|FALSE|BOOLEAN|0x00000074
+  gRaphaelTokenSpaceGuid.PcdRaphaelGicEnableMap|FALSE|BOOLEAN|0x00000075
+  gRaphaelTokenSpaceGuid.PcdRaphaelGicProbe|FALSE|BOOLEAN|0x00000070
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuArchTest|FALSE|BOOLEAN|0x00000060
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuGicDBytes|0|UINT64|0x00000061
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuGicRBytes|0|UINT64|0x00000062
+  gRaphaelTokenSpaceGuid.PcdRaphaelDarwinTest|FALSE|BOOLEAN|0x00000051
+  gRaphaelTokenSpaceGuid.PcdRaphaelPayloadTest|FALSE|BOOLEAN|0x00000050
+  gRaphaelTokenSpaceGuid.PcdRaphaelImageBase|0|UINT64|0x00000001
+  gRaphaelTokenSpaceGuid.PcdRaphaelImageSize|0|UINT64|0x00000002
+  gRaphaelTokenSpaceGuid.PcdRaphaelOriginalEntry|0|UINT64|0x00000003
+  gRaphaelTokenSpaceGuid.PcdRaphaelOriginalInstruction|0|UINT32|0x00000004
+  gRaphaelTokenSpaceGuid.PcdRaphaelExtentBase|0|UINT64|0x00000005
+  gRaphaelTokenSpaceGuid.PcdRaphaelExtentEnd|0|UINT64|0x00000006
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdBase|0|UINT64|0x00000007
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdSize|0|UINT32|0x00000008
+  gRaphaelTokenSpaceGuid.PcdRaphaelStackBase|0|UINT64|0x00000009
+  gRaphaelTokenSpaceGuid.PcdRaphaelStackSize|0|UINT32|0x0000000a
+  gRaphaelTokenSpaceGuid.PcdRaphaelArenaBase|0|UINT64|0x0000000b
+  gRaphaelTokenSpaceGuid.PcdRaphaelArenaSize|0|UINT32|0x0000000c
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdtBase|0|UINT64|0x0000000d
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdtSize|0|UINT32|0x0000000e
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase|0|UINT64|0x0000000f
+  gRaphaelTokenSpaceGuid.PcdRaphaelTestId|"unset"|VOID*|0x00000010
+  gRaphaelTokenSpaceGuid.PcdRaphaelStopAfterStage|4|UINT32|0x00000011
+  gRaphaelTokenSpaceGuid.PcdRaphaelDisplayProbe|FALSE|BOOLEAN|0x00000012
+  gRaphaelTokenSpaceGuid.PcdRaphaelSmmuProbe|FALSE|BOOLEAN|0x00000013
+  gRaphaelTokenSpaceGuid.PcdRaphaelPixelProbe|FALSE|BOOLEAN|0x00000014
+  gRaphaelTokenSpaceGuid.PcdRaphaelPixelWrite|FALSE|BOOLEAN|0x00000015
+  gRaphaelTokenSpaceGuid.PcdRaphaelExperimentalGop|FALSE|BOOLEAN|0x00000016
+  gRaphaelTokenSpaceGuid.PcdRaphaelInputProbe|FALSE|BOOLEAN|0x00000017
+  gRaphaelTokenSpaceGuid.PcdRaphaelInputRead|FALSE|BOOLEAN|0x00000018
+  gRaphaelTokenSpaceGuid.PcdRaphaelInputProtocol|FALSE|BOOLEAN|0x00000019
+  gRaphaelTokenSpaceGuid.PcdRaphaelMenuTest|FALSE|BOOLEAN|0x0000001a
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerRouteTest|FALSE|BOOLEAN|0x76
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerRouteFaultTest|FALSE|BOOLEAN|0x77
+  gRaphaelTokenSpaceGuid.PcdRaphaelTimerIrqTest|FALSE|BOOLEAN|0x78

@@ -1,0 +1,621 @@
+{
+  "passed": true,
+  "case_count": 82,
+  "cases": [
+    {
+      "name": "normal source expires masked and restores",
+      "status": 8,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "initial IMASK is preserved",
+      "status": 8,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "null ICC",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "null read callback",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "null write callback",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected version",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected status",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected attempted",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected completed",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected failed_selector",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected trap_esr",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC rejected trap_elr",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 0=8",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 1=832",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 3=0",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 10=1",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 10=8",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 15=999",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "prerequisite value 15=1000000001",
+      "status": 1,
+      "read_count": 0,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh CTL changed before writes",
+      "status": 2,
+      "read_count": 3,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "counter deadline overflow rejected",
+      "status": 2,
+      "read_count": 3,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "trapped read 1",
+      "status": 4,
+      "read_count": 1,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "trapped read 2",
+      "status": 4,
+      "read_count": 2,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "trapped read 3",
+      "status": 4,
+      "read_count": 3,
+      "write_count": 0,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "trapped read 4",
+      "status": 4,
+      "read_count": 6,
+      "write_count": 4,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "trapped read 5",
+      "status": 4,
+      "read_count": 7,
+      "write_count": 5,
+      "polls": 1,
+      "passed": true
+    },
+    {
+      "name": "trapped read 6",
+      "status": 4,
+      "read_count": 8,
+      "write_count": 5,
+      "polls": 1,
+      "passed": true
+    },
+    {
+      "name": "trapped read 7",
+      "status": 4,
+      "read_count": 9,
+      "write_count": 5,
+      "polls": 2,
+      "passed": true
+    },
+    {
+      "name": "trapped read 8",
+      "status": 4,
+      "read_count": 10,
+      "write_count": 5,
+      "polls": 2,
+      "passed": true
+    },
+    {
+      "name": "trapped read 9",
+      "status": 4,
+      "read_count": 11,
+      "write_count": 5,
+      "polls": 3,
+      "passed": true
+    },
+    {
+      "name": "trapped read 10",
+      "status": 4,
+      "read_count": 12,
+      "write_count": 5,
+      "polls": 3,
+      "passed": true
+    },
+    {
+      "name": "trapped read 11",
+      "status": 4,
+      "read_count": 13,
+      "write_count": 5,
+      "polls": 4,
+      "passed": true
+    },
+    {
+      "name": "trapped read 12",
+      "status": 4,
+      "read_count": 14,
+      "write_count": 5,
+      "polls": 4,
+      "passed": true
+    },
+    {
+      "name": "trapped read 13",
+      "status": 4,
+      "read_count": 15,
+      "write_count": 5,
+      "polls": 5,
+      "passed": true
+    },
+    {
+      "name": "trapped read 14",
+      "status": 4,
+      "read_count": 16,
+      "write_count": 5,
+      "polls": 5,
+      "passed": true
+    },
+    {
+      "name": "trapped read 15",
+      "status": 4,
+      "read_count": 17,
+      "write_count": 5,
+      "polls": 6,
+      "passed": true
+    },
+    {
+      "name": "trapped read 16",
+      "status": 4,
+      "read_count": 18,
+      "write_count": 5,
+      "polls": 6,
+      "passed": true
+    },
+    {
+      "name": "trapped read 17",
+      "status": 4,
+      "read_count": 19,
+      "write_count": 5,
+      "polls": 7,
+      "passed": true
+    },
+    {
+      "name": "trapped read 18",
+      "status": 4,
+      "read_count": 20,
+      "write_count": 5,
+      "polls": 7,
+      "passed": true
+    },
+    {
+      "name": "trapped read 19",
+      "status": 4,
+      "read_count": 21,
+      "write_count": 5,
+      "polls": 8,
+      "passed": true
+    },
+    {
+      "name": "trapped read 20",
+      "status": 4,
+      "read_count": 22,
+      "write_count": 5,
+      "polls": 8,
+      "passed": true
+    },
+    {
+      "name": "trapped read 21",
+      "status": 4,
+      "read_count": 23,
+      "write_count": 5,
+      "polls": 9,
+      "passed": true
+    },
+    {
+      "name": "trapped read 22",
+      "status": 4,
+      "read_count": 24,
+      "write_count": 5,
+      "polls": 9,
+      "passed": true
+    },
+    {
+      "name": "trapped read 23",
+      "status": 4,
+      "read_count": 25,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "trapped read 24",
+      "status": 4,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "trapped read 25",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "trapped read 26",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "write trap 1 partial=False",
+      "status": 3,
+      "read_count": 5,
+      "write_count": 4,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "write trap 1 partial=True",
+      "status": 3,
+      "read_count": 5,
+      "write_count": 4,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "write trap 2 partial=False",
+      "status": 3,
+      "read_count": 6,
+      "write_count": 5,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "write trap 2 partial=True",
+      "status": 3,
+      "read_count": 6,
+      "write_count": 5,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "restoration write trap 3",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "restoration write trap 4",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "restoration write trap 5",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "CVAL write ignored",
+      "status": 5,
+      "read_count": 6,
+      "write_count": 4,
+      "polls": 0,
+      "passed": true
+    },
+    {
+      "name": "CTL write ignored",
+      "status": 5,
+      "read_count": 8,
+      "write_count": 5,
+      "polls": 1,
+      "passed": true
+    },
+    {
+      "name": "source never reports expiration",
+      "status": 6,
+      "read_count": 206,
+      "write_count": 5,
+      "polls": 100,
+      "passed": true
+    },
+    {
+      "name": "bounded polls with stopped counter",
+      "status": 6,
+      "read_count": 2000006,
+      "write_count": 5,
+      "polls": 1000000,
+      "passed": true
+    },
+    {
+      "name": "counter reverses after write",
+      "status": 5,
+      "read_count": 8,
+      "write_count": 5,
+      "polls": 1,
+      "passed": true
+    },
+    {
+      "name": "ISTATUS before deadline rejected",
+      "status": 5,
+      "read_count": 8,
+      "write_count": 5,
+      "polls": 1,
+      "passed": true
+    },
+    {
+      "name": "intermediate disable ignored but final restoration succeeds",
+      "status": 8,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "restoration write ignored 4",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "restoration write ignored 5",
+      "status": 7,
+      "read_count": 26,
+      "write_count": 5,
+      "polls": 10,
+      "passed": true
+    },
+    {
+      "name": "wire rejects version",
+      "passed": true
+    },
+    {
+      "name": "wire rejects status",
+      "passed": true
+    },
+    {
+      "name": "wire rejects reason",
+      "passed": true
+    },
+    {
+      "name": "wire rejects frequency",
+      "passed": true
+    },
+    {
+      "name": "wire rejects original_ctl",
+      "passed": true
+    },
+    {
+      "name": "wire rejects original_cval",
+      "passed": true
+    },
+    {
+      "name": "wire rejects start_counter",
+      "passed": true
+    },
+    {
+      "name": "wire rejects deadline",
+      "passed": true
+    },
+    {
+      "name": "wire rejects observed_ctl",
+      "passed": true
+    },
+    {
+      "name": "wire rejects observed_cval",
+      "passed": true
+    },
+    {
+      "name": "wire rejects end_counter",
+      "passed": true
+    },
+    {
+      "name": "wire rejects polls",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_ctl",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_cval",
+      "passed": true
+    },
+    {
+      "name": "wire rejects write_calls",
+      "passed": true
+    },
+    {
+      "name": "wire rejects trap_esr",
+      "passed": true
+    },
+    {
+      "name": "wire rejects trap_elr",
+      "passed": true
+    },
+    {
+      "name": "wire rejects short",
+      "passed": true
+    },
+    {
+      "name": "wire rejects long",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/TimerSource.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/timer-source-host/20261027T225530.950491Z-em_5d158/timer-source.so"
+  ],
+  "snapshot_bytes": 136,
+  "guard_canaries_verified": true,
+  "undefined_behavior_sanitizer": true,
+  "register_model_only": true,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerSource.c",
+      "sha256": "db9c9a11d676cf94c2623ee959a3da7e566e3ace17f1a80cf5d693a5a746628a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerSource.h",
+      "sha256": "62da8690a73c9782fb42519d4838fbf17dbd9e0c103bfdefd26928f6680265cf"
+    }
+  ],
+  "decoder_sha256": "65ea94dd5aec38fe8b630f4a459df0511536c63126d80f117c61267dc7c377ca",
+  "runner_sha256": "137e3930c011da446065209a7734627948c3c38239fa024707f6f9a3d3b4f6f4"
+}

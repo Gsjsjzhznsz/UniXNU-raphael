@@ -1,0 +1,70 @@
+{
+  "handset_executed": true,
+  "passed": true,
+  "source_run": "evidence/private/android-return-run/20261030T232235Z/report.json",
+  "source_build": "evidence/private/android-return-build/20261030T232137.047141Z-1o96kc6n",
+  "observation": {
+    "passed": true,
+    "resources": {
+      "node": "/soc/ufshc@1d84000",
+      "base": 30949376,
+      "bytes": 9472
+    },
+    "snapshots": [
+      {
+        "CAP": 361169695,
+        "VER": 768,
+        "AHIT": 0,
+        "IS": 1024,
+        "IE": 0,
+        "HCS": 271,
+        "HCE": 1,
+        "UECPA": 0,
+        "UECDL": 0,
+        "UECN": 0,
+        "UECT": 0,
+        "UECDME": 0,
+        "UTRLBA": 4294959104,
+        "UTRLBAU": 0,
+        "UTRLDBR": 0,
+        "UTRLRSR": 1,
+        "UTMRLDBR": 0,
+        "UTMRLRSR": 0
+      },
+      {
+        "CAP": 361169695,
+        "VER": 768,
+        "AHIT": 0,
+        "IS": 1024,
+        "IE": 0,
+        "HCS": 271,
+        "HCE": 1,
+        "UECPA": 0,
+        "UECDL": 0,
+        "UECN": 0,
+        "UECT": 0,
+        "UECDME": 0,
+        "UTRLBA": 4294959104,
+        "UTRLBAU": 0,
+        "UTRLDBR": 0,
+        "UTRLRSR": 1,
+        "UTMRLDBR": 0,
+        "UTMRLRSR": 0
+      }
+    ],
+    "changed": [],
+    "controller_enabled": true,
+    "device_present": true,
+    "transfer_list_ready": true,
+    "outstanding_transfer_mask": 0,
+    "outstanding_task_mask": 0,
+    "dma_address_bits": 64,
+    "transfer_slots": 32,
+    "native_dma_verified": false,
+    "exclusive_ownership_verified": false,
+    "scope": "ABL to Image entry read-only state only; no controller writes or storage commands"
+  },
+  "native_bsd_scheduling_verified": true,
+  "runtime_only": true,
+  "used_flash_or_erase": false
+}

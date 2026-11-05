@@ -1,0 +1,196 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "include/linux/irqchip/arm-gic-v3.h",
+      "sha256": "53bf4e7415e7db54bce490dd7a9d39f85a0aa5064150661ccab0e88ed9ead11e",
+      "anchors": {
+        "GICD_CTLR": [
+          25,
+          58,
+          59,
+          60,
+          61,
+          62,
+          68,
+          69,
+          89
+        ],
+        "GICD_TYPER": [
+          26,
+          71,
+          72,
+          74,
+          75
+        ],
+        "GICD_IIDR": [
+          27
+        ],
+        "GICD_PIDR2": [
+          47,
+          105
+        ],
+        "GIC_PIDR2_ARCH_MASK": [
+          80
+        ],
+        "GIC_PIDR2_ARCH_GICv3": [
+          81
+        ],
+        "GIC_PIDR2_ARCH_GICv4": [
+          82
+        ],
+        "GICR_CTLR": [
+          89,
+          107
+        ],
+        "GICR_IIDR": [
+          90
+        ],
+        "GICR_TYPER": [
+          91,
+          109,
+          205,
+          206,
+          207,
+          208
+        ],
+        "GICR_WAKER": [
+          93,
+          111,
+          112
+        ],
+        "GICR_TYPER_VLPIS": [
+          206
+        ],
+        "GICR_TYPER_LAST": [
+          208
+        ],
+        "GIC_V3_REDIST_SIZE": [
+          210
+        ],
+        "GICR_IGROUPR0": [
+          193
+        ],
+        "GICR_ISENABLER0": [
+          194
+        ],
+        "GICR_ISPENDR0": [
+          196
+        ],
+        "GICR_ISACTIVER0": [
+          198
+        ],
+        "GICR_IGRPMODR0": [
+          202
+        ],
+        "GICR_ICFGR0": [
+          201
+        ],
+        "GICD_ICFGR": [
+          42,
+          201
+        ],
+        "GICR_IPRIORITYR0": [
+          200
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/irqchip/irq-gic-v3.c",
+      "sha256": "7079c68f97c2e275be876db22b5dc4e181f74df0ae111fdab3fdbe0bf30502f8",
+      "anchors": {
+        "ptr += gic_data.redist_stride": [
+          460
+        ],
+        "ptr += SZ_64K * 2": [
+          462,
+          464
+        ],
+        "typer & GICR_TYPER_VLPIS": [
+          463,
+          520
+        ],
+        "typer & GICR_TYPER_LAST": [
+          466
+        ],
+        "GICR_TYPER bits [63:32]": [
+          480
+        ],
+        "MPIDR_AFFINITY_LEVEL(mpidr, 3) << 24": [
+          482
+        ],
+        "if ((typer >> 32) == aff)": [
+          488
+        ]
+      }
+    }
+  ],
+  "resource_contract": "UniXNU-raphael/evidence/interrupt-resource-contract.json",
+  "resource_contract_sha256": "8fc3f9b382293945c997e861e557f6548b4226c8722c7d6d633d7914d3b49b83",
+  "fdt_sha256": "7984f47f73d2145ca5ce8142ec672f52a255bb22c4119af5c9249353d8b00460",
+  "recipe": {
+    "gicd": 396361728,
+    "gicd_bytes": 65536,
+    "gicr": 396754944,
+    "gicr_bytes": 1048576,
+    "stride": 131072,
+    "node": "/soc/interrupt-controller@17a00000"
+  },
+  "verified_architecture_constants": {
+    "GICD_CTLR": 0,
+    "GICD_TYPER": 4,
+    "GICD_IIDR": 8,
+    "GICD_PIDR2": 65512,
+    "GIC_PIDR2_ARCH_MASK": 240,
+    "GIC_PIDR2_ARCH_GICv3": 48,
+    "GIC_PIDR2_ARCH_GICv4": 64,
+    "GICR_CTLR": 0,
+    "GICR_IIDR": 4,
+    "GICR_TYPER": 8,
+    "GICR_WAKER": 20,
+    "GICR_TYPER_VLPIS": 2,
+    "GICR_TYPER_LAST": 16,
+    "GIC_V3_REDIST_SIZE": 131072,
+    "GICR_IGROUPR0": 128,
+    "GICR_ISENABLER0": 256,
+    "GICR_ISPENDR0": 512,
+    "GICR_ISACTIVER0": 768,
+    "GICR_IGRPMODR0": 3328,
+    "GICR_ICFGR0": 3072,
+    "GICR_IPRIORITYR0": 1024
+  },
+  "sgi_config_ppi_offset": 3076,
+  "sgi_offsets": [
+    128,
+    256,
+    512,
+    768,
+    3328,
+    3072,
+    3076,
+    1024,
+    1028,
+    1032,
+    1036,
+    1040,
+    1044,
+    1048,
+    1052
+  ],
+  "frame_scan_limit": 8,
+  "frame_scan_limit_is_design_bound": true,
+  "offsets_from_architecture_not_board_copy": true,
+  "system_registers_accessed": false,
+  "interrupt_acknowledged": false,
+  "mmio_write_callback": false,
+  "snapshot_bytes": 640,
+  "wire_version": 1,
+  "handset_executed": false,
+  "private_modules_linked": false,
+  "source_sha256": "92f494ca410183a5046145b380d4a3b783e8391901481c096eee63d96d7b6e97",
+  "decoder_sha256": "81e493ec3d84298a1349a337723e3428cb9370fa89f435dbcd78b44a922b53a1"
+}

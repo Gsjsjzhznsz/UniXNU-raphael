@@ -1,0 +1,553 @@
+{
+  "kind": "actual C SMMU collector host execution with mocked MMIO",
+  "passed": true,
+  "case_count": 50,
+  "cases": [
+    {
+      "name": "translation context disabled",
+      "passed": true,
+      "status": 13,
+      "reads": 535,
+      "extra_smmu_reads": 28,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "translation context enabled",
+      "passed": true,
+      "status": 13,
+      "reads": 535,
+      "extra_smmu_reads": 28,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "first TBU power off",
+      "passed": true,
+      "status": 10,
+      "reads": 508,
+      "extra_smmu_reads": 1,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "second TBU power off",
+      "passed": true,
+      "status": 10,
+      "reads": 509,
+      "extra_smmu_reads": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "no stream matching",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "no translation support",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "extended stream IDs rejected",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "zero groups",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "zero context banks",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "excess context banks",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "S2 count exceeds total",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "ID1 geometry differs from FDT",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "CB span exceeds half",
+      "passed": true,
+      "status": 11,
+      "reads": 513,
+      "extra_smmu_reads": 6,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "duplicate stream match stops before second S2CR",
+      "passed": true,
+      "status": 12,
+      "reads": 516,
+      "extra_smmu_reads": 9,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "no stream matches",
+      "passed": true,
+      "status": 14,
+      "reads": 521,
+      "extra_smmu_reads": 14,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "partial stream coverage",
+      "passed": true,
+      "status": 14,
+      "reads": 522,
+      "extra_smmu_reads": 15,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "invalid context bank",
+      "passed": true,
+      "status": 12,
+      "reads": 515,
+      "extra_smmu_reads": 8,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "reserved S2CR type",
+      "passed": true,
+      "status": 12,
+      "reads": 515,
+      "extra_smmu_reads": 8,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "bypass has no context reads",
+      "passed": true,
+      "status": 13,
+      "reads": 522,
+      "extra_smmu_reads": 15,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "fault has no context reads",
+      "passed": true,
+      "status": 13,
+      "reads": 522,
+      "extra_smmu_reads": 15,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "multiple groups share one bank",
+      "passed": true,
+      "status": 13,
+      "reads": 536,
+      "extra_smmu_reads": 29,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "64K register pages derived from ID1",
+      "passed": true,
+      "status": 13,
+      "reads": 535,
+      "extra_smmu_reads": 28,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "missing IOMMU cells",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "wrong IOMMU cells",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "invalid phandle",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "truncated iommus",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "too many SID mask bits",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unsupported root compatible",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "disabled root",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "secure alias requested",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "static CB requested",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unknown root clocks",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unknown root regulator",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "disabled related TBU",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unknown TBU clock",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unnamed TBU clock",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "additional TBU regulator",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unnamed root clock",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "duplicate TBU coverage",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "missing TBU coverage",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "missing power provider",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "disabled power provider",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "wrong GDSCR size",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "GDSCR outside GCC",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "wrong root reg name",
+      "passed": true,
+      "status": 9,
+      "reads": 507,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "display prerequisite stopped",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "extra_smmu_reads": 0,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "missing final wire sample",
+      "passed": true,
+      "decoder_rejection": true,
+      "mocked_mmio": true
+    },
+    {
+      "name": "invented SMMU address",
+      "passed": true,
+      "decoder_rejection": true,
+      "mocked_mmio": true
+    },
+    {
+      "name": "appended wire sample",
+      "passed": true,
+      "decoder_rejection": true,
+      "mocked_mmio": true
+    },
+    {
+      "name": "false complete status",
+      "passed": true,
+      "decoder_rejection": true,
+      "mocked_mmio": true
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+      "sha256": "7b3d5f1741a2d2039b194a7554e1182dc2e7fac534daea43d4ee632209d126d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+      "sha256": "b1dad31d092633dd0170822f532f6d8da6b2c534824e9a306d4aa487e9b2aaf2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "29ac575f95ed9f74aa87e56f089ebab100a12db2ac4166edda264d8580735fc7"
+    },
+    {
+      "path": "scripts/smmu_probe.py",
+      "sha256": "201797657291d038da1476b5e280589b5a5f7083524bd85d231972723fa10ff7"
+    },
+    {
+      "path": "scripts/display_probe.py",
+      "sha256": "294fd7bee16fb217fb20c2092cb74b3438b3a968a5c801e16408a0723e74452d"
+    },
+    {
+      "path": "scripts/validate_smmu_probe.py",
+      "sha256": "922356f7d563276410cc30798b6a33b909dc7dcc8267c1626303c3306e6ea05e"
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "-DFdtFirstSubnode=fdt_first_subnode",
+    "-DFdtNextSubnode=fdt_next_subnode",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/smmu-probe-host/20261027T164942Z/smmu-probe.so"
+  ],
+  "input_fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "shared_object_sha256": "9dcd34eead7c8d31db7c3cc80eeedfe9ff6c9a2c68c66d2aa03576560f092c49",
+  "handset_executed": false,
+  "mmio_writes": false
+}

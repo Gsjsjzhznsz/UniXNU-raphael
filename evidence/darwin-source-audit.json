@@ -1,0 +1,222 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Library/UefiLib/UefiLibPrint.c",
+      "sha256": "8c264dbe55760ea43bf6e1396e79331d916accd736128fe8c26bebf228035109",
+      "anchors": {
+        "ASSERT (Console != NULL)": [
+          63,
+          201
+        ],
+        "InternalPrint": [
+          50,
+          123,
+          162,
+          189,
+          262,
+          302,
+          343,
+          560,
+          642
+        ],
+        "gST->ConOut": [
+          102,
+          123,
+          239,
+          262
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/Protocol/SimpleTextOut.h",
+      "sha256": "b27a98bdc4b77f9e47097ef10fb78af564a51b0b91215e064d294abac8d862db",
+      "anchors": {
+        "EFI_SIMPLE_TEXT_OUTPUT_PROTOCOL": [
+          16,
+          24,
+          26,
+          31,
+          167,
+          192,
+          213,
+          236,
+          256,
+          277,
+          295,
+          318,
+          340,
+          386
+        ],
+        "EFI_TEXT_STRING": [
+          191,
+          389
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdeModulePkg/Core/Dxe/Image/Image.c",
+      "sha256": "3da6c13829490d35e19aedeb32d946664873ed5e116ce13211f0932922c72b64",
+      "anchors": {
+        "CoreLoadImage": [
+          1173,
+          1582,
+          1596
+        ],
+        "CoreStartImage": [
+          1643
+        ],
+        "CoreUnloadImage": [
+          1975
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Library/DxeServicesLib/DxeServicesLib.c",
+      "sha256": "7bd7029aba901566c68d261e10074b1befaef03e4990ca45b6225bd794d02988",
+      "anchors": {
+        "GetSectionFromAnyFv": [
+          230,
+          374,
+          391,
+          1011
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU/drivers/DarwinBoot",
+      "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+      "path": "DarwinBootPkg/Driver/DarwinBoot.inf",
+      "sha256": "cb10851277b53b355794c1bca3fa16d3bf18a0dc2dee857091837b63599019df",
+      "anchors": {
+        "UEFI_DRIVER": [
+          6
+        ],
+        "DarwinBootEntry": [
+          8
+        ],
+        "UniXNULoader": [
+          33
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU/drivers/DarwinBoot",
+      "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+      "path": "DarwinBootPkg/Driver/DarwinBoot.c",
+      "sha256": "d13facd71aa802e02a33b8c463d83a7a9a2f9d5b0a5e5a5fcd96cfdce7985e1a",
+      "anchors": {
+        "ParseKernel": [
+          114,
+          542
+        ],
+        "EFI_INVALID_PARAMETER": [
+          506,
+          697
+        ],
+        "EFI_BAD_BUFFER_SIZE": [
+          96,
+          514,
+          521,
+          613
+        ],
+        "DarwinCurrentEl () != 4": [
+          508
+        ],
+        "DarwinEnter (": [
+          42,
+          694
+        ],
+        "EFI_ALREADY_STARTED": [
+          734
+        ],
+        "Loaded->Unload = Unload": [
+          740
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU/drivers/DarwinBoot",
+      "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+      "path": "DarwinBootPkg/Driver/PackedRamdisk.h",
+      "sha256": "8b3a326062baee88a179274e92df05a3a07792d25ef84daa23b71aa47b4a2326",
+      "anchors": {
+        "RamdiskLayout": [
+          14
+        ],
+        "DBRDISK1": [
+          2,
+          21
+        ],
+        "SIZE_MAX_LOGICAL": [
+          10,
+          26
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU/drivers/DarwinBoot",
+      "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+      "path": "DarwinBootPkg/Driver/Entry.S",
+      "sha256": "44c05d16af1fbe51cfdcf074ff590ec214dbe3e8efdc4b83a9d06f7e49be44bd",
+      "anchors": {
+        "DarwinCurrentEl": [
+          4
+        ],
+        "DarwinEnter": [
+          10
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Include/Protocol/UniXNULoader.h",
+      "sha256": "4853991ceac062a2bd3d8d36d262d0cf09b1fe751c44813e267371cd93479cbb",
+      "anchors": {
+        "UNIXNU_LOADER_REVISION": [
+          19,
+          20
+        ],
+        "UNIXNU_LOADER_BOOT_REQUEST": [
+          52,
+          61
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Boot.c",
+      "sha256": "674f34b0ea51b7a077e79a130c8f85d41638160fbaf7238dd120fd888222b6d3",
+      "anchors": {
+        "RunXnu": [
+          43,
+          165
+        ],
+        "Loader->Boot": [
+          65,
+          93
+        ],
+        "Request.Volume": [
+          83
+        ],
+        "UniXNUBootEntry": [
+          99
+        ]
+      }
+    }
+  ],
+  "os_profile_selected": false,
+  "hardware_parameters_used": false,
+  "upstream_modified": false,
+  "scope": "Fixed v2 loader protocol and negative boot request checks; no XNU or handset handoff claim"
+}

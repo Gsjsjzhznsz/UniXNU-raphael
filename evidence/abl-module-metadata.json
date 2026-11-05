@@ -1,0 +1,21 @@
+[
+  {
+    "name": "LinuxLoader",
+    "file_guid": "f536d559-459f-48fa-8bbc-43b554ecae8d",
+    "source_partition": "abl",
+    "source_partition_sha256": "92a2a6ae392e3fea93ecf4bf662f7a35d87293fb6bcfc8ddecc2c41947befecc",
+    "images": [
+      {
+        "file": "section1.pe",
+        "bytes": 921600,
+        "sha256": "f34c4d72af117b37023dd12f9497bf301a443a29ce48650ed780ed9de610a8d5",
+        "machine": 43620
+      }
+    ],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "399fb47bac01926b805a51af568d0bb436f735314283bfa872cf9a516691b0bf",
+    "raw_sections": []
+  }
+]

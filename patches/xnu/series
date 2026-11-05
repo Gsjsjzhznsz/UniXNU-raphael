@@ -1,0 +1,8 @@
+# Independent CPU personality and standard physical timer API.
+raphael-bootcpu.patch
+# Keep explicitly owned boot CPU nubs out of Apple-specific CPU probes.
+raphael-cpu-ownership.patch
+# Emulator-only scratch default Data; conditional on OWNER_DATA_MOUNT.
+raphael-desktop-data-seed.patch
+# Explicit non-Apple platform UUID for independent DT ports.
+raphael-platform-uuid.patch

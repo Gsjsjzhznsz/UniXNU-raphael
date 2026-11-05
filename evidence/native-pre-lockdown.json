@@ -1,0 +1,19 @@
+{
+  "milestone": "Original kernel startup reached pre-lockdown prefix on handset",
+  "report": "evidence/private/android-return-run/20261030T212551Z/report.json",
+  "build": "evidence/private/android-return-build/20261030T212445.307090Z-7drwr1k_",
+  "passed": true,
+  "pc": "0xfffffff007a00130",
+  "lr": "0xfffffff0072d4770",
+  "spsr": "0x60000204",
+  "checkpoint_id": 16,
+  "full_default_post_verified": true,
+  "bounded_recovery_verified": true,
+  "wall_seconds_to_android": 106.28161181299947,
+  "normal_xnu_irq_verified": false,
+  "kext_bootstrap_jettison_executed": false,
+  "machine_lockdown_executed": false,
+  "iokit_driver_matching_executed": false,
+  "root_volume_verified": false,
+  "handset_desktop_verified": false
+}

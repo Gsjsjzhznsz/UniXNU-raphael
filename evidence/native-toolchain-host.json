@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "artifact_directory": "artifacts/native-toolchain/20261028T045143Z",
+  "clang_version": "clang version 24.0.0git (/var/tmp/unixnu-toolchain-gjb5sc3a/llvm-project/clang 58c46bae21181fb4240cf964461bea738d96d50e)\nTarget: unknown\nThread model: posix\nInstalledDir: /opt/unixnu-linux/llvm/bin\nBuild config: +assertions\n",
+  "patched_xnu_allocator_builtins": true,
+  "arm64_macho_compile_relocatable_link_archive": true,
+  "mig_generated": true,
+  "host_elf_compile": true,
+  "lzfse_roundtrip": true,
+  "iig_present_only": true,
+  "iig_actual_interface_compilation_verified": false,
+  "complete_xnu_build_verified": false,
+  "handset_executed": false,
+  "tools": [
+    {
+      "path": "/opt/unixnu-linux/llvm/bin/clang",
+      "sha256": "97dff6f5177a0ffbd9bcfcd146e5518f8bc12367722623c6edc59181e845dd50"
+    },
+    {
+      "path": "/opt/unixnu-linux/CommandLineTools/usr/bin/clang",
+      "sha256": "f9374d4fee38f59f73f6f19c0fad2b0bf4bb5f65a6f74afb8820502368b4a96a"
+    },
+    {
+      "path": "/opt/unixnu-linux/CommandLineTools/usr/bin/ld",
+      "sha256": "f18ac312365193df702686c33c0ec4dd057c638fc8e0e1786afb3eac72c55bf9"
+    },
+    {
+      "path": "/opt/unixnu-linux/CommandLineTools/usr/bin/libtool",
+      "sha256": "fcf3dcbd7fbb7d731aff76b7626c291d7e167cf7e3f8c531dda4b22932f0144a"
+    },
+    {
+      "path": "/opt/unixnu-linux/CommandLineTools/usr/bin/otool",
+      "sha256": "9a6b81565684bc735da95001d6888b731c2fd4b31bd23e82cd341a6c9fb7f644"
+    },
+    {
+      "path": "/opt/unixnu-linux/CommandLineTools/usr/bin/xnu-host-cc",
+      "sha256": "645df12083d14f90f69b72d087cbc46a8927191ccefbd89d7e416bf42f249426"
+    },
+    {
+      "path": "/opt/unixnu-linux/CommandLineTools/usr/libexec/migcom",
+      "sha256": "f781db1974ea4e2d2298086035cbe833eba4dc3156b80587c7c25979005e8f0e"
+    },
+    {
+      "path": "/opt/unixnu-linux/XcodeDefault.xctoolchain/usr/bin/iig",
+      "sha256": "6d778feff17ebffd8c4ccf47cc53b8f9c27dccf4720ec26f8c14cb74af44ec50"
+    },
+    {
+      "path": "/opt/unixnu-linux/bin/lzfse",
+      "sha256": "73d68a52433f1610f5adf58e0565dff8bca8f0f78c50c5eb675c533b13bc7afc"
+    },
+    {
+      "path": "/usr/bin/xcrun",
+      "sha256": "8da8a494abd47a6d484c217ac074c1759792732f048ffce3f65c114c5d641576"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "commands.json",
+      "bytes": 2627,
+      "sha256": "c52cc43c662bcdaa8e6d846fe0594dcf281dc552e77ca35a112e13df5aebd840"
+    },
+    {
+      "path": "host.o",
+      "bytes": 960,
+      "sha256": "0438cb35465fb746f0b7af5c5bcf892a257f4a51d4ad39c2ffe0a8283d84c4cf"
+    },
+    {
+      "path": "libprobe.a",
+      "bytes": 896,
+      "sha256": "7ce0c6516db7bef34a382fbfdb32b242a18c8daee82515547f3b20284647a1b5"
+    },
+    {
+      "path": "linked.o",
+      "bytes": 672,
+      "sha256": "6b539b78b847330fd0118d0fd320f69145fe8c5f951fab5434bc9ce01b6255a9"
+    },
+    {
+      "path": "packed",
+      "bytes": 510,
+      "sha256": "5d7c3104e1be515e7a623aff32681c04fc69444fa3d61701c26e166dcb641f7f"
+    },
+    {
+      "path": "plain",
+      "bytes": 12800,
+      "sha256": "ae1c6c3cfa59c7104a54158baf274b8156bd6893d3a5b6abe42b71cf47e3e635"
+    },
+    {
+      "path": "probe-server.c",
+      "bytes": 5881,
+      "sha256": "398cf6d15ef485d9ca0b78edd42ffdae74873c339c1d3c044a8a85a13af3fa0f"
+    },
+    {
+      "path": "probe-server.h",
+      "bytes": 4987,
+      "sha256": "4d43d68fa091b93f16df1a0d8a4bb0f5a768b77c355913ed2392fffabb50f6e9"
+    },
+    {
+      "path": "probe-user.c",
+      "bytes": 6250,
+      "sha256": "5fdabca6ea6bea32526c088255cce3d1bc979d5c1a45241a752a7dd98b440d30"
+    },
+    {
+      "path": "probe-user.h",
+      "bytes": 4797,
+      "sha256": "5b4795d4ff416cfaac7ecf09268f9393917598afac012276d698d7d6c18b5523"
+    },
+    {
+      "path": "probe.c",
+      "bytes": 397,
+      "sha256": "89a858cea2a259aedc2579ef8c0f1a03dbd716ec939cb513f169e89637cbaa7a"
+    },
+    {
+      "path": "probe.defs",
+      "bytes": 153,
+      "sha256": "c2a2eaed89af3bef55cb9ba6ab6e0c8452ee3ccd2ca4a4bd3aec4d385b30b454"
+    },
+    {
+      "path": "probe.o",
+      "bytes": 784,
+      "sha256": "f21d4a7429feec2a00173742a54a4bdc7b03e45c4f6a6cef6ba7487524071efd"
+    },
+    {
+      "path": "roundtrip",
+      "bytes": 12800,
+      "sha256": "ae1c6c3cfa59c7104a54158baf274b8156bd6893d3a5b6abe42b71cf47e3e635"
+    }
+  ],
+  "validator_sha256": "17b974f8499cfdc2d1819190935cb9baf2b608c9a940f8b40699fe61d8453191"
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "archived build provenance preflight",
+  "positive": {
+    "mode": "archived-build-git-and-snapshot",
+    "source_revision": "b2e774c2fd940468611ff15c130ddb740cde7f55",
+    "unixnu_revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+    "verified_source_inputs": 98,
+    "source_binding": "UniXNU-raphael/evidence/sec-menu-source-binding.json",
+    "source_binding_sha256": "585f56bcc9b6ac3ec5988878643998e5c856558dd769d72083955bf741f17902",
+    "build_report_sha256": "b3f39315e032cda51b5dc6f3936fa7f321113fb65b476e12be95c698254fe82a",
+    "qemu_report_sha256": "a4b641d8bf097adca47f7faef5d085f5d6f3df52a84b50c1e01a9feac8526848",
+    "reused_image": true
+  },
+  "rejected_mutations": {
+    "altered image hash": true,
+    "altered FD hash": true,
+    "wrong stop stage": true,
+    "unbound upstream": true,
+    "not snapshot compiled": true,
+    "snapshot escape": true,
+    "wrong QEMU run": true,
+    "altered input hash": true
+  },
+  "handset_rebooted_by_this_check": false,
+  "runner_sha256": "534889ea13bf7d36a950f30d283ce5fd53bfb536e335dae75031cdc2e731911d",
+  "verifier_sha256": "3a621f3532c89e84649ab2fa42eed94a0e3b866ee2c1c8650f1fca9de1c52a05"
+}

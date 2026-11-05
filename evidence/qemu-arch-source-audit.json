@@ -1,0 +1,166 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/CpuDxe/CpuDxe.c",
+      "sha256": "d593aa745d68c9bca584ddeaf7e7d1c421fca581948e19c1c182a5bc28af58bb",
+      "anchors": {
+        "InitializeExceptions ();": [
+          413
+        ],
+        "HardwareInterruptProtocolNotify": [
+          21,
+          371,
+          491,
+          493
+        ],
+        "ArmEnableInterrupts ();": [
+          142,
+          396
+        ],
+        "gEfiCpuArchProtocolGuid": [
+          435
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/CpuDxe/Exception.c",
+      "sha256": "b827aee3cb93996d08b3f9b1a3f0ab0ddd4f2984091f9f9fa6b9c4b84110d58c",
+      "anchors": {
+        "InitializeCpuExceptionHandlers": [
+          20
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/ArmGicDxe/GicV3/ArmGicV3Dxe.c",
+      "sha256": "3db3e849bee5176eab182e9051690a34a3ffc3f3fac29cc161ca21c25606c1dc",
+      "anchors": {
+        "GicGetCpuRedistributorBase": [
+          48,
+          787
+        ],
+        "PcdGicRedistributorsBase": [
+          787
+        ],
+        "ArmGicV3EnableInterruptInterface": [
+          892
+        ],
+        "GicCommonInstallAndRegisterInterruptService": [
+          912
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/TimerDxe/TimerDxe.c",
+      "sha256": "cc1fc7fce3b3849ca39c27a306179e4f0b579ae0f329e0f5ad7bcb81734dc90a",
+      "anchors": {
+        "TimerInterruptHandler": [
+          287,
+          401,
+          409,
+          413,
+          416
+        ],
+        "mTimerNotifyFunction": [
+          28,
+          76,
+          80,
+          84,
+          309,
+          310
+        ],
+        "TimerDriverSetTimerPeriod": [
+          132,
+          267,
+          382,
+          420
+        ],
+        "TimerVirtIntrNum": [
+          364,
+          389,
+          391,
+          401
+        ],
+        "TimerSecIntrNum": [
+          365,
+          386,
+          393,
+          413
+        ],
+        "TimerIntrNum": [
+          366,
+          387,
+          394,
+          416
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Library/ArmGenericTimerPhyCounterLib/ArmGenericTimerPhyCounterLib.c",
+      "sha256": "76e5faf02f7c5386297a4b81f61f491cea22e3e5c547528863b67e290fc00069",
+      "anchors": {
+        "ArmReadCntPct": [
+          89
+        ],
+        "ArmWriteCntpCval": [
+          125
+        ],
+        "ArmWriteCntpCtl": [
+          23,
+          44,
+          107
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdeModulePkg/Core/Dxe/Event/Timer.c",
+      "sha256": "56123bddcf205d14d82fffe10b37d0f5d98ab60a1bdb1d159ef4b00e31ac7869",
+      "anchors": {
+        "CoreSetTimer": [
+          236
+        ],
+        "CoreTimerTick": [
+          188
+        ],
+        "TimerPeriodic": [
+          272
+        ],
+        "TimerRelative": [
+          254
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "UefiCpuPkg/Library/CpuExceptionHandlerLib/DxeCpuExceptionHandlerLib.inf",
+      "sha256": "18aa27db23c02aa1e3cbb4d446d1a94288de7c21b5ac7cf2ea6c72650dea697c",
+      "anchors": {
+        "MODULE_TYPE": [
+          17
+        ],
+        "AArch64": [
+          63,
+          64
+        ]
+      }
+    }
+  ],
+  "upstream_modified": false,
+  "scope": "Generic CPU/GICv3/CNTP TimerArch and DXE events; all resource values come from this QEMU DTB",
+  "handset_parameters_used": false,
+  "handset_gic_restore_verified": false
+}

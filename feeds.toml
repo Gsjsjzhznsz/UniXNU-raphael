@@ -1,0 +1,6 @@
+# Published shared SoC source; local.toml may override this with a sibling checkout.
+[[source]]
+name = "sm8150"
+kind = "soc"
+git = "https://github.com/guowenye/UniXNU-sm8150-common.git"
+commit = "aced7f66f2ec832d1d09936b13738782852a6860"

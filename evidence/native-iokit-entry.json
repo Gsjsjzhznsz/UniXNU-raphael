@@ -1,0 +1,29 @@
+{
+  "kind": "handset original PE_init_iokit entry",
+  "handset": "evidence/private/android-return-run/20261030T200312Z/report.json",
+  "host_build": "evidence/private/android-return-build/20261030T200208.124988Z-_zaexmd0/report.json",
+  "qemu": "artifacts/native-staging-qemu/20261030T200036.185208Z-nxo664qb/report.json",
+  "handset_passed": true,
+  "checkpoint": "0xfffffff0079b0948",
+  "lr": "0xfffffff0072d4624",
+  "thread": {
+    "version": 1,
+    "status": 3,
+    "thread_va": 18446744012285904632,
+    "thread_pa": 3246352120,
+    "base_field_pa": 3246352352,
+    "top_field_pa": 3246352464,
+    "stack_base": 18446744038881296384,
+    "stack_top": 18446744038881312560,
+    "stack_bytes": 16384,
+    "stack_pages": 4,
+    "first_pa": 3246571520,
+    "last_pa": 3246559232,
+    "first_thread_stack_verified": true,
+    "normal_xnu_irq_verified": false
+  },
+  "delta_bytes": 431124,
+  "normal_xnu_irq_verified": false,
+  "iokit_body_executed": false,
+  "desktop_verified": false
+}

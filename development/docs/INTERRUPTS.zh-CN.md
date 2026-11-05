@@ -1,0 +1,13 @@
+# 定时器与中断资源核查
+
+2026-10-28在Android正常运行期间重新只读采集FDT与/proc/interrupts，FDT源哈希前后与本地一致。没有重启、MMIO读取或中断配置写入。原始采集保存在私有目录；公开结果为interrupt-resource-contract.json，解析器31项检查为interrupt-contract-host.json。
+
+本机/soc/timer没有独立interrupt-parent，继承根节点PDC，再到GICv3。固定MiCode raphael-p-oss 663db50e195a8a54c8565ac4ab0c6d9ba7d80db0的PDC实现直接将interrupt specifier交给父GIC转换，PPI由第二个cell加16得到INTID。四路按绑定顺序为secure physical17、nonsecure physical18、virtual19、hypervisor16；这些编号均不在SM8150 PDC配置引脚表内。当前定制Android内核的arch_timer行显示PDC-GIC、硬件号19、Level，Linux逻辑IRQ号为4；两种编号不能混用。参考驱动源码没有被宣称与当前定制内核完全相同。
+
+GICD=0x17a00000/0x10000，GICR=0x17a60000/0x100000，声明stride=0x20000，容纳8个槽位。8个CPU的实际redistributor映射仍需按GICR_TYPER affinity现场确认，不能仅按CPU序号加stride猜测。频率19.2MHz同时匹配本次FDT、固定厂商DTS和此前ABL交接CNTFRQ实测。
+
+厂商DTS使用0xf08，低四位为level-low，另带legacy CPU mask；通用GICv3文档列出的普通level标志为4。解析器保留原始描述并审阅厂商GIC代码对PPI的处理，没有静默改写为4或套用模拟器常见IRQ。当前TimerLib只用于计数与忙等待，不能据此称为TimerArch。
+
+纯检查用sm8150-observed.dtsi此前将timer直接连到GIC；现明确标记为经已审阅PDC转发语义归一化后的投影，并要求最新资源合同匹配。它仍不是本机完整拓扑、固件DTB或可启动XNU的设备树。DTB资源回读继续通过。
+
+尚未验证：ABL交接时GICD/GICR状态、ICC系统寄存器可访问性与分组优先级、nonsecure physical timer在新固件中的IRQ投递、接管后的完整恢复。通用CPU/GIC/TimerDxe驱动会改动硬件状态，需要单独验证；不能因为资源解析通过就启用到手机。下一步先在自有QEMU固件集成固定通用架构驱动，实机保持禁用。

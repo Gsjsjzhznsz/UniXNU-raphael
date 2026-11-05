@@ -1,0 +1,197 @@
+{
+  "source_revision": "38fe398612c029f1b032c9f27b89b082943354ba",
+  "method": "Post-build SHA-256 comparison of every package input against Git blob; QEMU snapshot equality",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/RaphaelDiag/RaphaelDiag.c",
+      "sha256": "5c299f735c03f934f7d6772571be45419844338a97cb558649438e8d11472ca1"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/RaphaelDiag/RaphaelDiag.inf",
+      "sha256": "69bc4d238741e6f47665402cfde877feae65f690b747274ab7e781c31ef58056"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.dsc",
+      "sha256": "c33cb81486abf5cedf20115074110a24a690a9d4afe6fe401e8b2d6020ff0fc5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.fdf",
+      "sha256": "cce81f4e26f22d9066d92d62d87f0b7c1f3e083f867f5b3fbf6ae6129e60a6ff"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturn.c",
+      "sha256": "19d20768bfb12e6299a5f755b77695b9a9c922d34278d4c7253fb255a30aa314"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturnDxe.inf",
+      "sha256": "ef9b9f4cc2140a84e3d34194dcf786c9042c4d98da4725657bf72f17410c62e6"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/GopTest.c",
+      "sha256": "d0dafc19ed7624cb3bc8c8725de5229ed665fbcbc9caad3f6a5dfe9771d84c79"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/SplashGopDxe/SplashGop.c",
+      "sha256": "d4d7616a62761b78abb8e704f48c0013d9d1ec9a5fd54726028515da210db3f5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/SplashGopDxe/SplashGopDxe.inf",
+      "sha256": "ef59a2ec2f628a4ef359782ad43608c4461ea678bccee6c8cf6202f0a9002ae8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.S",
+      "sha256": "fecaaec0d8f8bb32045bb7c26cc5e9dd356093ae1570df0a804b8aa250cf85c7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.c",
+      "sha256": "baa70eb76b3bf731691158f33e040ea91945c95b0c862329fb2288e9990fa386"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.ld",
+      "sha256": "66e753bfe9e38507117ef2cfa32aa2afb737d2aa54cc1cf132ff0e78338d14f3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/Runtime.c",
+      "sha256": "e4967f6ec732935dc611bfe78e46dee8afa8cf5559e49f0c15c94df92fc30f35"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelGopLib.h",
+      "sha256": "af22b075d3c2a80d27eec61e9065c1bd5cc02b9e983515a19ded6568308032f8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelMemoryContractLib.h",
+      "sha256": "4a07557637d395d3705b293437212c78ff25b011cddb4d54c03511e48e86e515"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDiagnostic.h",
+      "sha256": "611a780c80f5e3aa11075fdd102fbcf5cb49d0c55e612f627d97139ce23013dd"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "29ac575f95ed9f74aa87e56f089ebab100a12db2ac4166edda264d8580735fc7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelFramebuffer.h",
+      "sha256": "c9649609f4877d644da88f2073a57bc1063d2aee29c7f19c07f9c7ef5fd9fc2b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelProbe.h",
+      "sha256": "69c853680ebba9448922888ed01c07c00ee37e82ee58dcd3128fae4b759084ab"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelWrite.h",
+      "sha256": "35db135ae64bf0649e9588854b9cafcce77f7c28a957e18d3d8ff33cb1b317fe"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/Debug.c",
+      "sha256": "042dd9b082c577f4f6f502f31de7462dcb6d6bd7d9b9aee74aac1d5b0b20a05f"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/RaphaelDiagnosticDebugLib.inf",
+      "sha256": "58fdbd7e26d4091360f988b973ba2346f7b9778e3d5598b99595a0323406948c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelFramebufferLib/Framebuffer.c",
+      "sha256": "c30cd49e7c3a27497df81843abd94bc9b5dce138fee957307d2568d38f93159a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelFramebufferLib/RaphaelFramebufferLib.inf",
+      "sha256": "898de441902c803ec3be11c07ea029d5fd09a4c55d01c540da0bbabe5b63d59a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelGopLib/Gop.c",
+      "sha256": "3ea0e2840c0318993f6d1e0e779bd06d0878a1c1d1e785d4f7a4be523e04ff77"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelGopLib/RaphaelGopLib.inf",
+      "sha256": "bf637ead90046428116bff1be02d5df382b335083b27036a11af49c59dc616a1"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelMemoryContractLib/RaphaelMemoryContractLib.c",
+      "sha256": "36eba30aec761b6e65664b8a7ab037915fa9bf8f14a255080f389a31dd77bc90"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelMemoryContractLib/RaphaelMemoryContractLib.inf",
+      "sha256": "43aaa098403f11e155b15e4012a702b2776b545f8bbf322f15da90e3dcc1cefa"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/MemoryContract.dsc",
+      "sha256": "2131d90d1f3a293c9657b2b6080d3cb3b47a30c5f75c8a914674979e1d235b11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelDiag.dsc",
+      "sha256": "ec7e5794b9b254e0e411544da34adcf8d9f23c4661454486910d1232d56f070c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelPkg.dec",
+      "sha256": "ac0266f05fa6fae687054b29bb79fd90af95f25f3ca8e2d3e9717e6386111c5b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+      "sha256": "7b3d5f1741a2d2039b194a7554e1182dc2e7fac534daea43d4ee632209d126d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GopRoute.c",
+      "sha256": "d528b3b59744ffdc7ecdcc699946fb58e9961fb0ae91bf1d93d6c52d795cffe9"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+      "sha256": "8f8abbf622d8b1d8d2dae531515fb1ce48b68cb451f9351a5bf6ad675e71730a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelWrite.c",
+      "sha256": "02ef5e428e8d240ce6c0ca7d20dd0f09af8b8e4d452cc98f45d41ffc95350795"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "84213de2ed766fafa5e38301adcac148a4e5bbeb514d7eb1ee19b53139f7189f"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.inf",
+      "sha256": "39dd31fe6e9e151228b12e5653fa9e770566f3b1107ebc5a2abec395adae02fb"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "219926b71272178b1e4b2d6493775d55e2aa5b9ab1d364e2af845e8e408b5110"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+      "sha256": "b1dad31d092633dd0170822f532f6d8da6b2c534824e9a306d4aa487e9b2aaf2"
+    }
+  ],
+  "checkpoints": [
+    {
+      "stage": 2,
+      "private_build": "evidence/private/sec-dxe-build/20261027T174926Z",
+      "private_readback": "evidence/private/sec-dxe-run/20261027T175050Z",
+      "qemu_report": "artifacts/sec-dxe-qemu/20261027T174723Z/report.json",
+      "source_input_count": 39,
+      "all_inputs_match_git_revision": true,
+      "qemu_inputs_match": true,
+      "firmware_sha256": "f31ec0003d0907f9af9dde0c194a3a7ee2a675b56ab658d673ec0b1320fbe212",
+      "image_sha256": "6367190a4c43be4f294ad61a5e4f84fd39ecc75d8b6b0d4d87fe37a987eca144"
+    },
+    {
+      "stage": 3,
+      "private_build": "evidence/private/sec-dxe-build/20261027T175302Z",
+      "private_readback": "evidence/private/sec-dxe-run/20261027T175506Z",
+      "qemu_report": "artifacts/sec-dxe-qemu/20261027T175137Z/report.json",
+      "source_input_count": 39,
+      "all_inputs_match_git_revision": true,
+      "qemu_inputs_match": true,
+      "firmware_sha256": "5122b0ced44fd293c1f6aa9cc54f8f05f74654e3e7233f920f41b49928059366",
+      "image_sha256": "ef8bb22a85706131a6300439941f2163d25bcc56fbb40701d68d7cbcc448a9a1"
+    },
+    {
+      "stage": 6,
+      "private_build": "evidence/private/sec-dxe-build/20261027T175752Z",
+      "private_readback": "evidence/private/sec-dxe-run/20261027T175959Z",
+      "qemu_report": "artifacts/sec-dxe-qemu/20261027T175516Z/report.json",
+      "source_input_count": 39,
+      "all_inputs_match_git_revision": true,
+      "qemu_inputs_match": true,
+      "firmware_sha256": "3abc8e8d362ca701cfc55a6cd07dbc86b939bd762c111b47229ffb316e047c47",
+      "image_sha256": "f2e7cd4ffd828fae24399798b1fc37eb85b0c43813f646ed21caa0c3d6065aad"
+    }
+  ]
+}

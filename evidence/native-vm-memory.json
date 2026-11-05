@@ -1,0 +1,12 @@
+{
+  "kind": "handset original vm_mem_bootstrap returned before atm_init",
+  "handset": "evidence/private/android-return-run/20261030T193111Z/report.json",
+  "host_build": "evidence/private/android-return-build/20261030T192934.393047Z-816lbss6/report.json",
+  "qemu": "artifacts/native-staging-qemu/20261030T192745.267195Z-2ci_azon/report.json",
+  "capacity_regression": "artifacts/native-fdt-capacity/20261030T192745.225034Z-9a18t0u6/report.json",
+  "handset_passed": true,
+  "checkpoint": "0xfffffff007336df0",
+  "vm_mem_bootstrap_body_executed": true,
+  "scheduler_initialized": false,
+  "desktop_verified": false
+}

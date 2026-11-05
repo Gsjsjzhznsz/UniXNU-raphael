@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "source_revision": "7265f5676851298000346176971658223c7a36fb",
+  "phases": [
+    {
+      "stage": 2,
+      "run": "evidence/private/sec-dxe-run/20261028T184704Z",
+      "run_report_sha256": "c6db790a587d56f81ddd1800526df4954a069c062efd011186c8441b16f1864b",
+      "build": "evidence/private/sec-dxe-build/20261028T184541Z",
+      "build_report_sha256": "7b53eb7c9c7046ea5ab0199525edd2bc202e3e95eb9e746c7aa41266f5558cc3",
+      "image_sha256": "827a44c756232a2811566d7e31136cfe019fa967e83d815890590e93fdf9a303",
+      "firmware_sha256": "fb0d6529a4fa26c7b310f9d0af3604a2333a1bc46fb544fd545a3bdc9893a201",
+      "log_sha256": "661391b53b16f8659f9fb32eee96949444d08709ed36d298d6d8681baded855b",
+      "verification": {
+        "base": 3221225472,
+        "bytes": 270532608,
+        "candidate": 3221241856,
+        "window_bytes": 268435456
+      }
+    },
+    {
+      "stage": 3,
+      "run": "evidence/private/sec-dxe-run/20261028T185040Z",
+      "run_report_sha256": "e3a22d7e9d6e56f76b31bcc480e9aee92d5c548c6873a837c1b215e824e69f5f",
+      "build": "evidence/private/sec-dxe-build/20261028T184926Z",
+      "build_report_sha256": "9052b734e648fedb2798f1ad49b4e1247f733f8c5841360ac9a8ccd1d5ca9cfc",
+      "image_sha256": "93e8d403a14121ea4b28390d07de349bb0e438db96a6a4a3cb2dee52993ed7c3",
+      "firmware_sha256": "effb6c3acf50c910aaf4b360bc2d7d9bd11ebf850ab27e3b2d33a4516681b0eb",
+      "log_sha256": "8b2bfd491a815636039223e3c417fff27e3e685de535afb1dfaccea7adf41409",
+      "verification": {
+        "base": 3221225472,
+        "bytes": 270532608,
+        "candidate": 3221241856,
+        "window_bytes": 268435456
+      }
+    },
+    {
+      "stage": 6,
+      "run": "evidence/private/sec-dxe-run/20261028T185509Z",
+      "run_report_sha256": "9129440a18ac41dea88b3b2c75380fe57c58f700cd86595e1e8b6a5af7eb042f",
+      "build": "evidence/private/sec-dxe-build/20261028T185353Z",
+      "build_report_sha256": "c5442dd685944a87741964284c9fba6a582b6fdae8fdf8c5a35d9f87be5f22fe",
+      "image_sha256": "17e05649bfa079a5bb8d7dfba513712b90dbc1f33634224f51c7512c49966d91",
+      "firmware_sha256": "97b7fd558949e225799227d624b353d5ee00c399b48fb7b6e5ab406f605ff792",
+      "log_sha256": "26b126ea54c0f3ea71133042dab11603e86910daf17d3898c74c51743dcd6f3e",
+      "verification": {
+        "passed": true,
+        "base": 3221225472,
+        "bytes": 270532608,
+        "candidate": 3221241856,
+        "window_bytes": 268435456,
+        "reserved_map_verified": true,
+        "released_map_verified": true,
+        "allocate_address_loader_code_verified": true,
+        "restored_map_verified": true,
+        "full_physical_ownership_proven": false,
+        "kernel_executed": false
+      }
+    }
+  ],
+  "qemu_report": "artifacts/kernel-window-uefi-qemu/20261028T184446.737030Z-kdsnse6s/report.json",
+  "qemu_report_sha256": "a4a479a04790692902b1a6cbebb28e06f0c9aee0316a3612d27e704dba0176cc",
+  "cleanup": "evidence/private/entry-probe-cleanup/20261028T185721Z/report.json",
+  "cleanup_sha256": "8d7a3801ffb039ea1161eb6a585d931272e0796f984c1b5f8e5cd8d1e234e294",
+  "verifier_sha256": "281e46729919016ac91c898d94a7e23dcb4b33ea6d26dacf75158db8ad3e2f37",
+  "handset_allocation_lifecycle_verified": true,
+  "handset_darwinboot_valid_kernel_executed": false,
+  "handset_xnu_executed": false,
+  "full_physical_ownership_proven": false,
+  "external_uart_verified": false,
+  "partition_writes_performed": false
+}

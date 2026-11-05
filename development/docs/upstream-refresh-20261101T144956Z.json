@@ -1,0 +1,28 @@
+{
+  "request": "Explicit upstream refresh",
+  "passed": true,
+  "active_sources_modified": false,
+  "path": "/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261101T144956Z/UniXNU",
+  "revision": "c96b29975645b711dc06bc435c3ad27321ce817c",
+  "pins": [
+    " a9a2cbb43b89d672e2921e19721a6438b738b17f drivers/Adreno740 (heads/main)",
+    " a0f0287be80a5d8aef5c6b97a6cab62129e152bd drivers/AdrenoMetal (a0f0287)",
+    " 42ff83e08b2265fe741d4adaf084bebe003452ba drivers/AppleKeyStoreState (heads/main)",
+    " 93a5030c5d983d0ef90f0fca93879d6e36ad1ba8 drivers/ArmCpu (heads/main)",
+    " 417ff95d6a6e8607ddea9309ec45c3bfd4a67c60 drivers/ArmDTPlatform (heads/main)",
+    " d1423a8bceac4be0478a93d9173587111c040084 drivers/ArmVirtPlatform (heads/main)",
+    " 3c75734014cdab0acd9541e88057b7606ee7ae08 drivers/DarwinBoot (heads/main)",
+    " 19ef3a75ad2c53da85b8d923553d922716fce377 drivers/GopFramebuffer (heads/main)",
+    " eac47baefe6a5d2368a70351e6ad1b6361bedbe2 drivers/QcomGeniSpi (heads/main)",
+    " 4be2d7eb05ef5a98126c91e0302c149140c0e3e1 drivers/RamBlock (heads/main)",
+    " 4a45326da5c2cd6fe6813d79ee43db20805628af drivers/SoftwareAES (heads/main)",
+    " 4e1013eb8c45077b57f8d38d61b389fe899ea1c3 drivers/VirtioMmioBlock (heads/main)",
+    " 70253216890b2afcaa6333948726f896f84fc757 drivers/VirtioMmioConsole (heads/main)",
+    " 20ad3d7aca14bd46aecab6335c780f5413fa054b kits/AdrenoFirmware (heads/main)",
+    " 282606b528b2595bc4274ea7490b62b323f35a5f kits/AdrenoPM4 (heads/main)",
+    " b356371a74cd158c2902f4886f373ebb0f833a36 kits/AirNir (heads/main)",
+    " 83969cd874503e65997ff7639f7dcf3d0a92cd17 kits/ArmSmmu4K (heads/main)",
+    " 974f043d0c71ba2e60331483a41c6c6d35274ee3 kits/VerifiedRoot (heads/main)",
+    " b74ed7c74a07f0eb5f81089c660905ecc4cabb7f kits/XnuPrelink (heads/main)"
+  ]
+}

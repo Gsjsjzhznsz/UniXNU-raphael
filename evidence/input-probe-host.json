@@ -1,0 +1,422 @@
+{
+  "passed": true,
+  "case_count": 40,
+  "cases": [
+    {
+      "name": "v5 full map and EE-preferred duplicate",
+      "passed": true,
+      "reads": 517,
+      "status": 4,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "future v5 minor",
+      "passed": true,
+      "reads": 517,
+      "status": 4,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "unsupported version 0x0",
+      "passed": true,
+      "reads": 1,
+      "status": 3,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "unsupported version 0x30000000",
+      "passed": true,
+      "reads": 1,
+      "status": 3,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "unsupported version 0x4fffffff",
+      "passed": true,
+      "reads": 1,
+      "status": 3,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "unsupported version 0x60000000",
+      "passed": true,
+      "reads": 1,
+      "status": 3,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "unsupported version 0xffffffff",
+      "passed": true,
+      "reads": 1,
+      "status": 3,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "empty mapping stops before target use",
+      "passed": true,
+      "reads": 513,
+      "status": 5,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "missing volume PPID",
+      "passed": true,
+      "reads": 514,
+      "status": 5,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "no owner match uses first PPID for read-only report",
+      "passed": true,
+      "reads": 517,
+      "status": 4,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "no compatible arbiter",
+      "passed": true,
+      "reads": 0,
+      "status": 1,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": true
+    },
+    {
+      "name": "disabled arbiter",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "missing EE",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "invalid EE",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "invalid channel",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "translated bus",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "wrong bus cells",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "bad region names",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "unterminated region names",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "truncated regions",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "unknown key controller",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "disabled key provider",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "wrong gpio cells",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "gpio zero rejected",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "gpio exceeds physical range",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "gpio disallowed physical number",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "unsupported polarity",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "missing GPIO phandle",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "truncated GPIO spec",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "oversized debounce",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "missing power key",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "wrong power PON type",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "missing volume down key",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "disabled PON",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "oversized APID table",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "no APID span",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "short owner region",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "short observer region",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "unaligned region",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    },
+    {
+      "name": "overlapping owner region",
+      "passed": true,
+      "reads": 0,
+      "status": 2,
+      "actual_c_executed": true,
+      "mocked_mmio": true,
+      "decoder_checked": false
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=undefined",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "-DFdtFirstSubnode=fdt_first_subnode",
+    "-DFdtNextSubnode=fdt_next_subnode",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/InputProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/input-probe-host/20261027T181708Z/input-probe.so"
+  ],
+  "undefined_behavior_sanitizer": true,
+  "guard_canaries_verified": true,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/InputProbe.c",
+      "sha256": "339950dfdfdcd423868c0847e4dd8cd506a249d1d849ff5c49dae7fd11783b0a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelInputProbe.h",
+      "sha256": "da8ff9e21efd14a7d1ef00212220b77f9f585dd054a28482258a25eb083d3cc6"
+    },
+    {
+      "path": "scripts/input_probe.py",
+      "sha256": "1d26150bbfa5b6fa1ebf5184ab89c4240ee9b50df779535a7575931ffd4c9024"
+    },
+    {
+      "path": "scripts/validate_input_probe.py",
+      "sha256": "47f6312f656fdae2c8d9b05d50095df8a094c6d66ad07856d4b3784516f2e68f"
+    }
+  ],
+  "fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5"
+}

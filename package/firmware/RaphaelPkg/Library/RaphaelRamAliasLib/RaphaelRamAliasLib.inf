@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+ INF_VERSION = 0x0001001B
+ BASE_NAME = RaphaelRamAliasLib
+ FILE_GUID = 784F45CD-172A-4777-B076-7A168FC379E2
+ MODULE_TYPE = BASE
+ VERSION_STRING = 0.1
+ LIBRARY_CLASS = RaphaelRamAliasLib
+[Sources]
+ RamAlias.c
+[Packages]
+ MdePkg/MdePkg.dec
+ RaphaelPkg/RaphaelPkg.dec

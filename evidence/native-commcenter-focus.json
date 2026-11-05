@@ -1,0 +1,54 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T165251Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T164740Z/20261104T170723Z-recovered-return",
+  "desktop_verified": false,
+  "user_observation": "progress bar or black screen; returned to Android",
+  "display": {
+    "clients": 5,
+    "validations": 2,
+    "rejected": 0,
+    "kicks": 2,
+    "frames": 2,
+    "blank_frames": 0,
+    "retired": 2,
+    "reject_reason": 0,
+    "transfer_status": 0,
+    "client_status": 0,
+    "power_status": 0,
+    "bytes": 20217600,
+    "nonblack": 2648
+  },
+  "watchdog": {
+    "stage": 4,
+    "opens": 1,
+    "closes": 0,
+    "checkins": 18,
+    "last_checkin_counter": 10549231098,
+    "monitoring": true,
+    "counter_frequency": 19200000,
+    "failures": 0,
+    "last_selector": 1,
+    "missed_checkin": false
+  },
+  "snapshot_completed": true,
+  "watchdog_panic_recorded": false,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "log": {
+    "valid_records": 375,
+    "bytes": 305200,
+    "dropped": 0,
+    "continuous_log_verified": true,
+    "service_snapshot_captured": true
+  },
+  "thread_findings": [
+    "SpringBoard main waits on LaunchServices database",
+    "lsd signature scan waits for original MIS synchronous reply; another thread in original low-priority page-fault I/O throttle",
+    "CommCenter main in CFRunLoop; sampled workers preempted in active REST/RBS paths, no fixed deadlock established"
+  ],
+  "next": "704MiB versus512MiB owned-memory contrast at same360s observer and420s pet, service policy unchanged"
+}

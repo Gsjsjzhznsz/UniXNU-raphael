@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "case_count": 26,
+  "cases": [
+    "map only synthetic observer memory in host process",
+    "real notify-wait event",
+    "actual driver installs protocol",
+    "published protocol and console",
+    "system table CRC refreshed",
+    "idle initializes filter",
+    "five millisecond throttle",
+    "debounce suppresses early key",
+    "physical up maps to SCAN_UP",
+    "long hold does not repeat",
+    "release debounced",
+    "down maps to SCAN_DOWN",
+    "signals own event",
+    "WaitForKey polls and signals real pending input",
+    "power maps to carriage return",
+    "press and release telemetry",
+    "null key rejected",
+    "Reset clears pending filter",
+    "held at reset suppressed",
+    "simultaneous chord suppressed",
+    "chord to single without release suppressed",
+    "full release rearms after chord",
+    "transaction failure becomes device error",
+    "sticky error prevents more hardware commands",
+    "no mapping proof refuses installation",
+    "disabled input refuses installation"
+  ],
+  "command": [
+    "gcc",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-unused-parameter",
+    "-Wno-misleading-indentation",
+    "-fshort-wchar",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/scripts/fixtures/input_dxe_host.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Library/RaphaelKeysLib/Keys.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/input-dxe-host/20261028T034933Z/input-host"
+  ],
+  "handset_executed": false,
+  "asan_ubsan": true,
+  "synthetic_observer_mmap_in_host_only": true,
+  "source_inputs": [
+    {
+      "path": "scripts/fixtures/input_dxe_host.c",
+      "sha256": "3c5a2f360d0810ec87077ff511523d4aafc5be6a15a0185f2d1655e112f45d11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelKeysLib/Keys.c",
+      "sha256": "1b0a7cbf8800d4dd6095a70debd422568334ba215cf8bc3768a8fbc25736b740"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PmicInputDxe/PmicInput.c",
+      "sha256": "c792410c2fa539d3e6bf8a50e6dc7e076112289d4aa837b655b51a511191e67c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelKeysLib.h",
+      "sha256": "662aff01678966145c0c432eb86dec3473b1bc1e4e632b5bcf2019bb6123b822"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDiagnostic.h",
+      "sha256": "89542d6903662dd4541822601086f97f580f831f91bcccea36992433582d0b0d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelInputDxe.h",
+      "sha256": "51278c456466eeea7fd770250dff18f146a224f9d4c26d77bd7fee358274c28b"
+    },
+    {
+      "path": "scripts/validate_input_dxe.py",
+      "sha256": "8c3162f167ea87207fbda27fbda8a4923b866179f4a498573ecf3c5df7916774"
+    }
+  ]
+}

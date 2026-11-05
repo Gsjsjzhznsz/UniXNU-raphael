@@ -1,0 +1,666 @@
+{
+  "evidence_kind": "runtime-Android-observation",
+  "live_fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "facts": {
+    "model": [
+      "RAPHAEL"
+    ],
+    "compatible": [
+      "qcom,sm8150-cdp",
+      "qcom,sm8150",
+      "qcom,cdp"
+    ],
+    "qcom_msm_id": [
+      339,
+      131072
+    ],
+    "qcom_board_id": [
+      40,
+      0
+    ],
+    "memory": [
+      {
+        "base": 2147483648,
+        "size": 1001390080,
+        "end_exclusive": 3148873728,
+        "base_hex": "0x80000000",
+        "size_hex": "0x3bb00000",
+        "source": "/memory:reg"
+      },
+      {
+        "base": 6442450944,
+        "size": 4294967296,
+        "end_exclusive": 10737418240,
+        "base_hex": "0x180000000",
+        "size_hex": "0x100000000",
+        "source": "/memory:reg"
+      },
+      {
+        "base": 3221225472,
+        "size": 3221225472,
+        "end_exclusive": 6442450944,
+        "base_hex": "0xc0000000",
+        "size_hex": "0xc0000000",
+        "source": "/memory:reg"
+      }
+    ],
+    "dt_described_ram_bytes": 8517582848,
+    "fixed_reservations": [
+      {
+        "base": 2238709760,
+        "size": 6291456,
+        "end_exclusive": 2245001216,
+        "base_hex": "0x85700000",
+        "size_hex": "0x600000",
+        "source": "/reserved-memory/hyp_mem:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2246049792,
+        "size": 1310720,
+        "end_exclusive": 2247360512,
+        "base_hex": "0x85e00000",
+        "size_hex": "0x140000",
+        "source": "/reserved-memory/xbl_aop_mem:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2248146944,
+        "size": 2097152,
+        "end_exclusive": 2250244096,
+        "base_hex": "0x86000000",
+        "size_hex": "0x200000",
+        "source": "/reserved-memory/smem:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2250244096,
+        "size": 89128960,
+        "end_exclusive": 2339373056,
+        "base_hex": "0x86200000",
+        "size_hex": "0x5500000",
+        "source": "/reserved-memory/removed_regions:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2339373056,
+        "size": 5242880,
+        "end_exclusive": 2344615936,
+        "base_hex": "0x8b700000",
+        "size_hex": "0x500000",
+        "source": "/reserved-memory/camera_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2344615936,
+        "size": 1572864,
+        "end_exclusive": 2346188800,
+        "base_hex": "0x8bc00000",
+        "size_hex": "0x180000",
+        "source": "/reserved-memory/pil_wlan_fw_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2346188800,
+        "size": 524288,
+        "end_exclusive": 2346713088,
+        "base_hex": "0x8bd80000",
+        "size_hex": "0x80000",
+        "source": "/reserved-memory/pil_npu_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2346713088,
+        "size": 35651584,
+        "end_exclusive": 2382364672,
+        "base_hex": "0x8be00000",
+        "size_hex": "0x2200000",
+        "source": "/reserved-memory/pil_adsp_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2382364672,
+        "size": 157286400,
+        "end_exclusive": 2539651072,
+        "base_hex": "0x8e000000",
+        "size_hex": "0x9600000",
+        "source": "/reserved-memory/modem_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2539651072,
+        "size": 5242880,
+        "end_exclusive": 2544893952,
+        "base_hex": "0x97600000",
+        "size_hex": "0x500000",
+        "source": "/reserved-memory/pil_video_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2544893952,
+        "size": 20971520,
+        "end_exclusive": 2565865472,
+        "base_hex": "0x97b00000",
+        "size_hex": "0x1400000",
+        "source": "/reserved-memory/pil_slpi_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2565865472,
+        "size": 65536,
+        "end_exclusive": 2565931008,
+        "base_hex": "0x98f00000",
+        "size_hex": "0x10000",
+        "source": "/reserved-memory/pil_ipa_fw_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2565931008,
+        "size": 20480,
+        "end_exclusive": 2565951488,
+        "base_hex": "0x98f10000",
+        "size_hex": "0x5000",
+        "source": "/reserved-memory/pil_ipa_gsi_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2565951488,
+        "size": 8192,
+        "end_exclusive": 2565959680,
+        "base_hex": "0x98f15000",
+        "size_hex": "0x2000",
+        "source": "/reserved-memory/pil_gpu_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2566914048,
+        "size": 1048576,
+        "end_exclusive": 2567962624,
+        "base_hex": "0x99000000",
+        "size_hex": "0x100000",
+        "source": "/reserved-memory/pil_spss_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2567962624,
+        "size": 20971520,
+        "end_exclusive": 2588934144,
+        "base_hex": "0x99100000",
+        "size_hex": "0x1400000",
+        "source": "/reserved-memory/cdsp_regions:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2654994432,
+        "size": 20971520,
+        "end_exclusive": 2675965952,
+        "base_hex": "0x9e400000",
+        "size_hex": "0x1400000",
+        "source": "/reserved-memory/qseecom_region:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2764046336,
+        "size": 62914560,
+        "end_exclusive": 2826960896,
+        "base_hex": "0xa4c00000",
+        "size_hex": "0x3c00000",
+        "source": "/reserved-memory/cdsp_sec_regions:reg",
+        "no_map": true,
+        "reusable": false
+      },
+      {
+        "base": 2617245696,
+        "size": 37748736,
+        "end_exclusive": 2654994432,
+        "base_hex": "0x9c000000",
+        "size_hex": "0x2400000",
+        "source": "/reserved-memory/cont_splash_region:reg",
+        "no_map": false,
+        "reusable": false
+      }
+    ],
+    "dynamic_pools": [
+      {
+        "node": "/reserved-memory/adsp_region",
+        "requested_bytes": 16777216,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/cdsp_region",
+        "requested_bytes": 4194304,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/user_contig_region",
+        "requested_bytes": 16777216,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/qseecom_ta_region",
+        "requested_bytes": 16777216,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/sp_region",
+        "requested_bytes": 8388608,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/secure_display_region",
+        "requested_bytes": 167772160,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/mem_dump_region",
+        "requested_bytes": 37748736,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      },
+      {
+        "node": "/reserved-memory/linux,cma",
+        "requested_bytes": 41943040,
+        "alloc_ranges": [
+          0,
+          0,
+          0,
+          4294967295
+        ],
+        "limitation": "Address selected by Linux, not specified by this property"
+      }
+    ],
+    "header_reservations": [],
+    "overlapping_reservations": [],
+    "cpus": [
+      {
+        "node": "/cpus/cpu@0",
+        "affinity": 0,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@100",
+        "affinity": 256,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@200",
+        "affinity": 512,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@300",
+        "affinity": 768,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@400",
+        "affinity": 1024,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@500",
+        "affinity": 1280,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@600",
+        "affinity": 1536,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      },
+      {
+        "node": "/cpus/cpu@700",
+        "affinity": 1792,
+        "compatible": [
+          "arm,armv8"
+        ],
+        "enabled": true,
+        "enable_method": [
+          "psci"
+        ]
+      }
+    ],
+    "peripherals": [
+      {
+        "node": "/soc/interrupt-controller@17a00000",
+        "compatible": [
+          "arm,gic-v3"
+        ],
+        "enabled": true,
+        "reg_cells": [
+          396361728,
+          65536,
+          396754944,
+          1048576
+        ],
+        "registers": [
+          {
+            "base": 396361728,
+            "size": 65536,
+            "end_exclusive": 396427264,
+            "base_hex": "0x17a00000",
+            "size_hex": "0x10000",
+            "source": "/soc/interrupt-controller@17a00000:reg"
+          },
+          {
+            "base": 396754944,
+            "size": 1048576,
+            "end_exclusive": 397803520,
+            "base_hex": "0x17a60000",
+            "size_hex": "0x100000",
+            "source": "/soc/interrupt-controller@17a00000:reg"
+          }
+        ],
+        "interrupts": [
+          1,
+          9,
+          4
+        ],
+        "redistributor-stride": [
+          0,
+          131072
+        ]
+      },
+      {
+        "node": "/soc/timer",
+        "compatible": [
+          "arm,armv8-timer"
+        ],
+        "enabled": true,
+        "interrupts": [
+          1,
+          1,
+          3848,
+          1,
+          2,
+          3848,
+          1,
+          3,
+          3848,
+          1,
+          0,
+          3848
+        ],
+        "clock-frequency": [
+          19200000
+        ]
+      },
+      {
+        "node": "/soc/ufshc@1d84000",
+        "compatible": [
+          "qcom,ufshc"
+        ],
+        "enabled": true,
+        "reg_cells": [
+          30949376,
+          9472,
+          30998528,
+          32768
+        ],
+        "registers": [
+          {
+            "base": 30949376,
+            "size": 9472,
+            "end_exclusive": 30958848,
+            "base_hex": "0x1d84000",
+            "size_hex": "0x2500",
+            "source": "/soc/ufshc@1d84000:reg"
+          },
+          {
+            "base": 30998528,
+            "size": 32768,
+            "end_exclusive": 31031296,
+            "base_hex": "0x1d90000",
+            "size_hex": "0x8000",
+            "source": "/soc/ufshc@1d84000:reg"
+          }
+        ],
+        "interrupts": [
+          0,
+          265,
+          0
+        ]
+      },
+      {
+        "node": "/soc/i2c@0xc88000/goodix@5d",
+        "compatible": [
+          "goodix,gt9889"
+        ],
+        "enabled": true,
+        "reg_cells": [
+          93
+        ],
+        "reg_interpretation": "Bus address without MMIO length; not translated",
+        "interrupts": [
+          122,
+          10240
+        ],
+        "goodix,panel-max-x": [
+          1079
+        ],
+        "goodix,panel-max-y": [
+          2339
+        ]
+      },
+      {
+        "node": "/soc/gpio_keys",
+        "compatible": [
+          "gpio-keys"
+        ],
+        "enabled": true
+      },
+      {
+        "node": "/vendor/bt_wcn3990",
+        "compatible": [
+          "qca,wcn3990"
+        ],
+        "enabled": true
+      }
+    ],
+    "malformed_properties": [
+      {
+        "node": "/firmware/android/fstab/ifaa",
+        "property": "compatible",
+        "error": "ifaa: compatible requires terminated strings"
+      }
+    ]
+  },
+  "allocation_policy": "NOT AN APPROVED UEFI ALLOCATION MAP",
+  "linux_system_ram": [
+    {
+      "base": 2147483648,
+      "size": 91226112,
+      "end_exclusive": 2238709760,
+      "base_hex": "0x80000000",
+      "size_hex": "0x5700000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 2245001216,
+      "size": 1048576,
+      "end_exclusive": 2246049792,
+      "base_hex": "0x85d00000",
+      "size_hex": "0x100000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 2247360512,
+      "size": 786432,
+      "end_exclusive": 2248146944,
+      "base_hex": "0x85f40000",
+      "size_hex": "0xc0000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 2565959680,
+      "size": 954368,
+      "end_exclusive": 2566914048,
+      "base_hex": "0x98f17000",
+      "size_hex": "0xe9000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 2588934144,
+      "size": 66060288,
+      "end_exclusive": 2654994432,
+      "base_hex": "0x9a500000",
+      "size_hex": "0x3f00000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 2675965952,
+      "size": 88080384,
+      "end_exclusive": 2764046336,
+      "base_hex": "0x9f800000",
+      "size_hex": "0x5400000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 2826960896,
+      "size": 321912832,
+      "end_exclusive": 3148873728,
+      "base_hex": "0xa8800000",
+      "size_hex": "0x13300000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 3221225472,
+      "size": 5368709120,
+      "end_exclusive": 8589934592,
+      "base_hex": "0xc0000000",
+      "size_hex": "0x140000000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 8589934592,
+      "size": 536870912,
+      "end_exclusive": 9126805504,
+      "base_hex": "0x200000000",
+      "size_hex": "0x20000000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 9126805504,
+      "size": 536870912,
+      "end_exclusive": 9663676416,
+      "base_hex": "0x220000000",
+      "size_hex": "0x20000000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 9663676416,
+      "size": 536870912,
+      "end_exclusive": 10200547328,
+      "base_hex": "0x240000000",
+      "size_hex": "0x20000000",
+      "source": "/proc/iomem:System RAM"
+    },
+    {
+      "base": 10200547328,
+      "size": 536870912,
+      "end_exclusive": 10737418240,
+      "base_hex": "0x260000000",
+      "size_hex": "0x20000000",
+      "source": "/proc/iomem:System RAM"
+    }
+  ]
+}

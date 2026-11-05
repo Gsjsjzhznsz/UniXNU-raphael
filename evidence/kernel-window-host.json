@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checks": 2104,
+  "randomized_discrete_models": 256,
+  "audit": "UniXNU-raphael/evidence/kernel-window-audit.json",
+  "audit_sha256": "ecfa5e308065946bc7f10690e974e0fa3667b0fe83f978c95b442c9271f48dd8",
+  "source_inputs": [
+    {
+      "path": "scripts/audit_kernel_window.py",
+      "sha256": "eacd4f228b1c785f93e4807e97c21ec4f9665673cce72b5ecfd9fb1bfc9953a4"
+    },
+    {
+      "path": "scripts/validate_kernel_window.py",
+      "sha256": "728c73a2014fada3dc36216d9726b094b973425c09faf1c08dc45f5cb40e6fed"
+    }
+  ],
+  "hardware_memory_access_verified": false,
+  "allocator_enabled": false
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-28T17:10:33.456799+00:00",
+  "remote_checked_utc": "2026-10-28T17:08:08.623170+00:00",
+  "local_date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "remote": "https://github.com/UniXNU/UniXNU.git",
+  "actions": [
+    "git fetch --prune origin",
+    "git ls-remote --symref origin HEAD refs/heads/*",
+    "verify raw Git blobs and executable modes in active main, candidate and all candidate submodules"
+  ],
+  "active_revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+  "candidate_branch": "feat/ipados27-gpu-parity",
+  "candidate_revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+  "candidate_checkout": "sources/UniXNU-gpu-parity-9fe4855",
+  "remote_changed_since_previous_refresh": false,
+  "divergence": {
+    "main_only": 7,
+    "candidate_only": 30
+  },
+  "source_integrity": {
+    "repositories": 21,
+    "files": 2504,
+    "mismatches": 0,
+    "all_worktrees_clean": true,
+    "manifest": "artifacts/upstream-refresh/reconfirm-20261028T170807.170662Z/source-integrity.json",
+    "sha256": "4fbf1ca4f992c2419676313eedfde570497d163375a1367cfed0c9df91268e76"
+  },
+  "prior_validation": {
+    "record": "docs/upstream-refresh-20261029.json",
+    "record_sha256": "08c85c0c4fa119a28f3d2677459435b520aa5e16ff3a4149d5ba16ce6046f031",
+    "recorded_utc": "2026-10-28T16:35:57.084136+00:00",
+    "unit_tests_passed": 113,
+    "unit_tests_skipped": 1,
+    "actual_c_groups_passed": 2,
+    "bridge_patches_applied": 37,
+    "artifact_files_hash_rechecked": 11,
+    "tests_rerun_this_reconfirmation": false,
+    "reason": "Exact candidate Git objects and all source bytes are unchanged; retain existing validation with its original timestamp."
+  },
+  "preserved_local_wip": [
+    {
+      "path": "scripts/build_sec_dxe.py",
+      "sha256": "e9a483595d54e92c57325e8df1bd6f8698d4c6d1dc089473faa45ca6d8266be0"
+    },
+    {
+      "path": "scripts/fixtures/sec_dxe_kernel.c",
+      "sha256": "618f8bc306c513431e472fd7d9df468d04af16ae709dd77b58fa378936bef1b5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.dsc",
+      "sha256": "e99980de563fa769743ab14304e05191ec04e8d366868359eb4adf786edc06eb"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelPkg.dec",
+      "sha256": "05582042906e703aa14433ad89b21ccb4a579301da60fa648793dadae562f468"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "12844ce4d3068ca7c2780fc5d0353c73de2b4c0348f3a750de221fb461f203c9"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.inf",
+      "sha256": "1b34561297e7b44669be68d977571c524dd411f70eb529f586a74ceca35b567f"
+    },
+    {
+      "path": "scripts/ram_alias_probe.py",
+      "sha256": "a66767ad844ee360608e781440f41cc8b33a4fd9c86161a7393b9d19f6bcc02b"
+    },
+    {
+      "path": "scripts/run_ram_alias_qemu.py",
+      "sha256": "5e1ca6b25d848e20dc51fdee3c0fd2801cbd6cb758dc5331f4cc39d656c485a3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamAliasNative.h",
+      "sha256": "8e9cae464a87035c8e5353c4858cba44d232b1fb2c94c2fc51bf2c85ab94456a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamAliasAdapter.c",
+      "sha256": "0edbeacfd71b8969556e8b0f382289bbfc91b1082c641c63275ec01796c4c4fa"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamAliasCheckpoint.S",
+      "sha256": "f1f1588623ce2d8ded8b4b482cda6bef7d90aab921a83f838776ce5b437cf9ff"
+    }
+  ],
+  "source_lock_unchanged": true,
+  "source_lock_sha256": "f4bd0d974a1b1541247cf66718062efcf093b5102cb754e3125ed895989813ab",
+  "port_revision": "e33c8db5568c8c753a786050ac644b57d577a886",
+  "candidate_activated": false,
+  "candidate_firmware_built": false,
+  "candidate_image_inspected": false,
+  "candidate_qemu_executed": false,
+  "candidate_handset_executed": false,
+  "phone_commands_this_reconfirmation": false,
+  "backup_modified": false,
+  "evidence_directory": "artifacts/upstream-refresh/reconfirm-20261028T170807.170662Z",
+  "fetch_log_sha256": "854487c478b085145e766a92f9d29bc68ab54d22b5ec389af0f41c296ca6ce09",
+  "remote_log_sha256": "9c12808d9d1a7e9e03fc99abe667624c3783bda3d1bc03a9ce1531052a47db4d"
+}

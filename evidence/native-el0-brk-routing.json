@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "handset_report": "evidence/private/android-return-run/20261101T202022Z/report.json",
+  "full_checkpoint_verified": true,
+  "service_snapshot_captured": true,
+  "android_return_seconds": 463.8081488839998,
+  "android_cleanup_verified": true,
+  "framebuffer_restoration_verified": true,
+  "fix": "Remove lower-EL bridge hook; original XNU user exception handling retained; EL1 diagnostic/panic bridge retained",
+  "build_report": "artifacts/native-bootstrap-attempt/20261101T201432Z/report.json",
+  "prelink": "artifacts/desktop-prelink/20261101T201705Z/inspection.json",
+  "el0_vector_fixture": "/home/guo/work/raphael-fresh/artifacts/native-el0-vector/20261101T201801Z/report.json",
+  "el0_vector_fixture_passed": true,
+  "rejected_prior": {
+    "report": "evidence/private/android-return-run/20261101T200315Z/report.json",
+    "esr": "0xf2000001",
+    "vector_slot": 8,
+    "full_checkpoint_verified": false,
+    "reason": "Ordinary EL0 BRK1 intercepted by compiled diagnostic bridge before service-observer deadline",
+    "android_return_seconds": 452.77017346499997
+  },
+  "display_frames": 0,
+  "desktop_verified": false
+}

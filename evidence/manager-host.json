@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "case_count": 18,
+  "cases": [
+    {
+      "name": "actual full UniXNURun with physical TimerArch and 8 C ABI assertions",
+      "passed": true
+    },
+    {
+      "name": "reject version",
+      "passed": true
+    },
+    {
+      "name": "reject status",
+      "passed": true
+    },
+    {
+      "name": "reject start_counter",
+      "passed": true
+    },
+    {
+      "name": "reject end_counter",
+      "passed": true
+    },
+    {
+      "name": "reject frequency",
+      "passed": true
+    },
+    {
+      "name": "reject timeout",
+      "passed": true
+    },
+    {
+      "name": "reject short",
+      "passed": true
+    },
+    {
+      "name": "reject long",
+      "passed": true
+    },
+    {
+      "name": "reject wrong phase",
+      "passed": true
+    },
+    {
+      "name": "reject wrong frequency",
+      "passed": true
+    },
+    {
+      "name": "reject FAT validation failed",
+      "passed": true
+    },
+    {
+      "name": "reject manager invocation missing",
+      "passed": true
+    },
+    {
+      "name": "reject FAT data changed",
+      "passed": true
+    },
+    {
+      "name": "reject countdown endpoint 112499999",
+      "passed": true
+    },
+    {
+      "name": "accept countdown endpoint 112500000",
+      "passed": true
+    },
+    {
+      "name": "accept countdown endpoint 312500000",
+      "passed": true
+    },
+    {
+      "name": "reject countdown endpoint 312500001",
+      "passed": true
+    }
+  ],
+  "manual_key_test": false,
+  "actual_c_abi_assertions": 8,
+  "command": [
+    "gcc",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/artifacts/manager-host/20261028T082037.336152Z-ik596fzd/abi.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/manager-host/20261028T082037.336152Z-ik596fzd/abi"
+  ],
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPhysicalTimer.h",
+      "sha256": "c8fb8ab909a8c3cb428f102634500b0907c5065edccb7f1cbf70c65845be12dd"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/PayloadTest.c",
+      "sha256": "290168bfa1e979f012b4d4728fe70db3bea13f6210ede7137bd7493480907ab8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    }
+  ],
+  "decoder_sha256": "e325cb37960a6f18d7e9c51a27efea2a4f75bbc83b47f7c52b70f577e084e586",
+  "runner_sha256": "f7c0210029638b209851f11b2707f68812eeced0a163d77d6e38889a7e70291b",
+  "handset_executed": false
+}

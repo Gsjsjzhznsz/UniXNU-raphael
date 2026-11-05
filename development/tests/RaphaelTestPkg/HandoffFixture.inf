@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = HandoffFixture
+  FILE_GUID = 95105B9C-AF68-47B7-9C5F-E802482832DF
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = HandoffFixtureEntry
+[Sources]
+  HandoffFixture.c
+[Packages]
+  RaphaelTestPkg/RaphaelTestPkg.dec
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+[LibraryClasses]
+  CacheMaintenanceLib
+  PrintLib
+  BaseLib
+  BaseMemoryLib
+  DevicePathLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UniXNULib
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gUniXNULoaderProtocolGuid
+[Guids]
+  gEfiEventExitBootServicesGuid

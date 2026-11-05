@@ -1,0 +1,101 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T173412Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T173009Z/20261104T175544Z-recovered-return",
+  "desktop_verified": false,
+  "owned_memory_mib": 704,
+  "display": {
+    "clients": 5,
+    "validations": 2300,
+    "rejected": 0,
+    "kicks": 2300,
+    "frames": 2299,
+    "blank_frames": 0,
+    "retired": 2299,
+    "reject_reason": 0,
+    "transfer_status": 0,
+    "client_status": 0,
+    "power_status": 0,
+    "bytes": 23240131200,
+    "nonblack": 2648
+  },
+  "watchdog": {
+    "stage": 4,
+    "opens": 1,
+    "closes": 0,
+    "checkins": 55,
+    "last_checkin_counter": 17510592756,
+    "monitoring": true,
+    "counter_frequency": 19200000,
+    "failures": 0,
+    "last_selector": 1,
+    "missed_checkin": false
+  },
+  "budget": {
+    "hardware_seconds": 20,
+    "budget_ms": 780000,
+    "observer_seconds": 720.0,
+    "start_counter": 3777473406,
+    "capture_counter": 17603227371,
+    "counter_frequency": 19200000,
+    "elapsed_ms": 720091.35234375,
+    "observer_deadline_reached": true,
+    "pets": 1324,
+    "last_pet_counter": 17594945209,
+    "status": 1
+  },
+  "vm_first": [
+    {
+      "free": 140308,
+      "active": 0,
+      "inactive": 0,
+      "wired": 39858
+    }
+  ],
+  "vm_last": [
+    {
+      "free": 840,
+      "active": 13805,
+      "inactive": 12941,
+      "wired": 106042
+    },
+    {
+      "free": 739,
+      "active": 13733,
+      "inactive": 13042,
+      "wired": 108569
+    },
+    {
+      "free": 801,
+      "active": 13569,
+      "inactive": 12986,
+      "wired": 108598
+    }
+  ],
+  "ram_data_lines": [
+    "RPH RAM DATA resident=173408256 reads=2283 writes=4576 failures=0 zero_write_bytes=1519616",
+    "RPH RAM DATA resident=173531136 reads=2289 writes=4579 failures=0 zero_write_bytes=1519616",
+    "RPH RAM DATA resident=173555712 reads=2298 writes=4585 failures=0 zero_write_bytes=1519616"
+  ],
+  "ufs_read_lines": [
+    "RPH UFS READ requests=616658 bytes=5164774400 failures=0 commands=616932 blocks=1279187",
+    "RPH UFS READ requests=618276 bytes=5172884480 failures=0 commands=618550 blocks=1281273",
+    "RPH UFS READ requests=619911 bytes=5180777472 failures=0 commands=620185 blocks=1283285"
+  ],
+  "pressure_lines": [],
+  "snapshot_completed": true,
+  "watchdog_panic_reason": null,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "log": {
+    "valid_records": 727,
+    "bytes": 358407,
+    "dropped": 0,
+    "continuous_log_verified": true,
+    "service_snapshot_captured": true
+  },
+  "thread_findings": "SpringBoard waits for LS database seeding. lsd99 thread492 waits for MobileContainerManager synchronous set_code_signing_info_for_identifier reply. Two containermanager processes64/92 exist but neither received a thread slot. Scan location advanced versus360s; no fixed deadlock proven."
+}

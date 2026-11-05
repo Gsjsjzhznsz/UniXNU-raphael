@@ -1,0 +1,15 @@
+{
+  "kind": "handset original kernel_bootstrap prefix to vm_mem_bootstrap entry",
+  "implementation": [
+    "scripts/native_early.py",
+    "scripts/native_platform.py",
+    "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/NativeEarlyTest.c"
+  ],
+  "qemu": "artifacts/native-staging-qemu/20261030T190428.879606Z-617s9p_i/report.json",
+  "host_build": "evidence/private/android-return-build/20261030T190651.333101Z-j26kwxle/report.json",
+  "handset": "evidence/private/android-return-run/20261030T190948Z/report.json",
+  "handset_passed": true,
+  "checkpoint": "0xfffffff007a0e6fc",
+  "vm_mem_bootstrap_body_executed": false,
+  "desktop_verified": false
+}

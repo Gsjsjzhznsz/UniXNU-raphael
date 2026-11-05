@@ -1,0 +1,39 @@
+{
+  "recorded_utc": "2026-10-28T16:03:26.810748+00:00",
+  "assessment": "Design candidate only; no new SEC build or added backup storage",
+  "source_build": "evidence/private/sec-dxe-build/20261028T144222Z",
+  "source_fd_sha256": "2a77e1665d368f769e8fc7e12b09ca04cc086b80b956c5d9b28506813bf7f04d",
+  "source_fd_inspection_sha256": "7ccf7b3cf000a6a65d2bb908e9b00fc002a3d49e39a6c7824dc74a322f46bcbb",
+  "source_layout_sha256": "80c8f5d2f28aa6cd008bdd4268846a2898f225d9ac97646f849a81e8d0c8e301",
+  "source_sec_map_sha256": "f3890dff42132d517e58ea378d5507a83f616f783a707ca1ddf062c82ffcc3ac",
+  "fd_bytes": 3145728,
+  "last_file_end": 718764,
+  "aligned_erased_tail_start": 718768,
+  "verified_erased_tail_bytes": 2426960,
+  "source_sec_data_section": {
+    "name": ".data",
+    "rva": 65536,
+    "raw_offset": 65536,
+    "bytes": 8192,
+    "virtual_bytes": 5064,
+    "flags": 3221225536
+  },
+  "source_page_backup_rva": 65536,
+  "source_page_backup_bytes": 4096,
+  "proposed_alias_backup_bytes": 1048576,
+  "raw_tail_minus_proposed_backup_bytes": 1378384,
+  "changed_fd_budget": false,
+  "extra_physical_range_selected": false,
+  "storage_implemented": false,
+  "assumptions": [
+    "Materializing the maximum alias backup inside existing SEC .data may fit the existing 3 MiB FD.",
+    "The arithmetic excludes new code, alignment and downstream module changes; only a rebuilt/reinspected FD can qualify the actual layout."
+  ],
+  "next_checks": [
+    "Use linker-placed, file-backed .data storage within existing FD guards; no invented physical address.",
+    "Rebuild and inspect full FD, PE file/raw extents, backup/state symbols and disjoint ranges.",
+    "Validate normal and partial-write synchronous-exception recovery in QEMU before handset use."
+  ],
+  "handset_executed": false,
+  "allocator_changed": false
+}

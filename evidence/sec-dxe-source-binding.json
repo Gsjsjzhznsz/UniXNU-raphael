@@ -1,0 +1,35 @@
+{
+  "firmware_source_revision": "1009c7b7751b185ca6e5ac822c60711214df4381",
+  "bindings": [
+    {
+      "handoff": "sec-stage2-handoff.json",
+      "private_build": "evidence/private/sec-dxe-build/20261027T150738Z",
+      "firmware_sha256": "7b2e22f73bcf85be656b70f392bca7e1dbe7bc1bc95d8f4010fdf3575253a464",
+      "boot_image_sha256": "2f4405658ed601c1822aa073bdfed3f666c5f92986d669214e9e247ae2e07613",
+      "matched_firmware_input_files": 22,
+      "stage": 2
+    },
+    {
+      "handoff": "sec-stage3-handoff.json",
+      "private_build": "evidence/private/sec-dxe-build/20261027T151245Z",
+      "firmware_sha256": "49d8911c8aaa0451955b325f6bff224c325b3f0eba4ef867b2443738228837a2",
+      "boot_image_sha256": "04cf3e224be289d137dbc88204ac3534c3faa369f2cd90d13d07a46f9234ee0a",
+      "matched_firmware_input_files": 22,
+      "stage": 3
+    },
+    {
+      "handoff": "sec-dxe-handoff.json",
+      "private_build": "evidence/private/sec-dxe-build/20261027T151602Z",
+      "firmware_sha256": "d1e06a1cb88332c2a9e6643df800123e0bb657d5f5f03ddb604d03cb8da05491",
+      "boot_image_sha256": "8af2fb0ef3b063128678a091f441ed17fd924a57fd41cdc1066bb78c10d78833",
+      "matched_firmware_input_files": 22,
+      "stage": 6
+    }
+  ],
+  "method": "Post-build check: each recorded package input matches its exact blob in this local Git commit",
+  "limits": [
+    "Association covers the 22 recorded firmware package inputs",
+    "Early failed builds have their own reconstructed snapshots and are not bound to this revision",
+    "Private inputs remain local; no image is included in Git"
+  ]
+}

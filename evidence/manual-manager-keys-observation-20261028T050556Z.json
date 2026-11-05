@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "source_revision": "513c3b825f5a7e68a396811f2ee2e814714b30bc",
+  "attempt": "20261028T050556Z",
+  "machine_observation": "UniXNU-raphael/evidence/manager-keys-observation-20261028T050556Z.json",
+  "machine_observation_sha256": "5191f42177400606f34e880e75319683a9be66636298002d5a78e19e0eb4bba2",
+  "human_statement": "\u90fd\u6b63\u5e38",
+  "human_visibility_verified": true,
+  "human_up_down_power_verified": true,
+  "same_run_log_sequence": [
+    {
+      "key": "up",
+      "ticks": 24593319,
+      "selected": 1
+    },
+    {
+      "key": "down",
+      "ticks": 47825303,
+      "selected": 0
+    },
+    {
+      "key": "enter",
+      "ticks": 80273303,
+      "selected": 0
+    }
+  ],
+  "physical_keys_in_complete_manager_verified": true,
+  "darwin_boot_executed": false,
+  "xnu_executed": false
+}

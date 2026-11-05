@@ -1,0 +1,14 @@
+{
+  "kind": "handset original PE_init_iokit returned before IRQ unmask",
+  "handset": "evidence/private/android-return-run/20261030T201516Z/report.json",
+  "host_build": "evidence/private/android-return-build/20261030T201338.711926Z-qoti6d3l/report.json",
+  "qemu": "artifacts/native-staging-qemu/20261030T201243.646306Z-bqrqp8zx/report.json",
+  "handset_passed": true,
+  "checkpoint": "0xfffffff0072d4624",
+  "delta_bytes": 448908,
+  "gic_changed_words": 0,
+  "iokit_initialization_returned": true,
+  "cpu_driver_configured": false,
+  "normal_xnu_irq_verified": false,
+  "desktop_verified": false
+}

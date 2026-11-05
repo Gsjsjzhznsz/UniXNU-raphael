@@ -1,0 +1,77 @@
+{
+  "request": "User explicit one-time refresh of three parity branches",
+  "active_sources_modified": false,
+  "projects": [
+    {
+      "name": "Adreno740",
+      "url": "https://github.com/UniXNU/Adreno740.git",
+      "branch": "feat/ipados27-gpu-parity",
+      "path": "artifacts/upstream-candidates/20261031T163925Z/Adreno740",
+      "command": [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--single-branch",
+        "--branch",
+        "feat/ipados27-gpu-parity",
+        "https://github.com/UniXNU/Adreno740.git",
+        "/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261031T163925Z/Adreno740"
+      ],
+      "returncode": 0,
+      "revision": "b8956437c7a2feac58dccd6b29948d1b89fcc1df",
+      "commit": "2026-11-01T00:20:19+08:00\nfeat(gpu): CP preemption between two rings (A1)",
+      "previous_candidate_revision": "d9f0cc831d815d11231d43ab484cd49e6d85ff06",
+      "diff_file": "artifacts/upstream-candidates/20261031T163925Z/Adreno740-changes.diff",
+      "tracked_worktree_clean": true,
+      "hardware_qualified_on_raphael": false
+    },
+    {
+      "name": "AdrenoMetal",
+      "url": "https://github.com/UniXNU/AdrenoMetal.git",
+      "branch": "feat/ipados27-gpu-parity",
+      "path": "artifacts/upstream-candidates/20261031T163925Z/AdrenoMetal",
+      "command": [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--single-branch",
+        "--branch",
+        "feat/ipados27-gpu-parity",
+        "https://github.com/UniXNU/AdrenoMetal.git",
+        "/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261031T163925Z/AdrenoMetal"
+      ],
+      "returncode": 0,
+      "revision": "fc5ca0b274bec1c26b3a1a1ee2b911da33e15bd2",
+      "commit": "2026-11-01T00:20:19+08:00\nfeat(gpu): per-task priority forwarding and pass reporter",
+      "previous_candidate_revision": "de38c6f507b5183d55cb3676607e4a0c939364b6",
+      "diff_file": "artifacts/upstream-candidates/20261031T163925Z/AdrenoMetal-changes.diff",
+      "tracked_worktree_clean": true,
+      "hardware_qualified_on_raphael": false
+    },
+    {
+      "name": "GopFramebuffer",
+      "url": "https://github.com/UniXNU/GopFramebuffer.git",
+      "branch": "feat/ipados27-gpu-parity",
+      "path": "artifacts/upstream-candidates/20261031T163925Z/GopFramebuffer",
+      "command": [
+        "git",
+        "clone",
+        "--filter=blob:none",
+        "--single-branch",
+        "--branch",
+        "feat/ipados27-gpu-parity",
+        "https://github.com/UniXNU/GopFramebuffer.git",
+        "/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261031T163925Z/GopFramebuffer"
+      ],
+      "returncode": 0,
+      "revision": "74ff4c4165c0d84bbca82b1ec732677d2d62a98b",
+      "commit": "2026-10-31T02:00:59+08:00\nfeat(display): count waits of 8 ms or more for the GPU",
+      "previous_candidate_revision": "b6e53e7b09bdc6218e590d2e0afec275ac15be06",
+      "diff_file": "artifacts/upstream-candidates/20261031T163925Z/GopFramebuffer-changes.diff",
+      "tracked_worktree_clean": true,
+      "hardware_qualified_on_raphael": false
+    }
+  ],
+  "active_unixnu_revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+  "integration_decision": "Candidate pins only. A740-specific ring/preemption not enabled on SM8150/Adreno640; existing phone UFS experiment unchanged."
+}

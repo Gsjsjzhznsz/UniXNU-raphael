@@ -1,0 +1,19 @@
+{
+  "status": "built_stopped_at_user_request",
+  "host_build_passed": true,
+  "qemu_passed": true,
+  "qemu_pass_count": 39,
+  "handset_image_build_passed": true,
+  "handset_image_structure_checked": true,
+  "handset_boot_attempted": false,
+  "desktop_verified": false,
+  "memory_mib": 704,
+  "observer_ms": 1800000,
+  "absolute_pet_budget_ms": 1860000,
+  "hardware_watchdog_seconds": 20,
+  "watchdog_contract_version": 6,
+  "ls_progress_interval_seconds": 120,
+  "ls_progress_sample_cap": 16,
+  "stop_reason": "User requested stop after build; no run.py or handset launch executed.",
+  "evidence_kind": "source-maintained build result summary; original host artifacts are private"
+}

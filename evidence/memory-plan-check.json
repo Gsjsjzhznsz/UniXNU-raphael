@@ -1,0 +1,135 @@
+{
+  "kind": "design geometry and C validator tests only; not ownership proof",
+  "passed": true,
+  "cases": [
+    {
+      "name": "candidate geometry within sourced guards",
+      "expected": 0,
+      "actual": 0,
+      "passed": true,
+      "rejected_index": null
+    },
+    {
+      "name": "entry base drift rejected",
+      "expected": 2,
+      "actual": 2,
+      "passed": true,
+      "rejected_index": null
+    },
+    {
+      "name": "loaded Image extent overflow rejected",
+      "expected": 3,
+      "actual": 3,
+      "passed": true,
+      "rejected_index": null
+    },
+    {
+      "name": "unaligned entry bridge rejected",
+      "expected": 4,
+      "actual": 4,
+      "passed": true,
+      "rejected_index": 0
+    },
+    {
+      "name": "arena outside declared Image rejected",
+      "expected": 5,
+      "actual": 5,
+      "passed": true,
+      "rejected_index": 0
+    },
+    {
+      "name": "RAM hole rejected",
+      "expected": 6,
+      "actual": 6,
+      "passed": true,
+      "rejected_index": 0
+    },
+    {
+      "name": "source FDT collision rejected",
+      "expected": 7,
+      "actual": 7,
+      "passed": true,
+      "rejected_index": 1
+    },
+    {
+      "name": "FD and SEC stack collision rejected",
+      "expected": 8,
+      "actual": 8,
+      "passed": true,
+      "rejected_index": 2
+    },
+    {
+      "name": "fallback Android kernel protected",
+      "expected": 7,
+      "actual": 7,
+      "passed": true,
+      "rejected_index": 1
+    }
+  ],
+  "source_sha256": "36eba30aec761b6e65664b8a7ab037915fa9bf8f14a255080f389a31dd77bc90",
+  "evidence_sha256": "75137a234114c72f6315d29be21f4cfdbf8ed1719aaa897560eaa3284ec824b9",
+  "requested_image_base": 2148007936,
+  "requested_image_size": 78118912,
+  "requested_image_end": 2226126848,
+  "regions": [
+    {
+      "name": "entry bridge",
+      "base": 2204762112,
+      "length": 65536,
+      "alignment": 65536,
+      "source": "entry-handoff + original Image header + explicit design budget"
+    },
+    {
+      "name": "new FD capacity",
+      "base": 2204827648,
+      "length": 3145728,
+      "alignment": 65536,
+      "source": "entry-handoff + original Image header + explicit design budget"
+    },
+    {
+      "name": "new SEC stack",
+      "base": 2207973376,
+      "length": 262144,
+      "alignment": 4096,
+      "source": "entry-handoff + original Image header + explicit design budget"
+    },
+    {
+      "name": "new DXE arena including page tables",
+      "base": 2208235520,
+      "length": 16777216,
+      "alignment": 4096,
+      "source": "entry-handoff + original Image header + explicit design budget"
+    },
+    {
+      "name": "new FDT copy capacity",
+      "base": 2225012736,
+      "length": 1114112,
+      "alignment": 4096,
+      "source": "entry-handoff + original Image header + explicit design budget"
+    }
+  ],
+  "original_fdt_guard_bytes": 2097152,
+  "fdt_guard_source": "Qualcomm BootLinux.h DT_SIZE_2MB; interface reference, not exact source match",
+  "original_initrd": {
+    "base": 2238259200,
+    "end": 2238703600
+  },
+  "excluded_known_probe_reservations": [
+    {
+      "base": 2204762112,
+      "size": 1081344,
+      "end_exclusive": 2205843456,
+      "base_hex": "0x836a0000",
+      "size_hex": "0x108000",
+      "source": "FDT header reservation table"
+    }
+  ],
+  "boot_enabled": false,
+  "complete_uefi_platform_built": false,
+  "full_arena_handset_verified": false,
+  "unresolved": [
+    "Runtime uefiplatLA.cfg override and full original firmware memory ownership",
+    "Expanded Image download accepted; zero-padded tail was not tested for writes/readback",
+    "C validator caller must supply complete live protected ranges at real entry"
+  ]
+}

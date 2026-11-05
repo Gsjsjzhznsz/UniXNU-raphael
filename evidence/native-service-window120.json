@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "handset_report": "evidence/private/android-return-run/20261101T175421Z/report.json",
+  "qemu_report": "artifacts/native-staging-qemu/20261101T175243.084299Z-bi0t9er5/report.json",
+  "qemu_rootless_scope": "Explicit40s fixture cutoff before original missing-root timeout; no handset120s coverage",
+  "changed_variable": "Physical observation120s and absolute diagnostic pet budget180s; hardware20s unchanged",
+  "observer_elapsed_ms": 120097.98270833334,
+  "watchdog_pets": 235,
+  "root_mounted": true,
+  "syscall_entries": 204,
+  "ufs_bytes": 1489957888,
+  "ufs_failures": 0,
+  "signature": {
+    "cs_native4k_full_blocks": 90230,
+    "cs_native4k_page_checks": 108,
+    "cs_native4k_ready_blobs": 27,
+    "cs_native4k_read_ticks": 2165522068,
+    "cs_native4k_hash_ticks": 107928317,
+    "cs_native4k_bytes": 1479376896,
+    "cs_validate_page_bad_hash": 0,
+    "cs_validate_page_no_hash": 0
+  },
+  "cleanup_verified": true,
+  "launchd_main_verified": false,
+  "desktop_verified": false,
+  "next": "Measure owned Normal-NC DMA mapping with real per-page AT/PAR guards; same120s window"
+}

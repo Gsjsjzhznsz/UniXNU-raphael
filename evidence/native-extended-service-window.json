@@ -1,0 +1,617 @@
+{
+  "cpu_ledgers": [
+    {
+      "pid": 98,
+      "name": "lsd",
+      "tid": 472,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 61833172,
+        "credit_ticks": 62112889,
+        "debit_ticks": 279717,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 549048785833,
+        "actions": 32,
+        "sample_counter": 17593152779
+      }
+    },
+    {
+      "pid": 98,
+      "name": "lsd",
+      "tid": 473,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 1643710,
+        "credit_ticks": 74813172,
+        "debit_ticks": 73169462,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 26287067395,
+        "actions": 32,
+        "sample_counter": 17593153013
+      }
+    },
+    {
+      "pid": 98,
+      "name": "lsd",
+      "tid": 602,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 218327,
+        "credit_ticks": 218327,
+        "debit_ticks": 0,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 524760924635,
+        "actions": 32,
+        "sample_counter": 17593153207
+      }
+    },
+    {
+      "pid": 98,
+      "name": "lsd",
+      "tid": 603,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 254777,
+        "credit_ticks": 254777,
+        "debit_ticks": 0,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 524752545625,
+        "actions": 32,
+        "sample_counter": 17593153365
+      }
+    },
+    {
+      "pid": 98,
+      "name": "lsd",
+      "tid": 1557,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 11290,
+        "credit_ticks": 11869,
+        "debit_ticks": 579,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 140501628802,
+        "actions": 32,
+        "sample_counter": 17593153441
+      }
+    },
+    {
+      "pid": 26,
+      "name": "SpringBoard",
+      "tid": 249,
+      "ledger": {
+        "options": 66,
+        "limit_ticks": 518400,
+        "balance_ticks": 204274,
+        "credit_ticks": 134584997,
+        "debit_ticks": 134380723,
+        "refill_period_ns": 30000000,
+        "since_last_refill_ns": 510491913125,
+        "actions": 16,
+        "sample_counter": 17593145034
+      }
+    },
+    {
+      "pid": 26,
+      "name": "SpringBoard",
+      "tid": 446,
+      "ledger": {
+        "options": 2,
+        "limit_ticks": 9223372036854775807,
+        "balance_ticks": 647911,
+        "credit_ticks": 647911,
+        "debit_ticks": 0,
+        "refill_period_ns": 0,
+        "since_last_refill_ns": 916309647916,
+        "actions": 32,
+        "sample_counter": 17593145252
+      }
+    },
+    {
+      "pid": 26,
+      "name": "SpringBoard",
+      "tid": 687,
+      "ledger": {
+        "options": 2,
+        "limit_ticks": 9223372036854775807,
+        "balance_ticks": 257223,
+        "credit_ticks": 257223,
+        "debit_ticks": 0,
+        "refill_period_ns": 0,
+        "since_last_refill_ns": 916309657760,
+        "actions": 32,
+        "sample_counter": 17593145441
+      }
+    },
+    {
+      "pid": 26,
+      "name": "SpringBoard",
+      "tid": 688,
+      "ledger": {
+        "options": 2,
+        "limit_ticks": 9223372036854775807,
+        "balance_ticks": 11850489,
+        "credit_ticks": 11850489,
+        "debit_ticks": 0,
+        "refill_period_ns": 0,
+        "since_last_refill_ns": 916309661145,
+        "actions": 32,
+        "sample_counter": 17593145506
+      }
+    },
+    {
+      "pid": 128,
+      "name": "com.apple.migrat",
+      "tid": 740,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 210922,
+        "credit_ticks": 1249335,
+        "debit_ticks": 1038413,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 190995719010,
+        "actions": 32,
+        "sample_counter": 17593156200
+      }
+    },
+    {
+      "pid": 128,
+      "name": "com.apple.migrat",
+      "tid": 741,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 3935,
+        "credit_ticks": 2005554,
+        "debit_ticks": 2001619,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 191160279114,
+        "actions": 32,
+        "sample_counter": 17593156266
+      }
+    },
+    {
+      "pid": 128,
+      "name": "com.apple.migrat",
+      "tid": 742,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 2146436,
+        "credit_ticks": 2146436,
+        "debit_ticks": 0,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 501415024895,
+        "actions": 32,
+        "sample_counter": 17593156495
+      }
+    },
+    {
+      "pid": 64,
+      "name": "containermanager",
+      "tid": 348,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 3335,
+        "credit_ticks": 2552696,
+        "debit_ticks": 2549361,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 342221497604,
+        "actions": 32,
+        "sample_counter": 17593150343
+      }
+    },
+    {
+      "pid": 64,
+      "name": "containermanager",
+      "tid": 358,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 207971,
+        "credit_ticks": 19557963,
+        "debit_ticks": 19349992,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 146848240468,
+        "actions": 32,
+        "sample_counter": 17593150424
+      }
+    },
+    {
+      "pid": 92,
+      "name": "containermanager",
+      "tid": 376,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 3595,
+        "credit_ticks": 670306,
+        "debit_ticks": 666711,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 337424572343,
+        "actions": 32,
+        "sample_counter": 17593152206
+      }
+    },
+    {
+      "pid": 92,
+      "name": "containermanager",
+      "tid": 411,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 576709,
+        "credit_ticks": 5321684,
+        "debit_ticks": 4744975,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 191961777968,
+        "actions": 32,
+        "sample_counter": 17593152279
+      }
+    },
+    {
+      "pid": 153,
+      "name": "online-auth-agen",
+      "tid": 1035,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 1543,
+        "credit_ticks": 1543,
+        "debit_ticks": 0,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 383098893281,
+        "actions": 32,
+        "sample_counter": 17593157104
+      }
+    },
+    {
+      "pid": 153,
+      "name": "online-auth-agen",
+      "tid": 1037,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 962608,
+        "credit_ticks": 963253,
+        "debit_ticks": 645,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 373827756458,
+        "actions": 32,
+        "sample_counter": 17593157195
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 480,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 6048000000,
+        "balance_ticks": 9874296,
+        "credit_ticks": 30973021,
+        "debit_ticks": 21098725,
+        "refill_period_ns": 315000000000,
+        "since_last_refill_ns": 190800709114,
+        "actions": 32,
+        "sample_counter": 17593153800
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 481,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 6048000000,
+        "balance_ticks": 3204846,
+        "credit_ticks": 7452835,
+        "debit_ticks": 4247989,
+        "refill_period_ns": 315000000000,
+        "since_last_refill_ns": 506172968229,
+        "actions": 32,
+        "sample_counter": 17593154024
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 482,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 156341,
+        "credit_ticks": 156341,
+        "debit_ticks": 0,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 547583991145,
+        "actions": 32,
+        "sample_counter": 17593154252
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 501,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 99924,
+        "credit_ticks": 99924,
+        "debit_ticks": 0,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 543366396770,
+        "actions": 32,
+        "sample_counter": 17593154485
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 514,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 6048000000,
+        "balance_ticks": 77568,
+        "credit_ticks": 96489,
+        "debit_ticks": 18921,
+        "refill_period_ns": 315000000000,
+        "since_last_refill_ns": 506081394947,
+        "actions": 32,
+        "sample_counter": 17593154699
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 890,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 6048000000,
+        "balance_ticks": 765855,
+        "credit_ticks": 765855,
+        "debit_ticks": 0,
+        "refill_period_ns": 315000000000,
+        "since_last_refill_ns": 477721284791,
+        "actions": 32,
+        "sample_counter": 17593154929
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 1415,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 6048000000,
+        "balance_ticks": 199464,
+        "credit_ticks": 199464,
+        "debit_ticks": 0,
+        "refill_period_ns": 315000000000,
+        "since_last_refill_ns": 261415223541,
+        "actions": 32,
+        "sample_counter": 17593155158
+      }
+    },
+    {
+      "pid": 99,
+      "name": "com.apple.datami",
+      "tid": 1417,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 6048000000,
+        "balance_ticks": 1013364,
+        "credit_ticks": 1013364,
+        "debit_ticks": 0,
+        "refill_period_ns": 315000000000,
+        "since_last_refill_ns": 260006896197,
+        "actions": 32,
+        "sample_counter": 17593155227
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 331,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 20719,
+        "credit_ticks": 96014624,
+        "debit_ticks": 95993905,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 9880525312,
+        "actions": 32,
+        "sample_counter": 17593148730
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 460,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 1139328,
+        "credit_ticks": 1141741,
+        "debit_ticks": 2413,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 550858737031,
+        "actions": 32,
+        "sample_counter": 17593148966
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 461,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 88026,
+        "credit_ticks": 4115124,
+        "debit_ticks": 4027098,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 9375475937,
+        "actions": 32,
+        "sample_counter": 17593149033
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 466,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 428163,
+        "credit_ticks": 428530,
+        "debit_ticks": 367,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 547665028802,
+        "actions": 32,
+        "sample_counter": 17593149229
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 493,
+      "ledger": {
+        "options": 34,
+        "limit_ticks": 1728000000,
+        "balance_ticks": 46545,
+        "credit_ticks": 8250694,
+        "debit_ticks": 8204149,
+        "refill_period_ns": 180000000000,
+        "since_last_refill_ns": 3450440781,
+        "actions": 32,
+        "sample_counter": 17593149339
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 497,
+      "ledger": {
+        "options": 66,
+        "limit_ticks": 518400,
+        "balance_ticks": 308277,
+        "credit_ticks": 6141852980,
+        "debit_ticks": 6141544703,
+        "refill_period_ns": 30000000,
+        "since_last_refill_ns": 42575364,
+        "actions": 16,
+        "sample_counter": 17593149491
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 673,
+      "ledger": {
+        "options": 66,
+        "limit_ticks": 518400,
+        "balance_ticks": 3592,
+        "credit_ticks": 104928,
+        "debit_ticks": 101336,
+        "refill_period_ns": 30000000,
+        "since_last_refill_ns": 479919123072,
+        "actions": 16,
+        "sample_counter": 17593149652
+      }
+    },
+    {
+      "pid": 57,
+      "name": "backboardd",
+      "tid": 674,
+      "ledger": {
+        "options": 66,
+        "limit_ticks": 518400,
+        "balance_ticks": 2909,
+        "credit_ticks": 32402,
+        "debit_ticks": 29493,
+        "refill_period_ns": 30000000,
+        "since_last_refill_ns": 479918672291,
+        "actions": 16,
+        "sample_counter": 17593149823
+      }
+    }
+  ],
+  "watchdog_budget": {
+    "hardware_seconds": 20,
+    "budget_ms": 780000,
+    "observer_seconds": 720.0,
+    "start_counter": 3767203778,
+    "capture_counter": 17593158464,
+    "counter_frequency": 19200000,
+    "elapsed_ms": 720101.8065625,
+    "observer_deadline_reached": true,
+    "pets": 1333,
+    "last_pet_counter": 17584177261,
+    "status": 1
+  },
+  "root": {
+    "polls": 6331,
+    "observer_limit_polls": 7200
+  },
+  "extraction": "evidence/private/ufs-console-log/20261104T092059Z/20261104T094534Z-manual-recovery",
+  "valid_records": 731,
+  "display": {
+    "clients": 5,
+    "validations": 2108,
+    "rejected": 0,
+    "kicks": 2108,
+    "frames": 2107,
+    "blank_frames": 0,
+    "retired": 2107,
+    "reject_reason": 0,
+    "transfer_status": 0,
+    "client_status": 0,
+    "power_status": 0,
+    "bytes": 21299241600,
+    "nonblack": 2648
+  },
+  "watchdog": {
+    "stage": 4,
+    "opens": 1,
+    "closes": 0,
+    "checkins": 58,
+    "last_checkin_counter": 17579512743,
+    "monitoring": true,
+    "counter_frequency": 19200000,
+    "failures": 0,
+    "last_selector": 1,
+    "missed_checkin": false
+  },
+  "ram_final": {
+    "resident": 28450816,
+    "reads": 2308,
+    "writes": 4093,
+    "failures": 0,
+    "zero_write_bytes": 229376
+  },
+  "events": [],
+  "vm_final": {
+    "free": 817,
+    "active": 7158,
+    "inactive": 6636,
+    "wired": 72470
+  },
+  "handset_run": "evidence/private/android-return-run/20261104T092714Z",
+  "dropped": 0,
+  "log_bytes": 358933,
+  "desktop_verified": false,
+  "full_checkpoint_verified": false,
+  "onsite": "loading bar then black screen; manual recovery to Android",
+  "springboard_wait": "LaunchServices database seeding",
+  "lsd_wait": "Synchronous IconServices invalidate cache reply",
+  "renderer": "Continued rendering through720s; observed ledger below limit; persistent CPU-ledger stall not supported"
+}

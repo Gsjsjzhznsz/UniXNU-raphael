@@ -1,0 +1,471 @@
+{
+  "passed": true,
+  "case_count": 74,
+  "cases": [
+    {
+      "name": "all identity WB RO translations and unchanged contents",
+      "passed": true,
+      "status": 3,
+      "queries": 256,
+      "reads": 256
+    },
+    {
+      "name": "bad pre-map version",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map status",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map reason",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map base",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map bytes",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map stride",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map requested",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map attempted",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map completed",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map active_address",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map nonzero",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map current_el",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map sctlr",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map daif",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map ram_ranges",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map policy_guards",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map entry_guards",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map mmfr0",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map physical_bits",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad pre-map start_counter",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad mapped entry CurrentEl",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad mapped entry Sctlr",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad mapped entry Daif",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad mapped entry Frequency",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad mapped entry Mmfr0",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "bad mapped entry PhysicalBits",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "null-before",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "null-entry",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "null-translate",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "null-read",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "null-counter",
+      "passed": true,
+      "status": 4,
+      "queries": 0,
+      "reads": 0
+    },
+    {
+      "name": "query-fail",
+      "passed": true,
+      "status": 5,
+      "queries": 1,
+      "reads": 0
+    },
+    {
+      "name": "read-fault",
+      "passed": true,
+      "status": 5,
+      "queries": 1,
+      "reads": 0
+    },
+    {
+      "name": "wrong-pa",
+      "passed": true,
+      "status": 5,
+      "queries": 1,
+      "reads": 0
+    },
+    {
+      "name": "wrong-attribute",
+      "passed": true,
+      "status": 5,
+      "queries": 1,
+      "reads": 0
+    },
+    {
+      "name": "writable",
+      "passed": true,
+      "status": 5,
+      "queries": 1,
+      "reads": 0
+    },
+    {
+      "name": "par-damaged",
+      "passed": true,
+      "status": 5,
+      "queries": 1,
+      "reads": 0
+    },
+    {
+      "name": "par-inconsistent",
+      "passed": true,
+      "status": 5,
+      "queries": 2,
+      "reads": 1
+    },
+    {
+      "name": "changed sparse values rejected",
+      "passed": true,
+      "status": 8,
+      "queries": 256,
+      "reads": 256
+    },
+    {
+      "name": "read callback fails 1",
+      "passed": true,
+      "status": 7,
+      "queries": 1,
+      "reads": 1
+    },
+    {
+      "name": "read callback fails 128",
+      "passed": true,
+      "status": 7,
+      "queries": 128,
+      "reads": 128
+    },
+    {
+      "name": "read callback fails 256",
+      "passed": true,
+      "status": 7,
+      "queries": 256,
+      "reads": 256
+    },
+    {
+      "name": "100ms deadline",
+      "passed": true,
+      "status": 6,
+      "queries": 1,
+      "reads": 1
+    },
+    {
+      "name": "counter wrap",
+      "passed": true,
+      "status": 6,
+      "queries": 1,
+      "reads": 1
+    },
+    {
+      "name": "wire rejects version",
+      "passed": true
+    },
+    {
+      "name": "wire rejects status",
+      "passed": true
+    },
+    {
+      "name": "wire rejects reason",
+      "passed": true
+    },
+    {
+      "name": "wire rejects base",
+      "passed": true
+    },
+    {
+      "name": "wire rejects bytes",
+      "passed": true
+    },
+    {
+      "name": "wire rejects stride",
+      "passed": true
+    },
+    {
+      "name": "wire rejects requested",
+      "passed": true
+    },
+    {
+      "name": "wire rejects attempted",
+      "passed": true
+    },
+    {
+      "name": "wire rejects completed",
+      "passed": true
+    },
+    {
+      "name": "wire rejects active_address",
+      "passed": true
+    },
+    {
+      "name": "wire rejects before_digest",
+      "passed": true
+    },
+    {
+      "name": "wire rejects digest",
+      "passed": true
+    },
+    {
+      "name": "wire rejects nonzero",
+      "passed": true
+    },
+    {
+      "name": "wire rejects start_counter",
+      "passed": true
+    },
+    {
+      "name": "wire rejects end_counter",
+      "passed": true
+    },
+    {
+      "name": "wire rejects frequency",
+      "passed": true
+    },
+    {
+      "name": "wire rejects current_el",
+      "passed": true
+    },
+    {
+      "name": "wire rejects sctlr",
+      "passed": true
+    },
+    {
+      "name": "wire rejects daif",
+      "passed": true
+    },
+    {
+      "name": "wire rejects read_translations",
+      "passed": true
+    },
+    {
+      "name": "wire rejects write_denied",
+      "passed": true
+    },
+    {
+      "name": "wire rejects par_preserved",
+      "passed": true
+    },
+    {
+      "name": "wire rejects first_read_par",
+      "passed": true
+    },
+    {
+      "name": "wire rejects last_read_par",
+      "passed": true
+    },
+    {
+      "name": "wire rejects last_write_par",
+      "passed": true
+    },
+    {
+      "name": "wire rejects original_par",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restored_par",
+      "passed": true
+    },
+    {
+      "name": "wire size",
+      "passed": true
+    },
+    {
+      "name": "wire size",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/RamMapped.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/20261028T141051.747685Z-0ns6apie/mapped.so"
+  ],
+  "undefined_behavior_sanitizer": true,
+  "guard_canaries_verified": true,
+  "wire_bytes": 216,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamMapped.c",
+      "sha256": "fef848c7d695291f7ea472048d0ae91ff8adc9ef83dfe604c34f609248fabde3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamMapped.h",
+      "sha256": "4b94ce2b5d3b781d92998d2863ca2cbda778ac1b4d4d2534ba7835185d11e490"
+    }
+  ],
+  "decoder_sha256": "27ebb42f2fffd29759c6c7b2119bb2fb51444e49acc9cde9c1790140423e900b",
+  "runner_sha256": "b165210179ce71a7545c218046df7340474548ef7b6d10cbebe41edf45f3e32b",
+  "handset_executed": false
+}

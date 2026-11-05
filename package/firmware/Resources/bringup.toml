@@ -1,0 +1,37 @@
+schema_version = 1
+device = "raphael"
+soc = "sm8150"
+phase = "handset-entry-probe-verified; full-UEFI-pending"
+observations = "../../UniXNU-raphael/evidence/hardware-observations.json"
+
+[layout]
+# No default addresses. These are not substitutes for a bootloader-entry memory map.
+fd_base = "unknown"
+fd_size = "unknown"
+stack_base = "unknown"
+stack_size = "unknown"
+heap_base = "unknown"
+heap_size = "unknown"
+page_tables_base = "unknown"
+page_tables_size = "unknown"
+bootloader_handoff = "unknown"
+framebuffer_base = "unknown"
+framebuffer_stride = "unknown"
+framebuffer_format = "unknown"
+
+[verification]
+source_implemented = "protocol diagnostics, ARM64 entry probe, observed DTS and memory contract library"
+host_compiled = true
+emulator_executed = true
+handset_uefi_executed = false
+handset_gop_verified = false
+handset_keys_verified = false
+darwinboot_handoff_verified = false
+xnu_entered = false
+handset_entry_probe_executed = true
+larger_uefi_arena_executed = false
+
+[entry_evidence]
+record = "../../UniXNU-raphael/evidence/entry-handoff.json"
+design_plan = "memory-plan.toml"
+design_plan_boot_enabled = false

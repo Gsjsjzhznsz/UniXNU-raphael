@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelFramebufferLib
+  FILE_GUID = 89DAFA1A-F30A-4995-A64E-835E9BA955CA
+  MODULE_TYPE = BASE
+  LIBRARY_CLASS = RaphaelFramebufferLib
+[Sources]
+  Framebuffer.c
+[Packages]
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec

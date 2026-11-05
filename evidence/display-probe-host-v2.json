@@ -1,0 +1,201 @@
+{
+  "kind": "host execution of actual C display collector; mocked hardware only",
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/display-probe-host/20261027T154813Z/display-probe.so"
+  ],
+  "passed": true,
+  "cases": [
+    {
+      "name": "powered source: exact bounded read sequence",
+      "passed": true,
+      "status": 7,
+      "reads": 149,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "GCC enabled HWCG idle: clock-off may be set",
+      "passed": true,
+      "status": 7,
+      "reads": 149,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "GCC HWCG cannot bypass software disable",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 0 blocks all dependent reads",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 1 blocks all dependent reads",
+      "passed": true,
+      "status": 4,
+      "reads": 2,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 2 blocks all dependent reads",
+      "passed": true,
+      "status": 5,
+      "reads": 3,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 3 blocks all dependent reads",
+      "passed": true,
+      "status": 6,
+      "reads": 4,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "clock enable bit required even if CLK_OFF clear",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "out of bounds pipe: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "duplicate pipes: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unaligned pipe: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "too many pipes: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "truncated cells: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "short source register region: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "nonidentity bus mapping: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "identity window too short: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unexpected cell geometry: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "disabled display node: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unsupported compatible: no reads",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    }
+  ],
+  "case_count": 19,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+      "sha256": "ca6541264125763fec1c67b0f6126ef13fa8756dbca0b92ad586db6aaa14ef5b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "44c166cfd0ea4a5c58bf9949286db0b8b10c3e3f24ae87ffba785a2b379028e0"
+    }
+  ],
+  "input_fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "shared_object_sha256": "44fb3532698b7192b7d24dfa15ae1eefcfb6f26f95e441220b48da670395f3da",
+  "handset_executed": false
+}

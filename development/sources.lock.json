@@ -1,0 +1,89 @@
+{
+  "recorded_utc": "2026-10-27T15:05:44.182402+00:00",
+  "sources": [
+    {
+      "name": "UniXNU",
+      "remote": "https://github.com/UniXNU/UniXNU.git",
+      "revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+      "tracked_changes": "",
+      "initialized_submodules": [
+        {
+          "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+          "path": "drivers/DarwinBoot"
+        }
+      ],
+      "previous_revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+      "update_evidence": "docs/upstream-refresh-20261030.json",
+      "recorded_utc": "20261030T065339Z"
+    },
+    {
+      "name": "Mu-Silicium",
+      "remote": "https://github.com/Project-Silicium/Mu-Silicium.git",
+      "revision": "4cba43c90e02cdbefbcd9fcdbda33d2328deaec0",
+      "tracked_changes": "",
+      "initialized_submodules": []
+    },
+    {
+      "name": "mu_basecore",
+      "remote": "https://github.com/microsoft/mu_basecore.git",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "tracked_changes": "",
+      "initialized_submodules": [
+        {
+          "revision": "e230f474b87134e8c6c85b630084c612057f253e",
+          "path": "BaseTools/Source/C/BrotliCompress/brotli"
+        },
+        {
+          "revision": "e230f474b87134e8c6c85b630084c612057f253e",
+          "path": "MdeModulePkg/Library/BrotliCustomDecompressLib/brotli"
+        },
+        {
+          "revision": "cfff805481bdea27f900c32698171286542b8d3c",
+          "path": "MdePkg/Library/BaseFdtLib/libfdt"
+        },
+        {
+          "revision": "370b5944c046bab043dd8b133727b2135af7747a",
+          "path": "MdePkg/Library/MipiSysTLib/mipisyst"
+        }
+      ]
+    },
+    {
+      "name": "Xiaomi_Kernel_OpenSource",
+      "remote": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource.git",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "tracked_changes": "",
+      "initialized_submodules": []
+    },
+    {
+      "name": "abl-reference",
+      "remote": "https://github.com/arter97/android_bootable_bootloader_edk2.git",
+      "revision": "fd752ab1b6d81ffaec0a9e86ed2b74e7eac9f4fe",
+      "tracked_changes": "",
+      "initialized_submodules": []
+    },
+    {
+      "name": "apple-xnu-abi",
+      "remote": "https://github.com/apple-oss-distributions/xnu.git",
+      "revision": "1031c584a5e37aff177559b9f69dbd3c8c3fd30a",
+      "tag": "xnu-10002.1.13",
+      "tag_object": "a653a70d861014a544bffa506779088605bbabac",
+      "recorded_utc": "2026-10-27T21:29:14.828726+00:00",
+      "tracked_changes": "",
+      "initialized_submodules": [],
+      "sparse_checkout": [
+        "pexpert/pexpert/arm64",
+        "pexpert/pexpert/arm"
+      ],
+      "purpose": "Primary boot_args layout reference only; OS profile not selected and XNU not built"
+    },
+    {
+      "name": "apple-xnu-native",
+      "remote": "https://github.com/apple-oss-distributions/xnu.git",
+      "revision": "d8b80295118ef25ac3a784134bcf95cd8e88109f",
+      "tag": "xnu-10063.141.1",
+      "recorded_utc": "2026-10-28T04:09:07.558840+00:00",
+      "tracked_changes": "",
+      "purpose": "Native kernel development source matching fixed generic OS profile; no handset kernel execution or OS qualification"
+    }
+  ]
+}

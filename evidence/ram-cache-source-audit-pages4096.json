@@ -1,0 +1,224 @@
+{
+  "passed": true,
+  "ram_cache_write_pages": 4096,
+  "qemu_reports": {
+    "2": {
+      "path": "artifacts/sec-dxe-qemu/20261028T113822.122515Z-6zes7zc2/report.json",
+      "sha256": "138c5d26b0981827f38c5d741de63981942f6e7197ce9db876423f47c90b846c"
+    },
+    "3": {
+      "path": "artifacts/sec-dxe-qemu/20261028T113931.007723Z-iqn2ua_9/report.json",
+      "sha256": "2180cc8557e8ef93f9a9117128b7f2379c7b800837e5a042b0c13786b38c8464"
+    }
+  },
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamRead.c",
+      "sha256": "f8429b13d0742a7769197e9bcd74985a334d5621ef082a0853b2dcd3941d25d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamReadAdapter.c",
+      "sha256": "10c500b5864393e6c54976f8b13e3fa6ff52d54f2e2084f38a9919554e4ae9c2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamMapped.c",
+      "sha256": "fef848c7d695291f7ea472048d0ae91ff8adc9ef83dfe604c34f609248fabde3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamMappedAdapter.c",
+      "sha256": "d0db78458d7fe724b44c6bb81dd476af7ffc38d7c54f713edc7ff58015ed9d5b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamCacheAdapter.c",
+      "sha256": "85fc94b2242006d4c3d73a173d35b8e97e6432fc8af04dd7ade1900f2647fa7b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "1940ecadc6d60ce63ea2af7658535c13ab0aaee0c4b11e07ae940678118e2983"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "88f6163e953a322d14983b9d76bb6c15860d165e1caee912002e6e0da90559e8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamWriteCheckpoint.S",
+      "sha256": "a9549c4d0c90985a685a4f83c6d5e86180b93786914f67fa6d6961a82e0f301d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamRead.h",
+      "sha256": "cfded6b7ff5a3e03bce41a85bd1acaff358d8546478da96b64fc640a8b5cf078"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamMapped.h",
+      "sha256": "4b94ce2b5d3b781d92998d2863ca2cbda778ac1b4d4d2534ba7835185d11e490"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelRamWriteLib.h",
+      "sha256": "37d59c6ae900897114d0f7a30182d2d0c6986588163027a57298c266dad35044"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelRamCacheLib.h",
+      "sha256": "20e89350b1d6d9d7debc4f3e92f6ae16911b7c2d4a80b34b9902fa1168685cd9"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelRamWriteLib/RamWrite.c",
+      "sha256": "8858c1caece0da74fd51c6a87469d1e59bf13c4e0aac99780580ca62d68f99d0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelRamWriteLib/RamCache.c",
+      "sha256": "79cd6f00679878598df720c5513fe62923b2a6cce1bedae6c868caf31880baf7"
+    }
+  ],
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "UefiCpuPkg/Include/Library/ArmMmuLib.h",
+      "sha256": "4571fbc4375caa5e753a2921d84eab6b28165813d6bb2247be7ca5fb8c009adb"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c",
+      "sha256": "bf3be06245f00c6d1b24b94eb0068f607387780966297070836799fea2aa3521"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/AArch64/AArch64Mmu.h",
+      "sha256": "bedbced47f3b95be2a3d286a773979837872e0d6d1207970b692500cdd1993b6"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/Library/CacheMaintenanceLib.h",
+      "sha256": "4e2e565014953aafb83f4f586f4e2a0ea89aa2e6404d92ec03dd9b2c1f62582c"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Library/ArmCacheMaintenanceLib/ArmCacheMaintenanceLib.c",
+      "sha256": "023a564661f545cd71457291252cb01b2ae6d5585dc4adb421af829f195a378b"
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Library/ArmLib/AArch64/AArch64Support.S",
+      "sha256": "6e32fb4c582a345d0b2ea18ccfd40b632548c766a7b3c4cbaa68a9f93a710a2b"
+    }
+  ],
+  "mapped_load": {
+    "function_rva": 22408,
+    "load_rva": 22436,
+    "load_fd_offset": 30628,
+    "load_opcode": 4181721736,
+    "no_store_through_candidate": true,
+    "only_store_targets": [
+      "own stack",
+      "output pointer"
+    ],
+    "barriers": [
+      "dsb sy",
+      "dmb sy"
+    ],
+    "instruction_count": 14
+  },
+  "store": {
+    "function_rva": 23632,
+    "store_rva": 23664,
+    "store_opcode": 4177527476,
+    "single_64bit_store_only": true,
+    "no_load_from_candidate": true,
+    "barriers": [
+      "dsb sy before store",
+      "dsb sy after store"
+    ],
+    "checkpoint_write_attempt": 257,
+    "checkpoint_is_nop": true,
+    "instruction_count": 19
+  },
+  "cache_instructions": {
+    "sync_rva": 23708,
+    "sync_bytes": 144,
+    "linked_range_walker_rva": 32976,
+    "cache_line_operation_rva": 46252,
+    "dc_civac_opcode": 3574300192,
+    "dsb_sy_opcode": 3573759903,
+    "cache_line_length_from_cpu": true,
+    "full_page_bounds_checked": true,
+    "permissions_only_update_and_restore_calls": 2,
+    "restore_queries_translation": true,
+    "no_other_board_parameters": true
+  },
+  "translation": {
+    "query_rva": 22304,
+    "restore_rva": 22264,
+    "s1e1r_queries": 1,
+    "s1e1w_queries": 1,
+    "permission_query_has_no_candidate_load_or_store": true,
+    "original_par_restored_with_isb": true,
+    "query_instructions": 26,
+    "restore_instructions": 10
+  },
+  "storage": {
+    "engine": [
+      {
+        "symbol": "mRamWrite",
+        "bytes": 232,
+        "rva": 70080,
+        "physical_address": 1074475456,
+        "fd_offset": 78272,
+        "materialized_zero_data": true
+      },
+      {
+        "symbol": "mRamBackup",
+        "bytes": 4096,
+        "rva": 65536,
+        "physical_address": 1074470912,
+        "fd_offset": 73728,
+        "materialized_zero_data": true
+      }
+    ],
+    "cache": {
+      "mRamCache": {
+        "bytes": 176,
+        "rva": 69680,
+        "fd_offset": 77872,
+        "materialized_zero_data": true
+      },
+      "mCacheMapActive": {
+        "bytes": 8,
+        "rva": 69648,
+        "fd_offset": 77840,
+        "materialized_zero_data": true
+      },
+      "mCacheMapBase": {
+        "bytes": 8,
+        "rva": 69664,
+        "fd_offset": 77856,
+        "materialized_zero_data": true
+      },
+      "mCacheMapBytes": {
+        "bytes": 8,
+        "rva": 69656,
+        "fd_offset": 77848,
+        "materialized_zero_data": true
+      },
+      "mCacheState": {
+        "bytes": 8,
+        "rva": 69672,
+        "fd_offset": 77864,
+        "materialized_zero_data": true
+      }
+    }
+  },
+  "decoder_sha256": "27ebb42f2fffd29759c6c7b2119bb2fb51444e49acc9cde9c1790140423e900b",
+  "cache_decoder_sha256": "0eaa4d5e7842618b73f0196f4c08f4d7e42a47eae038b9ebf98609a835033415",
+  "runner_sha256": "5809f74e8120a6635844ce299963a11c559150b38eb8e05f7ba7c5a7f0bcbfd6",
+  "fatal_mapped_load_udf_return_verified": true,
+  "partial_cached_write_udf_recovery_verified": true,
+  "real_data_abort_verified": false,
+  "handset_executed": false,
+  "allocator_enabled": false,
+  "ownership_proven": false
+}

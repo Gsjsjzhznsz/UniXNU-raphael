@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "goal": "Native read-only system volume: physical UFS reads then immutable plaintext extents",
+  "handset_block_read_verified": true,
+  "source_implementation": [
+    "UniXNU-sm8150-common/drivers/RaphaelUfsTransport.h",
+    "UniXNU-sm8150-common/drivers/RaphaelReadOnlyExtents.h",
+    "uefi-raphael/RaphaelPkg/Sec/UfsRead.cpp"
+  ],
+  "host_reports": [
+    "artifacts/readonly-extents-host/20261031T002306.336770Z-l5_kynn4/report.json",
+    "artifacts/ufs-qtest/20261031T003552Z/report.json",
+    "artifacts/native-staging-qemu/20261031T004422.497221Z-kslxp7qd/report.json",
+    "artifacts/native-staging-qemu/20261031T163823.920797Z-5cb36kx4/report.json",
+    "artifacts/native-staging-qemu/20261031T164503.638428Z-4xtfblt0/report.json",
+    "artifacts/native-staging-qemu/20261031T170320.681591Z-pk1nez4d/report.json"
+  ],
+  "read10_unknown_runs": [
+    "evidence/private/android-return-run/20261030T235948Z/report.json",
+    "evidence/private/android-return-run/20261031T001752Z/report.json"
+  ],
+  "query_unknown_runs": [
+    "evidence/private/android-return-run/20261031T002404Z/report.json",
+    "evidence/private/android-return-run/20261031T003020Z/report.json",
+    "evidence/private/android-return-run/20261031T003743Z/report.json",
+    "evidence/private/android-return-run/20261031T162556Z/report.json"
+  ],
+  "confirmed_error": "UFS ran before FDT copy and high Android return capsule; an early exception could only reset and discard observations",
+  "next_changed_variable": "Implement immutable OS/SystemOS file extents and persistent read-only block device; then target-handset APFS root mount. Do not repeat unchanged single-block test.",
+  "stop_rule": "No repeat of unchanged no-record image. Confirm Android root and transient-property cleanup before another experiment.",
+  "media_write_command_present": false,
+  "confirmed_stage3_profile_error": {
+    "build": "evidence/private/android-return-build/20261031T161936.700054Z-5azcf_p5",
+    "pcds": {
+      "UfsRead": 1,
+      "NativeMmuTest": 0,
+      "NativeWatchdogBase": "0x17c10000"
+    },
+    "sec_status": "0x23e before return capsule",
+    "fixed_query_run": "evidence/private/android-return-run/20261031T164138Z/report.json"
+  },
+  "cache_exit_correction": "Invalidate potentially refilled clean lines while MMU/cache off after callback; CTR line <=4096 gate",
+  "handset_first_block_report": "evidence/private/android-return-run/20261031T165548Z/report.json",
+  "query_transition_report": "evidence/private/android-return-run/20261031T164737Z/report.json",
+  "query_transition_delayed_cleanup": "evidence/private/android-return-run/20261031T165044Z/delayed-cleanup-report.json",
+  "handset_plaintext_probe_read_verified": true,
+  "handset_plaintext_probe_report": "evidence/private/android-return-run/20261031T170816Z/report.json",
+  "plaintext_probe_collection": "evidence/private/ufs-readonly/20261031T170219Z/read-source.json",
+  "plaintext_probe_build": "evidence/private/android-return-build/20261031T170606.664993Z-nuw1p97a",
+  "plaintext_probe_qemu_report": "artifacts/native-staging-qemu/20261031T170320.681591Z-pk1nez4d/report.json",
+  "plaintext_probe_lba": 53068291,
+  "plaintext_probe_bytes": 4096,
+  "persistent_system_block_device_verified": false,
+  "root_volume_verified": false,
+  "handset_desktop_verified": false,
+  "handoff_document": "docs/HANDOFF-20261101.zh-CN.md",
+  "system_file_extents": {
+    "handset_stage_report": "evidence/private/handset-system-disks/20261031T174325Z/report.json",
+    "host_reports": [
+      "artifacts/extent-plan-host/20261031T175054.479640Z-ydvb8slx/report.json",
+      "artifacts/readonly-extents-host/20261031T175054.959075Z-dqm2biha/report.json"
+    ],
+    "OS": {
+      "extent_count": 66,
+      "collection": "evidence/private/ufs-readonly/20261031T175351Z/extent-source.json",
+      "qemu": "artifacts/native-staging-qemu/20261031T175729.003254Z-_8395fdn/report.json",
+      "build": "evidence/private/android-return-build/20261031T175919.337229Z-54fo9kxs/report.json",
+      "run": "evidence/private/android-return-run/20261031T180012Z/report.json"
+    },
+    "SystemOS": {
+      "extent_count": 27,
+      "collection": "evidence/private/ufs-readonly/20261031T180246Z/extent-source.json",
+      "qemu": "artifacts/native-staging-qemu/20261031T180327.980299Z-tcrz64_r/report.json",
+      "build": "evidence/private/android-return-build/20261031T180515.944692Z-pjszmgpn/report.json",
+      "run": "evidence/private/android-return-run/20261031T180840Z/report.json"
+    },
+    "repeats_per_run": 16,
+    "physical_reads_per_run": 128,
+    "xnu_executed": null,
+    "apfs_mounted": false,
+    "persistent_driver_executed": false
+  }
+}

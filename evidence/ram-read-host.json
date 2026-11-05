@@ -1,0 +1,849 @@
+{
+  "passed": true,
+  "case_count": 73,
+  "cases": [
+    {
+      "name": "sourced phone FDT and all 256 exact sparse addresses",
+      "passed": true,
+      "status": 3,
+      "reads": 256
+    },
+    {
+      "name": "null fdt",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "null policy",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "null entry",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "null read",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "null counter",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 0 value 2",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 1 value 63",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 2 value 0",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 3 value 3221225480",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 3 value 18446744073709486080",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 4 value 0",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 4 value 536870912",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 5 value 4096",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 6 value 255",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 7 value 0",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "policy field 7 value 129",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects el8",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects sctlr1",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects sctlr4",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects sctlr4096",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects daif832",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects frequency999",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects frequency1000000001",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects count0",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "entry rejects count9",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "PA rejects mmfr07",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "PA rejects bits36",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "PA rejects mmfr00",
+      "passed": true,
+      "status": 4,
+      "reads": 0
+    },
+    {
+      "name": "live SP/LR guard overlap",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "policy guard overlap",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "policy guard overflow",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "header reservation overlap",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "unsupported compatible",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "unterminated compatible",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "malformed cells",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "nonempty ranges",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "initrd overlap",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "initrd reversed",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "bad magic",
+      "passed": true,
+      "status": 5,
+      "reads": 0
+    },
+    {
+      "name": "callback failure 1",
+      "passed": true,
+      "status": 7,
+      "reads": 1
+    },
+    {
+      "name": "callback failure 2",
+      "passed": true,
+      "status": 7,
+      "reads": 2
+    },
+    {
+      "name": "callback failure 128",
+      "passed": true,
+      "status": 7,
+      "reads": 128
+    },
+    {
+      "name": "callback failure 256",
+      "passed": true,
+      "status": 7,
+      "reads": 256
+    },
+    {
+      "name": "100ms time bound",
+      "passed": true,
+      "status": 6,
+      "reads": 1
+    },
+    {
+      "name": "nonmonotonic counter",
+      "passed": true,
+      "status": 6,
+      "reads": 2
+    },
+    {
+      "name": "counter wrap rejected",
+      "passed": true,
+      "status": 6,
+      "reads": 1
+    },
+    {
+      "name": "wire rejects version",
+      "passed": true
+    },
+    {
+      "name": "wire rejects status",
+      "passed": true
+    },
+    {
+      "name": "wire rejects reason",
+      "passed": true
+    },
+    {
+      "name": "wire rejects base",
+      "passed": true
+    },
+    {
+      "name": "wire rejects bytes",
+      "passed": true
+    },
+    {
+      "name": "wire rejects stride",
+      "passed": true
+    },
+    {
+      "name": "wire rejects requested",
+      "passed": true
+    },
+    {
+      "name": "wire rejects attempted",
+      "passed": true
+    },
+    {
+      "name": "wire rejects completed",
+      "passed": true
+    },
+    {
+      "name": "wire rejects active_address",
+      "passed": true
+    },
+    {
+      "name": "wire rejects nonzero",
+      "passed": true
+    },
+    {
+      "name": "wire rejects start_counter",
+      "passed": true
+    },
+    {
+      "name": "wire rejects end_counter",
+      "passed": true
+    },
+    {
+      "name": "wire rejects frequency",
+      "passed": true
+    },
+    {
+      "name": "wire rejects mmfr0",
+      "passed": true
+    },
+    {
+      "name": "wire rejects physical_bits",
+      "passed": true
+    },
+    {
+      "name": "wire rejects ram_ranges",
+      "passed": true
+    },
+    {
+      "name": "wire rejects fixed_reservations",
+      "passed": true
+    },
+    {
+      "name": "wire rejects header_reservations",
+      "passed": true
+    },
+    {
+      "name": "wire rejects policy_guards",
+      "passed": true
+    },
+    {
+      "name": "wire rejects entry_guards",
+      "passed": true
+    },
+    {
+      "name": "wire rejects current_el",
+      "passed": true
+    },
+    {
+      "name": "wire rejects sctlr",
+      "passed": true
+    },
+    {
+      "name": "wire rejects daif",
+      "passed": true
+    },
+    {
+      "name": "wire size rejected",
+      "passed": true
+    },
+    {
+      "name": "wire size rejected",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtCheckHeader=fdt_check_header",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtNextNode=fdt_next_node",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtPathOffset=fdt_path_offset",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/RamRead.c",
+    "/home/guo/work/raphael-fresh/artifacts/ram-read-host/20261028T141050.502905Z-8xrccjcw/shim.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_check.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/ram-read-host/20261028T141050.502905Z-8xrccjcw/ram-read.so"
+  ],
+  "undefined_behavior_sanitizer": true,
+  "guard_canaries_verified": true,
+  "snapshot_bytes": 208,
+  "policy_evidence": {
+    "policy": {
+      "version": 1,
+      "base": 3221225472,
+      "bytes": 268435456,
+      "stride": 2097152,
+      "max_reads": 256,
+      "guards": [
+        {
+          "base": 2238709760,
+          "bytes": 6291456
+        },
+        {
+          "base": 2246049792,
+          "bytes": 1310720
+        },
+        {
+          "base": 2248146944,
+          "bytes": 2097152
+        },
+        {
+          "base": 2250244096,
+          "bytes": 89128960
+        },
+        {
+          "base": 2339373056,
+          "bytes": 5242880
+        },
+        {
+          "base": 2344615936,
+          "bytes": 1572864
+        },
+        {
+          "base": 2346188800,
+          "bytes": 524288
+        },
+        {
+          "base": 2346713088,
+          "bytes": 35651584
+        },
+        {
+          "base": 2382364672,
+          "bytes": 157286400
+        },
+        {
+          "base": 2539651072,
+          "bytes": 5242880
+        },
+        {
+          "base": 2544893952,
+          "bytes": 20971520
+        },
+        {
+          "base": 2565865472,
+          "bytes": 65536
+        },
+        {
+          "base": 2565931008,
+          "bytes": 20480
+        },
+        {
+          "base": 2565951488,
+          "bytes": 8192
+        },
+        {
+          "base": 2566914048,
+          "bytes": 1048576
+        },
+        {
+          "base": 2567962624,
+          "bytes": 20971520
+        },
+        {
+          "base": 2654994432,
+          "bytes": 20971520
+        },
+        {
+          "base": 2764046336,
+          "bytes": 62914560
+        },
+        {
+          "base": 2617245696,
+          "bytes": 37748736
+        },
+        {
+          "base": 2148007936,
+          "bytes": 56684544
+        },
+        {
+          "base": 2204696576,
+          "bytes": 8192
+        },
+        {
+          "base": 2236157952,
+          "bytes": 670436
+        },
+        {
+          "base": 2238259200,
+          "bytes": 446464
+        },
+        {
+          "base": 2684353792,
+          "bytes": 768
+        },
+        {
+          "base": 3976200192,
+          "bytes": 314572800
+        },
+        {
+          "base": 4294930432,
+          "bytes": 32768
+        },
+        {
+          "base": 4294966272,
+          "bytes": 64
+        },
+        {
+          "base": 4294966400,
+          "bytes": 64
+        },
+        {
+          "base": 4294966528,
+          "bytes": 64
+        },
+        {
+          "base": 4294966656,
+          "bytes": 64
+        },
+        {
+          "base": 4294966784,
+          "bytes": 64
+        },
+        {
+          "base": 4294966912,
+          "bytes": 64
+        },
+        {
+          "base": 4294967040,
+          "bytes": 64
+        },
+        {
+          "base": 4294967168,
+          "bytes": 64
+        },
+        {
+          "base": 8468299776,
+          "bytes": 113246208
+        },
+        {
+          "base": 8581558272,
+          "bytes": 4096
+        },
+        {
+          "base": 8583983104,
+          "bytes": 1761280
+        },
+        {
+          "base": 8585745664,
+          "bytes": 1032
+        },
+        {
+          "base": 8585746816,
+          "bytes": 1024
+        },
+        {
+          "base": 8585756032,
+          "bytes": 1811
+        },
+        {
+          "base": 8585757952,
+          "bytes": 1811
+        },
+        {
+          "base": 8585759872,
+          "bytes": 36864
+        },
+        {
+          "base": 8585796744,
+          "bytes": 4133752
+        },
+        {
+          "base": 8589930880,
+          "bytes": 160
+        },
+        {
+          "base": 8589931136,
+          "bytes": 112
+        },
+        {
+          "base": 8589931264,
+          "bytes": 320
+        },
+        {
+          "base": 8589931648,
+          "bytes": 32
+        },
+        {
+          "base": 8589931776,
+          "bytes": 8
+        },
+        {
+          "base": 8589931904,
+          "bytes": 8
+        },
+        {
+          "base": 8589932032,
+          "bytes": 1811
+        },
+        {
+          "base": 8589933888,
+          "bytes": 44
+        },
+        {
+          "base": 8589933936,
+          "bytes": 44
+        },
+        {
+          "base": 8589933984,
+          "bytes": 44
+        },
+        {
+          "base": 8589934032,
+          "bytes": 47
+        },
+        {
+          "base": 8589934080,
+          "bytes": 47
+        },
+        {
+          "base": 8589934128,
+          "bytes": 47
+        },
+        {
+          "base": 8589934176,
+          "bytes": 51
+        },
+        {
+          "base": 8589934232,
+          "bytes": 51
+        },
+        {
+          "base": 8589934288,
+          "bytes": 44
+        },
+        {
+          "base": 8589934336,
+          "bytes": 44
+        },
+        {
+          "base": 8589934384,
+          "bytes": 51
+        },
+        {
+          "base": 8589934440,
+          "bytes": 51
+        },
+        {
+          "base": 8589934496,
+          "bytes": 45
+        },
+        {
+          "base": 8589934544,
+          "bytes": 46
+        },
+        {
+          "base": 2148007936,
+          "bytes": 37224448
+        },
+        {
+          "base": 2191523840,
+          "bytes": 13180928
+        },
+        {
+          "base": 2247229440,
+          "bytes": 4425
+        },
+        {
+          "base": 2147483648,
+          "bytes": 91226112
+        },
+        {
+          "base": 2244935680,
+          "bytes": 65536
+        },
+        {
+          "base": 2247229440,
+          "bytes": 131072
+        },
+        {
+          "base": 2248146944,
+          "bytes": 2097152
+        },
+        {
+          "base": 2339373056,
+          "bytes": 1048576
+        },
+        {
+          "base": 2340421632,
+          "bytes": 241172480
+        },
+        {
+          "base": 2581594112,
+          "bytes": 29360128
+        },
+        {
+          "base": 2610954240,
+          "bytes": 6291456
+        },
+        {
+          "base": 2617245696,
+          "bytes": 37748736
+        },
+        {
+          "base": 2654994432,
+          "bytes": 15728640
+        },
+        {
+          "base": 2675965952,
+          "bytes": 2097152
+        },
+        {
+          "base": 2678063104,
+          "bytes": 2097152
+        },
+        {
+          "base": 2680160256,
+          "bytes": 3145728
+        },
+        {
+          "base": 2683305984,
+          "bytes": 573440
+        },
+        {
+          "base": 2683879424,
+          "bytes": 4096
+        },
+        {
+          "base": 2683883520,
+          "bytes": 12288
+        },
+        {
+          "base": 2683895808,
+          "bytes": 262144
+        },
+        {
+          "base": 2684317696,
+          "bytes": 32768
+        },
+        {
+          "base": 2684350464,
+          "bytes": 4096
+        },
+        {
+          "base": 2684354560,
+          "bytes": 79691776
+        },
+        {
+          "base": 2826960896,
+          "bytes": 125829120
+        },
+        {
+          "base": 2956984320,
+          "bytes": 150994944
+        },
+        {
+          "base": 2204762112,
+          "bytes": 65536
+        },
+        {
+          "base": 2204827648,
+          "bytes": 3145728
+        },
+        {
+          "base": 2207973376,
+          "bytes": 262144
+        },
+        {
+          "base": 2208235520,
+          "bytes": 16777216
+        },
+        {
+          "base": 2225012736,
+          "bytes": 1114112
+        },
+        {
+          "base": 2238259200,
+          "bytes": 444400
+        }
+      ],
+      "sha256": "e21f5373f6cc8e40882f9d97c7b587b9d816903d40864c092cfe1a73852395f4"
+    },
+    "sources": [
+      {
+        "path": "UniXNU-raphael/evidence/kernel-window-audit.json",
+        "sha256": "ecfa5e308065946bc7f10690e974e0fa3667b0fe83f978c95b442c9271f48dd8"
+      },
+      {
+        "path": "UniXNU-raphael/evidence/kernel-window-host.json",
+        "sha256": "0d2724adce64885949c82e30711d72b42f6314e582eaeb7364355864b76d5a4b"
+      },
+      {
+        "path": "evidence/private/memory-ownership/20261028T021216Z/report.json",
+        "sha256": "57236ea6cc947a1ba8cc97d5cd0174f2113bce135285abf2701986b3f4a6587c"
+      }
+    ],
+    "source": "Lowest aligned candidate from current sourced interval audit",
+    "ram_written": false,
+    "allocator_enabled": false
+  },
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamRead.c",
+      "sha256": "f8429b13d0742a7769197e9bcd74985a334d5621ef082a0853b2dcd3941d25d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamRead.h",
+      "sha256": "cfded6b7ff5a3e03bce41a85bd1acaff358d8546478da96b64fc640a8b5cf078"
+    }
+  ],
+  "decoder_sha256": "547a564425d5b34ed03ecdd4f6b38a4e7fac492cea12369f81499f8fdaf8e3b2",
+  "runner_sha256": "e97042f39da3fd762dc60727e4ad202f32545489cbdbafc635f8c834010b6240",
+  "handset_executed": false
+}

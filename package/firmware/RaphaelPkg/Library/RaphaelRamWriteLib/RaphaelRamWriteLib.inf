@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+ INF_VERSION = 0x0001001B
+ BASE_NAME = RaphaelRamWriteLib
+ FILE_GUID = 6AF2FC85-674F-4BB5-8F1B-C0326E5B7B83
+ MODULE_TYPE = BASE
+ VERSION_STRING = 0.1
+ LIBRARY_CLASS = RaphaelRamWriteLib
+[Sources]
+ RamWrite.c
+ RamCache.c
+[Packages]
+ MdePkg/MdePkg.dec
+ RaphaelPkg/RaphaelPkg.dec

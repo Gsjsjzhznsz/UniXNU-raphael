@@ -1,0 +1,18 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T102222Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T101952Z/20261104T103301Z-automatic-return",
+  "data_isssd": 1,
+  "records": 297,
+  "log_bytes": 81044,
+  "dropped": 0,
+  "desktop_verified": false,
+  "onsite": "startup text then automatic reboot",
+  "full_checkpoint_verified": false,
+  "xnu_executed": null,
+  "panic": "Original watchdogd selector2 request; detailed reason unavailable",
+  "partial_panic": "evidence/private/android-return-run/20261104T102222Z/verified-partial-panic.json",
+  "delta_overflow": true,
+  "verified_mutable_ranges": 7,
+  "total_mutable_ranges": 8,
+  "android_recovery_and_cleanup": true
+}

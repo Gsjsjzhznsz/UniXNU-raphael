@@ -1,0 +1,119 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerIrq.S",
+      "sha256": "f3874d3eb1d9146dbf6b5940eb4c9dac087b1746c14b05b4084f79934512cdc8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerIrq.h",
+      "sha256": "a0044ed7114c5db5f140cd000cda97dc45b590bb2416b004ca681d58f4baa846"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerRoute.c",
+      "sha256": "4f4918c4d587153f30c3cf7f8c78da64c29966e6c0365b3195b1920cab9bfc11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "88f6163e953a322d14983b9d76bb6c15860d165e1caee912002e6e0da90559e8"
+    }
+  ],
+  "decoder_sha256": "6cb6cd18e43a844ef5c072d6cd2e4bca21d0a771a8dfdc7aee14089448540da1",
+  "compiled_object_sha256": "6ccb15b3b7f7d5e1f5b98a2d14775cf4e2438e70eef6d139c3e6c607cc56968c",
+  "stack_spill_bytes": 80,
+  "saved_scratch_registers": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "callee_saved_registers_modified": false,
+  "active_pointer_and_instruction_range_required": true,
+  "current_el_spx_irq_only": true,
+  "eoi_mode_zero_only": true,
+  "one_iar_and_one_eoir_site": true,
+  "special_ids_not_eoid": true,
+  "source_mask_readback_before_eoi": true,
+  "independent_gnu_assembler_matched": true,
+  "primary_encoding_source": {
+    "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "path": "arch/arm64/include/asm/sysreg.h",
+    "sha256": "0357803843478b179761df9d84eac13da1cd941bc00da7a9925247e34d3d1111",
+    "encodings": {
+      "ICC_IAR1_EL1": {
+        "fields": [
+          3,
+          0,
+          12,
+          12,
+          0
+        ],
+        "opcode": "0xd538cc0a",
+        "line": 200
+      },
+      "ICC_EOIR1_EL1": {
+        "fields": [
+          3,
+          0,
+          12,
+          12,
+          1
+        ],
+        "opcode": "0xd518cc2a",
+        "line": 201
+      }
+    }
+  },
+  "specification": {
+    "document": "ARM IHI0069C (ID070116)",
+    "sha256": "026e7dba8d8efca43a3593a6914a2f7cba2ff71cd34583ced97d389d1108dcf6",
+    "sections_pdf_page": {
+      "8.2.14 ICC_IAR1_EL1": 218,
+      "8.2.10 ICC_EOIR1_EL1": 208
+    }
+  },
+  "result_storage": {
+    "records": {
+      "mTimerIrq": {
+        "bytes": 192,
+        "rva": 69728,
+        "physical_address": 1074569312,
+        "fd_offset": 172128,
+        "materialized_zero_data": true
+      },
+      "RaphaelActiveIrqResult": {
+        "bytes": 8,
+        "rva": 69704,
+        "physical_address": 1074569288,
+        "fd_offset": 172104,
+        "materialized_zero_data": true
+      }
+    },
+    "linked_window": {
+      "open": 1074557340,
+      "close": 1074557412,
+      "handler": 1074557568
+    },
+    "within_sec_xip_pe": true
+  },
+  "handset_executed": false,
+  "limitations": [
+    "One pending target PPI only, not general TimerArch",
+    "Unknown/spurious IDs make the window fail; valid acknowledged IDs are EOId to avoid leaking active state",
+    "IRQs outside the guarded leaf use fatal diagnostic return",
+    "EL2/EL3 trap recovery is not guaranteed"
+  ]
+}

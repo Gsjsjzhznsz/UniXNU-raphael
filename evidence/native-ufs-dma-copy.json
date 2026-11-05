@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "baseline": "evidence/private/android-return-run/20261101T171229Z/report.json",
+  "candidate": "evidence/private/android-return-run/20261101T172012Z/report.json",
+  "changed_variable": "Naturally aligned volatile 64-bit DMA-buffer CPU copies instead of byte-at-a-time access; identical DMA addresses/bounds, single-block READ10 transport, authenticated 4KiB block checks and terminal handback",
+  "observer_ms": [
+    40104.766197916666,
+    40112.623125
+  ],
+  "ufs_bytes": [
+    103154688,
+    494388224
+  ],
+  "throughput_ratio": 4.791749138395877,
+  "syscall_entries": [
+    22,
+    78
+  ],
+  "signature_ready_blobs": [
+    1,
+    9
+  ],
+  "signature_bytes": 489881600,
+  "ufs_failures": 0,
+  "signature_bad_hash": 0,
+  "host_validation": "ASan/UBSan: 16x16 endpoint alignments and lengths 0..4096, byte equality and both destination guards; full real XNU ABI build; non-VMM QEMU39; complete handset recovery",
+  "launchd_main_verified": false,
+  "desktop_verified": false
+}

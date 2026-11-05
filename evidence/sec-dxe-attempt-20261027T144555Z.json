@@ -1,0 +1,17 @@
+{
+  "kind": "minimal SEC/DXE diagnostic on handset; incomplete UEFI platform",
+  "fastboot_boot_accepted": true,
+  "android_boot_completed": false,
+  "image_sha256": "90e2d22a42390ad3b51f34f1d17d4d43431afe75ee3da40623c5b8aea3753492",
+  "firmware_sha256": "7c77d253d67a4f668070a17b5b9fae936cd23cb3fda4d0a1898a189387b9001a",
+  "identifier": "raphael-sec-dxe-v1-426706af2f5541a29a41035130bd822b",
+  "used_flash_or_erase": false,
+  "requested_stop_stage": 2,
+  "full_uefi_platform": false,
+  "display_or_keys_validated": false,
+  "boot_partition_unchanged": null,
+  "sec_dxe_stage_verified": null,
+  "private_readback": "evidence/private/sec-dxe-run/20261027T144555Z",
+  "private_build": "evidence/private/sec-dxe-build/20261027T143846Z",
+  "result": "No Android return within observation window; execution stage unknown"
+}

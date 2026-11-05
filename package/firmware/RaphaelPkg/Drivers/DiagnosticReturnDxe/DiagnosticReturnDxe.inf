@@ -1,0 +1,110 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = DiagnosticReturnDxe
+  FILE_GUID = 432B5FD6-7106-4102-9E42-14E0FDC91B34
+  MODULE_TYPE = DXE_DRIVER
+  VERSION_STRING = 0.1
+  ENTRY_POINT = DiagnosticReturnEntry
+[Sources]
+  KernelWindowTest.c
+  DiagnosticReturn.c
+  GopTest.c
+  MenuTest.c
+  PayloadTest.c
+  DarwinTest.c
+  NativeLoadTest.c
+  NativeVideo.c
+  NativeEntryTest.c
+  NativeEarlyTest.c
+  NativePmapTest.c
+  NativeMmuTest.c
+  NativeGic.c
+  NativeWatchdog.c
+  NativeMmuRelay.S
+  NativeEntry.S
+  QemuTimerTest.c
+  PhysicalTimerTest.c
+[Packages]
+  ArmPkg/ArmPkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  PrintLib
+  SemihostLib
+  CacheMaintenanceLib
+  RaphaelManagerUiLib
+  FdtLib
+  DxeServicesLib
+  DevicePathLib
+  UniXNULib
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  HobLib
+  BaseLib
+  BaseMemoryLib
+  DebugLib
+  ArmLib
+  MemoryAllocationLib
+  RaphaelFramebufferLib
+[Guids]
+  gRaphaelAndroidReturnHobGuid
+  gRaphaelKernelWindowHobGuid
+  gRaphaelManagerUiHobGuid
+  gRaphaelPhysicalTimerHobGuid
+  gEfiEventBeforeExitBootServicesGuid
+  gEfiEventExitBootServicesGuid
+  gRaphaelDiagnosticHobGuid
+[Protocols]
+  gEfiSimpleTextInProtocolGuid
+  gEfiCpuArchProtocolGuid
+  gHardwareInterruptProtocolGuid
+  gEfiTimerArchProtocolGuid
+  gEfiSimpleTextOutProtocolGuid
+  gUniXNULoaderProtocolGuid
+  gEfiBlockIoProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiRuntimeArchProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+[FixedPcd]
+  gRaphaelTokenSpaceGuid.PcdRaphaelUfsPayload
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeFatBytes
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogHz
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogSeconds
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeKallocZones
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativePlatformTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeEarlyTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativePmapTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeMmuTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeEntryTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelStackBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelStackSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeExitComplete
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeLoadTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeVideo
+  gRaphaelTokenSpaceGuid.PcdRaphaelStagingKernelBytes
+  gRaphaelTokenSpaceGuid.PcdRaphaelStagingKernelCrc
+  gRaphaelTokenSpaceGuid.PcdRaphaelAndroidReturn
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeHandoff
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeBoot
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeQemuGate
+  gRaphaelTokenSpaceGuid.PcdRaphaelKernelWindow
+  gRaphaelTokenSpaceGuid.PcdRaphaelManagerKeys
+  gRaphaelTokenSpaceGuid.PcdRaphaelVisibleManager
+  gRaphaelTokenSpaceGuid.PcdRaphaelPhysicalTimerArch
+  gRaphaelTokenSpaceGuid.PcdRaphaelQemuArchTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelDarwinTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelPayloadTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelFdSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelMenuTest
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelArenaBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelArenaSize
+  gRaphaelTokenSpaceGuid.PcdRaphaelExperimentalGop
+[Depex]
+  gEfiRuntimeArchProtocolGuid

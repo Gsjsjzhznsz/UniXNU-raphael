@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelGopLib
+  FILE_GUID = 25734EE2-7616-4BFD-A0B7-95015111E1B3
+  MODULE_TYPE = BASE
+  LIBRARY_CLASS = RaphaelGopLib
+[Sources]
+  Gop.c
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  ArmPkg/ArmPkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  ArmLib
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  FrameBufferBltLib

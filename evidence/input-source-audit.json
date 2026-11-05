@@ -1,0 +1,268 @@
+{
+  "passed": true,
+  "wire_version": 1,
+  "fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "recipe": {
+    "arbiter": "/soc/qcom,spmi@c440000",
+    "ee": 0,
+    "channel": 0,
+    "regions": {
+      "core": {
+        "base": 205783040,
+        "size": 4352
+      },
+      "chnls": {
+        "base": 207618048,
+        "size": 33554432
+      },
+      "obsrvr": {
+        "base": 241172480,
+        "size": 1048576
+      },
+      "intr": {
+        "base": 242221056,
+        "size": 655360
+      },
+      "cnfg": {
+        "base": 205561856,
+        "size": 155648
+      }
+    },
+    "pon_sid": 0,
+    "pon_address": 2064,
+    "pon_source": "/soc/qcom,spmi@c440000/qcom,pm8150@0/qcom,power-on@800",
+    "volume_sid": 0,
+    "volume_address": 50448,
+    "volume_source": "/soc/gpio_keys/vol_up",
+    "gpio_provider": "/soc/qcom,spmi@c440000/qcom,pm8150@0/pinctrl@c000",
+    "gpio_number": 6,
+    "gpio_flags": 1,
+    "debounce_ms": 15
+  },
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/spmi/spmi-pmic-arb.c",
+      "sha256": "c13754a4e64566ad8b1d88233909e970c45294ba73cf08f495fb7241287ae262",
+      "anchors": {
+        "PMIC_ARB_VERSION": [
+          30,
+          31,
+          32,
+          33,
+          1219,
+          1221,
+          1228,
+          1230,
+          1323
+        ],
+        "PMIC_ARB_VERSION_V5_MIN": [
+          33,
+          1230,
+          1323
+        ],
+        "SPMI_OWNERSHIP_TABLE_REG(N)": [
+          60
+        ],
+        "SPMI_OWNERSHIP_PERIPH2OWNER(X)": [
+          61
+        ],
+        "PMIC_ARB_CHAN_IS_IRQ_OWNER(reg)": [
+          56
+        ],
+        "pmic_arb_read_apid_map_v5": [
+          902,
+          1324
+        ],
+        "return 0x900 + 0x4 * n;": [
+          1124
+        ],
+        "0x10000 * pmic_arb->ee + 0x80 * apid": [
+          1014
+        ],
+        "(opc << 27) | ((addr & 0xff) << 4) | (bc & 0x7)": [
+          1036
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/pinctrl/qcom/pinctrl-spmi-gpio.c",
+      "sha256": "c9bb706d99a638c853b0662ff101224c8c9594d149a6e8ae366c8ed7286a8306",
+      "anchors": {
+        "PMIC_GPIO_ADDRESS_RANGE": [
+          32,
+          984,
+          1127
+        ],
+        "PMIC_GPIO_PHYSICAL_OFFSET": [
+          111,
+          1018,
+          1019,
+          1022,
+          1023,
+          1104,
+          1115
+        ],
+        "PMIC_MPP_REG_RT_STS": [
+          47,
+          48,
+          667,
+          671,
+          738,
+          742
+        ],
+        "pad->base = start + i * PMIC_GPIO_ADDRESS_RANGE": [
+          1127
+        ],
+        "pad->gpio_idx = i + PMIC_GPIO_PHYSICAL_OFFSET": [
+          1115
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/input/misc/qpnp-power-on.c",
+      "sha256": "8226cbe7bfb803ecd58b63329d6b0e872b61dbc25b76cf8f886e81e127d7a718",
+      "anchors": {
+        "QPNP_PON_RT_STS(pon)": [
+          64,
+          1016,
+          1069,
+          1161,
+          1277
+        ],
+        "QPNP_PON_KPDPWR_N_SET": [
+          122,
+          1022,
+          1075
+        ],
+        "QPNP_PON_RESIN_N_SET": [
+          123,
+          1078
+        ],
+        "key_status = pon_rt_sts & pon_rt_bit;": [
+          1092
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/devicetree/bindings/pinctrl/qcom,pmic-gpio.txt",
+      "sha256": "f01a5abb963f4e44da2b0fe95511c89b1eb16f9efd699bb6131dc4bb6d31ca40",
+      "anchors": {
+        "gpio": [
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          21,
+          35,
+          40,
+          44,
+          45,
+          47,
+          56,
+          58,
+          89,
+          91,
+          92,
+          93,
+          94,
+          95,
+          96,
+          97,
+          98,
+          99,
+          100,
+          139,
+          174,
+          185,
+          223,
+          224,
+          242,
+          243,
+          244,
+          246,
+          248
+        ],
+        "reg": [
+          24,
+          55,
+          225
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/devicetree/bindings/spmi/qcom,spmi-pmic-arb.txt",
+      "sha256": "a022d51cf3700b47a66831c9b23b5fad78436863ac00c976df931d92a558f794",
+      "anchors": {
+        "core": [
+          19,
+          49
+        ],
+        "obsrvr": [
+          24
+        ],
+        "qcom,ee": [
+          30,
+          57
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/devicetree/bindings/input/qpnp-power-on.txt",
+      "sha256": "50cce9fca267cb86af622a6a72858eea30fd7614088ffb3c9bfaf977f5b71132",
+      "anchors": {
+        "qcom,pon-type": [
+          137,
+          203,
+          209,
+          220
+        ],
+        "linux,code": [
+          156,
+          205,
+          215
+        ]
+      }
+    }
+  ],
+  "scalar_constants_verified": {
+    "drivers/spmi/spmi-pmic-arb.c": {
+      "PMIC_ARB_VERSION": 0,
+      "PMIC_ARB_VERSION_V5_MIN": 1342177280,
+      "PMIC_ARB_MAX_PERIPHS": 512
+    },
+    "drivers/pinctrl/qcom/pinctrl-spmi-gpio.c": {
+      "PMIC_GPIO_ADDRESS_RANGE": 256,
+      "PMIC_GPIO_PHYSICAL_OFFSET": 1,
+      "PMIC_MPP_REG_RT_STS": 16,
+      "PMIC_MPP_REG_RT_STS_VAL_MASK": 1
+    }
+  },
+  "implemented_scope": "read-only version/APID map/owner registers; no PMIC command, interrupt/reset/clock/power writes",
+  "private_modules_linked": false,
+  "assumptions": [
+    "Retained arbiter interconnect is accessible at this boot handoff; configuration reads can still fault or stall"
+  ],
+  "unknowns": [
+    "Actual arbiter version/APID/owner until handset readback",
+    "Observer PMIC transaction accessibility",
+    "Physical key state, debounce and visible menu"
+  ]
+}

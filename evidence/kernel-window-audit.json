@@ -1,0 +1,1467 @@
+{
+  "passed": true,
+  "kind": "Read-only structural candidates; allocator remains disabled",
+  "collection": "evidence/private/memory-ownership/20261028T021216Z",
+  "collection_report_sha256": "57236ea6cc947a1ba8cc97d5cd0174f2113bce135285abf2701986b3f4a6587c",
+  "source_inputs": [
+    {
+      "path": "scripts/audit_kernel_window.py",
+      "sha256": "eacd4f228b1c785f93e4807e97c21ec4f9665673cce72b5ecfd9fb1bfc9953a4"
+    },
+    {
+      "path": "scripts/collect_memory_ownership.py",
+      "sha256": "e17174053ca27e2aceb27dfb1f745c06dd8c4be013bfeb54f9965cbe2ff0920d"
+    },
+    {
+      "path": "UniXNU-raphael/evidence/vendor-declared-layout.json",
+      "sha256": "f252ee451678bc3d6da75d6ec13868f5f106fd9ad204540ab7621d2475053360"
+    },
+    {
+      "path": "UniXNU-raphael/evidence/memory-plan-check.json",
+      "sha256": "670b33a4a3c48adef65f34140ccd3333500f0690ce8eda3f6da7b332f31c4b0e"
+    }
+  ],
+  "primary_sources": [
+    {
+      "repository": "sources/UniXNU/drivers/DarwinBoot",
+      "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+      "path": "DarwinBootPkg/Driver/WindowSize.h",
+      "sha256": "6f78303c54252eae722be7c9b33869e4e8251ee3569736511790170d499b58cb",
+      "lines": {
+        "0x10000000ULL": 7,
+        "0x200000000ULL": 7,
+        "0x1fffffULL": 7
+      }
+    },
+    {
+      "repository": "sources/UniXNU/drivers/DarwinBoot",
+      "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+      "path": "DarwinBootPkg/Driver/DarwinBoot.c",
+      "sha256": "d13facd71aa802e02a33b8c463d83a7a9a2f9d5b0a5e5a5fcd96cfdce7985e1a",
+      "lines": {
+        "#define WINDOW_SIZE  SIZE_256MB": 20,
+        "#define BLOCK_SIZE   SIZE_2MB": 21,
+        "AllocateWindow (": 401,
+        "Kernel->Base & (BLOCK_SIZE - 1)": 432
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/arm64/booting.txt",
+      "sha256": "534035888925ba7b1c6a4d9bd5ef01f3578eb9dde2d584e6b44c5abbf2c407d8",
+      "lines": {
+        "Any memory described to the kernel": 139,
+        "will be considered as available to": 141,
+        "Quiesce all DMA capable devices": 146
+      }
+    }
+  ],
+  "dt_described_ram_bytes": 8517582848,
+  "linux_memory_bytes": 8086261760,
+  "memory_views_agree": true,
+  "available_description": [
+    {
+      "base": 2147483648,
+      "end_exclusive": 2238709760,
+      "bytes": 91226112,
+      "base_hex": "0x80000000",
+      "end_exclusive_hex": "0x85700000"
+    },
+    {
+      "base": 2245001216,
+      "end_exclusive": 2246049792,
+      "bytes": 1048576,
+      "base_hex": "0x85d00000",
+      "end_exclusive_hex": "0x85e00000"
+    },
+    {
+      "base": 2247360512,
+      "end_exclusive": 2248146944,
+      "bytes": 786432,
+      "base_hex": "0x85f40000",
+      "end_exclusive_hex": "0x86000000"
+    },
+    {
+      "base": 2565959680,
+      "end_exclusive": 2566914048,
+      "bytes": 954368,
+      "base_hex": "0x98f17000",
+      "end_exclusive_hex": "0x99000000"
+    },
+    {
+      "base": 2588934144,
+      "end_exclusive": 2654994432,
+      "bytes": 66060288,
+      "base_hex": "0x9a500000",
+      "end_exclusive_hex": "0x9e400000"
+    },
+    {
+      "base": 2675965952,
+      "end_exclusive": 2764046336,
+      "bytes": 88080384,
+      "base_hex": "0x9f800000",
+      "end_exclusive_hex": "0xa4c00000"
+    },
+    {
+      "base": 2826960896,
+      "end_exclusive": 3148873728,
+      "bytes": 321912832,
+      "base_hex": "0xa8800000",
+      "end_exclusive_hex": "0xbbb00000"
+    },
+    {
+      "base": 3221225472,
+      "end_exclusive": 10737418240,
+      "bytes": 7516192768,
+      "base_hex": "0xc0000000",
+      "end_exclusive_hex": "0x280000000"
+    }
+  ],
+  "excluded_ranges": [
+    {
+      "base": 2238709760,
+      "end_exclusive": 2245001216,
+      "bytes": 6291456,
+      "base_hex": "0x85700000",
+      "end_exclusive_hex": "0x85d00000",
+      "source": "/reserved-memory/hyp_mem:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2246049792,
+      "end_exclusive": 2247360512,
+      "bytes": 1310720,
+      "base_hex": "0x85e00000",
+      "end_exclusive_hex": "0x85f40000",
+      "source": "/reserved-memory/xbl_aop_mem:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2248146944,
+      "end_exclusive": 2250244096,
+      "bytes": 2097152,
+      "base_hex": "0x86000000",
+      "end_exclusive_hex": "0x86200000",
+      "source": "/reserved-memory/smem:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2250244096,
+      "end_exclusive": 2339373056,
+      "bytes": 89128960,
+      "base_hex": "0x86200000",
+      "end_exclusive_hex": "0x8b700000",
+      "source": "/reserved-memory/removed_regions:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2339373056,
+      "end_exclusive": 2344615936,
+      "bytes": 5242880,
+      "base_hex": "0x8b700000",
+      "end_exclusive_hex": "0x8bc00000",
+      "source": "/reserved-memory/camera_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2344615936,
+      "end_exclusive": 2346188800,
+      "bytes": 1572864,
+      "base_hex": "0x8bc00000",
+      "end_exclusive_hex": "0x8bd80000",
+      "source": "/reserved-memory/pil_wlan_fw_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2346188800,
+      "end_exclusive": 2346713088,
+      "bytes": 524288,
+      "base_hex": "0x8bd80000",
+      "end_exclusive_hex": "0x8be00000",
+      "source": "/reserved-memory/pil_npu_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2346713088,
+      "end_exclusive": 2382364672,
+      "bytes": 35651584,
+      "base_hex": "0x8be00000",
+      "end_exclusive_hex": "0x8e000000",
+      "source": "/reserved-memory/pil_adsp_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2382364672,
+      "end_exclusive": 2539651072,
+      "bytes": 157286400,
+      "base_hex": "0x8e000000",
+      "end_exclusive_hex": "0x97600000",
+      "source": "/reserved-memory/modem_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2539651072,
+      "end_exclusive": 2544893952,
+      "bytes": 5242880,
+      "base_hex": "0x97600000",
+      "end_exclusive_hex": "0x97b00000",
+      "source": "/reserved-memory/pil_video_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2544893952,
+      "end_exclusive": 2565865472,
+      "bytes": 20971520,
+      "base_hex": "0x97b00000",
+      "end_exclusive_hex": "0x98f00000",
+      "source": "/reserved-memory/pil_slpi_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2565865472,
+      "end_exclusive": 2565931008,
+      "bytes": 65536,
+      "base_hex": "0x98f00000",
+      "end_exclusive_hex": "0x98f10000",
+      "source": "/reserved-memory/pil_ipa_fw_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2565931008,
+      "end_exclusive": 2565951488,
+      "bytes": 20480,
+      "base_hex": "0x98f10000",
+      "end_exclusive_hex": "0x98f15000",
+      "source": "/reserved-memory/pil_ipa_gsi_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2565951488,
+      "end_exclusive": 2565959680,
+      "bytes": 8192,
+      "base_hex": "0x98f15000",
+      "end_exclusive_hex": "0x98f17000",
+      "source": "/reserved-memory/pil_gpu_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2566914048,
+      "end_exclusive": 2567962624,
+      "bytes": 1048576,
+      "base_hex": "0x99000000",
+      "end_exclusive_hex": "0x99100000",
+      "source": "/reserved-memory/pil_spss_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2567962624,
+      "end_exclusive": 2588934144,
+      "bytes": 20971520,
+      "base_hex": "0x99100000",
+      "end_exclusive_hex": "0x9a500000",
+      "source": "/reserved-memory/cdsp_regions:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2654994432,
+      "end_exclusive": 2675965952,
+      "bytes": 20971520,
+      "base_hex": "0x9e400000",
+      "end_exclusive_hex": "0x9f800000",
+      "source": "/reserved-memory/qseecom_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2764046336,
+      "end_exclusive": 2826960896,
+      "bytes": 62914560,
+      "base_hex": "0xa4c00000",
+      "end_exclusive_hex": "0xa8800000",
+      "source": "/reserved-memory/cdsp_sec_regions:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2617245696,
+      "end_exclusive": 2654994432,
+      "bytes": 37748736,
+      "base_hex": "0x9c000000",
+      "end_exclusive_hex": "0x9e400000",
+      "source": "/reserved-memory/cont_splash_region:reg",
+      "kind": "FDT declaration"
+    },
+    {
+      "base": 2148007936,
+      "end_exclusive": 2204692480,
+      "bytes": 56684544,
+      "base_hex": "0x80080000",
+      "end_exclusive_hex": "0x8368f000",
+      "source": "memblock/reserved entry 0",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 2204696576,
+      "end_exclusive": 2204704768,
+      "bytes": 8192,
+      "base_hex": "0x83690000",
+      "end_exclusive_hex": "0x83692000",
+      "source": "memblock/reserved entry 1",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 2236157952,
+      "end_exclusive": 2236828388,
+      "bytes": 670436,
+      "base_hex": "0x85491000",
+      "end_exclusive_hex": "0x85534ae4",
+      "source": "memblock/reserved entry 2",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 2238259200,
+      "end_exclusive": 2238705664,
+      "bytes": 446464,
+      "base_hex": "0x85692000",
+      "end_exclusive_hex": "0x856ff000",
+      "source": "memblock/reserved entry 3",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 2684353792,
+      "end_exclusive": 2684354560,
+      "bytes": 768,
+      "base_hex": "0x9ffffd00",
+      "end_exclusive_hex": "0xa0000000",
+      "source": "memblock/reserved entry 4",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 3976200192,
+      "end_exclusive": 4290772992,
+      "bytes": 314572800,
+      "base_hex": "0xed000000",
+      "end_exclusive_hex": "0xffc00000",
+      "source": "memblock/reserved entry 5",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294930432,
+      "end_exclusive": 4294963200,
+      "bytes": 32768,
+      "base_hex": "0xffff7000",
+      "end_exclusive_hex": "0xfffff000",
+      "source": "memblock/reserved entry 6",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294966272,
+      "end_exclusive": 4294966336,
+      "bytes": 64,
+      "base_hex": "0xfffffc00",
+      "end_exclusive_hex": "0xfffffc40",
+      "source": "memblock/reserved entry 7",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294966400,
+      "end_exclusive": 4294966464,
+      "bytes": 64,
+      "base_hex": "0xfffffc80",
+      "end_exclusive_hex": "0xfffffcc0",
+      "source": "memblock/reserved entry 8",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294966528,
+      "end_exclusive": 4294966592,
+      "bytes": 64,
+      "base_hex": "0xfffffd00",
+      "end_exclusive_hex": "0xfffffd40",
+      "source": "memblock/reserved entry 9",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294966656,
+      "end_exclusive": 4294966720,
+      "bytes": 64,
+      "base_hex": "0xfffffd80",
+      "end_exclusive_hex": "0xfffffdc0",
+      "source": "memblock/reserved entry 10",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294966784,
+      "end_exclusive": 4294966848,
+      "bytes": 64,
+      "base_hex": "0xfffffe00",
+      "end_exclusive_hex": "0xfffffe40",
+      "source": "memblock/reserved entry 11",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294966912,
+      "end_exclusive": 4294966976,
+      "bytes": 64,
+      "base_hex": "0xfffffe80",
+      "end_exclusive_hex": "0xfffffec0",
+      "source": "memblock/reserved entry 12",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294967040,
+      "end_exclusive": 4294967104,
+      "bytes": 64,
+      "base_hex": "0xffffff00",
+      "end_exclusive_hex": "0xffffff40",
+      "source": "memblock/reserved entry 13",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 4294967168,
+      "end_exclusive": 4294967232,
+      "bytes": 64,
+      "base_hex": "0xffffff80",
+      "end_exclusive_hex": "0xffffffc0",
+      "source": "memblock/reserved entry 14",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8468299776,
+      "end_exclusive": 8581545984,
+      "bytes": 113246208,
+      "base_hex": "0x1f8c00000",
+      "end_exclusive_hex": "0x1ff800000",
+      "source": "memblock/reserved entry 15",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8581558272,
+      "end_exclusive": 8581562368,
+      "bytes": 4096,
+      "base_hex": "0x1ff803000",
+      "end_exclusive_hex": "0x1ff804000",
+      "source": "memblock/reserved entry 16",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8583983104,
+      "end_exclusive": 8585744384,
+      "bytes": 1761280,
+      "base_hex": "0x1ffa53000",
+      "end_exclusive_hex": "0x1ffc01000",
+      "source": "memblock/reserved entry 17",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8585745664,
+      "end_exclusive": 8585746696,
+      "bytes": 1032,
+      "base_hex": "0x1ffc01500",
+      "end_exclusive_hex": "0x1ffc01908",
+      "source": "memblock/reserved entry 18",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8585746816,
+      "end_exclusive": 8585747840,
+      "bytes": 1024,
+      "base_hex": "0x1ffc01980",
+      "end_exclusive_hex": "0x1ffc01d80",
+      "source": "memblock/reserved entry 19",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8585756032,
+      "end_exclusive": 8585757843,
+      "bytes": 1811,
+      "base_hex": "0x1ffc03d80",
+      "end_exclusive_hex": "0x1ffc04493",
+      "source": "memblock/reserved entry 20",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8585757952,
+      "end_exclusive": 8585759763,
+      "bytes": 1811,
+      "base_hex": "0x1ffc04500",
+      "end_exclusive_hex": "0x1ffc04c13",
+      "source": "memblock/reserved entry 21",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8585759872,
+      "end_exclusive": 8585796736,
+      "bytes": 36864,
+      "base_hex": "0x1ffc04c80",
+      "end_exclusive_hex": "0x1ffc0dc80",
+      "source": "memblock/reserved entry 22",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8585796744,
+      "end_exclusive": 8589930496,
+      "bytes": 4133752,
+      "base_hex": "0x1ffc0dc88",
+      "end_exclusive_hex": "0x1fffff000",
+      "source": "memblock/reserved entry 23",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589930880,
+      "end_exclusive": 8589931040,
+      "bytes": 160,
+      "base_hex": "0x1fffff180",
+      "end_exclusive_hex": "0x1fffff220",
+      "source": "memblock/reserved entry 24",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589931136,
+      "end_exclusive": 8589931248,
+      "bytes": 112,
+      "base_hex": "0x1fffff280",
+      "end_exclusive_hex": "0x1fffff2f0",
+      "source": "memblock/reserved entry 25",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589931264,
+      "end_exclusive": 8589931584,
+      "bytes": 320,
+      "base_hex": "0x1fffff300",
+      "end_exclusive_hex": "0x1fffff440",
+      "source": "memblock/reserved entry 26",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589931648,
+      "end_exclusive": 8589931680,
+      "bytes": 32,
+      "base_hex": "0x1fffff480",
+      "end_exclusive_hex": "0x1fffff4a0",
+      "source": "memblock/reserved entry 27",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589931776,
+      "end_exclusive": 8589931784,
+      "bytes": 8,
+      "base_hex": "0x1fffff500",
+      "end_exclusive_hex": "0x1fffff508",
+      "source": "memblock/reserved entry 28",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589931904,
+      "end_exclusive": 8589931912,
+      "bytes": 8,
+      "base_hex": "0x1fffff580",
+      "end_exclusive_hex": "0x1fffff588",
+      "source": "memblock/reserved entry 29",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589932032,
+      "end_exclusive": 8589933843,
+      "bytes": 1811,
+      "base_hex": "0x1fffff600",
+      "end_exclusive_hex": "0x1fffffd13",
+      "source": "memblock/reserved entry 30",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589933888,
+      "end_exclusive": 8589933932,
+      "bytes": 44,
+      "base_hex": "0x1fffffd40",
+      "end_exclusive_hex": "0x1fffffd6c",
+      "source": "memblock/reserved entry 31",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589933936,
+      "end_exclusive": 8589933980,
+      "bytes": 44,
+      "base_hex": "0x1fffffd70",
+      "end_exclusive_hex": "0x1fffffd9c",
+      "source": "memblock/reserved entry 32",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589933984,
+      "end_exclusive": 8589934028,
+      "bytes": 44,
+      "base_hex": "0x1fffffda0",
+      "end_exclusive_hex": "0x1fffffdcc",
+      "source": "memblock/reserved entry 33",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934032,
+      "end_exclusive": 8589934079,
+      "bytes": 47,
+      "base_hex": "0x1fffffdd0",
+      "end_exclusive_hex": "0x1fffffdff",
+      "source": "memblock/reserved entry 34",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934080,
+      "end_exclusive": 8589934127,
+      "bytes": 47,
+      "base_hex": "0x1fffffe00",
+      "end_exclusive_hex": "0x1fffffe2f",
+      "source": "memblock/reserved entry 35",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934128,
+      "end_exclusive": 8589934175,
+      "bytes": 47,
+      "base_hex": "0x1fffffe30",
+      "end_exclusive_hex": "0x1fffffe5f",
+      "source": "memblock/reserved entry 36",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934176,
+      "end_exclusive": 8589934227,
+      "bytes": 51,
+      "base_hex": "0x1fffffe60",
+      "end_exclusive_hex": "0x1fffffe93",
+      "source": "memblock/reserved entry 37",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934232,
+      "end_exclusive": 8589934283,
+      "bytes": 51,
+      "base_hex": "0x1fffffe98",
+      "end_exclusive_hex": "0x1fffffecb",
+      "source": "memblock/reserved entry 38",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934288,
+      "end_exclusive": 8589934332,
+      "bytes": 44,
+      "base_hex": "0x1fffffed0",
+      "end_exclusive_hex": "0x1fffffefc",
+      "source": "memblock/reserved entry 39",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934336,
+      "end_exclusive": 8589934380,
+      "bytes": 44,
+      "base_hex": "0x1ffffff00",
+      "end_exclusive_hex": "0x1ffffff2c",
+      "source": "memblock/reserved entry 40",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934384,
+      "end_exclusive": 8589934435,
+      "bytes": 51,
+      "base_hex": "0x1ffffff30",
+      "end_exclusive_hex": "0x1ffffff63",
+      "source": "memblock/reserved entry 41",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934440,
+      "end_exclusive": 8589934491,
+      "bytes": 51,
+      "base_hex": "0x1ffffff68",
+      "end_exclusive_hex": "0x1ffffff9b",
+      "source": "memblock/reserved entry 42",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934496,
+      "end_exclusive": 8589934541,
+      "bytes": 45,
+      "base_hex": "0x1ffffffa0",
+      "end_exclusive_hex": "0x1ffffffcd",
+      "source": "memblock/reserved entry 43",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 8589934544,
+      "end_exclusive": 8589934590,
+      "bytes": 46,
+      "base_hex": "0x1ffffffd0",
+      "end_exclusive_hex": "0x1fffffffe",
+      "source": "memblock/reserved entry 44",
+      "kind": "Linux runtime reservation"
+    },
+    {
+      "base": 2148007936,
+      "end_exclusive": 2185232384,
+      "bytes": 37224448,
+      "base_hex": "0x80080000",
+      "end_exclusive_hex": "0x82400000",
+      "source": "/proc/iomem: Kernel code",
+      "kind": "Linux runtime resource"
+    },
+    {
+      "base": 2191523840,
+      "end_exclusive": 2204704768,
+      "bytes": 13180928,
+      "base_hex": "0x82a00000",
+      "end_exclusive_hex": "0x83692000",
+      "source": "/proc/iomem: Kernel data",
+      "kind": "Linux runtime resource"
+    },
+    {
+      "base": 2247229440,
+      "end_exclusive": 2247233865,
+      "bytes": 4425,
+      "base_hex": "0x85f20000",
+      "end_exclusive_hex": "0x85f21149",
+      "source": "/proc/iomem: c3f000c.qcom,cmd-db",
+      "kind": "Linux runtime resource"
+    },
+    {
+      "base": 2147483648,
+      "end_exclusive": 2238709760,
+      "bytes": 91226112,
+      "base_hex": "0x80000000",
+      "end_exclusive_hex": "0x85700000",
+      "source": "XBL uefiplat.cfg line 10: Kernel",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2244935680,
+      "end_exclusive": 2245001216,
+      "bytes": 65536,
+      "base_hex": "0x85cf0000",
+      "end_exclusive_hex": "0x85d00000",
+      "source": "XBL uefiplat.cfg line 11: Boot Info",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2247229440,
+      "end_exclusive": 2247360512,
+      "bytes": 131072,
+      "base_hex": "0x85f20000",
+      "end_exclusive_hex": "0x85f40000",
+      "source": "XBL uefiplat.cfg line 12: AOP CMD DB",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2248146944,
+      "end_exclusive": 2250244096,
+      "bytes": 2097152,
+      "base_hex": "0x86000000",
+      "end_exclusive_hex": "0x86200000",
+      "source": "XBL uefiplat.cfg line 13: SMEM",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2339373056,
+      "end_exclusive": 2340421632,
+      "bytes": 1048576,
+      "base_hex": "0x8b700000",
+      "end_exclusive_hex": "0x8b800000",
+      "source": "XBL uefiplat.cfg line 14: PIL Reserved",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2340421632,
+      "end_exclusive": 2581594112,
+      "bytes": 241172480,
+      "base_hex": "0x8b800000",
+      "end_exclusive_hex": "0x99e00000",
+      "source": "XBL uefiplat.cfg line 15: PIL Reserved II",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2581594112,
+      "end_exclusive": 2610954240,
+      "bytes": 29360128,
+      "base_hex": "0x99e00000",
+      "end_exclusive_hex": "0x9ba00000",
+      "source": "XBL uefiplat.cfg line 16: DXE Heap",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2610954240,
+      "end_exclusive": 2617245696,
+      "bytes": 6291456,
+      "base_hex": "0x9ba00000",
+      "end_exclusive_hex": "0x9c000000",
+      "source": "XBL uefiplat.cfg line 17: Sched Heap",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2617245696,
+      "end_exclusive": 2654994432,
+      "bytes": 37748736,
+      "base_hex": "0x9c000000",
+      "end_exclusive_hex": "0x9e400000",
+      "source": "XBL uefiplat.cfg line 18: Display Reserved",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2654994432,
+      "end_exclusive": 2670723072,
+      "bytes": 15728640,
+      "base_hex": "0x9e400000",
+      "end_exclusive_hex": "0x9f300000",
+      "source": "XBL uefiplat.cfg line 19: DBI Dump",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2675965952,
+      "end_exclusive": 2678063104,
+      "bytes": 2097152,
+      "base_hex": "0x9f800000",
+      "end_exclusive_hex": "0x9fa00000",
+      "source": "XBL uefiplat.cfg line 20: FV Region",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2678063104,
+      "end_exclusive": 2680160256,
+      "bytes": 2097152,
+      "base_hex": "0x9fa00000",
+      "end_exclusive_hex": "0x9fc00000",
+      "source": "XBL uefiplat.cfg line 21: ABOOT FV",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2680160256,
+      "end_exclusive": 2683305984,
+      "bytes": 3145728,
+      "base_hex": "0x9fc00000",
+      "end_exclusive_hex": "0x9ff00000",
+      "source": "XBL uefiplat.cfg line 22: UEFI FD",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2683305984,
+      "end_exclusive": 2683879424,
+      "bytes": 573440,
+      "base_hex": "0x9ff00000",
+      "end_exclusive_hex": "0x9ff8c000",
+      "source": "XBL uefiplat.cfg line 23: SEC Heap",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2683879424,
+      "end_exclusive": 2683883520,
+      "bytes": 4096,
+      "base_hex": "0x9ff8c000",
+      "end_exclusive_hex": "0x9ff8d000",
+      "source": "XBL uefiplat.cfg line 24: CPU Vectors",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2683883520,
+      "end_exclusive": 2683895808,
+      "bytes": 12288,
+      "base_hex": "0x9ff8d000",
+      "end_exclusive_hex": "0x9ff90000",
+      "source": "XBL uefiplat.cfg line 25: MMU PageTables",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2683895808,
+      "end_exclusive": 2684157952,
+      "bytes": 262144,
+      "base_hex": "0x9ff90000",
+      "end_exclusive_hex": "0x9ffd0000",
+      "source": "XBL uefiplat.cfg line 26: UEFI Stack",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2684317696,
+      "end_exclusive": 2684350464,
+      "bytes": 32768,
+      "base_hex": "0x9fff7000",
+      "end_exclusive_hex": "0x9ffff000",
+      "source": "XBL uefiplat.cfg line 27: Log Buffer",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2684350464,
+      "end_exclusive": 2684354560,
+      "bytes": 4096,
+      "base_hex": "0x9ffff000",
+      "end_exclusive_hex": "0xa0000000",
+      "source": "XBL uefiplat.cfg line 28: Info Blk",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2684354560,
+      "end_exclusive": 2764046336,
+      "bytes": 79691776,
+      "base_hex": "0xa0000000",
+      "end_exclusive_hex": "0xa4c00000",
+      "source": "XBL uefiplat.cfg line 29: MLVM_APSS",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2826960896,
+      "end_exclusive": 2952790016,
+      "bytes": 125829120,
+      "base_hex": "0xa8800000",
+      "end_exclusive_hex": "0xb0000000",
+      "source": "XBL uefiplat.cfg line 30: MLVM_1",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2956984320,
+      "end_exclusive": 3107979264,
+      "bytes": 150994944,
+      "base_hex": "0xb0400000",
+      "end_exclusive_hex": "0xb9400000",
+      "source": "XBL uefiplat.cfg line 31: MLVM",
+      "kind": "Vendor declaration; lifetime unknown"
+    },
+    {
+      "base": 2204762112,
+      "end_exclusive": 2204827648,
+      "bytes": 65536,
+      "base_hex": "0x836a0000",
+      "end_exclusive_hex": "0x836b0000",
+      "source": "diagnostic plan: entry bridge",
+      "kind": "Preserved diagnostic layout"
+    },
+    {
+      "base": 2204827648,
+      "end_exclusive": 2207973376,
+      "bytes": 3145728,
+      "base_hex": "0x836b0000",
+      "end_exclusive_hex": "0x839b0000",
+      "source": "diagnostic plan: new FD capacity",
+      "kind": "Preserved diagnostic layout"
+    },
+    {
+      "base": 2207973376,
+      "end_exclusive": 2208235520,
+      "bytes": 262144,
+      "base_hex": "0x839b0000",
+      "end_exclusive_hex": "0x839f0000",
+      "source": "diagnostic plan: new SEC stack",
+      "kind": "Preserved diagnostic layout"
+    },
+    {
+      "base": 2208235520,
+      "end_exclusive": 2225012736,
+      "bytes": 16777216,
+      "base_hex": "0x839f0000",
+      "end_exclusive_hex": "0x849f0000",
+      "source": "diagnostic plan: new DXE arena including page tables",
+      "kind": "Preserved diagnostic layout"
+    },
+    {
+      "base": 2225012736,
+      "end_exclusive": 2226126848,
+      "bytes": 1114112,
+      "base_hex": "0x849f0000",
+      "end_exclusive_hex": "0x84b00000",
+      "source": "diagnostic plan: new FDT copy capacity",
+      "kind": "Preserved diagnostic layout"
+    },
+    {
+      "base": 2238259200,
+      "end_exclusive": 2238703600,
+      "bytes": 444400,
+      "base_hex": "0x85692000",
+      "end_exclusive_hex": "0x856fe7f0",
+      "source": "/chosen:linux,initrd-start/end",
+      "kind": "Original Android continuation"
+    }
+  ],
+  "structural_unreserved_runs": [
+    {
+      "base": 2245001216,
+      "end_exclusive": 2246049792,
+      "bytes": 1048576,
+      "base_hex": "0x85d00000",
+      "end_exclusive_hex": "0x85e00000"
+    },
+    {
+      "base": 2247360512,
+      "end_exclusive": 2248146944,
+      "bytes": 786432,
+      "base_hex": "0x85f40000",
+      "end_exclusive_hex": "0x86000000"
+    },
+    {
+      "base": 2684157952,
+      "end_exclusive": 2684317696,
+      "bytes": 159744,
+      "base_hex": "0x9ffd0000",
+      "end_exclusive_hex": "0x9fff7000"
+    },
+    {
+      "base": 2952790016,
+      "end_exclusive": 2956984320,
+      "bytes": 4194304,
+      "base_hex": "0xb0000000",
+      "end_exclusive_hex": "0xb0400000"
+    },
+    {
+      "base": 3107979264,
+      "end_exclusive": 3148873728,
+      "bytes": 40894464,
+      "base_hex": "0xb9400000",
+      "end_exclusive_hex": "0xbbb00000"
+    },
+    {
+      "base": 3221225472,
+      "end_exclusive": 3976200192,
+      "bytes": 754974720,
+      "base_hex": "0xc0000000",
+      "end_exclusive_hex": "0xed000000"
+    },
+    {
+      "base": 4290772992,
+      "end_exclusive": 4294930432,
+      "bytes": 4157440,
+      "base_hex": "0xffc00000",
+      "end_exclusive_hex": "0xffff7000"
+    },
+    {
+      "base": 4294963200,
+      "end_exclusive": 4294966272,
+      "bytes": 3072,
+      "base_hex": "0xfffff000",
+      "end_exclusive_hex": "0xfffffc00"
+    },
+    {
+      "base": 4294966336,
+      "end_exclusive": 4294966400,
+      "bytes": 64,
+      "base_hex": "0xfffffc40",
+      "end_exclusive_hex": "0xfffffc80"
+    },
+    {
+      "base": 4294966464,
+      "end_exclusive": 4294966528,
+      "bytes": 64,
+      "base_hex": "0xfffffcc0",
+      "end_exclusive_hex": "0xfffffd00"
+    },
+    {
+      "base": 4294966592,
+      "end_exclusive": 4294966656,
+      "bytes": 64,
+      "base_hex": "0xfffffd40",
+      "end_exclusive_hex": "0xfffffd80"
+    },
+    {
+      "base": 4294966720,
+      "end_exclusive": 4294966784,
+      "bytes": 64,
+      "base_hex": "0xfffffdc0",
+      "end_exclusive_hex": "0xfffffe00"
+    },
+    {
+      "base": 4294966848,
+      "end_exclusive": 4294966912,
+      "bytes": 64,
+      "base_hex": "0xfffffe40",
+      "end_exclusive_hex": "0xfffffe80"
+    },
+    {
+      "base": 4294966976,
+      "end_exclusive": 4294967040,
+      "bytes": 64,
+      "base_hex": "0xfffffec0",
+      "end_exclusive_hex": "0xffffff00"
+    },
+    {
+      "base": 4294967104,
+      "end_exclusive": 4294967168,
+      "bytes": 64,
+      "base_hex": "0xffffff40",
+      "end_exclusive_hex": "0xffffff80"
+    },
+    {
+      "base": 4294967232,
+      "end_exclusive": 8468299776,
+      "bytes": 4173332544,
+      "base_hex": "0xffffffc0",
+      "end_exclusive_hex": "0x1f8c00000"
+    },
+    {
+      "base": 8581545984,
+      "end_exclusive": 8581558272,
+      "bytes": 12288,
+      "base_hex": "0x1ff800000",
+      "end_exclusive_hex": "0x1ff803000"
+    },
+    {
+      "base": 8581562368,
+      "end_exclusive": 8583983104,
+      "bytes": 2420736,
+      "base_hex": "0x1ff804000",
+      "end_exclusive_hex": "0x1ffa53000"
+    },
+    {
+      "base": 8585744384,
+      "end_exclusive": 8585745664,
+      "bytes": 1280,
+      "base_hex": "0x1ffc01000",
+      "end_exclusive_hex": "0x1ffc01500"
+    },
+    {
+      "base": 8585746696,
+      "end_exclusive": 8585746816,
+      "bytes": 120,
+      "base_hex": "0x1ffc01908",
+      "end_exclusive_hex": "0x1ffc01980"
+    },
+    {
+      "base": 8585747840,
+      "end_exclusive": 8585756032,
+      "bytes": 8192,
+      "base_hex": "0x1ffc01d80",
+      "end_exclusive_hex": "0x1ffc03d80"
+    },
+    {
+      "base": 8585757843,
+      "end_exclusive": 8585757952,
+      "bytes": 109,
+      "base_hex": "0x1ffc04493",
+      "end_exclusive_hex": "0x1ffc04500"
+    },
+    {
+      "base": 8585759763,
+      "end_exclusive": 8585759872,
+      "bytes": 109,
+      "base_hex": "0x1ffc04c13",
+      "end_exclusive_hex": "0x1ffc04c80"
+    },
+    {
+      "base": 8585796736,
+      "end_exclusive": 8585796744,
+      "bytes": 8,
+      "base_hex": "0x1ffc0dc80",
+      "end_exclusive_hex": "0x1ffc0dc88"
+    },
+    {
+      "base": 8589930496,
+      "end_exclusive": 8589930880,
+      "bytes": 384,
+      "base_hex": "0x1fffff000",
+      "end_exclusive_hex": "0x1fffff180"
+    },
+    {
+      "base": 8589931040,
+      "end_exclusive": 8589931136,
+      "bytes": 96,
+      "base_hex": "0x1fffff220",
+      "end_exclusive_hex": "0x1fffff280"
+    },
+    {
+      "base": 8589931248,
+      "end_exclusive": 8589931264,
+      "bytes": 16,
+      "base_hex": "0x1fffff2f0",
+      "end_exclusive_hex": "0x1fffff300"
+    },
+    {
+      "base": 8589931584,
+      "end_exclusive": 8589931648,
+      "bytes": 64,
+      "base_hex": "0x1fffff440",
+      "end_exclusive_hex": "0x1fffff480"
+    },
+    {
+      "base": 8589931680,
+      "end_exclusive": 8589931776,
+      "bytes": 96,
+      "base_hex": "0x1fffff4a0",
+      "end_exclusive_hex": "0x1fffff500"
+    },
+    {
+      "base": 8589931784,
+      "end_exclusive": 8589931904,
+      "bytes": 120,
+      "base_hex": "0x1fffff508",
+      "end_exclusive_hex": "0x1fffff580"
+    },
+    {
+      "base": 8589931912,
+      "end_exclusive": 8589932032,
+      "bytes": 120,
+      "base_hex": "0x1fffff588",
+      "end_exclusive_hex": "0x1fffff600"
+    },
+    {
+      "base": 8589933843,
+      "end_exclusive": 8589933888,
+      "bytes": 45,
+      "base_hex": "0x1fffffd13",
+      "end_exclusive_hex": "0x1fffffd40"
+    },
+    {
+      "base": 8589933932,
+      "end_exclusive": 8589933936,
+      "bytes": 4,
+      "base_hex": "0x1fffffd6c",
+      "end_exclusive_hex": "0x1fffffd70"
+    },
+    {
+      "base": 8589933980,
+      "end_exclusive": 8589933984,
+      "bytes": 4,
+      "base_hex": "0x1fffffd9c",
+      "end_exclusive_hex": "0x1fffffda0"
+    },
+    {
+      "base": 8589934028,
+      "end_exclusive": 8589934032,
+      "bytes": 4,
+      "base_hex": "0x1fffffdcc",
+      "end_exclusive_hex": "0x1fffffdd0"
+    },
+    {
+      "base": 8589934079,
+      "end_exclusive": 8589934080,
+      "bytes": 1,
+      "base_hex": "0x1fffffdff",
+      "end_exclusive_hex": "0x1fffffe00"
+    },
+    {
+      "base": 8589934127,
+      "end_exclusive": 8589934128,
+      "bytes": 1,
+      "base_hex": "0x1fffffe2f",
+      "end_exclusive_hex": "0x1fffffe30"
+    },
+    {
+      "base": 8589934175,
+      "end_exclusive": 8589934176,
+      "bytes": 1,
+      "base_hex": "0x1fffffe5f",
+      "end_exclusive_hex": "0x1fffffe60"
+    },
+    {
+      "base": 8589934227,
+      "end_exclusive": 8589934232,
+      "bytes": 5,
+      "base_hex": "0x1fffffe93",
+      "end_exclusive_hex": "0x1fffffe98"
+    },
+    {
+      "base": 8589934283,
+      "end_exclusive": 8589934288,
+      "bytes": 5,
+      "base_hex": "0x1fffffecb",
+      "end_exclusive_hex": "0x1fffffed0"
+    },
+    {
+      "base": 8589934332,
+      "end_exclusive": 8589934336,
+      "bytes": 4,
+      "base_hex": "0x1fffffefc",
+      "end_exclusive_hex": "0x1ffffff00"
+    },
+    {
+      "base": 8589934380,
+      "end_exclusive": 8589934384,
+      "bytes": 4,
+      "base_hex": "0x1ffffff2c",
+      "end_exclusive_hex": "0x1ffffff30"
+    },
+    {
+      "base": 8589934435,
+      "end_exclusive": 8589934440,
+      "bytes": 5,
+      "base_hex": "0x1ffffff63",
+      "end_exclusive_hex": "0x1ffffff68"
+    },
+    {
+      "base": 8589934491,
+      "end_exclusive": 8589934496,
+      "bytes": 5,
+      "base_hex": "0x1ffffff9b",
+      "end_exclusive_hex": "0x1ffffffa0"
+    },
+    {
+      "base": 8589934541,
+      "end_exclusive": 8589934544,
+      "bytes": 3,
+      "base_hex": "0x1ffffffcd",
+      "end_exclusive_hex": "0x1ffffffd0"
+    },
+    {
+      "base": 8589934590,
+      "end_exclusive": 10737418240,
+      "bytes": 2147483650,
+      "base_hex": "0x1fffffffe",
+      "end_exclusive_hex": "0x280000000"
+    }
+  ],
+  "darwin_minimum_window_bytes": 268435456,
+  "darwin_alignment_bytes": 2097152,
+  "actual_macho_kernel_offset_known": false,
+  "candidates": [
+    {
+      "run": {
+        "base": 3221225472,
+        "end_exclusive": 3976200192,
+        "bytes": 754974720,
+        "base_hex": "0xc0000000",
+        "end_exclusive_hex": "0xed000000"
+      },
+      "aligned_example": {
+        "base": 3221225472,
+        "end_exclusive": 3489660928,
+        "bytes": 268435456,
+        "base_hex": "0xc0000000",
+        "end_exclusive_hex": "0xd0000000"
+      },
+      "every_kernel_offset_fits": true,
+      "actual_kernel_physical_base_selected": false
+    },
+    {
+      "run": {
+        "base": 4294967232,
+        "end_exclusive": 8468299776,
+        "bytes": 4173332544,
+        "base_hex": "0xffffffc0",
+        "end_exclusive_hex": "0x1f8c00000"
+      },
+      "aligned_example": {
+        "base": 4294967296,
+        "end_exclusive": 4563402752,
+        "bytes": 268435456,
+        "base_hex": "0x100000000",
+        "end_exclusive_hex": "0x110000000"
+      },
+      "every_kernel_offset_fits": true,
+      "actual_kernel_physical_base_selected": false
+    },
+    {
+      "run": {
+        "base": 8589934590,
+        "end_exclusive": 10737418240,
+        "bytes": 2147483650,
+        "base_hex": "0x1fffffffe",
+        "end_exclusive_hex": "0x280000000"
+      },
+      "aligned_example": {
+        "base": 8589934592,
+        "end_exclusive": 8858370048,
+        "bytes": 268435456,
+        "base_hex": "0x200000000",
+        "end_exclusive_hex": "0x210000000"
+      },
+      "every_kernel_offset_fits": true,
+      "actual_kernel_physical_base_selected": false
+    }
+  ],
+  "cpu_mmfr0_available": false,
+  "firmware_efi_map_available": false,
+  "address_bits_required_by_fdt": 34,
+  "current_diagnostic_arena_bytes": 16777216,
+  "dynamic_fdt_pool_declarations": [
+    {
+      "node": "/reserved-memory/adsp_region",
+      "requested_bytes": 16777216,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/cdsp_region",
+      "requested_bytes": 4194304,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/user_contig_region",
+      "requested_bytes": 16777216,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/qseecom_ta_region",
+      "requested_bytes": 16777216,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/sp_region",
+      "requested_bytes": 8388608,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/secure_display_region",
+      "requested_bytes": 167772160,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/mem_dump_region",
+      "requested_bytes": 37748736,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    },
+    {
+      "node": "/reserved-memory/linux,cma",
+      "requested_bytes": 41943040,
+      "alloc_ranges": [
+        0,
+        0,
+        0,
+        4294967295
+      ],
+      "limitation": "Address selected by Linux, not specified by this property"
+    }
+  ],
+  "boot_enabled": false,
+  "new_uefi_memory_registered": false,
+  "ram_written": false,
+  "hardware_window_access_verified": false,
+  "full_ownership_proven": false,
+  "limitations": [
+    "Linux memblock is sampled after Linux allocations, not at ABL handoff",
+    "Vendor config may be overridden; it does not cover every runtime allocation",
+    "Dynamic pool declarations and DMA lifetimes need separate entry analysis",
+    "An interval fitting the descriptions is not a proof of RAM access or ownership",
+    "Candidate addresses are derived here; no other board configuration is used"
+  ]
+}

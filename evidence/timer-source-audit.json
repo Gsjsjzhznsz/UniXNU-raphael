@@ -1,0 +1,144 @@
+{
+  "passed": true,
+  "fault_qemu_report": "artifacts/sec-dxe-qemu/20261027T225559.719978Z-0_qnbvf0/report.json",
+  "fault_qemu_report_sha256": "e841b4dc88acfae27a798f3708b6c5391df5816bf9bb50fe913aa8adad497b51",
+  "qemu_report": "artifacts/sec-dxe-qemu/20261027T225559.720028Z-abuxbw59/report.json",
+  "qemu_report_sha256": "7ddb7f3a332fbb8abef4e89562d612b1f66c0bc2f338d373c54ad02ff70c5fcc",
+  "compiled_access_object_sha256": "09a9df2328be510632635b87923086f9ecc8458fc72aa6878801e7aff170241c",
+  "actual_register_instructions": [
+    {
+      "hex": "d53be029",
+      "operation": "mrs",
+      "operands": "x9, CNTPCT_EL0"
+    },
+    {
+      "hex": "d51be220",
+      "operation": "msr",
+      "operands": "CNTP_CTL_EL0, x0"
+    },
+    {
+      "hex": "d51be240",
+      "operation": "msr",
+      "operands": "CNTP_CVAL_EL0, x0"
+    }
+  ],
+  "independent_gnu_assembler_matched": true,
+  "physical_timer_msr_count": 2,
+  "physical_counter_mrs_count": 1,
+  "recovery_site_count": 3,
+  "recovery_table_bytes": 48,
+  "gic_accesses_in_source_test": false,
+  "virtual_timer_writes": false,
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "include/clocksource/arm_arch_timer.h",
+      "sha256": "a5754b30b7941030797b973c49ba8874592855bc79f8280dbc706866c9598d95",
+      "anchors": {
+        "#define ARCH_TIMER_CTRL_ENABLE\t\t(1 << 0)": [
+          26
+        ],
+        "#define ARCH_TIMER_CTRL_IT_MASK\t\t(1 << 1)": [
+          27
+        ],
+        "#define ARCH_TIMER_CTRL_IT_STAT\t\t(1 << 2)": [
+          28
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "arch/arm64/include/asm/arch_timer.h",
+      "sha256": "b6c0b09de6895773e4a3eb1e8590edb99aca07087822ceb7f1e87e2283de99a0",
+      "anchors": {
+        "write_sysreg(val, cntp_ctl_el0);": [
+          92
+        ],
+        "read_sysreg(cntp_ctl_el0);": [
+          118
+        ],
+        "isb();": [
+          109,
+          160
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "arch/arm64/include/asm/sysreg.h",
+      "sha256": "0357803843478b179761df9d84eac13da1cd941bc00da7a9925247e34d3d1111",
+      "anchors": {
+        "#define Op0_shift\t19": [
+          35
+        ],
+        "#define Op1_shift\t16": [
+          37
+        ],
+        "#define CRn_shift\t12": [
+          39
+        ],
+        "#define CRm_shift\t8": [
+          41
+        ],
+        "#define Op2_shift\t5": [
+          43
+        ]
+      }
+    }
+  ],
+  "commands": [
+    [
+      "aarch64-linux-gnu-as",
+      "-o",
+      "/home/guo/work/raphael-fresh/artifacts/timer-source-audit/20261027T225841.628345Z-gbaecnl6/timer-access.o",
+      "/home/guo/work/raphael-fresh/artifacts/timer-source-audit/20261027T225841.628345Z-gbaecnl6/timer-access.S"
+    ],
+    [
+      "aarch64-linux-gnu-objcopy",
+      "-O",
+      "binary",
+      "--only-section=.text",
+      "/home/guo/work/raphael-fresh/artifacts/timer-source-audit/20261027T225841.628345Z-gbaecnl6/timer-access.o",
+      "/home/guo/work/raphael-fresh/artifacts/timer-source-audit/20261027T225841.628345Z-gbaecnl6/timer-access.bin"
+    ]
+  ],
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerSource.c",
+      "sha256": "db9c9a11d676cf94c2623ee959a3da7e566e3ace17f1a80cf5d693a5a746628a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerSourceAdapter.c",
+      "sha256": "64282448f36b19c65545527b5525d78d5189a986d12a445c392b6f8eab2c369b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerAccess.S",
+      "sha256": "19a8ee26b4c415b3a420dc28f08819f1b798721f7654eecae2da6e2492e5b297"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "41433cf016dfac278037706407cc6eb637c64c3623825ecd85e86765cbe076a4"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerSource.h",
+      "sha256": "62da8690a73c9782fb42519d4838fbf17dbd9e0c103bfdefd26928f6680265cf"
+    }
+  ],
+  "decoder_sha256": "65ea94dd5aec38fe8b630f4a459df0511536c63126d80f117c61267dc7c377ca",
+  "design": {
+    "expiration_seconds": "1/100",
+    "timeout_seconds": "1/10",
+    "max_polls": 1000000,
+    "irq_masked": true,
+    "timer_enabled_only_with_imask": true
+  },
+  "handset_executed": false,
+  "limits": [
+    "Normal QEMU verifies actual CNTP writes/expiration/restoration",
+    "Fault QEMU uses an ABI-controlled UDF to simulate one failed CTL write after an actual CVAL change; not a real trapped MSR",
+    "No IRQ delivery or GIC takeover established"
+  ]
+}

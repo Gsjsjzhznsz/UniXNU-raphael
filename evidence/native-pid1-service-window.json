@@ -1,0 +1,32 @@
+{
+  "failed_report": "evidence/private/android-return-run/20261101T025627Z/report.json",
+  "failed_experiment_passed": false,
+  "failed_nonce_matched": false,
+  "failed_xnu_executed": null,
+  "failed_cleanup_verified": true,
+  "cause_confirmed": false,
+  "host_fdt_capacity_report": "artifacts/session-logs/20261101-window10-fdt-capacity.json",
+  "source_defect": "Controller read holds gate through the entire client count. Diagnostic quiesce takes that same gate and cannot request a bounded handback before the large read finishes.",
+  "candidate": "Publish terminal diagnostic shutdown before locking. Read exits at the next verified 16KiB chunk boundary with kIOReturnAborted and actual completed bytes, then quiesce retains all DMA restoration checks.",
+  "changed_variable": "Terminal storage diagnostic handback; ten-second observer, twenty-second watchdog and hardware resources unchanged.",
+  "expected_positive": "Matching checkpoint and recovery record returns; diagnostic abort count and stop/quiesced physical counters show an interrupted large read and bounded handback.",
+  "expected_negative": "No matching native record or a new independent exception; do not rerun the same image.",
+  "desktop_verified": false,
+  "handset_report": "evidence/private/android-return-run/20261101T030853Z/report.json",
+  "handset_passed": true,
+  "cleanup_verified": true,
+  "observer_limit_ms": 10000,
+  "diagnostic_aborts": 1,
+  "quiesce_ms": 5.017864583333333,
+  "storage_requests": 2141,
+  "storage_bytes": 30647296,
+  "storage_hardware_failures": 0,
+  "syscall_entries": 22,
+  "latest_syscall": {
+    "code": 92,
+    "command": 97,
+    "error": 16,
+    "scope": "terminal diagnostic intentionally aborted the in-flight read; not an independently occurring launchd error"
+  },
+  "next_changed_variable": "Explicit native watchdog readback/restore budget 20 to 90 seconds; original ten-second observer and exact frozen kernel/payload retained. A subsequent experiment can extend observation after this passes."
+}

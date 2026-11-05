@@ -1,0 +1,40 @@
+{
+  "kind": "human observation matched to handset diagnostic",
+  "attempt": "UniXNU-raphael/evidence/sec-dxe-attempt-20261027T214935Z.json",
+  "source_revision": "b2e774c2fd940468611ff15c130ddb740cde7f55",
+  "image_sha256": "f563406025dc3ab3037eb0a46d44d09694ee08d03d7c592935b57ddf4b6799bf",
+  "private_run": "evidence/private/sec-dxe-run/20261027T214935Z",
+  "human_responses": [
+    "无任何异常",
+    "只按了音量下三次"
+  ],
+  "menu_visibility_reported": true,
+  "physical_key_test": {
+    "up": "not tested",
+    "down": "three presses; matches three SCAN_DOWN events",
+    "power": "not tested"
+  },
+  "device_events": {
+    "up": 0,
+    "down": 3,
+    "enter": 0
+  },
+  "exit_reason": "40-second automatic timeout",
+  "framebuffer_restored_pixels": 2527200,
+  "framebuffer_restore_mismatches": 0,
+  "firmware_checkpoint_passed": true,
+  "android_boot_completed": true,
+  "boot_partition_unchanged": true,
+  "root_verified": true,
+  "cleanup": {
+    "private_run": "evidence/private/entry-probe-cleanup/20261027T215236Z",
+    "normal_android_reboot": true,
+    "recovery_audit_without_extra_reboot": false,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "transient_probe_absent": true,
+    "fdt_sha256": "4c648d04b79857edc7445dfa1c3a40d0820381fb3f6f9d2059dc47dd7c0bc243",
+    "flash_or_restore_performed": false
+  }
+}

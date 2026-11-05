@@ -1,0 +1,1074 @@
+{
+  "kind": "minimal SEC/DXE diagnostic on handset; incomplete UEFI platform",
+  "fastboot_boot_accepted": true,
+  "android_boot_completed": true,
+  "image_sha256": "b535b123ef7ba3fc357ea8aa9c897d4e128e30ce7120e88726216f0b914da45c",
+  "firmware_sha256": "6f0c63d4028d8e04385de7056252f4085ef8f5bdca9635d9e66f06873e0a7c9e",
+  "identifier": "raphael-sec-dxe-v1-464f9d13a629473f86f45737b6a94b9f",
+  "used_flash_or_erase": false,
+  "requested_stop_stage": 2,
+  "full_uefi_platform": false,
+  "display_or_keys_validated": false,
+  "boot_partition_unchanged": true,
+  "sec_dxe_stage_verified": 2,
+  "root_verified": true,
+  "nonce_matched": true,
+  "result_record_found": true,
+  "sec_dxe_diagnostic_passed": false,
+  "firmware_checkpoint_passed": true,
+  "display_probe": {
+    "version": 2,
+    "status": 7,
+    "status_name": "collected",
+    "sample_count": 149,
+    "samples": [
+      {
+        "address": 1093644,
+        "address_hex": "0x10b00c",
+        "value": 2147483651,
+        "value_hex": "0x80000003"
+      },
+      {
+        "address": 183513088,
+        "address_hex": "0xaf03000",
+        "value": 4163039232,
+        "value_hex": "0xf822f000"
+      },
+      {
+        "address": 183509120,
+        "address_hex": "0xaf02080",
+        "value": 1,
+        "value_hex": "0x1"
+      },
+      {
+        "address": 183509004,
+        "address_hex": "0xaf0200c",
+        "value": 545,
+        "value_hex": "0x221"
+      },
+      {
+        "address": 182452224,
+        "address_hex": "0xae00000",
+        "value": 1342177281,
+        "value_hex": "0x50000001"
+      },
+      {
+        "address": 182472704,
+        "address_hex": "0xae05000",
+        "value": 153355320,
+        "value_hex": "0x9240438"
+      },
+      {
+        "address": 182472712,
+        "address_hex": "0xae05008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182472716,
+        "address_hex": "0xae0500c",
+        "value": 153355320,
+        "value_hex": "0x9240438"
+      },
+      {
+        "address": 182472720,
+        "address_hex": "0xae05010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182472724,
+        "address_hex": "0xae05014",
+        "value": 2617245696,
+        "value_hex": "0x9c000000"
+      },
+      {
+        "address": 182472728,
+        "address_hex": "0xae05018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182472732,
+        "address_hex": "0xae0501c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182472736,
+        "address_hex": "0xae05020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182472740,
+        "address_hex": "0xae05024",
+        "value": 4320,
+        "value_hex": "0x10e0"
+      },
+      {
+        "address": 182472744,
+        "address_hex": "0xae05028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182472752,
+        "address_hex": "0xae05030",
+        "value": 145407,
+        "value_hex": "0x237ff"
+      },
+      {
+        "address": 182472756,
+        "address_hex": "0xae05034",
+        "value": 50462721,
+        "value_hex": "0x3020001"
+      },
+      {
+        "address": 182472760,
+        "address_hex": "0xae05038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182472816,
+        "address_hex": "0xae05070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182473072,
+        "address_hex": "0xae05170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182473076,
+        "address_hex": "0xae05174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182473080,
+        "address_hex": "0xae05178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182473084,
+        "address_hex": "0xae0517c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182480896,
+        "address_hex": "0xae07000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480904,
+        "address_hex": "0xae07008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480908,
+        "address_hex": "0xae0700c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480912,
+        "address_hex": "0xae07010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480916,
+        "address_hex": "0xae07014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480920,
+        "address_hex": "0xae07018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480924,
+        "address_hex": "0xae0701c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480928,
+        "address_hex": "0xae07020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480932,
+        "address_hex": "0xae07024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480936,
+        "address_hex": "0xae07028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480944,
+        "address_hex": "0xae07030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480948,
+        "address_hex": "0xae07034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182480952,
+        "address_hex": "0xae07038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182481008,
+        "address_hex": "0xae07070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182481264,
+        "address_hex": "0xae07170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182481268,
+        "address_hex": "0xae07174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182481272,
+        "address_hex": "0xae07178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182481276,
+        "address_hex": "0xae0717c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182489088,
+        "address_hex": "0xae09000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489096,
+        "address_hex": "0xae09008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489100,
+        "address_hex": "0xae0900c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489104,
+        "address_hex": "0xae09010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489108,
+        "address_hex": "0xae09014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489112,
+        "address_hex": "0xae09018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489116,
+        "address_hex": "0xae0901c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489120,
+        "address_hex": "0xae09020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489124,
+        "address_hex": "0xae09024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489128,
+        "address_hex": "0xae09028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489136,
+        "address_hex": "0xae09030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489140,
+        "address_hex": "0xae09034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489144,
+        "address_hex": "0xae09038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182489200,
+        "address_hex": "0xae09070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489456,
+        "address_hex": "0xae09170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489460,
+        "address_hex": "0xae09174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489464,
+        "address_hex": "0xae09178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182489468,
+        "address_hex": "0xae0917c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182497280,
+        "address_hex": "0xae0b000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497288,
+        "address_hex": "0xae0b008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497292,
+        "address_hex": "0xae0b00c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497296,
+        "address_hex": "0xae0b010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497300,
+        "address_hex": "0xae0b014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497304,
+        "address_hex": "0xae0b018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497308,
+        "address_hex": "0xae0b01c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497312,
+        "address_hex": "0xae0b020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497316,
+        "address_hex": "0xae0b024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497320,
+        "address_hex": "0xae0b028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497328,
+        "address_hex": "0xae0b030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497332,
+        "address_hex": "0xae0b034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497336,
+        "address_hex": "0xae0b038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182497392,
+        "address_hex": "0xae0b070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497648,
+        "address_hex": "0xae0b170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497652,
+        "address_hex": "0xae0b174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497656,
+        "address_hex": "0xae0b178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182497660,
+        "address_hex": "0xae0b17c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182603776,
+        "address_hex": "0xae25000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603784,
+        "address_hex": "0xae25008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603788,
+        "address_hex": "0xae2500c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603792,
+        "address_hex": "0xae25010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603796,
+        "address_hex": "0xae25014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603800,
+        "address_hex": "0xae25018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603804,
+        "address_hex": "0xae2501c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603808,
+        "address_hex": "0xae25020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603812,
+        "address_hex": "0xae25024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603816,
+        "address_hex": "0xae25028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603824,
+        "address_hex": "0xae25030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603828,
+        "address_hex": "0xae25034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182603832,
+        "address_hex": "0xae25038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182603888,
+        "address_hex": "0xae25070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182604144,
+        "address_hex": "0xae25170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182604148,
+        "address_hex": "0xae25174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182604152,
+        "address_hex": "0xae25178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182604156,
+        "address_hex": "0xae2517c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182611968,
+        "address_hex": "0xae27000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182611976,
+        "address_hex": "0xae27008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182611980,
+        "address_hex": "0xae2700c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182611984,
+        "address_hex": "0xae27010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182611988,
+        "address_hex": "0xae27014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182611992,
+        "address_hex": "0xae27018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182611996,
+        "address_hex": "0xae2701c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612000,
+        "address_hex": "0xae27020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612004,
+        "address_hex": "0xae27024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612008,
+        "address_hex": "0xae27028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612016,
+        "address_hex": "0xae27030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612020,
+        "address_hex": "0xae27034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612024,
+        "address_hex": "0xae27038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182612080,
+        "address_hex": "0xae27070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612336,
+        "address_hex": "0xae27170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612340,
+        "address_hex": "0xae27174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612344,
+        "address_hex": "0xae27178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182612348,
+        "address_hex": "0xae2717c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182620160,
+        "address_hex": "0xae29000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620168,
+        "address_hex": "0xae29008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620172,
+        "address_hex": "0xae2900c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620176,
+        "address_hex": "0xae29010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620180,
+        "address_hex": "0xae29014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620184,
+        "address_hex": "0xae29018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620188,
+        "address_hex": "0xae2901c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620192,
+        "address_hex": "0xae29020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620196,
+        "address_hex": "0xae29024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620200,
+        "address_hex": "0xae29028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620208,
+        "address_hex": "0xae29030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620212,
+        "address_hex": "0xae29034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620216,
+        "address_hex": "0xae29038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182620272,
+        "address_hex": "0xae29070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620528,
+        "address_hex": "0xae29170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620532,
+        "address_hex": "0xae29174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620536,
+        "address_hex": "0xae29178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182620540,
+        "address_hex": "0xae2917c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182628352,
+        "address_hex": "0xae2b000",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628360,
+        "address_hex": "0xae2b008",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628364,
+        "address_hex": "0xae2b00c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628368,
+        "address_hex": "0xae2b010",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628372,
+        "address_hex": "0xae2b014",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628376,
+        "address_hex": "0xae2b018",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628380,
+        "address_hex": "0xae2b01c",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628384,
+        "address_hex": "0xae2b020",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628388,
+        "address_hex": "0xae2b024",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628392,
+        "address_hex": "0xae2b028",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628400,
+        "address_hex": "0xae2b030",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628404,
+        "address_hex": "0xae2b034",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628408,
+        "address_hex": "0xae2b038",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      },
+      {
+        "address": 182628464,
+        "address_hex": "0xae2b070",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628720,
+        "address_hex": "0xae2b170",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628724,
+        "address_hex": "0xae2b174",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628728,
+        "address_hex": "0xae2b178",
+        "value": 0,
+        "value_hex": "0x0"
+      },
+      {
+        "address": 182628732,
+        "address_hex": "0xae2b17c",
+        "value": 2147483648,
+        "value_hex": "0x80000000"
+      }
+    ],
+    "programmed_pipes": [
+      {
+        "index": 0,
+        "type": "vig",
+        "register_base": 182472704,
+        "source_width": 1080,
+        "source_height": 2340,
+        "output_width": 1080,
+        "output_height": 2340,
+        "source_xy": 0,
+        "output_xy": 0,
+        "plane_address_registers": [
+          2617245696,
+          0,
+          0,
+          0
+        ],
+        "stride0": 4320,
+        "stride1": 0,
+        "source_format": 145407,
+        "unpack_pattern": 50462721,
+        "op_mode": 2147483648,
+        "fetch_mode": 0,
+        "bytes_per_pixel": 4,
+        "multirect_opmode": 0,
+        "secure_address_status": 0,
+        "active_scanout_proven": false,
+        "framebuffer_physical_mapping_proven": false
+      }
+    ],
+    "gates_and_read_sequence_verified": true,
+    "hardware_revision": 1342177281,
+    "gop_validated": false,
+    "framebuffer_writes": false,
+    "limitations": [
+      "Programmed pipes can be stale; active routing and command-mode refresh are not proven",
+      "Address register values are not a general physical mapping or ownership grant",
+      "No display, power, clock, SMMU or pixel-buffer register is written"
+    ]
+  },
+  "entry": {
+    "x0_fdt": 2236157952,
+    "x1": 0,
+    "x2": 0,
+    "x3": 0,
+    "lr": 10669637192,
+    "sp": 2611126016,
+    "current_el": 4,
+    "sctlr": 12584968,
+    "daif": 448,
+    "cntfrq": 19200000,
+    "counter": 262886454,
+    "mpidr": 2164260864,
+    "vbar": 2680176640,
+    "tpidr": 0,
+    "tcr": 23630722320,
+    "ttbr0": 2683432960,
+    "ttbr1": 0,
+    "mair": 4290462720,
+    "cpacr": 3145728,
+    "image_base": 2148007936,
+    "original_image_size": 56696832,
+    "original_entry": 37224448,
+    "original_instruction": 344850432,
+    "fdt_copy": 2225012736,
+    "extent_base": 2204762112,
+    "extent_end": 2226126848,
+    "finish": 2204839984,
+    "stage": 2,
+    "status": 0,
+    "magic": 5134465607798899026,
+    "mmu_sctlr": 0,
+    "page_table": 0,
+    "page_table_root_bytes": 0,
+    "esr": 0,
+    "elr": 0,
+    "far": 0,
+    "system_table_signature": 0,
+    "boot_services_signature": 0,
+    "system_table_crc_ok": 0,
+    "boot_services_crc_ok": 0,
+    "map_key": 0,
+    "map_bytes": 0,
+    "descriptor_size": 0,
+    "descriptor_version": 0,
+    "map_violations": 0,
+    "allocation_probe_ok": 0,
+    "log_bytes": 100,
+    "log_dropped": 0
+  },
+  "entry_hex": {
+    "x0_fdt": "0x85491000",
+    "x1": "0x0",
+    "x2": "0x0",
+    "x3": "0x0",
+    "lr": "0x27bf5be48",
+    "sp": "0x9ba29f00",
+    "current_el": "0x4",
+    "sctlr": "0xc00808",
+    "daif": "0x1c0",
+    "cntfrq": "0x124f800",
+    "counter": "0xfab5436",
+    "mpidr": "0x81000000",
+    "vbar": "0x9fc04000",
+    "tpidr": "0x0",
+    "tcr": "0x580803510",
+    "ttbr0": "0x9ff1f000",
+    "ttbr1": "0x0",
+    "mair": "0xffbb4400",
+    "cpacr": "0x300000",
+    "image_base": "0x80080000",
+    "original_image_size": "0x3612000",
+    "original_entry": "0x2380000",
+    "original_instruction": "0x148e0000",
+    "fdt_copy": "0x849f0000",
+    "extent_base": "0x836a0000",
+    "extent_end": "0x84b00000",
+    "finish": "0x836b3030",
+    "stage": "0x2",
+    "status": "0x0",
+    "magic": "0x4741494448504152",
+    "mmu_sctlr": "0x0",
+    "page_table": "0x0",
+    "page_table_root_bytes": "0x0",
+    "esr": "0x0",
+    "elr": "0x0",
+    "far": "0x0",
+    "system_table_signature": "0x0",
+    "boot_services_signature": "0x0",
+    "system_table_crc_ok": "0x0",
+    "boot_services_crc_ok": "0x0",
+    "map_key": "0x0",
+    "map_bytes": "0x0",
+    "descriptor_size": "0x0",
+    "descriptor_version": "0x0",
+    "map_violations": "0x0",
+    "allocation_probe_ok": "0x0",
+    "log_bytes": "0x64",
+    "log_dropped": "0x0"
+  },
+  "decoded_memory_map": [],
+  "independently_checked_map_violations": 0,
+  "result": "Nonce-matched checkpoint and Android return verified",
+  "source": "new diagnostic FV plus nonce-matched Android FDT readback",
+  "private_build": "evidence/private/sec-dxe-build/20261027T154911Z",
+  "private_readback": "evidence/private/sec-dxe-run/20261027T154955Z",
+  "fdt_sha256": "b23263cb21e2da2a235328e1efbcf2c075a6e3a86629d02985f7d32a422e5014",
+  "log_sha256": "0735676b5f07e425ea8a0524713694f2f1e0e3e04a1b3fa8ef05270d9325a91c",
+  "map_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "limits": [
+    "Only checkpoint stage 2 is verified by this specific run",
+    "No claim of full UEFI compliance, complete vendor memory ownership or whole-arena RAM testing",
+    "GOP, menu, physical keys, DarwinBoot and XNU are not executed"
+  ]
+}

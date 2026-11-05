@@ -1,0 +1,327 @@
+{
+  "scope": "Current Android FDT resource declaration only; not native readiness",
+  "controller": {
+    "node": "/soc/ufshc@1d84000",
+    "compatible": [
+      "qcom,ufshc"
+    ],
+    "registers": [
+      {
+        "base": 30949376,
+        "bytes": 9472,
+        "source": "/soc/ufshc@1d84000:reg"
+      },
+      {
+        "base": 30998528,
+        "bytes": 32768,
+        "source": "/soc/ufshc@1d84000:reg"
+      }
+    ],
+    "properties": {
+      "lanes-per-direction": "00000002",
+      "freq-table-hz": "023c346011e1a30000000000000000000000000000000000023c346011e1a300023c346011e1a3000000000000000000000000000000000000000000000000000000000000000000",
+      "vcc-supply": "000004b6",
+      "vcc-voltage-level": "002d0370002d2a80",
+      "vccq2-supply": "000004af",
+      "vcc-max-microamp": "000b71b0",
+      "vccq2-max-microamp": "000b71b0"
+    }
+  },
+  "register_names": [
+    "ufs_mem",
+    "ufs_ice"
+  ],
+  "interrupt_cells": [
+    0,
+    265,
+    0
+  ],
+  "interrupt_source": "/soc/ufshc@1d84000:interrupts",
+  "clocks": [
+    {
+      "name": "core_clk",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        157
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "bus_aggr_clk",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        3
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "iface_clk",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        156
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "core_clk_unipro",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        169
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "core_clk_ice",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        160
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "ref_clk",
+      "provider": {
+        "node": "/soc/qcom,rpmhclk",
+        "compatible": [
+          "qcom,rpmh-clk-sm8150"
+        ],
+        "registers": []
+      },
+      "arguments": [
+        0
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "tx_lane0_sync_clk",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        168
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "rx_lane0_sync_clk",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        166
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    },
+    {
+      "name": "rx_lane1_sync_clk",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        167
+      ],
+      "source": "/soc/ufshc@1d84000:clocks"
+    }
+  ],
+  "phys": [
+    {
+      "name": "ufsphy",
+      "provider": {
+        "node": "/soc/ufsphy_mem@1d87000",
+        "compatible": [
+          "qcom,ufs-phy-qmp-v4"
+        ],
+        "registers": [
+          {
+            "base": 30961664,
+            "bytes": 3496,
+            "source": "/soc/ufsphy_mem@1d87000:reg"
+          }
+        ]
+      },
+      "arguments": [],
+      "source": "/soc/ufshc@1d84000:phys"
+    }
+  ],
+  "resets": [
+    {
+      "name": "core_reset",
+      "provider": {
+        "node": "/soc/qcom,gcc",
+        "compatible": [
+          "qcom,gcc-sm8150-v2",
+          "syscon"
+        ],
+        "registers": [
+          {
+            "base": 1048576,
+            "bytes": 2031616,
+            "source": "/soc/qcom,gcc:reg"
+          }
+        ]
+      },
+      "arguments": [
+        25
+      ],
+      "source": "/soc/ufshc@1d84000:resets"
+    }
+  ],
+  "supplies": [
+    {
+      "name": "vdd-hba-supply",
+      "provider": {
+        "node": "/soc/qcom,gdsc@0x177004",
+        "compatible": [
+          "qcom,gdsc"
+        ],
+        "registers": [
+          {
+            "base": 1536004,
+            "bytes": 4,
+            "source": "/soc/qcom,gdsc@0x177004:reg"
+          }
+        ]
+      },
+      "source": "/soc/ufshc@1d84000:vdd-hba-supply"
+    },
+    {
+      "name": "vcc-supply",
+      "provider": {
+        "node": "/soc/rpmh-regulator-ldoa10/regulator-pm8150-l10",
+        "compatible": [],
+        "registers": []
+      },
+      "source": "/soc/ufshc@1d84000:vcc-supply"
+    },
+    {
+      "name": "vccq2-supply",
+      "provider": {
+        "node": "/soc/regulator-pm8150-s4",
+        "compatible": [
+          "qcom,stub-regulator"
+        ],
+        "registers": []
+      },
+      "source": "/soc/ufshc@1d84000:vccq2-supply"
+    },
+    {
+      "name": "qcom,vddp-ref-clk-supply",
+      "provider": {
+        "node": "/soc/rpmh-regulator-ldoa9/regulator-pm8150-l9",
+        "compatible": [],
+        "registers": []
+      },
+      "source": "/soc/ufshc@1d84000:qcom,vddp-ref-clk-supply"
+    }
+  ],
+  "iommus_declared": false,
+  "unknown": [
+    "UFS stream ID/routing and cold initialization ownership",
+    "Native DMA visibility and controller takeover",
+    "Root/Data allocation and write recovery policy"
+  ],
+  "input": "evidence/private/ufs-readonly/20261030T224241Z/live.dtb",
+  "primary_source": {
+    "name": "Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "path": "arch/arm64/boot/dts/qcom/sm8150.dtsi"
+  }
+}

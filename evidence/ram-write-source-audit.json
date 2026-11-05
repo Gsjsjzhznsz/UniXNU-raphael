@@ -1,0 +1,67 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T064119.192965Z-lnm4fiii/report.json",
+  "qemu_report_sha256": "151d524b5360749dc831bc16ff18bce2a3459937bdc96eb1a68f4f8b4267bf7e",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamReadAdapter.c",
+      "sha256": "16add0aa20ad2e2c85314327ab912b90e2bacbd67df962f6add31057836df728"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamWriteCheckpoint.S",
+      "sha256": "a9549c4d0c90985a685a4f83c6d5e86180b93786914f67fa6d6961a82e0f301d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "88f6163e953a322d14983b9d76bb6c15860d165e1caee912002e6e0da90559e8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelRamWriteLib/RamWrite.c",
+      "sha256": "8858c1caece0da74fd51c6a87469d1e59bf13c4e0aac99780580ca62d68f99d0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelRamWriteLib.h",
+      "sha256": "37d59c6ae900897114d0f7a30182d2d0c6986588163027a57298c266dad35044"
+    }
+  ],
+  "decoder_sha256": "5967f93e75148e69bc09e97773bb7e97d49913aa312b3c35fcd9ce11711762a5",
+  "store": {
+    "function_rva": 23600,
+    "store_rva": 23632,
+    "store_opcode": 4177527476,
+    "single_64bit_store_only": true,
+    "no_load_from_candidate": true,
+    "barriers": [
+      "dsb sy before store",
+      "dsb sy after store"
+    ],
+    "checkpoint_write_attempt": 257,
+    "checkpoint_is_nop": true,
+    "instruction_count": 19
+  },
+  "result_storage": [
+    {
+      "symbol": "mRamWrite",
+      "bytes": 232,
+      "rva": 61440,
+      "physical_address": 1074466816,
+      "fd_offset": 69632,
+      "materialized_zero_data": true
+    },
+    {
+      "symbol": "mRamBackup",
+      "bytes": 4096,
+      "rva": 61680,
+      "physical_address": 1074467056,
+      "fd_offset": 69872,
+      "materialized_zero_data": true
+    }
+  ],
+  "partial_page_udf_recovery_verified": true,
+  "real_data_abort_verified": false,
+  "handset_executed": false
+}

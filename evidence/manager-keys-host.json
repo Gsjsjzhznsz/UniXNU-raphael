@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "case_count": 29,
+  "cases": [
+    "same-run physical Up Down Enter",
+    "reject deadline=6100",
+    "reject frequency=1000",
+    "reject console=1",
+    "reject uninstall=1",
+    "reject close=1",
+    "reject ticks=2000",
+    "reject ticks=3000",
+    "reject scan=1",
+    "reject unicode=13",
+    "reject automatic=0 ticks=3000",
+    "reject 1/1/1/0/0/3",
+    "reject booting 0",
+    "reject missing summary",
+    "reject duplicate summary",
+    "reject log after manager returned",
+    "reject wrong frequency",
+    "reject wire events",
+    "reject wire errors",
+    "reject wire pressed mask",
+    "reject wire released mask",
+    "reject insufficient driver read calls",
+    "reject DXE key logs in SEC phase",
+    "automatic deadline after physical Up is not physical Enter",
+    "reject automatic key mislabeled physical",
+    "upstream timeout without invented keys",
+    "reject early timeout",
+    "SEC2 never executed keys",
+    "MMU3 never executed keys"
+  ],
+  "decoder_sha256": "9f265459ca5084fd2e8b5285ea38fef53344574e231b2889aa25cda5f6898373",
+  "source_inputs": [
+    {
+      "path": "scripts/manager_keys.py",
+      "sha256": "9f265459ca5084fd2e8b5285ea38fef53344574e231b2889aa25cda5f6898373"
+    },
+    {
+      "path": "scripts/validate_manager_keys.py",
+      "sha256": "06ddd9001c3add05858af9d7f7185a41de1bd17acfdb997b8e2a0317c3b21190"
+    }
+  ],
+  "handset_executed": false
+}

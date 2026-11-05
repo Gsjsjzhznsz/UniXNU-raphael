@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "QEMU headless diagnostic gate; not handset or desktop evidence",
+  "build_report": "artifacts/native-bootstrap-attempt/20261101T195621Z/report.json",
+  "prelink": "artifacts/desktop-prelink/20261101T200044Z/inspection.json",
+  "qemu_report": "artifacts/native-staging-qemu/20261101T200137.301159Z-80qhftuu/report.json",
+  "pass_count": 39,
+  "bounded_service_snapshot_verified": true,
+  "original_kernel_thread_stack_capture_verified": true,
+  "inherited_display_headless_branch_verified": true,
+  "rootless_process_absence_expected": true,
+  "handset_verified": false,
+  "desktop_verified": false
+}

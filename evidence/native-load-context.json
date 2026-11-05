@@ -1,0 +1,17 @@
+{
+  "kind": "handset original load_context entry before first context switch",
+  "handset": "evidence/private/android-return-run/20261030T193657Z/report.json",
+  "host_build": "evidence/private/android-return-build/20261030T193328.173617Z-t9lk8j68/report.json",
+  "qemu": "artifacts/native-staging-qemu/20261030T193207.554817Z-4ghee1a5/report.json",
+  "handset_passed": true,
+  "checkpoint": "0xfffffff0072d488c",
+  "lr": "0xfffffff0072d4200",
+  "interrupted_sp": "0xfffffff007bbfed0",
+  "delta_bytes": 358872,
+  "wall_seconds_to_android": 100.7613116959983,
+  "vm_bootstrap_returned": true,
+  "sched_init_returned": true,
+  "first_thread_context_switched": false,
+  "normal_xnu_irq_verified": false,
+  "desktop_verified": false
+}

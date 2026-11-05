@@ -1,0 +1,112 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "UniXNU/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Ui.c",
+      "sha256": "7f5a2773424a5a8cc68c12d061744ffd80c2847aa6595625740f41e0b5ea6792",
+      "anchors": {
+        "UniXNUUiInit": [
+          648
+        ],
+        "UniXNUUiDrawFrame": [
+          702
+        ],
+        "EfiBltVideoFill": [
+          49
+        ],
+        "EfiBltBufferToVideo": [
+          128,
+          378,
+          763
+        ]
+      }
+    },
+    {
+      "repository": "UniXNU/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Internal.h",
+      "sha256": "7acdc37f8c5540bf0df24797bb04ca09dc111414e75c72e8d2ee5f3843a34faf",
+      "anchors": {
+        "UniXNUUiInit": [
+          539
+        ],
+        "UniXNUMenuRun": [
+          582,
+          594
+        ]
+      }
+    },
+    {
+      "repository": "UniXNU/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Menu.c",
+      "sha256": "55584eaae32fab3c25afe390c785310f7769512a17d5b84c7b7be43d3d50ec5b",
+      "anchors": {
+        "SetTimer": [
+          162,
+          245
+        ],
+        "WaitForEvent": [
+          181,
+          448
+        ]
+      }
+    },
+    {
+      "repository": "UniXNU/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Font.c",
+      "sha256": "391c7dbc8c6eb3cd07230e3dd8d38e4ba8a5a9b603bcaecb4d8e62a4603d2ac6",
+      "anchors": {
+        "gCaFontGlyphs": [
+          14
+        ]
+      }
+    },
+    {
+      "repository": "UniXNU/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Logo.c",
+      "sha256": "da9d49c502f42c489742d2abaa8a300db1c265b0fcf807e4d7bd3d8aa8a9e4a1",
+      "anchors": {
+        "UniXNULogoRender": [
+          106
+        ]
+      }
+    }
+  ],
+  "positive_fixtures": [
+    {
+      "path": "artifacts/menu-fixture-qemu/20261027T192105Z/report.json",
+      "sha256": "fc53a75c14cd623352dec0742a045b3d84fc38757ad8c1b4c6151caf78b3e75e",
+      "geometry": [
+        [
+          "1280",
+          "800"
+        ]
+      ],
+      "results": [
+        "MENU_FIXTURE_RESULT status=3 up=1 down=1 enter=1 restore=1024000 mismatch=0 changed=1023993"
+      ]
+    },
+    {
+      "path": "artifacts/menu-fixture-qemu/20261027T192114Z/report.json",
+      "sha256": "25672150436e132a8edd6e7052160a3e114b7dfcba98f133b6b9341e8252ee80",
+      "geometry": [
+        [
+          "1080",
+          "2340"
+        ]
+      ],
+      "results": [
+        "MENU_FIXTURE_RESULT status=3 up=1 down=1 enter=1 restore=2527200 mismatch=0 changed=2527200"
+      ]
+    }
+  ],
+  "generic_renderer_unmodified": true,
+  "controller": "Port diagnostic bounded hardware counter loop; not UniXNURun or standard periodic timer support",
+  "physical_keys_verified": false,
+  "private_modules_linked": false
+}

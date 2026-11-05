@@ -1,0 +1,25 @@
+schema_version = 1
+status = "production disabled; private diagnostic layouts have separate evidence gates"
+boot_enabled = false
+entry_evidence = "../../UniXNU-raphael/evidence/entry-handoff.json"
+vendor_declarations = "../../UniXNU-raphael/evidence/vendor-declared-layout.json"
+
+[geometry]
+# Sizes below are explicit design budgets, not vendor/hardware declarations.
+# Put the new firmware after the original kernel for diagnostic return to Android.
+anchor = "align-up(original_image_size, 64 KiB)"
+bridge_size = 0x10000
+fd_capacity = 0x300000
+sec_stack_size = 0x40000
+dxe_arena_size = 0x1000000
+# 1 MiB input plus 64 KiB for the SEC/DXE record, log and memory map.
+fdt_copy_capacity = 0x110000
+
+[limits]
+diagnostic_fd_built = true
+complete_uefi_platform_built = false
+expanded_image_download_accepted = true
+full_requested_image_extent_verified_on_handset = false
+uefi_heap_ownership_verified = false
+original_vendor_cfg_override_resolved = false
+framebuffer_known = false

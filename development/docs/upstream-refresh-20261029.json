@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-28T16:35:57.084136+00:00",
+  "local_date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "request": "Re-fetch upstream UniXNU and record its new code without replacing the verified board source with an unqualified feature branch.",
+  "port_revision_before": "d22fa360556bef3efa2bc84733a00b049dead70b",
+  "remote": "https://github.com/UniXNU/UniXNU.git",
+  "active": {
+    "revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+    "branch": "main",
+    "checkout": "sources/UniXNU",
+    "changed_this_refresh": false,
+    "source_lock_sha256": "f4bd0d974a1b1541247cf66718062efcf093b5102cb754e3125ed895989813ab"
+  },
+  "candidate": {
+    "branch": "feat/ipados27-gpu-parity",
+    "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+    "checkout": "sources/UniXNU-gpu-parity-9fe4855",
+    "active_for_handset": false,
+    "previous_candidate_revision": "63cc454dd5999383b720ad8646d8d2b47762494a",
+    "intermediate_revision": "2c40ae9a7bf61325b298f36cd2379d8223a4ab00",
+    "intermediate_checkout": "sources/UniXNU-gpu-parity-2c40ae9",
+    "main_only_commits": 7,
+    "candidate_only_commits": 30,
+    "new_commits": [
+      "2c40ae9a7bf61325b298f36cd2379d8223a4ab00",
+      "9fe4855117709d1a0119baefaa66180682dee52c"
+    ],
+    "submodules": [
+      {
+        "path": "drivers/Adreno740",
+        "revision": "ab11d980d434a57ac4a4fd2749efc06f28f6dafa"
+      },
+      {
+        "path": "drivers/AdrenoMetal",
+        "revision": "ded1122911337050bb6e71110d2a41b33607040c"
+      },
+      {
+        "path": "drivers/AppleKeyStoreState",
+        "revision": "42ff83e08b2265fe741d4adaf084bebe003452ba"
+      },
+      {
+        "path": "drivers/ArmCpu",
+        "revision": "4bd3230f48121e47a0badb4ea2d1674715ba2197"
+      },
+      {
+        "path": "drivers/ArmDTPlatform",
+        "revision": "417ff95d6a6e8607ddea9309ec45c3bfd4a67c60"
+      },
+      {
+        "path": "drivers/ArmVirtPlatform",
+        "revision": "d1423a8bceac4be0478a93d9173587111c040084"
+      },
+      {
+        "path": "drivers/DarwinBoot",
+        "revision": "3e3a8a969e1177995984d8ed98c9dcc44e318265"
+      },
+      {
+        "path": "drivers/GopFramebuffer",
+        "revision": "3f0d4c772da9e77725abcd1eaa6d8be7af32f06f"
+      },
+      {
+        "path": "drivers/QcomGeniSpi",
+        "revision": "eac47baefe6a5d2368a70351e6ad1b6361bedbe2"
+      },
+      {
+        "path": "drivers/RamBlock",
+        "revision": "25c57e0e9b68bf452dd1986914525edc9d2320bc"
+      },
+      {
+        "path": "drivers/SoftwareAES",
+        "revision": "4a45326da5c2cd6fe6813d79ee43db20805628af"
+      },
+      {
+        "path": "drivers/VirtioMmioBlock",
+        "revision": "f4dfce679d429aef5487d8c88880ecd2f6573fd4"
+      },
+      {
+        "path": "drivers/VirtioMmioConsole",
+        "revision": "70253216890b2afcaa6333948726f896f84fc757"
+      },
+      {
+        "path": "kits/AdrenoFirmware",
+        "revision": "20ad3d7aca14bd46aecab6335c780f5413fa054b"
+      },
+      {
+        "path": "kits/AdrenoPM4",
+        "revision": "282606b528b2595bc4274ea7490b62b323f35a5f"
+      },
+      {
+        "path": "kits/AirNir",
+        "revision": "b356371a74cd158c2902f4886f373ebb0f833a36"
+      },
+      {
+        "path": "kits/ArmSmmu4K",
+        "revision": "30ec63b84b25c3d568247c6d075f3ded71404a62"
+      },
+      {
+        "path": "kits/VerifiedRoot",
+        "revision": "ed368a8d4451f8670228f9025f1b45479509c789"
+      },
+      {
+        "path": "kits/XnuPrelink",
+        "revision": "76452c6e6b6014747c5500b1e57c544fbc1c3249"
+      }
+    ]
+  },
+  "changes_since_previous_candidate": [
+    {
+      "path": "drivers/AdrenoMetal",
+      "old": "94af9e8c93f73ec0af11fd75bf19079a97d7c95e",
+      "new": "ded1122911337050bb6e71110d2a41b33607040c",
+      "description": "Core Image kernel libraries; draw-path patches 0025..0037; compiler path discovery and refusal logs."
+    },
+    {
+      "path": "drivers/Adreno740",
+      "old": "0cb6f4f770c302bf254e2dd5b52d93ab1b2b0b91",
+      "new": "ab11d980d434a57ac4a4fd2749efc06f28f6dafa",
+      "description": "End a stalled SMMU fault before GPU restart; inspect stalled job buffers through the job VM."
+    },
+    {
+      "path": "patches/mesa/turnip-darwin-kmd.patch",
+      "description": "Wait until a sync has been submitted rather than wait on CPU for completion of work already on the one ring."
+    },
+    {
+      "path": "scripts/build-adreno-metal-bridge.py",
+      "description": "Register bridge patches 0024..0037 in their required sequence."
+    }
+  ],
+  "source_integrity": {
+    "repositories": [
+      {
+        "path": "sources/UniXNU",
+        "revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+        "blob_count": 1036
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855",
+        "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+        "blob_count": 1056
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/Adreno740",
+        "revision": "ab11d980d434a57ac4a4fd2749efc06f28f6dafa",
+        "blob_count": 94
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/AdrenoMetal",
+        "revision": "ded1122911337050bb6e71110d2a41b33607040c",
+        "blob_count": 118
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/AppleKeyStoreState",
+        "revision": "42ff83e08b2265fe741d4adaf084bebe003452ba",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/ArmCpu",
+        "revision": "4bd3230f48121e47a0badb4ea2d1674715ba2197",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/ArmDTPlatform",
+        "revision": "417ff95d6a6e8607ddea9309ec45c3bfd4a67c60",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/ArmVirtPlatform",
+        "revision": "d1423a8bceac4be0478a93d9173587111c040084",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/DarwinBoot",
+        "revision": "3e3a8a969e1177995984d8ed98c9dcc44e318265",
+        "blob_count": 20
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/GopFramebuffer",
+        "revision": "3f0d4c772da9e77725abcd1eaa6d8be7af32f06f",
+        "blob_count": 11
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/QcomGeniSpi",
+        "revision": "eac47baefe6a5d2368a70351e6ad1b6361bedbe2",
+        "blob_count": 6
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/RamBlock",
+        "revision": "25c57e0e9b68bf452dd1986914525edc9d2320bc",
+        "blob_count": 14
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/SoftwareAES",
+        "revision": "4a45326da5c2cd6fe6813d79ee43db20805628af",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/VirtioMmioBlock",
+        "revision": "f4dfce679d429aef5487d8c88880ecd2f6573fd4",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/drivers/VirtioMmioConsole",
+        "revision": "70253216890b2afcaa6333948726f896f84fc757",
+        "blob_count": 5
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/kits/AdrenoFirmware",
+        "revision": "20ad3d7aca14bd46aecab6335c780f5413fa054b",
+        "blob_count": 15
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/kits/AdrenoPM4",
+        "revision": "282606b528b2595bc4274ea7490b62b323f35a5f",
+        "blob_count": 18
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/kits/AirNir",
+        "revision": "b356371a74cd158c2902f4886f373ebb0f833a36",
+        "blob_count": 21
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/kits/ArmSmmu4K",
+        "revision": "30ec63b84b25c3d568247c6d075f3ded71404a62",
+        "blob_count": 27
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/kits/VerifiedRoot",
+        "revision": "ed368a8d4451f8670228f9025f1b45479509c789",
+        "blob_count": 10
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-9fe4855/kits/XnuPrelink",
+        "revision": "76452c6e6b6014747c5500b1e57c544fbc1c3249",
+        "blob_count": 23
+      }
+    ],
+    "repository_count": 21,
+    "file_count": 2504,
+    "mismatches": 0,
+    "all_worktrees_clean": true,
+    "method": "Hash original file bytes as Git blobs and verify executable mode; all candidate gitlinks checked against initialized HEADs.",
+    "manifest": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/source-integrity-latest.json",
+    "manifest_sha256": "7cda42c424fdf009ff63fcb2fe17879ce46863365274480fe5b545585a612616"
+  },
+  "verification": {
+    "tests": [
+      {
+        "name": "latest-native-udif",
+        "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+        "argv": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/unixnu",
+          "-t",
+          "scripts",
+          "-v"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-9fe4855",
+        "recorded_utc": "2026-10-28T16:27:17.375547+00:00",
+        "exit_code": 0,
+        "log": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/latest-native-udif.log",
+        "log_sha256": "2fd8a2436e7216a4f63f67aa9e2bdce2f28f5b279163d7c3607c175a0913e2dc",
+        "unit_tests_run": 10,
+        "skipped": 0
+      },
+      {
+        "name": "latest-terminal",
+        "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+        "argv": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/terminal",
+          "-v"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-9fe4855",
+        "recorded_utc": "2026-10-28T16:27:18.586402+00:00",
+        "exit_code": 0,
+        "log": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/latest-terminal.log",
+        "log_sha256": "664a0ddc09d070ac633e7a5e2667411c06d6fb62fea0e9662b149aef4650120a",
+        "unit_tests_run": 45,
+        "skipped": 1
+      },
+      {
+        "name": "latest-darwin-parser",
+        "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+        "argv": [
+          "/usr/bin/python3",
+          "Test/test-kernel-parser.py"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-9fe4855/drivers/DarwinBoot",
+        "recorded_utc": "2026-10-28T16:27:18.710252+00:00",
+        "exit_code": 0,
+        "log": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/latest-darwin-parser.log",
+        "log_sha256": "15591b5ccdfa373ee62801fbb4ec0809d2ec024bd79bceeb87a186eea4e7555b"
+      },
+      {
+        "name": "latest-darwin-ramdisk",
+        "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+        "argv": [
+          "/usr/bin/python3",
+          "Test/test-packed-ramdisk.py"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-9fe4855/drivers/DarwinBoot",
+        "recorded_utc": "2026-10-28T16:27:18.863303+00:00",
+        "exit_code": 0,
+        "log": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/latest-darwin-ramdisk.log",
+        "log_sha256": "7cf56a5cdb0e3379c361d02802660f2a2e557bbc8eab7a4ca78fd65ac5b0c550"
+      },
+      {
+        "name": "latest-xnu-prelink",
+        "revision": "9fe4855117709d1a0119baefaa66180682dee52c",
+        "argv": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-9fe4855/kits/XnuPrelink",
+        "recorded_utc": "2026-10-28T16:27:20.966600+00:00",
+        "exit_code": 0,
+        "log": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/latest-xnu-prelink.log",
+        "log_sha256": "bf5c664a78e3fc705ec59bfbab00797ad8717afd15b1e3b56bae87a3b3637880",
+        "unit_tests_run": 59,
+        "skipped": 0
+      }
+    ],
+    "unit_tests_run": 114,
+    "unit_tests_passed": 113,
+    "unit_tests_skipped": 1,
+    "actual_c_check_groups_passed": 2,
+    "bridge_python_syntax_passed": true,
+    "bridge_patch_series": {
+      "translator_revision": "720ef1ce9ae2a2068999a8675717418b9416283e",
+      "patches_applied_in_order": 37,
+      "new_patches": 14,
+      "final_tree": "092c2c77976ebd23add7cbb6db6aa8d7d370262b",
+      "method": "git apply --cached on the exact pinned translator Git tree, followed by git write-tree --missing-ok; untouched source blobs need not be downloaded.",
+      "report": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/patch-series.json",
+      "report_sha256": "9c8a75ed390edb9a108a63bfa07503b4cbfd056feab1fd2984fbda8a86ce7f61"
+    },
+    "turnip_patch_syntax_passed": true,
+    "firmware_build_for_candidate": false,
+    "fd_inspection_for_candidate": false,
+    "qemu_boot_for_candidate": false,
+    "handset_boot_for_candidate": false,
+    "mac_metal_host_checks": false
+  },
+  "integration_findings": [
+    {
+      "path": "drivers/Adreno740/README.md",
+      "finding": "Upstream scopes this driver to A740/SM8550. No board addresses, restart procedure or GPU configuration imported into the independent Raphael port."
+    },
+    {
+      "path": "drivers/ArmCpu/ArmCpu.cpp:620",
+      "finding": "Candidate still dispatches timer interrupt ID 27; handset physical timer PPI18 remains recorded separately. No candidate CPU driver enabled."
+    },
+    {
+      "path": "docs/zh/porting/arm64e.md",
+      "finding": "Per-CPU PAC qualification is still absent on this handset. OS profile and current kernel pins retained."
+    },
+    {
+      "path": "drivers/DarwinBoot",
+      "finding": "Candidate fileset/RootPolicies host parser tests passed. This refresh adds no valid handset XNU handoff, ExitBootServices or GPU execution evidence."
+    },
+    {
+      "path": "scripts/check-native-metal-frontend-host.py",
+      "finding": "Requires macOS xcrun, Foundation/Metal/IOSurface and Vulkan runtime; not executed on Windows/WSL."
+    }
+  ],
+  "failed_attempts_retained": [
+    {
+      "record": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/unfiltered-fetch-timeout.json",
+      "result": "Unfiltered translator fetch exceeded 240 seconds; no completed patch validation."
+    },
+    {
+      "record": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/patch-check-filtered.json",
+      "result": "Default write-tree in partial clone exceeded 60 seconds while requiring untouched blobs. Replaced only the scratch audit operation with write-tree --missing-ok; final 37-prefix checks succeeded."
+    }
+  ],
+  "final_remote_check": {
+    "argv": [
+      "git",
+      "ls-remote",
+      "--symref",
+      "origin",
+      "HEAD",
+      "refs/heads/main",
+      "refs/heads/feat/ipados27-gpu-parity"
+    ],
+    "exit_code": 0,
+    "stdout": "ref: refs/heads/main\tHEAD\n40d21cc65171c3a24faa130a2a8e899f85790485\tHEAD\n9fe4855117709d1a0119baefaa66180682dee52c\trefs/heads/feat/ipados27-gpu-parity\n40d21cc65171c3a24faa130a2a8e899f85790485\trefs/heads/main\n",
+    "stderr": "",
+    "recorded_utc": "2026-10-28T16:35:57.083899+00:00"
+  },
+  "unchanged_activity": {
+    "board_source_modified": false,
+    "allocator_modified": false,
+    "active_source_lock_modified": false,
+    "hardware_parameters_changed": false,
+    "phone_operations_this_refresh": false,
+    "original_backup_modified": false
+  },
+  "next_port_step": "Continue SEC integration of the independent RAM alias diagnostic and its owned backup / exception recovery gates before any handset allocator or valid XNU handoff.",
+  "local_artifacts": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z",
+  "artifact_hashes": [
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/fetch.json",
+      "sha256": "cf53348aaaa2e7dd3a29b4c8b1f65a2973689f1cc710c60a402d565f2dadc416"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/fetch-second.json",
+      "sha256": "b90cb2b90b12fe810beb0c961193485961e56ff858396d062a155c07480072af"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/submodule-init.json",
+      "sha256": "6983032243763ea406961e0b77ea26af6b4d729fbfc2594fc0083a0294a0cc5a"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/submodule-init-second.json",
+      "sha256": "49f3c76373810cc05a92868ba93ca063c060845dbcc3401089e815f73974d019"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/source-integrity.json",
+      "sha256": "b561ef77b2aa5314dee7261520693e9b3b94838012fe70df01016bc1a2901514"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/tests.json",
+      "sha256": "5ea5016c95409187c377897a0f6d223a94e125c551ce8ea101a2b27b3b3d2f2f"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/source-integrity-latest.json",
+      "sha256": "7cda42c424fdf009ff63fcb2fe17879ce46863365274480fe5b545585a612616"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/tests-latest.json",
+      "sha256": "643b27fd80bb01b7b5df529b9583fbab95af7c91d84bd4fdc8f166fe2f31a6e2"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/patch-series.json",
+      "sha256": "9c8a75ed390edb9a108a63bfa07503b4cbfd056feab1fd2984fbda8a86ce7f61"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/remote-latest-confirmed.json",
+      "sha256": "a89cfa7abd2f0522063ff39d52447e7930a8fbbff63d3ee4dd68cf1747282bdd"
+    },
+    {
+      "path": "artifacts/upstream-refresh/refresh-20261028T161148.466808Z/remote-before-commit.json",
+      "sha256": "29714a179b94517617a4655b36b0d0f9c01f1cc77fc58956cab1241df11d45c0"
+    }
+  ]
+}

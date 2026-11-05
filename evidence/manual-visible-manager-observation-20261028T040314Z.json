@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "attempt": "20261028T040314Z",
+  "source_revision": "50956e2dfb9322b7560a97d3189bf0725e94ff7c",
+  "observation": "UniXNU-raphael/evidence/boot-visible-manager-observation.json",
+  "observation_sha256": "112bd3b3d8718a379ab3cca1e2e30457146a0ffd10b398a12c191ae5f5f85775",
+  "image_sha256": "846495a7444fe9f855e326adb419adb89b56eb36255b0bcb45be729b2c824ff6",
+  "firmware_sha256": "4c27192d470af2fc55d8d1d14b98883305306701d20bb3319e5ea9b2689b6452",
+  "human_prompt": "接下来两分钟内会临时启动完整 UniXNU 管理器，菜单显示约 2 秒后自动进入 Android。请留意屏幕，看到后告诉我是否出现了完整 UniXNU 菜单；本轮无需按键。",
+  "human_response": "是的",
+  "human_visibility_verified": true,
+  "physical_keys_in_complete_manager_verified": false,
+  "manager_framebuffer_changed_and_restored": true,
+  "limits": "Confirms the full UniXNURun menu in this specific handset run; no physical key input requested or observed."
+}

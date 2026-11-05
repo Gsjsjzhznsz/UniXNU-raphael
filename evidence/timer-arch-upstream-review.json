@@ -1,0 +1,14 @@
+{
+  "source_revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+  "path": "ArmPkg/Drivers/TimerDxe/TimerDxe.c",
+  "sha256": "cc1fc7fce3b3849ca39c27a306179e4f0b579ae0f329e0f5ad7bcb81734dc90a",
+  "registers_all_four_timer_ppis": {
+    "TimerVirtIntrNum": 401,
+    "TimerHypIntrNum": 409,
+    "TimerSecIntrNum": 413,
+    "TimerIntrNum": 416
+  },
+  "handset_virtual_timer_was_enabled_in_icc_observations": true,
+  "generic_driver_used_on_handset": false,
+  "conclusion": "Do not install generic four-source initialization unchanged; implement target-only board timer service or prove a compatible adapter"
+}

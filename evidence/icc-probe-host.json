@@ -1,0 +1,341 @@
+{
+  "passed": true,
+  "case_count": 59,
+  "cases": [
+    {
+      "name": "complete bounded model",
+      "status": 5,
+      "reads": 16,
+      "passed": true
+    },
+    {
+      "name": "null GIC",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "null reader",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC gate version=2",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC gate status=3",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC gate frame_count=0",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC gate frame_count=9",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC gate boot_index=1",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC gate affinity=1",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "wrong EL",
+      "status": 2,
+      "reads": 1,
+      "passed": true
+    },
+    {
+      "name": "DAIF not fully masked 0x40",
+      "status": 2,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "DAIF not fully masked 0x80",
+      "status": 2,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "DAIF not fully masked 0x100",
+      "status": 2,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "DAIF not fully masked 0x200",
+      "status": 2,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "different CPU",
+      "status": 2,
+      "reads": 3,
+      "passed": true
+    },
+    {
+      "name": "SRE disabled prevents remaining reads",
+      "status": 3,
+      "reads": 4,
+      "passed": true
+    },
+    {
+      "name": "trapped selector current_el",
+      "status": 4,
+      "reads": 1,
+      "passed": true
+    },
+    {
+      "name": "trapped selector daif",
+      "status": 4,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "trapped selector mpidr",
+      "status": 4,
+      "reads": 3,
+      "passed": true
+    },
+    {
+      "name": "trapped selector sre",
+      "status": 4,
+      "reads": 4,
+      "passed": true
+    },
+    {
+      "name": "trapped selector ctlr",
+      "status": 4,
+      "reads": 5,
+      "passed": true
+    },
+    {
+      "name": "trapped selector pmr",
+      "status": 4,
+      "reads": 6,
+      "passed": true
+    },
+    {
+      "name": "trapped selector bpr1",
+      "status": 4,
+      "reads": 7,
+      "passed": true
+    },
+    {
+      "name": "trapped selector igrpen1",
+      "status": 4,
+      "reads": 8,
+      "passed": true
+    },
+    {
+      "name": "trapped selector rpr",
+      "status": 4,
+      "reads": 9,
+      "passed": true
+    },
+    {
+      "name": "trapped selector hppir1",
+      "status": 4,
+      "reads": 10,
+      "passed": true
+    },
+    {
+      "name": "trapped selector cntp_ctl",
+      "status": 4,
+      "reads": 11,
+      "passed": true
+    },
+    {
+      "name": "trapped selector cntp_cval",
+      "status": 4,
+      "reads": 12,
+      "passed": true
+    },
+    {
+      "name": "trapped selector cntv_ctl",
+      "status": 4,
+      "reads": 13,
+      "passed": true
+    },
+    {
+      "name": "trapped selector cntv_cval",
+      "status": 4,
+      "reads": 14,
+      "passed": true
+    },
+    {
+      "name": "trapped selector cntkctl",
+      "status": 4,
+      "reads": 15,
+      "passed": true
+    },
+    {
+      "name": "trapped selector cntfrq",
+      "status": 4,
+      "reads": 16,
+      "passed": true
+    },
+    {
+      "name": "decoder rejects version",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects status",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects attempted",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects completed",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects failed_selector",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects trap_esr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects trap_elr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects current_el",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects daif",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects mpidr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects sre",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects ctlr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects pmr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects bpr1",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects igrpen1",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects rpr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects hppir1",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects cntp_ctl",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects cntv_ctl",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects cntkctl",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects cntfrq",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects injected_fault_recovered",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects injected_fault_esr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects injected_fault_elr",
+      "passed": true
+    },
+    {
+      "name": "separate injected-fault wire",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects short",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects extra",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/IccProbe.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/icc-probe-host/20261027T222215.861205Z-lhpc8jvf/icc-probe.so"
+  ],
+  "snapshot_bytes": 208,
+  "guard_canaries_verified": true,
+  "undefined_behavior_sanitizer": true,
+  "register_model_only": true,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccProbe.c",
+      "sha256": "17240460189c2b3a7528552797205c2c7ffd571e3bbde862fe58ec5cc40f9387"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelIccProbe.h",
+      "sha256": "280f011d075edd755453410ecfd3dc32ea98f5b152905358fb79bf9d1a751250"
+    }
+  ],
+  "decoder_sha256": "a93f476a63ad89a5470f593457ab2c72199211ddd26b86522145b8515b65fbed",
+  "runner_sha256": "7dcbecc23b595f52bbd10a7393e885b538de8e5e409b6b3eb9c481b87bb78be6"
+}

@@ -1,0 +1,24 @@
+{
+  "scope": "QEMU structural replay; not exact handset CPU or memory state",
+  "source_fdt_sha256": "2fe0ec084ebda3d635f947621b15b9212b5431e45f53f589858f69598a431557",
+  "before": {
+    "report": "evidence/private/sec-fdt-replay/20261027T145933Z/report.json",
+    "firmware_sha256": "29ba6c6bd8c60b5fb913016bf0c80847350ffe3b3e99cbf3f39d2aa0d3e43279",
+    "within_15_seconds": false,
+    "exception_record_found": false,
+    "qmp_observation": "stage 1, PC in libfdt traversal; raw register/context capture private"
+  },
+  "after": {
+    "report": "evidence/private/sec-fdt-replay/20261027T150505Z/report.json",
+    "firmware_sha256": "73c082b8e0a00cb68321b28eb6f85d42d812ce4d81cd4a327e04d9e82f12abe9",
+    "passed": true,
+    "checks": 16,
+    "wall_seconds": 0.228
+  },
+  "defect": "Per-node libfdt parent lookup rescanned from root; replaced with a bounded ancestor stack",
+  "limits": [
+    "QEMU edits memory/chosen and uses its own serial hardware",
+    "Both compared replays include the restricted no-MMU return path",
+    "Does not establish the reached phase or failure cause of earlier handset attempts"
+  ]
+}

@@ -1,0 +1,29 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = PayloadFixture
+  FILE_GUID = 14AAB094-4599-42CD-A802-40CF16B35635
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = PayloadFixtureEntry
+[Sources]
+  PayloadFixture.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+  RaphaelTestPkg/RaphaelTestPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UniXNULib
+  HobLib
+  FdtLib
+  TimerLib
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiBlockIoProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiDevicePathProtocolGuid

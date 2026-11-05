@@ -1,0 +1,122 @@
+{
+  "passed": true,
+  "command": "python3 scripts/validate_darwin_wire.py",
+  "check_count": 26,
+  "checks": [
+    {
+      "name": "actual stage 2",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261028T080914.718839Z-dlpu3gxh/report.json",
+      "wire_sha256": "0e077fbdeeec2f84a3e4ae8e2b9f28d0bdcd0fadf91aca868ecb1db3a4b47919"
+    },
+    {
+      "name": "actual stage 3",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261028T080914.718897Z-esos7p1i/report.json",
+      "wire_sha256": "0e077fbdeeec2f84a3e4ae8e2b9f28d0bdcd0fadf91aca868ecb1db3a4b47919"
+    },
+    {
+      "name": "actual stage 4",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261027T211003.880901Z-3nom4gdb/report.json",
+      "wire_sha256": "0e077fbdeeec2f84a3e4ae8e2b9f28d0bdcd0fadf91aca868ecb1db3a4b47919"
+    },
+    {
+      "name": "actual stage 6",
+      "passed": true,
+      "source": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+      "wire_sha256": "aabae2be6458648bd0326494b0a192f9c965b5b6d3b1a62db339184877504704"
+    },
+    {
+      "name": "handset mode marks only executed stage6",
+      "passed": true
+    },
+    {
+      "name": "handset early stage is not driver execution",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted version",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted status",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted console_installed",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted driver_loaded",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted driver_started",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted protocol_revision",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted null_status",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted missing_status",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted invalid_status",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted unixnu_status",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted unloaded",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted protocol_removed",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted console_restored",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted exit_boot_services",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted log_characters",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted services_alive",
+      "passed": true
+    },
+    {
+      "name": "reject corrupted crc_before",
+      "passed": true
+    },
+    {
+      "name": "reject truncated",
+      "passed": true
+    },
+    {
+      "name": "reject trailing",
+      "passed": true
+    },
+    {
+      "name": "reject late record at early stage",
+      "passed": true
+    }
+  ],
+  "decoder_sha256": "bfe4ff8a3335ea893cbd9d90264199feebec7ada1fdbeba41be50a4a6a1e70ce",
+  "runner_sha256": "212edbc3cd83f38b765a5cf72fbffb27e71b7443c034b8cc83731412beb75361",
+  "handset_executed": false
+}

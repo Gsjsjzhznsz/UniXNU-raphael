@@ -1,0 +1,147 @@
+{
+  "source": "nonce-matched stage2 handset FDT readback",
+  "source_revision": "bc38c454eedbf31dda20e496d12c127b3eb8f5e0",
+  "private_run": "evidence/private/sec-dxe-run/20261027T220921Z",
+  "attempt": "UniXNU-raphael/evidence/sec-dxe-attempt-20261027T220921Z.json",
+  "image_sha256": "e6bdbe7157e71e4c14317159ff50407f57f31fbe41d0e8c91a2df0e2ca89df41",
+  "firmware_sha256": "05d79849bc2b76a8314edd305083c03018170e0bc68df61d8241a45e49592a6a",
+  "gic": {
+    "version": 1,
+    "status": 4,
+    "reason": 0,
+    "read_count": 67,
+    "gicd": 396361728,
+    "gicd_bytes": 65536,
+    "gicr": 396754944,
+    "gicr_bytes": 1048576,
+    "stride": 131072,
+    "mpidr": 2164260864,
+    "affinity": 0,
+    "frame_count": 8,
+    "boot_index": 0,
+    "ctlr": 16,
+    "typer": 8061981,
+    "iidr": 33625147,
+    "pidr2": 59,
+    "frames": [
+      {
+        "base": 396754944,
+        "typer": 33,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 396886016,
+        "typer": 1099511628065,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 397017088,
+        "typer": 2199023256097,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 397148160,
+        "typer": 3298534884129,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 397279232,
+        "typer": 4398046512161,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 397410304,
+        "typer": 5497558140193,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 397541376,
+        "typer": 6597069768225,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      },
+      {
+        "base": 397672448,
+        "typer": 7696581396273,
+        "ctlr": 0,
+        "iidr": 33625147,
+        "waker": 0,
+        "pidr2": 59
+      }
+    ],
+    "sgi": {
+      "group": 0,
+      "enabled": 0,
+      "pending": 268959744,
+      "active": 0,
+      "group_modifier": 0,
+      "config_sgi": 43690,
+      "config_ppi": 0,
+      "priority_0": 0,
+      "priority_1": 0,
+      "priority_2": 0,
+      "priority_3": 0,
+      "priority_4": 0,
+      "priority_5": 0,
+      "priority_6": 0,
+      "priority_7": 0
+    },
+    "passed": true,
+    "write_callbacks_provided": false,
+    "interrupt_acknowledged": false,
+    "icc_registers_accessed": false,
+    "irq_delivery_verified": false,
+    "gic_state_restore_verified": false,
+    "complete_memory_ownership_verified": false
+  },
+  "frame_affinities_match_current_fdt_cpu_affinities": true,
+  "current_fdt_affinities": [
+    0,
+    256,
+    512,
+    768,
+    1024,
+    1280,
+    1536,
+    1792
+  ],
+  "boot_frame_base": 396754944,
+  "entry_mpidr_hex": "0x81000000",
+  "firmware_checkpoint_passed": true,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "boot_partition_unchanged": true,
+  "raw_snapshot_sha256": "309c4775a9bcd6bdfce5eba2d12bd10d447e553254b471961f7a0f3272b11bca",
+  "cleanup": {
+    "private_run": "evidence/private/entry-probe-cleanup/20261027T221111Z",
+    "normal_android_reboot": true,
+    "recovery_audit_without_extra_reboot": false,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "transient_probe_absent": true,
+    "fdt_sha256": "e9c70dd7922ff28c9f65f34a62309db4223a679e5613cab9ceec4d3f7079b7b6",
+    "flash_or_restore_performed": false
+  },
+  "scope": "Non-atomic read-only register view at this boot entry; no ICC access, IRQ delivery or state takeover/restoration claim"
+}

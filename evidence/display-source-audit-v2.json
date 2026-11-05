@@ -1,0 +1,486 @@
+{
+  "kind": "read-only early display probe source audit",
+  "wire_version": 2,
+  "gcc_hwcg_bit": 1,
+  "gcc_hwcg_idle_clk_off_allowed": true,
+  "fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "private_fdt": "evidence/private/device/20261027T120325Z/live.dtb",
+  "recipe": {
+    "regions": {
+      "mdp": {
+        "base": 182452224,
+        "size": 541192,
+        "source": "/soc/qcom,mdss_mdp@ae00000:reg[0]"
+      },
+      "gcc": {
+        "base": 1048576,
+        "size": 2031616,
+        "source": "/soc/qcom,gcc:reg[0]"
+      },
+      "dispcc": {
+        "base": 183500800,
+        "size": 131072,
+        "source": "/soc/qcom,dispcc:reg[0]"
+      },
+      "gdsc": {
+        "base": 183513088,
+        "size": 4,
+        "source": "/soc/qcom,gdsc@0xaf03000:reg[0]"
+      }
+    },
+    "malformed_unrelated_compatible": [
+      "/firmware/android/fstab/ifaa"
+    ],
+    "pipes": [
+      20480,
+      28672,
+      36864,
+      45056,
+      151552,
+      159744,
+      167936,
+      176128
+    ],
+    "pipe_types": [
+      "vig",
+      "vig",
+      "vig",
+      "vig",
+      "dma",
+      "dma",
+      "dma",
+      "dma"
+    ],
+    "pipe_source": "/soc/qcom,mdss_mdp@ae00000:qcom,sde-sspp-off",
+    "offsets": [
+      0,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      48,
+      52,
+      56,
+      112,
+      368,
+      372,
+      376,
+      380
+    ],
+    "gates": [
+      1093644,
+      183513088,
+      183509120,
+      183509004
+    ]
+  },
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_sspp.c",
+      "sha256": "228ecfad88473ff8d1bfd83d462523c11b9ad1236b5a07b763eec7b61a2bf649",
+      "anchors": {
+        "SSPP_SRC_SIZE": [
+          25,
+          40,
+          617,
+          622
+        ],
+        "SSPP_SRC_XY": [
+          26,
+          41,
+          618,
+          623
+        ],
+        "SSPP_OUT_SIZE": [
+          27,
+          42,
+          619,
+          624
+        ],
+        "SSPP_OUT_XY": [
+          28,
+          43,
+          620,
+          625
+        ],
+        "SSPP_SRC0_ADDR": [
+          29,
+          734,
+          737,
+          757
+        ],
+        "SSPP_SRC1_ADDR": [
+          30,
+          742,
+          757
+        ],
+        "SSPP_SRC2_ADDR": [
+          31,
+          739
+        ],
+        "SSPP_SRC3_ADDR": [
+          32,
+          744
+        ],
+        "SSPP_SRC_YSTRIDE0": [
+          33,
+          641,
+          672
+        ],
+        "SSPP_SRC_YSTRIDE1": [
+          34,
+          642,
+          673
+        ],
+        "SSPP_SRC_FORMAT": [
+          35,
+          44,
+          312,
+          316
+        ],
+        "SSPP_SRC_UNPACK_PATTERN": [
+          36,
+          45,
+          311,
+          315
+        ],
+        "SSPP_SRC_OP_MODE": [
+          37,
+          46,
+          276,
+          278,
+          310,
+          314
+        ],
+        "SSPP_SRC_ADDR_SW_STATUS": [
+          80,
+          441,
+          448
+        ],
+        "SSPP_MULTIRECT_OPMODE": [
+          47,
+          216,
+          224
+        ],
+        "SSPP_SRC_FORMAT_REC1": [
+          44,
+          316
+        ],
+        "SSPP_SRC_UNPACK_PATTERN_REC1": [
+          45,
+          315
+        ],
+        "SSPP_SRC_OP_MODE_REC1": [
+          46,
+          278,
+          314
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/gpu/drm/msm/sde/sde_hw_sspp.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/clk/qcom/gcc-sm8150.c",
+      "sha256": "2182e349b2d51b07d3bd57df51fd37266db8c5926e154640863aaf5079420ef6",
+      "anchors": {
+        "gcc_disp_ahb_clk": [
+          1833,
+          1842,
+          3941
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/clk/qcom/gcc-sm8150.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/clk/qcom/dispcc-sm8150.c",
+      "sha256": "c97e2503a04d56cd9b50135ba04830f7659020a3d446fe07a54cab7b3fc17b1d",
+      "anchors": {
+        "disp_cc_mdss_ahb_clk": [
+          301,
+          308,
+          313,
+          316,
+          837,
+          844,
+          846,
+          1329,
+          1401,
+          1461,
+          1462
+        ],
+        "disp_cc_mdss_mdp_clk": [
+          705,
+          718,
+          723,
+          727,
+          1285,
+          1292,
+          1294,
+          1312,
+          1505,
+          1506
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/clk/qcom/dispcc-sm8150.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/clk/qcom/clk-branch.c",
+      "sha256": "28feb4e85a09a6b30626f8306445c75b6c717667f2e43f2f0a585afd2f799387",
+      "anchors": {
+        "BRANCH_CLK_OFF": [
+          55,
+          66,
+          72,
+          75
+        ],
+        "clk_branch_in_hwcg_mode": [
+          29,
+          90
+        ],
+        "Skip checking halt bit": [
+          87
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/clk/qcom/clk-branch.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/clk/qcom/gdsc-regulator.c",
+      "sha256": "3213aa70e751de915974d44b4ba8b4b73eda916481c146c3bae0c61df42b73bd",
+      "anchors": {
+        "PWR_ON_MASK": [
+          37,
+          127,
+          204,
+          977,
+          992,
+          997
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/clk/qcom/gdsc-regulator.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_kms.c",
+      "sha256": "9b58648bf0f30933174dbbd0877f8963b39e03e1a349f88c477b5411e6e1e462",
+      "anchors": {
+        "caller api needs to turn on clock": [
+          2930
+        ],
+        "one to one mapping": [
+          2978
+        ],
+        "_sde_kms_release_splash_buffer": [
+          818,
+          942
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/gpu/drm/msm/sde/sde_kms.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_catalog.c",
+      "sha256": "2e06d8b910c7ce957b0f75c80f67d1a78517f4d864a5398f3e77a7d7f0eadcdb",
+      "anchors": {
+        "sblk = kzalloc": [
+          1377,
+          1641,
+          1842,
+          2317,
+          2831
+        ],
+        "sspp->base =": [
+          1385
+        ],
+        "sblk->src_blk.id": [
+          1407
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/gpu/drm/msm/sde/sde_hw_catalog.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "arch/arm64/boot/dts/qcom/sm8150-sde.dtsi",
+      "sha256": "67edc7c656339811a40d4ac45c3760267164f9caa06e62a53fa9317bb9aa604d",
+      "anchors": {
+        "mdss_mdp:": [
+          15
+        ],
+        "qcom,sde-sspp-off": [
+          119
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/arch/arm64/boot/dts/qcom/sm8150-sde.dtsi"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "arch/arm64/boot/dts/qcom/sm8150-gdsc.dtsi",
+      "sha256": "032873a47ddb2295a2046bb9adc8a2ce56576a3e87f76612e6cf1cec46e8e7b9",
+      "anchors": {
+        "mdss_core_gdsc:": [
+          190
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/arch/arm64/boot/dts/qcom/sm8150-gdsc.dtsi"
+    }
+  ],
+  "display_dxe_reference": {
+    "name": "DisplayDxe",
+    "file_guid": "4138022f-06c7-4f79-9c94-7e33b511a4e7",
+    "source_partition": "xbl",
+    "source_partition_sha256": "2feb056c7224ff5a1ed27fdbfc2e527f05db40b1ac7754684da17d34a821e043",
+    "images": [
+      {
+        "file": "section1.pe",
+        "bytes": 270336,
+        "sha256": "8c211f86190d353e6a014ae17108aa6281f3621da5277d20396262eac675dbc6",
+        "machine": 43620
+      }
+    ],
+    "dependencies": [
+      {
+        "sha256": "1160a8a2f29f1ca18fa4b8384384536925bac48301e59f7235e43b0aff451b62",
+        "tokens": [
+          {
+            "op": "PUSH",
+            "guid": "157a5c45-21b2-43c5-ba7c-822fee5fe599"
+          },
+          {
+            "op": "PUSH",
+            "guid": "b0760469-970c-487a-a4b5-28db7b45cef1"
+          },
+          {
+            "op": "PUSH",
+            "guid": "5bef7c41-a560-435b-835b-3c3ebf2bd151"
+          },
+          {
+            "op": "PUSH",
+            "guid": "c1bff82d-6c92-48fb-8355-c7fb4218a4ea"
+          },
+          {
+            "op": "PUSH",
+            "guid": "a966cc4f-ee6c-424d-a762-8ed3b5a4a501"
+          },
+          {
+            "op": "PUSH",
+            "guid": "47861dff-556f-4269-9b28-062ec3ecb30d"
+          },
+          {
+            "op": "PUSH",
+            "guid": "ad9aec18-7bf0-4809-9e96-3012309f3df7"
+          },
+          {
+            "op": "PUSH",
+            "guid": "b27ae8b1-3e10-4d07-ab5c-eb9a6dc6fa8f"
+          },
+          {
+            "op": "PUSH",
+            "guid": "241afae6-885f-4f6c-a7ea-c28eab79c3e5"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "AND"
+          },
+          {
+            "op": "END"
+          }
+        ]
+      }
+    ],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency"
+  },
+  "declared_protocol_prerequisites": [
+    {
+      "guid": "157a5c45-21b2-43c5-ba7c-822fee5fe599",
+      "identified_interface": "PlatformInfo",
+      "provider_verified": false
+    },
+    {
+      "guid": "b0760469-970c-487a-a4b5-28db7b45cef1",
+      "identified_interface": "ChipInfo",
+      "provider_verified": false
+    },
+    {
+      "guid": "5bef7c41-a560-435b-835b-3c3ebf2bd151",
+      "identified_interface": null,
+      "provider_verified": false
+    },
+    {
+      "guid": "c1bff82d-6c92-48fb-8355-c7fb4218a4ea",
+      "identified_interface": null,
+      "provider_verified": false
+    },
+    {
+      "guid": "a966cc4f-ee6c-424d-a762-8ed3b5a4a501",
+      "identified_interface": null,
+      "provider_verified": false
+    },
+    {
+      "guid": "47861dff-556f-4269-9b28-062ec3ecb30d",
+      "identified_interface": null,
+      "provider_verified": false
+    },
+    {
+      "guid": "ad9aec18-7bf0-4809-9e96-3012309f3df7",
+      "identified_interface": null,
+      "provider_verified": false
+    },
+    {
+      "guid": "b27ae8b1-3e10-4d07-ab5c-eb9a6dc6fa8f",
+      "identified_interface": null,
+      "provider_verified": false
+    },
+    {
+      "guid": "241afae6-885f-4f6c-a7ea-c28eab79c3e5",
+      "identified_interface": "Clock",
+      "provider_verified": false
+    }
+  ],
+  "private_modules_linked": false,
+  "clock_or_power_writes": false,
+  "passed": true,
+  "limitations": [
+    "Android P public driver is an interface reference, not proof of exact current bootloader implementation",
+    "Only three of nine DisplayDxe prerequisite GUIDs have identified public interfaces",
+    "DEPEX is incomplete evidence of runtime dependencies; DisplayDxe is not loaded",
+    "A clock gate check cannot prove absence of all hidden firmware access restrictions"
+  ]
+}

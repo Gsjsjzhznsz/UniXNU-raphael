@@ -1,0 +1,49 @@
+{
+  "extraction": "evidence/private/ufs-console-log/20261104T085531Z/20261104T091142Z-manual-recovery",
+  "valid_records": 376,
+  "display": {
+    "clients": 5,
+    "validations": 1,
+    "rejected": 0,
+    "kicks": 1,
+    "frames": 1,
+    "blank_frames": 0,
+    "retired": 1,
+    "reject_reason": 0,
+    "transfer_status": 0,
+    "client_status": 0,
+    "power_status": 0,
+    "bytes": 10108800,
+    "nonblack": 2648
+  },
+  "watchdog": {
+    "stage": 4,
+    "opens": 1,
+    "closes": 0,
+    "checkins": 18,
+    "last_checkin_counter": 10533622059,
+    "monitoring": true,
+    "counter_frequency": 19200000,
+    "failures": 0,
+    "last_selector": 1,
+    "missed_checkin": false
+  },
+  "ram_final": {
+    "resident": 142708736,
+    "reads": 840,
+    "writes": 1147,
+    "failures": 0,
+    "zero_write_bytes": 225280
+  },
+  "events": [],
+  "vm_final": {
+    "free": 970,
+    "active": 6162,
+    "inactive": 5727,
+    "wired": 92711
+  },
+  "handset_run": "evidence/private/android-return-run/20261104T085854Z",
+  "onsite": "One loading-bar frame then black; manual Android recovery",
+  "desktop_verified": false,
+  "full_checkpoint_verified": false
+}

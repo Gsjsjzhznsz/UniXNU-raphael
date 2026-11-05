@@ -1,0 +1,388 @@
+{
+  "passed": true,
+  "case_count": 65,
+  "cases": [
+    {
+      "name": "29 SPI words and eight redistributors",
+      "status": 3,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "zero SPI words and one redistributor",
+      "status": 3,
+      "reads": 7,
+      "passed": true
+    },
+    {
+      "name": "all 31 standard SPI words",
+      "status": 3,
+      "reads": 97,
+      "passed": true
+    },
+    {
+      "name": "one nonzero SPI enable",
+      "status": 3,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "last redistributor PPI enabled",
+      "status": 3,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "LPI enabled",
+      "status": 3,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "non LPI CTLR flag remains visible",
+      "status": 3,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "SPI changes second pass",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "local changes second pass",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "LPI changes second pass",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "non LPI CTLR changes second pass",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "distributor changes after samples",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "first enabled then zero is still in accumulated OR",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "header distributor changed",
+      "status": 2,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "header TYPER changed",
+      "status": 2,
+      "reads": 2,
+      "passed": true
+    },
+    {
+      "name": "null GIC",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "null read",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "null output",
+      "status": null,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject version 2",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject status 3",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject pidr2 75",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject typer 256",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject typer 512",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject typer 2048",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject typer 32768",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject typer 4294967296",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject frame_count 0",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject frame_count 9",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject boot_index 8",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicd 0",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicd 268435460",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicd_bytes 65535",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicd 18446744073709486080",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicr 0",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicr 536870916",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicr_bytes 131071",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicr 18446744073709486080",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject gicd 536870912",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject frame misaligned",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject frame below region",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject frame beyond region",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "reject frame duplicate",
+      "status": 1,
+      "reads": 0,
+      "passed": true
+    },
+    {
+      "name": "wire rejects version",
+      "passed": true
+    },
+    {
+      "name": "wire rejects status",
+      "passed": true
+    },
+    {
+      "name": "wire rejects reason",
+      "passed": true
+    },
+    {
+      "name": "wire rejects read_count",
+      "passed": true
+    },
+    {
+      "name": "wire rejects spi_words",
+      "passed": true
+    },
+    {
+      "name": "wire rejects frame_count",
+      "passed": true
+    },
+    {
+      "name": "wire rejects enabled_spi_or",
+      "passed": true
+    },
+    {
+      "name": "wire rejects enabled_local_or",
+      "passed": true
+    },
+    {
+      "name": "wire rejects lpi_enabled_or",
+      "passed": true
+    },
+    {
+      "name": "wire rejects changed_words",
+      "passed": true
+    },
+    {
+      "name": "wire rejects distributor_before",
+      "passed": true
+    },
+    {
+      "name": "wire rejects distributor_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects all_observed_disabled",
+      "passed": true
+    },
+    {
+      "name": "wire rejects array 42",
+      "passed": true
+    },
+    {
+      "name": "wire rejects array 44",
+      "passed": true
+    },
+    {
+      "name": "wire rejects array 52",
+      "passed": true
+    },
+    {
+      "name": "wire rejects short",
+      "passed": true
+    },
+    {
+      "name": "wire rejects long",
+      "passed": true
+    },
+    {
+      "name": "changed wire reference",
+      "status": 4,
+      "reads": 93,
+      "passed": true
+    },
+    {
+      "name": "wire rejects changed enabled_spi_or",
+      "passed": true
+    },
+    {
+      "name": "wire rejects changed enabled_local_or",
+      "passed": true
+    },
+    {
+      "name": "wire rejects changed lpi_enabled_or",
+      "passed": true
+    },
+    {
+      "name": "wire rejects changed changed_words",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/GicEnableMap.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/gic-enable-map-host/20261027T234714.217649Z-cuhm5nzz/gic-enable-map.so"
+  ],
+  "snapshot_bytes": 480,
+  "guard_canaries_verified": true,
+  "undefined_behavior_sanitizer": true,
+  "mmio_model_only": true,
+  "mmio_write_callback": false,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GicEnableMap.c",
+      "sha256": "a9a174643f47b6322950f9834e94f0833b2d648842aba52b91f676c49bca3cfb"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelGicEnableMap.h",
+      "sha256": "0713054b37f6286d3b0bca2fd4e5b6ffac54e49b6d8b3e325c1ed7f0aff53374"
+    }
+  ],
+  "decoder_sha256": "23793bed78775f9b93c36e40c3514f4ede2735eb59ac1b4ddf0eab6607330fbc",
+  "runner_sha256": "9b56d66862c7d20481da633f6c16c16f45fea951a3aa38f47c763c2d89267525"
+}

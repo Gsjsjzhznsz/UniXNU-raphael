@@ -1,0 +1,34 @@
+schema_version = 2
+[board]
+name = "raphael"
+soc = "SM8150"
+soc_source = "sm8150"
+os_profile = "ipados-17.7.11-21H461"
+kit = "raphael"
+description = "Independent Redmi K20 Pro port; compile-only default with separately gated native handset bring-up"
+
+[components]
+include = ["XnuPrelink", "DarwinBoot", "ArmDTPlatform"]
+
+[kernel]
+defconfig = "raphael_defconfig"
+config_fragments = ["arch:configs/common.config", "soc:configs/sm8150.config"]
+patch_series = ["arch:patches/xnu/series", "soc:patches/xnu/series", "device:patches/xnu/os-bootstrap.series", "device:patches/xnu/series"]
+archives = ["build-corecrypto-14.py", "build-corecrypto-14.py --namespace", "build-raphael-cpu.py", "build-raphael-pthread.py"]
+
+[device_tree]
+# Inspection-only source. No loader-owned RAM is granted by this DTS.
+source = "device:dts/raphael.dts"
+include_dirs = ["soc:dts"]
+
+# No complete firmware recipe is declared by this compile-only bootstrap.
+
+# Fixed upstream launcher and release implementation. Keep the handset backend
+# at sources/UniXNU independently pinned until its ABI migration is qualified.
+[package]
+unixnu = "../sources/UniXNU-packaging"
+unixnu_repository = "UniXNU/UniXNU"
+unixnu_revision = "c96b29975645b711dc06bc435c3ad27321ce817c"
+
+[package.defconfig]
+"ipados-17.7.11-21H461" = "raphael_defconfig"

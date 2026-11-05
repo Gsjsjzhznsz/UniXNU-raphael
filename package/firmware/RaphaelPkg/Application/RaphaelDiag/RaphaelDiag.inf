@@ -1,0 +1,16 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelDiag
+  FILE_GUID = F21D54D1-E99C-4EC7-8A42-8A308AA33832
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = RaphaelDiagEntry
+
+[Sources]
+  RaphaelDiag.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint

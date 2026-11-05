@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/spmi/spmi-pmic-arb.c",
+      "sha256": "c13754a4e64566ad8b1d88233909e970c45294ba73cf08f495fb7241287ae262",
+      "anchors": {
+        "PMIC_ARB_CMD": [
+          37,
+          72,
+          317,
+          380,
+          443
+        ],
+        "PMIC_ARB_STATUS": [
+          39,
+          65,
+          66,
+          67,
+          68,
+          266,
+          271,
+          272,
+          278,
+          284
+        ],
+        "PMIC_ARB_RDATA0": [
+          42,
+          386
+        ],
+        "PMIC_ARB_OP_EXT_READL = 1": [
+          77
+        ],
+        "PMIC_ARB_TIMEOUT_US": [
+          103,
+          257
+        ],
+        "PMIC_ARB_STATUS_DONE": [
+          65,
+          271
+        ],
+        "PMIC_ARB_STATUS_FAILURE": [
+          66,
+          278
+        ],
+        "PMIC_ARB_STATUS_DENIED": [
+          67,
+          272
+        ],
+        "PMIC_ARB_STATUS_DROPPED": [
+          68,
+          284
+        ],
+        "0x10000 * pmic_arb->ee + 0x80 * apid": [
+          1014
+        ],
+        "(opc << 27) | ((addr & 0xff) << 4) | (bc & 0x7)": [
+          1036
+        ],
+        "pmic_arb_set_rd_cmd(pmic_arb, offset + PMIC_ARB_CMD, cmd)": [
+          380
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/pinctrl/qcom/pinctrl-spmi-gpio.c",
+      "sha256": "c9bb706d99a638c853b0662ff101224c8c9594d149a6e8ae366c8ed7286a8306",
+      "anchors": {
+        "PMIC_GPIO_REG_TYPE": [
+          35,
+          825
+        ],
+        "PMIC_GPIO_REG_SUBTYPE": [
+          36,
+          835
+        ],
+        "PMIC_GPIO_REG_MODE_CTL": [
+          51,
+          60,
+          348,
+          371,
+          604,
+          627,
+          874,
+          880
+        ],
+        "PMIC_GPIO_REG_EN_CTL": [
+          57,
+          108,
+          378,
+          634,
+          661
+        ],
+        "PMIC_GPIO_TYPE": [
+          39,
+          829
+        ],
+        "PMIC_GPIO_REG_LV_MV_MODE_DIR_MASK": [
+          71,
+          878
+        ],
+        "PMIC_GPIO_PHYSICAL_OFFSET": [
+          111,
+          1018,
+          1019,
+          1022,
+          1023,
+          1104,
+          1115
+        ],
+        "PMIC_MPP_REG_RT_STS_VAL_MASK": [
+          48,
+          671,
+          742
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/input/misc/qpnp-power-on.c",
+      "sha256": "8226cbe7bfb803ecd58b63329d6b0e872b61dbc25b76cf8f886e81e127d7a718",
+      "anchors": {
+        "QPNP_PON_KPDPWR_N_SET": [
+          122,
+          1022,
+          1075
+        ],
+        "QPNP_PON_RESIN_N_SET": [
+          123,
+          1078
+        ],
+        "QPNP_PON_RT_STS(pon)": [
+          64,
+          1016,
+          1069,
+          1161,
+          1277
+        ]
+      }
+    }
+  ],
+  "prerequisite": "UniXNU-raphael/evidence/boot-input-map-observation.json",
+  "prerequisite_sha256": "26ad3ac057989c42c3073de7d4800066d64478660fb461a6c7fd43587c3f39c5",
+  "command_writes": "Only EXT_READL one byte to validated observer CMD; no RW channel, WDATA, IRQ or PMIC write opcode",
+  "register_reads": [
+    "GPIO type+0x04",
+    "GPIO subtype+0x05",
+    "GPIO mode+0x40",
+    "GPIO enable+0x46",
+    "GPIO RT_STS+0x10",
+    "PON RT_STS+0x10"
+  ],
+  "timeout": "One millisecond from primary driver; an additional 100000 iteration cap is a diagnostic design bound",
+  "private_modules_linked": false,
+  "physical_keys_verified": false
+}

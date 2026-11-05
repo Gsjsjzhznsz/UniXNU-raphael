@@ -1,0 +1,164 @@
+[
+  {
+    "name": "battery_symbol_Nocharger.bmp",
+    "file_guid": "03ded53e-becd-428f-9f79-5aba64c58445",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "b6416fbd52af80d518d0cbead14e5ca94e12a132cf0cbe016328ae214375368d",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 82152,
+        "sha256": "b86eb573f33d5f525cefb15252369d58d9390fbb44a3a97b0e67ea997e5221dd"
+      }
+    ]
+  },
+  {
+    "name": "battery_symbol_Soc10.bmp",
+    "file_guid": "3e5584ed-05d4-4267-9048-0d47f76f4248",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "0278a89692e1e4c5ac16a817769ffe5e1ba3a940450f8255144f17ecb92a1c9c",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 65484,
+        "sha256": "691c0c6465761bb2e8353a5e575f629551c9bf99a1aa01446e5d540ac9112c5f"
+      }
+    ]
+  },
+  {
+    "name": "battery_symbol_LowBattery.bmp",
+    "file_guid": "3fd97907-93f1-4349-af3c-3b68b0a5e626",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "ee5372a64d32af3d64fd3e7849fe870be0a1596efec5e5fbe13e7bb51e8eaf10",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 187654,
+        "sha256": "6e0964f6acaf2a552be30f6b02948972650ab15ecd19e9de0791cfc4ac2765e4"
+      }
+    ]
+  },
+  {
+    "name": "battery_symbol_NoBattery.bmp",
+    "file_guid": "4753e815-ddd8-402d-bf69-9b8c4eb7573e",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "1b9a1dc258a1ab26f5f045214b66b4daf4d84fb3ab958d08560d8a5dba1d9a00",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 87840,
+        "sha256": "14f41f75256afaa185b0b9ef0d5049c4e889d75c6e0bab14fe5b7bed7b9c5d2d"
+      }
+    ]
+  },
+  {
+    "name": "battery_symbol_LowBatteryCharging.bmp",
+    "file_guid": "8b86cd38-c772-4fcf-85aa-345b2b3c1ab4",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "a2393258f7e104938c4227173730469e2177be786ccd2e226875aaaa71723bdf",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 187654,
+        "sha256": "fdf9598c952673aac397eb92319b6877aaf45740b62885725fa2dff63ad50144"
+      }
+    ]
+  },
+  {
+    "name": "battery_symbol_DebugBoot.bmp",
+    "file_guid": "b0f8d1be-5353-4812-b1f6-07e7768204cc",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "6aa9648d137bd0bf351f7b67a8ad6348b7a16eeb87120d3c5501cfbb31fbf71a",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 82198,
+        "sha256": "5a905af003b48b7818050679dbd99adc08e79eecaf831afe97d5062ed11fae03"
+      }
+    ]
+  },
+  {
+    "name": "tsens_thermal_err_symbol.bmp",
+    "file_guid": "c72fb1a9-5527-4e13-bac4-f671d0330145",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "5b485aa662d5cb3ffcf88f4762527174dff7c39477a97e91bb7e173f07bc160e",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 87840,
+        "sha256": "12900ff68e86f4245f4e3a0b8dc7ebd218f8f7b59544d09c8ada7bee173f63bb"
+      }
+    ]
+  },
+  {
+    "name": "tsens_thermal_symbol.bmp",
+    "file_guid": "e2ea5a4f-98bd-4203-ab49-399505ddfb7d",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "58f9137a339d3b0d9fc805dc14f853c79898f63693ca62c6feb8d33e46d31969",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 87840,
+        "sha256": "07c8af68ffe86f4295d3a2b9ae0ab9c3181ee697b60f410b8f7bcde63dc3dc06"
+      }
+    ]
+  },
+  {
+    "name": "battery_symbol_DebugStay.bmp",
+    "file_guid": "f9e8f683-e065-4e09-b4f9-0230d7cecd08",
+    "source_partition": "imagefv",
+    "source_partition_sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "images": [],
+    "dependencies": [],
+    "use": "reference-only; no module linked into new firmware",
+    "limits": "DEPEX lists dispatch prerequisites; does not establish every runtime protocol or data dependency",
+    "ffs_object_sha256": "c4066dcc3b242a5e7015c2d2692f62105d58c862e3a8de3634ba501672f1b442",
+    "raw_sections": [
+      {
+        "file": "section1.raw",
+        "bytes": 78958,
+        "sha256": "4a13134dc26a54280128b8e6fa371806a297ed347011184b97422cfc72617759"
+      }
+    ]
+  }
+]

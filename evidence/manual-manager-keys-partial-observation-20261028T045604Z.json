@@ -1,0 +1,11 @@
+{
+  "attempt": "20261028T045604Z",
+  "human_statement": "\u90fd\u6b63\u5e38",
+  "machine_observation": "UniXNU-raphael/evidence/manager-keys-observation-20261028T045604Z.json",
+  "machine_observation_sha256": "350612e605ee41feb985a0317cebeb2e4a4d61b26db75886cee286c1792aa5be",
+  "human_menu_visible": true,
+  "physical_up_down_verified": true,
+  "physical_enter_verified": false,
+  "automatic_enter": 1,
+  "note": "Human impression did not distinguish the six-second automatic exit from physical power. Repeat kept independently."
+}

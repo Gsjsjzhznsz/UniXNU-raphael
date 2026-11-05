@@ -1,0 +1,349 @@
+{
+  "header": {
+    "version": 1,
+    "status": 6,
+    "width": 1080,
+    "height": 2340,
+    "stride": 4320,
+    "base_low": 2617245696,
+    "base_high": 0,
+    "extent": 10108800,
+    "interface_base": 182892544,
+    "counter_frequency": 19200000,
+    "grid": 64,
+    "pixel_count": 4096,
+    "refresh_count": 32
+  },
+  "wire_sha256": "f69ab7524f9e9b59224de2be410d0e22ead7a06dc49dee65d04bb63c2c628aed",
+  "pixel_sample_sha256": "4fe7b59af6de3b665b67788cc2f99892ab827efae3a467342b3bb4e3bc8e5bfe",
+  "unique_pixel_values": 1,
+  "nonzero_pixel_samples": 0,
+  "nonblack_rgb_samples": 0,
+  "refresh": [
+    {
+      "counter": 836191814,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2639,
+      "write_pointer_line_count": 359,
+      "raw_line_count": 359
+    },
+    {
+      "counter": 836230225,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2922,
+      "write_pointer_line_count": 698,
+      "raw_line_count": 698
+    },
+    {
+      "counter": 836268631,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3204,
+      "write_pointer_line_count": 1037,
+      "raw_line_count": 1037
+    },
+    {
+      "counter": 836307042,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3487,
+      "write_pointer_line_count": 1376,
+      "raw_line_count": 1376
+    },
+    {
+      "counter": 836345449,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3769,
+      "write_pointer_line_count": 1714,
+      "raw_line_count": 1714
+    },
+    {
+      "counter": 836383862,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4052,
+      "write_pointer_line_count": 2053,
+      "raw_line_count": 2053
+    },
+    {
+      "counter": 836422272,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4334,
+      "write_pointer_line_count": 2340,
+      "raw_line_count": 2340
+    },
+    {
+      "counter": 836460681,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4616,
+      "write_pointer_line_count": 2340,
+      "raw_line_count": 2340
+    },
+    {
+      "counter": 836499088,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2564,
+      "write_pointer_line_count": 268,
+      "raw_line_count": 268
+    },
+    {
+      "counter": 836537498,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2846,
+      "write_pointer_line_count": 607,
+      "raw_line_count": 607
+    },
+    {
+      "counter": 836575904,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3128,
+      "write_pointer_line_count": 946,
+      "raw_line_count": 946
+    },
+    {
+      "counter": 836614313,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3411,
+      "write_pointer_line_count": 1285,
+      "raw_line_count": 1285
+    },
+    {
+      "counter": 836652723,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3693,
+      "write_pointer_line_count": 1623,
+      "raw_line_count": 1623
+    },
+    {
+      "counter": 836691130,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3976,
+      "write_pointer_line_count": 1962,
+      "raw_line_count": 1962
+    },
+    {
+      "counter": 836729538,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4258,
+      "write_pointer_line_count": 2301,
+      "raw_line_count": 2301
+    },
+    {
+      "counter": 836767949,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4541,
+      "write_pointer_line_count": 2340,
+      "raw_line_count": 2340
+    },
+    {
+      "counter": 836806356,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2488,
+      "write_pointer_line_count": 177,
+      "raw_line_count": 177
+    },
+    {
+      "counter": 836844766,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2770,
+      "write_pointer_line_count": 516,
+      "raw_line_count": 516
+    },
+    {
+      "counter": 836883174,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3053,
+      "write_pointer_line_count": 855,
+      "raw_line_count": 855
+    },
+    {
+      "counter": 836921583,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3335,
+      "write_pointer_line_count": 1194,
+      "raw_line_count": 1194
+    },
+    {
+      "counter": 836959991,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3618,
+      "write_pointer_line_count": 1533,
+      "raw_line_count": 1533
+    },
+    {
+      "counter": 836998399,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3900,
+      "write_pointer_line_count": 1872,
+      "raw_line_count": 1872
+    },
+    {
+      "counter": 837036810,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4182,
+      "write_pointer_line_count": 2210,
+      "raw_line_count": 2210
+    },
+    {
+      "counter": 837075217,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4465,
+      "write_pointer_line_count": 2340,
+      "raw_line_count": 2340
+    },
+    {
+      "counter": 837113623,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2411,
+      "write_pointer_line_count": 85,
+      "raw_line_count": 85
+    },
+    {
+      "counter": 837152032,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2694,
+      "write_pointer_line_count": 424,
+      "raw_line_count": 424
+    },
+    {
+      "counter": 837190441,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 2976,
+      "write_pointer_line_count": 763,
+      "raw_line_count": 763
+    },
+    {
+      "counter": 837228851,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3259,
+      "write_pointer_line_count": 1102,
+      "raw_line_count": 1102
+    },
+    {
+      "counter": 837267262,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3541,
+      "write_pointer_line_count": 1441,
+      "raw_line_count": 1441
+    },
+    {
+      "counter": 837305673,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 3824,
+      "write_pointer_line_count": 1780,
+      "raw_line_count": 1780
+    },
+    {
+      "counter": 837344081,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4106,
+      "write_pointer_line_count": 2119,
+      "raw_line_count": 2119
+    },
+    {
+      "counter": 837382493,
+      "interface_status": 0,
+      "frame_count": 0,
+      "read_pointer_frame_count": 0,
+      "read_pointer_line_count": 4388,
+      "write_pointer_line_count": 2340,
+      "raw_line_count": 2340
+    }
+  ],
+  "mmio_writes": false,
+  "pixel_writes": false,
+  "cpu_sample_read_verified": true,
+  "actual_pixel_fetch_verified": false,
+  "panel_update_verified": false,
+  "gop_enabled": false,
+  "counter_activity_observed": true,
+  "kind": "nonce-bound CPU splash samples and interface counters; no visible-output claim",
+  "handoff": "UniXNU-raphael/evidence/sec-display-handoff.json",
+  "handoff_sha256": "bf8cd455dcb27ccf3202c51966becf56905ac84c51380d39996936b7274cdbf4",
+  "private_readback": "evidence/private/sec-dxe-run/20261027T170622Z",
+  "private_build": "evidence/private/sec-dxe-build/20261027T170551Z",
+  "thumbnail_sha256": "3b93f26267630963185ee67d8020972faee108a7bca80db725817e4680c9955c",
+  "original_pixels_public": false,
+  "limitations": [
+    "Sparse sampling does not validate every framebuffer byte or lifetime",
+    "Internal counter activity does not independently prove an external TE signal, DMA fetch or visible panel output",
+    "No pixel write or GOP operation occurred"
+  ],
+  "analysis_sources": [
+    {
+      "path": "scripts/pixel_probe.py",
+      "sha256": "d60f8159391b8deae9bda096bbda893b8b466d6e932ae62942b2e198369300a7"
+    },
+    {
+      "path": "scripts/display_probe.py",
+      "sha256": "294fd7bee16fb217fb20c2092cb74b3438b3a968a5c801e16408a0723e74452d"
+    },
+    {
+      "path": "scripts/smmu_probe.py",
+      "sha256": "201797657291d038da1476b5e280589b5a5f7083524bd85d231972723fa10ff7"
+    },
+    {
+      "path": "scripts/inspect_boot_pixels.py",
+      "sha256": "1bea56b0d2e745f2786e77bb2cbf74e59b8ba1516764c28ecbbdc180488792d9"
+    }
+  ]
+}

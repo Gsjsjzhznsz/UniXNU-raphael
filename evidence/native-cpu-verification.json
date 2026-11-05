@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "handset_executed": false,
+  "full_xnu_boot_verified": false,
+  "upstream_sync_executed": false,
+  "reports": [
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261028T175838Z/report.json",
+      "sha256": "d2aa1df2e70115ab73adcaa02b25cbbedc61231a937df9dc71871124b7ff48b7"
+    },
+    {
+      "path": "artifacts/native-kernel-inspection/20261028T180002Z/report.json",
+      "sha256": "644aa9b18252a8902bbb3af1fb10a53c7d7bbe7b127fa69a177084213c7b619a"
+    },
+    {
+      "path": "artifacts/native-xnu-qemu/20261028T180349.726107Z-e13esz8b/report.json",
+      "sha256": "7ac6fa1a4cb10dcd154b44108dc56383e2594ecf5811e4ffef924a5cd816e862"
+    },
+    {
+      "path": "artifacts/native-xnu-qemu/20261028T180349.726107Z-e13esz8b/debugger-observation.json",
+      "sha256": "bd9152fe0ece6ba348ad3b1658bf72a09b13aa55b02ee7114370e9648125800d"
+    }
+  ],
+  "kernel_sha256": "96d31e6d36abed20e48f337cf01040d35db8eecfe1b446d20636664bc7b0d722",
+  "source_sha256": "833af15ab8969397c4bb02114fb351356cb61974ac603d565515a0b462c932fa",
+  "platform_source_sha256": "07f96a42bdd638022960f5fcaf9e3a07dd73a82c869a70815781cac6d4873b3b",
+  "cpu_archive_sha256": "6ece582064f2cb41cace93dc069e078fb9474d39c218e381ceef783982b07dae",
+  "cpu_state": {
+    "dist_pa": 134217728,
+    "eois": 6,
+    "frequency": 62500000,
+    "intid": 30,
+    "ipi_irqs": 0,
+    "last_irq": 1023,
+    "physical_timer": 1,
+    "redist_pa": 134873088,
+    "registered": 1,
+    "stage": 5,
+    "timer_irqs": 6,
+    "pthread_status": 0,
+    "pthread_functions": 18446744005109699040
+  },
+  "independent_cpu_start_verified": true,
+  "real_timer_callback_and_eoi_verified": true,
+  "bsd_init_reached": true,
+  "verified_source_input_count": 25,
+  "frozen_auxiliary_count": 31,
+  "frozen_compile_record_count": 887,
+  "artifact_directory": "artifacts/native-cpu-verification/20261028T180847.908809Z-yat659zc",
+  "limits": [
+    "QEMU GICv3 physical timer INTID comes only from that emulator DTB",
+    "Handset GIC ownership, constant operation, SMP and power management remain unqualified",
+    "No handset XNU, storage, mounted root or userspace result"
+  ]
+}

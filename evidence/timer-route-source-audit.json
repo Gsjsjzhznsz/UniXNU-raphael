@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "fault_qemu_report": "artifacts/sec-dxe-qemu/20261028T080914.718822Z-1zdxl_d3/report.json",
+  "fault_qemu_report_sha256": "15d768c518710bc8cf54013a99297859ed111c7ce75a1403d8a3a24a58093a41",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerRoute.c",
+      "sha256": "4f4918c4d587153f30c3cf7f8c78da64c29966e6c0365b3195b1920cab9bfc11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerRoute.h",
+      "sha256": "1938868ba1f22f840f1caf1efb3ed2acdcd22dbaed49b67ad06122331afbf49e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerRouteAdapter.c",
+      "sha256": "7c85b4a6d8914b3b8915628fb5c088bc1596bec08c3a463ad9913aff9a07fde7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RouteAccess.S",
+      "sha256": "d3c6fce816e3dbcf952bb2ff2cde1b6b17ccfe0f7c7a8fbdc24047f76a0e710e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "88f6163e953a322d14983b9d76bb6c15860d165e1caee912002e6e0da90559e8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+      "sha256": "019e5f9085adcc9b25a60fe6b0b3f831330a9defdb57e8603631ba612c97f605"
+    }
+  ],
+  "decoder_sha256": "536483df1d2a2fe8c9d421de652303464667b002e378d394a74c9cd5f7459bac",
+  "compiled_route_access_sha256": "3c01c2c514cef7d245b470da147fd4e5c8acf35b8fca9c0108c23da9ecd0130a",
+  "actual_msr_registers": [
+    "ICC_IGRPEN1_EL1"
+  ],
+  "recovery_site_count": 2,
+  "independent_gnu_assembler_matched": true,
+  "primary_encoding_source": {
+    "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "path": "arch/arm64/include/asm/sysreg.h",
+    "sha256": "0357803843478b179761df9d84eac13da1cd941bc00da7a9925247e34d3d1111",
+    "fields": [
+      3,
+      0,
+      12,
+      12,
+      7
+    ],
+    "line": 207,
+    "opcode": "0xd518cce0"
+  },
+  "specification": {
+    "document": "ARM IHI0069C (ID070116)",
+    "sha256": "026e7dba8d8efca43a3593a6914a2f7cba2ff71cd34583ced97d389d1108dcf6",
+    "sections_pdf_page": {
+      "8.9.4 GICD_CTLR": 465,
+      "8.2.12 ICC_HPPIR1_EL1": 213,
+      "8.2.16 ICC_IGRPEN1_EL1": 223,
+      "8.11.2 GICR_CTLR": 519
+    }
+  },
+  "distributor_write_mask": 2,
+  "local_enable_write_one": true,
+  "cpu_irq_mask_preserved": true,
+  "acknowledge_register_access": false,
+  "priority_group_trigger_written": false,
+  "result_storage": {
+    "bytes": 352,
+    "rva": 69920,
+    "fd_offset": 172320,
+    "physical_address": 1074569504,
+    "linker_map": "Build/RaphaelDiagnostic/DEBUG_CLANGPDB/AARCH64/RaphaelPkg/Sec/Sec/OUTPUT/RaphaelSec.dll.map",
+    "materialized_zero_data": true,
+    "within_sec_xip_pe": true
+  },
+  "qemu_entry_setup_is_not_handset_firmware": true,
+  "handset_executed": false,
+  "limitations": [
+    "HPPIR plus timer/pending source observation only, no IRQ handler",
+    "Two matching nonsecure enable passes are not atomic ownership proof",
+    "Recovery at EL1 cannot recover an exception taken to EL2 or EL3",
+    "Intentional EC0 UDF recovery tested; no actual hardware EC0x18 trap claim"
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/Protocol/GraphicsOutput.h",
+      "sha256": "1f63d49ac45dbc1c00464cff900c61952610d648e551e478428ef2ff601f4092",
+      "anchors": {
+        "clears the visible portions": [
+          112
+        ],
+        "EFI_GRAPHICS_OUTPUT_PROTOCOL_QUERY_MODE": [
+          104,
+          258
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdeModulePkg/Include/Library/FrameBufferBltLib.h",
+      "sha256": "67be23e95bcc9c438040f04d1fb019aa74fbf2670c72245330c0a4c04019fe2b",
+      "anchors": {
+        "FrameBufferBltConfigure": [
+          37,
+          48
+        ],
+        "FrameBufferBlt (": [
+          73
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.c",
+      "sha256": "3c4ef872faa7e042bcd2199a225c28ae50afe6768363734210f73645e683fb53",
+      "anchors": {
+        "Source      += Height * LineStride;": [
+          626
+        ],
+        "Destination += Height * LineStride;": [
+          627
+        ],
+        "PixelBlueGreenRedReserved8BitPerColor": [
+          132,
+          420,
+          428,
+          525
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "UefiCpuPkg/Library/ArmMmuLib/AArch64/ArmMmuLibCore.c",
+      "sha256": "bf3be06245f00c6d1b24b94eb0068f607387780966297070836799fea2aa3521",
+      "anchors": {
+        "case ARM_MEMORY_REGION_ATTRIBUTE_UNCACHED_UNBUFFERED:": [
+          93
+        ],
+        "return TT_ATTR_INDX_MEMORY_NON_CACHEABLE | Permissions;": [
+          94
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_ctl.c",
+      "sha256": "1723397ad20d6dbe9e9c5ab0e6def898cf3b9e6a048690bc35a7626466600a70",
+      "anchors": {
+        "CTL_LAYER_EXT": [
+          22,
+          24,
+          26,
+          34,
+          777,
+          778,
+          779,
+          916,
+          917,
+          918,
+          937,
+          938,
+          939
+        ],
+        "CTL_LAYER": [
+          20,
+          22,
+          24,
+          26,
+          34,
+          776,
+          777,
+          778,
+          779,
+          915,
+          916,
+          917,
+          918,
+          936,
+          937,
+          938,
+          939,
+          1208
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_lm.c",
+      "sha256": "8a1236790db3b3e895c5bd2a35770927a41718559af6269c39456f9c3abd0043",
+      "anchors": {
+        "const_alpha = (bg_alpha & 0xFF)": [
+          132
+        ],
+        "IS_SM8150_TARGET": [
+          266
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_pingpong.c",
+      "sha256": "9bf52eac6abc588826359cf46cdf1dd960b9a5587020311d1214f17044089ea1",
+      "anchors": {
+        "PP_DSC_MODE": [
+          39,
+          275,
+          286,
+          302
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_intf.c",
+      "sha256": "ce16308be7e9814a42d87f2b0ee535b9a5e9f8a9e40c849273a0a7819c77a691",
+      "anchors": {
+        "INTF_MUX": [
+          71,
+          394,
+          405
+        ],
+        "AUTOREFRESH": [
+          90,
+          522,
+          537
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_catalog.c",
+      "sha256": "2e06d8b910c7ce957b0f75c80f67d1a78517f4d864a5398f3e77a7d7f0eadcdb",
+      "anchors": {
+        "mixer->pingpong = pp_count > 0": [
+          1686
+        ],
+        "pp_idx++": [
+          1694,
+          1695
+        ]
+      }
+    }
+  ],
+  "private_modules_linked": false,
+  "framebuffer_geometry_source": "same entry gated PixelProbe and local FDT; no fixed board addresses",
+  "map_attribute": "ArmMmuLib normal non-cacheable; framebuffer separately reserved from allocator",
+  "overlap_copy": "port wrapper uses correct descending last row; generic upstream unchanged",
+  "limitations": [
+    "Inherited single mode only; no panel or clock reinitialization",
+    "No SetMode(0) handset claim until independently tested"
+  ]
+}

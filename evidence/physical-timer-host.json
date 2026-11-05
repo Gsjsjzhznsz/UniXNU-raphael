@@ -1,0 +1,300 @@
+{
+  "passed": true,
+  "case_count": 63,
+  "cases": [
+    {
+      "name": "actual QEMU TimerArch and 58 C ABI assertions",
+      "passed": true
+    },
+    {
+      "name": "reject version",
+      "passed": true
+    },
+    {
+      "name": "reject status",
+      "passed": true
+    },
+    {
+      "name": "reject reason",
+      "passed": true
+    },
+    {
+      "name": "reject gic_d",
+      "passed": true
+    },
+    {
+      "name": "reject gic_d_bytes",
+      "passed": true
+    },
+    {
+      "name": "reject gic_r",
+      "passed": true
+    },
+    {
+      "name": "reject gic_r_bytes",
+      "passed": true
+    },
+    {
+      "name": "reject rd_base",
+      "passed": true
+    },
+    {
+      "name": "reject sgi_base",
+      "passed": true
+    },
+    {
+      "name": "reject intid",
+      "passed": true
+    },
+    {
+      "name": "reject flags",
+      "passed": true
+    },
+    {
+      "name": "reject frequency",
+      "passed": true
+    },
+    {
+      "name": "reject saved_dist",
+      "passed": true
+    },
+    {
+      "name": "reject saved_igrpen",
+      "passed": true
+    },
+    {
+      "name": "reject saved_ctl",
+      "passed": true
+    },
+    {
+      "name": "reject saved_cval",
+      "passed": true
+    },
+    {
+      "name": "reject saved_daif",
+      "passed": true
+    },
+    {
+      "name": "reject saved_enable",
+      "passed": true
+    },
+    {
+      "name": "reject saved_pending",
+      "passed": true
+    },
+    {
+      "name": "reject saved_active",
+      "passed": true
+    },
+    {
+      "name": "reject saved_vctl",
+      "passed": true
+    },
+    {
+      "name": "reject saved_vcval",
+      "passed": true
+    },
+    {
+      "name": "reject mapped_verified",
+      "passed": true
+    },
+    {
+      "name": "reject cpu_protocol",
+      "passed": true
+    },
+    {
+      "name": "reject irq_registered",
+      "passed": true
+    },
+    {
+      "name": "reject hw_protocol",
+      "passed": true
+    },
+    {
+      "name": "reject timer_protocol",
+      "passed": true
+    },
+    {
+      "name": "reject period",
+      "passed": true
+    },
+    {
+      "name": "reject irq_count",
+      "passed": true
+    },
+    {
+      "name": "reject eoi_count",
+      "passed": true
+    },
+    {
+      "name": "reject spurious",
+      "passed": true
+    },
+    {
+      "name": "reject unexpected",
+      "passed": true
+    },
+    {
+      "name": "reject source_masked",
+      "passed": true
+    },
+    {
+      "name": "reject notify_count",
+      "passed": true
+    },
+    {
+      "name": "reject first_counter",
+      "passed": true
+    },
+    {
+      "name": "reject last_counter",
+      "passed": true
+    },
+    {
+      "name": "reject start_counter",
+      "passed": true
+    },
+    {
+      "name": "reject end_counter",
+      "passed": true
+    },
+    {
+      "name": "reject relative_fired",
+      "passed": true
+    },
+    {
+      "name": "reject relative_ticks",
+      "passed": true
+    },
+    {
+      "name": "reject periodic_count",
+      "passed": true
+    },
+    {
+      "name": "reject periodic_ticks",
+      "passed": true
+    },
+    {
+      "name": "reject cancel_stable",
+      "passed": true
+    },
+    {
+      "name": "reject cancel_ticks",
+      "passed": true
+    },
+    {
+      "name": "reject timer_stopped",
+      "passed": true
+    },
+    {
+      "name": "reject restore_ok",
+      "passed": true
+    },
+    {
+      "name": "reject dist_after",
+      "passed": true
+    },
+    {
+      "name": "reject igrpen_after",
+      "passed": true
+    },
+    {
+      "name": "reject ctl_after",
+      "passed": true
+    },
+    {
+      "name": "reject cval_after",
+      "passed": true
+    },
+    {
+      "name": "reject enable_after",
+      "passed": true
+    },
+    {
+      "name": "reject pending_after",
+      "passed": true
+    },
+    {
+      "name": "reject active_after",
+      "passed": true
+    },
+    {
+      "name": "reject daif_after",
+      "passed": true
+    },
+    {
+      "name": "reject vctl_after",
+      "passed": true
+    },
+    {
+      "name": "reject vcval_after",
+      "passed": true
+    },
+    {
+      "name": "reject short",
+      "passed": true
+    },
+    {
+      "name": "reject long",
+      "passed": true
+    },
+    {
+      "name": "reject wrong phase",
+      "passed": true
+    },
+    {
+      "name": "reject unvalidated GIC",
+      "passed": true
+    },
+    {
+      "name": "reject unvalidated route",
+      "passed": true
+    },
+    {
+      "name": "reject unvalidated ICC",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/artifacts/physical-timer-host/20261028T082037.107089Z-d366mbi_/abi.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/physical-timer-host/20261028T082037.107089Z-d366mbi_/abi"
+  ],
+  "actual_c_abi_assertions": 58,
+  "wire_bytes": 448,
+  "result_storage": {
+    "bytes": 512,
+    "rva": 70752,
+    "physical_address": 1074570336,
+    "fd_offset": 173152,
+    "materialized_zero_data": true
+  },
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPhysicalTimer.h",
+      "sha256": "c8fb8ab909a8c3cb428f102634500b0907c5065edccb7f1cbf70c65845be12dd"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimer.c",
+      "sha256": "998db8fc0b8f99c3594460062e2b57eda8d159cf887c348934ab373f6926f691"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/PhysicalTimerTest.c",
+      "sha256": "109f59c185c9e749df62cc5c59b604c1ce4d08ed81dcbb34c135a19147c311c4"
+    }
+  ],
+  "decoder_sha256": "e253e88dea871277e53cb5052daaa003e56dc6de3ba96029d9badc2d954b6f56",
+  "runner_sha256": "7dd24399f2801a6d979796cf7d99d6dfce332d2a428d03f75e2fc1542b9024a9",
+  "handset_executed": false
+}

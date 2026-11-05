@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-28T13:52:01.652176+00:00",
+  "passed": true,
+  "remote": "https://github.com/UniXNU/UniXNU.git",
+  "branch": "main",
+  "old_revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+  "new_revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+  "commit_count": 4,
+  "commits": [
+    {
+      "revision": "70ddc124511bff23e1488991815a7d60e871e872",
+      "committed": "2026-10-27T17:50:34+00:00",
+      "subject": "docs: refresh device records"
+    },
+    {
+      "revision": "258260fe59af0b75ab6c903c182c543392b2ab83",
+      "committed": "2026-10-28T03:44:14+08:00",
+      "subject": "docs: make recovery log readers part of porting"
+    },
+    {
+      "revision": "120067ccc43ebb5e76ec62c9219a48c897052838",
+      "committed": "2026-10-28T04:57:46+08:00",
+      "subject": "docs: remove sheng-specific log capture page"
+    },
+    {
+      "revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+      "committed": "2026-10-28T05:04:51+00:00",
+      "subject": "docs: refresh device records"
+    }
+  ],
+  "changed_file_count": 73,
+  "changed_files": [
+    "devices.toml",
+    "docs/.vitepress/config.mts",
+    "docs/.vitepress/device-catalog.json",
+    "docs/.vitepress/device-records/alioth.toml",
+    "docs/.vitepress/device-records/asteroids.toml",
+    "docs/.vitepress/device-records/j716f.toml",
+    "docs/.vitepress/device-records/kebab-stevedang67889.toml",
+    "docs/.vitepress/device-records/marble.toml",
+    "docs/.vitepress/device-records/oneplus13t.toml",
+    "docs/.vitepress/device-records/pong.toml",
+    "docs/.vitepress/device-records/sirius-huajifruit.toml",
+    "docs/.vitepress/device-records/sirius.toml",
+    "docs/devices/alioth.md",
+    "docs/devices/amethyst-bluedmc-amethyst.md",
+    "docs/devices/amethyst.md",
+    "docs/devices/asteroids.md",
+    "docs/devices/cheeseburger.md",
+    "docs/devices/dada.md",
+    "docs/devices/dada2.md",
+    "docs/devices/fuxi-mouse233.md",
+    "docs/devices/index.md",
+    "docs/devices/ishtar-peter8889.md",
+    "docs/devices/j716f.md",
+    "docs/devices/kebab-stevedang67889.md",
+    "docs/devices/marble.md",
+    "docs/devices/mondrian.md",
+    "docs/devices/oneplus13t.md",
+    "docs/devices/peridot-hoshikv.md",
+    "docs/devices/polaris-puszekreksio.md",
+    "docs/devices/pong-hxzbaka.md",
+    "docs/devices/pong.md",
+    "docs/devices/sheng-unattended-test.md",
+    "docs/devices/shennong.md",
+    "docs/devices/sirius-huajifruit.md",
+    "docs/devices/sirius-yooglery.md",
+    "docs/devices/sirius.md",
+    "docs/devices/songyuan-aogg2023.md",
+    "docs/devices/songyuan-wukawl.md",
+    "docs/devices/tundra.md",
+    "docs/guide/debugging.md",
+    "docs/porting/bring-up.md",
+    "docs/porting/log-capture.md",
+    "docs/zh/devices/alioth.md",
+    "docs/zh/devices/amethyst-bluedmc-amethyst.md",
+    "docs/zh/devices/amethyst.md",
+    "docs/zh/devices/asteroids.md",
+    "docs/zh/devices/cheeseburger.md",
+    "docs/zh/devices/dada.md",
+    "docs/zh/devices/dada2.md",
+    "docs/zh/devices/fuxi-mouse233.md",
+    "docs/zh/devices/index.md",
+    "docs/zh/devices/ishtar-peter8889.md",
+    "docs/zh/devices/j716f.md",
+    "docs/zh/devices/kebab-stevedang67889.md",
+    "docs/zh/devices/marble.md",
+    "docs/zh/devices/mondrian.md",
+    "docs/zh/devices/oneplus13t.md",
+    "docs/zh/devices/peridot-hoshikv.md",
+    "docs/zh/devices/polaris-puszekreksio.md",
+    "docs/zh/devices/pong-hxzbaka.md",
+    "docs/zh/devices/pong.md",
+    "docs/zh/devices/sheng-unattended-test.md",
+    "docs/zh/devices/shennong.md",
+    "docs/zh/devices/sirius-huajifruit.md",
+    "docs/zh/devices/sirius-yooglery.md",
+    "docs/zh/devices/sirius.md",
+    "docs/zh/devices/songyuan-aogg2023.md",
+    "docs/zh/devices/songyuan-wukawl.md",
+    "docs/zh/devices/tundra.md",
+    "docs/zh/guide/debugging.md",
+    "docs/zh/porting/bring-up.md",
+    "docs/zh/porting/log-capture.md",
+    "scripts/sync-devices.py"
+  ],
+  "unchanged_objects": [
+    {
+      "path": "package",
+      "git_object": "a636a25923dc725ab36fd9dc6d4105afd609a772"
+    },
+    {
+      "path": "profiles",
+      "git_object": "6a2ea36f9b18f85379609ba2b05cbc5b5c6975fb"
+    },
+    {
+      "path": "feeds.toml",
+      "git_object": "259bb88a27ff52415c36217958f4fd197b370330"
+    },
+    {
+      "path": "components.toml",
+      "git_object": "505cf963843593df87855a9e44ccf0d85fe4b6e5"
+    },
+    {
+      "path": ".gitmodules",
+      "git_object": "dff2ced197d14d03446123d51dcd070b2beb07d0"
+    },
+    {
+      "path": "patches",
+      "git_object": "c77a34652eb0b01aa90520977cfa2b3b5bb946cc"
+    },
+    {
+      "path": "drivers",
+      "git_object": "cf2d2d81ed4dc97176b9c07861608b4dc78969b0"
+    },
+    {
+      "path": "tests",
+      "git_object": "fec3299b581c0eeea8265d4edffd9eb5994e35be"
+    },
+    {
+      "path": "unixnu",
+      "git_object": "24e706898dc95b88e423f0f5a818a588b3aa05b1"
+    },
+    {
+      "path": "scripts/unixnu",
+      "git_object": "b7e3db1750491500811c94a9933f67f1df7cb531"
+    }
+  ],
+  "dependency_upgrade_required": false,
+  "baseline_reference": "refs/heads/raphael-baseline-20261028-0fc0fc1",
+  "sources_lock_sha256": "f4bd0d974a1b1541247cf66718062efcf093b5102cb754e3125ed895989813ab",
+  "private_run": "artifacts/upstream-refresh/20261028T133534Z",
+  "port_head_at_validation": "eac272f5381c2b87a8d003c7a4270b67231db1ad",
+  "port_worktree_dirty_at_validation": true,
+  "input_binding": "Each build has frozen source snapshots; port HEAD alone does not identify uncommitted inputs",
+  "pre_update_ram_work_preserved": true,
+  "pre_update_patch_sha256": "fe7be337b2e4cb23674aa1456f618940dd05e5fea70de0d07943b85d0a8c663f",
+  "active_gate_inputs": [
+    {
+      "path": "scripts/source_pins.py",
+      "sha256": "266c646bea786bf0e1be5f5a0fd97887b669154d8c4d55ab8e85f7800048eddf"
+    },
+    {
+      "path": "scripts/audit_menu_sources.py",
+      "sha256": "dfff99dccb9b05e43d3f71235204aab0284d709ec994b7a75e9b59b7e1dd10b7"
+    },
+    {
+      "path": "scripts/audit_payload_sources.py",
+      "sha256": "72f9fb970eb53b4621c67357e7a2d158f9d14a3f11b4b88df8bc7327d91e298a"
+    },
+    {
+      "path": "scripts/audit_darwin_sources.py",
+      "sha256": "60c28eabbb5b707b38f1cd144f86eb0929afa753f04c96132c8e257a75583273"
+    },
+    {
+      "path": "scripts/run_payload_fixture.py",
+      "sha256": "e9d8cfb29162b68d075707f9d7a74b3a76bb6f2cdb7f7395451d443121c5e0a8"
+    },
+    {
+      "path": "scripts/run_darwin_fixture.py",
+      "sha256": "7ddaca4f231ccfd9bc1abb7122e6da42eb644f6ec99211164aa742eed175725e"
+    },
+    {
+      "path": "scripts/run_handoff_fixture.py",
+      "sha256": "535026524ca7e30cb344b844a5117de7e5d92abb9109dca001414d11a772a1d8"
+    },
+    {
+      "path": "scripts/build_native_bootstrap.py",
+      "sha256": "eaa6a992ab687cd7d092af9d88cca88fd15ce27f97c442febfeafbd00f5db677"
+    }
+  ],
+  "validation": [
+    {
+      "kind": "manager",
+      "passed": true,
+      "report": "artifacts/payload-fixture-qemu/20261028T134735Z/report.json",
+      "report_sha256": "a99d3ec18d06533309cfe9c9e8a1529855ab65458d545682de81ae2008b240c9",
+      "snapshot_inputs_verified": 67,
+      "upstream_git_blobs_verified": 47,
+      "handset_executed": false,
+      "checks": 17,
+      "images": {},
+      "image_sha256": "230d431abb9583a70cc7ad85b92f1b05883ccaacea4b066928bd301d611e0a4f"
+    },
+    {
+      "kind": "darwin_refusal",
+      "passed": true,
+      "report": "artifacts/darwin-fixture-qemu/20261028T134608.458609Z/report.json",
+      "report_sha256": "61744cd0619cef104e047c4173fba280bd56c00108efb5936e6a35733253b333",
+      "snapshot_inputs_verified": 76,
+      "upstream_git_blobs_verified": 56,
+      "handset_executed": false,
+      "checks": 38,
+      "images": {
+        "DarwinBoot": {
+          "bytes": 19968,
+          "sha256": "f8ed2cb852d61c483643b4b3337fbb8025087a2d00974fa0a0c29b7ace340c93",
+          "machine": "ARM64",
+          "subsystem": "IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER",
+          "relocations_present": true
+        },
+        "DarwinFixture": {
+          "bytes": 72704,
+          "sha256": "9a9a01a67f9e167ae6fd894c8d1bec0c08ca33e23725184c685a7151b10b9445",
+          "machine": "ARM64",
+          "subsystem": "IMAGE_SUBSYSTEM_EFI_APPLICATION",
+          "relocations_present": true
+        }
+      },
+      "image_sha256": null
+    },
+    {
+      "kind": "synthetic_handoff_packed",
+      "passed": true,
+      "report": "artifacts/handoff-fixture-qemu/20261028T134608.477281Z-jlgdq3rh/report.json",
+      "report_sha256": "3d95acbe2d7827c94feae5ca131a46772f1a9f9aae75ddc9b1eeab377a43739b",
+      "snapshot_inputs_verified": 79,
+      "upstream_git_blobs_verified": 56,
+      "handset_executed": false,
+      "checks": 25,
+      "images": {
+        "DarwinBoot": {
+          "bytes": 19968,
+          "sha256": "c6a42cb2a902ac66fd317dd4d54bf6b2aafc45d3d062c98c73568de2acdbcaf0",
+          "machine": "ARM64",
+          "subsystem": "IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER",
+          "relocations_present": true
+        },
+        "HandoffFixture": {
+          "bytes": 72192,
+          "sha256": "bb07bee9aa24dd5a216d3aaf890a2b6663d9d1a597f5e0b8bd5d02d210b67d8f",
+          "machine": "ARM64",
+          "subsystem": "IMAGE_SUBSYSTEM_EFI_APPLICATION",
+          "relocations_present": true
+        }
+      },
+      "image_sha256": null
+    },
+    {
+      "kind": "default_sec_dxe",
+      "passed": true,
+      "report": "artifacts/sec-dxe-qemu/20261028T134735.148797Z-f52buw6k/report.json",
+      "report_sha256": "78753f7ee39f2ff5a296d8d7208db8573fc423600a0e5cecaf9b673514aea3e8",
+      "snapshot_inputs_verified": 149,
+      "upstream_git_blobs_verified": 47,
+      "handset_executed": false,
+      "checks": {
+        "normal": 47,
+        "injected_brk": 44,
+        "unmapped_udf": 44
+      },
+      "firmware_sha256": "f18c9d588fa764b935ec9d666dc790913714650e583c87bbcc0433f5aa962474"
+    }
+  ],
+  "upstream_unit_tests": {
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests/terminal",
+      "-v"
+    ],
+    "cwd": "sources/UniXNU",
+    "ran": 45,
+    "passed": 44,
+    "skipped": 1,
+    "log_sha256": "f3982ac13010b0dc64691d1468c87fff191e2a0894fe8edcb7be698b26ca58b3"
+  },
+  "initial_failure": {
+    "command": [
+      "python3",
+      "scripts/run_payload_fixture.py"
+    ],
+    "result": "pre-existing missing snapshot/uefi-raphael in PACKAGES_PATH for non-manager-ui fixture",
+    "retained_log": "artifacts/upstream-refresh/20261028T133534Z/payload-regression.log",
+    "fixed": true,
+    "retry_passed": true
+  },
+  "handset_executed": false,
+  "phone_rebooted": false,
+  "partition_writes": false,
+  "backup_modified": false,
+  "limits": [
+    "This refresh changes documentation and device registry records; runtime trees and dependency declarations are byte-identical",
+    "No new handset execution or XNU qualification",
+    "Existing handset results retain their original upstream revision",
+    "RAM direct-callback work is preserved separately and is not qualified by these refresh regressions"
+  ],
+  "operation_records": [
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/fetch.log",
+      "sha256": "cd1006b6cba53d04686b2cc0501a97d5cd182bcde2ddf455ed741b9b85e06da5"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/fast-forward.log",
+      "sha256": "c117405979eebde0af4717215128152c51c34a052a317a1ef587af75f5099992"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/remote-confirmation.log",
+      "sha256": "f1829b40558492ca62802ddfe3448d5ab3490629b0a1ed2dc81597ad91801ed0"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/upstream-tests-command.json",
+      "sha256": "f994e9a469edeb13cf3e4b46614fc08447928e2fbec7a4446032fbd177670f6e"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/payload-retry-1-command.json",
+      "sha256": "92b97b12492c9ebc825f8c09b1e1a51260400bd5125680027f75addb16952c8b"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/darwin-command.json",
+      "sha256": "9a7a3bbc8249a05fe23543078fc83ee17e5f44739f722f62e1a6bb89d1ca85c5"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/handoff-command.json",
+      "sha256": "71c315a2e6dd8b0e51e8e46d1e8c53e8dff4bef5cd6471d39b14823e73452d21"
+    },
+    {
+      "path": "artifacts/upstream-refresh/20261028T133534Z/sec-default-command.json",
+      "sha256": "3aceb83723d0d25d1687a448eda0a9b19934478e03ddbce7bb8c9b85b5615d2a"
+    }
+  ]
+}

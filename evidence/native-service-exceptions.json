@@ -1,0 +1,135 @@
+{
+  "handset_report": "evidence/private/android-return-run/20261101T211750Z/report.json",
+  "experiment_passed": false,
+  "normal_checkpoint_verified": false,
+  "recovered_segments_crc_verified": true,
+  "android_return_seconds": 546.552,
+  "android_cleanup_verified": true,
+  "panic_caller": "_proc_exit",
+  "critical_exit": {
+    "process": "watchdogd",
+    "pid": 52,
+    "reason_namespace": 2,
+    "reason_code": 5
+  },
+  "console_observed": {
+    "cfprefsd_pids": [
+      90,
+      93
+    ],
+    "backboardd_pid": 57,
+    "springboard_crashed_pids": [
+      27,
+      105,
+      108,
+      111,
+      115
+    ],
+    "display_clients": 0,
+    "display_frames": 0
+  },
+  "first_exception_candidate": {
+    "build_report": "artifacts/native-bootstrap-attempt/20261101T211330Z/report.json",
+    "host_report": "artifacts/service-exception-host/report.json",
+    "final_link_report": "artifacts/service-exception-host/final-link.json",
+    "scope": "First original user exception per SpringBoard/watchdogd/backboardd/liveactivitiesd; same resident-only128Q sampler and original exception delivery; same360s observer",
+    "handset_verified": true
+  },
+  "desktop_verified": false,
+  "prior_failed_report": "evidence/private/android-return-run/20261101T210023Z/report.json",
+  "first_exception_actual": {
+    "process": "watchdogd",
+    "pid": 52,
+    "exception": 6,
+    "codes": [
+      1,
+      4300978956
+    ],
+    "occurrences": 5,
+    "runtime_pc": "0x1005bbb0c",
+    "original_missing_service_brk": "0x10000ab0c",
+    "inferred_executable_slide": "0x5b1000",
+    "inferred_executable_slide_runtime_instruction_verified": false,
+    "task_shared_cache_slide": 230244352,
+    "original_message": "connect_to_kext() unexpectedly failed - unable to lookup watchdog KEXT service",
+    "springboard_first_exception_observed": false
+  },
+  "watchdog_client_candidate": {
+    "v30_qemu_report": "artifacts/native-staging-qemu/20261101T213742.192895Z-d4wl32an/report.json",
+    "v30_failure": "Original duplicate metaclass; no handset execution",
+    "v31_build": "artifacts/native-bootstrap-attempt/20261101T215648Z/report.json",
+    "original_class_bytes": 248,
+    "virtual_slots": 171,
+    "handset_executed": true,
+    "v31_qemu_report": "artifacts/native-staging-qemu/20261101T215807.241312Z-dg26r2mz/report.json",
+    "qemu_original_ancestry_publication_verified": true,
+    "qemu_hardware_armed": false,
+    "handset_report": "evidence/private/android-return-run/20261101T215950Z/report.json",
+    "status": "v31 rejected: original protobox denies iokit-open-service RaphaelDiagnosticWatchdog; original class/service publication and bounded hardware armed but0 opens/checkins; Android cleanup passed",
+    "handset_verified": false,
+    "opens": 0,
+    "checkins": 0,
+    "original_module_status": 0
+  },
+  "watchdog_service_grant_candidate": {
+    "build_report": "artifacts/native-bootstrap-attempt/20261101T221227Z/report.json",
+    "qemu_report": "artifacts/native-staging-qemu/20261101T221411.986665Z-1abo845z/report.json",
+    "qemu_passed": true,
+    "host_report": "artifacts/watchdog-service-grant-host/report.json",
+    "handset_report": "evidence/private/android-return-run/20261101T221554Z/report.json",
+    "handset_verified": false,
+    "status": "v32 corrected: original pre-method IOPMUPrimary registry lookup assertion; service opens3/closes2/checkins0. Not DaemonCheckEnabled failure; see original-pmu-match audit.",
+    "only_service_grant": "NativeSandboxGrantProcess=watchdogd",
+    "opens": 3,
+    "closes": 2,
+    "checkins": 0,
+    "wall_seconds_to_android": 546.6727752530023,
+    "android_cleanup_verified": true
+  },
+  "watchdog_method_observer_candidate": {
+    "build_report": "artifacts/native-bootstrap-attempt/20261101T223157Z/report.json",
+    "host_report": "artifacts/watchdog-method-observer-host/report.json",
+    "scope": "First actual external-method argument shape, validation guard and return code; no validator/deadline or original daemon change",
+    "handset_verified": false,
+    "handset_report": "evidence/private/android-return-run/20261101T223537Z/report.json",
+    "qemu_passed": true,
+    "status": "v33 collected valid native records but no externalMethod entry; same original IOPMUPrimary lookup assertion; full Android cleanup passed",
+    "opens": 3,
+    "closes": 2,
+    "checkins": 0,
+    "method_entry_observed": false,
+    "wall_seconds_to_android": 505.16516540999874,
+    "android_cleanup_verified": true,
+    "original_pmu_audit": "artifacts/watchdog-method-observer-host/original-pmu-match.json"
+  },
+  "watchdog_registry_candidate": {
+    "status": "v34/225501Z accepted temporary boot but Android USB return not established by664.258s; no native readback, xnu_executed unknown. Await screen/recovery and late readback; do not rerun this image.",
+    "hardware_pmu_verified": false,
+    "property_writes_supported": false,
+    "handset_verified": false,
+    "build_report": "artifacts/native-bootstrap-attempt/20261101T225105Z/report.json",
+    "qemu_report": "artifacts/native-staging-qemu/20261101T225316.639572Z-0mu_dz3q/report.json",
+    "qemu_passed": true,
+    "qemu_original_property_match_verified": true,
+    "handset_report": "evidence/private/android-return-run/20261101T225501Z/report.json",
+    "xnu_executed": null,
+    "android_return_verified": false,
+    "android_cleanup_verified": false,
+    "wall_seconds_to_android": null,
+    "wait_seconds_before_transport_failure": 664.2580091389973
+  },
+  "springboard_first_display_exception": {
+    "handset_report": "evidence/private/android-return-run/20261101T223537Z/report.json",
+    "original_cache_uuid_matched": true,
+    "actual_task_shared_cache_slide": 243646464,
+    "runtime_pc": "0x1adc3b2ec",
+    "unslid_pc": "0x19f3df2ec",
+    "symbol": "-[FBSDisplayMonitor _initWithBookendObserver:transformer:]",
+    "offset": 1148,
+    "original_assertion": "failed to find the main CADisplay",
+    "original_branch": "[CADisplay displays].firstObject is nil",
+    "enumeration_path": "CADisplay displays -> ensure_displays -> query_displays -> CARenderServerGetServerPort and __CASGetDisplays IPC",
+    "scope": "Original binaries read only; server readiness, reply and display driver publication still require runtime evidence",
+    "source_disassembly": "artifacts/watchdog-method-observer-host/original-FBSDisplayMonitor.disasm.txt"
+  }
+}

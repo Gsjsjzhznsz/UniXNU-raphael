@@ -1,0 +1,126 @@
+{
+  "scope": "Source-maintained local packaging adoption record; not an immutable public boot log",
+  "date": "2026-11-02",
+  "runtime_revision": "c96b29975645b711dc06bc435c3ad27321ce817c",
+  "template_identical": true,
+  "configured_os": "ipados-17.7.11-21H461",
+  "patch_count": 62,
+  "checks": [
+    {
+      "name": "launcher-syntax",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "check-default",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "check-major",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "check-full",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "same-config-and-ordered-patches",
+      "passed": true,
+      "patch_count": 62
+    },
+    {
+      "name": "adoption-check",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "full-release-not-ready",
+      "returncode": 1,
+      "expected_returncode": 1
+    },
+    {
+      "name": "unsupported-os-26",
+      "returncode": 1,
+      "expected_returncode": 1
+    },
+    {
+      "name": "unsupported-os-27",
+      "returncode": 1,
+      "expected_returncode": 1
+    },
+    {
+      "name": "argv-and-failure-propagation",
+      "returncode": 7,
+      "expected_returncode": 7
+    },
+    {
+      "name": "upstream-template-bytes",
+      "passed": true
+    },
+    {
+      "name": ".github/workflows/package.yml",
+      "yaml_parsed": true,
+      "shell_blocks_syntax_passed": true
+    },
+    {
+      "name": "UniXNU-raphael/.github/workflows/package.yml",
+      "yaml_parsed": true,
+      "shell_blocks_syntax_passed": true
+    },
+    {
+      "name": "repository-layout",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "diff-check",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "handset-backend-source-diff",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "packaging-backend-source-diff",
+      "returncode": 0,
+      "expected_returncode": 0
+    },
+    {
+      "name": "workflow-layout-and-local-soc-execution",
+      "passed": true
+    },
+    {
+      "name": "workflow-missing-soc-pins-rejected",
+      "passed": true
+    },
+    {
+      "name": "workflow-source-only-fixture-preflight",
+      "passed": true,
+      "patch_count": 62
+    },
+    {
+      "name": "workflow-incomplete-release-rejected",
+      "passed": true
+    }
+  ],
+  "release_recipe_complete": false,
+  "missing_recipe_fields": [
+    "firmware.config",
+    "firmware.dsc",
+    "firmware.fd",
+    "firmware.packages",
+    "payload.volume",
+    "payload.size_mib",
+    "payload.loader",
+    "bootimg.dtb"
+  ],
+  "full_image_build_performed": false,
+  "network_fetch_performed": false,
+  "remote_ci_executed": false,
+  "handset_executed": false
+}

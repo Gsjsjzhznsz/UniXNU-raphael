@@ -1,0 +1,19 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T083013Z",
+  "independent_log": "evidence/private/ufs-console-log/20261104T082744Z/20261104T084515Z-manual-recovery",
+  "valid_records": 373,
+  "log_bytes": 303915,
+  "dropped": 0,
+  "frames": 0,
+  "display_clients": 5,
+  "watchdog_checkins": 18,
+  "watchdog_failures": 0,
+  "ram_resident_bytes": 156626944,
+  "ram_reads": 2158,
+  "ram_writes": 1226,
+  "ram_failures": 0,
+  "desktop_verified": false,
+  "original_full_checkpoint_verified": false,
+  "onsite": "black screen; manual return to Android",
+  "lsd": "Signing-info binary-plist parsing; no fixed online-auth wait established"
+}

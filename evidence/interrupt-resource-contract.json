@@ -1,0 +1,286 @@
+{
+  "passed": true,
+  "kind": "Read-only source and data contract; no MMIO or interrupt programming",
+  "captured_utc": "20261027T203039.031418Z",
+  "collection": "evidence/private/interrupt-audit/20261027T203039.031418Z",
+  "live_fdt_sha256": "7984f47f73d2145ca5ce8142ec672f52a255bb22c4119af5c9249353d8b00460",
+  "interrupts_sha256": "3b2faf34e6b7a4bfd180929db17760ceadd1eb66568dbeeef49a979b471e74c6",
+  "facts": {
+    "timer_node": "/soc/timer",
+    "inherited_parent_source": "/:interrupt-parent",
+    "interrupt_chain": [
+      {
+        "node": "/soc/interrupt-controller@0xb220000",
+        "compatible": [
+          "qcom,pdc-sm8150"
+        ],
+        "parent_source": "/soc/interrupt-controller@0xb220000:interrupt-parent"
+      },
+      {
+        "node": "/soc/interrupt-controller@17a00000",
+        "compatible": [
+          "arm,gic-v3"
+        ]
+      }
+    ],
+    "frequency": 19200000,
+    "timer_interrupts": [
+      {
+        "role": "secure_physical",
+        "specifier": [
+          1,
+          1,
+          3848
+        ],
+        "intid": 17,
+        "trigger_flags": 8,
+        "legacy_cpu_mask": 15
+      },
+      {
+        "role": "nonsecure_physical",
+        "specifier": [
+          1,
+          2,
+          3848
+        ],
+        "intid": 18,
+        "trigger_flags": 8,
+        "legacy_cpu_mask": 15
+      },
+      {
+        "role": "virtual",
+        "specifier": [
+          1,
+          3,
+          3848
+        ],
+        "intid": 19,
+        "trigger_flags": 8,
+        "legacy_cpu_mask": 15
+      },
+      {
+        "role": "hypervisor",
+        "specifier": [
+          1,
+          0,
+          3848
+        ],
+        "intid": 16,
+        "trigger_flags": 8,
+        "legacy_cpu_mask": 15
+      }
+    ],
+    "gic_node": "/soc/interrupt-controller@17a00000",
+    "distributor": {
+      "base": 396361728,
+      "bytes": 65536
+    },
+    "redistributors": {
+      "base": 396754944,
+      "bytes": 1048576,
+      "stride": 131072,
+      "declared_slots": 8,
+      "boot_cpu_frame_verified": false
+    },
+    "enabled_cpu_affinities": [
+      0,
+      256,
+      512,
+      768,
+      1024,
+      1280,
+      1536,
+      1792
+    ],
+    "irq_delivery_verified": false,
+    "boot_enabled": false
+  },
+  "reference_semantics": {
+    "live_and_reference_match": true,
+    "pdc_translation_forwards_to_parent": true,
+    "timer_intids_absent_from_pdc_pin_table": true,
+    "current_custom_kernel_identical_to_reference": false,
+    "trigger_flags_preserved": true,
+    "warning": "Vendor DTS uses legacy 0xf08 (low-level plus CPU mask). Do not silently replace it with 4 or copy AAVMF PPI defaults."
+  },
+  "android_runtime": {
+    "linux_irq": 4,
+    "irqchip": "PDC-GIC",
+    "intid": 19,
+    "trigger": "Level",
+    "selected_role": "virtual",
+    "counter_columns": 8,
+    "source": "/proc/interrupts:arch_timer"
+  },
+  "historical_entry_frequency_agrees": true,
+  "primary_sources": [
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "arch/arm64/boot/dts/qcom/sm8150.dtsi",
+      "sha256": "69e2c9e4e02d0b8c5f084c9d9ee0c3618eac12c63d1d1a73d977562ab6bdf71a",
+      "anchors": {
+        "interrupt-parent = <&pdc>": [
+          40
+        ],
+        "intc: interrupt-controller": [
+          912
+        ],
+        "redistributor-stride": [
+          917
+        ],
+        "compatible = \"arm,armv8-timer\"": [
+          943
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/devicetree/bindings/arm/arch_timer.txt",
+      "sha256": "f4a816cdc56c773b0658e5886ebcd7b00dbc582dc0b3e15e5c3c19b011154a0c",
+      "anchors": {
+        "secure, non-secure, virtual": [
+          17
+        ],
+        "clock-frequency": [
+          20,
+          62,
+          69,
+          97
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/devicetree/bindings/interrupt-controller/qti,pdc.txt",
+      "sha256": "d76bee335650a11ccf1bed165a05ad161ec00975527a1fb4703fdfe61161ed34",
+      "anchors": {
+        "hierarchical irq": [
+          15
+        ],
+        "same as described": [
+          47
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "Documentation/devicetree/bindings/interrupt-controller/arm,gic-v3.txt",
+      "sha256": "9f356412408d2c1e66a37ed8342eb52299f3dc7d4b660ddcb3e59f42959cb71c",
+      "anchors": {
+        "PPI interrupts": [
+          21
+        ],
+        "GIC Distributor interface": [
+          41
+        ],
+        "redistributor-stride": [
+          53,
+          113
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/irqchip/qcom/pdc.c",
+      "sha256": "1601d02c30a57fd97a684ad439ffb9f765efc8b0d7a32516008c3ce7da8b4850",
+      "anchors": {
+        "qcom_pdc_translate": [
+          242,
+          258,
+          274
+        ],
+        "d->parent->ops->translate": [
+          245
+        ],
+        "get_pdc_pin": [
+          46,
+          61,
+          163
+        ],
+        "fwd_to_parent": [
+          167,
+          217
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/irqchip/qcom/pdc-sm8150.c",
+      "sha256": "fdc02f45a968cf5abb8b767e13ee77b2d177e67c3c774f03e31d039a3ff6fbb5",
+      "anchors": {
+        "sm8150_data": [
+          17,
+          151
+        ],
+        "qcom_pdc_init": [
+          151
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/irqchip/irq-gic-v3.c",
+      "sha256": "7079c68f97c2e275be876db22b5dc4e181f74df0ae111fdab3fdbe0bf30502f8",
+      "anchors": {
+        "gic_irq_domain_translate": [
+          847,
+          894,
+          943
+        ],
+        "*hwirq = fwspec->param[1] + 16": [
+          861
+        ],
+        "SPIs have restrictions": [
+          312
+        ]
+      }
+    },
+    {
+      "repository": "sources/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/clocksource/arm_arch_timer.c",
+      "sha256": "8238788e2f0ea927ac5f0dff2d26d96ab0d47fd98cf8aec76c0650cfcd4698a6",
+      "anchors": {
+        "arch_timer_select_ppi": [
+          1144,
+          1161,
+          1207,
+          1532
+        ],
+        "irq_of_parse_and_map(np, i)": [
+          1187
+        ],
+        "ARCH_TIMER_VIRT_PPI": [
+          77,
+          693,
+          857,
+          914,
+          1006,
+          1166,
+          1167,
+          1189,
+          1514,
+          1515,
+          1520
+        ]
+      }
+    }
+  ],
+  "parser_sha256": "448bc32a113e2f80b176a4dc40f38612a972d3675ca12a14be3d0fd84b24b706",
+  "handset_rebooted": false,
+  "uefi_timer_arch_verified": false,
+  "unknowns": [
+    "GICD/GICR version and boot CPU redistributor register state at ABL handoff",
+    "ICC system-register access, grouping, priority and original firmware ownership",
+    "Nonsecure physical timer interrupt delivery in new firmware",
+    "Safe GIC/timer takeover and complete restoration before Android continuation"
+  ],
+  "command": "python3 scripts/derive_interrupt_contract.py evidence/private/interrupt-audit/20261027T203039.031418Z"
+}

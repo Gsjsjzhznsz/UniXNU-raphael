@@ -1,0 +1,184 @@
+{
+  "passed": true,
+  "kind": "actual C route gate with local register fixture; no MMIO access",
+  "case_count": 21,
+  "cases": [
+    {
+      "name": "nonce-bound local VIG0 LM PP DSI opaque route",
+      "passed": true,
+      "accepted": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "pixel alpha dependence",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "unsupported blend bits",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "transparent foreground",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "nonzero background",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "mixer geometry differs",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "unhandled base stage",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "second rectangle",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "no active interface",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "multiple active interfaces",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "undescribed interface",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "not command mode",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "unexpected pingpong mux",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "compressed panel path",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "TE disabled",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "autorefresh disabled",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "zero autorefresh count",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "missing sampled blend",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "duplicate sampled blend",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "wrong wire version",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    },
+    {
+      "name": "incomplete pixel proof",
+      "passed": true,
+      "accepted": false,
+      "mocked_hardware": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "-DFdtFirstSubnode=fdt_first_subnode",
+    "-DFdtNextSubnode=fdt_next_subnode",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/GopRoute.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/gop-route-host/20261027T174722Z/gop-route.so"
+  ],
+  "fixture_fdt_sha256": "9d72a99b769c8507c50b2a73faef197b9fabc9d47704ef6d17a8b5d07d493b3d",
+  "fixture_snapshot_sha256": "3cb3fee685e7af062ed25714b9f73a49ded26e585cfbd7c4792eca62fef74cbc",
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GopRoute.c",
+      "sha256": "d528b3b59744ffdc7ecdcc699946fb58e9961fb0ae91bf1d93d6c52d795cffe9"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelFramebuffer.h",
+      "sha256": "c9649609f4877d644da88f2073a57bc1063d2aee29c7f19c07f9c7ef5fd9fc2b"
+    },
+    {
+      "path": "scripts/validate_gop_route.py",
+      "sha256": "e175bb3e40cf66df64f0d55d8504fd4956b4ee85b72733e3fd8d3245eb1eb185"
+    }
+  ]
+}

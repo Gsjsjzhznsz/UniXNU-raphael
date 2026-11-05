@@ -1,0 +1,23 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = PayloadProbe
+  FILE_GUID = CEB70828-1B30-47D4-B455-98438D00AE10
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = PayloadProbeEntry
+[Sources]
+  PayloadProbe.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+  RaphaelTestPkg/RaphaelTestPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UniXNULib
+[Protocols]
+  gEfiLoadedImageProtocolGuid

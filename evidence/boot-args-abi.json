@@ -1,0 +1,191 @@
+{
+  "passed": true,
+  "check_count": 15,
+  "command": "python3 scripts/audit_boot_args_abi.py",
+  "source": "Apple official xnu-10002.1.13 arm64 boot.h",
+  "apple_tag_object": "a653a70d861014a544bffa506779088605bbabac",
+  "apple_commit": "1031c584a5e37aff177559b9f69dbd3c8c3fd30a",
+  "apple_boot_h_sha256": "163109e86604a31d7c6f880b4c96bfdecfa110d737f48417adb8e6e5fce0773c",
+  "darwin_commit": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+  "darwin_boot_args_sha256": "1d6b172a306bf5d3fc409d22bd7e674d166e5fde92652c4135de5c79f3eddd16",
+  "targets": {
+    "host": {
+      "size": 1152,
+      "alignment": 8,
+      "fields": {
+        "Revision": {
+          "darwin_field": "Revision",
+          "offset": 0
+        },
+        "Version": {
+          "darwin_field": "Version",
+          "offset": 2
+        },
+        "virtBase": {
+          "darwin_field": "VirtualBase",
+          "offset": 8
+        },
+        "physBase": {
+          "darwin_field": "PhysicalBase",
+          "offset": 16
+        },
+        "memSize": {
+          "darwin_field": "MemorySize",
+          "offset": 24
+        },
+        "topOfKernelData": {
+          "darwin_field": "TopOfKernelData",
+          "offset": 32
+        },
+        "Video": {
+          "darwin_field": "Video",
+          "offset": 40
+        },
+        "machineType": {
+          "darwin_field": "MachineType",
+          "offset": 88
+        },
+        "deviceTreeP": {
+          "darwin_field": "DeviceTree",
+          "offset": 96
+        },
+        "deviceTreeLength": {
+          "darwin_field": "DeviceTreeLength",
+          "offset": 104
+        },
+        "CommandLine": {
+          "darwin_field": "CommandLine",
+          "offset": 108
+        },
+        "bootFlags": {
+          "darwin_field": "BootFlags",
+          "offset": 1136
+        },
+        "memSizeActual": {
+          "darwin_field": "MemorySizeActual",
+          "offset": 1144
+        }
+      },
+      "object_sha256": "babe05969bc120d88039d46a5e3e22ca6769fc4e3510c91b164518d18fae7a61",
+      "compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    },
+    "aarch64": {
+      "size": 1152,
+      "alignment": 8,
+      "fields": {
+        "Revision": {
+          "darwin_field": "Revision",
+          "offset": 0
+        },
+        "Version": {
+          "darwin_field": "Version",
+          "offset": 2
+        },
+        "virtBase": {
+          "darwin_field": "VirtualBase",
+          "offset": 8
+        },
+        "physBase": {
+          "darwin_field": "PhysicalBase",
+          "offset": 16
+        },
+        "memSize": {
+          "darwin_field": "MemorySize",
+          "offset": 24
+        },
+        "topOfKernelData": {
+          "darwin_field": "TopOfKernelData",
+          "offset": 32
+        },
+        "Video": {
+          "darwin_field": "Video",
+          "offset": 40
+        },
+        "machineType": {
+          "darwin_field": "MachineType",
+          "offset": 88
+        },
+        "deviceTreeP": {
+          "darwin_field": "DeviceTree",
+          "offset": 96
+        },
+        "deviceTreeLength": {
+          "darwin_field": "DeviceTreeLength",
+          "offset": 104
+        },
+        "CommandLine": {
+          "darwin_field": "CommandLine",
+          "offset": 108
+        },
+        "bootFlags": {
+          "darwin_field": "BootFlags",
+          "offset": 1136
+        },
+        "memSizeActual": {
+          "darwin_field": "MemorySizeActual",
+          "offset": 1144
+        }
+      },
+      "object_sha256": "6529c36e69ff54cf14acba4327a73e27fc68d1c945e228795d1da5fc8e1a86e1",
+      "compiler_version": "aarch64-linux-gnu-gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+    }
+  },
+  "extraction": "Exact Boot_Video and boot_args declarations, excluding kernel-only includes; no structure rewrite",
+  "build_commands": [
+    [
+      "gcc",
+      "-fshort-wchar",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+      "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+      "-I/home/guo/work/raphael-fresh/sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver",
+      "-c",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/abi.c",
+      "-o",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/host.o"
+    ],
+    [
+      "objcopy",
+      "-O",
+      "binary",
+      "-j",
+      ".abi_layout",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/host.o",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/host.bin"
+    ],
+    [
+      "aarch64-linux-gnu-gcc",
+      "-fshort-wchar",
+      "-ffreestanding",
+      "-Wall",
+      "-Wextra",
+      "-Werror",
+      "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+      "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/AArch64",
+      "-I/home/guo/work/raphael-fresh/sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver",
+      "-c",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/abi.c",
+      "-o",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/aarch64.o"
+    ],
+    [
+      "aarch64-linux-gnu-objcopy",
+      "-O",
+      "binary",
+      "-j",
+      ".abi_layout",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/aarch64.o",
+      "/home/guo/work/raphael-fresh/artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe/aarch64.bin"
+    ]
+  ],
+  "artifact_directory": "artifacts/boot-args-abi/20261027T212746.024254Z-2ewrj_qe",
+  "runner_sha256": "983eb6d6a359ebe6aec5ed17714473e1a9f684fc595e70be2851ad3b91786fcd",
+  "handset_executed": false,
+  "xnu_built": false,
+  "xnu_executed": false,
+  "os_profile_selected": false,
+  "limits": "Only boot_args structure layout at one Apple release. No proof of platform ABI, early MMU mappings, drivers or kernel execution."
+}

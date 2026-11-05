@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "case_count": 18,
+  "scope": "Independent wire validator, 3 valid stage records and 15 corrupt stage6 records",
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "scripts/payload_probe.py",
+      "sha256": "d0c1ff4f6cd18d2325f1653ede2fdf526aebbf5ad28b269edc9905e5b99b445d"
+    }
+  ]
+}

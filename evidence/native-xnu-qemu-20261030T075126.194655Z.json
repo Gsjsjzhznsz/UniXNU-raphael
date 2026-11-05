@@ -1,0 +1,1460 @@
+{
+  "passed": false,
+  "stop_at": "find_root",
+  "artifact_directory": "artifacts/native-xnu-qemu/20261030T075126.194655Z-aob61wok",
+  "handset_executed": false,
+  "source_revision": "14d0e6ad84f5950411e687b01868fba8647c9609",
+  "xnu_entry_verified": true,
+  "xnu_arm_init_verified": true,
+  "full_xnu_boot_verified": false,
+  "qemu_ram_megabytes": 512,
+  "minimal_emulator_adt": false,
+  "runner_sha256": "830b2cb96f01534015c0b7fdaab3d106504a578daf78eb44ee6ecc39d8bd8134",
+  "debugger_tool": {
+    "path": "/usr/bin/gdb-multiarch",
+    "sha256": "0baeb299d3aa39f40ca72c3cb8ae5b15a5bd01f1995583a52cfdd7527bfffe07",
+    "version": "GNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1"
+  },
+  "kernel_sha256": "6eefa149d02182483080138b82c8c7a0f7a6f49afcc64732efba2501d7aea5a8",
+  "kernel_bytes": 50995200,
+  "kernel_unchanged": true,
+  "source_inputs": [
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.c",
+      "sha256": "1202e964edf8869c634a151fe62ad8d412ef9387d7680f819025f3f73b5539ec"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.dsc",
+      "sha256": "36b330f2c1ab3ad8617c7bae475805aa7501f272af43922b0a78e67969cea7ca"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.inf",
+      "sha256": "c0cb6529000c18afb45fd70e0031a4090796d7f45114a78a11aaa83e3a28494f"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.c",
+      "sha256": "f03979a17d1291890ddd0ea870ba3c7eb36c63d4ea74145f0cd310c4db1e5f27"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.dsc",
+      "sha256": "cea22a1741156f366dce4ca5052a5e6883d10163aca3aac4aabbf4a067c31bcf"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.inf",
+      "sha256": "1781d01d84a276080a5453e31fbf5c2139e7036932c97943b0b1fd7bf03a60c0"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/Include/HandoffState.h",
+      "sha256": "4799df1b3dd9f7f39b1f22c8ed0b8d3dd8698292c3371551697ca8f2c8a5a6a7"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/Include/PayloadFixture.h",
+      "sha256": "f8f0cfc6a86577c503eb3256863e2bae5c0d056e2825c2fb6bb8a7433127d023"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.c",
+      "sha256": "cd86bb6bbf07470f203d4fd7d5ec78ccb20c93db4850f0dace3845713dbd4d35"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.dsc",
+      "sha256": "2642ff2ec9df18bde79d08fabb7fadc24ac8d1112114f835f58bf0a168d930bb"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.inf",
+      "sha256": "b37e8e18e00a819f7f2a9a11fc1da18d7451e98ac9f1904b90d2b3bb3ff06f1d"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.c",
+      "sha256": "0f05a5621b295348f8d07d1bdf7db9e2d4b5ce32172f420ac22b8e614aa8312e"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.dsc",
+      "sha256": "1157ffd9a3a90c0a5c5effaa7c039719c434c43440a6ee2db9b936b5ea99ed4b"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.inf",
+      "sha256": "0e8e2e323ae24cbd9768ae0478e5ca377111c97cef614018214824da1d1380bb"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.c",
+      "sha256": "dbc08679b2f46e5f898d12a4d5594330b4b33dfc007d0a8514d363c26de5b24f"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.dsc",
+      "sha256": "4e7c791701d6858f96da25a91e523e3fc8186f8795bb945a42a1c627441b7b2d"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.inf",
+      "sha256": "3466b7279840ac576116f3ce3ca5dd9f20220dfb8c96ee8a2f85f3e610ed95c8"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadProbe.c",
+      "sha256": "5875d23604d9539c7bf9adb802cd14d30d1fa7b6838ce542fd2d977aca0ac716"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadProbe.inf",
+      "sha256": "c7ed8c2ad1ce89c2ba490759d6fddfa26b32c5b6ac172ee9d12fe121c4c42da5"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/RaphaelTestPkg.dec",
+      "sha256": "be4056eda68855bb2296b76563ec2d9580cb25f87b73c0b9d1e2ad0dfb3cb09b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.c",
+      "sha256": "81673f58102492d1ed00ac017ac57943d8020fa1478d73bda08f5dd27fd09ba9"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.inf",
+      "sha256": "8afae643b8f99a923e9c89ed371538f15895ab974a639e894da9a36f7fc5efad"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.c",
+      "sha256": "aa76c504a222cb79982dee09ab3cb913b33382da19cf07c68b99ddd9cf9d3745"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.inf",
+      "sha256": "77dced57e7fad55121dbab8241db5bf92e2f31e396925bac91b65d2e5649b2de"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.c",
+      "sha256": "963f11e21e5cd467217d216b64c3097875e4464a8245fc46508bb6540f66923d"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.inf",
+      "sha256": "077045b9876cf528cf9f9b9e21fd5c5ed857798fd009ff265966c81d86e1249c"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/LICENSE",
+      "sha256": "2b031880c646006165194888f9814806719ab4c91c26d330c4eb71e1983f0187"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.c",
+      "sha256": "b1cf184ebd217656daf92446d9bd724570aad61cb3c7d6d6a2a39d43199d9f35"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.inf",
+      "sha256": "28491c49992134008d55fc0efe7e0792814d517d323ebfb7b70adc27c725e94a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Guid/UniXNUBlockSlice.h",
+      "sha256": "7d89dddb032b3e2bcb7efdd8fc15d1df34ec601d08124e684bd9b3dddfd180e5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Library/UniXNULib.h",
+      "sha256": "8444339ac4a4627ae379a9d3e8e440304f23ff14d5487a5340914fa53cd218f7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNULoader.h",
+      "sha256": "4853991ceac062a2bd3d8d36d262d0cf09b1fe751c44813e267371cd93479cbb"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNUMenuPlugin.h",
+      "sha256": "eb897e32cb4c260818dd89603176f8ff3879bff209dfd1b24fc49e003436d534"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Boot.c",
+      "sha256": "674f34b0ea51b7a077e79a130c8f85d41638160fbaf7238dd120fd888222b6d3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/ClangdAutoGen.h",
+      "sha256": "ef1f27464ecaafb50cd007cceda1a7bd823e8523595787caa4951d0b02d01fca"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Config.c",
+      "sha256": "c070b2eb1c4922df345a2f830c5f2c420bafd11dde759fee2d2ce4f3be3923c5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Font.c",
+      "sha256": "391c7dbc8c6eb3cd07230e3dd8d38e4ba8a5a9b603bcaecb4d8e62a4603d2ac6"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Inject.c",
+      "sha256": "a0072e04b6ff233746aec973d38e288bdcc689481f660f043fbf8f3b8a9d4943"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Internal.h",
+      "sha256": "7acdc37f8c5540bf0df24797bb04ca09dc111414e75c72e8d2ee5f3843a34faf"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Kext.c",
+      "sha256": "f1869ca42e03faf9bd967619ba70dcd3329fb8839513811306478548f67f9aa4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Logo.c",
+      "sha256": "da9d49c502f42c489742d2abaa8a300db1c265b0fcf807e4d7bd3d8aa8a9e4a1"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/LogoShape.h",
+      "sha256": "8fe96788c3c1e27df7f4209c31ae1b3818ae99cf858d6dae457cd16643a6a43b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Main.c",
+      "sha256": "747e2b7a64636a6ffb006079d744338fe18a5313ad1b0df83ea13d55e53ef95e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Menu.c",
+      "sha256": "55584eaae32fab3c25afe390c785310f7769512a17d5b84c7b7be43d3d50ec5b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Slice.c",
+      "sha256": "5cbd409945711c13a9dad18ed6eb5a7c0df49c9b53e7599424c03e23ed2126f8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Toml.c",
+      "sha256": "4d82a7de6196873df6f0a2cc033c67d337f505c53d235b053b8c6458d7332a2a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Ui.c",
+      "sha256": "7f5a2773424a5a8cc68c12d061744ffd80c2847aa6595625740f41e0b5ea6792"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/UniXNULib.inf",
+      "sha256": "e2fdedfbca94513c8987bf1bf85e1c70953a89725b6a9ba84042bf1f402ff322"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Volume.c",
+      "sha256": "ab9a7b36a258cfb43b8c15fee86393ec9a1978e9b3d3e8d8e2a83b2f36bdbff2"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.c",
+      "sha256": "9c100463d9cefa7d124e492b51781c593a067e46c93d375804ad95130845aac7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.inf",
+      "sha256": "8db898fbb9b89719046038e179c7332a19aa6cd8ad2726f30b4ce701bf83e722"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Include/Protocol/UniXNUSample.h",
+      "sha256": "166553704f947e8d10e729b803f669e29eda7d099b3dbcf7b20f5cbfa2f5467a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/empty/README.txt",
+      "sha256": "fb1390dc42fb11075bfebd90ded1009db1109f54c311f729030121b05d80f652"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/DeviceTree/test.dts",
+      "sha256": "8a703c9562204aea7e7364c280ec62f5b92cee44011ca7746ea5cd6db4866680"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/NeverMatch.kit/Kit.toml",
+      "sha256": "ec14e53a23dde506d72c606319a6965f33f84c79b52304583c872c705c42c561"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/Kit.toml",
+      "sha256": "be41df0a32a189cfe39f0d9084fff860727ab23d07bfadbdabb2cdb14ff08d25"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/overlay.dtso",
+      "sha256": "cc84086dd4e0cfd8b7c9d449c8a9ef51e3ad4558f689e65e961dfccf4ff04fba"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/initrd.txt",
+      "sha256": "89d4990944c99aa8535667923a07a04e626c4a838cd0651b3403d50cd5a8c6e4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/unixnu.toml",
+      "sha256": "a702ab953409aaedb9ef19d2b22ffbfef41a1d53b0a4c96acc1f15dc002bba48"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/userdata/EFI/UniXNU/unixnu.toml",
+      "sha256": "ce06101b19a286082fbaa69f69129d487013e9cb51788ce9df5ae8cee8f4ad76"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.c",
+      "sha256": "974be93a4269b6e7cf0d84ede58d17a42e60615549e06ed86ddda67be6f099c8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.inf",
+      "sha256": "39a45bdfa03f8470fcaaf38fec0307ac754b3ef3f0a82a67018bcf7755c929b3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/UniXNUTest.dec",
+      "sha256": "544e2c64333bfbb3b46dde2a964ceee5ae0f0eebfb499ef8bca98e2efe9abc7e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.c",
+      "sha256": "df30e74ecc9d5de0271ae9a5fe2565b2e99cdebcd7453ab5f2d677170132ee34"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.inf",
+      "sha256": "cad1a72072f2c2681798b2f4cc0af5ef122a91eff47839cb6dc7885cbeb6911b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dec",
+      "sha256": "08e87df9581889cecc387f01cc7e56586c1db4d63280f5c4600d02d63fd12e8f"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dsc",
+      "sha256": "6b2f5bbfc5d9351462f2ac0262d2223936004da7319f41652242d8aab17bdf89"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/DarwinBoot.dsc",
+      "sha256": "7dcdf998c45dcd9e37c98fc3bcc0992ee2dcb5dd0b2b50bc1c52e71b11ec2993"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootArgs.h",
+      "sha256": "1d6b172a306bf5d3fc409d22bd7e674d166e5fde92652c4135de5c79f3eddd16"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootVideo.h",
+      "sha256": "8d25e85a166b272a1cbc0a5238288670e2707303f4cd97aef180ebf0c42246c4"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.c",
+      "sha256": "d13facd71aa802e02a33b8c463d83a7a9a2f9d5b0a5e5a5fcd96cfdce7985e1a"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.inf",
+      "sha256": "cb10851277b53b355794c1bca3fa16d3bf18a0dc2dee857091837b63599019df"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DiagFont.h",
+      "sha256": "d2a3687db67b069f4e34a961e17fd28b0242986e3fa8dd8a7545cab70834fa8e"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/Entry.S",
+      "sha256": "44c05d16af1fbe51cfdcf074ff590ec214dbe3e8efdc4b83a9d06f7e49be44bd"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/PackedRamdisk.h",
+      "sha256": "8b3a326062baee88a179274e92df05a3a07792d25ef84daa23b71aa47b4a2326"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/WindowSize.h",
+      "sha256": "6f78303c54252eae722be7c9b33869e4e8251ee3569736511790170d499b58cb"
+    }
+  ],
+  "revisions": {
+    "sources/mu_basecore": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+    "sources/UniXNU": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+    "sources/UniXNU/drivers/DarwinBoot": "3325e352d7df68a9f9ad74832ed94a6acbbd7390"
+  },
+  "observer_sha256": "63b98e3cfeac35a35e3233f5c5c9f18032649c5fb975e688441474c642457255",
+  "host_build_passed": true,
+  "images": {
+    "DarwinBoot": {
+      "sha256": "dcf2004c96b67ca9d6e22e20eae5a3c730cbe161e26406a2ad6a1906b4b3187e",
+      "bytes": 19968
+    },
+    "NativeXnuFixture": {
+      "sha256": "3bffbbe40b3700e41b87966add27d9ce55b7cd26e82b92b201573442382e26e2",
+      "bytes": 71680
+    }
+  },
+  "image_structure_passed": true,
+  "emulator_hardware_source": {
+    "dtb_sha256": "91a02b986bf9e3d2542614d010a607972935855ae9d61bdefd4376e2612554da",
+    "io_ranges": [
+      [
+        150994944,
+        4096
+      ],
+      [
+        134217728,
+        65536
+      ],
+      [
+        134873088,
+        16121856
+      ]
+    ],
+    "arm_io_base": 134217728,
+    "arm_io_bytes": 16781312,
+    "cpu_affinity": 0,
+    "dram_base": 1073741824,
+    "dram_bytes": 536870912
+  },
+  "independent_cpu_resources": {
+    "gic_registers": [
+      [
+        134217728,
+        65536
+      ],
+      [
+        134873088,
+        16121856
+      ]
+    ],
+    "timer": "physical",
+    "timer_fdt_specifier": [
+      1,
+      14,
+      4
+    ],
+    "timer_intid": 30,
+    "source": "same-run qemu-generated.dtb; counter frequency independently checked at EL1"
+  },
+  "os_profile_identity": {
+    "profile": "ipados-17.7.11-21H461",
+    "root_keys": [
+      "compatible",
+      "model",
+      "target-type"
+    ],
+    "chosen_keys": [
+      "osenvironment",
+      "crypto-hash-method",
+      "certificate-production-status",
+      "effective-production-status-ap",
+      "certificate-security-mode",
+      "effective-security-mode-sep",
+      "amfi-only-platform-code"
+    ],
+    "hardware_source": "same-run QEMU FDT; no Apple MMIO, CPU or memory nodes imported"
+  },
+  "boot_arguments": "-v keepsyms=1 cpus=1 kt_fixed_zones=200",
+  "kalloc_budget_override": 200,
+  "adt": {
+    "bytes": 10712,
+    "sha256": "d0aa392d41a1c60ef39ed121d84e6e593b5eeb89533ec9f4a86c32f627779af0",
+    "hardware_qualified": false
+  },
+  "emulator_firmware": {
+    "AAVMF_CODE.fd": "545e2eda871a00dba51c0df48a34829fe3b0de6ec10ea760c75f1fc1c6a29dc5",
+    "AAVMF_VARS.fd": "b3b855c5a80310168051164986855692d1bdb06e67619856177965cd87c6774f"
+  },
+  "cpu_entry_observation": {
+    "counter_frequency": 62500000,
+    "mpidr": 2147483648,
+    "source": "same-run EL1 MRS in NativeXnuFixture; ADT values cross-checked"
+  },
+  "debugger_returncode": 1,
+  "debugger": {
+    "breakpoints": [
+      {
+        "name": "native-entry",
+        "address": 1260471432
+      },
+      {
+        "name": "_IOFindBSDRoot",
+        "address": 18446744005117454396
+      },
+      {
+        "name": "_IOFindBSDRoot",
+        "address": 1266133052
+      },
+      {
+        "name": "_LowExceptionVectorBase",
+        "address": 1260474368
+      },
+      {
+        "name": "_LowExceptionVectorBase",
+        "address": 18446744005111795712
+      },
+      {
+        "name": "_PE_cpu_machine_init",
+        "address": 18446744005117174940
+      },
+      {
+        "name": "_PE_cpu_machine_init",
+        "address": 1265853596
+      },
+      {
+        "name": "_PE_init_iokit",
+        "address": 1266288968
+      },
+      {
+        "name": "_PE_init_iokit",
+        "address": 18446744005117610312
+      },
+      {
+        "name": "_PE_init_platform",
+        "address": 18446744005117611436
+      },
+      {
+        "name": "_PE_init_platform",
+        "address": 1266290092
+      },
+      {
+        "name": "__ZN13ArmDTPlatform9configureEP9IOService",
+        "address": 18446744005117751596
+      },
+      {
+        "name": "__ZN13ArmDTPlatform9configureEP9IOService",
+        "address": 1266430252
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu5startEP9IOService",
+        "address": 18446744005117756284
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu5startEP9IOService",
+        "address": 1266434940
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu9interruptEv",
+        "address": 1266435888
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu9interruptEv",
+        "address": 18446744005117757232
+      },
+      {
+        "name": "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec",
+        "address": 18446744005116915292
+      },
+      {
+        "name": "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec",
+        "address": 1265593948
+      },
+      {
+        "name": "_arm_init",
+        "address": 1266509696
+      },
+      {
+        "name": "_arm_init",
+        "address": 18446744005117831040
+      },
+      {
+        "name": "_bsd_init",
+        "address": 18446744005114738996
+      },
+      {
+        "name": "_bsd_init",
+        "address": 1263417652
+      },
+      {
+        "name": "_kalloc_type_apply_policy",
+        "address": 1258859320
+      },
+      {
+        "name": "_kalloc_type_apply_policy",
+        "address": 18446744005110180664
+      },
+      {
+        "name": "_kernel_bootstrap",
+        "address": 18446744005110414052
+      },
+      {
+        "name": "_kernel_bootstrap",
+        "address": 1259092708
+      },
+      {
+        "name": "_kernel_bootstrap_thread",
+        "address": 1259094896
+      },
+      {
+        "name": "_kernel_bootstrap_thread",
+        "address": 18446744005110416240
+      },
+      {
+        "name": "_machine_startup",
+        "address": 1260485936
+      },
+      {
+        "name": "_machine_startup",
+        "address": 18446744005111807280
+      },
+      {
+        "name": "_ml_processor_register",
+        "address": 1260491392
+      },
+      {
+        "name": "_ml_processor_register",
+        "address": 18446744005111812736
+      },
+      {
+        "name": "_panic",
+        "address": 18446744005117784548
+      },
+      {
+        "name": "_panic",
+        "address": 1266463204
+      },
+      {
+        "name": "_panic_with_options",
+        "address": 1266463368
+      },
+      {
+        "name": "_panic_with_options",
+        "address": 18446744005117784712
+      },
+      {
+        "name": "_register_crypto_functions",
+        "address": 1265410360
+      },
+      {
+        "name": "_register_crypto_functions",
+        "address": 18446744005116731704
+      },
+      {
+        "name": "_rtclock_intr",
+        "address": 1260512696
+      },
+      {
+        "name": "_rtclock_intr",
+        "address": 18446744005111834040
+      },
+      {
+        "name": "_start_first_cpu",
+        "address": 18446744005111799900
+      }
+    ],
+    "stops": [
+      {
+        "label": "native-entry",
+        "pc": 1260471432,
+        "sp": 1199657904,
+        "x0": 1275707392,
+        "fp": 1199662224,
+        "lr": 1604981836,
+        "cpsr": 1610613701,
+        "sctlr_el1": 818940296,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000
+      },
+      {
+        "label": "after-first-native-instruction",
+        "pc": 1260478556,
+        "sp": 1199657904,
+        "x0": 1275707392,
+        "fp": 1199662224,
+        "lr": 1604981836,
+        "cpsr": 1610613701,
+        "sctlr_el1": 818940296,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117831040,
+        "sp": 18446744005119557632,
+        "x0": 18446744005127028736,
+        "fp": 1199662224,
+        "lr": 18446744005117831040,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_arm_init"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117611436,
+        "sp": 18446744005119557424,
+        "x0": 0,
+        "fp": 18446744005119557616,
+        "lr": 18446744005117832504,
+        "cpsr": 2147484612,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_PE_init_platform"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005111807280,
+        "sp": 18446744005119557424,
+        "x0": 18446744005109005552,
+        "fp": 18446744005119557616,
+        "lr": 18446744005117833516,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_machine_startup"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005110414052,
+        "sp": 18446744005119557424,
+        "x0": 18446744005109081040,
+        "fp": 18446744005119557616,
+        "lr": 18446744005117833516,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kernel_bootstrap"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005110180664,
+        "sp": 18446744005119556544,
+        "x0": 18446744005119150960,
+        "fp": 18446744005119557104,
+        "lr": 18446744005117793832,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kalloc_type_apply_policy"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117793832,
+        "sp": 18446744005119556544,
+        "x0": 0,
+        "fp": 18446744005119557104,
+        "lr": 18446744005117793832,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kalloc_policy_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005110416240,
+        "sp": 18446744033439022896,
+        "x0": 0,
+        "fp": 0,
+        "lr": 18446744005111800996,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kernel_bootstrap_thread"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117610312,
+        "sp": 18446744033439022816,
+        "x0": 18446744033439022704,
+        "fp": 18446744033439022880,
+        "lr": 18446744005110416932,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 1604981136,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_PE_init_iokit"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005116731704,
+        "sp": 18446744033439021680,
+        "x0": 18446744005087512176,
+        "fp": 18446744033439022064,
+        "lr": 18446744005068180452,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_register_crypto_functions"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117751596,
+        "sp": 18446744033439579152,
+        "x0": 18446744016587584768,
+        "fp": 18446744033439579200,
+        "lr": 18446744005117159904,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN13ArmDTPlatform9configureEP9IOService"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117159904,
+        "sp": 18446744033439579152,
+        "x0": 1,
+        "fp": 18446744033439579200,
+        "lr": 18446744005117159904,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_platform_configure_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117756284,
+        "sp": 18446744033439775824,
+        "x0": 18446744024318719808,
+        "fp": 18446744033439775968,
+        "lr": 18446744005116908732,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN14RaphaelBootCpu5startEP9IOService"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005111812736,
+        "sp": 18446744033439775600,
+        "x0": 18446744033439775632,
+        "fp": 18446744033439775808,
+        "lr": 18446744005117756568,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_ml_processor_register"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005114738996,
+        "sp": 18446744033439022816,
+        "x0": 0,
+        "fp": 18446744033439022880,
+        "lr": 18446744005110417444,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_bsd_init"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005116915292,
+        "sp": 18446744033440365648,
+        "x0": 18446744028182626680,
+        "fp": 18446744033440365744,
+        "lr": 18446744005117168744,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744033539928064,
+        "ELR_EL1": 18446744005117859492,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005117454396,
+        "sp": 18446744033439022528,
+        "x0": 18446744005118643872,
+        "fp": 18446744033439022800,
+        "lr": 18446744005114740760,
+        "cpsr": 516,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582470,
+        "FAR_EL1": 18446744007380889600,
+        "ELR_EL1": 18446744005113624360,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_IOFindBSDRoot"
+        ]
+      }
+    ],
+    "native_instruction_executed": true,
+    "arm_init_reached": true,
+    "target_reached": false,
+    "reached_symbols": [
+      "_arm_init",
+      "_PE_init_platform",
+      "_machine_startup",
+      "_kernel_bootstrap",
+      "_kalloc_type_apply_policy",
+      "_kalloc_policy_return",
+      "_kernel_bootstrap_thread",
+      "_PE_init_iokit",
+      "_register_crypto_functions",
+      "__ZN13ArmDTPlatform9configureEP9IOService",
+      "_platform_configure_return",
+      "__ZN14RaphaelBootCpu5startEP9IOService",
+      "_ml_processor_register",
+      "_bsd_init",
+      "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec",
+      "_IOFindBSDRoot"
+    ],
+    "exit_notice_count": 1,
+    "loaded_segments": [
+      {
+        "name": "__TEXT",
+        "physical_address": 1256210432,
+        "bytes": 1409024,
+        "sha256": "417e6738be6bffcf00d1f965dcbad7da623ca7dce992198bb920956ab1b70830"
+      },
+      {
+        "name": "__DATA_CONST",
+        "physical_address": 1257619456,
+        "bytes": 901120,
+        "sha256": "1c24cc39d76a585e7eac93b467b987cc216b842ea70c50a97eb57d91a4979525"
+      },
+      {
+        "name": "__TEXT_EXEC",
+        "physical_address": 1258520576,
+        "bytes": 8028160,
+        "sha256": "94d6de8e33b1ed426aa8b28a9794a6f298504d560b39f1ef3c6e95ca45e2cfc1"
+      },
+      {
+        "name": "__KLD",
+        "physical_address": 1266548736,
+        "bytes": 16384,
+        "sha256": "a50c42a457cb7032b0ff0c1ff77dcc3b84e28f03ddbabe6ced701ae61f3ab3e5"
+      },
+      {
+        "name": "__LASTDATA_CONST",
+        "physical_address": 1266565120,
+        "bytes": 16384,
+        "sha256": "095d9dd57ed65b2646ed30df1d7a5000fffc062aa0ecca0170a5a6a8301b7a94"
+      },
+      {
+        "name": "__KLDDATA",
+        "physical_address": 1266581504,
+        "bytes": 16384,
+        "sha256": "5b1c92fccaa4f65ff0b4ab803b1ab750d4b5dc50185075c0cfd3d5b426721201"
+      },
+      {
+        "name": "__DATA",
+        "physical_address": 1266597888,
+        "bytes": 262144,
+        "sha256": "6e2bf108b823cbbbeda7618853b73e81d9a87a794754c178498f4a41405ccfb1"
+      },
+      {
+        "name": "__BOOTDATA",
+        "physical_address": 1267728384,
+        "bytes": 573440,
+        "sha256": "52c75bdbb587696c8fd6e3bf535fa6e1ce921b246d45e41e3b1021862a182531"
+      },
+      {
+        "name": "__PRELINK_TEXT",
+        "physical_address": 1208467456,
+        "bytes": 6963200,
+        "sha256": "624ecfd2ec0913d438ed86abcfae39ad5ebabb49a971ac24fa5cc052cb906614"
+      },
+      {
+        "name": "__PRELINK_INFO",
+        "physical_address": 1275215872,
+        "bytes": 483328,
+        "sha256": "8b65076d62a20014bec7d51e34a729855127d315afc8278179cc03bc9d8bedff"
+      },
+      {
+        "name": "__PLK_TEXT_EXEC",
+        "physical_address": 1215430656,
+        "bytes": 20447232,
+        "sha256": "81a6d211c4c297dd96bc1621d16c21907568f9e3ebf7115a3799e6e61ff2855d"
+      },
+      {
+        "name": "__PRELINK_DATA",
+        "physical_address": 1250803712,
+        "bytes": 1392640,
+        "sha256": "f9a6d2821aaeebb0fe24d0736b3cf9d22b881b630018ec88b0ac526d6df4eabd"
+      },
+      {
+        "name": "__PLK_DATA_CONST",
+        "physical_address": 1235877888,
+        "bytes": 3555328,
+        "sha256": "5a1f5f695473318aaa581c572c7fb7d8ffb71fdeb65a2dbb7cb3970201836c21"
+      },
+      {
+        "name": "__LINKINFO",
+        "physical_address": 1268301824,
+        "bytes": 278528,
+        "sha256": "98903319af26e2600b4d6898b91112e6a4cc0f62f0cc4c160ac2f121ee8ed434"
+      },
+      {
+        "name": "__LINKEDIT",
+        "physical_address": 1268580352,
+        "bytes": 6635336,
+        "sha256": "73bd04d2235f5e65f0f7d80766520fe5c83796b2ccfe1f20888effca293f88a7"
+      }
+    ],
+    "loaded_file_bytes_match": true,
+    "boot_args_revision": 2,
+    "boot_args_version": 2,
+    "kalloc_policy": {
+      "count": 29,
+      "budget": 200,
+      "pointers": [
+        18446744005119150960,
+        18446744005119151018,
+        18446744005119556928,
+        18446744005119556864
+      ],
+      "zone_sizes": [
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256,
+        288,
+        368,
+        400,
+        512,
+        576,
+        768,
+        1024,
+        1152,
+        1280,
+        1664,
+        2048,
+        4096,
+        6144,
+        8192,
+        12288,
+        16384,
+        24576,
+        32768
+      ],
+      "frequency": [
+        [
+          3,
+          13,
+          34,
+          48,
+          58,
+          45,
+          53,
+          34,
+          42,
+          44,
+          35,
+          27,
+          35,
+          12,
+          19,
+          8,
+          12,
+          17,
+          12,
+          6,
+          11,
+          10,
+          13,
+          3,
+          4,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          51,
+          114,
+          177,
+          71,
+          16,
+          14,
+          10,
+          66,
+          12,
+          25,
+          10,
+          17,
+          22,
+          1,
+          17,
+          1,
+          1,
+          5,
+          8,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "allocated": [
+        [
+          2,
+          3,
+          7,
+          10,
+          11,
+          9,
+          10,
+          7,
+          8,
+          9,
+          7,
+          6,
+          7,
+          4,
+          4,
+          3,
+          4,
+          4,
+          4,
+          3,
+          3,
+          3,
+          4,
+          2,
+          3,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          9,
+          14,
+          6,
+          2,
+          1,
+          1,
+          6,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "classes_exceeding_31": []
+    },
+    "platform_configure": {
+      "provider": 18446744020453649472,
+      "instance": 18446744016587584768,
+      "return_target": 18446744005117159904,
+      "returned_true": true,
+      "return_value": 1,
+      "counters": {
+        "_armdt_platform_bus_count": 1,
+        "_armdt_platform_child_count": 9,
+        "_armdt_platform_configured": 1,
+        "_armdt_platform_cpu_count": 1,
+        "_armdt_platform_defaults_count": 1,
+        "_armdt_platform_device_count": 1,
+        "_armdt_platform_nvram_proxy": 1
+      }
+    },
+    "cpu_start": {
+      "instance": 18446744024318719808,
+      "provider": 18446744020453642272,
+      "return_target": 18446744005116908732,
+      "returned_true": false
+    },
+    "cpu_states": [
+      {
+        "at_symbols": [
+          "_bsd_init"
+        ],
+        "state": {
+          "dist_pa": 134217728,
+          "eois": 0,
+          "frequency": 62500000,
+          "intid": 30,
+          "ipi_irqs": 0,
+          "last_irq": 0,
+          "physical_timer": 1,
+          "redist_pa": 134873088,
+          "registered": 1,
+          "stage": 2,
+          "timer_irqs": 0,
+          "pthread_status": 0,
+          "pthread_functions": 18446744005109627064
+        }
+      }
+    ],
+    "cpu_state": {
+      "dist_pa": 134217728,
+      "eois": 0,
+      "frequency": 62500000,
+      "intid": 30,
+      "ipi_irqs": 0,
+      "last_irq": 0,
+      "physical_timer": 1,
+      "redist_pa": 134873088,
+      "registered": 1,
+      "stage": 2,
+      "timer_irqs": 0,
+      "pthread_status": 0,
+      "pthread_functions": 18446744005109627064
+    },
+    "failure": "error: Cannot convert value to long."
+  },
+  "default_source_crypto_post_and_registration_verified": false,
+  "target_failure": "Recorded target was not reached",
+  "dt_platform_configure_verified": true,
+  "independent_cpu_start_verified": false,
+  "independent_cpu_timer_irq_verified": false,
+  "bsd_init_reached": true,
+  "layout": {
+    "gate": 1589768192,
+    "virtual_base": 18446744005059788800,
+    "physical_base": 1208467456,
+    "args": 1275707392,
+    "entry": 1260471432,
+    "window": 268435456,
+    "milestones": {
+      "_IOFindBSDRoot": 18446744005117454396,
+      "_LowExceptionVectorBase": 18446744005111795712,
+      "_PE_cpu_machine_init": 18446744005117174940,
+      "_PE_init_iokit": 18446744005117610312,
+      "_PE_init_platform": 18446744005117611436,
+      "__ZN13ArmDTPlatform9configureEP9IOService": 18446744005117751596,
+      "__ZN14RaphaelBootCpu5startEP9IOService": 18446744005117756284,
+      "__ZN14RaphaelBootCpu9interruptEv": 18446744005117757232,
+      "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec": 18446744005116915292,
+      "_arm_init": 18446744005117831040,
+      "_bsd_init": 18446744005114738996,
+      "_kalloc_type_apply_policy": 18446744005110180664,
+      "_kernel_bootstrap": 18446744005110414052,
+      "_kernel_bootstrap_thread": 18446744005110416240,
+      "_machine_startup": 18446744005111807280,
+      "_ml_processor_register": 18446744005111812736,
+      "_panic": 18446744005117784548,
+      "_panic_with_options": 18446744005117784712,
+      "_register_crypto_functions": 18446744005116731704,
+      "_rtclock_intr": 18446744005111834040,
+      "_start_first_cpu": 18446744005111799900
+    },
+    "data_symbols": {
+      "_armdt_platform_bus_count": 18446744005118801916,
+      "_armdt_platform_child_count": 18446744005118801908,
+      "_armdt_platform_configured": 18446744005118801904,
+      "_armdt_platform_cpu_count": 18446744005118801912,
+      "_armdt_platform_defaults_count": 18446744005118801920,
+      "_armdt_platform_device_count": 18446744005118801928,
+      "_armdt_platform_nvram_proxy": 18446744005118801924,
+      "_crypto_init": 18446744005109318912,
+      "_g_crypto_funcs": 18446744005109318920,
+      "_kt_zone_cfg": 18446744005107541372,
+      "_num_kt_sizeclass": 18446744005108973168,
+      "_pthread_functions": 18446744005118643720,
+      "_raphael_cpu_dist_pa": 18446744005118802024,
+      "_raphael_cpu_eois": 18446744005118802016,
+      "_raphael_cpu_frequency": 18446744005118802040,
+      "_raphael_cpu_intid": 18446744005118801984,
+      "_raphael_cpu_ipi_irqs": 18446744005118802008,
+      "_raphael_cpu_last_irq": 18446744005118801992,
+      "_raphael_cpu_physical_timer": 18446744005118801988,
+      "_raphael_cpu_redist_pa": 18446744005118802032,
+      "_raphael_cpu_registered": 18446744005118801980,
+      "_raphael_cpu_stage": 18446744005118801976,
+      "_raphael_cpu_timer_irqs": 18446744005118802000,
+      "_source_pthread_status": 18446744005109628080
+    },
+    "stop_at": "_IOFindBSDRoot",
+    "segments": [
+      {
+        "name": "__TEXT",
+        "virtual_address": 18446744005107531776,
+        "file_offset": 0,
+        "file_bytes": 1409024,
+        "sha256": "417e6738be6bffcf00d1f965dcbad7da623ca7dce992198bb920956ab1b70830"
+      },
+      {
+        "name": "__DATA_CONST",
+        "virtual_address": 18446744005108940800,
+        "file_offset": 1409024,
+        "file_bytes": 901120,
+        "sha256": "1c24cc39d76a585e7eac93b467b987cc216b842ea70c50a97eb57d91a4979525"
+      },
+      {
+        "name": "__TEXT_EXEC",
+        "virtual_address": 18446744005109841920,
+        "file_offset": 2310144,
+        "file_bytes": 8028160,
+        "sha256": "94d6de8e33b1ed426aa8b28a9794a6f298504d560b39f1ef3c6e95ca45e2cfc1"
+      },
+      {
+        "name": "__KLD",
+        "virtual_address": 18446744005117870080,
+        "file_offset": 10338304,
+        "file_bytes": 16384,
+        "sha256": "a50c42a457cb7032b0ff0c1ff77dcc3b84e28f03ddbabe6ced701ae61f3ab3e5"
+      },
+      {
+        "name": "__LASTDATA_CONST",
+        "virtual_address": 18446744005117886464,
+        "file_offset": 10354688,
+        "file_bytes": 16384,
+        "sha256": "095d9dd57ed65b2646ed30df1d7a5000fffc062aa0ecca0170a5a6a8301b7a94"
+      },
+      {
+        "name": "__KLDDATA",
+        "virtual_address": 18446744005117902848,
+        "file_offset": 10371072,
+        "file_bytes": 16384,
+        "sha256": "5b1c92fccaa4f65ff0b4ab803b1ab750d4b5dc50185075c0cfd3d5b426721201"
+      },
+      {
+        "name": "__DATA",
+        "virtual_address": 18446744005117919232,
+        "file_offset": 10387456,
+        "file_bytes": 262144,
+        "sha256": "6e2bf108b823cbbbeda7618853b73e81d9a87a794754c178498f4a41405ccfb1"
+      },
+      {
+        "name": "__BOOTDATA",
+        "virtual_address": 18446744005119049728,
+        "file_offset": 10665984,
+        "file_bytes": 573440,
+        "sha256": "52c75bdbb587696c8fd6e3bf535fa6e1ce921b246d45e41e3b1021862a182531"
+      },
+      {
+        "name": "__PRELINK_TEXT",
+        "virtual_address": 18446744005059788800,
+        "file_offset": 18153472,
+        "file_bytes": 6963200,
+        "sha256": "624ecfd2ec0913d438ed86abcfae39ad5ebabb49a971ac24fa5cc052cb906614"
+      },
+      {
+        "name": "__PRELINK_INFO",
+        "virtual_address": 18446744005126537216,
+        "file_offset": 50511872,
+        "file_bytes": 483328,
+        "sha256": "8b65076d62a20014bec7d51e34a729855127d315afc8278179cc03bc9d8bedff"
+      },
+      {
+        "name": "__PLK_TEXT_EXEC",
+        "virtual_address": 18446744005066752000,
+        "file_offset": 25116672,
+        "file_bytes": 20447232,
+        "sha256": "81a6d211c4c297dd96bc1621d16c21907568f9e3ebf7115a3799e6e61ff2855d"
+      },
+      {
+        "name": "__PRELINK_DATA",
+        "virtual_address": 18446744005102125056,
+        "file_offset": 49119232,
+        "file_bytes": 1392640,
+        "sha256": "f9a6d2821aaeebb0fe24d0736b3cf9d22b881b630018ec88b0ac526d6df4eabd"
+      },
+      {
+        "name": "__PLK_DATA_CONST",
+        "virtual_address": 18446744005087199232,
+        "file_offset": 45563904,
+        "file_bytes": 3555328,
+        "sha256": "5a1f5f695473318aaa581c572c7fb7d8ffb71fdeb65a2dbb7cb3970201836c21"
+      },
+      {
+        "name": "__LINKINFO",
+        "virtual_address": 18446744005119623168,
+        "file_offset": 11239424,
+        "file_bytes": 278528,
+        "sha256": "98903319af26e2600b4d6898b91112e6a4cc0f62f0cc4c160ac2f121ee8ed434"
+      },
+      {
+        "name": "__LINKEDIT",
+        "virtual_address": 18446744005119901696,
+        "file_offset": 11517952,
+        "file_bytes": 6635336,
+        "sha256": "73bd04d2235f5e65f0f7d80766520fe5c83796b2ccfe1f20888effca293f88a7"
+      }
+    ],
+    "socket": "/tmp/rnx-20261030T075126.194655.sock",
+    "output": "/home/guo/work/raphael-fresh/artifacts/native-xnu-qemu/20261030T075126.194655Z-aob61wok/debugger-observation.json",
+    "register_log": "/home/guo/work/raphael-fresh/artifacts/native-xnu-qemu/20261030T075126.194655Z-aob61wok/registers.log",
+    "capture_memory": [
+      {
+        "address": 18446744005102129616,
+        "bytes": 80
+      },
+      {
+        "address": 18446744005118792056,
+        "bytes": 80
+      }
+    ]
+  },
+  "esp_unchanged": true,
+  "qemu_returncode": 0,
+  "limits": [
+    "QEMU/AAVMF only; no handset execution",
+    "Debugger observes only the recorded native startup checkpoints",
+    "Minimal emulator ADT; no platform qualification, userspace, storage or full kernel boot claim"
+  ],
+  "evidence_files": [
+    {
+      "path": "debugger-observation.json",
+      "sha256": "05c19aafb1d5503e499321401d0d2e62bda35cdacfacaafac49ba7c1d9eb3777"
+    },
+    {
+      "path": "serial.log",
+      "sha256": "f6b1998b3fe3bb95ab081e2b613ef729b0c02cc1c4b5275dda40c9c70e055666"
+    },
+    {
+      "path": "gdb.log",
+      "sha256": "3e0fdf9396266f38e9ff8e08277a10afc46cc0a6d3033c403dea7d2dff3bf019"
+    },
+    {
+      "path": "registers.log",
+      "sha256": "def206f9b28577120e458cf2ec21e3ab3035d8268f8b02ecd86cdf4418a59f35"
+    },
+    {
+      "path": "commands.json",
+      "sha256": "fb4792619f9704b3fbfeb4c702570aa8629fe782d70cd12e6e467c30f708c30f"
+    },
+    {
+      "path": "kernel-inspection.json",
+      "sha256": "52544cbdc47d763ec3a4cad5574674a3853774bf8899ea2415abe284ae23e270"
+    }
+  ]
+}

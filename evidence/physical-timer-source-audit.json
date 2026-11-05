@@ -1,0 +1,335 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/CpuDxe/CpuDxe.c",
+      "sha256": "d593aa745d68c9bca584ddeaf7e7d1c421fca581948e19c1c182a5bc28af58bb",
+      "anchors": {
+        "HardwareInterruptProtocolNotify": [
+          21,
+          371,
+          491,
+          493
+        ],
+        "mCpu.EnableInterrupt   = CpuEnableInterrupt": [
+          391
+        ],
+        "gHardwareInterruptProtocolGuid": [
+          379,
+          486,
+          489
+        ],
+        "CpuRegisterInterruptHandler": [
+          227,
+          277
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/CpuDxe/Exception.c",
+      "sha256": "b827aee3cb93996d08b3f9b1a3f0ab0ddd4f2984091f9f9fa6b9c4b84110d58c",
+      "anchors": {
+        "ArmEnableAsynchronousAbort": [
+          28
+        ],
+        "DEBUG_CODE": [
+          27
+        ],
+        "RegisterCpuInterruptHandler": [
+          61
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "ArmPkg/Drivers/ArmGicDxe/ArmGicCommonDxe.c",
+      "sha256": "385a8b0091b877b8d8495fbe5f0dfbf656a397a1abc7671bf3f6ca4adee7cf0d",
+      "anchors": {
+        "return This->EnableInterruptSource (This, Source)": [
+          150
+        ],
+        "ARM_ARCH_EXCEPTION_IRQ": [
+          165
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdeModulePkg/Core/Dxe/Event/Timer.c",
+      "sha256": "56123bddcf205d14d82fffe10b37d0f5d98ab60a1bdb1d159ef4b00e31ac7869",
+      "anchors": {
+        "CoreTimerTick": [
+          188
+        ],
+        "TimerPeriodic": [
+          272
+        ],
+        "TimerRelative": [
+          254
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Include/Protocol/Timer.h",
+      "sha256": "bb7f8e25df36f8b80ba8cbf82817affd70f27089ea1f77ebc3c21174e1b0129a",
+      "anchors": {
+        "EFI_TIMER_REGISTER_HANDLER": [
+          75,
+          164
+        ],
+        "EFI_TIMER_SET_TIMER_PERIOD": [
+          108,
+          165
+        ],
+        "EFI_TIMER_GET_TIMER_PERIOD": [
+          129,
+          166
+        ],
+        "EFI_TIMER_GENERATE_SOFT_INTERRUPT": [
+          151,
+          167
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "EmbeddedPkg/Include/Protocol/HardwareInterrupt.h",
+      "sha256": "02e53f93db0fb97eb5aaffd6b4ef544e6d47b6d67498b62c3a92ecdddb6b673d",
+      "anchors": {
+        "RegisterInterruptSource": [
+          142
+        ],
+        "EnableInterruptSource": [
+          143
+        ],
+        "EndOfInterrupt": [
+          146
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "UefiCpuPkg/Library/CpuExceptionHandlerLib/AArch64/ExceptionSupport.S",
+      "sha256": "db3f28b90515d2824fd6b862e0305b907326e69e71f3d70e3b183b152c263688",
+      "anchors": {
+        "SPSR": [
+          88
+        ],
+        "CommonCExceptionHandler": [
+          95,
+          280,
+          289
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Library/ArmLib/AArch64/ArmLibSupportV8.S",
+      "sha256": "cfddd70ecd9454d0cb1f1ea6c2e925c613402eca71a302f6e3ad91b48870efc3",
+      "anchors": {
+        "DAIF_WR_IRQ_BIT": [
+          18,
+          21,
+          46,
+          52
+        ],
+        "ArmEnableInterrupts": [
+          69
+        ],
+        "ArmDisableInterrupts": [
+          75
+        ]
+      }
+    }
+  ],
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimer.c",
+      "sha256": "998db8fc0b8f99c3594460062e2b57eda8d159cf887c348934ab373f6926f691"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimerDxe.inf",
+      "sha256": "28e50009ace036a58440e63eb4b58e18cb7aaf76d63b0c35b0268696a584bd6d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPhysicalTimer.h",
+      "sha256": "c8fb8ab909a8c3cb428f102634500b0907c5065edccb7f1cbf70c65845be12dd"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/PhysicalTimerTest.c",
+      "sha256": "109f59c185c9e749df62cc5c59b604c1ce4d08ed81dcbb34c135a19147c311c4"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/Debug.c",
+      "sha256": "f988c30618be69d0218fbefd17bbe3fa98c498565357996fe8439e64dd366978"
+    }
+  ],
+  "decoder_sha256": "e253e88dea871277e53cb5052daaa003e56dc6de3ba96029d9badc2d954b6f56",
+  "compiled_object_sha256": "f20072d4a2b3cbcba7fa9f067228d923efc24528311d133c9a761a914f889f23",
+  "reviewed_lto_code_spans": [
+    [
+      4144,
+      1292
+    ],
+    [
+      5436,
+      200
+    ],
+    [
+      5636,
+      136
+    ],
+    [
+      5772,
+      240
+    ],
+    [
+      6012,
+      772
+    ],
+    [
+      6784,
+      244
+    ],
+    [
+      7028,
+      400
+    ],
+    [
+      7428,
+      112
+    ],
+    [
+      7540,
+      136
+    ],
+    [
+      7676,
+      288
+    ],
+    [
+      7964,
+      4
+    ],
+    [
+      7968,
+      112
+    ],
+    [
+      8080,
+      40
+    ],
+    [
+      8120,
+      8
+    ],
+    [
+      8128,
+      60
+    ],
+    [
+      8188,
+      136
+    ],
+    [
+      8324,
+      140
+    ],
+    [
+      8464,
+      84
+    ],
+    [
+      8548,
+      108
+    ],
+    [
+      8656,
+      204
+    ],
+    [
+      8860,
+      64
+    ],
+    [
+      8924,
+      68
+    ],
+    [
+      8992,
+      40
+    ],
+    [
+      9032,
+      3044
+    ],
+    [
+      12076,
+      68
+    ],
+    [
+      12144,
+      124
+    ],
+    [
+      12268,
+      52
+    ],
+    [
+      12320,
+      32
+    ],
+    [
+      12352,
+      28
+    ]
+  ],
+  "arm_library_calls": [
+    "ArmDisableInterrupts",
+    "ArmInstructionSynchronizationBarrier",
+    "ArmReadCntPct",
+    "ArmReadCntpCtl",
+    "ArmReadCntpCval",
+    "ArmWriteCntpCtl",
+    "ArmWriteCntpCval"
+  ],
+  "result_storage": {
+    "bytes": 512,
+    "rva": 70752,
+    "physical_address": 1074570336,
+    "fd_offset": 173152,
+    "materialized_zero_data": true
+  },
+  "physical_ppi_only": true,
+  "generic_cpu_and_vectors_unmodified": true,
+  "other_timer_sources_never_written": true,
+  "eoi_mode_zero_only": true,
+  "source_masked_before_eoi": true,
+  "independent_counter_and_poll_bounds": true,
+  "protocol_negative_requests_checked_in_qemu": true,
+  "period_change_and_stopped_irq_stability_checked_in_qemu": true,
+  "handset_executed": false,
+  "limitations": [
+    "Diagnostic service lifetime at most ten seconds; not permanent TimerArch",
+    "Only one FDT-resolved physical PPI supported",
+    "NS enable views are non-atomic and do not establish Secure ownership",
+    "A full OS memory handoff is not implemented"
+  ]
+}

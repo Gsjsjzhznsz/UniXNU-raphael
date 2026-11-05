@@ -1,0 +1,127 @@
+{
+  "kind": "interpretation of observed boot display registers; not a GOP driver",
+  "handoff": "UniXNU-raphael/evidence/sec-display-handoff.json",
+  "handoff_sha256": "c28ee8e7c7d9028dd653d79ee080c841480a51157c7c11987931a02da8abeddb",
+  "fdt_sha256": "b23263cb21e2da2a235328e1efbcf2c075a6e3a86629d02985f7d32a422e5014",
+  "hardware_revision": "0x50000001",
+  "candidates": [
+    {
+      "candidate_valid": true,
+      "rejection_reasons": [],
+      "address_register_value": 2617245696,
+      "address_register_value_hex": "0x9c000000",
+      "width": 1080,
+      "height": 2340,
+      "stride_bytes": 4320,
+      "pixels_per_scanline": 1080,
+      "pixel_bytes": 10108800,
+      "end_exclusive": 2627354496,
+      "interpreted_format": "DRM_FORMAT_ARGB8888, little-endian B G R A bytes",
+      "alpha_enabled": true,
+      "uefi_byte_order_compatible": "PixelBlueGreenRedReserved8BitPerColor",
+      "reservation": {
+        "base": 2617245696,
+        "size": 37748736,
+        "source": "/reserved-memory/cont_splash_region:reg[0]"
+      },
+      "active_routing_verified": false,
+      "physical_mapping_verified": false,
+      "panel_refresh_verified": false,
+      "gop_enabled": false,
+      "limits": [
+        "UEFI Reserved byte and active alpha blending are not interchangeable without a blend audit",
+        "The source address register may be an IOVA; this record does not establish its CPU mapping",
+        "No generated GOP PCD, framebuffer write, cache operation or display kickoff is authorized by this record"
+      ]
+    }
+  ],
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_formats.c",
+      "sha256": "cec6b42cf112fc3d97250a03f4bcfc9d8e43804fbffbf8e83982dfb393c95ad3",
+      "anchors": {
+        "#define INTERLEAVED_RGB_FMT(": [
+          41
+        ],
+        "INTERLEAVED_RGB_FMT(ARGB8888,": [
+          204
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_mdss.h",
+      "sha256": "40a2e4f1c4887ae1059b19878282fc68633f3f69acd4b12eb052cf4a48406867",
+      "anchors": {
+        "C0_G_Y = 0": [
+          333
+        ],
+        "C1_B_Cb = 1": [
+          334
+        ],
+        "C2_R_Cr = 2": [
+          335
+        ],
+        "C3_ALPHA = 3": [
+          336
+        ]
+      }
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_sspp.c",
+      "sha256": "228ecfad88473ff8d1bfd83d462523c11b9ad1236b5a07b763eec7b61a2bf649",
+      "anchors": {
+        "src_format = (chroma_samp": [
+          337
+        ],
+        "unpack = (fmt->element": [
+          350
+        ],
+        "fmt->unpack_count - 1": [
+          352
+        ]
+      }
+    }
+  ],
+  "interpretation_checks": [
+    {
+      "name": "real observed tuple is recognized",
+      "passed": true
+    },
+    {
+      "name": "compressed fetch rejected",
+      "passed": true
+    },
+    {
+      "name": "truncated stride rejected",
+      "passed": true
+    },
+    {
+      "name": "wrong byte order rejected",
+      "passed": true
+    },
+    {
+      "name": "crop active rejected",
+      "passed": true
+    },
+    {
+      "name": "multiple rectangles rejected",
+      "passed": true
+    },
+    {
+      "name": "secure source rejected",
+      "passed": true
+    },
+    {
+      "name": "address beyond reservation rejected",
+      "passed": true
+    }
+  ],
+  "framebuffer_written": false,
+  "full_display_validated": false
+}

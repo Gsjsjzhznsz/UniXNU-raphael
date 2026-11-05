@@ -1,0 +1,29 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = MenuFixture
+  FILE_GUID = F11E780E-10DC-422C-9F1F-5C6D2C427DE1
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = MenuFixtureEntry
+[Sources]
+  MenuFixture.c
+  ../../Drivers/DiagnosticReturnDxe/MenuTest.c
+[Packages]
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+[LibraryClasses]
+  ArmLib
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  RaphaelFramebufferLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiLib
+  UniXNULib
+[Protocols]
+  gEfiGraphicsOutputProtocolGuid
+[FixedPcd]
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase

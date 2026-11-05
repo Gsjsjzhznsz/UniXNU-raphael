@@ -1,0 +1,236 @@
+{
+  "kind": "actual pixel C collector host execution with artificial memory and MMIO",
+  "passed": true,
+  "cases": [
+    {
+      "name": "bounded pixel grid plus time-ordered interface reads",
+      "passed": true,
+      "status": 6,
+      "reads": 4224,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "source scaling",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "crop",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "multi-plane",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "short stride",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "wrong byte order",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "compressed format",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "secure source",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "address outside reservation",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "translated context",
+      "passed": true,
+      "status": 3,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "stage2 translation",
+      "passed": true,
+      "status": 3,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "32 bit context",
+      "passed": true,
+      "status": 3,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "client interface disabled",
+      "passed": true,
+      "status": 3,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "missing stream",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "missing power",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "multiple active CTLs",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "multiple interfaces",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "no auto refresh",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "nonidentity reserved-memory bus",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "short splash region",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "invalid frequency",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "stalled timer is bounded",
+      "passed": true,
+      "status": 5,
+      "reads": 4100,
+      "actual_c_executed": true,
+      "mocked_hardware": true
+    }
+  ],
+  "case_count": 22,
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "-DFdtFirstSubnode=fdt_first_subnode",
+    "-DFdtNextSubnode=fdt_next_subnode",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/pixel-probe-host/20261027T170249Z/pixel-probe.so"
+  ],
+  "input_fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+      "sha256": "8f8abbf622d8b1d8d2dae531515fb1ce48b68cb451f9351a5bf6ad675e71730a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelProbe.h",
+      "sha256": "69c853680ebba9448922888ed01c07c00ee37e82ee58dcd3128fae4b759084ab"
+    },
+    {
+      "path": "scripts/pixel_probe.py",
+      "sha256": "d60f8159391b8deae9bda096bbda893b8b466d6e932ae62942b2e198369300a7"
+    },
+    {
+      "path": "scripts/validate_pixel_probe.py",
+      "sha256": "35ddc1350abebc6583a31f9b428a046aecedffa87e3a9650e2c61d7c80a56299"
+    }
+  ]
+}

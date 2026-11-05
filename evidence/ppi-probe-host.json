@@ -1,0 +1,643 @@
+{
+  "passed": true,
+  "case_count": 94,
+  "cases": [
+    {
+      "name": "single dynamically selected PPI writable and restored",
+      "status": 6,
+      "reads": 11,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "nonsecure write ignored is diagnostic not permission",
+      "status": 3,
+      "reads": 11,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "RWP delayed propagation completes",
+      "status": 6,
+      "reads": 14,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "RWP timeout still reads final state",
+      "status": 5,
+      "reads": 110,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "RWP poll count bounded with stopped counter",
+      "status": 5,
+      "reads": 1000010,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "clear ignored is not restored",
+      "status": 5,
+      "reads": 11,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "unexpected other enable change is rejected",
+      "status": 5,
+      "reads": 11,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "unexpected target pending is rejected",
+      "status": 5,
+      "reads": 11,
+      "writes": 2,
+      "passed": true
+    },
+    {
+      "name": "no GIC",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "no ICC",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "no read",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "no write",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "no counter",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite version",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite status",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite frame_count",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite frame_count",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite boot_index",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite gicd",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite gicd_bytes",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite gicr",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite gicr_bytes",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "GIC prerequisite affinity",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite version",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite status",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite attempted",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite completed",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite failed_selector",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite trap_esr",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC prerequisite trap_elr",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 0",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 1",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 2",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 3",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 7",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 10",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 10",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 15",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "ICC value 15",
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh distributor changed",
+      "status": 2,
+      "reads": 5,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "fresh enable changed",
+      "status": 2,
+      "reads": 5,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "target already pending",
+      "status": 2,
+      "reads": 5,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "target active",
+      "status": 2,
+      "reads": 5,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "RD write already pending",
+      "status": 2,
+      "reads": 5,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT root unknown",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT root malformed",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT timer disabled",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT missing frequency",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT wrong frequency",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT short frequency",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT short interrupts",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT extended interrupts",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT timer parent invalid",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT PDC wrong cells",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT PDC wrong compatible",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT PDC disabled",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT GIC wrong cells",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT GIC disabled",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT duplicate timer",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT duplicate GIC",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT PDC self cycle",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT PDC no controller flag",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT GIC no controller flag",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT PDC malformed controller flag",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT conflicting GIC handle alias",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT duplicate GIC handle",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT phone bypasses PDC",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT not PPI",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT out of range",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT edge",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT unknown flags",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "FDT aliases secure PPI",
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "passed": true
+    },
+    {
+      "name": "wire rejects version",
+      "passed": true
+    },
+    {
+      "name": "wire rejects status",
+      "passed": true
+    },
+    {
+      "name": "wire rejects reason",
+      "passed": true
+    },
+    {
+      "name": "wire rejects intid",
+      "passed": true
+    },
+    {
+      "name": "wire rejects flags",
+      "passed": true
+    },
+    {
+      "name": "wire rejects sgi_base",
+      "passed": true
+    },
+    {
+      "name": "wire rejects mask",
+      "passed": true
+    },
+    {
+      "name": "wire rejects enabled_before",
+      "passed": true
+    },
+    {
+      "name": "wire rejects enabled_during",
+      "passed": true
+    },
+    {
+      "name": "wire rejects enabled_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects active_before",
+      "passed": true
+    },
+    {
+      "name": "wire rejects pending_before",
+      "passed": true
+    },
+    {
+      "name": "wire rejects rwp_polls",
+      "passed": true
+    },
+    {
+      "name": "wire rejects write_count",
+      "passed": true
+    },
+    {
+      "name": "wire rejects ctlr_before",
+      "passed": true
+    },
+    {
+      "name": "wire rejects ctlr_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects read_count",
+      "passed": true
+    },
+    {
+      "name": "wire rejects restore_ok",
+      "passed": true
+    },
+    {
+      "name": "wire rejects pending_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects active_after",
+      "passed": true
+    },
+    {
+      "name": "wire rejects short",
+      "passed": true
+    },
+    {
+      "name": "wire rejects long",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtCheckHeader=fdt_check_header",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtNextNode=fdt_next_node",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/ppi-probe-host/20261028T000435.250989Z-smkoapze/ppi-probe.so"
+  ],
+  "snapshot_bytes": 160,
+  "guard_canaries_verified": true,
+  "undefined_behavior_sanitizer": true,
+  "mmio_model_only": true,
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+      "sha256": "019e5f9085adcc9b25a60fe6b0b3f831330a9defdb57e8603631ba612c97f605"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPpiProbe.h",
+      "sha256": "99a84c80068892c1faaf9763a368c5d6c06c18c0d29be61b26b2830fb812dd28"
+    }
+  ],
+  "decoder_sha256": "4e4dc885df642654e774fe07d375a0b3adedd91928098a8d79d3dfa200ef7a4b",
+  "runner_sha256": "f2d9e88264f7b9e11f51534b69b3bfe0984612628af6d678df7bab8213f614a9"
+}

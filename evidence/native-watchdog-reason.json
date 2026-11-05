@@ -1,0 +1,19 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T163051Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T162811Z/20261104T164345Z-automatic-return",
+  "records": 429,
+  "bytes": 98309,
+  "dropped": 0,
+  "reason": "CommCenter failed checkins for180s after4 induced crashes;backboardd and other listed services last checked in0s ago",
+  "reason_ufs_and_crc_verified_static_agree": true,
+  "verified_mutable_ranges": 7,
+  "total_mutable_ranges": 8,
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "desktop_verified": false,
+  "onsite": "automatic return to Android",
+  "android_cleanup_verified": true,
+  "memory_pressure": "Original memorystatus below-critical and vm-pageshortage kills observed near685/687s",
+  "next": "Prioritize CommCenter threads at existing360s observer contract before observed panic"
+}

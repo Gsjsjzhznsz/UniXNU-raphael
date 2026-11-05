@@ -1,0 +1,183 @@
+name: Package
+
+on:
+  workflow_dispatch:
+    inputs:
+      device_dir:
+        description: Device directory within this repository
+        default: '.'
+        type: string
+      os_profile:
+        description: OS major version or full profile (only configured profiles are supported)
+        default: '17'
+        type: string
+      mode:
+        description: Check configuration or build complete images
+        default: check
+        type: choice
+        options: [check, build]
+      soc_repository:
+        description: SoC repository if not present beside the device (owner/repo)
+        default: guowenye/UniXNU-sm8150-common
+        required: false
+        type: string
+      soc_revision:
+        description: Full SoC commit if a separate checkout is needed
+        default: aced7f66f2ec832d1d09936b13738782852a6860
+        required: false
+        type: string
+      uefi_repository:
+        description: Qualified device firmware repository (build only)
+        required: false
+        type: string
+      uefi_revision:
+        description: Full firmware commit (build only)
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: macos-14
+    timeout-minutes: 120
+    env:
+      DEVICE_INPUT: ${{ inputs.device_dir }}
+      OS_PROFILE: ${{ inputs.os_profile }}
+      PACKAGE_MODE: ${{ inputs.mode }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: workspace
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read package and local SoC layout from TOML
+        id: layout
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, pathlib, re, tomllib
+          base = pathlib.Path(os.environ['GITHUB_WORKSPACE']).resolve()
+          repo = base / 'workspace'
+          device = (repo / os.environ['DEVICE_INPUT']).resolve()
+          device.relative_to(repo)
+          board = tomllib.loads((device / 'board.toml').read_text())
+          package = board['package']
+          runtime = (device / package['unixnu']).resolve()
+          runtime.relative_to(base)
+          overrides = tomllib.loads((device / 'local.toml.example').read_text())
+          soc = next(s for s in overrides['source'] if s['kind'] == 'soc' and s['name'] == board['board']['soc_source'])
+          soc_path = (device / soc['local']).resolve()
+          soc_path.relative_to(base)
+          revision = package['unixnu_revision']
+          if not re.fullmatch(r'[0-9a-f]{40}', revision):
+              raise SystemExit('package.unixnu_revision must be a full commit')
+          values = dict(device=str(device), runtime_path=str(runtime.relative_to(base)),
+                        unixnu_repository=package['unixnu_repository'], unixnu_revision=revision,
+                        soc_path=str(soc_path.relative_to(base)), soc_present=str((soc_path / 'soc.toml').is_file()).lower())
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as out:
+              for key, value in values.items():
+                  if '\n' in value or '\r' in value: raise SystemExit('invalid multiline layout value')
+                  print(f'{key}={value}', file=out)
+          PY
+      - name: Check missing source checkout inputs
+        env:
+          SOC_PRESENT: ${{ steps.layout.outputs.soc_present }}
+          SOC_REPOSITORY: ${{ inputs.soc_repository }}
+          SOC_REVISION: ${{ inputs.soc_revision }}
+          UEFI_REPOSITORY: ${{ inputs.uefi_repository }}
+          UEFI_REVISION: ${{ inputs.uefi_revision }}
+        run: |
+          python3 - <<'PY'
+          import os, re
+          def require_pin(kind):
+              repository, revision = os.environ[kind + '_REPOSITORY'], os.environ[kind + '_REVISION']
+              if not repository or not re.fullmatch(r'[0-9a-f]{40}', revision):
+                  raise SystemExit(f'{kind}: provide a repository and full commit; no source URL is guessed')
+          if os.environ['SOC_PRESENT'] != 'true': require_pin('SOC')
+          PY
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.layout.outputs.unixnu_repository }}
+          ref: ${{ steps.layout.outputs.unixnu_revision }}
+          path: ${{ steps.layout.outputs.runtime_path }}
+          submodules: recursive
+      - uses: actions/checkout@v4
+        if: steps.layout.outputs.soc_present != 'true'
+        with:
+          repository: ${{ inputs.soc_repository }}
+          ref: ${{ inputs.soc_revision }}
+          path: ${{ steps.layout.outputs.soc_path }}
+      - name: Configure local SoC source only
+        env:
+          DEVICE: ${{ steps.layout.outputs.device }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, tomllib
+          device = pathlib.Path(os.environ['DEVICE'])
+          board = tomllib.loads((device / 'board.toml').read_text())
+          document = tomllib.loads((device / 'local.toml.example').read_text())
+          soc = next(s for s in document['source'] if s['kind'] == 'soc' and s['name'] == board['board']['soc_source'])
+          (device / 'local.toml').write_text('[[source]]\n' + ''.join(f'{k} = {json.dumps(soc[k])}\n' for k in ('kind', 'name', 'local')))
+          PY
+      - name: Check launcher, source pin and recipes
+        env:
+          DEVICE: ${{ steps.layout.outputs.device }}
+          UEFI_REPOSITORY: ${{ inputs.uefi_repository }}
+          UEFI_REVISION: ${{ inputs.uefi_revision }}
+        run: |
+          args=()
+          if [[ "$PACKAGE_MODE" == build ]]; then args+=(--require-release); fi
+          python3 "$DEVICE/scripts/check-packaging.py" --os "$OS_PROFILE" "${args[@]}"
+          if [[ "$PACKAGE_MODE" == build ]]; then
+            python3 - <<'PY'
+          import os, re
+          if not os.environ['UEFI_REPOSITORY'] or not re.fullmatch(r'[0-9a-f]{40}', os.environ['UEFI_REVISION']):
+              raise SystemExit('UEFI: provide a qualified repository and full commit')
+          PY
+          fi
+      - uses: actions/checkout@v4
+        if: inputs.mode == 'build'
+        with:
+          repository: ${{ inputs.uefi_repository }}
+          ref: ${{ inputs.uefi_revision }}
+          path: firmware
+          submodules: recursive
+      - name: Install and assert build tools
+        if: inputs.mode == 'build'
+        run: |
+          brew install dtc llvm lld cmake mtools blacktop/tap/ipsw
+          echo "$(brew --prefix llvm)/bin" >> "$GITHUB_PATH"
+          export PATH="$(brew --prefix llvm)/bin:$PATH"
+          for tool in dtc clang ld.lld cmake mformat mcopy ipsw; do command -v "$tool"; done
+      - name: Check configured OS and ordered patches
+        if: inputs.mode == 'check'
+        env:
+          DEVICE: ${{ steps.layout.outputs.device }}
+        run: '"$DEVICE/scripts/package.sh" --no-deps --check --os "$OS_PROFILE" --out "$GITHUB_WORKSPACE/output"'
+      - name: Package images
+        if: inputs.mode == 'build'
+        env:
+          DEVICE: ${{ steps.layout.outputs.device }}
+          UNIXNU_UNIQUE_CHIP_ID: ${{ secrets.UNIXNU_UNIQUE_CHIP_ID }}
+          UNIXNU_UEFI: ${{ github.workspace }}/firmware
+        run: |
+          python3 - <<'PY'
+          import os, re
+          if not re.fullmatch(r'[0-9a-fA-F]{8}', os.environ.get('UNIXNU_UNIQUE_CHIP_ID', '')):
+              raise SystemExit('Configure secret UNIXNU_UNIQUE_CHIP_ID (8 hex digits)')
+          PY
+          "$DEVICE/scripts/package.sh" --os "$OS_PROFILE" --out "$GITHUB_WORKSPACE/output"
+      - uses: actions/upload-artifact@v4
+        if: success() && inputs.mode == 'build'
+        with:
+          name: device-package
+          if-no-files-found: error
+          retention-days: 1
+          path: |
+            output/**/boot/boot.img
+            output/**/payload/payload.img
+            output/**/kernel/kernel.macho
+            output/**/package.manifest.json

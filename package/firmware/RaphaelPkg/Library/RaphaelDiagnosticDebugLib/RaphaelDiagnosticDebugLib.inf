@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelDiagnosticDebugLib
+  FILE_GUID = 5B94AB87-58F7-4168-8AA9-247EA7713384
+  MODULE_TYPE = BASE
+  LIBRARY_CLASS = DebugLib
+[Sources]
+  Debug.c
+[Packages]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  SemihostLib
+  BaseLib
+  BaseMemoryLib
+  PrintLib
+[FixedPcd]
+  gRaphaelTokenSpaceGuid.PcdRaphaelNativeQemuGate
+  gEfiMdePkgTokenSpaceGuid.PcdDebugPropertyMask
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase

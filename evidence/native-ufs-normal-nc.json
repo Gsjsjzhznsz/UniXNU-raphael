@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "baseline": "evidence/private/android-return-run/20261101T175421Z/report.json",
+  "candidate": "evidence/private/android-return-run/20261101T182129Z/report.json",
+  "rejected_incomplete_capture": "evidence/private/android-return-run/20261101T180628Z/report.json",
+  "changed_variable": "Owned8192-byte DMA allocation: XNU kIOMapWriteCombineCache, Normal outer/inner non-cacheable; actual per-page read/write AT/PAR physical identity and0x44 attributes checked before takeover",
+  "verified_dma_pages": 2,
+  "controller_mmio_changed": false,
+  "read10_bytes": 4096,
+  "per_block_authentication": true,
+  "observer_ms": [
+    120097.98270833334,
+    120027.46640625
+  ],
+  "ufs_bytes": [
+    1489957888,
+    1872835584
+  ],
+  "throughput_ratio": 1.257710632348455,
+  "syscall_entries": [
+    204,
+    246
+  ],
+  "signature_ready_blobs": 33,
+  "signature_bytes": 1860272128,
+  "ufs_failures": 0,
+  "signature_bad_hash": 0,
+  "pmap_pages": 132,
+  "pmap_sparse_bytes": 135462,
+  "pmap_sparse_capacity": 524288,
+  "return_fdt_bytes": 4194304,
+  "cleanup_verified": true,
+  "launchd_main_verified": false,
+  "desktop_verified": false,
+  "next": "Explicit240s observer/300s pet-budget candidate; hardware20s unchanged"
+}

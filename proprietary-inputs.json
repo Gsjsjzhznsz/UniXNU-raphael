@@ -1,0 +1,86 @@
+[
+  {
+    "name": "boot",
+    "bytes": 134217728,
+    "sha256": "cbd91d814396ea0aab1cbca25d4f4f904805c69e4bb38b5a35a51b98858b96ec",
+    "source": "/dev/block/bootdevice/by-name/boot",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Current boot format and Linux/DT reference; modified kernel, not assumed factory stock",
+    "current_use": "Historical source observation; current Android-return diagnostic uses a frozen boot/DT reference. Not factory stock; see proprietary-files.txt and workspace handoff.",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "Android boot"
+  },
+  {
+    "name": "dtbo",
+    "bytes": 33554432,
+    "sha256": "5b7622dde305405e1ded6cb33ed067b5ebcd007ddb4b7f6330b4bd70580bbe21",
+    "source": "/dev/block/bootdevice/by-name/dtbo",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Board overlay and IDs; compare against live FDT and Xiaomi primary source",
+    "current_use": "reference-only; not linked into any artifact",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "other"
+  },
+  {
+    "name": "xbl",
+    "bytes": 7340032,
+    "sha256": "2feb056c7224ff5a1ed27fdbfc2e527f05db40b1ac7754684da17d34a821e043",
+    "source": "/dev/block/bootdevice/by-name/xbl",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Inventory original-device UEFI firmware volumes and possible protocol providers",
+    "current_use": "reference-only; not linked into any artifact",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "ELF"
+  },
+  {
+    "name": "xbl_config",
+    "bytes": 524288,
+    "sha256": "0c2f9ba541475ff0e65c65ff1bf842ee0d7f640d403cd5bb6e3b5f917eeda8ba",
+    "source": "/dev/block/bootdevice/by-name/xbl_config",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Source-device early boot configuration; not consumed by current diagnostic",
+    "current_use": "reference-only; not linked into any artifact",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "ELF"
+  },
+  {
+    "name": "abl",
+    "bytes": 2097152,
+    "sha256": "92a2a6ae392e3fea93ecf4bf662f7a35d87293fb6bcfc8ddecc2c41947befecc",
+    "source": "/dev/block/bootdevice/by-name/abl",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Bootloader format and protocol investigation; no replacement or execution",
+    "current_use": "reference-only; not linked into any artifact",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "ELF"
+  },
+  {
+    "name": "imagefv",
+    "bytes": 2097152,
+    "sha256": "31ee37bcca59efa2467854cc2cfb5bf01cc78f260522a2c34393bcd3786e6186",
+    "source": "/dev/block/bootdevice/by-name/imagefv",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Vendor firmware-volume inventory; dependencies unresolved",
+    "current_use": "reference-only; not linked into any artifact",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "ELF"
+  },
+  {
+    "name": "uefisecapp",
+    "bytes": 2097152,
+    "sha256": "af0074323f567eac6cce99b0845a88f5b1db4dd1f8e6a8c1ffb2bea86a97c2bd",
+    "source": "/dev/block/bootdevice/by-name/uefisecapp",
+    "collection": "fresh read-only ADB exec-out; byte count and before/after source hash matched",
+    "purpose": "Secure firmware input inventory; no execution or reuse approved by this scan",
+    "current_use": "reference-only; not linked into any artifact",
+    "redistribution": "private; excluded from version control",
+    "dependency_status": "Not established; volume inventory is not a dependency proof",
+    "container": "ELF"
+  }
+]

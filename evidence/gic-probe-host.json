@@ -1,0 +1,341 @@
+{
+  "passed": true,
+  "case_count": 55,
+  "cases": [
+    {
+      "name": "permuted affinity selects boot frame5",
+      "status": 4,
+      "read_count": 67,
+      "passed": true
+    },
+    {
+      "name": "unknown root has no MMIO",
+      "status": 1,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "malformed header has no MMIO",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "null read callback has no MMIO",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "malformed matching root compatible",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "full Aff3 mapping selects same frame",
+      "status": 4,
+      "read_count": 67,
+      "passed": true
+    },
+    {
+      "name": "duplicate GIC even if later node",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject disabled GIC",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject no ranges",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject unreviewed translation",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject wrong cells",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject multiple GICR",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject missing stride",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject short stride",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject zero stride",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject unaligned stride",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject oversize stride",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject short GICD",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject short GICR",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject unaligned MMIO",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject overlap windows",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject RAM alias",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject protected extent",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "reject unterminated matching compatible",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "invalid protected interval",
+      "status": 2,
+      "read_count": 0,
+      "passed": true
+    },
+    {
+      "name": "unsupported distributor PIDR",
+      "status": 3,
+      "read_count": 1,
+      "passed": true
+    },
+    {
+      "name": "unsupported first redistributor PIDR",
+      "status": 3,
+      "read_count": 5,
+      "passed": true
+    },
+    {
+      "name": "duplicate frame affinity",
+      "status": 3,
+      "read_count": 16,
+      "passed": true
+    },
+    {
+      "name": "no boot affinity",
+      "status": 3,
+      "read_count": 52,
+      "passed": true
+    },
+    {
+      "name": "missing last within capacity",
+      "status": 3,
+      "read_count": 52,
+      "passed": true
+    },
+    {
+      "name": "frame scan bounded by region end",
+      "status": 3,
+      "read_count": 46,
+      "passed": true
+    },
+    {
+      "name": "last VLPI frame also needs full stride",
+      "status": 3,
+      "read_count": 52,
+      "passed": true
+    },
+    {
+      "name": "VLPI stride cannot overlap next frame",
+      "status": 3,
+      "read_count": 10,
+      "passed": true
+    },
+    {
+      "name": "decoder rejects version",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects status",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects reason",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects read_count",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects gicd",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects gicr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects gicd_bytes",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects gicr_bytes",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects stride",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects mpidr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects affinity",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects frame_count",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects boot_index",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects pidr2",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects ctlr",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects unaligned frame base",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects bad frame PIDR",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects oversize frame register",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects missing last flag",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects oversize SGI word",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects truncated",
+      "passed": true
+    },
+    {
+      "name": "decoder rejects trailing",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=all",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtCheckHeader=fdt_check_header",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtNextNode=fdt_next_node",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/GicProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/gic-probe-host/20261027T220425.172938Z-t0y7u1z2/gic-probe.so"
+  ],
+  "undefined_behavior_sanitizer": true,
+  "guard_canaries_verified": true,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GicProbe.c",
+      "sha256": "92f494ca410183a5046145b380d4a3b783e8391901481c096eee63d96d7b6e97"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelGicProbe.h",
+      "sha256": "eadbc248e7bb37380857889fdf9a420d100793f1332536f2deb5b2553012d343"
+    }
+  ],
+  "fdt_sha256": "7984f47f73d2145ca5ce8142ec672f52a255bb22c4119af5c9249353d8b00460",
+  "decoder_sha256": "81e493ec3d84298a1349a337723e3428cb9370fa89f435dbcd78b44a922b53a1",
+  "runner_sha256": "874c6aad11f116f2ca0531b1736e87b182421b3d87a4499f355ca8a0eb93c1f1",
+  "source_collection": "evidence/private/interrupt-audit/20261027T203039.031418Z",
+  "handset_executed": false,
+  "mmio_model_only": true
+}

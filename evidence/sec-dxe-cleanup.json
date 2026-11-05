@@ -1,0 +1,18 @@
+{
+  "after_attempt": "sec-dxe-attempt-20261027T151738Z.json",
+  "private_report": "evidence/private/entry-probe-cleanup/20261027T151911Z/report.json",
+  "result": {
+    "normal_android_reboot": true,
+    "recovery_audit_without_extra_reboot": false,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "transient_probe_absent": true,
+    "fdt_sha256": "4df554bcae7df552c01969d5ef82e06eb101e5505a79c61a0cb97499b979710e",
+    "flash_or_restore_performed": false
+  },
+  "source_boot_sha256": "cbd91d814396ea0aab1cbca25d4f4f904805c69e4bb38b5a35a51b98858b96ec",
+  "limits": [
+    "Normal reboot cleanup, not a backup restore or recovery capability test"
+  ]
+}

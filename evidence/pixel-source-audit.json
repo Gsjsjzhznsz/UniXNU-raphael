@@ -1,0 +1,120 @@
+{
+  "kind": "bounded read-only CPU splash and interface counter source audit",
+  "passed": true,
+  "wire_version": 1,
+  "fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "primary_sources": [
+    {
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/gpu/drm/msm/sde/sde_hw_intf.c",
+      "sha256": "ce16308be7e9814a42d87f2b0ee535b9a5e9f8a9e40c849273a0a7819c77a691",
+      "anchors": {
+        "INTF_STATUS": [
+          72,
+          430
+        ],
+        "INTF_FRAME_COUNT": [
+          47,
+          416,
+          432
+        ],
+        "INTF_TEAR_INT_COUNT_VAL": [
+          83,
+          625
+        ],
+        "INTF_TEAR_LINE_COUNT": [
+          89,
+          555,
+          629
+        ],
+        "rd_ptr_frame_count =": [
+          626
+        ],
+        "wr_ptr_line_count =": [
+          630
+        ]
+      }
+    },
+    {
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/iommu/arm-smmu.c",
+      "sha256": "7910064fa0b19cede7f93fe5558af5cd236c94fb67f28022a92255a1b3a82d2c",
+      "anchors": {
+        "DOMAIN_ATTR_S1_BYPASS": [
+          1826,
+          3332,
+          3334,
+          3491,
+          3500,
+          3503
+        ],
+        "DOMAIN_ATTR_EARLY_MAP": [
+          1827,
+          3367,
+          3369,
+          3565,
+          3571,
+          3579
+        ],
+        "reg |= SCTLR_M": [
+          1828,
+          3684
+        ],
+        "banks operate in bypass mode": [
+          4133
+        ]
+      }
+    },
+    {
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/iommu/arm-smmu-regs.h",
+      "sha256": "c720cb61501d13cae875c185cc0a03e8155816b296ef710e66bb25222c5a9bba",
+      "anchors": {
+        "CBAR_TYPE_S1_TRANS_S2_BYPASS": [
+          153
+        ],
+        "SCTLR_M": [
+          208
+        ],
+        "CBA2R_RW64_64BIT": [
+          164
+        ]
+      }
+    }
+  ],
+  "splash": {
+    "base": 2617245696,
+    "size": 37748736,
+    "source": "/reserved-memory/cont_splash_region:reg",
+    "no_map_present": false
+  },
+  "prior_handset_smmu": {
+    "path": "UniXNU-raphael/evidence/boot-smmu-observation.json",
+    "sha256": "6fae1c97cce415e876107241c5ba8f83ab2afcaf221fd92a0cc3cb7e601c3aa3",
+    "source_revision": "9d2fb86365b30f68375fa5d837ba47209bea8444"
+  },
+  "timer": {
+    "path": "sources/mu_basecore/MdePkg/Library/ArmLib/AArch64/AArch64ArchTimerSupport.S",
+    "sha256": "f9c95cea9b147353bff1e3f61f6ae7b32bf1ca3fbf6483ec88d65035f32c55af",
+    "frequency_source": "CNTFRQ_EL0 at this entry"
+  },
+  "design_choices": {
+    "grid": [
+      64,
+      64
+    ],
+    "rounds": 32,
+    "spacing_seconds": 0.002,
+    "maximum_timer_poll_iterations": 10000000
+  },
+  "mmio_writes": false,
+  "pixel_writes": false,
+  "page_table_walk": false,
+  "limitations": [
+    "CPU uses MMU/cache-disabled entry; bounded accesses test the sourced candidate physical memory",
+    "S1 disabled and CBAR stage2 bypass are configuration evidence, not proof against hidden fabric/security remapping",
+    "The live cont_splash reserved-memory node has no no-map property; do not assert it does",
+    "Counter movement may reflect an internal VSYNC counter and cannot by itself prove panel update",
+    "Pixel samples and raw readbacks stay private; only hashes/counts are public"
+  ]
+}

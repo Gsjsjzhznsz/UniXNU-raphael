@@ -1,0 +1,639 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-10-28T15:27:57.107647+00:00",
+  "operation": "fetch remote refs and separately inspect a pinned candidate; active port pins retained",
+  "remote": "https://github.com/UniXNU/UniXNU.git",
+  "active": {
+    "branch": "main",
+    "revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+    "checkout": "sources/UniXNU",
+    "changed_this_recheck": false,
+    "source_lock_sha256": "f4bd0d974a1b1541247cf66718062efcf093b5102cb754e3125ed895989813ab"
+  },
+  "candidate": {
+    "branch": "feat/ipados27-gpu-parity",
+    "revision": "63cc454dd5999383b720ad8646d8d2b47762494a",
+    "checkout": "sources/UniXNU-gpu-parity-63cc454",
+    "active_for_handset": false,
+    "merge_base": "759eb61b6b8d475de5b3d1b39e1de1f5294e8d9a",
+    "main_only_commits": 7,
+    "candidate_only_commits": 28,
+    "previous_fetched_revision": "caffd5dfb53f9daac91829119ea7cf6f1a9720e3",
+    "newly_fetched_commits": [
+      "63cc454dd5999383b720ad8646d8d2b47762494a",
+      "fb5cdd6e0660de5d6688696679972a1febb03abe"
+    ],
+    "endpoint_changed_file_count": 280,
+    "changed_dependencies": [
+      {
+        "path": "drivers/Adreno740",
+        "main_revision": "5c8c1453c67d6ef6b10ec43ab1f8fc570a2f33e1",
+        "candidate_revision": "0cb6f4f770c302bf254e2dd5b52d93ab1b2b0b91"
+      },
+      {
+        "path": "drivers/AdrenoMetal",
+        "main_revision": "ce5e19e33e05e1873d38d818e23cabfe0ac708c3",
+        "candidate_revision": "94af9e8c93f73ec0af11fd75bf19079a97d7c95e"
+      },
+      {
+        "path": "drivers/ArmCpu",
+        "main_revision": "9066b53bbc82e92a98ec44a11dd50fd13eaf1a1b",
+        "candidate_revision": "4bd3230f48121e47a0badb4ea2d1674715ba2197"
+      },
+      {
+        "path": "drivers/DarwinBoot",
+        "main_revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+        "candidate_revision": "3e3a8a969e1177995984d8ed98c9dcc44e318265"
+      },
+      {
+        "path": "drivers/GopFramebuffer",
+        "main_revision": "33e941a878dcf01b98dbd9160d798bd56e7551ea",
+        "candidate_revision": "3f0d4c772da9e77725abcd1eaa6d8be7af32f06f"
+      },
+      {
+        "path": "drivers/VirtioMmioBlock",
+        "main_revision": "8ee3a5ab5a3726b0641990228346aec338246eaf",
+        "candidate_revision": "f4dfce679d429aef5487d8c88880ecd2f6573fd4"
+      },
+      {
+        "path": "kits/ArmSmmu4K",
+        "main_revision": "3ba92451bd44bb742d11758fbfcd3a446ecad685",
+        "candidate_revision": "30ec63b84b25c3d568247c6d075f3ded71404a62"
+      },
+      {
+        "path": "kits/VerifiedRoot",
+        "main_revision": "def026642c6c6e71be0dea267d989df1d29ddc64",
+        "candidate_revision": "ed368a8d4451f8670228f9025f1b45479509c789"
+      },
+      {
+        "path": "kits/XnuPrelink",
+        "main_revision": "f876e3ee62e18fc06653dd75ed7dafcfb3950ac0",
+        "candidate_revision": "76452c6e6b6014747c5500b1e57c544fbc1c3249"
+      }
+    ],
+    "submodules": [
+      {
+        "path": "drivers/Adreno740",
+        "revision": "0cb6f4f770c302bf254e2dd5b52d93ab1b2b0b91"
+      },
+      {
+        "path": "drivers/AdrenoMetal",
+        "revision": "94af9e8c93f73ec0af11fd75bf19079a97d7c95e"
+      },
+      {
+        "path": "drivers/AppleKeyStoreState",
+        "revision": "42ff83e08b2265fe741d4adaf084bebe003452ba"
+      },
+      {
+        "path": "drivers/ArmCpu",
+        "revision": "4bd3230f48121e47a0badb4ea2d1674715ba2197"
+      },
+      {
+        "path": "drivers/ArmDTPlatform",
+        "revision": "417ff95d6a6e8607ddea9309ec45c3bfd4a67c60"
+      },
+      {
+        "path": "drivers/ArmVirtPlatform",
+        "revision": "d1423a8bceac4be0478a93d9173587111c040084"
+      },
+      {
+        "path": "drivers/DarwinBoot",
+        "revision": "3e3a8a969e1177995984d8ed98c9dcc44e318265"
+      },
+      {
+        "path": "drivers/GopFramebuffer",
+        "revision": "3f0d4c772da9e77725abcd1eaa6d8be7af32f06f"
+      },
+      {
+        "path": "drivers/QcomGeniSpi",
+        "revision": "eac47baefe6a5d2368a70351e6ad1b6361bedbe2"
+      },
+      {
+        "path": "drivers/RamBlock",
+        "revision": "25c57e0e9b68bf452dd1986914525edc9d2320bc"
+      },
+      {
+        "path": "drivers/SoftwareAES",
+        "revision": "4a45326da5c2cd6fe6813d79ee43db20805628af"
+      },
+      {
+        "path": "drivers/VirtioMmioBlock",
+        "revision": "f4dfce679d429aef5487d8c88880ecd2f6573fd4"
+      },
+      {
+        "path": "drivers/VirtioMmioConsole",
+        "revision": "70253216890b2afcaa6333948726f896f84fc757"
+      },
+      {
+        "path": "kits/AdrenoFirmware",
+        "revision": "20ad3d7aca14bd46aecab6335c780f5413fa054b"
+      },
+      {
+        "path": "kits/AdrenoPM4",
+        "revision": "282606b528b2595bc4274ea7490b62b323f35a5f"
+      },
+      {
+        "path": "kits/AirNir",
+        "revision": "b356371a74cd158c2902f4886f373ebb0f833a36"
+      },
+      {
+        "path": "kits/ArmSmmu4K",
+        "revision": "30ec63b84b25c3d568247c6d075f3ded71404a62"
+      },
+      {
+        "path": "kits/VerifiedRoot",
+        "revision": "ed368a8d4451f8670228f9025f1b45479509c789"
+      },
+      {
+        "path": "kits/XnuPrelink",
+        "revision": "76452c6e6b6014747c5500b1e57c544fbc1c3249"
+      }
+    ]
+  },
+  "source_integrity": {
+    "repositories": 21,
+    "tracked_blobs": 2490,
+    "all_exact": true,
+    "all_clean": true,
+    "all_candidate_gitlinks_match": true,
+    "reports": [
+      {
+        "path": "sources/UniXNU",
+        "revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+        "blob_count": 1036,
+        "mismatches": [],
+        "manifest_sha256": "62343ee6fffadaded96e367039f9584a77e3d2acbd65cc46a8538cd9ac0a0ee4",
+        "status": "",
+        "submodules": [
+          {
+            "path": "drivers/Adreno740",
+            "revision": "5c8c1453c67d6ef6b10ec43ab1f8fc570a2f33e1"
+          },
+          {
+            "path": "drivers/AdrenoMetal",
+            "revision": "ce5e19e33e05e1873d38d818e23cabfe0ac708c3"
+          },
+          {
+            "path": "drivers/AppleKeyStoreState",
+            "revision": "42ff83e08b2265fe741d4adaf084bebe003452ba"
+          },
+          {
+            "path": "drivers/ArmCpu",
+            "revision": "9066b53bbc82e92a98ec44a11dd50fd13eaf1a1b"
+          },
+          {
+            "path": "drivers/ArmDTPlatform",
+            "revision": "417ff95d6a6e8607ddea9309ec45c3bfd4a67c60"
+          },
+          {
+            "path": "drivers/ArmVirtPlatform",
+            "revision": "d1423a8bceac4be0478a93d9173587111c040084"
+          },
+          {
+            "path": "drivers/DarwinBoot",
+            "revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390"
+          },
+          {
+            "path": "drivers/GopFramebuffer",
+            "revision": "33e941a878dcf01b98dbd9160d798bd56e7551ea"
+          },
+          {
+            "path": "drivers/QcomGeniSpi",
+            "revision": "eac47baefe6a5d2368a70351e6ad1b6361bedbe2"
+          },
+          {
+            "path": "drivers/RamBlock",
+            "revision": "25c57e0e9b68bf452dd1986914525edc9d2320bc"
+          },
+          {
+            "path": "drivers/SoftwareAES",
+            "revision": "4a45326da5c2cd6fe6813d79ee43db20805628af"
+          },
+          {
+            "path": "drivers/VirtioMmioBlock",
+            "revision": "8ee3a5ab5a3726b0641990228346aec338246eaf"
+          },
+          {
+            "path": "drivers/VirtioMmioConsole",
+            "revision": "70253216890b2afcaa6333948726f896f84fc757"
+          },
+          {
+            "path": "kits/AdrenoFirmware",
+            "revision": "20ad3d7aca14bd46aecab6335c780f5413fa054b"
+          },
+          {
+            "path": "kits/AdrenoPM4",
+            "revision": "282606b528b2595bc4274ea7490b62b323f35a5f"
+          },
+          {
+            "path": "kits/AirNir",
+            "revision": "b356371a74cd158c2902f4886f373ebb0f833a36"
+          },
+          {
+            "path": "kits/ArmSmmu4K",
+            "revision": "3ba92451bd44bb742d11758fbfcd3a446ecad685"
+          },
+          {
+            "path": "kits/VerifiedRoot",
+            "revision": "def026642c6c6e71be0dea267d989df1d29ddc64"
+          },
+          {
+            "path": "kits/XnuPrelink",
+            "revision": "f876e3ee62e18fc06653dd75ed7dafcfb3950ac0"
+          }
+        ]
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454",
+        "revision": "63cc454dd5999383b720ad8646d8d2b47762494a",
+        "blob_count": 1056,
+        "mismatches": [],
+        "manifest_sha256": "7bd75a5dad89acea0182627530ee21b600273bc1636571582665fa03b3b8d35e",
+        "status": "",
+        "submodules": [
+          {
+            "path": "drivers/Adreno740",
+            "revision": "0cb6f4f770c302bf254e2dd5b52d93ab1b2b0b91"
+          },
+          {
+            "path": "drivers/AdrenoMetal",
+            "revision": "94af9e8c93f73ec0af11fd75bf19079a97d7c95e"
+          },
+          {
+            "path": "drivers/AppleKeyStoreState",
+            "revision": "42ff83e08b2265fe741d4adaf084bebe003452ba"
+          },
+          {
+            "path": "drivers/ArmCpu",
+            "revision": "4bd3230f48121e47a0badb4ea2d1674715ba2197"
+          },
+          {
+            "path": "drivers/ArmDTPlatform",
+            "revision": "417ff95d6a6e8607ddea9309ec45c3bfd4a67c60"
+          },
+          {
+            "path": "drivers/ArmVirtPlatform",
+            "revision": "d1423a8bceac4be0478a93d9173587111c040084"
+          },
+          {
+            "path": "drivers/DarwinBoot",
+            "revision": "3e3a8a969e1177995984d8ed98c9dcc44e318265"
+          },
+          {
+            "path": "drivers/GopFramebuffer",
+            "revision": "3f0d4c772da9e77725abcd1eaa6d8be7af32f06f"
+          },
+          {
+            "path": "drivers/QcomGeniSpi",
+            "revision": "eac47baefe6a5d2368a70351e6ad1b6361bedbe2"
+          },
+          {
+            "path": "drivers/RamBlock",
+            "revision": "25c57e0e9b68bf452dd1986914525edc9d2320bc"
+          },
+          {
+            "path": "drivers/SoftwareAES",
+            "revision": "4a45326da5c2cd6fe6813d79ee43db20805628af"
+          },
+          {
+            "path": "drivers/VirtioMmioBlock",
+            "revision": "f4dfce679d429aef5487d8c88880ecd2f6573fd4"
+          },
+          {
+            "path": "drivers/VirtioMmioConsole",
+            "revision": "70253216890b2afcaa6333948726f896f84fc757"
+          },
+          {
+            "path": "kits/AdrenoFirmware",
+            "revision": "20ad3d7aca14bd46aecab6335c780f5413fa054b"
+          },
+          {
+            "path": "kits/AdrenoPM4",
+            "revision": "282606b528b2595bc4274ea7490b62b323f35a5f"
+          },
+          {
+            "path": "kits/AirNir",
+            "revision": "b356371a74cd158c2902f4886f373ebb0f833a36"
+          },
+          {
+            "path": "kits/ArmSmmu4K",
+            "revision": "30ec63b84b25c3d568247c6d075f3ded71404a62"
+          },
+          {
+            "path": "kits/VerifiedRoot",
+            "revision": "ed368a8d4451f8670228f9025f1b45479509c789"
+          },
+          {
+            "path": "kits/XnuPrelink",
+            "revision": "76452c6e6b6014747c5500b1e57c544fbc1c3249"
+          }
+        ]
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/Adreno740",
+        "revision": "0cb6f4f770c302bf254e2dd5b52d93ab1b2b0b91",
+        "blob_count": 94,
+        "mismatches": [],
+        "manifest_sha256": "b67b0d9a17f0fe91393179a3d07ce15c65d4be395d319d1c26f3dc52501f0f1b",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/AdrenoMetal",
+        "revision": "94af9e8c93f73ec0af11fd75bf19079a97d7c95e",
+        "blob_count": 104,
+        "mismatches": [],
+        "manifest_sha256": "7d7de405677210a8c2a3590838b95d7f99f9df701dc475cca1cc282f4dd439d7",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/AppleKeyStoreState",
+        "revision": "42ff83e08b2265fe741d4adaf084bebe003452ba",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "30fe84e50cc094594a7e9402068475638129112d12669afcc99198eb7f098e62",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/ArmCpu",
+        "revision": "4bd3230f48121e47a0badb4ea2d1674715ba2197",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "216f2b78876b78e115de648adb62a328180a5ae32fe2e83f004a1ef813cf89ce",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/ArmDTPlatform",
+        "revision": "417ff95d6a6e8607ddea9309ec45c3bfd4a67c60",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "b26d54150396c9d7005ace66d9482997d7986e9f837404cb2a57134b4a6db64f",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/ArmVirtPlatform",
+        "revision": "d1423a8bceac4be0478a93d9173587111c040084",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "0ce36f097e1b8a2197107b224dc07b07316426bdf16c591e4813544e272237b5",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/DarwinBoot",
+        "revision": "3e3a8a969e1177995984d8ed98c9dcc44e318265",
+        "blob_count": 20,
+        "mismatches": [],
+        "manifest_sha256": "315e430eb263fee1af127f4720e69771b49a1e7c3013cfa2a76ebd65b7beeb61",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/GopFramebuffer",
+        "revision": "3f0d4c772da9e77725abcd1eaa6d8be7af32f06f",
+        "blob_count": 11,
+        "mismatches": [],
+        "manifest_sha256": "4dab9a9f793f3d4406905e47b0a0a1ad0654f05e2b4049e78ac7910deda7b5d8",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/QcomGeniSpi",
+        "revision": "eac47baefe6a5d2368a70351e6ad1b6361bedbe2",
+        "blob_count": 6,
+        "mismatches": [],
+        "manifest_sha256": "2e03672adba700c624e265dd07772cf084cdeb22fd438f6e662bbfcfca9e7d6e",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/RamBlock",
+        "revision": "25c57e0e9b68bf452dd1986914525edc9d2320bc",
+        "blob_count": 14,
+        "mismatches": [],
+        "manifest_sha256": "ba8c5fa5b26c7fbc3483f7b2cca6a22deca5ada9608678da9dbd159d0b37d48d",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/SoftwareAES",
+        "revision": "4a45326da5c2cd6fe6813d79ee43db20805628af",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "e7b601fadb38fa954d4a2f1271f8caff8b8dcbe088628f21d5df0e8d3e49713b",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/VirtioMmioBlock",
+        "revision": "f4dfce679d429aef5487d8c88880ecd2f6573fd4",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "0b283b1ea4447945c39ad0d4a97415b652a96ff25bf73dc3a6f512685f5aceeb",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/drivers/VirtioMmioConsole",
+        "revision": "70253216890b2afcaa6333948726f896f84fc757",
+        "blob_count": 5,
+        "mismatches": [],
+        "manifest_sha256": "5da0ecb4d2febc48f75eaca0f13bcb674f2bd83500b1b63780ce9cfa4c9c8801",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/kits/AdrenoFirmware",
+        "revision": "20ad3d7aca14bd46aecab6335c780f5413fa054b",
+        "blob_count": 15,
+        "mismatches": [],
+        "manifest_sha256": "37aef2c54169cbd91002cfc84ea287d6a307f672857720138321abb91de7ed3e",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/kits/AdrenoPM4",
+        "revision": "282606b528b2595bc4274ea7490b62b323f35a5f",
+        "blob_count": 18,
+        "mismatches": [],
+        "manifest_sha256": "b3741e2332072863d485708253592260969cc361b76ada69df9d750b994e07ca",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/kits/AirNir",
+        "revision": "b356371a74cd158c2902f4886f373ebb0f833a36",
+        "blob_count": 21,
+        "mismatches": [],
+        "manifest_sha256": "8cc6f1b9bda52f9a85b2769e2387b01f5c2d63661f76cd30653608def9ee64e6",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/kits/ArmSmmu4K",
+        "revision": "30ec63b84b25c3d568247c6d075f3ded71404a62",
+        "blob_count": 27,
+        "mismatches": [],
+        "manifest_sha256": "3a58c197113109278cce852e286755cc6c077fd0723819506077808d50a2be73",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/kits/VerifiedRoot",
+        "revision": "ed368a8d4451f8670228f9025f1b45479509c789",
+        "blob_count": 10,
+        "mismatches": [],
+        "manifest_sha256": "c2f036dbd3a5e93283e0c4d62d9ff0bf64e4500c4ebb18af2ef4d4cb429320bc",
+        "status": "",
+        "submodules": []
+      },
+      {
+        "path": "sources/UniXNU-gpu-parity-63cc454/kits/XnuPrelink",
+        "revision": "76452c6e6b6014747c5500b1e57c544fbc1c3249",
+        "blob_count": 23,
+        "mismatches": [],
+        "manifest_sha256": "bd72a02bf68fd2b7bafe1a6a6f360bd5f9f869fbad2c2de5742547bb6818243b",
+        "status": "",
+        "submodules": []
+      }
+    ],
+    "local_report": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z/source-integrity.json",
+    "local_report_sha256": "756bb598170606edc21d60eb20a328607c5a0b60dbd2efcd27e85e93a3b6bd0e"
+  },
+  "verification": {
+    "final_remote": {
+      "argv": [
+        "git",
+        "ls-remote",
+        "origin",
+        "HEAD",
+        "refs/heads/main",
+        "refs/heads/feat/ipados27-gpu-parity"
+      ],
+      "exit_code": 0,
+      "stdout": "40d21cc65171c3a24faa130a2a8e899f85790485\tHEAD\n63cc454dd5999383b720ad8646d8d2b47762494a\trefs/heads/feat/ipados27-gpu-parity\n40d21cc65171c3a24faa130a2a8e899f85790485\trefs/heads/main\n",
+      "stderr": "",
+      "recorded_utc": "2026-10-28T15:23:22.902704+00:00"
+    },
+    "tests": [
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "scripts/unixnu",
+          "-t",
+          "scripts",
+          "-v"
+        ],
+        "exit_code": 0,
+        "name": "candidate-kernel-udif",
+        "log": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z/candidate-kernel-udif.log",
+        "log_sha256": "1cd2dd49faac920b9e1ef7eefb686b67cd0e7aeb35a8a57a2a79e3df608b84df",
+        "unit_tests_run": 10,
+        "passed": true,
+        "skipped": 0
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/terminal",
+          "-v"
+        ],
+        "exit_code": 0,
+        "name": "candidate-terminal",
+        "log": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z/candidate-terminal.log",
+        "log_sha256": "00ff1a5f9f1c1dddc71bfed3ff39191e3b4f383fc0f3cd14e2a644c171bd9fa7",
+        "unit_tests_run": 45,
+        "passed": true,
+        "skipped": 1
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "Test/test-kernel-parser.py"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-63cc454/drivers/DarwinBoot",
+        "exit_code": 0,
+        "log_sha256": "15591b5ccdfa373ee62801fbb4ec0809d2ec024bd79bceeb87a186eea4e7555b",
+        "name": "candidate-darwin-parser",
+        "log": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z/candidate-darwin-parser.log",
+        "unit_tests_run": null,
+        "passed": true
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "Test/test-packed-ramdisk.py"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-63cc454/drivers/DarwinBoot",
+        "exit_code": 0,
+        "log_sha256": "7cf56a5cdb0e3379c361d02802660f2a2e557bbc8eab7a4ca78fd65ac5b0c550",
+        "name": "candidate-darwin-ramdisk",
+        "log": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z/candidate-darwin-ramdisk.log",
+        "unit_tests_run": null,
+        "passed": true
+      },
+      {
+        "argv": [
+          "/usr/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-p",
+          "test_*.py",
+          "-v"
+        ],
+        "cwd": "/home/guo/work/raphael-fresh/sources/UniXNU-gpu-parity-63cc454/kits/XnuPrelink",
+        "exit_code": 0,
+        "log_sha256": "7dff684d5341951d1a50936d8670e38136fc53ead7b01201d3385e54a0b405ec",
+        "name": "candidate-fileset-prelink",
+        "log": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z/candidate-fileset-prelink.log",
+        "unit_tests_run": 59,
+        "passed": true,
+        "skipped": 0
+      }
+    ],
+    "unit_tests_run": 114,
+    "unit_tests_passed": 113,
+    "unit_tests_skipped": 1,
+    "actual_c_checks_passed": 2,
+    "changed_python_syntax_files": 37,
+    "firmware_build_for_candidate": false,
+    "qemu_boot_for_candidate": false,
+    "handset_boot_for_candidate": false
+  },
+  "integration_findings": [
+    {
+      "path": "drivers/ArmCpu/ArmCpu.cpp",
+      "finding": "Candidate still handles timer interrupt ID 27. Raphael physical timer PPI 18 is documented by prior handset evidence; no candidate CPU driver enabled."
+    },
+    {
+      "path": "docs/zh/porting/arm64e.md",
+      "finding": "arm64e profile requires PAC and key/register/instruction checks on every enabled CPU. These are not qualified on this handset; selected OS profile remains unchanged."
+    },
+    {
+      "path": "drivers/DarwinBoot",
+      "finding": "Code adds ParseKernelHeader/ParseKernel handling for MH_FILESET membership and RootPolicies sidecar; README still describes fileset input as unsupported. Host C/parser tests passed, but no full candidate UEFI, sidecar or handset handoff validation."
+    },
+    {
+      "path": "scripts/check-native-metal-frontend-host.py",
+      "finding": "Mac host qualification uses xcrun, Foundation, Metal, IOSurface and a Vulkan loader. It was not run on WSL; no GPU runtime qualification is claimed."
+    }
+  ],
+  "port_source_modified": false,
+  "phone_operations_this_recheck": false,
+  "original_backup_modified": false,
+  "public_source_snapshot_contains_private_inputs": false,
+  "local_artifacts": "artifacts/upstream-refresh/recheck-20261028T151458.572984Z"
+}

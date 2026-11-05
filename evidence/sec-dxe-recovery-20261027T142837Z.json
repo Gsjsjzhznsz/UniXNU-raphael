@@ -1,0 +1,19 @@
+{
+  "attempt": "sec-dxe-attempt-20261027T142837Z.json",
+  "recovery_report": "evidence/private/entry-probe-cleanup/20261027T144152Z/report.json",
+  "result": {
+    "normal_android_reboot": false,
+    "recovery_audit_without_extra_reboot": true,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "transient_probe_absent": true,
+    "fdt_sha256": "2fe0ec084ebda3d635f947621b15b9212b5431e45f53f589858f69598a431557",
+    "flash_or_restore_performed": false
+  },
+  "method": "User-reported power-key reboot followed by read-only ADB audit",
+  "limits": [
+    "Does not establish the stage reached by the failed firmware attempt",
+    "Backup restoration was not performed"
+  ]
+}

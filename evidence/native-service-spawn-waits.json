@@ -1,0 +1,31 @@
+{
+  "implementation": "explicit bounded xpcproxy one-thread snapshots at original first-method stop",
+  "implementation_source": "package/drivers/RaphaelServiceObserver.c",
+  "default_enabled": false,
+  "host_build_passed": true,
+  "compile_records": 887,
+  "undefined_symbols": 0,
+  "host_capture_cases": 8,
+  "decoder_rejections": 14,
+  "qemu_passed": true,
+  "qemu_pass_count": 39,
+  "qemu_proxy_threads_covered": false,
+  "handset_executed": true,
+  "desktop_verified": false,
+  "waiting_for": "Independent pre-reset phase readout qualification before further service sampling handset experiments",
+  "frozen_candidate": "artifacts/service-spawn-build/20261103T175023.518572Z/candidate-review.json",
+  "limits": [
+    "Single thread is not verified main-thread or job identity.",
+    "Service root cause and CFPrefs reply delivery remain unknown.",
+    "The handset returned no native snapshot; sampler execution, overflow and exact stop point are unknown.",
+    "Menu timeout0 was source/QEMU verified; the handset menu exit itself was not observed in telemetry."
+  ],
+  "handset_boot_attempted": true,
+  "handset_observation_passed": false,
+  "xnu_executed": null,
+  "manual_recovery_passed": true,
+  "handset_run": "20261103T180921Z",
+  "manual_recovery_run": "20261103T182112Z-service-spawn",
+  "execution_result": "artifacts/service-spawn-build/20261103T175023.518572Z/execution-result.json",
+  "same_image_retry_allowed": false
+}

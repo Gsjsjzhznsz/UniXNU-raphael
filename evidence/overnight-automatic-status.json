@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-10-27T21:31:50.073515+00:00",
+  "handset_rebooted": false,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "boot_sha256": "cbd91d814396ea0aab1cbca25d4f4f904805c69e4bb38b5a35a51b98858b96ec",
+  "boot_hash_matches_reference": true,
+  "flash_erase_format_performed": false,
+  "original_backups_modified": false,
+  "human_menu_visibility_verified": false,
+  "physical_keys_verified": false,
+  "observation_deferred_by_user": true,
+  "automatic_work_completed": [
+    "own QEMU architecture IRQ and two-second UniXNU countdown",
+    "AAVMF positive synthetic DarwinBoot handoff none/raw/packed",
+    "primary Apple boot_args ABI comparison"
+  ],
+  "handset_darwinboot_executed": false,
+  "xnu_executed": false
+}

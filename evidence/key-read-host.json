@@ -1,0 +1,319 @@
+{
+  "passed": true,
+  "case_count": 39,
+  "cases": [
+    {
+      "name": "six exact register reads and independent decoder",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 18
+    },
+    {
+      "name": "delayed successful DONE",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 42
+    },
+    {
+      "name": "counter wrap",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 18
+    },
+    {
+      "name": "completion error 0x3",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 2
+    },
+    {
+      "name": "completion error 0x5",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 2
+    },
+    {
+      "name": "completion error 0x9",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 2
+    },
+    {
+      "name": "completion error 0xf",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 2
+    },
+    {
+      "name": "time bounded no DONE",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 11
+    },
+    {
+      "name": "stopped counter iteration bound",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 100001
+    },
+    {
+      "name": "reject invalid version 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid status 0x1",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid hardware_version 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid ee 0x6",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid count 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid count 0x201",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid pon_owner 0x1",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid volume_owner 0x1",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid pon_matches 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid volume_matches 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid gpio_flags 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid pon_sid 0x10",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid volume_sid 0x10",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid pon_address 0x10010",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid volume_address 0xc511",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid observer_base 0x0",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid observer_base 0xe600001",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid observer_size 0x4",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid pon_apid 0x200",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject invalid volume_apid 0x200",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject wrong selected PPID",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "reject mismatched selected owner",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 0
+    },
+    {
+      "name": "key state (0, 0)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (0, 1)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (0, 2)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (0, 3)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (1, 0)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (1, 1)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (1, 2)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    },
+    {
+      "name": "key state (1, 3)",
+      "passed": true,
+      "mocked_mmio": true,
+      "actual_c_executed": true,
+      "operations": 6
+    }
+  ],
+  "undefined_behavior_sanitizer": true,
+  "guard_canaries_verified": true,
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-fsanitize=undefined",
+    "-fno-sanitize-recover=undefined",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Library/RaphaelKeysLib/Keys.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/key-read-host/20261027T184522Z/keys.so"
+  ],
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelKeysLib/Keys.c",
+      "sha256": "1b0a7cbf8800d4dd6095a70debd422568334ba215cf8bc3768a8fbc25736b740"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelKeysLib.h",
+      "sha256": "662aff01678966145c0c432eb86dec3473b1bc1e4e632b5bcf2019bb6123b822"
+    },
+    {
+      "path": "scripts/validate_key_read.py",
+      "sha256": "b79d63af32bf94598cb29b551f0ddd7fa2dd6f4047cd58bd68ddf0e2e1288b0d"
+    },
+    {
+      "path": "scripts/key_read.py",
+      "sha256": "f57b46412a2aeaf264565f52a61db40480b39dc5dcf722b27b3ce28e300c9571"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "source_revision": "9d85e8809f246726c97ee57bf6d8c6c7878e8987",
+  "all_firmware_inputs_match_git_blobs": true,
+  "input_count": 27,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/RaphaelDiag/RaphaelDiag.c",
+      "sha256": "5c299f735c03f934f7d6772571be45419844338a97cb558649438e8d11472ca1"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/RaphaelDiag/RaphaelDiag.inf",
+      "sha256": "69bc4d238741e6f47665402cfde877feae65f690b747274ab7e781c31ef58056"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.dsc",
+      "sha256": "5869159293ceb90f88540860481c1feaa8accf45046e6100ffa2d9b6dd41800d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.fdf",
+      "sha256": "edfa7dee5c50f0a0cd20f41f9109ab32b8ddf6b0b824beebd82850d459aa3cef"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturn.c",
+      "sha256": "de64aa1c313244968a9cb9b678ea735f0e5988a7311ab89ed163b5e2855cebe7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturnDxe.inf",
+      "sha256": "6ed03573b86ab8ee488bc9740b4f571b6d801c06cede63a41443f9ddce94ac05"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.S",
+      "sha256": "fecaaec0d8f8bb32045bb7c26cc5e9dd356093ae1570df0a804b8aa250cf85c7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.c",
+      "sha256": "baa70eb76b3bf731691158f33e040ea91945c95b0c862329fb2288e9990fa386"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.ld",
+      "sha256": "66e753bfe9e38507117ef2cfa32aa2afb737d2aa54cc1cf132ff0e78338d14f3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/Runtime.c",
+      "sha256": "e4967f6ec732935dc611bfe78e46dee8afa8cf5559e49f0c15c94df92fc30f35"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelMemoryContractLib.h",
+      "sha256": "4a07557637d395d3705b293437212c78ff25b011cddb4d54c03511e48e86e515"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDiagnostic.h",
+      "sha256": "4639fc9b7fec018e449e0524b53ccedb4490c6dc5ecddc8684afdf0090b0958e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "29ac575f95ed9f74aa87e56f089ebab100a12db2ac4166edda264d8580735fc7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelProbe.h",
+      "sha256": "69c853680ebba9448922888ed01c07c00ee37e82ee58dcd3128fae4b759084ab"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/Debug.c",
+      "sha256": "042dd9b082c577f4f6f502f31de7462dcb6d6bd7d9b9aee74aac1d5b0b20a05f"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/RaphaelDiagnosticDebugLib.inf",
+      "sha256": "58fdbd7e26d4091360f988b973ba2346f7b9778e3d5598b99595a0323406948c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelMemoryContractLib/RaphaelMemoryContractLib.c",
+      "sha256": "36eba30aec761b6e65664b8a7ab037915fa9bf8f14a255080f389a31dd77bc90"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelMemoryContractLib/RaphaelMemoryContractLib.inf",
+      "sha256": "43aaa098403f11e155b15e4012a702b2776b545f8bbf322f15da90e3dcc1cefa"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/MemoryContract.dsc",
+      "sha256": "2131d90d1f3a293c9657b2b6080d3cb3b47a30c5f75c8a914674979e1d235b11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelDiag.dsc",
+      "sha256": "ec7e5794b9b254e0e411544da34adcf8d9f23c4661454486910d1232d56f070c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelPkg.dec",
+      "sha256": "5ca036627bf64bba8a192873b85ee542a808b5a2d5c9b95e18bcd24731b9f048"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+      "sha256": "7b3d5f1741a2d2039b194a7554e1182dc2e7fac534daea43d4ee632209d126d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+      "sha256": "8f8abbf622d8b1d8d2dae531515fb1ce48b68cb451f9351a5bf6ad675e71730a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "22b211233cf3bc6a6e8b67b5e1cd4da41534028fd2cf3343184bc6d957b50334"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.inf",
+      "sha256": "2e8c8262f3f36f3744346b524d51926fb8a5803989f9ae877e3371c5253b2323"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "219926b71272178b1e4b2d6493775d55e2aa5b9ab1d364e2af845e8e408b5110"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+      "sha256": "b1dad31d092633dd0170822f532f6d8da6b2c534824e9a306d4aa487e9b2aaf2"
+    }
+  ],
+  "handset_build": "evidence/private/sec-dxe-build/20261027T170551Z",
+  "qemu_report": "artifacts/sec-dxe-qemu/20261027T170436Z/report.json",
+  "firmware_sha256": "891ba94f1feed97d7dfde78cef2df60fa673f7d30a478cc3b9f1b7e7ce6e7d1a",
+  "image_sha256": "9e2cdbe6f1350294b6625c5dee013b848f867943adf61446309aa4c3c5a88a63",
+  "only_stage2_verified": true
+}

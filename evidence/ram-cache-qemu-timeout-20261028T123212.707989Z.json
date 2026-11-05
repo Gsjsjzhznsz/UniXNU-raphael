@@ -1,0 +1,23 @@
+{
+  "passed": false,
+  "handset_executed": false,
+  "run": "artifacts/sec-dxe-qemu/20261028T123212.707989Z-rj0mf832",
+  "source_revision": "bec9798ff8c31d0df90160387f831d66cd18c889",
+  "source_snapshot_present": true,
+  "serial_sha256": "781273700884552c89eb067d4199d9d9a846b419da482201edab3c896b6496c5",
+  "wire_sha256": "82c3c0d9566fd5083c2a48ea6e955844b29caa7ab8c50dccdb39c9620c661e56",
+  "requested_pages": 65536,
+  "completed_pages": 65449,
+  "restored_pages": 65449,
+  "dirty": 0,
+  "backup_words": 0,
+  "engine_status": 6,
+  "engine_reason": 6,
+  "elapsed_ms": 8000.012304,
+  "ro_map_restored": true,
+  "restore_denials": 256,
+  "receiver_verified_all_original_words": true,
+  "diagnostic_budget_seconds": 8,
+  "host_contention_effect_unknown": true,
+  "limits": "Timeout and recovery only; this does not pass the full-range diagnostic."
+}

@@ -1,0 +1,190 @@
+{
+  "passed": true,
+  "scope": "QEMU original early userspace and first SpringBoard EL0 SVC only",
+  "source_revision": "14d0e6ad84f5950411e687b01868fba8647c9609",
+  "kernel_sha256": "6bbc99ff98bae5eb097d02bea22dd4f850484bba1efbc8b2489237434ac44831",
+  "build": "artifacts/native-bootstrap-attempt/20261030T101426Z/report.json",
+  "inspection": "artifacts/desktop-prelink/20261030T101548Z/inspection.json",
+  "runtime": "artifacts/native-xnu-qemu/20261030T101909.608665Z-0k_zigct/report.json",
+  "scratch": "evidence/private/desktop-data/20261030T101301Z/report.json",
+  "checks": {
+    "diskSaveUserSessions Success": true,
+    "Created default user 501": true,
+    "Loading foreground user 501": true,
+    "Created Personal Persona Successfully": true,
+    "Created System Persona Successfully": true,
+    "Created Default Persona Successfully": true,
+    "DONE EARLYBOOT SETUP": true,
+    "Early boot complete. Continuing system boot.": true
+  },
+  "prior_persona_parent_directory_error_absent": true,
+  "original_launchd_main_executed": true,
+  "data_seed_verified": true,
+  "first_springboard_svc": {
+    "pid": 27,
+    "comm": "SpringBoard",
+    "pc": 4299591604,
+    "instruction_before_pc": "011000d4",
+    "scope": "QEMU EL0 process execution only; no desktop claim"
+  },
+  "bsd_exit_invocations": [
+    {
+      "pid": 2,
+      "comm": "fsck",
+      "requested_status": 0
+    },
+    {
+      "pid": 3,
+      "comm": "mount",
+      "requested_status": 0
+    },
+    {
+      "pid": 4,
+      "comm": "seputil",
+      "requested_status": 0
+    },
+    {
+      "pid": 5,
+      "comm": "mobile_obliterat",
+      "requested_status": 0
+    },
+    {
+      "pid": 7,
+      "comm": "apfs_boot_util",
+      "requested_status": 0
+    },
+    {
+      "pid": 8,
+      "comm": "MSUEarlyBootTask",
+      "requested_status": 0
+    },
+    {
+      "pid": 10,
+      "comm": "cc_fips_test",
+      "requested_status": 0
+    },
+    {
+      "pid": 11,
+      "comm": "keybagd",
+      "requested_status": 0
+    },
+    {
+      "pid": 12,
+      "comm": "usermanagerd",
+      "requested_status": 0
+    },
+    {
+      "pid": 13,
+      "comm": "dirs_cleaner",
+      "requested_status": 0
+    },
+    {
+      "pid": 14,
+      "comm": "xpcroleaccountd",
+      "requested_status": 0
+    },
+    {
+      "pid": 15,
+      "comm": "init_featureflag",
+      "requested_status": 0
+    },
+    {
+      "pid": 16,
+      "comm": "auearlyboot",
+      "requested_status": 0
+    },
+    {
+      "pid": 17,
+      "comm": "tzinit",
+      "requested_status": 0
+    },
+    {
+      "pid": 18,
+      "comm": "FinishRestoreFro",
+      "requested_status": 0
+    },
+    {
+      "pid": 19,
+      "comm": "finish_demo_rest",
+      "requested_status": 0
+    },
+    {
+      "pid": 20,
+      "comm": "sysstatuscheck",
+      "requested_status": 1
+    },
+    {
+      "pid": 21,
+      "comm": "prng_seedctl",
+      "requested_status": 13
+    },
+    {
+      "pid": 22,
+      "comm": "launchd_cache_lo",
+      "requested_status": 0
+    },
+    {
+      "pid": 23,
+      "comm": "init_exclavekit",
+      "requested_status": 0
+    }
+  ],
+  "handset_executed": false,
+  "springboard_main_verified": false,
+  "backboardd_verified": false,
+  "desktop_frame_verified": false,
+  "basic_interaction_verified": false,
+  "gpu_verified": false,
+  "later_services_observation": {
+    "runtime": "artifacts/native-xnu-qemu/20261030T102530.468507Z-usp4_g3o/report.json",
+    "target": "backboardd first SVC64",
+    "target_reached": false,
+    "observation_deadline_seconds": 300,
+    "backboardd_spawn_requested": true,
+    "verified_el0_processes": [
+      "AppleCredentialM",
+      "DumpPanic",
+      "FinishRestoreFro",
+      "IOMFB_FDR_Loader",
+      "MSUEarlyBootTask",
+      "SpringBoard",
+      "UserEventAgent",
+      "amfid",
+      "apfs_boot_util",
+      "auearlyboot",
+      "cc_fips_test",
+      "configd",
+      "containermanager",
+      "dirs_cleaner",
+      "driverkitd",
+      "fairplayd.A2",
+      "finish_demo_rest",
+      "fsck",
+      "fseventsd",
+      "init_exclavekit",
+      "init_featureflag",
+      "keybagd",
+      "launchd_cache_lo",
+      "logd",
+      "mediaserverd",
+      "mobile_obliterat",
+      "mobiletimerd",
+      "mount",
+      "mtmergeprops",
+      "notifyd",
+      "prng_seedctl",
+      "remoted",
+      "seputil",
+      "sysstatuscheck",
+      "thermalmonitord",
+      "timed",
+      "tzinit",
+      "usermanagerd",
+      "watchdogd",
+      "xpcproxy",
+      "xpcroleaccountd"
+    ],
+    "no_panic_observed": true,
+    "stop_scope": "Deadline at live kernel mac_syscall path; does not establish a deadlock or unique root cause"
+  }
+}

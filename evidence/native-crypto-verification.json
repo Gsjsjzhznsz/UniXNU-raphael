@@ -1,0 +1,28 @@
+{
+  "passed": true,
+  "source": {
+    "path": "UniXNU-raphael/evidence/native-crypto-source.json",
+    "sha256": "766af0cd3d12b5f87af270ad3724ea52f18f597e19caa878e593f24949a11e3b"
+  },
+  "build": {
+    "path": "UniXNU-raphael/evidence/native-bootstrap-host.json",
+    "sha256": "712523819e1f5a07634f0c76872720c1e041ebd7d75af298f9112a423979cca6"
+  },
+  "qemu": {
+    "path": "UniXNU-raphael/evidence/native-xnu-qemu-20261028T094943.352011Z.json",
+    "sha256": "9f6c532d95cc8eb1d028a7b0c9fd5eff2384fc1de94129f0f10d378b95129b6a"
+  },
+  "kernel_sha256": "e5f1db32113f1e41f6cb252fc08e5e914001da45f0c1c74703018a813d8134aa",
+  "verified_source_files": 809,
+  "archive_c_sources_each": 529,
+  "frozen_kernel_records": 887,
+  "loaded_segments_verified": 10,
+  "default_post_and_registration_verified": true,
+  "bsd_init_reached": false,
+  "target_failure": "Unable to find driver for this platform: \"%s\". @%s:%d",
+  "emulator_kalloc_budget": 200,
+  "handset_executed": false,
+  "authenticated_against_apple_archive": false,
+  "provider_qualified": false,
+  "runner_sha256": "2b55246a7e584f23141f30cb2b90732ce748c666fb1016d8b93091d41274aa31"
+}

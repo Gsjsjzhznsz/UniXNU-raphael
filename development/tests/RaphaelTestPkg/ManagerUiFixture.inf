@@ -1,0 +1,33 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = ManagerUiFixture
+  FILE_GUID = 54E50191-28A3-4726-A848-D29DA49F77FD
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = PayloadFixtureEntry
+[Sources]
+  ManagerUiFixture.c
+[Packages]
+  RaphaelPkg/RaphaelPkg.dec
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+  RaphaelTestPkg/RaphaelTestPkg.dec
+[LibraryClasses]
+  RaphaelManagerUiLib
+  BaseLib
+  BaseMemoryLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UniXNULib
+  HobLib
+  FdtLib
+  TimerLib
+[Protocols]
+  gEfiGraphicsOutputProtocolGuid
+  gEfiSimpleTextInProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gEfiBlockIoProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiDevicePathProtocolGuid

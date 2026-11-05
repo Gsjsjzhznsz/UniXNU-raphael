@@ -1,0 +1,16 @@
+{
+  "tool_version": "QEMU emulator version 8.2.2 (Debian 1:8.2.2+ds-0ubuntu1.18)",
+  "primary_document": "/usr/share/doc/qemu-system-arm/system/invocation.html",
+  "primary_document_sha256": "2bb4700c8526c48ad6d207d1c1c9d271c18e0c2a0f3afb3c2242858852cc6df5",
+  "mode": "-icount shift=0,align=off,sleep=off",
+  "virtual_nanoseconds_per_instruction": 1,
+  "default_mode_unchanged": true,
+  "ram_correctness_only": true,
+  "handset_performance_model": false,
+  "firmware_budget_seconds": 8,
+  "handset_budget_unchanged": true,
+  "reason": "Separate deterministic full-range execution/recovery proof from emulator wall-clock throughput; hardware timing must be measured independently.",
+  "adopted": false,
+  "source_changes_reverted": true,
+  "full_range_passed": false
+}

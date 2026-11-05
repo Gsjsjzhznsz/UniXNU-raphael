@@ -1,0 +1,13 @@
+{
+  "milestone": "Original default POST and first-thread spllo returned on handset",
+  "report": "evidence/private/android-return-run/20261030T211627Z/report.json",
+  "build": "evidence/private/android-return-build/20261030T211524.652580Z-vp7lf9af",
+  "passed": true,
+  "pc": "0xfffffff007a00128",
+  "spsr": "0x204",
+  "full_default_post_verified": true,
+  "bounded_recovery_verified": true,
+  "normal_xnu_irq_verified": false,
+  "root_volume_verified": false,
+  "handset_desktop_verified": false
+}

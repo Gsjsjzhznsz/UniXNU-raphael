@@ -1,0 +1,40 @@
+# Explicit inherited handset display candidate on qualified ephemeral Data.
+# Retains the generic VirtIO verifier/query helpers; hardware is selected by ADT.
+CONFIG_XNU_CRYPTO_BOOTSTRAP="prelinked"
+CONFIG_XNU_BUILD_ARCHIVES=y
+CONFIG_XNU_SOURCE_CORECRYPTO14=y
+CONFIG_XNU_BOOT_PROGRESS=n
+CONFIG_XNU_NATIVE_UFS=n
+CONFIG_XNU_NATIVE_ADRENO=n
+CONFIG_XNU_NATIVE_RAM_BLOCK=y
+CONFIG_XNU_NATIVE_MOBILE_DISPLAY=n
+CONFIG_XNU_ARM_DT_PLATFORM=y
+CONFIG_XNU_ARMCPU=y
+CONFIG_XNU_NATIVE_ARCH_TIMER=y
+CONFIG_XNU_SOURCE_PTHREAD=y
+
+CONFIG_XNU_NATIVE_AES=y
+CONFIG_XNU_NATIVE_VIRTIO_BLOCK=y
+
+CONFIG_XNU_TRUST_CACHE_RUNTIME=y
+CONFIG_XNU_VERIFIED_ROOT_PROBE=y
+CONFIG_XNU_OWNER_ROOT_AUDIT=y
+CONFIG_XNU_OWNER_ROOT_TRUST=y
+CONFIG_XNU_VERIFIED_ROOT_ARCHIVE="{tree}/build/raphael-data-seed/libVerifiedRootWithData.a"
+CONFIG_XNU_NATIVE_VIRTIO_BLOCK_ARCHIVE="{tree}/build/virtio-mmio-block-verified-bundle/libVirtioMmioBlock.a"
+
+CONFIG_XNU_OWNER_CACHE_MOUNT=y
+CONFIG_XNU_OWNER_CACHE_STARTUP=y
+CONFIG_XNU_OWNER_BOOT_MANIFEST=y
+CONFIG_XNU_OWNER_UNION_SYSTEMOS=y
+CONFIG_XNU_NATIVE_CS_HASH_CACHE=y
+CONFIG_XNU_EXTRA_LD_ARCHIVES="{tree}/build/raphael-ufs/RaphaelUfsBlock.o"
+
+# Cortex-A76 EL0 exception entry sets PAN; copyio must bracket user access.
+CONFIG_XNU_NATIVE_PAN=y
+
+# Independent RAM-backed APFS Data; UFS OS/SystemOS stay read-only.
+CONFIG_XNU_OWNER_DATA_MOUNT=y
+
+# Original IOMobileGraphicsFamily and IOSurface; inherited framebuffer only.
+CONFIG_XNU_NATIVE_LEGACY_DISPLAY=y

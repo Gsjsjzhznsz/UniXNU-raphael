@@ -1,0 +1,87 @@
+{
+  "interface_reference": {
+    "remote": "https://github.com/arter97/android_bootable_bootloader_edk2.git",
+    "revision": "fd752ab1b6d81ffaec0a9e86ed2b74e7eac9f4fe",
+    "role": "Qualcomm-authored interface code in a third-party mirror; not a handset board port",
+    "binary_source_match": false,
+    "files": [
+      {
+        "file": "QcomModulePkg/Include/Library/BootLinux.h",
+        "file_sha256": "7dc29b2dab72987ffabf3f4127e20ed37d5588731ff478f55de17c895db81c3f",
+        "lines": [
+          87
+        ],
+        "purpose": "20-byte uncompressed wrapper interface"
+      },
+      {
+        "file": "QcomModulePkg/Library/BootLib/BootLinux.c",
+        "file_sha256": "24ca5e6f416249f3d5eba17b673c6f319dd78664f575a7bba7cba2bcf9434310",
+        "lines": [
+          1063
+        ],
+        "purpose": "FDT in x0, reserved zero arguments"
+      },
+      {
+        "file": "QcomModulePkg/Library/BootLib/BootLinux.c",
+        "file_sha256": "24ca5e6f416249f3d5eba17b673c6f319dd78664f575a7bba7cba2bcf9434310",
+        "lines": [
+          1023
+        ],
+        "purpose": "expected original boot-services exit before kernel"
+      },
+      {
+        "file": "QcomModulePkg/Library/BootLib/ShutdownServices.c",
+        "file_sha256": "6e597ed0ad8e673f599e5e03672ef3efe0234435cd5c53a7ab8567881c4135ad",
+        "lines": [
+          97
+        ],
+        "purpose": "expected MMU/cache-off transition"
+      },
+      {
+        "file": "QcomModulePkg/Include/Library/BootLinux.h",
+        "file_sha256": "7dc29b2dab72987ffabf3f4127e20ed37d5588731ff478f55de17c895db81c3f",
+        "lines": [
+          93
+        ],
+        "purpose": "interface guard for original FDT window"
+      }
+    ]
+  },
+  "arm64_protocol_primary": {
+    "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "file": "Documentation/arm64/booting.txt",
+    "sha256": "534035888925ba7b1c6a4d9bd5ef01f3578eb9dde2d584e6b44c5abbf2c407d8"
+  },
+  "source_device_abl": {
+    "partition_sha256": "92a2a6ae392e3fea93ecf4bf662f7a35d87293fb6bcfc8ddecc2c41947befecc",
+    "pe_sha256": "f34c4d72af117b37023dd12f9497bf301a443a29ce48650ed780ed9de610a8d5",
+    "token_observations": [
+      {
+        "public_interface_token": "UNCOMPRESSED_IMG",
+        "file_offset": 752110
+      },
+      {
+        "public_interface_token": "Shutting Down UEFI Boot Services",
+        "file_offset": 750470
+      },
+      {
+        "public_interface_token": "Kernel Load Address",
+        "file_offset": 750234
+      },
+      {
+        "public_interface_token": "linux,initrd-start",
+        "file_offset": 758283
+      },
+      {
+        "public_interface_token": "linux,initrd-end",
+        "file_offset": 758364
+      }
+    ]
+  },
+  "limits": [
+    "Matching strings establish interface presence, not complete code equivalence or executed control flow",
+    "Entry probe independently verified actual EL, SCTLR, registers and FDT on this handset",
+    "Original UEFI services and runtime memory ownership are not established by these references"
+  ]
+}

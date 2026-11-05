@@ -1,0 +1,33 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelPhysicalTimerDxe
+  FILE_GUID = 5F70AC56-3D20-45DE-B865-ED51905D077A
+  MODULE_TYPE = DXE_DRIVER
+  VERSION_STRING = 0.1
+  ENTRY_POINT = PhysicalTimerEntry
+[Sources]
+  PhysicalTimer.c
+[Packages]
+  MdePkg/MdePkg.dec
+  ArmPkg/ArmPkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  ArmLib
+  BaseLib
+  BaseMemoryLib
+  HobLib
+  IoLib
+[Guids]
+  gRaphaelPhysicalTimerHobGuid
+[Protocols]
+  gEfiCpuArchProtocolGuid
+  gHardwareInterruptProtocolGuid
+  gEfiTimerArchProtocolGuid
+[FixedPcd]
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase
+[Depex]
+  gEfiCpuArchProtocolGuid

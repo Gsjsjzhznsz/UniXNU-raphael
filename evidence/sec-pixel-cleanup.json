@@ -1,0 +1,11 @@
+{
+  "normal_android_reboot": true,
+  "recovery_audit_without_extra_reboot": false,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "boot_partition_unchanged": true,
+  "transient_probe_absent": true,
+  "fdt_sha256": "ac4e1ffeb1c0c8e283545ebeaea9445730acdb769d313371bb35fbcaa1acf8c3",
+  "flash_or_restore_performed": false,
+  "private_report": "evidence/private/entry-probe-cleanup/20261027T170921Z/report.json"
+}

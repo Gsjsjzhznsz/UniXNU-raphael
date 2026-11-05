@@ -1,0 +1,51 @@
+{
+  "kind": "human observation matched to handset diagnostic",
+  "attempt": "UniXNU-raphael/evidence/sec-dxe-attempt-20261027T215414Z.json",
+  "source_revision": "b2e774c2fd940468611ff15c130ddb740cde7f55",
+  "image_sha256": "f563406025dc3ab3037eb0a46d44d09694ee08d03d7c592935b57ddf4b6799bf",
+  "firmware_sha256": "68d9610fc4f4a45b9235c0496ae5c87c406ab55761d62f4945fd58f8e9acaf37",
+  "private_run": "evidence/private/sec-dxe-run/20261027T215414Z",
+  "human_response": "三步均符合预期",
+  "human_prompt": "音量上一次到Boot information；音量下一次回到Return to Android；电源一次提前返回Android；各键松开并间隔约1秒",
+  "menu_visibility_verified": true,
+  "physical_keys_verified": true,
+  "scope": "One observed press/release of each volume key and one power press in the inherited display and bounded diagnostic menu; no claim of auto-repeat, chords, touch or complete UniXNURun",
+  "device_events": {
+    "up": 1,
+    "down": 1,
+    "enter": 1
+  },
+  "input_errors": 0,
+  "exit_reason": "Power/Enter selected Return to Android",
+  "elapsed_seconds": 7.105803333333333,
+  "framebuffer_restored_pixels": 2527200,
+  "framebuffer_restore_mismatches": 0,
+  "firmware_checkpoint_passed": true,
+  "android_boot_completed": true,
+  "boot_partition_unchanged": true,
+  "root_verified": true,
+  "build_source_verification": {
+    "mode": "archived-build-git-and-snapshot",
+    "source_revision": "b2e774c2fd940468611ff15c130ddb740cde7f55",
+    "unixnu_revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+    "verified_source_inputs": 98,
+    "source_binding": "UniXNU-raphael/evidence/sec-menu-source-binding.json",
+    "source_binding_sha256": "585f56bcc9b6ac3ec5988878643998e5c856558dd769d72083955bf741f17902",
+    "build_report_sha256": "b3f39315e032cda51b5dc6f3936fa7f321113fb65b476e12be95c698254fe82a",
+    "qemu_report_sha256": "a4b641d8bf097adca47f7faef5d085f5d6f3df52a84b50c1e01a9feac8526848",
+    "reused_image": true
+  },
+  "cleanup": {
+    "private_run": "evidence/private/entry-probe-cleanup/20261027T215618Z",
+    "normal_android_reboot": true,
+    "recovery_audit_without_extra_reboot": false,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "boot_partition_unchanged": true,
+    "transient_probe_absent": true,
+    "fdt_sha256": "f386d6cac5e98492f9bc8da7407c62a24923c8a5f173d457b11e0bdb685eb7e6",
+    "flash_or_restore_performed": false
+  },
+  "flash_or_erase_performed": false,
+  "original_backups_modified": false
+}

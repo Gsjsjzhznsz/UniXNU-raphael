@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "check_count": 31,
+  "checks": [
+    {
+      "name": "fresh FDT graph and fixed reference",
+      "passed": true
+    },
+    {
+      "name": "Android virtual timer observation agrees",
+      "passed": true
+    },
+    {
+      "name": "reject duplicate phandle",
+      "passed": true
+    },
+    {
+      "name": "reject conflicting phandle alias",
+      "passed": true
+    },
+    {
+      "name": "reject unresolved timer parent",
+      "passed": true
+    },
+    {
+      "name": "reject provider cycle",
+      "passed": true
+    },
+    {
+      "name": "reject unknown intermediary",
+      "passed": true
+    },
+    {
+      "name": "reject disabled provider",
+      "passed": true
+    },
+    {
+      "name": "reject invalid interrupt cells",
+      "passed": true
+    },
+    {
+      "name": "reject unreviewed extended interrupts",
+      "passed": true
+    },
+    {
+      "name": "reject truncated timer cells",
+      "passed": true
+    },
+    {
+      "name": "reject timer SPI specifier",
+      "passed": true
+    },
+    {
+      "name": "reject PPI out of range",
+      "passed": true
+    },
+    {
+      "name": "reject aliased timer IRQs",
+      "passed": true
+    },
+    {
+      "name": "reject edge timer trigger",
+      "passed": true
+    },
+    {
+      "name": "reject unknown timer flags",
+      "passed": true
+    },
+    {
+      "name": "reject zero frequency",
+      "passed": true
+    },
+    {
+      "name": "reject malformed frequency",
+      "passed": true
+    },
+    {
+      "name": "reject multiple redistributor regions",
+      "passed": true
+    },
+    {
+      "name": "reject zero redistributor stride",
+      "passed": true
+    },
+    {
+      "name": "reject misaligned redistributor stride",
+      "passed": true
+    },
+    {
+      "name": "reject overlapping GIC windows",
+      "passed": true
+    },
+    {
+      "name": "reject no enabled timer",
+      "passed": true
+    },
+    {
+      "name": "reject duplicate CPU affinity",
+      "passed": true
+    },
+    {
+      "name": "reject missing bus translation",
+      "passed": true
+    },
+    {
+      "name": "reject ambiguous timer selection",
+      "passed": true
+    },
+    {
+      "name": "reject missing enabled CPUs",
+      "passed": true
+    },
+    {
+      "name": "reject invalid runtime IRQ row 0",
+      "passed": true
+    },
+    {
+      "name": "reject invalid runtime IRQ row 1",
+      "passed": true
+    },
+    {
+      "name": "reject invalid runtime IRQ row 2",
+      "passed": true
+    },
+    {
+      "name": "reject live/reference disagreement",
+      "passed": true
+    }
+  ],
+  "live_fdt_sha256": "7984f47f73d2145ca5ce8142ec672f52a255bb22c4119af5c9249353d8b00460",
+  "resolver_sha256": "448bc32a113e2f80b176a4dc40f38612a972d3675ca12a14be3d0fd84b24b706",
+  "runner_sha256": "5b8f47b5672ad7c30732c28792cc063b4faaff9d2b080688114cc329975a4445",
+  "mmio_accessed": false,
+  "handset_rebooted": false,
+  "command": "python3 scripts/validate_interrupt_contract.py evidence/private/interrupt-audit/20261027T203039.031418Z"
+}

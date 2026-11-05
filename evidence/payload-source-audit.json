@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "primary_sources": [
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.c",
+      "sha256": "b1cf184ebd217656daf92446d9bd724570aad61cb3c7d6d6a2a39d43199d9f35",
+      "anchors": {
+        "mEntryArgHobGuid": [
+          18,
+          202
+        ],
+        "ReadOnly": [
+          174
+        ],
+        "EFI_WRITE_PROTECTED": [
+          109
+        ],
+        "UniXNURamDiskDxeEntry": [
+          194
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Main.c",
+      "sha256": "747e2b7a64636a6ffb006079d744338fe18a5313ad1b0df83ea13d55e53ef95e",
+      "anchors": {
+        "UniXNURun": [
+          2,
+          51
+        ],
+        "UniXNUConfigLoad": [
+          85
+        ],
+        "UniXNUMenuRun": [
+          121,
+          150
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Config.c",
+      "sha256": "c070b2eb1c4922df345a2f830c5f2c420bafd11dde759fee2d2ce4f3be3923c5",
+      "anchors": {
+        "TryVolume": [
+          1498,
+          1551,
+          1558
+        ],
+        "UniXNUConfigLoad": [
+          1529
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Volume.c",
+      "sha256": "ab9a7b36a258cfb43b8c15fee86393ec9a1978e9b3d3e8d8e2a83b2f36bdbff2",
+      "anchors": {
+        "UniXNUReadFile": [
+          198
+        ],
+        "EFI_FILE_MODE_READ": [
+          162
+        ]
+      }
+    },
+    {
+      "repository": "sources/UniXNU",
+      "revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+      "path": "package/UniXNUPkg/Library/UniXNULib/Boot.c",
+      "sha256": "674f34b0ea51b7a077e79a130c8f85d41638160fbaf7238dd120fd888222b6d3",
+      "anchors": {
+        "UniXNUBootEntry": [
+          99
+        ],
+        "LoadImage": [
+          181,
+          188
+        ],
+        "StartImage": [
+          202
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "EmbeddedPkg/Library/PrePiLib/FwVol.c",
+      "sha256": "d15ce181535c6b9ee6fb0e917f3c52e0f9ac3100b71d7aed133c32c152350c8b",
+      "anchors": {
+        "FfsFindSectionData": [
+          543,
+          588,
+          594,
+          923
+        ],
+        "FfsFindFileByName": [
+          681
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Library/DxeHobLib/HobLib.c",
+      "sha256": "3c362bb667e440dcf877add54d32ce334cd828168e329aa704496cd728a1d005",
+      "anchors": {
+        "GetHobList": [
+          24,
+          40,
+          56,
+          72,
+          141,
+          214,
+          239
+        ],
+        "mHobList": [
+          18,
+          46,
+          47,
+          49,
+          52
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIo.c",
+      "sha256": "539319483ef97ebb8dd4e401a69d62b62fb9af9d416260fa34dc78db882b4ad4",
+      "anchors": {
+        "DiskIoDriverBindingStart": [
+          24,
+          118
+        ],
+        "gEfiDiskIoProtocolGuid": [
+          195,
+          204,
+          270,
+          306,
+          315
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "FatPkg/EnhancedFatDxe/Fat.c",
+      "sha256": "0fbc9f1984259744b6ae0e97808895787828ca335349642971162e8e8d7c5cea",
+      "anchors": {
+        "FatDriverBindingStart": [
+          85,
+          118,
+          357
+        ],
+        "FatEntryPoint": [
+          24,
+          138
+        ]
+      }
+    },
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "FatPkg/EnhancedFatDxe/UnicodeCollation.c",
+      "sha256": "e927241bb70e469875b028b4d81c936f4cc1ff62e66db42d2d7780d9ae2c2d6a",
+      "anchors": {
+        "InitializeUnicodeCollationSupport": [
+          30,
+          118,
+          129
+        ],
+        "gEfiUnicodeCollation2ProtocolGuid": [
+          131
+        ]
+      }
+    }
+  ],
+  "private_modules_linked": false,
+  "design_budgets": {
+    "fat_bytes": 1048576,
+    "synthetic_fdt_bytes": 4096
+  },
+  "scope": "Own reserved FV synthetic read-only initrd; does not replace Android initrd or establish handset payload execution"
+}

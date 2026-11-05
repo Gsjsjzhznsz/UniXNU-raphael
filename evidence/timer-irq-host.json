@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "case_count": 32,
+  "cases": [
+    {
+      "name": "actual C wire layout and real QEMU record",
+      "passed": true
+    },
+    {
+      "name": "reject version",
+      "passed": true
+    },
+    {
+      "name": "reject status",
+      "passed": true
+    },
+    {
+      "name": "reject expected_id",
+      "passed": true
+    },
+    {
+      "name": "reject frequency",
+      "passed": true
+    },
+    {
+      "name": "reject start_counter",
+      "passed": true
+    },
+    {
+      "name": "reject deadline",
+      "passed": true
+    },
+    {
+      "name": "reject end_counter",
+      "passed": true
+    },
+    {
+      "name": "reject polls",
+      "passed": true
+    },
+    {
+      "name": "reject entries",
+      "passed": true
+    },
+    {
+      "name": "reject observed_id",
+      "passed": true
+    },
+    {
+      "name": "reject irq_counter",
+      "passed": true
+    },
+    {
+      "name": "reject irq_elr",
+      "passed": true
+    },
+    {
+      "name": "reject irq_spsr",
+      "passed": true
+    },
+    {
+      "name": "reject daif_before",
+      "passed": true
+    },
+    {
+      "name": "reject daif_unmasked",
+      "passed": true
+    },
+    {
+      "name": "reject daif_after",
+      "passed": true
+    },
+    {
+      "name": "reject eoi_count",
+      "passed": true
+    },
+    {
+      "name": "reject source_masked",
+      "passed": true
+    },
+    {
+      "name": "reject spurious_count",
+      "passed": true
+    },
+    {
+      "name": "reject unexpected_id",
+      "passed": true
+    },
+    {
+      "name": "reject spsel",
+      "passed": true
+    },
+    {
+      "name": "reject stack_pointer",
+      "passed": true
+    },
+    {
+      "name": "reject handler_sp",
+      "passed": true
+    },
+    {
+      "name": "reject active_cleared",
+      "passed": true
+    },
+    {
+      "name": "reject short",
+      "passed": true
+    },
+    {
+      "name": "reject long",
+      "passed": true
+    },
+    {
+      "name": "reject EOImode1",
+      "passed": true
+    },
+    {
+      "name": "reject route failed",
+      "passed": true
+    },
+    {
+      "name": "reject restore failed",
+      "passed": true
+    },
+    {
+      "name": "reject stack lower bound",
+      "passed": true
+    },
+    {
+      "name": "reject instruction window excludes interrupt return",
+      "passed": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-std=c11",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/artifacts/timer-irq-host/20261028T083016.181275Z-9km4b3hx/wire-layout.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/timer-irq-host/20261028T083016.181275Z-9km4b3hx/wire-layout"
+  ],
+  "wire_bytes": 192,
+  "actual_c_offset_assertions": 25,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerIrq.h",
+      "sha256": "a0044ed7114c5db5f140cd000cda97dc45b590bb2416b004ca681d58f4baa846"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerIrq.S",
+      "sha256": "f3874d3eb1d9146dbf6b5940eb4c9dac087b1746c14b05b4084f79934512cdc8"
+    }
+  ],
+  "decoder_sha256": "6cb6cd18e43a844ef5c072d6cd2e4bca21d0a771a8dfdc7aee14089448540da1",
+  "runner_sha256": "4caffc94fa0d1aa79606834a5eedf7418306ac36337a57819b61eae4c315e195",
+  "result_storage": {
+    "records": {
+      "mTimerIrq": {
+        "bytes": 192,
+        "rva": 69728,
+        "physical_address": 1074569312,
+        "fd_offset": 172128,
+        "materialized_zero_data": true
+      },
+      "RaphaelActiveIrqResult": {
+        "bytes": 8,
+        "rva": 69704,
+        "physical_address": 1074569288,
+        "fd_offset": 172104,
+        "materialized_zero_data": true
+      }
+    },
+    "linked_window": {
+      "open": 1074557340,
+      "close": 1074557412,
+      "handler": 1074557568
+    },
+    "within_sec_xip_pe": true
+  },
+  "handset_executed": false
+}

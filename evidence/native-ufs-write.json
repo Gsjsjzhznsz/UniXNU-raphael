@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "scope": "Source-maintained local evidence index; not a public immutable device log or complete storage qualification",
+  "updated_local_date": "2026-11-02",
+  "native_xnu": {
+    "entry": "raphael_ufs_diagnostic_write",
+    "source": "UniXNU-sm8150-common/kits/Sm8150Platform/RaphaelUfsBlock.cpp",
+    "archive_report": "artifacts/raphael-ufs-object/20261102T095758.682649Z-818i8yew/storage-bindings.json",
+    "module_build_verified": true,
+    "linked_in_new_kernel": true,
+    "automatically_invoked": true,
+    "handset_executed": true,
+    "immutable_root_extents_excluded": true,
+    "one_time_write_grant_revoked": true,
+    "explicit_diagnostic_caller": "UniXNU-raphael/package/drivers/RaphaelUfsWriteProbe.inc",
+    "build_report": "artifacts/native-bootstrap-attempt/20261102T095737Z/report.json",
+    "prelink_report": "artifacts/desktop-prelink/20261102T100010Z/inspection.json",
+    "handset_build_report": "evidence/private/android-return-build/20261102T100220.841816Z-9uzhpxo7/report.json",
+    "full_checkpoint_verified": true,
+    "default_profile_invoked": false,
+    "invocation_scope": "Only the explicit private native-ufs-write-policy diagnostic build contains the observer caller"
+  },
+  "host_reports": [
+    "artifacts/ufs-qtest/20261102T014010Z/report.json",
+    "artifacts/ufs-alignment/20261102T014016Z/report.json",
+    "artifacts/readonly-extents-host/20261102T013747.932557Z-jjftl2wh/report.json",
+    "artifacts/native-staging-qemu/20261102T014010.369430Z-g7_tnb27/report.json",
+    "artifacts/session-logs/20261102-native-ufs-write-decoder.json",
+    "artifacts/native-staging-qemu/20261102T100031.739559Z-obqrpjx3/report.json",
+    "artifacts/session-logs/20261102-native-ufs-write-v2-acceptance.json",
+    "artifacts/session-logs/20261102-native-ufs-write-v1-v2-comparison.json"
+  ],
+  "unknown_prior_runs": [
+    "evidence/private/android-return-run/20261102T010758Z/report.json",
+    "evidence/private/android-return-run/20261102T011430Z/report.json"
+  ],
+  "limits": [
+    "One exact owned diagnostic block per policy; no dedicated partition, GPT edits, flash or erase",
+    "No generic writable UFS volume, persistent APFS Data, panic/IRQ writer or continuous boot-log capture",
+    "No visible desktop or interaction proof",
+    "runtime-only does not establish a fresh boot-partition hash comparison"
+  ],
+  "next_action": "Develop bounded persistent boot logs separately. Both successful native allocations now contain replacements; never replay their spent preimages or images. Prepare a fresh exact owned policy before another write.",
+  "sec_handset": {
+    "report": "evidence/private/android-return-run/20261102T012856Z/report.json",
+    "phase": "SEC diagnostic, not XNU",
+    "single_block_bytes": 4096,
+    "allocation_bytes": 12288,
+    "write_fua_flush_immediate_readback_verified": true,
+    "normal_reboot_file_and_raw_media_verified": true,
+    "guard_blocks_unchanged": true,
+    "android_root_cleanup_verified": true,
+    "unassisted_return_seconds": 71.52789119799854,
+    "xnu_executed": null,
+    "boot_partition_check_performed": false
+  },
+  "handset": {
+    "report": "evidence/private/android-return-run/20261102T100353Z/report.json",
+    "phase": "Native XNU normal-thread diagnostic; SEC writer disabled",
+    "single_block_bytes": 4096,
+    "allocation_bytes": 12288,
+    "write_fua_flush_immediate_readback_verified": true,
+    "normal_reboot_file_and_raw_media_verified": true,
+    "guard_blocks_unchanged": true,
+    "android_root_cleanup_verified": true,
+    "unassisted_return_seconds": 205.90026156399836,
+    "xnu_executed": true,
+    "full_checkpoint_verified": true,
+    "boot_partition_check_performed": false,
+    "native_calls": 1,
+    "write_stages": 63,
+    "permission_revoked": true,
+    "observer_polls": 10,
+    "observer_elapsed_ms": 1402.4053125,
+    "watchdog_pets": 3
+  },
+  "prior_native_run": {
+    "report": "evidence/private/android-return-run/20261102T094934Z/report.json",
+    "supplemental_write_evidence": "evidence/private/android-return-run/20261102T094934Z/native-ufs-write-redecode.json",
+    "write_and_persistence_verified": true,
+    "full_checkpoint_verified": false,
+    "original_report_preserved": true,
+    "reason": "208ms stop allowed only one pet; existing full checkpoint gate requires at least two"
+  },
+  "status": "Requested native handset write and normal-reboot persistence validation complete; no experiment or build left running"
+}

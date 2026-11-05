@@ -1,0 +1,742 @@
+{
+  "passed": false,
+  "stop_at": "display",
+  "artifact_directory": "artifacts/native-xnu-qemu/20261030T153429.886149Z-4minkdwj",
+  "handset_executed": false,
+  "source_revision": "14d0e6ad84f5950411e687b01868fba8647c9609",
+  "xnu_entry_verified": false,
+  "xnu_arm_init_verified": false,
+  "full_xnu_boot_verified": false,
+  "qemu_ram_megabytes": 2048,
+  "qemu_kernel_window_megabytes": 1024,
+  "minimal_emulator_adt": false,
+  "runner_sha256": "d295a225c0c658ec8d5247c3f7c2f5c825486703bd572e4eefdac618af2f3f2a",
+  "debugger_tool": {
+    "path": "/usr/bin/gdb-multiarch",
+    "sha256": "0baeb299d3aa39f40ca72c3cb8ae5b15a5bd01f1995583a52cfdd7527bfffe07",
+    "version": "GNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1"
+  },
+  "kernel_sha256": "cc650ab445c4803a5d57dcb9dc1ad52519730b302eb31d91907f0fb6e058075c",
+  "kernel_bytes": 125145088,
+  "kernel_unchanged": true,
+  "source_inputs": [
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.c",
+      "sha256": "1202e964edf8869c634a151fe62ad8d412ef9387d7680f819025f3f73b5539ec"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.dsc",
+      "sha256": "36b330f2c1ab3ad8617c7bae475805aa7501f272af43922b0a78e67969cea7ca"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.inf",
+      "sha256": "c0cb6529000c18afb45fd70e0031a4090796d7f45114a78a11aaa83e3a28494f"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.c",
+      "sha256": "f03979a17d1291890ddd0ea870ba3c7eb36c63d4ea74145f0cd310c4db1e5f27"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.dsc",
+      "sha256": "cea22a1741156f366dce4ca5052a5e6883d10163aca3aac4aabbf4a067c31bcf"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.inf",
+      "sha256": "1781d01d84a276080a5453e31fbf5c2139e7036932c97943b0b1fd7bf03a60c0"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/Include/HandoffState.h",
+      "sha256": "4799df1b3dd9f7f39b1f22c8ed0b8d3dd8698292c3371551697ca8f2c8a5a6a7"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/Include/PayloadFixture.h",
+      "sha256": "f8f0cfc6a86577c503eb3256863e2bae5c0d056e2825c2fb6bb8a7433127d023"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.c",
+      "sha256": "cd86bb6bbf07470f203d4fd7d5ec78ccb20c93db4850f0dace3845713dbd4d35"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.dsc",
+      "sha256": "2642ff2ec9df18bde79d08fabb7fadc24ac8d1112114f835f58bf0a168d930bb"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.inf",
+      "sha256": "b37e8e18e00a819f7f2a9a11fc1da18d7451e98ac9f1904b90d2b3bb3ff06f1d"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.c",
+      "sha256": "0f05a5621b295348f8d07d1bdf7db9e2d4b5ce32172f420ac22b8e614aa8312e"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.dsc",
+      "sha256": "1157ffd9a3a90c0a5c5effaa7c039719c434c43440a6ee2db9b936b5ea99ed4b"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.inf",
+      "sha256": "0e8e2e323ae24cbd9768ae0478e5ca377111c97cef614018214824da1d1380bb"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.c",
+      "sha256": "dbc08679b2f46e5f898d12a4d5594330b4b33dfc007d0a8514d363c26de5b24f"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.dsc",
+      "sha256": "4e7c791701d6858f96da25a91e523e3fc8186f8795bb945a42a1c627441b7b2d"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.inf",
+      "sha256": "3466b7279840ac576116f3ce3ca5dd9f20220dfb8c96ee8a2f85f3e610ed95c8"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadProbe.c",
+      "sha256": "5875d23604d9539c7bf9adb802cd14d30d1fa7b6838ce542fd2d977aca0ac716"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadProbe.inf",
+      "sha256": "c7ed8c2ad1ce89c2ba490759d6fddfa26b32c5b6ac172ee9d12fe121c4c42da5"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/RaphaelTestPkg.dec",
+      "sha256": "be4056eda68855bb2296b76563ec2d9580cb25f87b73c0b9d1e2ad0dfb3cb09b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.c",
+      "sha256": "81673f58102492d1ed00ac017ac57943d8020fa1478d73bda08f5dd27fd09ba9"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.inf",
+      "sha256": "8afae643b8f99a923e9c89ed371538f15895ab974a639e894da9a36f7fc5efad"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.c",
+      "sha256": "aa76c504a222cb79982dee09ab3cb913b33382da19cf07c68b99ddd9cf9d3745"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.inf",
+      "sha256": "77dced57e7fad55121dbab8241db5bf92e2f31e396925bac91b65d2e5649b2de"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.c",
+      "sha256": "963f11e21e5cd467217d216b64c3097875e4464a8245fc46508bb6540f66923d"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.inf",
+      "sha256": "077045b9876cf528cf9f9b9e21fd5c5ed857798fd009ff265966c81d86e1249c"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/LICENSE",
+      "sha256": "2b031880c646006165194888f9814806719ab4c91c26d330c4eb71e1983f0187"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.c",
+      "sha256": "b1cf184ebd217656daf92446d9bd724570aad61cb3c7d6d6a2a39d43199d9f35"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.inf",
+      "sha256": "28491c49992134008d55fc0efe7e0792814d517d323ebfb7b70adc27c725e94a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Guid/UniXNUBlockSlice.h",
+      "sha256": "7d89dddb032b3e2bcb7efdd8fc15d1df34ec601d08124e684bd9b3dddfd180e5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Library/UniXNULib.h",
+      "sha256": "8444339ac4a4627ae379a9d3e8e440304f23ff14d5487a5340914fa53cd218f7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNULoader.h",
+      "sha256": "4853991ceac062a2bd3d8d36d262d0cf09b1fe751c44813e267371cd93479cbb"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNUMenuPlugin.h",
+      "sha256": "eb897e32cb4c260818dd89603176f8ff3879bff209dfd1b24fc49e003436d534"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Boot.c",
+      "sha256": "674f34b0ea51b7a077e79a130c8f85d41638160fbaf7238dd120fd888222b6d3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/ClangdAutoGen.h",
+      "sha256": "ef1f27464ecaafb50cd007cceda1a7bd823e8523595787caa4951d0b02d01fca"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Config.c",
+      "sha256": "c070b2eb1c4922df345a2f830c5f2c420bafd11dde759fee2d2ce4f3be3923c5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Font.c",
+      "sha256": "391c7dbc8c6eb3cd07230e3dd8d38e4ba8a5a9b603bcaecb4d8e62a4603d2ac6"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Inject.c",
+      "sha256": "a0072e04b6ff233746aec973d38e288bdcc689481f660f043fbf8f3b8a9d4943"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Internal.h",
+      "sha256": "7acdc37f8c5540bf0df24797bb04ca09dc111414e75c72e8d2ee5f3843a34faf"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Kext.c",
+      "sha256": "f1869ca42e03faf9bd967619ba70dcd3329fb8839513811306478548f67f9aa4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Logo.c",
+      "sha256": "da9d49c502f42c489742d2abaa8a300db1c265b0fcf807e4d7bd3d8aa8a9e4a1"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/LogoShape.h",
+      "sha256": "8fe96788c3c1e27df7f4209c31ae1b3818ae99cf858d6dae457cd16643a6a43b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Main.c",
+      "sha256": "747e2b7a64636a6ffb006079d744338fe18a5313ad1b0df83ea13d55e53ef95e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Menu.c",
+      "sha256": "55584eaae32fab3c25afe390c785310f7769512a17d5b84c7b7be43d3d50ec5b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Slice.c",
+      "sha256": "5cbd409945711c13a9dad18ed6eb5a7c0df49c9b53e7599424c03e23ed2126f8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Toml.c",
+      "sha256": "4d82a7de6196873df6f0a2cc033c67d337f505c53d235b053b8c6458d7332a2a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Ui.c",
+      "sha256": "7f5a2773424a5a8cc68c12d061744ffd80c2847aa6595625740f41e0b5ea6792"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/UniXNULib.inf",
+      "sha256": "e2fdedfbca94513c8987bf1bf85e1c70953a89725b6a9ba84042bf1f402ff322"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Volume.c",
+      "sha256": "ab9a7b36a258cfb43b8c15fee86393ec9a1978e9b3d3e8d8e2a83b2f36bdbff2"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.c",
+      "sha256": "9c100463d9cefa7d124e492b51781c593a067e46c93d375804ad95130845aac7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.inf",
+      "sha256": "8db898fbb9b89719046038e179c7332a19aa6cd8ad2726f30b4ce701bf83e722"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Include/Protocol/UniXNUSample.h",
+      "sha256": "166553704f947e8d10e729b803f669e29eda7d099b3dbcf7b20f5cbfa2f5467a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/empty/README.txt",
+      "sha256": "fb1390dc42fb11075bfebd90ded1009db1109f54c311f729030121b05d80f652"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/DeviceTree/test.dts",
+      "sha256": "8a703c9562204aea7e7364c280ec62f5b92cee44011ca7746ea5cd6db4866680"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/NeverMatch.kit/Kit.toml",
+      "sha256": "ec14e53a23dde506d72c606319a6965f33f84c79b52304583c872c705c42c561"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/Kit.toml",
+      "sha256": "be41df0a32a189cfe39f0d9084fff860727ab23d07bfadbdabb2cdb14ff08d25"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/overlay.dtso",
+      "sha256": "cc84086dd4e0cfd8b7c9d449c8a9ef51e3ad4558f689e65e961dfccf4ff04fba"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/initrd.txt",
+      "sha256": "89d4990944c99aa8535667923a07a04e626c4a838cd0651b3403d50cd5a8c6e4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/unixnu.toml",
+      "sha256": "a702ab953409aaedb9ef19d2b22ffbfef41a1d53b0a4c96acc1f15dc002bba48"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/userdata/EFI/UniXNU/unixnu.toml",
+      "sha256": "ce06101b19a286082fbaa69f69129d487013e9cb51788ce9df5ae8cee8f4ad76"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.c",
+      "sha256": "974be93a4269b6e7cf0d84ede58d17a42e60615549e06ed86ddda67be6f099c8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.inf",
+      "sha256": "39a45bdfa03f8470fcaaf38fec0307ac754b3ef3f0a82a67018bcf7755c929b3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/UniXNUTest.dec",
+      "sha256": "544e2c64333bfbb3b46dde2a964ceee5ae0f0eebfb499ef8bca98e2efe9abc7e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.c",
+      "sha256": "df30e74ecc9d5de0271ae9a5fe2565b2e99cdebcd7453ab5f2d677170132ee34"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.inf",
+      "sha256": "cad1a72072f2c2681798b2f4cc0af5ef122a91eff47839cb6dc7885cbeb6911b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dec",
+      "sha256": "08e87df9581889cecc387f01cc7e56586c1db4d63280f5c4600d02d63fd12e8f"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dsc",
+      "sha256": "6b2f5bbfc5d9351462f2ac0262d2223936004da7319f41652242d8aab17bdf89"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/DarwinBoot.dsc",
+      "sha256": "7dcdf998c45dcd9e37c98fc3bcc0992ee2dcb5dd0b2b50bc1c52e71b11ec2993"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootArgs.h",
+      "sha256": "1d6b172a306bf5d3fc409d22bd7e674d166e5fde92652c4135de5c79f3eddd16"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootVideo.h",
+      "sha256": "8d25e85a166b272a1cbc0a5238288670e2707303f4cd97aef180ebf0c42246c4"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.c",
+      "sha256": "d13facd71aa802e02a33b8c463d83a7a9a2f9d5b0a5e5a5fcd96cfdce7985e1a"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.inf",
+      "sha256": "cb10851277b53b355794c1bca3fa16d3bf18a0dc2dee857091837b63599019df"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DiagFont.h",
+      "sha256": "d2a3687db67b069f4e34a961e17fd28b0242986e3fa8dd8a7545cab70834fa8e"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/Entry.S",
+      "sha256": "44c05d16af1fbe51cfdcf074ff590ec214dbe3e8efdc4b83a9d06f7e49be44bd"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/PackedRamdisk.h",
+      "sha256": "8b3a326062baee88a179274e92df05a3a07792d25ef84daa23b71aa47b4a2326"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/WindowSize.h",
+      "sha256": "6f78303c54252eae722be7c9b33869e4e8251ee3569736511790170d499b58cb"
+    }
+  ],
+  "revisions": {
+    "sources/mu_basecore": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+    "sources/UniXNU": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+    "sources/UniXNU/drivers/DarwinBoot": "3325e352d7df68a9f9ad74832ed94a6acbbd7390"
+  },
+  "observer_sha256": "0137ec1ddf6329dbfe94b888433cde9206555e28dca11a4ae209228914a8ed53",
+  "host_build_passed": true,
+  "images": {
+    "DarwinBoot": {
+      "sha256": "03f5c5ba6d101fa713f2ab0ebbdc5f8aab93e18d9a9e3631b8455d1865f23e11",
+      "bytes": 19968
+    },
+    "NativeXnuFixture": {
+      "sha256": "7eaca0030f4e51eb2d1c4cfa4dd059c6e2b7f1c1c537f0ec8066236072938756",
+      "bytes": 71680
+    }
+  },
+  "image_structure_passed": true,
+  "qemu_ramfb_requested": true,
+  "read_only_system_disks": {
+    "passed": true,
+    "handset_written": false,
+    "filesystem_modified": false,
+    "disks": [
+      {
+        "role": "OS",
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76040-038.dmg",
+        "path": "artifacts/desktop-disks/20261030T075713Z/OS.raw",
+        "bytes": 6077580800,
+        "original_source_unchanged": true,
+        "raw_symlink": true,
+        "apfs_containers": [
+          {
+            "offset": 17408,
+            "bytes": 6077546496,
+            "block_bytes": 4096,
+            "blocks": 1483776,
+            "uuid": "50f8a67f-afc1-4a1b-bcbb-82162674c67f",
+            "volumes": [
+              "04769d26-2ca0-4825-b443-e2e5f88300f2"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "SystemOS",
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76034-038.dmg",
+        "path": "artifacts/desktop-disks/20261030T075713Z/SystemOS.raw",
+        "bytes": 3303014400,
+        "original_source_unchanged": true,
+        "raw_symlink": true,
+        "apfs_containers": [
+          {
+            "offset": 0,
+            "bytes": 3303014400,
+            "block_bytes": 4096,
+            "blocks": 806400,
+            "uuid": "e886f82c-ee56-4b52-af5f-e70bf46320c4",
+            "volumes": [
+              "8846fe78-2910-4297-af97-d59bb6f8fc16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "root_volume_uuid": "04769d26-2ca0-4825-b443-e2e5f88300f2",
+  "emulator_hardware_source": {
+    "dtb_sha256": "f838c87193c061e8ad9904cf85d4f543726efc3d3d43e9494e89f9413fd6babf",
+    "io_ranges": [
+      [
+        167772160,
+        512
+      ],
+      [
+        167772672,
+        512
+      ],
+      [
+        167773184,
+        512
+      ],
+      [
+        167773696,
+        512
+      ],
+      [
+        167774208,
+        512
+      ],
+      [
+        167774720,
+        512
+      ],
+      [
+        167775232,
+        512
+      ],
+      [
+        167775744,
+        512
+      ],
+      [
+        167776256,
+        512
+      ],
+      [
+        167776768,
+        512
+      ],
+      [
+        167777280,
+        512
+      ],
+      [
+        167777792,
+        512
+      ],
+      [
+        167778304,
+        512
+      ],
+      [
+        167778816,
+        512
+      ],
+      [
+        167779328,
+        512
+      ],
+      [
+        167779840,
+        512
+      ],
+      [
+        167780352,
+        512
+      ],
+      [
+        167780864,
+        512
+      ],
+      [
+        167781376,
+        512
+      ],
+      [
+        167781888,
+        512
+      ],
+      [
+        167782400,
+        512
+      ],
+      [
+        167782912,
+        512
+      ],
+      [
+        167783424,
+        512
+      ],
+      [
+        167783936,
+        512
+      ],
+      [
+        167784448,
+        512
+      ],
+      [
+        167784960,
+        512
+      ],
+      [
+        167785472,
+        512
+      ],
+      [
+        167785984,
+        512
+      ],
+      [
+        167786496,
+        512
+      ],
+      [
+        167787008,
+        512
+      ],
+      [
+        167787520,
+        512
+      ],
+      [
+        167788032,
+        512
+      ],
+      [
+        150994944,
+        4096
+      ],
+      [
+        134217728,
+        65536
+      ],
+      [
+        134873088,
+        16121856
+      ]
+    ],
+    "arm_io_base": 134217728,
+    "arm_io_bytes": 33570816,
+    "cpu_affinity": 0,
+    "dram_base": 1073741824,
+    "dram_bytes": 2147483648
+  },
+  "independent_cpu_resources": {
+    "gic_registers": [
+      [
+        134217728,
+        65536
+      ],
+      [
+        134873088,
+        16121856
+      ]
+    ],
+    "timer": "physical",
+    "timer_fdt_specifier": [
+      1,
+      14,
+      4
+    ],
+    "timer_intid": 30,
+    "source": "same-run qemu-generated.dtb; counter frequency independently checked at EL1"
+  },
+  "qemu_vmm_declared": true,
+  "os_profile_identity": {
+    "profile": "ipados-17.7.11-21H461",
+    "root_keys": [
+      "compatible",
+      "model",
+      "target-type"
+    ],
+    "chosen_keys": [
+      "osenvironment",
+      "crypto-hash-method",
+      "certificate-production-status",
+      "effective-production-status-ap",
+      "certificate-security-mode",
+      "effective-security-mode-sep",
+      "amfi-only-platform-code"
+    ],
+    "hardware_source": "same-run QEMU FDT; no Apple MMIO, CPU or memory nodes imported"
+  },
+  "emulator_display_scale_policy": {
+    "value": 1,
+    "meaning": "one logical pixel per firmware GOP pixel",
+    "handset_hardware_fact": false
+  },
+  "emulator_display_declaration": {
+    "path": "/arm-io/raphael-gop",
+    "device_type": "display-subsystem",
+    "hardware_registers_declared": false,
+    "source": "selected original IOMobileFramebuffer iomfb_populate_all_display_infos; firmware GOP resource independently obtained at runtime"
+  },
+  "original_trust_cache": {
+    "passed": true,
+    "original_modules_unchanged": true,
+    "added_owner_cdhashes": false,
+    "apple_signature_chain_verified": false,
+    "modules": [
+      {
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76040-038.dmg.trustcache",
+        "source_sha256": "4563bdbf6ed8f72237d45dbba3ccde432634338f95c10d79d5d4631678a97c7c",
+        "entries": 2478,
+        "module_sha256": "da88460e6e513438d5307e5c526f76497a74754476a24da29f239f0c90120fc2"
+      },
+      {
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76034-038.dmg.trustcache",
+        "source_sha256": "9742f3d566369e6c48f63b3dc0740b06c243d13c6650e25bbf44616e13d6d097",
+        "entries": 76,
+        "module_sha256": "d121ba89167e03aafd00fa687c30cd8ebc4ccafd10c1408adb2ba3de12403651"
+      }
+    ],
+    "bundle": "artifacts/desktop-trust/20261030T081913Z/original-trust.bundle",
+    "bytes": 61356,
+    "sha256": "7416ca4f8377146626bb284e2133c76bee6cb4e3ee0af5d648b186235a7323a7"
+  },
+  "emulator_scratch_data": {
+    "passed": true,
+    "artifact_directory": "evidence/private/desktop-data/20261030T153359Z",
+    "image": "evidence/private/desktop-data/20261030T153359Z/data.raw",
+    "bytes": 536870912,
+    "capacity_policy": "Explicit host-owned emulator scratch capacity, not handset storage",
+    "explicit_kernel_volume_contract": true,
+    "container_uuid": "020973b6-8a71-495d-ae3e-557dc8cf0a4f",
+    "volume_uuid": "38a12874-2b24-4eca-9cbc-e05600dba8e9",
+    "seed": "evidence/private/desktop-data/20261030T153359Z/seed.json",
+    "seed_bytes": 611715,
+    "entries": 226,
+    "entry_counts": {
+      "file": 39,
+      "directory": 186,
+      "symlink": 1
+    },
+    "user_skeleton": {
+      "recipe": "sources/UniXNU/scripts/prepare-offline-data.py",
+      "revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+      "created": [
+        "/private/var/db/dslocal",
+        "/private/var/db/dslocal/nodes",
+        "/private/var/db/dslocal/nodes/Default",
+        "/private/var/db/dslocal/nodes/Default/users",
+        "/private/var/db/dslocal/nodes/Default/groups",
+        "/private/var/db/dslocal/nodes/Default/config",
+        "/private/var/containers",
+        "/private/var/containers/Data",
+        "/private/var/containers/Data/System",
+        "/private/var/containers/Data/Application",
+        "/private/var/containers/Shared",
+        "/private/var/containers/Shared/SystemGroup",
+        "/private/var/PersonaVolumes",
+        "/private/var/preboot",
+        "/private/var/Library",
+        "/private/var/keybags",
+        "/private/var/keybags/backup",
+        "/private/var/mobile/Containers",
+        "/private/var/mobile/Documents",
+        "/private/var/mobile/tmp"
+      ],
+      "added_keys_or_user_records": false,
+      "permission_policy": "New keybags directories root 0700; other new directories 0755; original mobile owner/group for mobile subtree, root var owner/group otherwise"
+    },
+    "commands": [
+      [
+        "mkapfs",
+        "-s",
+        "-L",
+        "RaphaelScratchData",
+        "-U",
+        "020973b6-8a71-495d-ae3e-557dc8cf0a4f",
+        "-u",
+        "38a12874-2b24-4eca-9cbc-e05600dba8e9",
+        "/home/guo/work/raphael-fresh/evidence/private/desktop-data/20261030T153359Z/data.raw"
+      ],
+      [
+        "apfsck",
+        "/home/guo/work/raphael-fresh/evidence/private/desktop-data/20261030T153359Z/data.raw"
+      ],
+      [
+        "fsapfsinfo",
+        "/home/guo/work/raphael-fresh/evidence/private/desktop-data/20261030T153359Z/data.raw"
+      ]
+    ],
+    "host_format_checked": true,
+    "checkpoint_normalization": [
+      {
+        "block": 1,
+        "before": [
+          65,
+          68,
+          66,
+          67
+        ],
+        "after": [
+          65,
+          66,
+          67,
+          68
+        ]
+      }
+    ],
+    "apple_apfs_mount_verified": false,
+    "handset_executed": false,
+    "limits": [
+      "New emulator scratch only; experimental apfsprogs formatter",
+      "Original default var only; private seed excluded from public source",
+      "Mount, writes and desktop not implied by host checks"
+    ]
+  },
+  "boot_arguments": "-v keepsyms=1 cpus=1 kt_fixed_zones=200 offline-apfs-load=1 -apfs_shared_datavolume raphael-desktop-display=1 offline-mobile-graphics-load=1",
+  "kalloc_budget_override": 200,
+  "adt": {
+    "bytes": 19128,
+    "sha256": "0680995df60732a7c6cbf3d245e0c9b15ba709baec3272b44ba43a4ce35528da",
+    "hardware_qualified": false
+  },
+  "emulator_firmware": {
+    "AAVMF_CODE.fd": "545e2eda871a00dba51c0df48a34829fe3b0de6ec10ea760c75f1fc1c6a29dc5",
+    "AAVMF_VARS.fd": "b3b855c5a80310168051164986855692d1bdb06e67619856177965cd87c6774f"
+  },
+  "failure": "AssertionError: Native loader did not reach allocation/exit gate",
+  "qemu_returncode": 1,
+  "limits": [
+    "QEMU/AAVMF only; no handset execution",
+    "Debugger observes only the recorded native startup checkpoints",
+    "Each report qualifies only its explicit target; no handset, desktop or complete kernel boot claim"
+  ],
+  "evidence_files": [
+    {
+      "path": "serial.log",
+      "sha256": "4fc7c13491c03924225089df89e35b0aa481b33dacecab2d9495b9d983e1fcab"
+    },
+    {
+      "path": "commands.json",
+      "sha256": "364ba9d9bc5166e98a140d319faa5f049426a77876a85ed14787f8008abf80e7"
+    },
+    {
+      "path": "kernel-inspection.json",
+      "sha256": "1bf331fdbb65cf1c2e7d98539a8e157a392237795db29ead4d3d448b8754ff1b"
+    }
+  ]
+}

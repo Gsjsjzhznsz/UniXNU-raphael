@@ -1,0 +1,692 @@
+{
+  "source_revision": "02f39c0b8313cdfb8d0e22651b4197d2b03d581a",
+  "unixnu_revision": "0fc0fc1f9ddd0fbd4787738afef38667df5e0a95",
+  "darwin_revision": "3325e352d7df68a9f9ad74832ed94a6acbbd7390",
+  "phases": [
+    {
+      "stage": 2,
+      "private_build": "evidence/private/sec-dxe-build/20261028T082113Z",
+      "image_sha256": "42fca6b7db4e797a62b92c44ea28e4709b589e4d29d01d41eac8c1b8a0565c1a",
+      "firmware_sha256": "57c71b762fdcf7bf373e01051da95c3ec7d7d2e4381a40391095c687d6fb7afb",
+      "qemu_report": "artifacts/sec-dxe-qemu/20261028T080914.718839Z-dlpu3gxh/report.json",
+      "qemu_report_sha256": "7d307d8bd4aa25407f1e88103a6923bd323680a2d6ed661762defcec1bf53d16"
+    },
+    {
+      "stage": 3,
+      "private_build": "evidence/private/sec-dxe-build/20261028T082636Z",
+      "image_sha256": "1291c90d06cba3f83f1b67b4d2d06eba2975bb1467fe51d9e333131d1f093ca5",
+      "firmware_sha256": "205176f1334c4701d75fbd746017bb8c642faf399d40143a23ac0fde7adb596a",
+      "qemu_report": "artifacts/sec-dxe-qemu/20261028T080914.718897Z-esos7p1i/report.json",
+      "qemu_report_sha256": "cbaae1cf35aa8fd7d887bc92094c284c5f912700f1419ea3bbc13ad5e78638c7"
+    },
+    {
+      "stage": 6,
+      "private_build": "evidence/private/sec-dxe-build/20261028T083017Z",
+      "image_sha256": "173fff434312ffef554132848ac705fb4aa07dc3074795a3d445013bbfe963a2",
+      "firmware_sha256": "725a1caa59415c624e8c9e66c5e0abb6778514ade23ddeb8142c654d80d34163",
+      "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+      "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db"
+    }
+  ],
+  "handset_executed": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/MenuFixture/MenuFixture.c",
+      "sha256": "1acc82f00eff63ffe047d26fc178a48bf421e983c2bde3b0d5127163ad4bd11e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/MenuFixture/MenuFixture.inf",
+      "sha256": "412243183202312a3ad6e56ad1c30afda2a0a334ec970cf0a0a46012bcd70a3e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/RaphaelDiag/RaphaelDiag.c",
+      "sha256": "5c299f735c03f934f7d6772571be45419844338a97cb558649438e8d11472ca1"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Application/RaphaelDiag/RaphaelDiag.inf",
+      "sha256": "69bc4d238741e6f47665402cfde877feae65f690b747274ab7e781c31ef58056"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.dsc",
+      "sha256": "cfa981b32fd9c88895a8645f8feec21c15690c25a385fd9a1b58d0186f5d9740"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Diagnostic.fdf",
+      "sha256": "194564085fe92a68a329a916e2f61b28d0e80d769dc308830fc124af380c0221"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DarwinTest.c",
+      "sha256": "276885c0d3b8ae5dc94024b8e71dfaf83140d355488c94ef2af0ad6edc9e0190"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturn.c",
+      "sha256": "1909e4e69ffc02a9c2e05cf687e6ac84ace353d6d310da19c8ba58fa699fb3ff"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturnDxe.inf",
+      "sha256": "2a7248289c8bd7b3d3d4e458af67b96c98df30a56d82fe93e8a2976a2353104b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/GopTest.c",
+      "sha256": "d0dafc19ed7624cb3bc8c8725de5229ed665fbcbc9caad3f6a5dfe9771d84c79"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/MenuTest.c",
+      "sha256": "65fc99c3a12353bfd34fd595a68a662a5a3b5ed6fa1302b859c3d21d485da4ee"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/PayloadTest.c",
+      "sha256": "290168bfa1e979f012b4d4728fe70db3bea13f6210ede7137bd7493480907ab8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/PhysicalTimerTest.c",
+      "sha256": "109f59c185c9e749df62cc5c59b604c1ce4d08ed81dcbb34c135a19147c311c4"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/DiagnosticReturnDxe/QemuTimerTest.c",
+      "sha256": "ddc65a51d014c1316a4ac1712344d20e8363719ef5cb1a58f6615d8675f3be09"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimer.c",
+      "sha256": "998db8fc0b8f99c3594460062e2b57eda8d159cf887c348934ab373f6926f691"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimerDxe.inf",
+      "sha256": "28e50009ace036a58440e63eb4b58e18cb7aaf76d63b0c35b0268696a584bd6d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PmicInputDxe/PmicInput.c",
+      "sha256": "c792410c2fa539d3e6bf8a50e6dc7e076112289d4aa837b655b51a511191e67c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/PmicInputDxe/PmicInputDxe.inf",
+      "sha256": "c9dfcc4fdbaaf0212ee0fa84a6f485fb4a8d46593cf48db7564dab4810fb6fb5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/SplashGopDxe/SplashGop.c",
+      "sha256": "d4d7616a62761b78abb8e704f48c0013d9d1ec9a5fd54726028515da210db3f5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Drivers/SplashGopDxe/SplashGopDxe.inf",
+      "sha256": "ef59a2ec2f628a4ef359782ad43608c4461ea678bccee6c8cf6202f0a9002ae8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.S",
+      "sha256": "fecaaec0d8f8bb32045bb7c26cc5e9dd356093ae1570df0a804b8aa250cf85c7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.c",
+      "sha256": "baa70eb76b3bf731691158f33e040ea91945c95b0c862329fb2288e9990fa386"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/EntryProbe.ld",
+      "sha256": "66e753bfe9e38507117ef2cfa32aa2afb737d2aa54cc1cf132ff0e78338d14f3"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/EntryProbe/Runtime.c",
+      "sha256": "e4967f6ec732935dc611bfe78e46dee8afa8cf5559e49f0c15c94df92fc30f35"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelGopLib.h",
+      "sha256": "af22b075d3c2a80d27eec61e9065c1bd5cc02b9e983515a19ded6568308032f8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelKeysLib.h",
+      "sha256": "662aff01678966145c0c432eb86dec3473b1bc1e4e632b5bcf2019bb6123b822"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelManagerInputLib.h",
+      "sha256": "997422d3298b33f98e875e010338377e212ba3347360f6ebfdd8c99bb493ff55"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelManagerUiLib.h",
+      "sha256": "206d292c539db051f15a3c1ebf949dc9747752e26896195c8597b54790e46623"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelMemoryContractLib.h",
+      "sha256": "4a07557637d395d3705b293437212c78ff25b011cddb4d54c03511e48e86e515"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelRamWriteLib.h",
+      "sha256": "37d59c6ae900897114d0f7a30182d2d0c6986588163027a57298c266dad35044"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDarwin.h",
+      "sha256": "da395d437c714dcf02a532188ee4acbc114cbcf48bf53adf8bbc225dd1925024"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDiagnostic.h",
+      "sha256": "89542d6903662dd4541822601086f97f580f831f91bcccea36992433582d0b0d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "29ac575f95ed9f74aa87e56f089ebab100a12db2ac4166edda264d8580735fc7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelFramebuffer.h",
+      "sha256": "c9649609f4877d644da88f2073a57bc1063d2aee29c7f19c07f9c7ef5fd9fc2b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelGicEnableMap.h",
+      "sha256": "0713054b37f6286d3b0bca2fd4e5b6ffac54e49b6d8b3e325c1ed7f0aff53374"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelGicProbe.h",
+      "sha256": "eadbc248e7bb37380857889fdf9a420d100793f1332536f2deb5b2553012d343"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelIccProbe.h",
+      "sha256": "280f011d075edd755453410ecfd3dc32ea98f5b152905358fb79bf9d1a751250"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelInputDxe.h",
+      "sha256": "51278c456466eeea7fd770250dff18f146a224f9d4c26d77bd7fee358274c28b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelInputProbe.h",
+      "sha256": "da8ff9e21efd14a7d1ef00212220b77f9f585dd054a28482258a25eb083d3cc6"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelMenu.h",
+      "sha256": "49b3ccef9f1a400d5f960f1f54c35cb7c84f364f13113c5ab3620c6c92d71b4e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPayload.h",
+      "sha256": "54181fffd1f7f4d5254c62ba8d2532f984606e5405ef18541d0a3153e175bda9"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPhysicalTimer.h",
+      "sha256": "c8fb8ab909a8c3cb428f102634500b0907c5065edccb7f1cbf70c65845be12dd"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelProbe.h",
+      "sha256": "69c853680ebba9448922888ed01c07c00ee37e82ee58dcd3128fae4b759084ab"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelWrite.h",
+      "sha256": "35db135ae64bf0649e9588854b9cafcce77f7c28a957e18d3d8ff33cb1b317fe"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPpiProbe.h",
+      "sha256": "99a84c80068892c1faaf9763a368c5d6c06c18c0d29be61b26b2830fb812dd28"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelQemuArch.h",
+      "sha256": "a487e75b3590c696da0abc8ddb0e8e12fd2a571b9bc5cb88798432c8aeeba1f5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamRead.h",
+      "sha256": "75be7917dbbc2a32d64eb9b9062491008c37584372598424b9dc04e138dddb7c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerIrq.h",
+      "sha256": "a0044ed7114c5db5f140cd000cda97dc45b590bb2416b004ca681d58f4baa846"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerRoute.h",
+      "sha256": "1938868ba1f22f840f1caf1efb3ed2acdcd22dbaed49b67ad06122331afbf49e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelTimerSource.h",
+      "sha256": "62da8690a73c9782fb42519d4838fbf17dbd9e0c103bfdefd26928f6680265cf"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/Debug.c",
+      "sha256": "f988c30618be69d0218fbefd17bbe3fa98c498565357996fe8439e64dd366978"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelDiagnosticDebugLib/RaphaelDiagnosticDebugLib.inf",
+      "sha256": "0e11b0276cf82a9af9ec3151272a8c52f920e3683820b89f7f283be5d32693e4"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelFramebufferLib/Framebuffer.c",
+      "sha256": "f38193e8ca7c8b7348f32ebacb7dad01af21770765e4381b6a5970a750eecfd2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelFramebufferLib/RaphaelFramebufferLib.inf",
+      "sha256": "898de441902c803ec3be11c07ea029d5fd09a4c55d01c540da0bbabe5b63d59a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelGopLib/Gop.c",
+      "sha256": "3ea0e2840c0318993f6d1e0e779bd06d0878a1c1d1e785d4f7a4be523e04ff77"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelGopLib/RaphaelGopLib.inf",
+      "sha256": "bf637ead90046428116bff1be02d5df382b335083b27036a11af49c59dc616a1"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelKeysLib/Keys.c",
+      "sha256": "1b0a7cbf8800d4dd6095a70debd422568334ba215cf8bc3768a8fbc25736b740"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelKeysLib/RaphaelKeysLib.inf",
+      "sha256": "d718689dbe49e962a1f81366a3c5ad0768bcdff20b2a61fcb1956f157eb6d1d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/Input.c",
+      "sha256": "9667fc0572d5a078d7a92125f7968e1a1f5b6073459ee6d6a04fda142f1dea06"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/ManagerUi.c",
+      "sha256": "3357c62991d1bd534dce83db8a899eb8f3a2787adfe0835b5d81894aaa230fa0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelManagerUiLib/RaphaelManagerUiLib.inf",
+      "sha256": "99ea4e00290e44e7c86a5ab155217f16a34dab6c0e25d58c5e3780fd59342f3e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelMemoryContractLib/RaphaelMemoryContractLib.c",
+      "sha256": "36eba30aec761b6e65664b8a7ab037915fa9bf8f14a255080f389a31dd77bc90"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelMemoryContractLib/RaphaelMemoryContractLib.inf",
+      "sha256": "43aaa098403f11e155b15e4012a702b2776b545f8bbf322f15da90e3dcc1cefa"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelRamWriteLib/RamWrite.c",
+      "sha256": "8858c1caece0da74fd51c6a87469d1e59bf13c4e0aac99780580ca62d68f99d0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelRamWriteLib/RaphaelRamWriteLib.inf",
+      "sha256": "5bad783e9cec4575ded81de7bb48cf3b26e57244ee67874b09c7f2a063e5c194"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/MemoryContract.dsc",
+      "sha256": "2131d90d1f3a293c9657b2b6080d3cb3b47a30c5f75c8a914674979e1d235b11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelDiag.dsc",
+      "sha256": "ec7e5794b9b254e0e411544da34adcf8d9f23c4661454486910d1232d56f070c"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/RaphaelPkg.dec",
+      "sha256": "04d62345024ba365395be0ef8aff67fb5d03f1756411d590eff90d4e254c1190"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+      "sha256": "7b3d5f1741a2d2039b194a7554e1182dc2e7fac534daea43d4ee632209d126d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GicEnableMap.c",
+      "sha256": "a9a174643f47b6322950f9834e94f0833b2d648842aba52b91f676c49bca3cfb"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GicProbe.c",
+      "sha256": "92f494ca410183a5046145b380d4a3b783e8391901481c096eee63d96d7b6e97"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GopRoute.c",
+      "sha256": "d528b3b59744ffdc7ecdcc699946fb58e9961fb0ae91bf1d93d6c52d795cffe9"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccProbe.c",
+      "sha256": "17240460189c2b3a7528552797205c2c7ffd571e3bbde862fe58ec5cc40f9387"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccRead.S",
+      "sha256": "ce58d6acebf5deb53448b76319cf6838bd0c152d3e3b312c36aec3d8beb00f56"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccReadAdapter.c",
+      "sha256": "1c53f01bd640045f56c29708fa115f3ce64da994b9a759cd4e6ba88891ff0969"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccReadSites.inc",
+      "sha256": "fe09984b517a253a5f97ee59a1ecc6c9441e19febebf44de8bd5172fcddc2bbe"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/InputProbe.c",
+      "sha256": "339950dfdfdcd423868c0847e4dd8cd506a249d1d849ff5c49dae7fd11783b0a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Payload.c",
+      "sha256": "b6ea7bcffe859513bafc109099ac77190a89dc1e11b976e8427b1535abb4d1ec"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+      "sha256": "8f8abbf622d8b1d8d2dae531515fb1ce48b68cb451f9351a5bf6ad675e71730a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelWrite.c",
+      "sha256": "02ef5e428e8d240ce6c0ca7d20dd0f09af8b8e4d452cc98f45d41ffc95350795"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+      "sha256": "019e5f9085adcc9b25a60fe6b0b3f831330a9defdb57e8603631ba612c97f605"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/QemuArch.c",
+      "sha256": "cc942fe17a07aa05e12d5dc58b94be19d83e2db8d13fd5867182ba614533be12"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamRead.c",
+      "sha256": "f8429b13d0742a7769197e9bcd74985a334d5621ef082a0853b2dcd3941d25d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamReadAdapter.c",
+      "sha256": "16add0aa20ad2e2c85314327ab912b90e2bacbd67df962f6add31057836df728"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamWriteCheckpoint.S",
+      "sha256": "a9549c4d0c90985a685a4f83c6d5e86180b93786914f67fa6d6961a82e0f301d"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RouteAccess.S",
+      "sha256": "d3c6fce816e3dbcf952bb2ff2cde1b6b17ccfe0f7c7a8fbdc24047f76a0e710e"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.inf",
+      "sha256": "816d57fa0ca417d8760426d042116315f34cc7f2fedb2f7df6f4b58baecaa918"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "88f6163e953a322d14983b9d76bb6c15860d165e1caee912002e6e0da90559e8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+      "sha256": "b1dad31d092633dd0170822f532f6d8da6b2c534824e9a306d4aa487e9b2aaf2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerAccess.S",
+      "sha256": "19a8ee26b4c415b3a420dc28f08819f1b798721f7654eecae2da6e2492e5b297"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerIrq.S",
+      "sha256": "f3874d3eb1d9146dbf6b5940eb4c9dac087b1746c14b05b4084f79934512cdc8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerRoute.c",
+      "sha256": "4f4918c4d587153f30c3cf7f8c78da64c29966e6c0365b3195b1920cab9bfc11"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerRouteAdapter.c",
+      "sha256": "7c85b4a6d8914b3b8915628fb5c088bc1596bec08c3a463ad9913aff9a07fde7"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerSource.c",
+      "sha256": "db9c9a11d676cf94c2623ee959a3da7e566e3ace17f1a80cf5d693a5a746628a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/TimerSourceAdapter.c",
+      "sha256": "64282448f36b19c65545527b5525d78d5189a986d12a445c392b6f8eab2c369b"
+    }
+  ],
+  "upstream_inputs": [
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.c",
+      "sha256": "81673f58102492d1ed00ac017ac57943d8020fa1478d73bda08f5dd27fd09ba9"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.inf",
+      "sha256": "8afae643b8f99a923e9c89ed371538f15895ab974a639e894da9a36f7fc5efad"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.c",
+      "sha256": "aa76c504a222cb79982dee09ab3cb913b33382da19cf07c68b99ddd9cf9d3745"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.inf",
+      "sha256": "77dced57e7fad55121dbab8241db5bf92e2f31e396925bac91b65d2e5649b2de"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.c",
+      "sha256": "963f11e21e5cd467217d216b64c3097875e4464a8245fc46508bb6540f66923d"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.inf",
+      "sha256": "077045b9876cf528cf9f9b9e21fd5c5ed857798fd009ff265966c81d86e1249c"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/LICENSE",
+      "sha256": "2b031880c646006165194888f9814806719ab4c91c26d330c4eb71e1983f0187"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.c",
+      "sha256": "b1cf184ebd217656daf92446d9bd724570aad61cb3c7d6d6a2a39d43199d9f35"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.inf",
+      "sha256": "28491c49992134008d55fc0efe7e0792814d517d323ebfb7b70adc27c725e94a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Guid/UniXNUBlockSlice.h",
+      "sha256": "7d89dddb032b3e2bcb7efdd8fc15d1df34ec601d08124e684bd9b3dddfd180e5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Library/UniXNULib.h",
+      "sha256": "8444339ac4a4627ae379a9d3e8e440304f23ff14d5487a5340914fa53cd218f7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNULoader.h",
+      "sha256": "4853991ceac062a2bd3d8d36d262d0cf09b1fe751c44813e267371cd93479cbb"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNUMenuPlugin.h",
+      "sha256": "eb897e32cb4c260818dd89603176f8ff3879bff209dfd1b24fc49e003436d534"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Boot.c",
+      "sha256": "674f34b0ea51b7a077e79a130c8f85d41638160fbaf7238dd120fd888222b6d3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/ClangdAutoGen.h",
+      "sha256": "ef1f27464ecaafb50cd007cceda1a7bd823e8523595787caa4951d0b02d01fca"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Config.c",
+      "sha256": "c070b2eb1c4922df345a2f830c5f2c420bafd11dde759fee2d2ce4f3be3923c5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Font.c",
+      "sha256": "391c7dbc8c6eb3cd07230e3dd8d38e4ba8a5a9b603bcaecb4d8e62a4603d2ac6"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Inject.c",
+      "sha256": "a0072e04b6ff233746aec973d38e288bdcc689481f660f043fbf8f3b8a9d4943"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Internal.h",
+      "sha256": "7acdc37f8c5540bf0df24797bb04ca09dc111414e75c72e8d2ee5f3843a34faf"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Kext.c",
+      "sha256": "f1869ca42e03faf9bd967619ba70dcd3329fb8839513811306478548f67f9aa4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Logo.c",
+      "sha256": "da9d49c502f42c489742d2abaa8a300db1c265b0fcf807e4d7bd3d8aa8a9e4a1"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/LogoShape.h",
+      "sha256": "8fe96788c3c1e27df7f4209c31ae1b3818ae99cf858d6dae457cd16643a6a43b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Main.c",
+      "sha256": "747e2b7a64636a6ffb006079d744338fe18a5313ad1b0df83ea13d55e53ef95e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Menu.c",
+      "sha256": "55584eaae32fab3c25afe390c785310f7769512a17d5b84c7b7be43d3d50ec5b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Slice.c",
+      "sha256": "5cbd409945711c13a9dad18ed6eb5a7c0df49c9b53e7599424c03e23ed2126f8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Toml.c",
+      "sha256": "4d82a7de6196873df6f0a2cc033c67d337f505c53d235b053b8c6458d7332a2a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Ui.c",
+      "sha256": "7f5a2773424a5a8cc68c12d061744ffd80c2847aa6595625740f41e0b5ea6792"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/UniXNULib.inf",
+      "sha256": "e2fdedfbca94513c8987bf1bf85e1c70953a89725b6a9ba84042bf1f402ff322"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Volume.c",
+      "sha256": "ab9a7b36a258cfb43b8c15fee86393ec9a1978e9b3d3e8d8e2a83b2f36bdbff2"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.c",
+      "sha256": "9c100463d9cefa7d124e492b51781c593a067e46c93d375804ad95130845aac7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.inf",
+      "sha256": "8db898fbb9b89719046038e179c7332a19aa6cd8ad2726f30b4ce701bf83e722"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Include/Protocol/UniXNUSample.h",
+      "sha256": "166553704f947e8d10e729b803f669e29eda7d099b3dbcf7b20f5cbfa2f5467a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/empty/README.txt",
+      "sha256": "fb1390dc42fb11075bfebd90ded1009db1109f54c311f729030121b05d80f652"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/DeviceTree/test.dts",
+      "sha256": "8a703c9562204aea7e7364c280ec62f5b92cee44011ca7746ea5cd6db4866680"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/NeverMatch.kit/Kit.toml",
+      "sha256": "ec14e53a23dde506d72c606319a6965f33f84c79b52304583c872c705c42c561"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/Kit.toml",
+      "sha256": "be41df0a32a189cfe39f0d9084fff860727ab23d07bfadbdabb2cdb14ff08d25"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/overlay.dtso",
+      "sha256": "cc84086dd4e0cfd8b7c9d449c8a9ef51e3ad4558f689e65e961dfccf4ff04fba"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/initrd.txt",
+      "sha256": "89d4990944c99aa8535667923a07a04e626c4a838cd0651b3403d50cd5a8c6e4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/unixnu.toml",
+      "sha256": "a702ab953409aaedb9ef19d2b22ffbfef41a1d53b0a4c96acc1f15dc002bba48"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/userdata/EFI/UniXNU/unixnu.toml",
+      "sha256": "ce06101b19a286082fbaa69f69129d487013e9cb51788ce9df5ae8cee8f4ad76"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.c",
+      "sha256": "974be93a4269b6e7cf0d84ede58d17a42e60615549e06ed86ddda67be6f099c8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.inf",
+      "sha256": "39a45bdfa03f8470fcaaf38fec0307ac754b3ef3f0a82a67018bcf7755c929b3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/UniXNUTest.dec",
+      "sha256": "544e2c64333bfbb3b46dde2a964ceee5ae0f0eebfb499ef8bca98e2efe9abc7e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.c",
+      "sha256": "df30e74ecc9d5de0271ae9a5fe2565b2e99cdebcd7453ab5f2d677170132ee34"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.inf",
+      "sha256": "cad1a72072f2c2681798b2f4cc0af5ef122a91eff47839cb6dc7885cbeb6911b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dec",
+      "sha256": "08e87df9581889cecc387f01cc7e56586c1db4d63280f5c4600d02d63fd12e8f"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dsc",
+      "sha256": "6b2f5bbfc5d9351462f2ac0262d2223936004da7319f41652242d8aab17bdf89"
+    }
+  ],
+  "darwin_inputs": [
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/DarwinBoot.dsc",
+      "sha256": "7dcdf998c45dcd9e37c98fc3bcc0992ee2dcb5dd0b2b50bc1c52e71b11ec2993"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootArgs.h",
+      "sha256": "1d6b172a306bf5d3fc409d22bd7e674d166e5fde92652c4135de5c79f3eddd16"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootVideo.h",
+      "sha256": "8d25e85a166b272a1cbc0a5238288670e2707303f4cd97aef180ebf0c42246c4"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.c",
+      "sha256": "d13facd71aa802e02a33b8c463d83a7a9a2f9d5b0a5e5a5fcd96cfdce7985e1a"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.inf",
+      "sha256": "cb10851277b53b355794c1bca3fa16d3bf18a0dc2dee857091837b63599019df"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DiagFont.h",
+      "sha256": "d2a3687db67b069f4e34a961e17fd28b0242986e3fa8dd8a7545cab70834fa8e"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/Entry.S",
+      "sha256": "44c05d16af1fbe51cfdcf074ff590ec214dbe3e8efdc4b83a9d06f7e49be44bd"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/PackedRamdisk.h",
+      "sha256": "8b3a326062baee88a179274e92df05a3a07792d25ef84daa23b71aa47b4a2326"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/WindowSize.h",
+      "sha256": "6f78303c54252eae722be7c9b33869e4e8251ee3569736511790170d499b58cb"
+    }
+  ],
+  "verification_inputs": [
+    {
+      "path": "scripts/record_darwin_refusal.py",
+      "sha256": "a48d4289a0e522d8fc1b498866ebf3c7c91ec0ad3154e9955e69b301c38a23ff"
+    },
+    {
+      "path": "scripts/build_sec_dxe.py",
+      "sha256": "c43e885c7dd237a04263cbf9af2715c01c25779b74cea0642d41f4f752d0e06c"
+    },
+    {
+      "path": "scripts/build_handset_sec_dxe.py",
+      "sha256": "05fbad3f0a7966a122197aae194274b7077f328dbbd63cafa46f883e3b24cc26"
+    },
+    {
+      "path": "scripts/run_sec_dxe.py",
+      "sha256": "6b3f7c30bcc6ed144b79da0593da55548ff8cf860bb2d0de4003c5ec93326dcf"
+    },
+    {
+      "path": "scripts/sec_build_provenance.py",
+      "sha256": "b584003b72006cffeb9433061d7a649072282619c9b70a0e45b1d1ba86390a3f"
+    },
+    {
+      "path": "scripts/darwin_probe.py",
+      "sha256": "bfe4ff8a3335ea893cbd9d90264199feebec7ada1fdbeba41be50a4a6a1e70ce"
+    },
+    {
+      "path": "scripts/validate_darwin_wire.py",
+      "sha256": "212edbc3cd83f38b765a5cf72fbffb27e71b7443c034b8cc83731412beb75361"
+    },
+    {
+      "path": "scripts/audit_darwin_sources.py",
+      "sha256": "bcebec09608a8b3423bab77fe86c5f3d72cf2a1e90e6dcb174b41421957b00f9"
+    },
+    {
+      "path": "scripts/inspect_diagnostic_fd.py",
+      "sha256": "16697842b8463a6580720a1f366721398717af23b5f3b4fa3ec555134e465741"
+    },
+    {
+      "path": "scripts/reboot_after_probe.py",
+      "sha256": "a52c87aff9889cedcfe1130622a2883125e7381dcc13fc4d1c762d39f778b2db"
+    },
+    {
+      "path": "scripts/fixtures/sec_dxe_kernel.c",
+      "sha256": "0138438296631cab9de6bc66ca7ae91799d5952de3cf2cd97eab502e980aaa6d"
+    }
+  ]
+}

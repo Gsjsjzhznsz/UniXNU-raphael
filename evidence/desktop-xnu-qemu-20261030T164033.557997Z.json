@@ -1,0 +1,3689 @@
+{
+  "passed": false,
+  "stop_at": "launchd_main",
+  "artifact_directory": "artifacts/native-xnu-qemu/20261030T164033.557997Z-ehx_zus3",
+  "handset_executed": false,
+  "source_revision": "14d0e6ad84f5950411e687b01868fba8647c9609",
+  "xnu_entry_verified": true,
+  "xnu_arm_init_verified": true,
+  "full_xnu_boot_verified": false,
+  "qemu_ram_megabytes": 2048,
+  "qemu_kernel_window_megabytes": 1536,
+  "minimal_emulator_adt": false,
+  "runner_sha256": "f442b5b4442033e77de24a8cb230f1f3f727e22c6817bfc88058de4c3fc5b4f1",
+  "debugger_tool": {
+    "path": "/usr/bin/gdb-multiarch",
+    "sha256": "0baeb299d3aa39f40ca72c3cb8ae5b15a5bd01f1995583a52cfdd7527bfffe07",
+    "version": "GNU gdb (Ubuntu 15.1-1ubuntu1~24.04.1) 15.1"
+  },
+  "kernel_sha256": "cc650ab445c4803a5d57dcb9dc1ad52519730b302eb31d91907f0fb6e058075c",
+  "kernel_bytes": 125145088,
+  "kernel_unchanged": true,
+  "source_inputs": [
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.c",
+      "sha256": "1202e964edf8869c634a151fe62ad8d412ef9387d7680f819025f3f73b5539ec"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.dsc",
+      "sha256": "36b330f2c1ab3ad8617c7bae475805aa7501f272af43922b0a78e67969cea7ca"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/DarwinFixture.inf",
+      "sha256": "c0cb6529000c18afb45fd70e0031a4090796d7f45114a78a11aaa83e3a28494f"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.c",
+      "sha256": "f03979a17d1291890ddd0ea870ba3c7eb36c63d4ea74145f0cd310c4db1e5f27"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.dsc",
+      "sha256": "cea22a1741156f366dce4ca5052a5e6883d10163aca3aac4aabbf4a067c31bcf"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/HandoffFixture.inf",
+      "sha256": "1781d01d84a276080a5453e31fbf5c2139e7036932c97943b0b1fd7bf03a60c0"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/Include/HandoffState.h",
+      "sha256": "4799df1b3dd9f7f39b1f22c8ed0b8d3dd8698292c3371551697ca8f2c8a5a6a7"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/Include/PayloadFixture.h",
+      "sha256": "f8f0cfc6a86577c503eb3256863e2bae5c0d056e2825c2fb6bb8a7433127d023"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.c",
+      "sha256": "cd86bb6bbf07470f203d4fd7d5ec78ccb20c93db4850f0dace3845713dbd4d35"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.dsc",
+      "sha256": "2642ff2ec9df18bde79d08fabb7fadc24ac8d1112114f835f58bf0a168d930bb"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/ManagerUiFixture.inf",
+      "sha256": "b37e8e18e00a819f7f2a9a11fc1da18d7451e98ac9f1904b90d2b3bb3ff06f1d"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.c",
+      "sha256": "0f05a5621b295348f8d07d1bdf7db9e2d4b5ce32172f420ac22b8e614aa8312e"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.dsc",
+      "sha256": "1157ffd9a3a90c0a5c5effaa7c039719c434c43440a6ee2db9b936b5ea99ed4b"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/NativeXnuFixture.inf",
+      "sha256": "0e8e2e323ae24cbd9768ae0478e5ca377111c97cef614018214824da1d1380bb"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.c",
+      "sha256": "dbc08679b2f46e5f898d12a4d5594330b4b33dfc007d0a8514d363c26de5b24f"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.dsc",
+      "sha256": "4e7c791701d6858f96da25a91e523e3fc8186f8795bb945a42a1c627441b7b2d"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadFixture.inf",
+      "sha256": "3466b7279840ac576116f3ce3ca5dd9f20220dfb8c96ee8a2f85f3e610ed95c8"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadProbe.c",
+      "sha256": "5875d23604d9539c7bf9adb802cd14d30d1fa7b6838ce542fd2d977aca0ac716"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/PayloadProbe.inf",
+      "sha256": "c7ed8c2ad1ce89c2ba490759d6fddfa26b32c5b6ac172ee9d12fe121c4c42da5"
+    },
+    {
+      "path": "tests/RaphaelTestPkg/RaphaelTestPkg.dec",
+      "sha256": "be4056eda68855bb2296b76563ec2d9580cb25f87b73c0b9d1e2ad0dfb3cb09b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.c",
+      "sha256": "81673f58102492d1ed00ac017ac57943d8020fa1478d73bda08f5dd27fd09ba9"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Application/UniXNU/UniXNU.inf",
+      "sha256": "8afae643b8f99a923e9c89ed371538f15895ab974a639e894da9a36f7fc5efad"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.c",
+      "sha256": "aa76c504a222cb79982dee09ab3cb913b33382da19cf07c68b99ddd9cf9d3745"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/AdvancedLogDxe/AdvancedLogDxe.inf",
+      "sha256": "77dced57e7fad55121dbab8241db5bf92e2f31e396925bac91b65d2e5649b2de"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.c",
+      "sha256": "963f11e21e5cd467217d216b64c3097875e4464a8245fc46508bb6540f66923d"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNUDxe/UniXNUDxe.inf",
+      "sha256": "077045b9876cf528cf9f9b9e21fd5c5ed857798fd009ff265966c81d86e1249c"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/LICENSE",
+      "sha256": "2b031880c646006165194888f9814806719ab4c91c26d330c4eb71e1983f0187"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.c",
+      "sha256": "b1cf184ebd217656daf92446d9bd724570aad61cb3c7d6d6a2a39d43199d9f35"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.inf",
+      "sha256": "28491c49992134008d55fc0efe7e0792814d517d323ebfb7b70adc27c725e94a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Guid/UniXNUBlockSlice.h",
+      "sha256": "7d89dddb032b3e2bcb7efdd8fc15d1df34ec601d08124e684bd9b3dddfd180e5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Library/UniXNULib.h",
+      "sha256": "8444339ac4a4627ae379a9d3e8e440304f23ff14d5487a5340914fa53cd218f7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNULoader.h",
+      "sha256": "4853991ceac062a2bd3d8d36d262d0cf09b1fe751c44813e267371cd93479cbb"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Include/Protocol/UniXNUMenuPlugin.h",
+      "sha256": "eb897e32cb4c260818dd89603176f8ff3879bff209dfd1b24fc49e003436d534"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Boot.c",
+      "sha256": "674f34b0ea51b7a077e79a130c8f85d41638160fbaf7238dd120fd888222b6d3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/ClangdAutoGen.h",
+      "sha256": "ef1f27464ecaafb50cd007cceda1a7bd823e8523595787caa4951d0b02d01fca"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Config.c",
+      "sha256": "c070b2eb1c4922df345a2f830c5f2c420bafd11dde759fee2d2ce4f3be3923c5"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Font.c",
+      "sha256": "391c7dbc8c6eb3cd07230e3dd8d38e4ba8a5a9b603bcaecb4d8e62a4603d2ac6"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Inject.c",
+      "sha256": "a0072e04b6ff233746aec973d38e288bdcc689481f660f043fbf8f3b8a9d4943"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Internal.h",
+      "sha256": "7acdc37f8c5540bf0df24797bb04ca09dc111414e75c72e8d2ee5f3843a34faf"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Kext.c",
+      "sha256": "f1869ca42e03faf9bd967619ba70dcd3329fb8839513811306478548f67f9aa4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Logo.c",
+      "sha256": "da9d49c502f42c489742d2abaa8a300db1c265b0fcf807e4d7bd3d8aa8a9e4a1"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/LogoShape.h",
+      "sha256": "8fe96788c3c1e27df7f4209c31ae1b3818ae99cf858d6dae457cd16643a6a43b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Main.c",
+      "sha256": "747e2b7a64636a6ffb006079d744338fe18a5313ad1b0df83ea13d55e53ef95e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Menu.c",
+      "sha256": "55584eaae32fab3c25afe390c785310f7769512a17d5b84c7b7be43d3d50ec5b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Slice.c",
+      "sha256": "5cbd409945711c13a9dad18ed6eb5a7c0df49c9b53e7599424c03e23ed2126f8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Toml.c",
+      "sha256": "4d82a7de6196873df6f0a2cc033c67d337f505c53d235b053b8c6458d7332a2a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Ui.c",
+      "sha256": "7f5a2773424a5a8cc68c12d061744ffd80c2847aa6595625740f41e0b5ea6792"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/UniXNULib.inf",
+      "sha256": "e2fdedfbca94513c8987bf1bf85e1c70953a89725b6a9ba84042bf1f402ff322"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Library/UniXNULib/Volume.c",
+      "sha256": "ab9a7b36a258cfb43b8c15fee86393ec9a1978e9b3d3e8d8e2a83b2f36bdbff2"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.c",
+      "sha256": "9c100463d9cefa7d124e492b51781c593a067e46c93d375804ad95130845aac7"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/HelloPayload/HelloPayload.inf",
+      "sha256": "8db898fbb9b89719046038e179c7332a19aa6cd8ad2726f30b4ce701bf83e722"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Include/Protocol/UniXNUSample.h",
+      "sha256": "166553704f947e8d10e729b803f669e29eda7d099b3dbcf7b20f5cbfa2f5467a"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/empty/README.txt",
+      "sha256": "fb1390dc42fb11075bfebd90ded1009db1109f54c311f729030121b05d80f652"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/DeviceTree/test.dts",
+      "sha256": "8a703c9562204aea7e7364c280ec62f5b92cee44011ca7746ea5cd6db4866680"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/NeverMatch.kit/Kit.toml",
+      "sha256": "ec14e53a23dde506d72c606319a6965f33f84c79b52304583c872c705c42c561"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/Kit.toml",
+      "sha256": "be41df0a32a189cfe39f0d9084fff860727ab23d07bfadbdabb2cdb14ff08d25"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/Kits/SampleDriver.kit/overlay.dtso",
+      "sha256": "cc84086dd4e0cfd8b7c9d449c8a9ef51e3ad4558f689e65e961dfccf4ff04fba"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/initrd.txt",
+      "sha256": "89d4990944c99aa8535667923a07a04e626c4a838cd0651b3403d50cd5a8c6e4"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/esp/EFI/UniXNU/unixnu.toml",
+      "sha256": "a702ab953409aaedb9ef19d2b22ffbfef41a1d53b0a4c96acc1f15dc002bba48"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/Qemu/userdata/EFI/UniXNU/unixnu.toml",
+      "sha256": "ce06101b19a286082fbaa69f69129d487013e9cb51788ce9df5ae8cee8f4ad76"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.c",
+      "sha256": "974be93a4269b6e7cf0d84ede58d17a42e60615549e06ed86ddda67be6f099c8"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/SampleDriver/SampleDriver.inf",
+      "sha256": "39a45bdfa03f8470fcaaf38fec0307ac754b3ef3f0a82a67018bcf7755c929b3"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/UniXNUTest.dec",
+      "sha256": "544e2c64333bfbb3b46dde2a964ceee5ae0f0eebfb499ef8bca98e2efe9abc7e"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.c",
+      "sha256": "df30e74ecc9d5de0271ae9a5fe2565b2e99cdebcd7453ab5f2d677170132ee34"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/Test/XnuTest/XnuTest.inf",
+      "sha256": "cad1a72072f2c2681798b2f4cc0af5ef122a91eff47839cb6dc7885cbeb6911b"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dec",
+      "sha256": "08e87df9581889cecc387f01cc7e56586c1db4d63280f5c4600d02d63fd12e8f"
+    },
+    {
+      "path": "sources/UniXNU/package/UniXNUPkg/UniXNUPkg.dsc",
+      "sha256": "6b2f5bbfc5d9351462f2ac0262d2223936004da7319f41652242d8aab17bdf89"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/DarwinBoot.dsc",
+      "sha256": "7dcdf998c45dcd9e37c98fc3bcc0992ee2dcb5dd0b2b50bc1c52e71b11ec2993"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootArgs.h",
+      "sha256": "1d6b172a306bf5d3fc409d22bd7e674d166e5fde92652c4135de5c79f3eddd16"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/BootVideo.h",
+      "sha256": "8d25e85a166b272a1cbc0a5238288670e2707303f4cd97aef180ebf0c42246c4"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.c",
+      "sha256": "d13facd71aa802e02a33b8c463d83a7a9a2f9d5b0a5e5a5fcd96cfdce7985e1a"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DarwinBoot.inf",
+      "sha256": "cb10851277b53b355794c1bca3fa16d3bf18a0dc2dee857091837b63599019df"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/DiagFont.h",
+      "sha256": "d2a3687db67b069f4e34a961e17fd28b0242986e3fa8dd8a7545cab70834fa8e"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/Entry.S",
+      "sha256": "44c05d16af1fbe51cfdcf074ff590ec214dbe3e8efdc4b83a9d06f7e49be44bd"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/PackedRamdisk.h",
+      "sha256": "8b3a326062baee88a179274e92df05a3a07792d25ef84daa23b71aa47b4a2326"
+    },
+    {
+      "path": "sources/UniXNU/drivers/DarwinBoot/DarwinBootPkg/Driver/WindowSize.h",
+      "sha256": "6f78303c54252eae722be7c9b33869e4e8251ee3569736511790170d499b58cb"
+    }
+  ],
+  "revisions": {
+    "sources/mu_basecore": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+    "sources/UniXNU": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+    "sources/UniXNU/drivers/DarwinBoot": "3325e352d7df68a9f9ad74832ed94a6acbbd7390"
+  },
+  "observer_sha256": "6c46173c9197c1f24da80d6442aaf54200e47b3033cd4b0f73eee86cf4175ecf",
+  "host_build_passed": true,
+  "images": {
+    "DarwinBoot": {
+      "sha256": "49b11734464416d8edc4135287fea2950097ad1c6852bfab703bf0c098b5e5fe",
+      "bytes": 19968
+    },
+    "NativeXnuFixture": {
+      "sha256": "fe39fe92903265acd61197b71d678b38e308c206b9aaba55ea33e0b4c05bde43",
+      "bytes": 71680
+    }
+  },
+  "image_structure_passed": true,
+  "qemu_ramfb_requested": true,
+  "read_only_system_disks": {
+    "passed": true,
+    "handset_written": false,
+    "filesystem_modified": false,
+    "disks": [
+      {
+        "role": "OS",
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76040-038.dmg",
+        "path": "artifacts/desktop-disks/20261030T075713Z/OS.raw",
+        "bytes": 6077580800,
+        "original_source_unchanged": true,
+        "raw_symlink": true,
+        "apfs_containers": [
+          {
+            "offset": 17408,
+            "bytes": 6077546496,
+            "block_bytes": 4096,
+            "blocks": 1483776,
+            "uuid": "50f8a67f-afc1-4a1b-bcbb-82162674c67f",
+            "volumes": [
+              "04769d26-2ca0-4825-b443-e2e5f88300f2"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "SystemOS",
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76034-038.dmg",
+        "path": "artifacts/desktop-disks/20261030T075713Z/SystemOS.raw",
+        "bytes": 3303014400,
+        "original_source_unchanged": true,
+        "raw_symlink": true,
+        "apfs_containers": [
+          {
+            "offset": 0,
+            "bytes": 3303014400,
+            "block_bytes": 4096,
+            "blocks": 806400,
+            "uuid": "e886f82c-ee56-4b52-af5f-e70bf46320c4",
+            "volumes": [
+              "8846fe78-2910-4297-af97-d59bb6f8fc16"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "root_volume_uuid": "04769d26-2ca0-4825-b443-e2e5f88300f2",
+  "emulator_hardware_source": {
+    "dtb_sha256": "2a068130944b56ed24831bf425e545dbba598fbdc3e12c9d34aea338fa9d6b4c",
+    "io_ranges": [
+      [
+        167772160,
+        512
+      ],
+      [
+        167772672,
+        512
+      ],
+      [
+        167773184,
+        512
+      ],
+      [
+        167773696,
+        512
+      ],
+      [
+        167774208,
+        512
+      ],
+      [
+        167774720,
+        512
+      ],
+      [
+        167775232,
+        512
+      ],
+      [
+        167775744,
+        512
+      ],
+      [
+        167776256,
+        512
+      ],
+      [
+        167776768,
+        512
+      ],
+      [
+        167777280,
+        512
+      ],
+      [
+        167777792,
+        512
+      ],
+      [
+        167778304,
+        512
+      ],
+      [
+        167778816,
+        512
+      ],
+      [
+        167779328,
+        512
+      ],
+      [
+        167779840,
+        512
+      ],
+      [
+        167780352,
+        512
+      ],
+      [
+        167780864,
+        512
+      ],
+      [
+        167781376,
+        512
+      ],
+      [
+        167781888,
+        512
+      ],
+      [
+        167782400,
+        512
+      ],
+      [
+        167782912,
+        512
+      ],
+      [
+        167783424,
+        512
+      ],
+      [
+        167783936,
+        512
+      ],
+      [
+        167784448,
+        512
+      ],
+      [
+        167784960,
+        512
+      ],
+      [
+        167785472,
+        512
+      ],
+      [
+        167785984,
+        512
+      ],
+      [
+        167786496,
+        512
+      ],
+      [
+        167787008,
+        512
+      ],
+      [
+        167787520,
+        512
+      ],
+      [
+        167788032,
+        512
+      ],
+      [
+        150994944,
+        4096
+      ],
+      [
+        134217728,
+        65536
+      ],
+      [
+        134873088,
+        16121856
+      ]
+    ],
+    "arm_io_base": 134217728,
+    "arm_io_bytes": 33570816,
+    "cpu_affinity": 0,
+    "dram_base": 1073741824,
+    "dram_bytes": 2147483648
+  },
+  "independent_cpu_resources": {
+    "gic_registers": [
+      [
+        134217728,
+        65536
+      ],
+      [
+        134873088,
+        16121856
+      ]
+    ],
+    "timer": "physical",
+    "timer_fdt_specifier": [
+      1,
+      14,
+      4
+    ],
+    "timer_intid": 30,
+    "source": "same-run qemu-generated.dtb; counter frequency independently checked at EL1"
+  },
+  "qemu_vmm_declared": true,
+  "os_profile_identity": {
+    "profile": "ipados-17.7.11-21H461",
+    "root_keys": [
+      "compatible",
+      "model",
+      "target-type"
+    ],
+    "chosen_keys": [
+      "osenvironment",
+      "crypto-hash-method",
+      "certificate-production-status",
+      "effective-production-status-ap",
+      "certificate-security-mode",
+      "effective-security-mode-sep",
+      "amfi-only-platform-code"
+    ],
+    "hardware_source": "same-run QEMU FDT; no Apple MMIO, CPU or memory nodes imported"
+  },
+  "emulator_display_scale_policy": {
+    "value": 1,
+    "meaning": "one logical pixel per firmware GOP pixel",
+    "handset_hardware_fact": false
+  },
+  "emulator_display_declaration": {
+    "path": "/arm-io/raphael-gop",
+    "device_type": "display-subsystem",
+    "hardware_registers_declared": false,
+    "source": "selected original IOMobileFramebuffer iomfb_populate_all_display_infos; firmware GOP resource independently obtained at runtime"
+  },
+  "original_trust_cache": {
+    "passed": true,
+    "original_modules_unchanged": true,
+    "added_owner_cdhashes": false,
+    "apple_signature_chain_verified": false,
+    "modules": [
+      {
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76040-038.dmg.trustcache",
+        "source_sha256": "4563bdbf6ed8f72237d45dbba3ccde432634338f95c10d79d5d4631678a97c7c",
+        "entries": 2478,
+        "module_sha256": "da88460e6e513438d5307e5c526f76497a74754476a24da29f239f0c90120fc2"
+      },
+      {
+        "source": "artifacts/desktop-system/ipsw/21H461/044-76034-038.dmg.trustcache",
+        "source_sha256": "9742f3d566369e6c48f63b3dc0740b06c243d13c6650e25bbf44616e13d6d097",
+        "entries": 76,
+        "module_sha256": "d121ba89167e03aafd00fa687c30cd8ebc4ccafd10c1408adb2ba3de12403651"
+      }
+    ],
+    "bundle": "artifacts/desktop-trust/20261030T081913Z/original-trust.bundle",
+    "bytes": 61356,
+    "sha256": "7416ca4f8377146626bb284e2133c76bee6cb4e3ee0af5d648b186235a7323a7"
+  },
+  "emulator_scratch_data": {
+    "passed": true,
+    "artifact_directory": "evidence/private/desktop-data/20261030T155658Z",
+    "image": "evidence/private/desktop-data/20261030T155658Z/data.raw",
+    "bytes": 1073741824,
+    "capacity_policy": "Explicit host-owned emulator scratch capacity, not handset storage",
+    "explicit_kernel_volume_contract": true,
+    "container_uuid": "d0a88b6c-800b-434b-974d-e7a55e9228a3",
+    "volume_uuid": "38a12874-2b24-4eca-9cbc-e05600dba8e9",
+    "seed": "evidence/private/desktop-data/20261030T155658Z/seed.json",
+    "seed_bytes": 611715,
+    "entries": 226,
+    "entry_counts": {
+      "file": 39,
+      "directory": 186,
+      "symlink": 1
+    },
+    "user_skeleton": {
+      "recipe": "sources/UniXNU/scripts/prepare-offline-data.py",
+      "revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+      "created": [
+        "/private/var/db/dslocal",
+        "/private/var/db/dslocal/nodes",
+        "/private/var/db/dslocal/nodes/Default",
+        "/private/var/db/dslocal/nodes/Default/users",
+        "/private/var/db/dslocal/nodes/Default/groups",
+        "/private/var/db/dslocal/nodes/Default/config",
+        "/private/var/containers",
+        "/private/var/containers/Data",
+        "/private/var/containers/Data/System",
+        "/private/var/containers/Data/Application",
+        "/private/var/containers/Shared",
+        "/private/var/containers/Shared/SystemGroup",
+        "/private/var/PersonaVolumes",
+        "/private/var/preboot",
+        "/private/var/Library",
+        "/private/var/keybags",
+        "/private/var/keybags/backup",
+        "/private/var/mobile/Containers",
+        "/private/var/mobile/Documents",
+        "/private/var/mobile/tmp"
+      ],
+      "added_keys_or_user_records": false,
+      "permission_policy": "New keybags directories root 0700; other new directories 0755; original mobile owner/group for mobile subtree, root var owner/group otherwise"
+    },
+    "commands": [
+      [
+        "mkapfs",
+        "-s",
+        "-L",
+        "RaphaelScratchData",
+        "-U",
+        "d0a88b6c-800b-434b-974d-e7a55e9228a3",
+        "-u",
+        "38a12874-2b24-4eca-9cbc-e05600dba8e9",
+        "/home/guo/work/raphael-fresh/evidence/private/desktop-data/20261030T155658Z/data.raw"
+      ],
+      [
+        "apfsck",
+        "/home/guo/work/raphael-fresh/evidence/private/desktop-data/20261030T155658Z/data.raw"
+      ],
+      [
+        "fsapfsinfo",
+        "/home/guo/work/raphael-fresh/evidence/private/desktop-data/20261030T155658Z/data.raw"
+      ]
+    ],
+    "host_format_checked": true,
+    "checkpoint_normalization": [
+      {
+        "block": 1,
+        "before": [
+          65,
+          68,
+          66,
+          67
+        ],
+        "after": [
+          65,
+          66,
+          67,
+          68
+        ]
+      }
+    ],
+    "apple_apfs_mount_verified": false,
+    "handset_executed": false,
+    "limits": [
+      "New emulator scratch only; experimental apfsprogs formatter",
+      "Original default var only; private seed excluded from public source",
+      "Mount, writes and desktop not implied by host checks"
+    ]
+  },
+  "emulator_data_transport": {
+    "kind": "DBRDISK1 retained for sparse RAM block",
+    "metadata": {
+      "bytes": 1073741824,
+      "sha256": "491fa1998546976f455abb5223d40c372e6817a7e8d55fbd3a23b5cadf88d5b2",
+      "encoded_bytes": 73840,
+      "encoded_sha256": "1d4e051f71aad47ea748d98f68b00586908532f4b91ce986f4c7e1e36489e99f",
+      "packed": true
+    },
+    "logical_bytes": 1073741824,
+    "handset_written": false
+  },
+  "boot_arguments": "-v keepsyms=1 cpus=1 kt_fixed_zones=200 offline-apfs-load=1 -apfs_shared_datavolume raphael-desktop-display=1 offline-mobile-graphics-load=1",
+  "kalloc_budget_override": 200,
+  "adt": {
+    "bytes": 19128,
+    "sha256": "a0ac0ad03fe5a2683485b227694c4de21fbeaee48ce92249ae865b264b7923a8",
+    "hardware_qualified": false
+  },
+  "emulator_firmware": {
+    "AAVMF_CODE.fd": "545e2eda871a00dba51c0df48a34829fe3b0de6ec10ea760c75f1fc1c6a29dc5",
+    "AAVMF_VARS.fd": "b3b855c5a80310168051164986855692d1bdb06e67619856177965cd87c6774f"
+  },
+  "cpu_entry_observation": {
+    "counter_frequency": 62500000,
+    "mpidr": 2147483648,
+    "source": "same-run EL1 MRS in NativeXnuFixture; ADT values cross-checked"
+  },
+  "firmware_boot_video": {
+    "base": 3162112000,
+    "display": 1,
+    "row_bytes": 3200,
+    "width": 800,
+    "height": 600,
+    "depth": 32
+  },
+  "debugger_timeout": true,
+  "debugger_returncode": 0,
+  "debugger": {
+    "breakpoints": [
+      {
+        "name": "native-entry",
+        "address": 1334461576
+      },
+      {
+        "name": "_IOFindBSDRoot",
+        "address": 18446744005191457524
+      },
+      {
+        "name": "_IOFindBSDRoot",
+        "address": 1340136180
+      },
+      {
+        "name": "_LowExceptionVectorBase",
+        "address": 1334464512
+      },
+      {
+        "name": "_LowExceptionVectorBase",
+        "address": 18446744005185785856
+      },
+      {
+        "name": "_PE_cpu_machine_init",
+        "address": 18446744005191177148
+      },
+      {
+        "name": "_PE_cpu_machine_init",
+        "address": 1339855804
+      },
+      {
+        "name": "_PE_init_iokit",
+        "address": 1340292096
+      },
+      {
+        "name": "_PE_init_iokit",
+        "address": 18446744005191613440
+      },
+      {
+        "name": "_PE_init_platform",
+        "address": 18446744005191614564
+      },
+      {
+        "name": "_PE_init_platform",
+        "address": 1340293220
+      },
+      {
+        "name": "__ZN13ArmDTPlatform9configureEP9IOService",
+        "address": 18446744005191754724
+      },
+      {
+        "name": "__ZN13ArmDTPlatform9configureEP9IOService",
+        "address": 1340433380
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu5startEP9IOService",
+        "address": 18446744005191759412
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu5startEP9IOService",
+        "address": 1340438068
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu9interruptEv",
+        "address": 1340439016
+      },
+      {
+        "name": "__ZN14RaphaelBootCpu9interruptEv",
+        "address": 18446744005191760360
+      },
+      {
+        "name": "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec",
+        "address": 18446744005190917500
+      },
+      {
+        "name": "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec",
+        "address": 1339596156
+      },
+      {
+        "name": "_arm_init",
+        "address": 1340550512
+      },
+      {
+        "name": "_arm_init",
+        "address": 18446744005191871856
+      },
+      {
+        "name": "_bsd_init",
+        "address": 18446744005188729140
+      },
+      {
+        "name": "_bsd_init",
+        "address": 1337407796
+      },
+      {
+        "name": "_exec_mach_imgact",
+        "address": 18446744005188891716
+      },
+      {
+        "name": "_exec_mach_imgact",
+        "address": 1337570372
+      },
+      {
+        "name": "_kalloc_type_apply_policy",
+        "address": 1332849464
+      },
+      {
+        "name": "_kalloc_type_apply_policy",
+        "address": 18446744005184170808
+      },
+      {
+        "name": "_kernel_bootstrap",
+        "address": 18446744005184404196
+      },
+      {
+        "name": "_kernel_bootstrap",
+        "address": 1333082852
+      },
+      {
+        "name": "_kernel_bootstrap_thread",
+        "address": 1333085040
+      },
+      {
+        "name": "_kernel_bootstrap_thread",
+        "address": 18446744005184406384
+      },
+      {
+        "name": "_load_init_program",
+        "address": 18446744005188914308
+      },
+      {
+        "name": "_load_init_program",
+        "address": 1337592964
+      },
+      {
+        "name": "_machine_startup",
+        "address": 1334476080
+      },
+      {
+        "name": "_machine_startup",
+        "address": 18446744005185797424
+      },
+      {
+        "name": "_ml_processor_register",
+        "address": 1334481536
+      },
+      {
+        "name": "_ml_processor_register",
+        "address": 18446744005185802880
+      },
+      {
+        "name": "_native_apfs_probe_checkpoint",
+        "address": 1337407784
+      },
+      {
+        "name": "_native_apfs_probe_checkpoint",
+        "address": 18446744005188729128
+      },
+      {
+        "name": "_native_owner_root_accepted_checkpoint",
+        "address": 1337410816
+      },
+      {
+        "name": "_native_owner_root_accepted_checkpoint",
+        "address": 18446744005188732160
+      },
+      {
+        "name": "_native_owner_root_checkpoint",
+        "address": 18446744005188732156
+      },
+      {
+        "name": "_native_owner_root_checkpoint",
+        "address": 1337410812
+      },
+      {
+        "name": "_native_virtio_read_checkpoint",
+        "address": 1340449656
+      },
+      {
+        "name": "_native_virtio_read_checkpoint",
+        "address": 18446744005191771000
+      },
+      {
+        "name": "_panic",
+        "address": 18446744005191825364
+      },
+      {
+        "name": "_panic",
+        "address": 1340504020
+      },
+      {
+        "name": "_panic_with_options",
+        "address": 1340504184
+      },
+      {
+        "name": "_panic_with_options",
+        "address": 18446744005191825528
+      },
+      {
+        "name": "_raphael_data_seed_checkpoint",
+        "address": 1340500536
+      },
+      {
+        "name": "_raphael_data_seed_checkpoint",
+        "address": 18446744005191821880
+      },
+      {
+        "name": "_raphael_display_checkpoint",
+        "address": 1340439496
+      },
+      {
+        "name": "_raphael_display_checkpoint",
+        "address": 18446744005191760840
+      },
+      {
+        "name": "_raphael_display_frame_checkpoint",
+        "address": 18446744005191760836
+      },
+      {
+        "name": "_raphael_display_frame_checkpoint",
+        "address": 1340439492
+      },
+      {
+        "name": "_register_crypto_functions",
+        "address": 1339412568
+      },
+      {
+        "name": "_register_crypto_functions",
+        "address": 18446744005190733912
+      },
+      {
+        "name": "_rtclock_intr",
+        "address": 1334502840
+      },
+      {
+        "name": "_rtclock_intr",
+        "address": 18446744005185824184
+      },
+      {
+        "name": "_start_first_cpu",
+        "address": 18446744005185790044
+      },
+      {
+        "name": "_thread_setentrypoint",
+        "address": 18446744005185831740
+      },
+      {
+        "name": "_thread_setentrypoint",
+        "address": 1334510396
+      },
+      {
+        "name": "_unix_syscall",
+        "address": 18446744005190421756
+      },
+      {
+        "name": "_unix_syscall",
+        "address": 1339100412
+      },
+      {
+        "name": "_vfs_mountroot",
+        "address": 1334989560
+      },
+      {
+        "name": "_vfs_mountroot",
+        "address": 18446744005186310904
+      }
+    ],
+    "stops": [
+      {
+        "label": "native-entry",
+        "pc": 1334461576,
+        "sp": 1199657904,
+        "x0": 1349861376,
+        "fp": 1199662224,
+        "lr": 3215574092,
+        "cpsr": 1610613701,
+        "sctlr_el1": 818940296,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000
+      },
+      {
+        "label": "after-first-native-instruction",
+        "pc": 1334468700,
+        "sp": 1199657904,
+        "x0": 1349861376,
+        "fp": 1199662224,
+        "lr": 3215574092,
+        "cpsr": 1610613701,
+        "sctlr_el1": 818940296,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191871856,
+        "sp": 18446744005193613312,
+        "x0": 18446744005201182720,
+        "fp": 1199662224,
+        "lr": 18446744005191871856,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_arm_init"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191614564,
+        "sp": 18446744005193613104,
+        "x0": 0,
+        "fp": 18446744005193613296,
+        "lr": 18446744005191873320,
+        "cpsr": 2147484612,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_PE_init_platform"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005185797424,
+        "sp": 18446744005193613104,
+        "x0": 18446744005109054704,
+        "fp": 18446744005193613296,
+        "lr": 18446744005191874332,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_machine_startup"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005184404196,
+        "sp": 18446744005193613104,
+        "x0": 18446744005109130192,
+        "fp": 18446744005193613296,
+        "lr": 18446744005191874332,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kernel_bootstrap"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005184170808,
+        "sp": 18446744005193612224,
+        "x0": 18446744005193206640,
+        "fp": 18446744005193612784,
+        "lr": 18446744005191834648,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kalloc_type_apply_policy"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191834648,
+        "sp": 18446744005193612224,
+        "x0": 0,
+        "fp": 18446744005193612784,
+        "lr": 18446744005191834648,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kalloc_policy_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005184406384,
+        "sp": 18446744041418440496,
+        "x0": 0,
+        "fp": 0,
+        "lr": 18446744005185791140,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_kernel_bootstrap_thread"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191613440,
+        "sp": 18446744041418440416,
+        "x0": 18446744041418440304,
+        "fp": 18446744041418440480,
+        "lr": 18446744005184407076,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 0,
+        "FAR_EL1": 0,
+        "ELR_EL1": 3218547352,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_PE_init_iokit"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190733912,
+        "sp": 18446744041418439280,
+        "x0": 18446744005087512176,
+        "fp": 18446744041418439664,
+        "lr": 18446744005068180452,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_register_crypto_functions"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191754724,
+        "sp": 18446744041418996752,
+        "x0": 18446744024652340992,
+        "fp": 18446744041418996800,
+        "lr": 18446744005191162112,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN13ArmDTPlatform9configureEP9IOService"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191162112,
+        "sp": 18446744041418996752,
+        "x0": 1,
+        "fp": 18446744041418996800,
+        "lr": 18446744005191162112,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_platform_configure_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191759412,
+        "sp": 18446744041419193424,
+        "x0": 18446744024651724160,
+        "fp": 18446744041419193568,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN14RaphaelBootCpu5startEP9IOService"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005185802880,
+        "sp": 18446744041419193200,
+        "x0": 18446744041419193232,
+        "fp": 18446744041419193408,
+        "lr": 18446744005191759696,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_ml_processor_register"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005188729140,
+        "sp": 18446744041418440416,
+        "x0": 0,
+        "fp": 18446744041418440480,
+        "lr": 18446744005184407652,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_bsd_init"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005188729128,
+        "sp": 18446744041418440128,
+        "x0": 18446744005192600712,
+        "fp": 18446744041418440400,
+        "lr": 18446744005188730408,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_native_apfs_probe_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419455568,
+        "x0": 0,
+        "fp": 18446744041419455712,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419488336,
+        "x0": 0,
+        "fp": 18446744041419488480,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419521104,
+        "x0": 0,
+        "fp": 18446744041419521248,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419553872,
+        "x0": 0,
+        "fp": 18446744041419554016,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419586640,
+        "x0": 0,
+        "fp": 18446744041419586784,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419619408,
+        "x0": 0,
+        "fp": 18446744041419619552,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419652176,
+        "x0": 0,
+        "fp": 18446744041419652320,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419684944,
+        "x0": 0,
+        "fp": 18446744041419685088,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419717712,
+        "x0": 0,
+        "fp": 18446744041419717856,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419750480,
+        "x0": 0,
+        "fp": 18446744041419750624,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419783248,
+        "x0": 0,
+        "fp": 18446744041419783392,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419816016,
+        "x0": 0,
+        "fp": 18446744041419816160,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419848784,
+        "x0": 0,
+        "fp": 18446744041419848928,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419881552,
+        "x0": 0,
+        "fp": 18446744041419881696,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419914320,
+        "x0": 0,
+        "fp": 18446744041419914464,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419947088,
+        "x0": 0,
+        "fp": 18446744041419947232,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419979856,
+        "x0": 0,
+        "fp": 18446744041419980000,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420012624,
+        "x0": 0,
+        "fp": 18446744041420012768,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420045392,
+        "x0": 0,
+        "fp": 18446744041420045536,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420078160,
+        "x0": 0,
+        "fp": 18446744041420078304,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420110928,
+        "x0": 0,
+        "fp": 18446744041420111072,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420143696,
+        "x0": 0,
+        "fp": 18446744041420143840,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420176464,
+        "x0": 0,
+        "fp": 18446744041420176608,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420209232,
+        "x0": 0,
+        "fp": 18446744041420209376,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420242000,
+        "x0": 0,
+        "fp": 18446744041420242144,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420274768,
+        "x0": 0,
+        "fp": 18446744041420274912,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420307536,
+        "x0": 0,
+        "fp": 18446744041420307680,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420340304,
+        "x0": 0,
+        "fp": 18446744041420340448,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420373072,
+        "x0": 0,
+        "fp": 18446744041420373216,
+        "lr": 18446744005190910940,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420471376,
+        "x0": 0,
+        "fp": 18446744041420471520,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190917500,
+        "sp": 18446744041420799056,
+        "x0": 18446744016920903280,
+        "fp": 18446744041420799152,
+        "lr": 18446744005191170952,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582470,
+        "FAR_EL1": 18446744042152808448,
+        "ELR_EL1": 18446744005187614504,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582470,
+        "FAR_EL1": 18446744042152808448,
+        "ELR_EL1": 18446744005187614504,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041418964048,
+        "x0": 1,
+        "fp": 18446744041418964192,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420733520,
+        "x0": 1,
+        "fp": 18446744041420733664,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420667984,
+        "x0": 1,
+        "fp": 18446744041420668128,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041420667984,
+        "x0": 1,
+        "fp": 18446744041420668128,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005191900708,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191760360,
+        "sp": 18446744038960299904,
+        "x0": 18446744024651724160,
+        "fp": 18446744038960299904,
+        "lr": 18446744005191181576,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005185795304,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "__ZN14RaphaelBootCpu9interruptEv"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005185824184,
+        "sp": 18446744038960299792,
+        "x0": 0,
+        "fp": 18446744038960299888,
+        "lr": 18446744005191760436,
+        "cpsr": 1610613700,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005185795304,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_rtclock_intr"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191181576,
+        "sp": 18446744038960299904,
+        "x0": 0,
+        "fp": 18446744038960299904,
+        "lr": 18446744005191181576,
+        "cpsr": 536871876,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005185795304,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_irq_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190910940,
+        "sp": 18446744041419193424,
+        "x0": 1,
+        "fp": 18446744041419193568,
+        "lr": 18446744005190910940,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005185795304,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_cpu_start_return"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191760840,
+        "sp": 18446744041418439456,
+        "x0": 0,
+        "fp": 18446744041418439760,
+        "lr": 18446744005081858264,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005184224276,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_display_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191457524,
+        "sp": 18446744041418440128,
+        "x0": 18446744005192699552,
+        "fp": 18446744041418440400,
+        "lr": 18446744005188730996,
+        "cpsr": 516,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005186877172,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_IOFindBSDRoot"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191771000,
+        "sp": 18446744041420405696,
+        "x0": 18446744013057978880,
+        "fp": 18446744041420405824,
+        "lr": 18446744005191778340,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005067935888,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_native_virtio_read_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191771000,
+        "sp": 18446744041420438464,
+        "x0": 18446744013057973728,
+        "fp": 18446744041420438592,
+        "lr": 18446744005191778340,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005185795304,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_native_virtio_read_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005186310904,
+        "sp": 18446744041418440128,
+        "x0": 0,
+        "fp": 18446744041418440400,
+        "lr": 18446744005188731064,
+        "cpsr": 1073742340,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005185795304,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_vfs_mountroot"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005188732156,
+        "sp": 18446744041418440128,
+        "x0": 80,
+        "fp": 18446744041418440400,
+        "lr": 18446744005188731656,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005190471892,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_native_owner_root_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005188732160,
+        "sp": 18446744041418440128,
+        "x0": 80,
+        "fp": 18446744041418440400,
+        "lr": 18446744005188731684,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005190471892,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_native_owner_root_accepted_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005188914308,
+        "sp": 18446744041420570144,
+        "x0": 18446744016922647744,
+        "fp": 18446744041420570192,
+        "lr": 18446744005188732408,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582479,
+        "FAR_EL1": 18446744042258653184,
+        "ELR_EL1": 18446744005184678704,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_load_init_program"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005191821880,
+        "sp": 18446744041420568240,
+        "x0": 0,
+        "fp": 18446744041420569456,
+        "lr": 18446744005191822892,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582469,
+        "FAR_EL1": 4352,
+        "ELR_EL1": 18446744005190443940,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_raphael_data_seed_checkpoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005188891716,
+        "sp": 18446744041420569024,
+        "x0": 18446744020787603456,
+        "fp": 18446744041420569152,
+        "lr": 18446744005188907972,
+        "cpsr": 2147484164,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582471,
+        "FAR_EL1": 18446744056510525440,
+        "ELR_EL1": 18446744005191900280,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_exec_mach_imgact"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005185831740,
+        "sp": 18446744041420568560,
+        "x0": 18446744016922893104,
+        "fp": 18446744041420568608,
+        "lr": 18446744005188920440,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582471,
+        "FAR_EL1": 18446744056510525440,
+        "ELR_EL1": 18446744005184443344,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_thread_setentrypoint"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 4297256528,
+        "sp": 6170733984,
+        "x0": 0,
+        "fp": 0,
+        "lr": 0,
+        "cpsr": 0,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 2516582469,
+        "FAR_EL1": 6170734128,
+        "ELR_EL1": 4297256528,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_initial_user_entry"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005190421756,
+        "sp": 18446744041420570160,
+        "x0": 18446744016917643536,
+        "fp": 18446744041420570384,
+        "lr": 18446744005185773448,
+        "cpsr": 1610613252,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 1442840704,
+        "FAR_EL1": 4297248684,
+        "ELR_EL1": 4297248692,
+        "CNTFRQ_EL0": 62500000,
+        "symbols": [
+          "_unix_syscall"
+        ]
+      },
+      {
+        "label": "milestone",
+        "pc": 18446744005185797876,
+        "sp": 18446744041420566272,
+        "x0": 0,
+        "fp": 18446744041420566272,
+        "lr": 18446744005185810632,
+        "cpsr": 516,
+        "sctlr_el1": 877943101,
+        "ESR_EL1": 1442840704,
+        "FAR_EL1": 4297003008,
+        "ELR_EL1": 18446744005067935888,
+        "CNTFRQ_EL0": 62500000
+      }
+    ],
+    "native_instruction_executed": true,
+    "arm_init_reached": true,
+    "target_reached": false,
+    "reached_symbols": [
+      "_arm_init",
+      "_PE_init_platform",
+      "_machine_startup",
+      "_kernel_bootstrap",
+      "_kalloc_type_apply_policy",
+      "_kalloc_policy_return",
+      "_kernel_bootstrap_thread",
+      "_PE_init_iokit",
+      "_register_crypto_functions",
+      "__ZN13ArmDTPlatform9configureEP9IOService",
+      "_platform_configure_return",
+      "__ZN14RaphaelBootCpu5startEP9IOService",
+      "_ml_processor_register",
+      "_bsd_init",
+      "_native_apfs_probe_checkpoint",
+      "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec",
+      "__ZN14RaphaelBootCpu9interruptEv",
+      "_rtclock_intr",
+      "_raphael_irq_return",
+      "_raphael_cpu_start_return",
+      "_raphael_display_checkpoint",
+      "_IOFindBSDRoot",
+      "_native_virtio_read_checkpoint",
+      "_native_virtio_read_checkpoint",
+      "_vfs_mountroot",
+      "_native_owner_root_checkpoint",
+      "_native_owner_root_accepted_checkpoint",
+      "_load_init_program",
+      "_raphael_data_seed_checkpoint",
+      "_exec_mach_imgact",
+      "_thread_setentrypoint",
+      "_initial_user_entry",
+      "_unix_syscall"
+    ],
+    "exit_notice_count": 1,
+    "loaded_segments": [
+      {
+        "name": "__TEXT",
+        "physical_address": 1256210432,
+        "bytes": 1458176,
+        "sha256": "73546ce983cf9adff7eb130448b039718afb6274f3c73094ddc3f9222e9c2f53"
+      },
+      {
+        "name": "__DATA_CONST",
+        "physical_address": 1257668608,
+        "bytes": 74842112,
+        "sha256": "1a7fa5f3641c63c9f145c6f3cd9ad55b73f607b75130eba193256a94e8159002"
+      },
+      {
+        "name": "__TEXT_EXEC",
+        "physical_address": 1332510720,
+        "bytes": 8077312,
+        "sha256": "39ab6f28e4b17330201630ed464cbd6df3e24ff6792c2d0235bb2ff345d453cd"
+      },
+      {
+        "name": "__KLD",
+        "physical_address": 1340588032,
+        "bytes": 16384,
+        "sha256": "50268edaf165efbdacc9e2a81b86cfe5a3cdc5bf92829e3fd4b0f859c031276d"
+      },
+      {
+        "name": "__LASTDATA_CONST",
+        "physical_address": 1340604416,
+        "bytes": 16384,
+        "sha256": "e6671f7e68a0177e0499ca4972da8e8f21d8fde1826b10a346935e6eb64e6609"
+      },
+      {
+        "name": "__KLDDATA",
+        "physical_address": 1340620800,
+        "bytes": 16384,
+        "sha256": "1bdd0604b0ff1d5b2c471f2b86cd743dcc61cdf9ecec06b2f17b83d64496be7e"
+      },
+      {
+        "name": "__DATA",
+        "physical_address": 1340637184,
+        "bytes": 278528,
+        "sha256": "42acd44950bc3a4709d6ab7ab050e130a44902518a88573da3234f2336eea1ab"
+      },
+      {
+        "name": "__BOOTDATA",
+        "physical_address": 1341784064,
+        "bytes": 573440,
+        "sha256": "3a772bc3e694e8e146b02274d4d58d23eb6409ac837c9e76f2445b9328e4fd5d"
+      },
+      {
+        "name": "__PRELINK_TEXT",
+        "physical_address": 1208467456,
+        "bytes": 6963200,
+        "sha256": "624ecfd2ec0913d438ed86abcfae39ad5ebabb49a971ac24fa5cc052cb906614"
+      },
+      {
+        "name": "__PRELINK_INFO",
+        "physical_address": 1349369856,
+        "bytes": 483328,
+        "sha256": "c1424449aa0ed85d2533e0a5f722a57dba012b27b2b0a6270edcad86ec331864"
+      },
+      {
+        "name": "__PLK_TEXT_EXEC",
+        "physical_address": 1215430656,
+        "bytes": 20447232,
+        "sha256": "81a6d211c4c297dd96bc1621d16c21907568f9e3ebf7115a3799e6e61ff2855d"
+      },
+      {
+        "name": "__PRELINK_DATA",
+        "physical_address": 1250803712,
+        "bytes": 1392640,
+        "sha256": "dfa0a5263adb29c4d47ae0f734b1d8eb88a8028aa5b2c83c4fffa2e9d55d474c"
+      },
+      {
+        "name": "__PLK_DATA_CONST",
+        "physical_address": 1235877888,
+        "bytes": 3555328,
+        "sha256": "eef5678efa6a5069fcfcead7c8ce93edd49fb8bee15a4c968c6ee15dd7bacdff"
+      },
+      {
+        "name": "__LINKINFO",
+        "physical_address": 1342357504,
+        "bytes": 278528,
+        "sha256": "98903319af26e2600b4d6898b91112e6a4cc0f62f0cc4c160ac2f121ee8ed434"
+      },
+      {
+        "name": "__LINKEDIT",
+        "physical_address": 1342636032,
+        "bytes": 6727800,
+        "sha256": "f2805007b5f80a67d2ce2fb5a2db2f4aaeec2c47690bcfaff2f200f8b7959456"
+      }
+    ],
+    "loaded_file_bytes_match": true,
+    "boot_args_revision": 2,
+    "boot_args_version": 2,
+    "kalloc_policy": {
+      "count": 29,
+      "budget": 200,
+      "pointers": [
+        18446744005193206640,
+        18446744005193206698,
+        18446744005193612608,
+        18446744005193612544
+      ],
+      "zone_sizes": [
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        128,
+        160,
+        192,
+        224,
+        256,
+        288,
+        368,
+        400,
+        512,
+        576,
+        768,
+        1024,
+        1152,
+        1280,
+        1664,
+        2048,
+        4096,
+        6144,
+        8192,
+        12288,
+        16384,
+        24576,
+        32768
+      ],
+      "frequency": [
+        [
+          3,
+          13,
+          34,
+          48,
+          58,
+          45,
+          53,
+          34,
+          42,
+          44,
+          35,
+          28,
+          37,
+          12,
+          19,
+          8,
+          12,
+          17,
+          12,
+          6,
+          11,
+          10,
+          13,
+          3,
+          5,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          51,
+          114,
+          177,
+          71,
+          16,
+          14,
+          10,
+          66,
+          12,
+          25,
+          10,
+          17,
+          22,
+          1,
+          17,
+          1,
+          1,
+          5,
+          8,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "allocated": [
+        [
+          2,
+          3,
+          7,
+          10,
+          11,
+          8,
+          10,
+          7,
+          9,
+          8,
+          7,
+          7,
+          7,
+          4,
+          4,
+          3,
+          4,
+          4,
+          4,
+          2,
+          4,
+          3,
+          4,
+          2,
+          3,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          4,
+          9,
+          14,
+          6,
+          2,
+          1,
+          1,
+          6,
+          1,
+          3,
+          1,
+          1,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "classes_exceeding_31": []
+    },
+    "platform_configure": {
+      "provider": 18446744013057386144,
+      "instance": 18446744024652340992,
+      "return_target": 18446744005191162112,
+      "returned_true": true,
+      "return_value": 1,
+      "counters": {
+        "_armdt_platform_bus_count": 1,
+        "_armdt_platform_child_count": 9,
+        "_armdt_platform_configured": 1,
+        "_armdt_platform_cpu_count": 1,
+        "_armdt_platform_defaults_count": 1,
+        "_armdt_platform_device_count": 34,
+        "_armdt_platform_nvram_proxy": 1
+      }
+    },
+    "cpu_start": {
+      "entry_sp": 18446744041419193424,
+      "instance": 18446744024651724160,
+      "provider": 18446744013057317408,
+      "return_target": 18446744005190910940,
+      "returned_true": true,
+      "return_value": 1
+    },
+    "cpu_states": [
+      {
+        "at_symbols": [
+          "_bsd_init"
+        ],
+        "state": {
+          "dist_pa": 134217728,
+          "eois": 0,
+          "frequency": 62500000,
+          "intid": 30,
+          "ipi_irqs": 0,
+          "last_irq": 0,
+          "physical_timer": 1,
+          "redist_pa": 134873088,
+          "registered": 1,
+          "stage": 2,
+          "timer_irqs": 0,
+          "pthread_status": 0,
+          "pthread_functions": 18446744005109684272
+        }
+      },
+      {
+        "at_symbols": [
+          "_raphael_irq_return"
+        ],
+        "state": {
+          "dist_pa": 134217728,
+          "eois": 1,
+          "frequency": 62500000,
+          "intid": 30,
+          "ipi_irqs": 0,
+          "last_irq": 1023,
+          "physical_timer": 1,
+          "redist_pa": 134873088,
+          "registered": 1,
+          "stage": 4,
+          "timer_irqs": 1,
+          "pthread_status": 0,
+          "pthread_functions": 18446744005109684272
+        }
+      },
+      {
+        "at_symbols": [
+          "_raphael_cpu_start_return"
+        ],
+        "state": {
+          "dist_pa": 134217728,
+          "eois": 1,
+          "frequency": 62500000,
+          "intid": 30,
+          "ipi_irqs": 0,
+          "last_irq": 1023,
+          "physical_timer": 1,
+          "redist_pa": 134873088,
+          "registered": 1,
+          "stage": 5,
+          "timer_irqs": 1,
+          "pthread_status": 0,
+          "pthread_functions": 18446744005109684272
+        }
+      }
+    ],
+    "cpu_state": {
+      "dist_pa": 134217728,
+      "eois": 1,
+      "frequency": 62500000,
+      "intid": 30,
+      "ipi_irqs": 0,
+      "last_irq": 1023,
+      "physical_timer": 1,
+      "redist_pa": 134873088,
+      "registered": 1,
+      "stage": 5,
+      "timer_irqs": 1,
+      "pthread_status": 0,
+      "pthread_functions": 18446744005109684272
+    },
+    "apfs_registration": {
+      "load_status": 0,
+      "registered": 0,
+      "vfsops": 0
+    },
+    "unrelated_cpu_return_stops": 41,
+    "irq_calls": [
+      {
+        "return_target": 18446744005191181576,
+        "entry_pc": 18446744005191760360
+      }
+    ],
+    "block_reads": [
+      {
+        "first_sector_sha256": "42b1178767bb27611cd1836cdd5779c48bfca8a3e719ec06dc4c8ef78d5e6387",
+        "integrity_failures": 0,
+        "manifest_ready": 1,
+        "mmio_physical": 167787008,
+        "read_failures": 0,
+        "read_requests": 1,
+        "ready": 1,
+        "sectors": 6451200,
+        "verified_blocks": 1
+      },
+      {
+        "first_sector_sha256": "dd87b021de6de856a4082ed38e6d131d7cb5527eb74085cb21308f343a623ebb",
+        "integrity_failures": 0,
+        "manifest_ready": 1,
+        "mmio_physical": 167787520,
+        "read_failures": 0,
+        "read_requests": 11,
+        "ready": 1,
+        "sectors": 11870275,
+        "verified_blocks": 11
+      }
+    ],
+    "owner_root": {
+      "accepted": 1,
+      "apple_autherr": 80,
+      "decision": 1,
+      "mount_device": 16777225,
+      "readonly": 1,
+      "selected_device": 16777225
+    },
+    "init_proc": 18446744016922647744,
+    "emulator_data_seed": {
+      "_native_owner_data_device": 16777218,
+      "_native_owner_data_readonly": 0,
+      "_native_owner_data_seed_base": 0,
+      "_native_owner_data_seed_size": 1073741824,
+      "_native_owner_data_source_lookup": 0,
+      "_native_owner_data_stage": 4,
+      "_native_owner_data_status": 0,
+      "_native_owner_data_target_lookup": 0,
+      "_raphael_data_seed_entries": 226,
+      "_raphael_data_seed_index": 225,
+      "_raphael_data_seed_readback": 611715,
+      "_raphael_data_seed_status": 0,
+      "_raphael_data_seed_written": 611715
+    },
+    "data_seed_verified": true,
+    "initial_user_entry": {
+      "thread": 18446744016922893104,
+      "pc": 4297256528,
+      "observed": true
+    },
+    "followed_main_entry": {
+      "mach_header": 4296151040,
+      "startup_stack": 6170733984,
+      "startup_stack_bytes": "00101200010000000100000000000000",
+      "entry_offset": 85896,
+      "pc": 4296236936,
+      "observed": false
+    },
+    "user_syscalls": [
+      {
+        "fp": 6170733120,
+        "lr": 4297015144,
+        "sp": 6170733040,
+        "pc": 4297248692,
+        "cpsr": 0,
+        "far": 0,
+        "esr": 1442840704,
+        "syscall_number": 74,
+        "proc": 18446744016922654848,
+        "pid": 1,
+        "comm": "launchd",
+        "saved_state": 18446744016917643536,
+        "thread": 18446744016922893104,
+        "same_init_proc": false,
+        "same_live_init_proc": true,
+        "arguments": [
+          4297531392,
+          32768,
+          1,
+          1,
+          4297092324,
+          6170732912,
+          0,
+          3552
+        ],
+        "instruction_before_pc": "011000d4",
+        "svc64_verified": true
+      }
+    ],
+    "pid1_el0_syscall_verified": true,
+    "verified_user_syscall_count": 1,
+    "interrupted_progress": {
+      "_native_virtio_first_sector_sha256": "dd87b021de6de856a4082ed38e6d131d7cb5527eb74085cb21308f343a623ebb",
+      "_native_virtio_integrity_failures": 0,
+      "_native_virtio_manifest_ready": 1,
+      "_native_virtio_mmio_physical": 167787520,
+      "_native_virtio_read_failures": 0,
+      "_native_virtio_read_requests": 48040,
+      "_native_virtio_ready": 1,
+      "_native_virtio_sectors": 11870275,
+      "_native_virtio_verified_blocks": 644594
+    },
+    "interrupted_stop": {
+      "label": "milestone",
+      "pc": 18446744005185797876,
+      "sp": 18446744041420566272,
+      "x0": 0,
+      "fp": 18446744041420566272,
+      "lr": 18446744005185810632,
+      "cpsr": 516,
+      "sctlr_el1": 877943101,
+      "ESR_EL1": 1442840704,
+      "FAR_EL1": 4297003008,
+      "ELR_EL1": 18446744005067935888,
+      "CNTFRQ_EL0": 62500000,
+      "registers": {
+        "x1": 18446744007875908336,
+        "x2": 2,
+        "x3": 18446744016922893687,
+        "x4": 0,
+        "x5": 1,
+        "x6": 0,
+        "x7": 0
+      },
+      "frames": [
+        {
+          "fp": 18446744041420566272,
+          "return_address": 18446744005185354400
+        },
+        {
+          "fp": 18446744041420566448,
+          "return_address": 18446744005185353808
+        },
+        {
+          "fp": 18446744041420566480,
+          "return_address": 18446744005185281800
+        },
+        {
+          "fp": 18446744041420566816,
+          "return_address": 18446744005189317088
+        },
+        {
+          "fp": 18446744041420566848,
+          "return_address": 18446744005186266684
+        },
+        {
+          "fp": 18446744041420567232,
+          "return_address": 18446744005186265292
+        },
+        {
+          "fp": 18446744041420567328,
+          "return_address": 18446744005080846464
+        },
+        {
+          "fp": 18446744041420567616,
+          "return_address": 18446744005186483532
+        },
+        {
+          "fp": 18446744041420567728,
+          "return_address": 18446744005186459656
+        },
+        {
+          "fp": 18446744041420567904,
+          "return_address": 18446744005186459300
+        },
+        {
+          "fp": 18446744041420567968,
+          "return_address": 18446744005189329084
+        },
+        {
+          "fp": 18446744041420568480,
+          "return_address": 18446744005189323860
+        },
+        {
+          "fp": 18446744041420569248,
+          "return_address": 18446744005188820492
+        },
+        {
+          "fp": 18446744041420570016,
+          "return_address": 18446744005190422444
+        },
+        {
+          "fp": 18446744041420570144,
+          "return_address": 18446744005185773448
+        },
+        {
+          "fp": 18446744041420570384,
+          "return_address": 18446744005185770968
+        },
+        {
+          "fp": 18446744041420570400,
+          "return_address": 18446744005185770912
+        }
+      ],
+      "instructions": "=> 0xfffffff00baa7ef4:\tmrs\tx0, tpidr_el1\n   0xfffffff00baa7ef8:\tret\n   0xfffffff00baa7efc:\tadrp\tx8, 0xfffffff00718a000\n   0xfffffff00baa7f00:\tldr\tx8, [x8, #1000]\n   0xfffffff00baa7f04:\tmov\tw9, #0x78                  \t// #120\n   0xfffffff00baa7f08:\tsmaddl\tx8, w0, w9, x8\n   0xfffffff00baa7f0c:\tldr\tw8, [x8, #16]\n   0xfffffff00baa7f10:\tadrp\tx9, 0xfffffff00c120000\n   0xfffffff00baa7f14:\tadd\tx9, x9, #0x250\n   0xfffffff00baa7f18:\tadd\tx8, x9, x8, lsl #2\n   0xfffffff00baa7f1c:\tldxr\tw9, [x8]\n   0xfffffff00baa7f20:\tsub\tw9, w9, #0x1\n"
+    },
+    "kernel_message_buffer": {
+      "pointer": 18446744005192081680,
+      "fields": {
+        "msg_magic": 405601,
+        "msg_size": 131072,
+        "msg_bufx": 26306,
+        "msg_bufr": 0,
+        "msg_bufc": 18446744005192709744
+      },
+      "log": "kernel-msgbuf.log",
+      "text": "[    6.237489]:  vm_cache_geometry_colors: 32\n[    6.238189]: do_cacheid() - 81920 bytes Unknown cache (I:49152 D:32768 (separate)), 16-way assoc, 64 bytes/line\n[    6.246709]: kprintf initialized\n[    6.247359]: initialize_screen: b=BC7A0000, w=00000320, h=00000258, r=00000C80, d=00000000\n[    6.248409]: pe_arm_init_interrupts: args: 0xfffffff00c0ca860\n[    6.248577]: pe_arm_map_interrupt_controller: soc_phys:  0x8000000\n[    6.248756]: pe_arm_map_interrupt_controller: failed to find the interrupt-controller.\n[    6.248929]: pe_arm_init_debug: failed to find cpu-debug-interface\n[    6.249783]: Darwin Kernel Version 23.6.0: Fri Oct 30 20:14:33 CST 2026; guo:ios-obj/DEVELOPMENT_ARM64_BCM2837\n[    6.404947]: pmap_startup() init/release time: 110450 microsec\n[    6.405334]: pmap_startup() delayed init/release of 0 pages\n[    6.405691]: vm_page_bootstrap: 352789 free pages, 40427 wired pages, (up to 0 of which are delayed free)\n[    6.422940]: VM boostrap: 51 maps, 153 entries and 128 holes available\n[    6.425682]: Maximum number of VM swap files: 5\n[    6.428050]: zones                   : 0xfffffff0ad800000 - 0xfffffff6ad800000 (24G)\n[    6.428530]: gIOKitPageableFixed2    : 0xfffffff6ad800000 - 0xfffffff6b3800000 (96M)\n[    6.428635]: zone_meta               : 0xfffffff6b3800000 - 0xfffffff6b9c3b000 (100M)\n[    6.428735]: gIOKitPageableFixed3    : 0xfffffff6b9c3b000 - 0xfffffff6bfc3b000 (96M)\n[    6.428833]: kmem_ptr_range          : 0xfffffff6bfc3b000 - 0xfffffff7e8cbb000 (4752M)\n[    6.428932]: gIOKitPageableFixed1    : 0xfffffff7e8cbb000 - 0xfffffff7eecbb000 (96M)\n[    6.429029]: compressor              : 0xfffffff7eecbb000 - 0xfffffff876cc5000 (2176M)\n[    6.429128]: mb                      : 0xfffffff876cc5000 - 0xfffffff87acc5000 (64M)\n[    6.429224]: ipc_kernel_copy_map     : 0xfffffff87acc5000 - 0xfffffff87b4c5000 (8M)\n[    6.429334]: kmem_sprayqtn_range     : 0xfffffff87b4c5000 - 0xfffffff8a7125000 (700M)\n[    6.429432]: gIOKitPageableFixed0    : 0xfffffff8a7125000 - 0xfffffff8ad125000 (96M)\n[    6.429529]: bufferhdr               : 0xfffffff8ad125000 - 0xfffffff8ad4c3000 (3704K)\n[    6.429626]: kmem_ptr_range_meta     : 0xfffffff8ad4c3000 - 0xfffffff8ad5a2000 (892K)\n[    6.429723]: kmem_data_range         : 0xfffffff8ad5a2000 - 0xfffffffbfcd7a000 (13G)\n[    6.429830]: ipc_kernel_map          : 0xfffffffbfcd7a000 - 0xfffffffbfed7a000 (32M)\n[    6.429928]: bsd_pageable            : 0xfffffffbfed7a000 - 0xfffffffbff5fc000 (8M)\n[    6.430025]: io_submap               : 0xfffffffbff5fc000 - 0xfffffffbffdfc000 (8M)\n[    6.434315]: kmem_large_ranges[1]    : 0 - 0 (0B)\n[    6.434424]: kmem_large_ranges[2]    : 0 - 0 (0B)\n[    6.434491]: kmem_large_ranges[3]    : 0 - 0 (0B)\n[    6.434560]: kmem_large_ranges[4]    : 0xfffffff880c51000 - 0xfffffff8a7125000 (612M)\n[    6.434672]: kmem_large_ranges[5]    : 0xfffffff91749d000 - 0xfffffffbfcd7a000 (11G)\n[    6.435212]: \"vm_compressor_mode\" is 8\n[    6.435296]: mapping deprecated VM_PAGER_FREEZER_DEFAULT to VM_PAGER_FREEZER_COMPRESSOR_NO_SWAP\n[    6.435818]: zone_init: pgzalloc  0xfffffff0ad800000:0xfffffff0adabd000 (2804K) [350 slots]\n[    6.436218]: zone_init: map VM    0xfffffff0adabd000:0xfffffff1940ba000 (3685M)\n[    6.436432]: zone_init: map RO    0xfffffff1940ba000:0xfffffff1e0d63000 (1228M)\n[    6.436610]: zone_init: map GEN0  0xfffffff1e0d63000:0xfffffff2c7360000 (3685M)\n[    6.436774]: zone_init: map GEN1  0xfffffff2c7360000:0xfffffff3ad95d000 (3685M)\n[    6.437098]: zone_init: map GEN2  0xfffffff3ad95d000:0xfffffff493f5a000 (3685M)\n[    6.437257]: zone_init: map GEN3  0xfffffff493f5a000:0xfffffff57a558000 (3685M)\n[    6.437469]: zone_init: map DATA  0xfffffff57a558000:0xfffffff6ad800000 (4914M)\n[    6.437683]: zone_init: metadata  0xfffffff6b3810000:0xfffffff6b9810000 (96M)\n[    6.437792]: zone_init: metabits  0xfffffff6b9810000:0xfffffff6b9c2b000 (4204K)\n[    6.437897]: zone_init: extra     0:0 (0B)\n[    6.441719]: Unable to find vm tag  for btlog\n[    6.443657]: VM bootstrap done: 39 maps, 112 entries and 116 holes left\n[    6.525614]: IOKit IOMD setownership ENABLED\n[    6.527179]: ATM subsystem is initialized\n[    6.534604]: Firehose configured: 16 chunks, 8 io pages\n[    6.536286]: Long logs support configured: size: 16384\n[    6.538229]: Log queues configured: slot count: 8, per-slot size: 32768, total size: 262144\n[    6.538522]: OSLog stream configured: stream: 8192 bytes, cache: 2112 bytes\n[    6.538740]: OSLog stream verification: 0\n[    6.539063]: Telemetry: Sampling all tasks once per 1 second\n[    6.539468]: Scheduler: Default of clutch\n[    6.539549]: Setting scheduler priority decay band limit 18\n[    6.539850]: standard timeslicing quantum is 10000 us\n[    6.540328]: standard background quantum is 2500 us\n[    6.543197]: BANK subsystem is initialized\n[    6.544801]: mig_table_max_displ = 54 mach_kobj_count = 372\n[    6.547825]: debug_log_init: Error!! gPanicBase is still not initialized\n[    6.591553]: debug_log_init: Error!! gPanicBase is still not initialized\n[    6.597801]: Registered coredump handler for kernel\n[    6.598116]: Serial requested, consistent debug disabled or debug boot arg not present, configuring debugging over serial\n[    6.598256]: Initializing serial KDP\n[    6.601396]: iBoot version: \n[    6.604159]: iBoot Stage 2 version: \n[    6.772849]: corecrypto_kext_start (tracing disabled)\n[    6.773017]: FIPSPOST_KEXT [422923295] fipspost_post:154: [FIPSPOST][Module-ID] Apple corecrypto Module v14.0 [Apple ARM, Kernel, Software, SL1]\n[    6.775294]: FIPSPOST_KEXT [423063948] fipspost_post:162: PASSED: (1 ms) - fipspost_post_hmac\n[    6.777406]: FIPSPOST_KEXT [423197539] fipspost_post:166: PASSED: (1 ms) - fipspost_post_integrity\n[    6.779612]: FIPSPOST_KEXT [423334435] fipspost_post:170: PASSED: (2 ms) - fipspost_post_indicator\n[    6.780158]: FIPSPOST_KEXT [423368227] fipspost_post:171: PASSED: (0 ms) - fipspost_post_aes_ecb\n[    6.780708]: FIPSPOST_KEXT [423401313] fipspost_post:172: PASSED: (0 ms) - fipspost_post_aes_cbc\n[    6.817480]: FIPSPOST_KEXT [425681717] fipspost_post:173: PASSED: (36 ms) - fipspost_post_rsa_sig\n[    6.936418]: FIPSPOST_KEXT [433055390] fipspost_post:174: PASSED: (117 ms) - fipspost_post_ecdsa\n[    6.943482]: FIPSPOST_KEXT [433493980] fipspost_post:175: PASSED: (6 ms) - fipspost_post_ecdh\n[    6.944763]: FIPSPOST_KEXT [433573721] fipspost_post:176: PASSED: (1 ms) - fipspost_post_aes_ccm\n[    6.945510]: FIPSPOST_KEXT [433620190] fipspost_post:177: PASSED: (0 ms) - fipspost_post_aes_cmac\n[    6.946058]: FIPSPOST_KEXT [433654110] fipspost_post:178: PASSED: (0 ms) - fipspost_post_hkdf\n[    6.1002126]: FIPSPOST_KEXT [437129547] fipspost_post:179: PASSED: (55 ms) - fipspost_post_pbkdf\n[    6.1003193]: FIPSPOST_KEXT [437194703] fipspost_post:180: PASSED: (0 ms) - fipspost_post_drbg_hmac\n[    6.1003793]: FIPSPOST_KEXT [437232616] fipspost_post:182: PASSED: (0 ms) - fipspost_post_kdf_ctr\n[    6.1004369]: FIPSPOST_KEXT [437269210] fipspost_post:183: PASSED: (0 ms) - fipspost_post_kdf_ctr_cmac\n[    6.1005388]: FIPSPOST_KEXT [437332338] fipspost_post:184: PASSED: (0 ms) - fipspost_post_aes_gcm\n[    6.1006102]: FIPSPOST_KEXT [437376405] fipspost_post:185: PASSED: (0 ms) - fipspost_post_aes_xts\n[    6.1007040]: FIPSPOST_KEXT [437434861] fipspost_post:186: PASSED: (0 ms) - fipspost_post_tdes_ecb\n[    7.000295]: FIPSPOST_KEXT [437516727] fipspost_post:187: PASSED: (1 ms) - fipspost_post_drbg_ctr\n[    7.000406]: FIPSPOST_KEXT [437523928] fipspost_post:210: all tests PASSED (233 ms)\n[    7.005940]: corecrypto_kext_start completed successfully\n[    7.040949]: IONVRAM.cpp:initImageFormat:1433 - NVRAM size is 8192 bytes\n[    7.042077]: IONVRAM.cpp:getNVRAMProperties:1244 - _bankSize=0x2000, _bankCount=0x1, _currentBank=0\n[    7.042699]: IONVRAMCHRPHandler.cpp:unserializeImage:479 - NVRAM : commonPartitionOffset - 0x30, commonPartitionSize - 0x800, systemPartitionOffset - 0xffffffff, systemPartitionSize - 0\n[    7.048216]: ulock_initialize>thread_max=1536, ull_hash_buckets=512\n[    7.056113]: lockdown_mode: lockdown mode in nvram is off\n[    7.089478]: Darwin Image4 Validator Version 6.3.0: Fri Jul 11 17:30:14 PDT 2025; root:AppleImage4-257.140.2~280/AppleImage4/RELEASE_ARM64\n[    7.089834]: calling mpo_policy_init for AppleImage4\n[    7.089935]: Security policy loaded: AppleImage4 hooks (AppleImage4)\n[    7.092456]: AppleImage4: no legacy blob present\n[    7.092829]: AppleImage4: magazine[pdmg]: failed to read nonce slot data: 2\n[    7.093303]: AppleImage4: magazine[cptx]: failed to read nonce slot data: 2\n[    7.093603]: AppleImage4: magazine[dvdi]: failed to read nonce slot data: 2\n[    7.093898]: AppleImage4: magazine[c1bt]: failed to read nonce slot data: 2\n[    7.094217]: AppleImage4: magazine[c1ab]: failed to read nonce slot data: 2\n[    7.094554]: AppleImage4: magazine[c1gn]: failed to read nonce slot data: 2\n[    7.094848]: AppleImage4: magazine[c1sm]: failed to read nonce slot data: 2\n[    7.095141]: AppleImage4: magazine[c1ep]: failed to read nonce slot data: 2\n[    7.096819]: AppleImage4: root power domain not yet available: 19\n[    7.103354]: AMFI: queried model name from device tree: iPad7,1\n[    7.103775]: calling mpo_policy_init for AMFI\n[    7.103923]: Security policy loaded: Apple Mobile File Integrity (AMFI)\n[    7.105098]: AMFI: Booted in a VM\n[    7.109493]: calling mpo_policy_init for Sandbox\n[    7.110762]: virtual machine detectedSecurity policy loaded: Seatbelt sandbox policy (Sandbox)\n[    7.157849]: attempting to load 2 external trust cache modules\n[    7.158309]: loaded external trust cache module: 0\n[    7.158496]: loaded external trust cache module: 1\n[    7.158567]: completed loading external trust cache modules\n[    7.159083]: keepsyms boot arg specified; keeping linkedit segment for symbols.\n[    7.160551]: No POST boot-arg set.\n[    7.176458]: Couldn't alloc class \"ArmVirtPlatform\"\n[    7.181753]: PMRD: PMTraceWorker 0x49c2f2a90cfd9891\n[    7.187115]: PMRD: changePowerStateWithTagToPriv(ON_STATE, 10001)\n[    7.256390]: AppleARMBootPerf: Error: profile handoff region not found (1)\n[    7.257979]: AppleARMBootPerf: Error: failed to publish profile data (1)\n[    7.258372]: AppleARMSFRManifest: Starting\n[    7.258484]: AppleARMSFRManifest: Error: Failed to open reg-entry /chosen/secure-boot-hashes\n[    7.259549]: AppleARMSFRManifest: Error: Failed to find property boot-manifest-hash\n[    7.259654]: AppleARMSFRManifest: Error: Failed to find manifest hash\n[    7.259732]: AppleARMSFRManifest: Error: Failed to locate manifest information\n[    7.259829]: AppleARMSFRManifest: Error: Failed to find entry /chosen/iBoot\n[    7.259910]: AppleARMSFRManifest: Error: Failed to publish sfr manifest\n[    7.260205]: virtual bool CoreAnalyticsHub::start(IOService *)::139:CoreAnalyticsHub start\n[    7.260305]: virtual bool CoreAnalyticsHub::start(IOService *)::139:CoreAnalyticsHub start\n[    7.277322]: PMRD: power event 7 args 0x49c2f2a82689cd91 0x0\n[    7.277954]: PMRD: power event 7 args 0x49c2f2a82688c2f1 0x0\n[    7.321448]: [0]ml_processor_register>pset_find(cluster_id=0) returned pset 0\n[    7.323474]: [0]ml_processor_register>cpu_id 0xfffffff493ecf580 cluster_id 0 cpu_number 0 is type 0\n[    7.346079]: Copyright (c) 1982, 1986, 1989, 1991, 1993\n\tThe Regents of the University of California. All rights reserved.\n\n[    7.348283]: MAC Framework successfully initialized\n[    7.386452]: using 7171 buffer headers and 5633 cluster IO buffer headers\n[    7.388011]: clock_initialize_calendar system does not have monotonic clock\n[    7.388395]: clock_initialize_calendar WARNING: UTC time is less then sys time, (0 s 0 u) UTC (7 s 387220 u) sys\n[    7.400577]: ktriage_register_subsystem_strings: set subsystem 8 strings\n[    7.418854]: apfs_module_start:3232: load: com.apple.filesystems.apfs, v2236.140.6, apfs-2236.140.6, 2025/07/11\n[    7.420149]: ktriage_register_subsystem_strings: set subsystem 7 strings\n[    7.487694]: mbinit: done [64 MB total pool size, (64/0) split]\n[    7.495988]: SK: netagent is enabled by default for this platform\n[    7.499765]: DLIL: running SUM16 self-tests ... PASSED\n[    7.512841]: dlil_init: Waiting for all the create dlil kernel threads to get scheduled at least once.\n[    8.448809]: PMRD: PowerChangeOverride (OFF_STATE->ON_STATE, f, 0x2) tag 0x20064\n[    8.453216]: PMRD: sysPowerDownHandler message kIOMessageSystemCapabilityChange\n[    8.453435]: PMRD: sysPowerDownHandler cap f -> f (flags 1)\n[    8.483134]: dlil_init: All the created dlil kernel threads have been scheduled at least once. Proceeding.\n[    8.493941]: igmp_init: initializing\n[    8.495357]: mld_init: initializing\n[    8.499539]: SK[0]: skmem_region_init              seg_size 16384, md_seg_size 16384, drv_buf_seg_size 65536 [eff 65536], usr_buf_seg_size 16384\n[    8.518633]: Skywalk: running self-tests\n[    8.518731]: Skywalk: sk_copy64_8 ... PASSED\n[    8.518849]: Skywalk: sk_copy32_8 ... PASSED\n[    8.518939]: Skywalk: sk_copy64_16 ... PASSED\n[    8.519024]: Skywalk: sk_copy32_16 ... PASSED\n[    8.519104]: Skywalk: sk_copy64_20 ... PASSED\n[    8.519187]: Skywalk: sk_copy64_24 ... PASSED\n[    8.519267]: Skywalk: sk_copy64_32 ... PASSED\n[    8.519357]: Skywalk: sk_copy32_32 ... PASSED\n[    8.519444]: Skywalk: sk_copy64_40 ... PASSED\n[    8.519632]: Skywalk: sk_copy64_64x ... PASSED\n[    8.519757]: Skywalk: sk_copy64_32x ... PASSED\n[    8.519866]: Skywalk: sk_copy64_8x ... PASSED\n[    8.519969]: Skywalk: sk_copy64_4x ... PASSED\n[    8.520116]: Skywalk: sk_zero_16 ... PASSED\n[    8.520203]: Skywalk: sk_zero_32 ... PASSED\n[    8.520290]: Skywalk: sk_zero_48 ... PASSED\n[    8.520377]: Skywalk: sk_zero_128 ... PASSED\n[    8.520734]: Skywalk: memcmp mask ... PASSED\n[    8.526693]: bsd_autoconf: calling kminit\n[    8.541592]: virtual bool IOMobileFramebufferLegacy::start(IOService *)\n[    8.541749]: IOMFB: driver commit: \n[    8.541905]: virtual bool IOMobileFramebufferLegacy::start(IOService *): provider was not AppleARMIODevice.\n[    8.546146]: AMFI: Enabling developer mode since protected data is not available\n[    8.547791]: PMRD: sysPowerDownHandler message kIOMessageSystemCapabilityChange\n[    8.547913]: PMRD: sysPowerDownHandler cap f -> f (flags 2)\n[    8.548365]: PMRD: tellChangeUp OFF_STATE->ON_STATE\n[    8.548989]: PMRD: PowerChangeDone: OFF_STATE->ON_STATE\n[    8.549074]: PMRD: Force re-evaluating aggressiveness\n[    8.549214]: PMRD: changePowerStateWithTagToPriv(ON_STATE, 30002)\n[    8.550728]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x2) tag 0x10001\n[    8.550931]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[    8.551160]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x302) tag 0x40064\n[    8.551544]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[    8.551634]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x302) tag 0x50064\n[    8.551764]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[    8.552154]: PMRD: adjustPowerState ON_STATE, asap 0, idleSleepEnabled 0\n[    8.552269]: PMRD: changePowerStateWithTagToPriv(ON_STATE, 60008)\n[    8.552588]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x2) tag 0x30002\n[    8.552658]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[    8.552828]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x2) tag 0x60008\n[    8.552895]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[    8.562221]: Registered CoreAnalyticsHub functions with xnu.virtual bool CoreAnalyticsHub::start(IOService *)::218:CoreAnalyticsHub start completed\n[    8.562409]: virtual bool CoreAnalyticsHub::start(IOService *)::218:CoreAnalyticsHub start completed\n[    8.597959]: com.apple.AppleFSCompressionTypeZlib kmod start\n[   14.446086]: com.apple.AppleFSCompressionTypeZlib load succeeded\n[   14.452186]: Setting up notifier for CoreAnalyticsHub\n[   14.465581]: install_apfs_vfs_fs:8248: apfs: speculative telemetry feature ENABLED by boot-arg\n[   14.472359]: apfs_sysctl_register:1407: done registering sysctls.\n[   14.511741]: IOSurfaceRoot::installMemoryRegions()\n[   14.620625]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x2) tag 0x70064\n[   14.622673]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[   14.623695]: PMRD: joinAggressiveness IOBlockStorageDriver 0x49c2f2a90ceb8ae1\n[   14.659597]: dev_init:303: disk0 device accelerated crypto: 0 (compiled @ Jul 11 2025 17:34:16)\n[   14.660155]: dev_init:306: disk0 device_handle block size 4096 block count 262144 features 0 internal \n[   14.661223]: nx_mount:1275: disk0 initializing cache w/hash_size 4096 and cache size 10064\n[   14.666052]: IOCPUInterruptController: not registry member at registerService()\n[   14.713591]: IOSurface disallowing global lookups\n[   14.727197]: AppleImage4: magazine[cptx]: magazine data cannot be written: 30\n[   14.727582]: AppleImage4: magazine[zine]: magazine write failed; may be expected: 30\n[   14.728764]: [System Event] [920180344] [INFO] [Subsystem: nvram] [Event: sync] triggered\n[   14.729358]: IONVRAMCHRPHandler.cpp:serializeVariables:615 - No _nvramController\n[   14.729481]: IONVRAMCHRPHandler.cpp:sync:894 - serializeVariables failed, ret=0xe00002d8[System Event] [920237300] [INFO] [Subsystem: nvram] [Event: sync] completed with ret=e00002d8\n[   14.868857]: igmp_domifattach: called for ifp lo\n[   14.870312]: igmp_domifattach: allocated igmp_ifinfo for ifp lo\n[   14.870399]: mld_domifattach: called for ifp lo0\n[   14.870545]: mld_domifattach: allocated mld_ifinfo for ifp lo0\n[   14.870675]: ifnet_attach: All kernel threads created for interface lo0 have been scheduled at least once. Proceeding.\n[   14.878013]: kctl_test_init ctl_sendsize 262144 ctl_recvsize 2097152kctl_test_register: OK kctlref 0xb000b kctlid b ctl_sendsize 262144 ctl_recvsize 2097152skip attaching fsw to lo0 using legacy TX modelReinit'd ND information for interface lo0\n[   14.902260]: Waiting on <dict ID=\"0\"><key>IOProviderClass</key><string ID=\"1\">IOMedia</string><key>IOPropertyMatch</key><dict ID=\"2\"><key>UUID</key><string ID=\"3\">04769D26-2CA0-4825-B443-E2E5F88300F2</string></dict></dict>\n[   15.063224]: nx_mount:1617: disk0 checkpoint search: largest xid 1, best xid 1 @ 1\n[   15.063950]: nx_mount:1644: disk0 stable checkpoint indices: desc 0 data 0\n[   15.100485]: import_iboot_forwarded_roothash:3491: importing root hash (basesystem ? 0)...\n[   15.100685]: apfs_extract_root_hash_arm:13275: could not retrieve system-volume-auth-blob from device tree\n[   15.100788]: import_iboot_forwarded_roothash:3496: apfs_extract_root_hash_and_manifest failed with error: No such file or directory (2)\n[   15.423402]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x2) tag 0x80064\n[   15.425406]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[   15.426410]: PMRD: joinAggressiveness IOBlockStorageDriver 0x49c2f2a90ceb7551\n[   15.558929]: dev_init:303: disk2 device accelerated crypto: 0 (compiled @ Jul 11 2025 17:34:16)\n[   15.559780]: dev_init:306: disk2 device_handle block size 4096 block count 806400 features 0 internal \n[   15.583538]: nx_mount:1275: disk2 initializing cache w/hash_size 4096 and cache size 10064\n[   15.619645]: PMRD: PowerChangeOverride (ON_STATE->ON_STATE, f, 0x2) tag 0x90064\n[   15.620098]: PMRD: PowerChangeDone: ON_STATE->ON_STATE\n[   15.620991]: PMRD: joinAggressiveness IOBlockStorageDriver 0x49c2f2a90ceb6f91\n[   15.670871]: dev_init:303: disk3s1 device accelerated crypto: 0 (compiled @ Jul 11 2025 17:34:16)\n[   15.671002]: dev_init:306: disk3s1 device_handle block size 4096 block count 1483776 features 0 internal \n[   15.672289]: nx_mount:1275: disk3s1 initializing cache w/hash_size 4096 and cache size 10064\n[   15.710802]: nx_mount:1617: disk2 checkpoint search: largest xid 14, best xid 14 @ 9\n[   15.711247]: nx_mount:1644: disk2 stable checkpoint indices: desc 8 data 16\n[   15.751625]: nx_mount:1617: disk3s1 checkpoint search: largest xid 418, best xid 418 @ 3\n[   15.751791]: nx_mount:1644: disk3s1 stable checkpoint indices: desc 2 data 4\n[   15.768282]: Got boot device = IOService:/ArmDTPlatform/virtio-block30@2003C00/NativeVirtioBlock/IOBlockStorageDriver/VirtIO VirtIO read-only block Media/IOGUIDPartitionScheme/Untitled 1@1/AppleAPFSContainerScheme/AppleAPFSMedia/AppleAPFSContainer/DawnUpdate21H461.J120J121J207J208OS@1\n[   15.769028]: BSD root: disk5s1, major 1, minor 9\n[   15.795465]: spec_open : si_devbsdunit initialized to (3), throttle_mask is (0x28), isssd is (0)\n[   15.798676]: apfs_vfsop_mountroot:2965: apfs: mountroot called!\n[   15.802599]: spec_open : si_devbsdunit initialized to (3), throttle_mask is (0x28), isssd is (0)\n[   15.807854]: dev_init:303: disk5 device accelerated crypto: 0 (compiled @ Jul 11 2025 17:34:16)\n[   15.808026]: dev_init:306: disk5 device_handle block size 4096 block count 1483776 features 0 internal \n[   15.817866]: nx_mount:1275: disk5 initializing cache w/hash_size 4096 and cache size 10064\n[   15.867638]: nx_mount:1617: disk5 checkpoint search: largest xid 418, best xid 418 @ 3\n[   15.867926]: nx_mount:1644: disk5 stable checkpoint indices: desc 2 data 4\n[   15.875796]: apfs_vfsop_mount:2675: disk5 Promoter has been locked \n[   15.876533]: fs_lookup_root_snapshot_name:373: disk5s1 failed to get root-snapshot-name from DT\n[   15.876668]: apfs_find_named_root_snapshot_xid:2035: disk5s1 failed to retrieve default root snapshot xid: No such file or directory (2)\n[   15.876794]: apfs_find_named_root_snapshot_xid:2073: disk5s1 The global payload bytes pointer is NULL\n[   15.876916]: apfs_vfsop_mount:2714: disk5s1 failed to find named root snapshot: Need authenticator (81)\n[   15.877448]: apfs_log_op_with_proc:3091: disk5s1 mounting volume DawnUpdate21H461.J120J121J207J208OS, requested by: kernel_task (pid 0); parent: kernel_task (pid 0)\n[   15.879094]: handle_mount:817: disk5s1 vol-uuid: 04769D26-2CA0-4825-B443-E2E5F88300F2 block size: 4096 block count: 1483776 (unencrypted; flags: 0x1; features: 8.0.12)\n[   15.895889]: handle_mount:830: disk5s1 setting dev block size to 4096 from 512\n[   15.896847]: apfs_log_op_with_proc:3091: disk5s1 mount-complete volume DawnUpdate21H461.J120J121J207J208OS, requested by: kernel_task (pid 0); parent: kernel_task (pid 0)\n[   15.909107]: is_root_hash_authentication_required_ios:472: disk5s1 Release kext, booting xid: 0\n[   15.909238]: is_root_hash_authentication_required:555: disk5s1 Root Volume, root hash authentication is required\n[   15.970745]: vm_free_delayed_pages: initialized 0 free pages\n[   15.979842]: VM Swap Subsystem is ON\n[   15.986438]: No POST boot-arg set.\n[   16.009411]: spec_open : si_devbsdunit initialized to (2), throttle_mask is (0x14), isssd is (0)\n[   16.016507]: spec_open : si_devbsdunit initialized to (2), throttle_mask is (0x14), isssd is (0)\n[   16.022358]: dev_init:303: disk4 device accelerated crypto: 0 (compiled @ Jul 11 2025 17:34:16)\n[   16.022517]: dev_init:306: disk4 device_handle block size 4096 block count 806400 features 0 internal \n[   16.032724]: nx_mount:1275: disk4 initializing cache w/hash_size 4096 and cache size 10064\n[   16.106812]: nx_mount:1617: disk4 checkpoint search: largest xid 14, best xid 14 @ 9\n[   16.107130]: nx_mount:1644: disk4 stable checkpoint indices: desc 8 data 16\n[   16.118180]: apfs_log_op_with_proc:3091: disk4s1 mounting volume DawnUpdate21H461.J120J121J207J208SystemCryptex, requested by: init (pid 1); parent: kernel_task (pid 0)\n[   16.119680]: handle_mount:817: disk4s1 vol-uuid: 8846FE78-2910-4297-AF97-D59BB6F8FC16 block size: 4096 block count: 806400 (unencrypted; flags: 0x1; features: 28.0.2)\n[   16.135219]: handle_mount:830: disk4s1 setting dev block size to 4096 from 512\n[   16.135842]: apfs_log_op_with_proc:3091: disk4s1 mount-complete volume DawnUpdate21H461.J120J121J207J208SystemCryptex, requested by: init (pid 1); parent: kernel_task (pid 0)\n[   16.515640]: spec_open : si_devbsdunit initialized to (0), throttle_mask is (0x3), isssd is (0)\n[   16.516947]: spec_open : si_devbsdunit initialized to (0), throttle_mask is (0x3), isssd is (0)\n[   16.519245]: dev_init:303: disk1 device accelerated crypto: 0 (compiled @ Jul 11 2025 17:34:16)\n[   16.519317]: dev_init:306: disk1 device_handle block size 4096 block count 262144 features 0 internal \n[   16.519820]: nx_mount:1275: disk1 initializing cache w/hash_size 4096 and cache size 10064\n[   16.528952]: nx_mount:1617: disk1 checkpoint search: largest xid 1, best xid 1 @ 1\n[   16.529094]: nx_mount:1644: disk1 stable checkpoint indices: desc 0 data 0\n[   16.529664]: spaceman_metazone_init:111: disk1 no metazone for device 0, of size 1073741824 bytes, block_size 4096\n[   16.534799]: mark_doc_id_index_for_rebuild_if_needed:28642: disk1s1 doc-id index needs rebuild, doc_id_index_flags 0x0, role 0, doc_id_index_xid 0, expected_xid 1\n[   16.539184]: spaceman_scan_free_blocks:3878: disk1 scan took 0.003466 s (no trims)\n[   16.539505]: spaceman_fxc_print_stats:473: disk1 dev 0 smfree 256124/262144 table 3/128 blocks 256124 992:85374:241101 100.00% range 5969:256175 97.72% scans 1\n[   16.542133]: check_stale_doc_id_index:28721: disk1s1 prepare for rebuild, doc_id_index_flags 0x12, doc_id_tree_oid 0, prev_doc_id_tree_oid 0, doc_id_tree_type 0, apfs_next_doc_id 3\n[   16.542574]: set_cloneinfo_id_epoch:28550: disk1s1 set cloneinfo_id_epoch to 16\n[   16.542728]: apfs_log_op_with_proc:3091: disk1s1 mounting volume RaphaelScratchData, requested by: init (pid 1); parent: kernel_task (pid 0)\n[   16.543536]: handle_mount:817: disk1s1 vol-uuid: 38A12874-2B24-4ECA-9CBC-E05600DBA8E9 block size: 4096 block count: 262144 (unencrypted; flags: 0x1; features: 8.0.2)\n[   16.544658]: handle_mount:830: disk1s1 setting dev block size to 4096 from 512\n[   16.544945]: apfs_log_op_with_proc:3091: disk1s1 mount-complete volume RaphaelScratchData, requested by: init (pid 1); parent: kernel_task (pid 0)\n[   16.910379]: load_init_program: attempting to load /usr/appleinternal/sbin/launchd.development\n[   16.976449]: load_init_program: attempting to load /sbin/launchd\n[   17.400046]: shared_region: 0x49c2f2a90cf0bdc1 [1(launchd)] check_np(0x16fcdebb0) vm_shared_region_start_address() failed\n[   17.451659]: shared_region: 0x49c2f2a90cf0bdc1 [1(launchd)] check_np(0x16fcde150) vm_shared_region_start_address() failed\n[  102.632381]: process launchd[1] caught waking the CPU 45791 times over ~85 seconds, averaging 534 wakes / second and violating a limit of 45000 wakes over 300 seconds.\n"
+    },
+    "process_snapshot": {
+      "processes": [
+        {
+          "address": 18446744016922654848,
+          "pid": 1,
+          "comm": "launchd",
+          "stat": 2,
+          "task": 18446744016922656784,
+          "thread_count": 1,
+          "threads": [
+            {
+              "address": 18446744016922893104,
+              "state": 4,
+              "wait_event": 0,
+              "continuation": 0,
+              "kernel_state": {
+                "fp": 18446744041420564944,
+                "lr": 18446744005185819100,
+                "sp": 18446744041420564896
+              },
+              "kernel_frames": [
+                {
+                  "fp": 18446744041420564944,
+                  "return_address": 1048576
+                }
+              ],
+              "user_state": {
+                "pc": 4297206120,
+                "sp": 6170531968,
+                "fp": 6170531984,
+                "lr": 4297206068,
+                "cpsr": 2147483648,
+                "esr": 1442840704,
+                "syscall_number": 92,
+                "arguments": [
+                  46,
+                  97,
+                  6170535744,
+                  0,
+                  8,
+                  6170552168,
+                  0,
+                  3040
+                ]
+              }
+            }
+          ],
+          "shared_region": {
+            "address": 18446744020788435648,
+            "slide": 0,
+            "base": 6442450944,
+            "size": 6442450944
+          }
+        },
+        {
+          "address": 18446744016922661952,
+          "pid": 0,
+          "comm": "kernel_task",
+          "stat": 2
+        }
+      ],
+      "scope": "Stopped QEMU CPU; bounded read-only process/thread census, not proof of main or scheduling progress",
+      "bounded": false
+    },
+    "display_state": {
+      "_raphael_display_base": 3162112000,
+      "_raphael_display_blank_frames": 0,
+      "_raphael_display_bytes": 0,
+      "_raphael_display_client_status": 0,
+      "_raphael_display_clients": 0,
+      "_raphael_display_depth": 32,
+      "_raphael_display_family_status": 0,
+      "_raphael_display_frames": 0,
+      "_raphael_display_guard": 0,
+      "_raphael_display_hardware_stage": 3,
+      "_raphael_display_height": 600,
+      "_raphael_display_kicks": 0,
+      "_raphael_display_map_length": 1920000,
+      "_raphael_display_meta_status": 0,
+      "_raphael_display_nonblack": 0,
+      "_raphael_display_power_status": 0,
+      "_raphael_display_reject_reason": 0,
+      "_raphael_display_rejected": 0,
+      "_raphael_display_retired": 0,
+      "_raphael_display_rotate": 0,
+      "_raphael_display_row_bytes": 3200,
+      "_raphael_display_stage": 6,
+      "_raphael_display_surface_status": 0,
+      "_raphael_display_transfer_status": 0,
+      "_raphael_display_validations": 0,
+      "_raphael_display_video_status": 0,
+      "_raphael_display_width": 800
+    },
+    "completed": true
+  },
+  "interrupted_cpu_symbols": [
+    {
+      "address": 18446744005185797876,
+      "symbol": "_current_thread",
+      "offset": 0
+    },
+    {
+      "address": 18446744005185810632,
+      "symbol": "__enable_preemption",
+      "offset": 12
+    },
+    {
+      "address": 18446744005185354400,
+      "symbol": "_vm_page_insert_internal",
+      "offset": 580
+    },
+    {
+      "address": 18446744005185353808,
+      "symbol": "_vm_page_insert",
+      "offset": 40
+    },
+    {
+      "address": 18446744005185281800,
+      "symbol": "_vm_object_upl_request",
+      "offset": 3576
+    },
+    {
+      "address": 18446744005189317088,
+      "symbol": "_ubc_create_upl_kernel",
+      "offset": 240
+    },
+    {
+      "address": 18446744005186266684,
+      "symbol": "_cluster_read_copy",
+      "offset": 1316
+    },
+    {
+      "address": 18446744005186265292,
+      "symbol": "_cluster_read_ext",
+      "offset": 376
+    },
+    {
+      "address": 18446744005080846464,
+      "symbol": null
+    },
+    {
+      "address": 18446744005186483532,
+      "symbol": "_VNOP_READ",
+      "offset": 100
+    },
+    {
+      "address": 18446744005186459656,
+      "symbol": "_vn_rdwr_64",
+      "offset": 320
+    },
+    {
+      "address": 18446744005186459300,
+      "symbol": "_vn_rdwr",
+      "offset": 44
+    },
+    {
+      "address": 18446744005189329084,
+      "symbol": "_cs_native4k_prepare",
+      "offset": 528
+    },
+    {
+      "address": 18446744005189323860,
+      "symbol": "_ubc_cs_blob_add",
+      "offset": 2016
+    },
+    {
+      "address": 18446744005188820492,
+      "symbol": "_sys_fcntl_nocancel",
+      "offset": 8672
+    },
+    {
+      "address": 18446744005190422444,
+      "symbol": "_unix_syscall",
+      "offset": 688
+    },
+    {
+      "address": 18446744005185773448,
+      "symbol": "_sleh_synchronous",
+      "offset": 876
+    },
+    {
+      "address": 18446744005185770968,
+      "symbol": "_fleh_synchronous",
+      "offset": 40
+    },
+    {
+      "address": 18446744005185770912,
+      "symbol": "fleh_dispatch64_common",
+      "offset": 164
+    }
+  ],
+  "default_source_crypto_post_and_registration_verified": false,
+  "target_failure": "Recorded target was not reached",
+  "dt_platform_configure_verified": true,
+  "independent_cpu_start_verified": true,
+  "independent_cpu_timer_irq_verified": true,
+  "owner_root_authenticated": true,
+  "init_program_loader_reached": true,
+  "pid1_el0_syscall_verified": true,
+  "bounded_launchd_runtime_observed": false,
+  "requested_user_process_executed": false,
+  "emulator_data_seed_verified": true,
+  "original_launchd_main_executed": false,
+  "bsd_init_reached": true,
+  "layout": {
+    "gate": 3206070272,
+    "virtual_base": 18446744005059788800,
+    "physical_base": 1208467456,
+    "args": 1349861376,
+    "entry": 1334461576,
+    "window": 1610612736,
+    "milestones": {
+      "_IOFindBSDRoot": 18446744005191457524,
+      "_LowExceptionVectorBase": 18446744005185785856,
+      "_PE_cpu_machine_init": 18446744005191177148,
+      "_PE_init_iokit": 18446744005191613440,
+      "_PE_init_platform": 18446744005191614564,
+      "__ZN13ArmDTPlatform9configureEP9IOService": 18446744005191754724,
+      "__ZN14RaphaelBootCpu5startEP9IOService": 18446744005191759412,
+      "__ZN14RaphaelBootCpu9interruptEv": 18446744005191760360,
+      "__ZN9IOService14waitForServiceEP12OSDictionaryP13mach_timespec": 18446744005190917500,
+      "_arm_init": 18446744005191871856,
+      "_bsd_init": 18446744005188729140,
+      "_exec_mach_imgact": 18446744005188891716,
+      "_execve": 18446744005188913016,
+      "_exit": 18446744005188946600,
+      "_kalloc_type_apply_policy": 18446744005184170808,
+      "_kernel_bootstrap": 18446744005184404196,
+      "_kernel_bootstrap_thread": 18446744005184406384,
+      "_load_init_program": 18446744005188914308,
+      "_machine_startup": 18446744005185797424,
+      "_ml_processor_register": 18446744005185802880,
+      "_native_apfs_probe_checkpoint": 18446744005188729128,
+      "_native_owner_root_accepted_checkpoint": 18446744005188732160,
+      "_native_owner_root_checkpoint": 18446744005188732156,
+      "_native_virtio_read_checkpoint": 18446744005191771000,
+      "_panic": 18446744005191825364,
+      "_panic_with_options": 18446744005191825528,
+      "_posix_spawn": 18446744005188897600,
+      "_raphael_data_seed_checkpoint": 18446744005191821880,
+      "_raphael_display_checkpoint": 18446744005191760840,
+      "_raphael_display_frame_checkpoint": 18446744005191760836,
+      "_register_crypto_functions": 18446744005190733912,
+      "_rtclock_intr": 18446744005185824184,
+      "_start_first_cpu": 18446744005185790044,
+      "_thread_setentrypoint": 18446744005185831740,
+      "_unix_syscall": 18446744005190421756,
+      "_vfs_mountroot": 18446744005186310904,
+      "_write": 18446744005189239228
+    },
+    "data_symbols": {
+      "_allproc": 18446744005192703192,
+      "_armdt_platform_bus_count": 18446744005192858092,
+      "_armdt_platform_child_count": 18446744005192858084,
+      "_armdt_platform_configured": 18446744005192858080,
+      "_armdt_platform_cpu_count": 18446744005192858088,
+      "_armdt_platform_defaults_count": 18446744005192858096,
+      "_armdt_platform_device_count": 18446744005192858104,
+      "_armdt_platform_nvram_proxy": 18446744005192858100,
+      "_crypto_init": 18446744005109368064,
+      "_gPhysBase": 18446744005109059848,
+      "_gVirtBase": 18446744005109059864,
+      "_g_crypto_funcs": 18446744005109368072,
+      "_initproc": 18446744005192699592,
+      "_kt_zone_cfg": 18446744005107539260,
+      "_msgbufp": 18446744005192081704,
+      "_native_apfs_load_status": 18446744005192073560,
+      "_native_apfs_registered": 18446744005192699532,
+      "_native_apfs_vfsops": 18446744005192699536,
+      "_native_owner_data_device": 18446744005192077040,
+      "_native_owner_data_readonly": 18446744005192077036,
+      "_native_owner_data_seed_base": 18446744005192702936,
+      "_native_owner_data_seed_size": 18446744005192702944,
+      "_native_owner_data_source_lookup": 18446744005192077028,
+      "_native_owner_data_stage": 18446744005192702812,
+      "_native_owner_data_status": 18446744005192077024,
+      "_native_owner_data_target_lookup": 18446744005192077032,
+      "_native_owner_root_accepted": 18446744005192699584,
+      "_native_owner_root_apple_autherr": 18446744005192073580,
+      "_native_owner_root_decision": 18446744005192073584,
+      "_native_owner_root_mount_device": 18446744005192073572,
+      "_native_owner_root_readonly": 18446744005192073588,
+      "_native_owner_root_selected_device": 18446744005192073576,
+      "_native_pt_attr": 18446744005109054344,
+      "_native_ram_block_bytes": 18446744005192858760,
+      "_native_ram_block_failures": 18446744005192858784,
+      "_native_ram_block_reads": 18446744005192858768,
+      "_native_ram_block_ready": 18446744005192858752,
+      "_native_ram_block_resident_bytes": 18446744005192858792,
+      "_native_ram_block_sparse": 18446744005192858800,
+      "_native_ram_block_writes": 18446744005192858776,
+      "_native_virtio_first_sector_sha256": 18446744005192858680,
+      "_native_virtio_integrity_failures": 18446744005192858632,
+      "_native_virtio_manifest_ready": 18446744005192858608,
+      "_native_virtio_mmio_physical": 18446744005192858672,
+      "_native_virtio_read_failures": 18446744005192858660,
+      "_native_virtio_read_requests": 18446744005192858656,
+      "_native_virtio_ready": 18446744005192858544,
+      "_native_virtio_sectors": 18446744005192858664,
+      "_native_virtio_verified_blocks": 18446744005192858624,
+      "_num_kt_sizeclass": 18446744005109022320,
+      "_pthread_functions": 18446744005192699400,
+      "_ptov_table": 18446744005109059656,
+      "_raphael_cpu_dist_pa": 18446744005192858200,
+      "_raphael_cpu_eois": 18446744005192858192,
+      "_raphael_cpu_frequency": 18446744005192858216,
+      "_raphael_cpu_intid": 18446744005192858160,
+      "_raphael_cpu_ipi_irqs": 18446744005192858184,
+      "_raphael_cpu_last_irq": 18446744005192858168,
+      "_raphael_cpu_physical_timer": 18446744005192858164,
+      "_raphael_cpu_redist_pa": 18446744005192858208,
+      "_raphael_cpu_registered": 18446744005192858156,
+      "_raphael_cpu_stage": 18446744005192858152,
+      "_raphael_cpu_timer_irqs": 18446744005192858176,
+      "_raphael_data_seed_entries": 18446744005192859048,
+      "_raphael_data_seed_index": 18446744005192859052,
+      "_raphael_data_seed_readback": 18446744005192859064,
+      "_raphael_data_seed_status": 18446744005192125504,
+      "_raphael_data_seed_written": 18446744005192859056,
+      "_raphael_display_base": 18446744005192858416,
+      "_raphael_display_blank_frames": 18446744005192858352,
+      "_raphael_display_bytes": 18446744005192858368,
+      "_raphael_display_client_status": 18446744005192858400,
+      "_raphael_display_clients": 18446744005192858272,
+      "_raphael_display_depth": 18446744005192858296,
+      "_raphael_display_family_status": 18446744005192125164,
+      "_raphael_display_frames": 18446744005192858344,
+      "_raphael_display_guard": 18446744005192858268,
+      "_raphael_display_hardware_stage": 18446744005192858276,
+      "_raphael_display_height": 18446744005192858432,
+      "_raphael_display_kicks": 18446744005192858336,
+      "_raphael_display_map_length": 18446744005192858312,
+      "_raphael_display_meta_status": 18446744005192125168,
+      "_raphael_display_nonblack": 18446744005192858376,
+      "_raphael_display_power_status": 18446744005192858408,
+      "_raphael_display_reject_reason": 18446744005192858384,
+      "_raphael_display_rejected": 18446744005192858328,
+      "_raphael_display_retired": 18446744005192858360,
+      "_raphael_display_rotate": 18446744005192858304,
+      "_raphael_display_row_bytes": 18446744005192858288,
+      "_raphael_display_stage": 18446744005192858264,
+      "_raphael_display_surface_status": 18446744005192125160,
+      "_raphael_display_transfer_status": 18446744005192858392,
+      "_raphael_display_validations": 18446744005192858320,
+      "_raphael_display_video_status": 18446744005192858280,
+      "_raphael_display_width": 18446744005192858424,
+      "_real_phys_size": 18446744005109059856,
+      "_source_pthread_status": 18446744005109685288
+    },
+    "stop_at": "_original_launchd_main_completed",
+    "segments": [
+      {
+        "name": "__TEXT",
+        "virtual_address": 18446744005107531776,
+        "file_offset": 0,
+        "file_bytes": 1458176,
+        "sha256": "73546ce983cf9adff7eb130448b039718afb6274f3c73094ddc3f9222e9c2f53"
+      },
+      {
+        "name": "__DATA_CONST",
+        "virtual_address": 18446744005108989952,
+        "file_offset": 1458176,
+        "file_bytes": 74842112,
+        "sha256": "1a7fa5f3641c63c9f145c6f3cd9ad55b73f607b75130eba193256a94e8159002"
+      },
+      {
+        "name": "__TEXT_EXEC",
+        "virtual_address": 18446744005183832064,
+        "file_offset": 76300288,
+        "file_bytes": 8077312,
+        "sha256": "39ab6f28e4b17330201630ed464cbd6df3e24ff6792c2d0235bb2ff345d453cd"
+      },
+      {
+        "name": "__KLD",
+        "virtual_address": 18446744005191909376,
+        "file_offset": 84377600,
+        "file_bytes": 16384,
+        "sha256": "50268edaf165efbdacc9e2a81b86cfe5a3cdc5bf92829e3fd4b0f859c031276d"
+      },
+      {
+        "name": "__LASTDATA_CONST",
+        "virtual_address": 18446744005191925760,
+        "file_offset": 84393984,
+        "file_bytes": 16384,
+        "sha256": "e6671f7e68a0177e0499ca4972da8e8f21d8fde1826b10a346935e6eb64e6609"
+      },
+      {
+        "name": "__KLDDATA",
+        "virtual_address": 18446744005191942144,
+        "file_offset": 84410368,
+        "file_bytes": 16384,
+        "sha256": "1bdd0604b0ff1d5b2c471f2b86cd743dcc61cdf9ecec06b2f17b83d64496be7e"
+      },
+      {
+        "name": "__DATA",
+        "virtual_address": 18446744005191958528,
+        "file_offset": 84426752,
+        "file_bytes": 278528,
+        "sha256": "42acd44950bc3a4709d6ab7ab050e130a44902518a88573da3234f2336eea1ab"
+      },
+      {
+        "name": "__BOOTDATA",
+        "virtual_address": 18446744005193105408,
+        "file_offset": 84721664,
+        "file_bytes": 573440,
+        "sha256": "3a772bc3e694e8e146b02274d4d58d23eb6409ac837c9e76f2445b9328e4fd5d"
+      },
+      {
+        "name": "__PRELINK_TEXT",
+        "virtual_address": 18446744005059788800,
+        "file_offset": 92303360,
+        "file_bytes": 6963200,
+        "sha256": "624ecfd2ec0913d438ed86abcfae39ad5ebabb49a971ac24fa5cc052cb906614"
+      },
+      {
+        "name": "__PRELINK_INFO",
+        "virtual_address": 18446744005200691200,
+        "file_offset": 124661760,
+        "file_bytes": 483328,
+        "sha256": "c1424449aa0ed85d2533e0a5f722a57dba012b27b2b0a6270edcad86ec331864"
+      },
+      {
+        "name": "__PLK_TEXT_EXEC",
+        "virtual_address": 18446744005066752000,
+        "file_offset": 99266560,
+        "file_bytes": 20447232,
+        "sha256": "81a6d211c4c297dd96bc1621d16c21907568f9e3ebf7115a3799e6e61ff2855d"
+      },
+      {
+        "name": "__PRELINK_DATA",
+        "virtual_address": 18446744005102125056,
+        "file_offset": 123269120,
+        "file_bytes": 1392640,
+        "sha256": "dfa0a5263adb29c4d47ae0f734b1d8eb88a8028aa5b2c83c4fffa2e9d55d474c"
+      },
+      {
+        "name": "__PLK_DATA_CONST",
+        "virtual_address": 18446744005087199232,
+        "file_offset": 119713792,
+        "file_bytes": 3555328,
+        "sha256": "eef5678efa6a5069fcfcead7c8ce93edd49fb8bee15a4c968c6ee15dd7bacdff"
+      },
+      {
+        "name": "__LINKINFO",
+        "virtual_address": 18446744005193678848,
+        "file_offset": 85295104,
+        "file_bytes": 278528,
+        "sha256": "98903319af26e2600b4d6898b91112e6a4cc0f62f0cc4c160ac2f121ee8ed434"
+      },
+      {
+        "name": "__LINKEDIT",
+        "virtual_address": 18446744005193957376,
+        "file_offset": 85573632,
+        "file_bytes": 6727800,
+        "sha256": "f2805007b5f80a67d2ce2fb5a2db2f4aaeec2c47690bcfaff2f200f8b7959456"
+      }
+    ],
+    "socket": "/tmp/rnx-20261030T164033.557997.sock",
+    "output": "/home/guo/work/raphael-fresh/artifacts/native-xnu-qemu/20261030T164033.557997Z-ehx_zus3/debugger-observation.json",
+    "register_log": "/home/guo/work/raphael-fresh/artifacts/native-xnu-qemu/20261030T164033.557997Z-ehx_zus3/registers.log",
+    "expected_data_seed": {
+      "entries": 226,
+      "bytes": 611715,
+      "image_bytes": 1073741824,
+      "sparse": true
+    },
+    "user_abi": {
+      "passed": true,
+      "artifact_directory": "artifacts/20261030T141734.723743Z-xmv93cnr",
+      "candidate_sha256": "cc650ab445c4803a5d57dcb9dc1ad52519730b302eb31d91907f0fb6e058075c",
+      "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/systemcalls.o",
+      "source_object_sha256": "3ca40d25cc5ba232434df181fece84c5e0ddd5e420e903e0f7d4c4beb08956ab",
+      "provenance": "llvm-dwarfdump of this XNU build; includes anonymous member parent offsets",
+      "proc": {
+        "bytes": 1936,
+        "pid": 96,
+        "comm": 1468
+      },
+      "saved_state": {
+        "bytes": 304,
+        "x": 8,
+        "fp": 240,
+        "lr": 248,
+        "sp": 256,
+        "pc": 264,
+        "cpsr": 272,
+        "far": 280,
+        "esr": 288
+      },
+      "msgbuf": {
+        "bytes": 24,
+        "magic": 405601,
+        "fields": {
+          "msg_magic": 0,
+          "msg_size": 4,
+          "msg_bufx": 8,
+          "msg_bufr": 12,
+          "msg_bufc": 16
+        },
+        "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/subr_log.o",
+        "source_object_sha256": "b65efd20d8054f4af9ff193fdeff0cb77b56de84b3a4041f942244581d3b32bc"
+      },
+      "bsd_arguments": {
+        "write_args": {
+          "bytes": 24,
+          "fields": {
+            "fd": {
+              "offset": 0,
+              "bytes": 4
+            },
+            "cbuf": {
+              "offset": 8,
+              "bytes": 8
+            },
+            "nbyte": {
+              "offset": 16,
+              "bytes": 8
+            }
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/sys_generic.o",
+          "source_object_sha256": "461df48178274d2094159d20f22ce0557c41140fad8181b2f921b6f5e0b2c6dc"
+        },
+        "exit_args": {
+          "bytes": 8,
+          "fields": {
+            "rval": {
+              "offset": 0,
+              "bytes": 4
+            }
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/kern_exit.o",
+          "source_object_sha256": "ca048da3c6b4d56942423f648c22430bc3b99629489fe89c7b073413f8cae693"
+        },
+        "execve_args": {
+          "bytes": 24,
+          "fields": {
+            "fname": {
+              "offset": 0,
+              "bytes": 8
+            }
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/kern_exec.o",
+          "source_object_sha256": "b1c2ad8e120b20cc2db306df64c9e1d3b865359ad0ed7164dcde8106bb63016f"
+        },
+        "posix_spawn_args": {
+          "bytes": 40,
+          "fields": {
+            "path": {
+              "offset": 8,
+              "bytes": 8
+            }
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/kern_exec.o",
+          "source_object_sha256": "b1c2ad8e120b20cc2db306df64c9e1d3b865359ad0ed7164dcde8106bb63016f"
+        }
+      },
+      "process_snapshot": {
+        "proc": {
+          "bytes": 1936,
+          "fields": {
+            "next": 0,
+            "ro": 24,
+            "stat": 100
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/systemcalls.o",
+          "source_object_sha256": "3ca40d25cc5ba232434df181fece84c5e0ddd5e420e903e0f7d4c4beb08956ab"
+        },
+        "proc_ro": {
+          "bytes": 128,
+          "fields": {
+            "task": 8,
+            "proc": 0
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/kern_proc.o",
+          "source_object_sha256": "d0cba4770f75dc029e8e629acb387c5a07e80cc03b63630053d4380732407d8d"
+        },
+        "task": {
+          "bytes": 1616,
+          "fields": {
+            "threads": 128,
+            "thread_count": 168,
+            "shared_region": 1048,
+            "map": 80
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/task.o",
+          "source_object_sha256": "aba12572bf36a50ae7071c75c02f1601bd8c015a878a7e8348ec3ef533a6aa7a"
+        },
+        "shared_region": {
+          "bytes": 168,
+          "fields": {
+            "slide": 4,
+            "base": 56,
+            "size": 64
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/vm_shared_region.o",
+          "source_object_sha256": "4b128019d91ec46909bfbe04c7efccc1bafbd898cbbc3eed126da1880f12a43d"
+        },
+        "vm_map": {
+          "bytes": 160,
+          "fields": {
+            "pmap": 64
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/vm_map.o",
+          "source_object_sha256": "1e0fa50da4bfb5be4385f1e48a7d672f6bdb77990a72612b4018c0f3a6046b49"
+        },
+        "pmap": {
+          "bytes": 232,
+          "fields": {
+            "tte": 0,
+            "ttep": 8,
+            "min": 16,
+            "max": 24
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/pmap.o",
+          "source_object_sha256": "d61467c0a76b57c607718f98bb7fa60f56cd228c1d872449609e8a89775c87be"
+        },
+        "page_table_attr": {
+          "bytes": 112,
+          "fields": {
+            "root_level": 64,
+            "max_level": 72,
+            "page_size": 88
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/pmap.o",
+          "source_object_sha256": "d61467c0a76b57c607718f98bb7fa60f56cd228c1d872449609e8a89775c87be"
+        },
+        "thread": {
+          "bytes": 1424,
+          "fields": {
+            "task_links": 1064,
+            "ro": 1080,
+            "state": 504,
+            "wait_event": 32,
+            "continuation": 216,
+            "machine": 248
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/thread.o",
+          "source_object_sha256": "97d322db41901f1002db738a982162477ba1ddac03b8c356f5c658e5539cfb2e"
+        },
+        "thread_ro": {
+          "bytes": 96,
+          "fields": {
+            "proc": 24,
+            "task": 40
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/thread.o",
+          "source_object_sha256": "97d322db41901f1002db738a982162477ba1ddac03b8c356f5c658e5539cfb2e"
+        },
+        "machine_thread": {
+          "bytes": 256,
+          "fields": {
+            "upcb": 24,
+            "kstackptr": 96
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/thread.o",
+          "source_object_sha256": "97d322db41901f1002db738a982162477ba1ddac03b8c356f5c658e5539cfb2e"
+        },
+        "kernel_state": {
+          "bytes": 112,
+          "fields": {
+            "fp": 80,
+            "lr": 88,
+            "sp": 96
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/pcb.o",
+          "source_object_sha256": "59b09de13462f254d3d8914f66a3d4ed5f5c4b7e3581dd93b0e1ff6121b8aacf"
+        },
+        "queue_entry": {
+          "bytes": 16,
+          "fields": {
+            "next": 0,
+            "prev": 8
+          },
+          "source_object": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_desktop_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/thread.o",
+          "source_object_sha256": "97d322db41901f1002db738a982162477ba1ddac03b8c356f5c658e5539cfb2e"
+        }
+      }
+    },
+    "user_syscall_count": 1,
+    "runtime_observation": false,
+    "original_main": {
+      "path": "artifacts/desktop-disks/20261030T074616Z/OS-mount/sbin/launchd",
+      "bytes": 561856,
+      "sha256": "8cec9a3c44a443b08e977ccc5d577850316ad428c575dc01f09b018dbd5b6a25",
+      "header": "cffaedfe0c000001000000000200000016000000900c00008500200000000000",
+      "entry_offset": 85896,
+      "entry_bytes": "ff8305d1fc6f12a9f65713a9f44f14a9"
+    },
+    "expected_os_block": {
+      "sectors": 11870275,
+      "first_sector_sha256": "dd87b021de6de856a4082ed38e6d131d7cb5527eb74085cb21308f343a623ebb"
+    }
+  },
+  "paused_emulator": {
+    "pid": 302788,
+    "gdb_socket": "/tmp/rnx-20261030T164033.557997.sock",
+    "qmp_socket": "/tmp/rnx-20261030T164033.557997.qmp",
+    "status": {
+      "status": "paused",
+      "singlestep": false,
+      "running": false
+    },
+    "scope": "Isolated QEMU held stopped for explicit continuation; guest state and RAM disk retained"
+  },
+  "qemu_scanout_capture": {
+    "path": "artifacts/native-xnu-qemu/20261030T164033.557997Z-ehx_zus3/qemu-screen.png",
+    "bytes": 15772,
+    "sha256": "953165574504bf3392d41d6da88d0cf6e0df526b1fcd010323a9d724cc952567",
+    "desktop_verified": false
+  },
+  "esp_unchanged": true,
+  "qemu_returncode": null,
+  "limits": [
+    "QEMU/AAVMF only; no handset execution",
+    "Debugger observes only the recorded native startup checkpoints",
+    "Each report qualifies only its explicit target; no handset, desktop or complete kernel boot claim"
+  ],
+  "evidence_files": [
+    {
+      "path": "debugger-observation.json",
+      "sha256": "310b614350b06cd6703ca5e37086c59a4ce09f0f0ee5f2a7207bb96964735e42"
+    },
+    {
+      "path": "serial.log",
+      "sha256": "b2fa9969d0834494ee11e175bd5e9bb88a6c9fd3e0754af293e1f2b4a3ea6c72"
+    },
+    {
+      "path": "gdb.log",
+      "sha256": "dc4ce60fd2eaa2575b525c2ded15f809e4238ad81671cbac640498c10f1eb371"
+    },
+    {
+      "path": "registers.log",
+      "sha256": "de813a1ddfa5d20749bb57df7318f2f5a1aaf8f7f7ef57cbbddfb0b1c72ef3f4"
+    },
+    {
+      "path": "commands.json",
+      "sha256": "6e7f10717b04baddc689ea8a93452b7afe31cba639d38e96f6ec3d2b7a759eb7"
+    },
+    {
+      "path": "kernel-inspection.json",
+      "sha256": "1bf331fdbb65cf1c2e7d98539a8e157a392237795db29ead4d3d448b8754ff1b"
+    }
+  ]
+}

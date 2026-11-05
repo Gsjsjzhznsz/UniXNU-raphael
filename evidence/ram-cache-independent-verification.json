@@ -1,0 +1,357 @@
+{
+  "passed": true,
+  "observations": [
+    {
+      "observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages1.json",
+        "sha256": "54a0fcda31f0229cb9464b3eeca618aa172c896492e22de0483cfe192ff96720"
+      },
+      "immutable_observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages1-20261028T142732Z.json",
+        "sha256": "54a0fcda31f0229cb9464b3eeca618aa172c896492e22de0483cfe192ff96720"
+      },
+      "source_revision": "d0a54cc50f47e6996b1a8b970f0032a8c94d71c4",
+      "pages": 1,
+      "bytes": 4096,
+      "elapsed_ms": 0.09901041666666667,
+      "raw_inputs": [
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T141745Z/after.dtb",
+          "sha256": "1c21f63c741afa3cac7b8db5c1f0424da358de5bed9adc5a7a7efa28789c8f3b"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T141745Z/ram-read.bin",
+          "sha256": "f56bfb1a8930e4f3354771bb804dbf666e909f4d4d6a1fd595e2bfa8505efabb"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T141745Z/ram-mapped.bin",
+          "sha256": "edc2a89f0c324fb00000e2e2c692a112b762b0f692b8b9dd48431c843948bd86"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T141745Z/ram-cache.bin",
+          "sha256": "40b0afd97749fcad55fb679f551c31ad4c982f7c0f0e46bae0738fcf53bbc4a9"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T141745Z/firmware.log",
+          "sha256": "20cd535e3044494251c50ee41c9be6954d9417b3ada4c5fab76ade6ce2806ffe"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T142732Z/after.dtb",
+          "sha256": "b48ef3ea67fa4876157e1137963315424b3f17bd54e0f4a5029f72dc684687e3"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T142732Z/ram-read.bin",
+          "sha256": "5ea7f2fc5336338f1a9c5b2c4aaa07d8828d9e5bfbef9a158453981ff9eb382c"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T142732Z/ram-mapped.bin",
+          "sha256": "505bac0940d63115e6faef5fc9d8c7a1861bb703bb5ca686ea8ed3cd5117bd69"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T142732Z/ram-cache.bin",
+          "sha256": "0e13a8e81c6bee41e14b4b252d1dbf35ff525bf2ed8e5ae9b72ed4fa49958584"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T142732Z/firmware.log",
+          "sha256": "b43afc5e6ecf056f1528284f398500f8dcb4ebc4378ae70a89ac159adfda8461"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T142838Z/baseline.dtb",
+          "sha256": "0885cfa32d086b3aa71bf50b64cac3113eb58cca75db8d15e9c10be8bba781d2"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T142838Z/commands.json",
+          "sha256": "aae431bf2a85cc714ce2f01c67fd2f9e31946ff6067d28ae89906bd1d0b2dca1"
+        }
+      ],
+      "archived_source_verified": true,
+      "wires_redecoded": true,
+      "firmware_original_restore_record_redecoded": true,
+      "baseline_fdt_diagnostics_absent": true,
+      "normal_android_boot_root_and_boot_hash_rechecked": true
+    },
+    {
+      "observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages256.json",
+        "sha256": "431691e5667476b8e80693f650fc3173d6041f6389301807abed60e01f42659b"
+      },
+      "immutable_observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages256-20261028T143440Z.json",
+        "sha256": "431691e5667476b8e80693f650fc3173d6041f6389301807abed60e01f42659b"
+      },
+      "source_revision": "d0a54cc50f47e6996b1a8b970f0032a8c94d71c4",
+      "pages": 256,
+      "bytes": 1048576,
+      "elapsed_ms": 23.778125,
+      "raw_inputs": [
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143224Z/after.dtb",
+          "sha256": "77bac07f298353b54b5a69c2c798d7ab7ec62ab2242faa1a7af3af16020d8600"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143224Z/ram-read.bin",
+          "sha256": "ca50fd2e6a978015409066f190ba71a76ddad3f481a494e4a938a6f3267ebe2c"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143224Z/ram-mapped.bin",
+          "sha256": "efb7fea8d65ab2946efa1673e99f58593304d1c82dbb54fc2f661c1468bd9ced"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143224Z/ram-cache.bin",
+          "sha256": "8d7e836464ae101d5a078c36e67d7b1843ad8b7fc00064f24054da45b3f7e4bf"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143224Z/firmware.log",
+          "sha256": "20cd535e3044494251c50ee41c9be6954d9417b3ada4c5fab76ade6ce2806ffe"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143440Z/after.dtb",
+          "sha256": "e1ddfbb68995b3e385dc7f7b07e69579c3fb4deded7ca81aa9484281151e6e4a"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143440Z/ram-read.bin",
+          "sha256": "e3137cbe7b4ad71a4b7c3e1345805d885e6f4e5240a114954c9fee8ce3a0c9bc"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143440Z/ram-mapped.bin",
+          "sha256": "98670119e1bdd41d5929a6edc4c7256d68a6f089d0589a00f6e28f2a2c5f891e"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143440Z/ram-cache.bin",
+          "sha256": "0e42cac9383926940bf4fedf5945406369b20c6b6e4b473fc88fbecf325df754"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143440Z/firmware.log",
+          "sha256": "5dbf4f84d2645a4695b0284c8f0ffdb6b9bd78e4673c62d94c72b2ec27008a0d"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T143545Z/baseline.dtb",
+          "sha256": "2c06fd193a53af7fb034e7c6beab0029a9b2194199c7e03c3d104a3fb0cc686c"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T143545Z/commands.json",
+          "sha256": "8264ecdfdf318d34f849dabbce05844e6b095cbb7798509ddce7519e0f575f16"
+        }
+      ],
+      "archived_source_verified": true,
+      "wires_redecoded": true,
+      "firmware_original_restore_record_redecoded": true,
+      "baseline_fdt_diagnostics_absent": true,
+      "normal_android_boot_root_and_boot_hash_rechecked": true
+    },
+    {
+      "observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages4096.json",
+        "sha256": "cecc7f2df4ffd6fa717ada12e61e06458469f54ed42691d1e26f47c18cb8dac5"
+      },
+      "immutable_observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages4096-20261028T115003Z.json",
+        "sha256": "cecc7f2df4ffd6fa717ada12e61e06458469f54ed42691d1e26f47c18cb8dac5"
+      },
+      "source_revision": "21483399fb35a703370b469b8089b11ea28a8296",
+      "pages": 4096,
+      "bytes": 16777216,
+      "elapsed_ms": 690.78265625,
+      "raw_inputs": [
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T114523Z/after.dtb",
+          "sha256": "ab80fa58cebd18587b7a556a78baf2d9f78eccd6a091c82443de545973c7b0b2"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T114523Z/ram-read.bin",
+          "sha256": "c48e029026b99f8de628abd44e28a0bec83f157ff5b8b999bef110209a70b7bf"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T114523Z/ram-mapped.bin",
+          "sha256": "407e53e05d568a5befb02b0b1c296b4eca62c277838018c4e94d60589d5995f2"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T114523Z/ram-cache.bin",
+          "sha256": "ba0978e2b420595f8495d3fac625a1902c29534ab7faa88771777cd640a77529"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T114523Z/firmware.log",
+          "sha256": "20cd535e3044494251c50ee41c9be6954d9417b3ada4c5fab76ade6ce2806ffe"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T115003Z/after.dtb",
+          "sha256": "a75e75fa0bd6fa33e12e308986c0369f16a408c2d9bfa0d758eb4d9454dd4784"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T115003Z/ram-read.bin",
+          "sha256": "e0deb8cd476e1665e2b727e59f205f5303a8f5746a364f550702a0cf37dc07c2"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T115003Z/ram-mapped.bin",
+          "sha256": "e77bbcf835f5aa19efc104af497738c721c53e98365565b73aa7f21930667208"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T115003Z/ram-cache.bin",
+          "sha256": "150d16e378bb928373f454e9a0ab47ceeb759a9b76803ec6121c038679296d45"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T115003Z/firmware.log",
+          "sha256": "494d315ec5098c519a5b7673ee7ab3fe05faebea17b0515ff98b17f54f12a82b"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T115212Z/baseline.dtb",
+          "sha256": "5e17c4b0969d9ab6d3a3f754b97416c66fcb48b1a0c23bbb19c119143dffa0f4"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T115212Z/commands.json",
+          "sha256": "d5abda707e7a34d9bc0b09dab4a506a6d5d404df7134b44e8cfac2071a73a57f"
+        }
+      ],
+      "archived_source_verified": true,
+      "wires_redecoded": true,
+      "firmware_original_restore_record_redecoded": true,
+      "baseline_fdt_diagnostics_absent": true,
+      "normal_android_boot_root_and_boot_hash_rechecked": true
+    },
+    {
+      "observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages16384.json",
+        "sha256": "4892351a3949d75e5e0701fa71a6c640b0e039029096610b396edbf26d255928"
+      },
+      "immutable_observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages16384-20261028T143848Z.json",
+        "sha256": "4892351a3949d75e5e0701fa71a6c640b0e039029096610b396edbf26d255928"
+      },
+      "source_revision": "d0a54cc50f47e6996b1a8b970f0032a8c94d71c4",
+      "pages": 16384,
+      "bytes": 67108864,
+      "elapsed_ms": 1521.8653125,
+      "raw_inputs": [
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143632Z/after.dtb",
+          "sha256": "7cd956fc05959e8e0031365f8f385fa0fd4690482f91a6acb480e799cc51a1f1"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143632Z/ram-read.bin",
+          "sha256": "fe1cbeb045829475f240beddbf8f31a53532f716489f433e506b451e69c78c9a"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143632Z/ram-mapped.bin",
+          "sha256": "19ca0b246429be9e08cc2c4701529f0c796cb0a91c1362338a59a16585eb1d5e"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143632Z/ram-cache.bin",
+          "sha256": "0cdef72b3dd02b3863073ec2aba4f4bdc9e12d501d8d4179f63fb3e19afeec3e"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143632Z/firmware.log",
+          "sha256": "20cd535e3044494251c50ee41c9be6954d9417b3ada4c5fab76ade6ce2806ffe"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143848Z/after.dtb",
+          "sha256": "d734418e80bbace6c3defc6928792efa6204dd72e5f5b74a67c740d37675dc64"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143848Z/ram-read.bin",
+          "sha256": "c2cdd5860172c92f8f594650f03555a46cf611589197e9ab291e6fb0462ffe0b"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143848Z/ram-mapped.bin",
+          "sha256": "5db4d21c566a2a6ef20f003eb639924ccc187b9b62b18eb6f39ad4b352b84fcb"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143848Z/ram-cache.bin",
+          "sha256": "b13014d5a6710620d39fa7217e16905e318ca3bc7b0d0474d222408eec717a54"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T143848Z/firmware.log",
+          "sha256": "0e0117875e549f4155064449ca34cdee9c799368cd5adfd3a55c1ccde8f3f24d"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T143956Z/baseline.dtb",
+          "sha256": "c933b5aed73e1b8947b59abffe0987ad20bc8d57c0a21227c450820a528bf2ac"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T143956Z/commands.json",
+          "sha256": "17e392e9ad6e18d49cfc9e22db55a502dc9e328a313b409584a40ae15b88fe48"
+        }
+      ],
+      "archived_source_verified": true,
+      "wires_redecoded": true,
+      "firmware_original_restore_record_redecoded": true,
+      "baseline_fdt_diagnostics_absent": true,
+      "normal_android_boot_root_and_boot_hash_rechecked": true
+    },
+    {
+      "observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages65536.json",
+        "sha256": "e5e34c87fd31febae7de7b2975de1e70ddb8f758825c18c8df79ba2afa6a31e2"
+      },
+      "immutable_observation": {
+        "path": "UniXNU-raphael/evidence/boot-ram-cache-observation-pages65536-20261028T144256Z.json",
+        "sha256": "e5e34c87fd31febae7de7b2975de1e70ddb8f758825c18c8df79ba2afa6a31e2"
+      },
+      "source_revision": "d0a54cc50f47e6996b1a8b970f0032a8c94d71c4",
+      "pages": 65536,
+      "bytes": 268435456,
+      "elapsed_ms": 6087.08453125,
+      "raw_inputs": [
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144040Z/after.dtb",
+          "sha256": "3d3e968e1a73405e6f5a775717f31d09ad54bf4a1ecaf1789c9a2a4c106a75ca"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144040Z/ram-read.bin",
+          "sha256": "2cafdb1a939d14a032089e32d8a0412ecc1056e256af460f27cd8f8bf2732500"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144040Z/ram-mapped.bin",
+          "sha256": "d4665efde520f71022d8f1d6610ab6daaa124f0ae0b1b76be911a417a3ecfdf1"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144040Z/ram-cache.bin",
+          "sha256": "c11b62512e50c1a870695cf1765cccb1342c539f9b088e123ad8d0d18925df56"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144040Z/firmware.log",
+          "sha256": "20cd535e3044494251c50ee41c9be6954d9417b3ada4c5fab76ade6ce2806ffe"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144256Z/after.dtb",
+          "sha256": "ff9993d6c6a05029de72a5dbe9be44aaea02afa74d5b3cdbe530b1040df97444"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144256Z/ram-read.bin",
+          "sha256": "86c97b1536f486cbc6a4892ae9245368308f961bcb6fa19217b9442652f5b6cb"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144256Z/ram-mapped.bin",
+          "sha256": "378d70fa3922d47b7f732bfd19751e617402109bea1e8d676a1792a91445ab91"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144256Z/ram-cache.bin",
+          "sha256": "f0a38500b000cc02ef7a5e221142fe514fb393e9f6f53e7288511cc0b31156be"
+        },
+        {
+          "path": "evidence/private/sec-dxe-run/20261028T144256Z/firmware.log",
+          "sha256": "21c0826fb0095c8d64864d7a5e6473154aa160f7933f44acae461312c9c9a339"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T144408Z/baseline.dtb",
+          "sha256": "cdf077cfba57051a344687c62f007a0f37134288bdf97d8ee5fd2138120ef0c4"
+        },
+        {
+          "path": "evidence/private/entry-probe-cleanup/20261028T144408Z/commands.json",
+          "sha256": "158b0ed6f8e58d239ce72a9f88a835c84e715b12482f5790c461413c6ff51215"
+        }
+      ],
+      "archived_source_verified": true,
+      "wires_redecoded": true,
+      "firmware_original_restore_record_redecoded": true,
+      "baseline_fdt_diagnostics_absent": true,
+      "normal_android_boot_root_and_boot_hash_rechecked": true
+    }
+  ],
+  "maximum_tested_bytes": 268435456,
+  "allocator_enabled": false,
+  "ownership_proven": false,
+  "cross_page_alias_tested": false,
+  "handset_xnu_executed": false,
+  "decoder_sha256": "0eaa4d5e7842618b73f0196f4c08f4d7e42a47eae038b9ebf98609a835033415",
+  "runner_sha256": "1ad362e72c9b4871c33b7ed6a57b568520241ba6951ee2b1a71be65ab9b73cc7"
+}

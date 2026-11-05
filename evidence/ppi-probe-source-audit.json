@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261027T232133.632597Z-9a75fiup/report.json",
+  "qemu_report_sha256": "9a39c43e2e99578a302c309618a652a3ac308c9605660ee8c86f30449c0cf3b5",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PpiProbe.c",
+      "sha256": "f137b587fa98f6d9141811990c51dca7d83183961a0a5ad04cc6cc6ceba30ba5"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPpiProbe.h",
+      "sha256": "9508f23cdb18524af7bea3921575973bbf96764c545ca5625242c12620c27b1a"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "87149be75a3107f3e9e852a78a4ba872f3258a7c5d4e2c7f05021cdb44017feb"
+    }
+  ],
+  "decoder_sha256": "4e4dc885df642654e774fe07d375a0b3adedd91928098a8d79d3dfa200ef7a4b",
+  "primary_header": {
+    "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "path": "include/linux/irqchip/arm-gic-v3.h",
+    "sha256": "53bf4e7415e7db54bce490dd7a9d39f85a0aa5064150661ccab0e88ed9ead11e",
+    "constants": {
+      "GICR_CTLR": 0,
+      "GICR_ISENABLER0": 256,
+      "GICR_ICENABLER0": 384,
+      "GICR_ISPENDR0": 512,
+      "GICR_ISACTIVER0": 768,
+      "GICD_CTLR_RWP": 2147483648
+    }
+  },
+  "specification": {
+    "document": "ARM IHI0069C (ID070116)",
+    "sha256": "026e7dba8d8efca43a3593a6914a2f7cba2ff71cd34583ced97d389d1108dcf6",
+    "sections_pdf_page": {
+      "8.10 The GIC Redistri butor register map": 513,
+      "8.9.4 GICD_CTLR": 465,
+      "8.11.2 GICR_CTLR": 519,
+      "8.11.4 GICR_ICENABLER0": 524,
+      "8.11.15 GICR_ISENABLER0": 545
+    },
+    "redistributor_rwp_bit": 3
+  },
+  "legacy_vendor_wait_uses_distributor_rwp_bit31": true,
+  "legacy_wait_copied": false,
+  "legacy_wait_source": {
+    "path": "drivers/irqchip/irq-gic-v3.c",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "sha256": "7079c68f97c2e275be876db22b5dc4e181f74df0ae111fdab3fdbe0bf30502f8"
+  },
+  "resource_contract": "UniXNU-raphael/evidence/interrupt-resource-contract.json",
+  "resource_contract_sha256": "8fc3f9b382293945c997e861e557f6548b4226c8722c7d6d633d7914d3b49b83",
+  "timer_intid": 18,
+  "timer_flags": 3848,
+  "permitted_write_offsets": [
+    256,
+    384
+  ],
+  "write_one_mask_only": true,
+  "distributor_written": false,
+  "group_or_priority_written": false,
+  "irq_unmasked": false,
+  "result_storage": {
+    "bytes": 160,
+    "rva": 61504,
+    "fd_offset": 69696,
+    "physical_address": 1074466880,
+    "linker_map": "Build/RaphaelDiagnostic/DEBUG_CLANGPDB/AARCH64/RaphaelPkg/Sec/Sec/OUTPUT/RaphaelSec.dll.map",
+    "materialized_zero_data": true,
+    "within_sec_xip_pe": true
+  },
+  "handset_executed": false,
+  "limitations": [
+    "PPI enable permission only; no IRQ routing or delivery",
+    "Write-ignored result is preserved as status3, never a writable permission claim"
+  ]
+}

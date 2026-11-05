@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = SplashGopDxe
+  FILE_GUID = CFA29B17-2EED-4164-BBD0-42B48BCCF105
+  MODULE_TYPE = DXE_DRIVER
+  ENTRY_POINT = SplashGopEntry
+[Sources]
+  SplashGop.c
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  UefiDriverEntryPoint
+  UefiBootServicesTableLib
+  MemoryAllocationLib
+  BaseLib
+  RaphaelGopLib
+  DebugLib
+[Protocols]
+  gEfiGraphicsOutputProtocolGuid
+  gEfiDevicePathProtocolGuid
+[FixedPcd]
+  gRaphaelTokenSpaceGuid.PcdRaphaelContextBase
+  gRaphaelTokenSpaceGuid.PcdRaphaelExperimentalGop
+[Depex]
+  TRUE

@@ -1,0 +1,28 @@
+{
+  "passed": false,
+  "execution_evidence_verified": true,
+  "report": "evidence/private/android-return-run/20261101T182935Z/report.json",
+  "derived_report": "evidence/private/android-return-run/20261101T182935Z/launchd-main-derived.json",
+  "observer_candidate_ms": 240000,
+  "experiment_passed": false,
+  "original_initproc_spawned": 1,
+  "launchd_main_verified": true,
+  "main_evidence": "Pinned XNU PID1-only initproc_spawned sysctl plus original launchd boot-task console records in CRC-verified mutable segments",
+  "syscall_entries": 1474,
+  "signature_ready_blobs": 53,
+  "signature_bytes": 3294543872,
+  "ufs_bytes": 3255964672,
+  "ufs_failures": 0,
+  "signature_bad_hash": 0,
+  "signature_no_hash": 0,
+  "vm_page_free_count": 131,
+  "terminal": "Original proc_exit panic after critical child tzinit PID17 exited signal0/status30; not PID1 exit or diagnostic deadline success",
+  "blocking_evidence": [
+    "Original launchd fixup-mobile-tmp: Read-only file system",
+    "tzinit exit status30 (EROFS)",
+    "No independent writable Data mounted"
+  ],
+  "cleanup_verified": true,
+  "desktop_verified": false,
+  "next": "Qualify explicit larger owned memory window, then independent ephemeral sparse APFS Data; retain OS/SystemOS immutable extents"
+}

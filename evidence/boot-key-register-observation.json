@@ -1,0 +1,95 @@
+{
+  "source_revision": "e9114522766a959dd4a7590c7033dd2838b90d7b",
+  "private_readback": "evidence/private/sec-dxe-run/20261027T183019Z",
+  "nonce_matched": true,
+  "stage": 2,
+  "status": 0,
+  "key_registers": {
+    "version": 1,
+    "status": 3,
+    "transactions": 6,
+    "completed": 6,
+    "start": 761134795,
+    "end": 761136656,
+    "timeout_ticks": 19200,
+    "error": 0,
+    "registers": [
+      {
+        "sid": 0,
+        "address": 50436,
+        "observer": 241206016,
+        "command": 134217792,
+        "completion": 1,
+        "polls": 2,
+        "value": 16,
+        "error": 0
+      },
+      {
+        "sid": 0,
+        "address": 50437,
+        "observer": 241206016,
+        "command": 134217808,
+        "completion": 1,
+        "polls": 2,
+        "value": 17,
+        "error": 0
+      },
+      {
+        "sid": 0,
+        "address": 50496,
+        "observer": 241206016,
+        "command": 134218752,
+        "completion": 1,
+        "polls": 2,
+        "value": 0,
+        "error": 0
+      },
+      {
+        "sid": 0,
+        "address": 50502,
+        "observer": 241206016,
+        "command": 134218848,
+        "completion": 1,
+        "polls": 2,
+        "value": 128,
+        "error": 0
+      },
+      {
+        "sid": 0,
+        "address": 50448,
+        "observer": 241206016,
+        "command": 134217984,
+        "completion": 1,
+        "polls": 2,
+        "value": 1,
+        "error": 0
+      },
+      {
+        "sid": 0,
+        "address": 2064,
+        "observer": 241204352,
+        "command": 134217984,
+        "completion": 1,
+        "polls": 2,
+        "value": 4,
+        "error": 0
+      }
+    ],
+    "all_six_read_transactions_verified": true,
+    "gpio_input_configuration_verified": true,
+    "current_keys": {
+      "volume_up": false,
+      "volume_down": false,
+      "power": false
+    },
+    "observer_command_mmio_writes": 6,
+    "pmic_register_writes": 0,
+    "physical_key_action_verified": false
+  },
+  "firmware_sha256": "51d1790e732c0b608d0f8e973be356d6482a29e5c5f7f525e5d81688ab1147d2",
+  "image_sha256": "c9dced3d0ebcd09e05ae74baea882c56e517dfacd1c06ee5e38ccd06472050d2",
+  "android_boot_completed": true,
+  "root_verified": true,
+  "boot_partition_unchanged": true,
+  "physical_keys_verified": false
+}

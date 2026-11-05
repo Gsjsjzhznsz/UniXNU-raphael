@@ -1,0 +1,399 @@
+{
+  "kind": "read-only SMMUv2 source audit",
+  "wire_version": 4,
+  "passed": true,
+  "fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "recipe": {
+    "smmu": {
+      "base": 352321536,
+      "size": 1048576,
+      "source": "/soc/apps-smmu@0x15000000:reg[0]"
+    },
+    "gcc": {
+      "base": 1048576,
+      "size": 2031616,
+      "source": "/soc/qcom,gcc:reg[0]"
+    },
+    "target_sid": 2048,
+    "target_mask": 1056,
+    "target_streams": [
+      2048,
+      2080,
+      3072,
+      3104
+    ],
+    "power_addresses": [
+      1560664,
+      1560656
+    ],
+    "tbus": [
+      {
+        "source": "/soc/apps-smmu@0x15000000/mnoc_hf_1_tbu@0x15191000",
+        "matching_streams": [
+          3072,
+          3104
+        ],
+        "power": {
+          "base": 1560664,
+          "size": 4,
+          "source": "/soc/qcom,gdsc@0x17d058:reg[0]"
+        }
+      },
+      {
+        "source": "/soc/apps-smmu@0x15000000/mnoc_hf_0_tbu@0x1518d000",
+        "matching_streams": [
+          2048,
+          2080
+        ],
+        "power": {
+          "base": 1560656,
+          "size": 4,
+          "source": "/soc/qcom,gdsc@0x17d050:reg[0]"
+        }
+      }
+    ],
+    "source": "/soc/qcom,mdss_mdp@ae00000:iommus",
+    "mmio_writes": false,
+    "root_bus_access_assumption": "existing boot firmware leaves APPS SMMU global register path accessible",
+    "root_bus_vote_verified": false
+  },
+  "primary_sources": [
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/iommu/arm-smmu-regs.h",
+      "sha256": "c720cb61501d13cae875c185cc0a03e8155816b296ef710e66bb25222c5a9bba",
+      "anchors": {
+        "ARM_SMMU_GR0_sCR0": [
+          27
+        ],
+        "ARM_SMMU_GR0_ID0": [
+          49
+        ],
+        "ARM_SMMU_GR0_ID1": [
+          50
+        ],
+        "ARM_SMMU_GR0_ID2": [
+          51
+        ],
+        "ID0_S1TS": [
+          62
+        ],
+        "ID0_S2TS": [
+          63
+        ],
+        "ID0_SMS": [
+          65
+        ],
+        "ID0_EXIDS": [
+          74
+        ],
+        "ID0_NUMSMRG_MASK": [
+          76
+        ],
+        "ID1_PAGESIZE": [
+          78
+        ],
+        "ID1_NUMPAGENDXB_SHIFT": [
+          79
+        ],
+        "ID1_NUMPAGENDXB_MASK": [
+          80
+        ],
+        "ID1_NUMCB_MASK": [
+          84
+        ],
+        "ID1_NUMS2CB_SHIFT": [
+          81
+        ],
+        "ID1_NUMS2CB_MASK": [
+          82
+        ],
+        "SMR_VALID": [
+          110
+        ],
+        "SMR_MASK_SHIFT": [
+          111
+        ],
+        "SMR_MASK_MASK": [
+          112
+        ],
+        "SID_MASK": [
+          113,
+          160
+        ],
+        "S2CR_CBNDX_MASK": [
+          118
+        ],
+        "S2CR_TYPE_SHIFT": [
+          120
+        ],
+        "S2CR_TYPE_MASK": [
+          121
+        ],
+        "CBAR_TYPE_SHIFT": [
+          150,
+          152,
+          153,
+          154,
+          155
+        ],
+        "CBAR_TYPE_MASK": [
+          151
+        ],
+        "CBA2R_RW64_64BIT": [
+          164
+        ],
+        "SCTLR_M": [
+          208
+        ],
+        "sCR0_CLIENTPD": [
+          28
+        ],
+        "ARM_SMMU_CB_SCTLR": [
+          168
+        ],
+        "ARM_SMMU_CB_ACTLR": [
+          169
+        ],
+        "ARM_SMMU_CB_TTBCR2": [
+          171
+        ],
+        "ARM_SMMU_CB_TTBR0": [
+          172
+        ],
+        "ARM_SMMU_CB_TTBR1": [
+          173
+        ],
+        "ARM_SMMU_CB_TTBCR": [
+          171,
+          174
+        ],
+        "ARM_SMMU_CB_CONTEXTIDR": [
+          175
+        ],
+        "ARM_SMMU_CB_S1_MAIR0": [
+          176
+        ],
+        "ARM_SMMU_CB_S1_MAIR1": [
+          177
+        ],
+        "ARM_SMMU_GR0_SMR(n)": [
+          109
+        ],
+        "ARM_SMMU_GR0_S2CR(n)": [
+          116
+        ],
+        "ARM_SMMU_GR1_CBAR(n)": [
+          141
+        ],
+        "ARM_SMMU_GR1_CBA2R(n)": [
+          162
+        ],
+        "S2CR_TYPE_TRANS": [
+          126
+        ],
+        "S2CR_TYPE_BYPASS": [
+          127
+        ],
+        "S2CR_TYPE_FAULT": [
+          128
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/iommu/arm-smmu-regs.h"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/iommu/arm-smmu.c",
+      "sha256": "7910064fa0b19cede7f93fe5558af5cd236c94fb67f28022a92255a1b3a82d2c",
+      "anchors": {
+        "ARM_SMMU_GR0_NS(smmu)": [
+          94,
+          1626,
+          4053,
+          4054,
+          4071,
+          4104,
+          4985
+        ],
+        "? 0x400 : 0": [
+          97
+        ],
+        "smmu->pgshift =": [
+          4536
+        ],
+        "size = 1 << (((id >> ID1_NUMPAGENDXB_SHIFT)": [
+          4539
+        ],
+        "smmu->cb_base = smmu->base + resource_size(res) / 2": [
+          4831
+        ],
+        "qsmmuv500_tbu_probe": [
+          5679,
+          5725
+        ],
+        "qcom,stream-id-range": [
+          5705
+        ],
+        "arm_smmu_init_power_resources(pdev)": [
+          4872,
+          5712
+        ],
+        "clock-names": [
+          4283,
+          4298
+        ],
+        "qcom,regulator-names": [
+          4329,
+          4349
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/iommu/arm-smmu.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "drivers/clk/qcom/gdsc-regulator.c",
+      "sha256": "3213aa70e751de915974d44b4ba8b4b73eda916481c146c3bae0c61df42b73bd",
+      "anchors": {
+        "PWR_ON_MASK": [
+          37,
+          127,
+          204,
+          977,
+          992,
+          997
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/drivers/clk/qcom/gdsc-regulator.c"
+    },
+    {
+      "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+      "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+      "path": "arch/arm64/boot/dts/qcom/sm8150-gdsc.dtsi",
+      "sha256": "032873a47ddb2295a2046bb9adc8a2ce56576a3e87f76612e6cf1cec46e8e7b9",
+      "anchors": {
+        "mdss_core_gdsc:": [
+          190
+        ],
+        "tbu": [
+          65,
+          67,
+          74,
+          76,
+          83,
+          85,
+          92,
+          94,
+          101,
+          103,
+          110,
+          112,
+          119,
+          121,
+          128,
+          130,
+          137,
+          139
+        ],
+        "reg =": [
+          19,
+          26,
+          33,
+          40,
+          47,
+          54,
+          61,
+          68,
+          77,
+          86,
+          95,
+          104,
+          113,
+          122,
+          131,
+          140,
+          150,
+          157,
+          164,
+          171,
+          178,
+          185,
+          193,
+          203,
+          209,
+          220,
+          225,
+          231,
+          242,
+          249,
+          256,
+          264
+        ]
+      },
+      "url": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource/blob/663db50e195a8a54c8565ac4ab0c6d9ba7d80db0/arch/arm64/boot/dts/qcom/sm8150-gdsc.dtsi"
+    }
+  ],
+  "scalar_constants_verified": {
+    "ARM_SMMU_GR0_sCR0": 0,
+    "ARM_SMMU_GR0_ID0": 32,
+    "ARM_SMMU_GR0_ID1": 36,
+    "ARM_SMMU_GR0_ID2": 40,
+    "ID0_S1TS": 1073741824,
+    "ID0_S2TS": 536870912,
+    "ID0_SMS": 134217728,
+    "ID0_EXIDS": 256,
+    "ID0_NUMSMRG_MASK": 255,
+    "ID1_PAGESIZE": 2147483648,
+    "ID1_NUMPAGENDXB_SHIFT": 28,
+    "ID1_NUMPAGENDXB_MASK": 7,
+    "ID1_NUMCB_MASK": 255,
+    "ID1_NUMS2CB_SHIFT": 16,
+    "ID1_NUMS2CB_MASK": 255,
+    "SMR_VALID": 2147483648,
+    "SMR_MASK_SHIFT": 16,
+    "SMR_MASK_MASK": 32767,
+    "SID_MASK": 32767,
+    "S2CR_CBNDX_MASK": 255,
+    "S2CR_TYPE_SHIFT": 16,
+    "S2CR_TYPE_MASK": 3,
+    "CBAR_TYPE_SHIFT": 16,
+    "CBAR_TYPE_MASK": 3,
+    "CBA2R_RW64_64BIT": 1,
+    "SCTLR_M": 1,
+    "sCR0_CLIENTPD": 1,
+    "ARM_SMMU_CB_SCTLR": 0,
+    "ARM_SMMU_CB_ACTLR": 4,
+    "ARM_SMMU_CB_TTBCR2": 16,
+    "ARM_SMMU_CB_TTBR0": 32,
+    "ARM_SMMU_CB_TTBR1": 40,
+    "ARM_SMMU_CB_TTBCR": 48,
+    "ARM_SMMU_CB_CONTEXTIDR": 52,
+    "ARM_SMMU_CB_S1_MAIR0": 56,
+    "ARM_SMMU_CB_S1_MAIR1": 60
+  },
+  "context_register_offsets": [
+    0,
+    4,
+    16,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60
+  ],
+  "mmio_writes": false,
+  "page_tables_read": false,
+  "pixel_memory_read_or_written": false,
+  "private_modules_linked": false,
+  "limitations": [
+    "Pinned Android P driver describes interfaces, not the exact running ABL",
+    "GDSCR power-on cannot prove global interconnect access; retained root bus vote is an experiment assumption",
+    "No clocks, power controls, ATOS, TLB invalidation, faults or display registers are written",
+    "A translation context does not establish physical mapping without a separate page-table audit"
+  ]
+}

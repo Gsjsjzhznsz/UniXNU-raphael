@@ -1,0 +1,16 @@
+{
+  "version": [
+    "future==1.0.0",
+    "uefi_firmware==1.16"
+  ],
+  "wheels": [
+    {
+      "file": "future-1.0.0-py3-none-any.whl",
+      "sha256": "929292d34f5872e70396626ef385ec22355a1fae8ad29e1a734c3e43f9fbc216"
+    },
+    {
+      "file": "uefi_firmware-1.16-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+      "sha256": "d4621177eaaed7ad578c3f5ef4c75a513cc1be7117150f1764c3336105060314"
+    }
+  ]
+}

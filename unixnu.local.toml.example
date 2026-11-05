@@ -1,0 +1,8 @@
+# Copy to ignored unixnu.local.toml and pass --config /absolute/path/to/it.
+# Paths are relative to this file. Do not commit platform seeds or private inputs.
+[build]
+# out = "out"
+# edk2 = "../sources/mu_basecore"
+# kernelcache = "/absolute/path/to/kernelcache.decompressed"
+# uefi = "/absolute/path/to/a-qualified-raphael-firmware-checkout"
+# unique_chip_id must be supplied privately by environment or command line.

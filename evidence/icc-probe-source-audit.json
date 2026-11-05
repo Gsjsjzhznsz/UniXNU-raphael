@@ -1,0 +1,225 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "compiled_reader_object_sha256": "766b4df4eed7159837ff152cc399db7b3cada863c82d9c85a0e3203b731e97e9",
+  "actual_mrs_registers": [
+    "CurrentEL",
+    "DAIF",
+    "MPIDR_EL1",
+    "ICC_SRE_EL1",
+    "ICC_CTLR_EL1",
+    "ICC_PMR_EL1",
+    "ICC_BPR1_EL1",
+    "ICC_IGRPEN1_EL1",
+    "ICC_RPR_EL1",
+    "ICC_HPPIR1_EL1",
+    "CNTP_CTL_EL0",
+    "CNTP_CVAL_EL0",
+    "CNTV_CTL_EL0",
+    "CNTV_CVAL_EL0",
+    "CNTKCTL_EL1",
+    "CNTFRQ_EL0"
+  ],
+  "independent_gnu_assembler_matched": true,
+  "gnu_assembler_version": "GNU assembler (GNU Binutils for Ubuntu) 2.42",
+  "commands": [
+    [
+      "aarch64-linux-gnu-as",
+      "-o",
+      "/home/guo/work/raphael-fresh/artifacts/icc-source-audit/20261028T083015.868865Z-bp3jvprw/mrs-whitelist.o",
+      "/home/guo/work/raphael-fresh/artifacts/icc-source-audit/20261028T083015.868865Z-bp3jvprw/mrs-whitelist.S"
+    ],
+    [
+      "aarch64-linux-gnu-objcopy",
+      "-O",
+      "binary",
+      "--only-section=.text",
+      "/home/guo/work/raphael-fresh/artifacts/icc-source-audit/20261028T083015.868865Z-bp3jvprw/mrs-whitelist.o",
+      "/home/guo/work/raphael-fresh/artifacts/icc-source-audit/20261028T083015.868865Z-bp3jvprw/mrs-whitelist.bin"
+    ]
+  ],
+  "primary_encoding_source": {
+    "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "path": "arch/arm64/include/asm/sysreg.h",
+    "sha256": "0357803843478b179761df9d84eac13da1cd941bc00da7a9925247e34d3d1111",
+    "verified_registers": {
+      "MPIDR_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          0,
+          0,
+          5
+        ],
+        "instruction_hex": "d53800a9",
+        "line": 122
+      },
+      "ICC_SRE_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          12,
+          12,
+          5
+        ],
+        "instruction_hex": "d538cca9",
+        "line": 205
+      },
+      "ICC_CTLR_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          12,
+          12,
+          4
+        ],
+        "instruction_hex": "d538cc89",
+        "line": 204
+      },
+      "ICC_PMR_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          4,
+          6,
+          0
+        ],
+        "instruction_hex": "d5384609",
+        "line": 167
+      },
+      "ICC_BPR1_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          12,
+          12,
+          3
+        ],
+        "instruction_hex": "d538cc69",
+        "line": 203
+      },
+      "ICC_IGRPEN1_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          12,
+          12,
+          7
+        ],
+        "instruction_hex": "d538cce9",
+        "line": 207
+      },
+      "ICC_RPR_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          12,
+          11,
+          3
+        ],
+        "instruction_hex": "d538cb69",
+        "line": 198
+      },
+      "ICC_HPPIR1_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          12,
+          12,
+          2
+        ],
+        "instruction_hex": "d538cc49",
+        "line": 202
+      },
+      "CNTP_CTL_EL0": {
+        "encoding_fields": [
+          3,
+          3,
+          14,
+          2,
+          1
+        ],
+        "instruction_hex": "d53be229",
+        "line": 242
+      },
+      "CNTP_CVAL_EL0": {
+        "encoding_fields": [
+          3,
+          3,
+          14,
+          2,
+          2
+        ],
+        "instruction_hex": "d53be249",
+        "line": 243
+      },
+      "CNTKCTL_EL1": {
+        "encoding_fields": [
+          3,
+          0,
+          14,
+          1,
+          0
+        ],
+        "instruction_hex": "d538e109",
+        "line": 212
+      },
+      "CNTFRQ_EL0": {
+        "encoding_fields": [
+          3,
+          3,
+          14,
+          0,
+          0
+        ],
+        "instruction_hex": "d53be009",
+        "line": 239
+      }
+    }
+  },
+  "architecture_specification": {
+    "title": "Arm Generic Interrupt Controller Architecture Specification GICv3/v4",
+    "document": "ARM IHI 0069C (ID070116)",
+    "url": "https://documentation-service.arm.com/static/6012f442773bb020e3de7aa5",
+    "sha256": "026e7dba8d8efca43a3593a6914a2f7cba2ff71cd34583ced97d389d1108dcf6",
+    "pdf_pages": 788,
+    "sections_pdf_page": {
+      "8.2.12 ICC_HPPIR1_EL1": 213,
+      "8.2.14 ICC_IAR1_EL1": 218,
+      "8.2.22 ICC_SRE_EL1": 239
+    }
+  },
+  "recovery_site_count": 17,
+  "register_read_site_count": 16,
+  "injected_undefined_site_count": 1,
+  "read_whitelist_has_no_acknowledge_registers": true,
+  "cpu_register_writes_in_reader": false,
+  "callee_saved_registers_modified_by_reader": false,
+  "recovery_scope": "Current-EL synchronous slots only; exact read PC plus EC 0 or 0x18; ABI caller-saved scratch; separate physical-timer access table is audited by audit_timer_source.py; exceptions outside both tables use the existing fatal diagnostic path",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccRead.S",
+      "sha256": "ce58d6acebf5deb53448b76319cf6838bd0c152d3e3b312c36aec3d8beb00f56"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccReadAdapter.c",
+      "sha256": "1c53f01bd640045f56c29708fa115f3ce64da994b9a759cd4e6ba88891ff0969"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/IccReadSites.inc",
+      "sha256": "fe09984b517a253a5f97ee59a1ecc6c9441e19febebf44de8bd5172fcddc2bbe"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/SecEntry.S",
+      "sha256": "88f6163e953a322d14983b9d76bb6c15860d165e1caee912002e6e0da90559e8"
+    }
+  ],
+  "decoder_sha256": "a93f476a63ad89a5470f593457ab2c72199211ddd26b86522145b8515b65fbed",
+  "handset_executed": false,
+  "limitations": [
+    "EL2/EL3 traps are not locally recoverable at EL1",
+    "EC 0 injected UDF recovery is tested; no claim of an actual EC 0x18 hardware trap"
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T180247Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T180003Z/20261104T182130Z-recovered-return",
+  "desktop_verified": false,
+  "owned_memory_mib": 704,
+  "display": {
+    "clients": 5,
+    "validations": 2238,
+    "rejected": 0,
+    "kicks": 2238,
+    "frames": 2237,
+    "blank_frames": 0,
+    "retired": 2237,
+    "reject_reason": 0,
+    "transfer_status": 0,
+    "client_status": 0,
+    "power_status": 0,
+    "bytes": 22613385600,
+    "nonblack": 2648
+  },
+  "watchdog": {
+    "stage": 4,
+    "opens": 1,
+    "closes": 0,
+    "checkins": 55,
+    "last_checkin_counter": 17502847886,
+    "monitoring": true,
+    "counter_frequency": 19200000,
+    "failures": 0,
+    "last_selector": 1,
+    "missed_checkin": false
+  },
+  "budget": {
+    "hardware_seconds": 20,
+    "budget_ms": 780000,
+    "observer_seconds": 720.0,
+    "start_counter": 3774005179,
+    "capture_counter": 17600005879,
+    "counter_frequency": 19200000,
+    "elapsed_ms": 720104.203125,
+    "observer_deadline_reached": true,
+    "pets": 1322,
+    "last_pet_counter": 17593814271,
+    "status": 1
+  },
+  "vm_first": [
+    {
+      "free": 140308,
+      "active": 0,
+      "inactive": 0,
+      "wired": 39851
+    }
+  ],
+  "vm_last": [
+    {
+      "free": 1397,
+      "active": 13180,
+      "inactive": 12334,
+      "wired": 108675
+    },
+    {
+      "free": 1212,
+      "active": 13029,
+      "inactive": 11852,
+      "wired": 106248
+    },
+    {
+      "free": 751,
+      "active": 12932,
+      "inactive": 12236,
+      "wired": 108707
+    }
+  ],
+  "ram_data_lines": [
+    "RPH RAM DATA resident=172318720 reads=2022 writes=4537 failures=0 zero_write_bytes=430080",
+    "RPH RAM DATA resident=172318720 reads=2030 writes=4539 failures=0 zero_write_bytes=430080",
+    "RPH RAM DATA resident=172347392 reads=2050 writes=4542 failures=0 zero_write_bytes=430080"
+  ],
+  "ufs_read_lines": [
+    "RPH UFS READ requests=629219 bytes=5231760384 failures=0 commands=629493 blocks=1296766",
+    "RPH UFS READ requests=631443 bytes=5244335104 failures=0 commands=631717 blocks=1299938",
+    "RPH UFS READ requests=633504 bytes=5254562816 failures=0 commands=633778 blocks=1302532"
+  ],
+  "pressure_lines": [],
+  "snapshot_completed": true,
+  "watchdog_panic_reason": null,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "log": {
+    "valid_records": 727,
+    "bytes": 360463,
+    "dropped": 0,
+    "continuous_log_verified": true,
+    "service_snapshot_captured": true
+  },
+  "thread_findings": "Both actual MCM receivers captured. One in main CFRunLoop, other in original metadata creation/VNOP_CREATE after SetDataProtection. lsd98 thread470 actively registers plugins via LSRegisterPluginWithInfo/LSDatabaseRebuildContext, beyond previous synchronous code-signing-info wait. SpringBoard still waits for LS seeding. No fixed MCM deadlock proven; no desktop."
+}

@@ -1,0 +1,186 @@
+{
+  "kind": "nonce-bound handset SMMU register interpretation; no page-table or pixel access",
+  "handoff": "UniXNU-raphael/evidence/sec-display-handoff.json",
+  "handoff_sha256": "79106b7026f5b8c3e9a10a0a4162fbe99a6f2ea6a94cef035359f496dd1d7fb2",
+  "private_readback": "evidence/private/sec-dxe-run/20261027T165210Z",
+  "private_build": "evidence/private/sec-dxe-build/20261027T165139Z",
+  "fdt_sha256": "fdde0b2620ef4c5016e38a485c9be8c6e2264723e0e9e6b3cf62b7ff404c70e3",
+  "recipe": {
+    "smmu": {
+      "base": 352321536,
+      "size": 1048576,
+      "source": "/soc/apps-smmu@0x15000000:reg[0]"
+    },
+    "gcc": {
+      "base": 1048576,
+      "size": 2031616,
+      "source": "/soc/qcom,gcc:reg[0]"
+    },
+    "target_sid": 2048,
+    "target_mask": 1056,
+    "target_streams": [
+      2048,
+      2080,
+      3072,
+      3104
+    ],
+    "power_addresses": [
+      1560664,
+      1560656
+    ],
+    "tbus": [
+      {
+        "source": "/soc/apps-smmu@0x15000000/mnoc_hf_1_tbu@0x15191000",
+        "matching_streams": [
+          3072,
+          3104
+        ],
+        "power": {
+          "base": 1560664,
+          "size": 4,
+          "source": "/soc/qcom,gdsc@0x17d058:reg[0]"
+        }
+      },
+      {
+        "source": "/soc/apps-smmu@0x15000000/mnoc_hf_0_tbu@0x1518d000",
+        "matching_streams": [
+          2048,
+          2080
+        ],
+        "power": {
+          "base": 1560656,
+          "size": 4,
+          "source": "/soc/qcom,gdsc@0x17d050:reg[0]"
+        }
+      }
+    ],
+    "source": "/soc/qcom,mdss_mdp@ae00000:iommus",
+    "mmio_writes": false,
+    "root_bus_access_assumption": "existing boot firmware leaves APPS SMMU global register path accessible",
+    "root_bus_vote_verified": false
+  },
+  "smmu": {
+    "status": 13,
+    "status_name": "smmu-collected",
+    "read_sequence_verified": true,
+    "register_writes": false,
+    "stream_matches": [
+      {
+        "index": 3,
+        "smr": 2216691712,
+        "id": 2048,
+        "mask": 1056,
+        "matched_streams": [
+          2048,
+          2080,
+          3072,
+          3104
+        ],
+        "s2cr": 2,
+        "type": 0,
+        "type_name": "translation",
+        "context_bank": 2
+      }
+    ],
+    "contexts": [
+      {
+        "index": 2,
+        "register_base": 352854016,
+        "cbar": 126976,
+        "cba2r": 1,
+        "cbar_type": 1,
+        "aarch64": true,
+        "sctlr": 224,
+        "translation_enabled": false,
+        "actlr": 3,
+        "ttbcr2": 1073987702,
+        "ttbr0": 0,
+        "ttbr1": 0,
+        "ttbcr": 0,
+        "contextidr": 2784851810,
+        "mair0": 0,
+        "mair1": 0
+      }
+    ],
+    "target_streams": [
+      2048,
+      2080,
+      3072,
+      3104
+    ],
+    "cpu_physical_mapping_verified": false,
+    "iommu_page_tables_read": false,
+    "actual_pixel_fetch_verified": false,
+    "id0": 1275166302,
+    "id1": 1610612792,
+    "id2": 21845,
+    "cr0": 3015686,
+    "client_power_down": false,
+    "num_stream_groups": 94,
+    "num_context_banks": 56,
+    "page_shift": 12,
+    "all_declared_streams_uniquely_matched": true
+  },
+  "display_route": {
+    "register_configuration_consistent": true,
+    "rejection_reasons": [],
+    "ctl_index": 0,
+    "mixer_index": 0,
+    "stage_code": 5,
+    "blend_stage_index": 3,
+    "border_output": true,
+    "interface_index": 1,
+    "pingpong_index": 0,
+    "command_mode": true,
+    "width": 1080,
+    "height": 2340,
+    "blend": {
+      "op": 1024,
+      "combined_alpha": 16711680,
+      "foreground_constant": 255,
+      "background_constant": 0,
+      "supported": true,
+      "foreground_factor_255": 255,
+      "background_factor_255": 0,
+      "pixel_alpha_used": false,
+      "opaque_foreground": true
+    },
+    "programmed_autorefresh": 2147483649,
+    "lm_pp_pairing_source": "fixed source catalog assigns nonzero LM offsets to consecutive PPs",
+    "pixel_fetch_activity_proven": false,
+    "cpu_mapping_proven": false,
+    "framebuffer_writable_proven": false,
+    "refresh_executed_by_project": false,
+    "gop_enabled": false
+  },
+  "firmware_checkpoint_passed": true,
+  "read_count": 621,
+  "mmio_written": false,
+  "physical_mapping_verified": false,
+  "page_tables_read": false,
+  "pixel_output_verified": false,
+  "gop_enabled": false,
+  "analysis_sources": [
+    {
+      "path": "scripts/display_probe.py",
+      "sha256": "294fd7bee16fb217fb20c2092cb74b3438b3a968a5c801e16408a0723e74452d"
+    },
+    {
+      "path": "scripts/smmu_probe.py",
+      "sha256": "201797657291d038da1476b5e280589b5a5f7083524bd85d231972723fa10ff7"
+    },
+    {
+      "path": "scripts/inspect_boot_route.py",
+      "sha256": "41971885e602c53fc8db9f5900a1765680181639a6e3bb2ec9539c915b5e3f00"
+    },
+    {
+      "path": "scripts/inspect_boot_smmu.py",
+      "sha256": "d5a3ceafb5c9042c8c875c1c9b638f739022a8afd221e5db692aef09328452cd"
+    }
+  ],
+  "limitations": [
+    "Unique stream matching is register configuration evidence only",
+    "CLIENTPD, SCTLR.M and CBAR must be interpreted together before choosing any memory walk",
+    "Neither a TTBR nor a bypass setting proves CPU buffer ownership, cache policy or visible refresh"
+  ]
+}

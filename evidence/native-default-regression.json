@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "report": "artifacts/sec-dxe-qemu/20261028T193315.825621Z-681hu_qs/report.json",
+  "report_sha256": "cee4ad041e0c35d8870cfc556ab77dcb93a047fdce1ff1f4775ddd3eb74ef63e",
+  "firmware_sha256": "9ac7f5b5ce97cfde5482843d8df7837fe7e03f6205be21c65dd78293b5fa19a8",
+  "unixnu_revision": "40d21cc65171c3a24faa130a2a8e899f85790485",
+  "core_revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+  "native_boot": false,
+  "handset_executed": false,
+  "executions": {
+    "normal": {
+      "passed": true,
+      "checks": 66
+    }
+  }
+}

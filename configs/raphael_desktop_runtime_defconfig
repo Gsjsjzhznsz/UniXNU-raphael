@@ -1,0 +1,37 @@
+# QEMU-only owner-authenticated original APFS root; no handset storage claim.
+# Emulator-only storage integration; never used as a phone hardware recipe.
+# OS-driver prelink candidate; not a standalone native-only or phone-qualified kernel.
+# Use original OSKext crypto initialization exactly once; retain source support archives.
+# Independent single boot-CPU integration; initial QEMU qualification only.
+# Generic DT platform integration for the native kernel. No phone-ready claim.
+# Native source-provider evaluation. No phone platform/driver qualification.
+CONFIG_XNU_CRYPTO_BOOTSTRAP="prelinked"
+CONFIG_XNU_BUILD_ARCHIVES=y
+CONFIG_XNU_SOURCE_CORECRYPTO14=y
+CONFIG_XNU_BOOT_PROGRESS=n
+CONFIG_XNU_NATIVE_UFS=n
+CONFIG_XNU_NATIVE_ADRENO=n
+CONFIG_XNU_NATIVE_RAM_BLOCK=n
+CONFIG_XNU_NATIVE_MOBILE_DISPLAY=n
+CONFIG_XNU_ARM_DT_PLATFORM=y
+CONFIG_XNU_ARMCPU=y
+CONFIG_XNU_NATIVE_ARCH_TIMER=y
+CONFIG_XNU_SOURCE_PTHREAD=y
+
+CONFIG_XNU_NATIVE_AES=y
+CONFIG_XNU_NATIVE_VIRTIO_BLOCK=y
+
+CONFIG_XNU_TRUST_CACHE_RUNTIME=y
+CONFIG_XNU_VERIFIED_ROOT_PROBE=y
+CONFIG_XNU_OWNER_ROOT_AUDIT=y
+CONFIG_XNU_OWNER_ROOT_TRUST=y
+CONFIG_XNU_VERIFIED_ROOT_ARCHIVE="{tree}/build/raphael-root-policy/libVerifiedRootProbe.a"
+CONFIG_XNU_NATIVE_VIRTIO_BLOCK_ARCHIVE="{tree}/build/virtio-mmio-block-verified-bundle/libVirtioMmioBlock.a"
+
+# Owner-managed composition of the two authenticated original volumes.
+# Generic upstream development path, not Apple seal/ignition acceptance.
+CONFIG_XNU_OWNER_CACHE_MOUNT=y
+CONFIG_XNU_OWNER_CACHE_STARTUP=y
+CONFIG_XNU_OWNER_BOOT_MANIFEST=y
+CONFIG_XNU_OWNER_UNION_SYSTEMOS=y
+CONFIG_XNU_NATIVE_CS_HASH_CACHE=y

@@ -1,0 +1,395 @@
+{
+  "kind": "host execution of actual C display collector; mocked hardware only",
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/display-probe-host/20261027T161447Z/display-probe.so"
+  ],
+  "passed": true,
+  "cases": [
+    {
+      "name": "powered source: exact bounded read sequence",
+      "passed": true,
+      "status": 7,
+      "reads": 507,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "GCC enabled HWCG idle: clock-off may be set",
+      "passed": true,
+      "status": 7,
+      "reads": 507,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "GCC HWCG cannot bypass software disable",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 0 blocks all dependent reads",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 1 blocks all dependent reads",
+      "passed": true,
+      "status": 4,
+      "reads": 2,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 2 blocks all dependent reads",
+      "passed": true,
+      "status": 5,
+      "reads": 3,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "gate 3 blocks all dependent reads",
+      "passed": true,
+      "status": 6,
+      "reads": 4,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "clock enable bit required even if CLK_OFF clear",
+      "passed": true,
+      "status": 3,
+      "reads": 1,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "out of bounds pipe: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "duplicate pipes: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unaligned pipe: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "too many pipes: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "truncated cells: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "short source register region: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "nonidentity bus mapping: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "identity window too short: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unexpected cell geometry: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "disabled display node: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unsupported compatible: no reads",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "unknown MDSS major: no pipe or routing reads",
+      "passed": true,
+      "status": 8,
+      "reads": 5,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "ctl window outside MDP: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "ctl windows overlap: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "ctl exceeds supported count: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "ctl short block: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "mixer window outside MDP: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "mixer windows overlap: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "mixer exceeds supported count: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "mixer short block: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "intf window outside MDP: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "intf windows overlap: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "intf exceeds supported count: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "intf short block: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "pp window outside MDP: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "pp windows overlap: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "pp exceeds supported count: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "pp short block: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "CTL aliases SSPP window: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "blend outside LM window: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "overlapping blend registers: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "blend count mismatch: no reads",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "mocked_mmio": true,
+      "independent_decoder": false
+    },
+    {
+      "name": "VIG0 blend and interface TE semantic round trip",
+      "passed": true,
+      "status": 7,
+      "reads": 507,
+      "mocked_mmio": true,
+      "independent_decoder": true
+    },
+    {
+      "name": "missing last sample",
+      "passed": true,
+      "mocked_mmio": true,
+      "decoder_rejection": true
+    },
+    {
+      "name": "invented MMIO address",
+      "passed": true,
+      "mocked_mmio": true,
+      "decoder_rejection": true
+    },
+    {
+      "name": "appended sample",
+      "passed": true,
+      "mocked_mmio": true,
+      "decoder_rejection": true
+    }
+  ],
+  "case_count": 44,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+      "sha256": "7b3d5f1741a2d2039b194a7554e1182dc2e7fac534daea43d4ee632209d126d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "21a301c1d97893abf3907676497ee07ada39fdd3aebb219376d99888471408e7"
+    }
+  ],
+  "input_fdt_sha256": "7b24eee80e40f2444153b8effacd5c476fd394fcff62aa5e807d5a161c9384f5",
+  "shared_object_sha256": "6a3eeeb4bc1a062c6b197aecaac9edebe93042accf576640ef38574dfdd64190",
+  "handset_executed": false
+}

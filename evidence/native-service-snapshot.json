@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "handset_report": "evidence/private/android-return-run/20261101T204217Z/report.json",
+  "checkpoint_verified": true,
+  "android_cleanup_verified": true,
+  "android_return_seconds": 459.627533244,
+  "pid1_syscalls": 7532,
+  "processes_captured": 69,
+  "selected_services": [
+    {
+      "pid": 1,
+      "name": "launchd",
+      "threads": 5,
+      "truncated": false
+    },
+    {
+      "pid": 27,
+      "name": "SpringBoard",
+      "threads": 2,
+      "truncated": false
+    },
+    {
+      "pid": 37,
+      "name": "configd",
+      "threads": 2,
+      "truncated": false
+    },
+    {
+      "pid": 45,
+      "name": "keybagd",
+      "threads": 3,
+      "truncated": false
+    }
+  ],
+  "springboard_main_wait": "Original CFPrefs synchronous system/user cfprefsd reply",
+  "backboardd_observed": false,
+  "display_clients": 0,
+  "display_frames": 0,
+  "framebuffer_restoration_verified": true,
+  "kernel_window_bytes": 536870912,
+  "scope": "Bounded original process, continuation and resident-only user-stack snapshot; actual task cached shared-cache slide; no faulting reads",
+  "desktop_verified": false,
+  "record_words": 128,
+  "user_stack_symbolication": "evidence/private/android-return-run/20261101T204217Z/services-symbolicated.json",
+  "cfprefsd_observed": false,
+  "springboard_main_user_frames": 16,
+  "shared_cache_slide": 254427136
+}

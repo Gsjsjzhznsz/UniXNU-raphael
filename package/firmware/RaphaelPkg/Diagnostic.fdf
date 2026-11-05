@@ -1,0 +1,180 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[FD.RAPHAELDIAG]
+BaseAddress = $(RAPHAEL_FDBASE)
+Size = $(RAPHAEL_FDSIZE)
+ErasePolarity = 1
+BlockSize = 0x1000
+NumBlocks = $(RAPHAEL_FD_BLOCKS)
+
+0x000000|$(RAPHAEL_FDSIZE)
+FV = DIAGNOSTIC
+
+[FV.DIAGNOSTIC]
+FvAlignment = 16
+ERASE_POLARITY = 1
+MEMORY_MAPPED = TRUE
+STICKY_WRITE = TRUE
+LOCK_CAP = TRUE
+LOCK_STATUS = TRUE
+WRITE_ENABLED_CAP = TRUE
+WRITE_DISABLED_CAP = TRUE
+WRITE_STATUS = TRUE
+READ_ENABLED_CAP = TRUE
+READ_DISABLED_CAP = TRUE
+READ_STATUS = TRUE
+FvNameGuid = 498BBAB2-0856-41D0-A806-7C8938B25606
+
+APRIORI DXE {
+  INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
+!if $(RAPHAEL_QEMU_ARCH_TEST) == TRUE || $(RAPHAEL_PHYSICAL_TIMER_ARCH) == TRUE
+  INF ArmPkg/Drivers/CpuDxe/CpuDxe.inf
+!if $(RAPHAEL_QEMU_ARCH_TEST) == TRUE
+INF ArmPkg/Drivers/ArmGicDxe/ArmGicV3Dxe.inf
+  INF ArmPkg/Drivers/TimerDxe/TimerDxe.inf
+!else
+INF RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimerDxe.inf
+!endif
+!endif
+  INF RaphaelPkg/Drivers/SplashGopDxe/SplashGopDxe.inf
+  INF RaphaelPkg/Drivers/PmicInputDxe/PmicInputDxe.inf
+!if $(RAPHAEL_PAYLOAD_TEST) == TRUE
+  INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
+  INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
+  INF FatPkg/EnhancedFatDxe/Fat.inf
+  INF UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.inf
+!endif
+}
+!if $(RAPHAEL_QEMU_ARCH_TEST) == TRUE || $(RAPHAEL_PHYSICAL_TIMER_ARCH) == TRUE
+INF ArmPkg/Drivers/CpuDxe/CpuDxe.inf
+!if $(RAPHAEL_QEMU_ARCH_TEST) == TRUE
+INF ArmPkg/Drivers/ArmGicDxe/ArmGicV3Dxe.inf
+INF ArmPkg/Drivers/TimerDxe/TimerDxe.inf
+!else
+INF RaphaelPkg/Drivers/PhysicalTimerDxe/PhysicalTimerDxe.inf
+!endif
+!endif
+INF RaphaelPkg/Sec/Sec.inf
+INF MdeModulePkg/Core/Dxe/DxeMain.inf
+INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
+INF RaphaelPkg/Drivers/PmicInputDxe/PmicInputDxe.inf
+INF RaphaelPkg/Drivers/SplashGopDxe/SplashGopDxe.inf
+INF RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturnDxe.inf
+
+!if $(RAPHAEL_PAYLOAD_TEST) == TRUE
+INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
+INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
+INF FatPkg/EnhancedFatDxe/Fat.inf
+INF UniXNUPkg/Driver/UniXNURamDiskDxe/UniXNURamDiskDxe.inf
+!if $(RAPHAEL_UFS_PAYLOAD) == FALSE
+FILE FREEFORM = 8A9E0A07-B2FC-47F1-A58B-10AAC5650294 {
+!if $(RAPHAEL_NATIVE_BOOT) == TRUE
+  SECTION RAW = $(RAPHAEL_PAYLOAD_PART0)
+!else
+  SECTION RAW = $(RAPHAEL_PAYLOAD_IMAGE)
+!endif
+}
+!endif
+!endif
+
+!if $(RAPHAEL_NATIVE_BOOT) == TRUE && $(RAPHAEL_UFS_PAYLOAD) == FALSE
+FILE FREEFORM = 49C128B8-093B-4186-AE24-366F6C4D4D6F {
+  SECTION RAW = $(RAPHAEL_PAYLOAD_PART1)
+}
+!endif
+
+!if $(RAPHAEL_NATIVE_EARLY_TEST) == TRUE
+  FILE FREEFORM = 3d7c6c2f-3c93-41f6-8a43-e63fe3ea8078 {
+    SECTION RAW = $(RAPHAEL_NATIVE_EARLY_POLICY)
+  }
+!endif
+!if $(RAPHAEL_NATIVE_MMU_TEST) == TRUE
+FILE FREEFORM = A43A362C-77B4-45A9-9313-A067DD84D726 {
+  SECTION RAW = $(RAPHAEL_NATIVE_MMU_POLICY)
+}
+!endif
+
+!if $(RAPHAEL_NATIVE_LOAD_TEST) == TRUE
+FILE FREEFORM = D8588174-C45B-4308-910F-ADD8B51070B2 {
+  SECTION RAW = $(RAPHAEL_NATIVE_LOAD_POLICY)
+}
+!endif
+
+!if $(RAPHAEL_DARWIN_TEST) == TRUE
+INF RuleOverride=DarwinStored DarwinBootPkg/Driver/DarwinBoot.inf
+!endif
+
+!if $(RAPHAEL_RAM_READ_PROBE) == TRUE
+FILE FREEFORM = D2CD8ED5-A64E-45D3-8B4E-3D02D1F1B0FB {
+  SECTION RAW = $(RAPHAEL_RAM_READ_POLICY)
+}
+!endif
+
+!if $(RAPHAEL_KERNEL_WINDOW) == TRUE
+FILE FREEFORM = 7F1A45CB-8376-40CD-AA87-198EB654A152 {
+  SECTION RAW = $(RAPHAEL_KERNEL_WINDOW_POLICY)
+}
+!endif
+
+
+!if $(RAPHAEL_ANDROID_RETURN) == TRUE
+FILE FREEFORM = 26118CDD-1846-4DDC-B626-B6D6428845E2 {
+  SECTION RAW = $(RAPHAEL_ANDROID_RETURN_POLICY)
+}
+FILE FREEFORM = 075868E9-FBBA-4BAE-92C3-AD2103C264BD {
+  SECTION RAW = $(RAPHAEL_ANDROID_RETURN_STUB)
+}
+!endif
+
+
+!if $(RAPHAEL_UFS_EXTENTS) == TRUE
+FILE FREEFORM = 74840A8B-E26A-42D1-962A-DF96CC83CB46 {
+  SECTION RAW = $(RAPHAEL_UFS_EXTENT_POLICY)
+}
+!endif
+
+!if $(RAPHAEL_UFS_PAYLOAD) == TRUE
+FILE FREEFORM = 468ae3b7-f083-4e2c-b9b3-a672be5a46d3 {
+  SECTION RAW = $(RAPHAEL_UFS_PAYLOAD_HASHES)
+}
+!endif
+
+!if $(RAPHAEL_UFS_WRITE_PROBE) == TRUE
+FILE FREEFORM = BEDAC149-D758-4984-B0D7-506F21B51B16 {
+  SECTION RAW = $(RAPHAEL_UFS_WRITE_POLICY)
+}
+!endif
+
+[Rule.Common.SEC]
+  FILE SEC = $(NAMED_GUID) {
+    PE32 PE32 Align = Auto $(INF_OUTPUT)/$(MODULE_NAME).efi
+  }
+[Rule.Common.DXE_CORE]
+  FILE DXE_CORE = $(NAMED_GUID) {
+    PE32 PE32 $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING = "$(MODULE_NAME)" Optional
+  }
+[Rule.Common.DXE_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32 PE32 $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING = "$(MODULE_NAME)" Optional
+  }
+
+[Rule.Common.DXE_RUNTIME_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32 PE32 $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING = "$(MODULE_NAME)" Optional
+  }
+
+[Rule.Common.UEFI_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32 PE32 $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING = "$(MODULE_NAME)" Optional
+  }
+
+[Rule.Common.UEFI_DRIVER.DarwinStored]
+  FILE FREEFORM = $(NAMED_GUID) {
+    PE32 PE32 $(INF_OUTPUT)/$(MODULE_NAME).efi
+  }

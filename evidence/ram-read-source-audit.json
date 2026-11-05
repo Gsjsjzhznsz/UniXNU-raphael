@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T064119.192965Z-lnm4fiii/report.json",
+  "qemu_report_sha256": "151d524b5360749dc831bc16ff18bce2a3459937bdc96eb1a68f4f8b4267bf7e",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamRead.c",
+      "sha256": "f8429b13d0742a7769197e9bcd74985a334d5621ef082a0853b2dcd3941d25d2"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/RamReadAdapter.c",
+      "sha256": "16add0aa20ad2e2c85314327ab912b90e2bacbd67df962f6add31057836df728"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelRamRead.h",
+      "sha256": "75be7917dbbc2a32d64eb9b9062491008c37584372598424b9dc04e138dddb7c"
+    }
+  ],
+  "decoder_sha256": "547a564425d5b34ed03ecdd4f6b38a4e7fac492cea12369f81499f8fdaf8e3b2",
+  "load": {
+    "function_rva": 23544,
+    "load_rva": 23568,
+    "load_fd_offset": 31760,
+    "load_opcode": 4181721736,
+    "no_store_through_candidate": true,
+    "only_store_targets": [
+      "own stack",
+      "output pointer"
+    ],
+    "barriers": [
+      "dsb sy",
+      "dmb sy"
+    ],
+    "instruction_count": 13
+  },
+  "result_storage": {
+    "bytes": 208,
+    "rva": 65840,
+    "physical_address": 1074471216,
+    "fd_offset": 74032,
+    "materialized_zero_data": true
+  },
+  "primary_sources": [
+    {
+      "repository": "sources/mu_basecore",
+      "revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5",
+      "path": "MdePkg/Library/ArmLib/AArch64/ArmLibSupport.S",
+      "sha256": "c817444edf18f27e29b0e8d15cc28a9c9bcb642f17c70129b79d343f6f15ce71"
+    }
+  ],
+  "fatal_load_site_udf_return_verified": true,
+  "real_data_abort_verified": false,
+  "handset_executed": false
+}

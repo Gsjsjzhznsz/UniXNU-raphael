@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = NativeXnuFixture
+  FILE_GUID = 32DDB12D-A775-439E-AD67-6118D4FBF598
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 0.1
+  ENTRY_POINT = NativeXnuFixtureEntry
+[Sources]
+  NativeXnuFixture.c
+[Packages]
+  RaphaelTestPkg/RaphaelTestPkg.dec
+  MdePkg/MdePkg.dec
+  UniXNUPkg/UniXNUPkg.dec
+[LibraryClasses]
+  CacheMaintenanceLib
+  PrintLib
+  BaseLib
+  BaseMemoryLib
+  DevicePathLib
+  MemoryAllocationLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UniXNULib
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gUniXNULoaderProtocolGuid
+[Guids]
+  gEfiEventExitBootServicesGuid

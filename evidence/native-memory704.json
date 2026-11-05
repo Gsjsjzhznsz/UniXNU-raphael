@@ -1,0 +1,102 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261104T171336Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T171041Z/20261104T172558Z-recovered-return",
+  "desktop_verified": false,
+  "owned_memory_mib": 704,
+  "display": {
+    "clients": 5,
+    "validations": 599,
+    "rejected": 0,
+    "kicks": 599,
+    "frames": 599,
+    "blank_frames": 0,
+    "retired": 599,
+    "reject_reason": 0,
+    "transfer_status": 0,
+    "client_status": 0,
+    "power_status": 0,
+    "bytes": 6055171200,
+    "nonblack": 2648
+  },
+  "watchdog": {
+    "stage": 4,
+    "opens": 1,
+    "closes": 0,
+    "checkins": 22,
+    "last_checkin_counter": 10626447265,
+    "monitoring": true,
+    "counter_frequency": 19200000,
+    "failures": 0,
+    "last_selector": 1,
+    "missed_checkin": false
+  },
+  "budget": {
+    "hardware_seconds": 20,
+    "budget_ms": 420000,
+    "observer_seconds": 360.0,
+    "start_counter": 3744583733,
+    "capture_counter": 10658660210,
+    "counter_frequency": 19200000,
+    "elapsed_ms": 360108.14984375,
+    "observer_deadline_reached": true,
+    "pets": 626,
+    "last_pet_counter": 10654337535,
+    "status": 1
+  },
+  "vm_first": [
+    {
+      "free": 140308,
+      "active": 0,
+      "inactive": 0,
+      "wired": 39858
+    }
+  ],
+  "vm_last": [
+    {
+      "free": 1438,
+      "active": 35941,
+      "inactive": 34346,
+      "wired": 68516
+    },
+    {
+      "free": 1512,
+      "active": 35351,
+      "inactive": 32153,
+      "wired": 68921
+    },
+    {
+      "free": 952,
+      "active": 33784,
+      "inactive": 31275,
+      "wired": 72218
+    }
+  ],
+  "ram_data_lines": [
+    "RPH RAM DATA resident=27869184 reads=304 writes=1405 failures=0 zero_write_bytes=1380352",
+    "RPH RAM DATA resident=27869184 reads=318 writes=1516 failures=0 zero_write_bytes=1380352",
+    "RPH RAM DATA resident=28377088 reads=336 writes=1799 failures=0 zero_write_bytes=1380352"
+  ],
+  "ufs_read_lines": [
+    "RPH UFS READ requests=372306 bytes=3911840768 failures=0 commands=372580 blocks=964146",
+    "RPH UFS READ requests=378211 bytes=3941508096 failures=0 commands=378485 blocks=971886",
+    "RPH UFS READ requests=383436 bytes=3971650560 failures=0 commands=383710 blocks=979816"
+  ],
+  "pressure_lines": [],
+  "snapshot_completed": true,
+  "watchdog_panic_reason": null,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "log": {
+    "valid_records": 378,
+    "bytes": 314898,
+    "dropped": 0,
+    "continuous_log_verified": true,
+    "service_snapshot_captured": true
+  },
+  "owned_memory_observed": true,
+  "thread_findings": "SpringBoard waits for LS seeding;lsd actively parses bundle Info.plist during original application scan"
+}

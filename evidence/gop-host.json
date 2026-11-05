@@ -1,0 +1,113 @@
+{
+  "passed": true,
+  "kind": "actual port GOP plus pinned generic Blt under ASan and UBSan",
+  "handset_executed": false,
+  "case_count": 40,
+  "cases": [
+    "page-rounded mapping from supplied geometry",
+    "rounded mapping cannot overlap diagnostic extension",
+    "missing live snapshot rejected",
+    "incomplete read proof rejected",
+    "unproven high address rejected",
+    "extent mismatch rejected",
+    "physical end overflow rejected",
+    "stride narrower than visible pixels rejected",
+    "GOP configuration size query",
+    "actual port GOP configured over guarded RAM",
+    "QueryMode returns allocated inherited BGR geometry",
+    "invalid mode rejected without writes",
+    "null query output rejected",
+    "generic video fill",
+    "fill touches exact rectangle, preserves row padding",
+    "buffer to video with source offset and Delta",
+    "buffer to video exact pixel values",
+    "video to buffer with destination offset and Delta",
+    "video readback preserves destination padding and surrounding data",
+    "descending overlapping video copy to final visible row",
+    "descending overlap uses correct final source row",
+    "ascending overlapping video copy",
+    "ascending overlap exact values",
+    "horizontal overlap right",
+    "horizontal overlap exact values",
+    "wrapped destination rejected",
+    "wrapped source rejected",
+    "null fill buffer rejected",
+    "short Delta rejected",
+    "buffer row overflow rejected",
+    "buffer pointer overflow rejected",
+    "invalid operation rejected",
+    "empty rectangle rejected",
+    "all invalid requests leave framebuffer unchanged",
+    "SetMode active mode clears display without timing changes",
+    "SetMode clears visible pixels and preserves pitch padding",
+    "SEC fallback restores saved patch exactly",
+    "failed restoration retains active backup",
+    "retained backup permits restoration retry",
+    "framebuffer guards intact after all operations"
+  ],
+  "command": [
+    "gcc",
+    "-O1",
+    "-g",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-Wno-unused-parameter",
+    "-Wno-sign-compare",
+    "-fshort-wchar",
+    "-fsanitize=address,undefined",
+    "-fno-omit-frame-pointer",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/AArch64",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdeModulePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/ArmPkg/Include",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Library/RaphaelGopLib/Gop.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Library/RaphaelFramebufferLib/Framebuffer.c",
+    "/home/guo/work/raphael-fresh/scripts/fixtures/gop_host.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/gop-host/20261027T200032Z/gop-host"
+  ],
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelGopLib/Gop.c",
+      "sha256": "3ea0e2840c0318993f6d1e0e779bd06d0878a1c1d1e785d4f7a4be523e04ff77"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Library/RaphaelFramebufferLib/Framebuffer.c",
+      "sha256": "f38193e8ca7c8b7348f32ebacb7dad01af21770765e4381b6a5970a750eecfd2"
+    },
+    {
+      "path": "scripts/fixtures/gop_host.c",
+      "sha256": "a4888f1471ecd7b81d46386f0d8099221736fa989e7547b66b365558aca92121"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/Library/RaphaelGopLib.h",
+      "sha256": "af22b075d3c2a80d27eec61e9065c1bd5cc02b9e983515a19ded6568308032f8"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelFramebuffer.h",
+      "sha256": "c9649609f4877d644da88f2073a57bc1063d2aee29c7f19c07f9c7ef5fd9fc2b"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelProbe.h",
+      "sha256": "69c853680ebba9448922888ed01c07c00ee37e82ee58dcd3128fae4b759084ab"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelDisplayProbe.h",
+      "sha256": "29ac575f95ed9f74aa87e56f089ebab100a12db2ac4166edda264d8580735fc7"
+    },
+    {
+      "path": "scripts/validate_gop.py",
+      "sha256": "80d6215bed2a467997d3565f3944425ebb967d47075d023a0a7639de3c969305"
+    }
+  ],
+  "upstream_inputs": [
+    {
+      "path": "sources/mu_basecore/MdeModulePkg/Library/FrameBufferBltLib/FrameBufferBltLib.c",
+      "sha256": "3c4ef872faa7e042bcd2199a225c28ae50afe6768363734210f73645e683fb53"
+    }
+  ],
+  "core_revision": "cfb93724a06ff86ff5ba971413368a7809ee42a5"
+}

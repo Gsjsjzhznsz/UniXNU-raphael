@@ -1,0 +1,13 @@
+# Copy as ignored local.toml; adapt paths to your checked out sources.
+[[source]]
+kind = "soc"
+name = "sm8150"
+local = "../UniXNU-sm8150-common"
+[[source]]
+kind = "refer"
+name = "xnu"
+local = "../sources/apple-xnu-native"
+[[source]]
+kind = "refer"
+name = "edk2"
+local = "../sources/mu_basecore"

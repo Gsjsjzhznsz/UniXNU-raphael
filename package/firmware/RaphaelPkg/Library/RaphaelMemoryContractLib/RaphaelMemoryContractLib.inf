@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelMemoryContractLib
+  FILE_GUID = B1E7EA14-2EE3-4A2F-8488-89DBABF12A6E
+  MODULE_TYPE = BASE
+  LIBRARY_CLASS = RaphaelMemoryContractLib
+
+[Sources]
+  RaphaelMemoryContractLib.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec

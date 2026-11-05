@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelManagerUiLib
+  FILE_GUID = CAE6D752-5C2F-4E16-A940-A9D3652D1FB0
+  MODULE_TYPE = BASE
+  LIBRARY_CLASS = RaphaelManagerUiLib
+[Sources]
+  ManagerUi.c
+  Input.c
+[Packages]
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec
+[LibraryClasses]
+  BaseMemoryLib
+  MemoryAllocationLib
+  UefiBootServicesTableLib
+  DebugLib

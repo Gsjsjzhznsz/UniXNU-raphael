@@ -1,0 +1,64 @@
+{
+  "passed": true,
+  "report": "evidence/private/android-return-run/20261101T020626Z/report.json",
+  "apfs_root_mounted_verified": true,
+  "systemos_union_mounted": true,
+  "original_launchd_exec_verified": true,
+  "pid1_el0_syscall_verified": true,
+  "unix_syscalls": 3,
+  "first_user_pc": 4317065140,
+  "last_user_pc": 4317059572,
+  "last_unix_syscall": 294,
+  "last_unix_syscall_name": "shared_region_check_np",
+  "last_unix_syscall_completion_observed": false,
+  "launchd_main_verified": false,
+  "desktop_verified": false,
+  "basic_interaction_verified": false,
+  "storage": {
+    "online": 0,
+    "start_stage": 4,
+    "last_result": 0,
+    "diagnostic_state": 1,
+    "diagnostic_online_before": 1,
+    "start_detail": 8,
+    "requests": 343,
+    "failures": 0,
+    "bytes": 1631232,
+    "manifest_bytes": 73287008,
+    "policy_allocated_bytes": 8192,
+    "scope": "Same checkpoint runtime globals; online and actual request counts are independent observations"
+  },
+  "unassisted_android_return": true,
+  "cleanup_completed": true,
+  "wall_seconds_to_android": 204.48321695000004,
+  "trust_sidecar_bytes": 61356,
+  "trust_sidecar_entries": 2554,
+  "apple_signature_chain_verified": false,
+  "next_step": "Trace PID1 original Unix syscall returns and capture the current exec user thread, then advance dynamic linker and real service startup",
+  "followup": {
+    "report": "evidence/private/android-return-run/20261101T022035Z/report.json",
+    "experiment_passed": true,
+    "cleanup_completed": true,
+    "unix_syscalls": [
+      {
+        "code": 74,
+        "error": 0
+      },
+      {
+        "code": 372,
+        "error": 0
+      },
+      {
+        "code": 294,
+        "error": 12
+      }
+    ],
+    "shared_region_check_completed": true,
+    "shared_region_check_result": 12,
+    "shared_region_empty": true,
+    "current_user_thread_sampled": true,
+    "current_stack": "Mach vm_allocate trap initial copyin -> synchronous exception -> timer IRQ preemption",
+    "free_pages": 25032,
+    "scope": "The normal empty shared-region ENOMEM is not proof of overall memory exhaustion; actual PC/ESR/FAR of current copyin fault still pending"
+  }
+}

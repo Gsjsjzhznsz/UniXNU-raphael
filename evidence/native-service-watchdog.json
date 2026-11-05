@@ -1,0 +1,28 @@
+{
+  "source": "evidence/private/ufs-console-log/20261104T072137Z/20261104T073748Z-manual-recovery",
+  "original_run": "evidence/private/android-return-run/20261104T072550Z",
+  "original_checkpoint_passed": false,
+  "backboard_exit_namespace": 20,
+  "backboard_exit_code": 1,
+  "backboard_exit_pids": [
+    57,
+    120
+  ],
+  "backboard_current_pid": 134,
+  "display_clients": 6,
+  "display_kicks": 2,
+  "display_frames": 0,
+  "change": "Read original exit descriptions and termination sender; focus eight snapshots on migration, LaunchServices and watchdog alongside display services",
+  "handset_executed": false,
+  "desktop_verified": false,
+  "host_report": "artifacts/service-watchdog-details/20261104T074317Z/host-report.json",
+  "host_passed": true,
+  "full_kernel_build_passed": true,
+  "next_candidate_handset_executed": true,
+  "handset_run": "evidence/private/android-return-run/20261104T074823Z",
+  "independent_log": "evidence/private/ufs-console-log/20261104T074429Z/20261104T080030Z-manual-recovery",
+  "original_run_passed": false,
+  "xnu_executed": null,
+  "original_watchdog_sender": "watchdogd52",
+  "original_description": "backboardd failed to send ping message; no successful checkins since 516 seconds ago"
+}

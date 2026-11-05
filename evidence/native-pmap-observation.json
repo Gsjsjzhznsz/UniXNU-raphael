@@ -1,0 +1,312 @@
+{
+  "passed": true,
+  "qemu_only": true,
+  "handset_executed": false,
+  "full_xnu_boot_verified": false,
+  "implementation_revision": "c8d001c5b4cb90a88dd9e91963b83c7d96eb0bd2",
+  "source_files_bound": 396,
+  "observation_report": "artifacts/native-pmap-qemu/20261029T002613.342287Z-atqmwzun/report.json",
+  "observation_report_sha256": "a2cf597e45daa8fdbe96611f6c87070f219c48a0ec95d982fd765c1ca57d41ce",
+  "kernel_sha256": "96d31e6d36abed20e48f337cf01040d35db8eecfe1b446d20636664bc7b0d722",
+  "stops": [
+    {
+      "label": "arm-vm-entry",
+      "pc": 18446744005111824656,
+      "sp": 18446744005119835952,
+      "lr": 18446744005118075764,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1612177408,
+      "ttbr1": 1612181504
+    },
+    {
+      "label": "ttbr1-entry",
+      "pc": 18446744005111883844,
+      "sp": 18446744005119835552,
+      "lr": 18446744005111827552,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1612177408,
+      "ttbr1": 1612181504
+    },
+    {
+      "label": "ttbr1-return",
+      "pc": 18446744005111827552,
+      "sp": 18446744005119835552,
+      "lr": 18446744005111827552,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1612177408,
+      "ttbr1": 1629982720
+    },
+    {
+      "label": "ttbr0-entry",
+      "pc": 18446744005111883860,
+      "sp": 18446744005119835552,
+      "lr": 18446744005111827572,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1612177408,
+      "ttbr1": 1629982720
+    },
+    {
+      "label": "ttbr0-return",
+      "pc": 18446744005111827572,
+      "sp": 18446744005119835552,
+      "lr": 18446744005111827572,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1629978624,
+      "ttbr1": 1629982720
+    },
+    {
+      "label": "arm-vm-returned",
+      "pc": 18446744005118075764,
+      "sp": 18446744005119835952,
+      "lr": 18446744005118075764,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1629978624,
+      "ttbr1": 1629982720
+    },
+    {
+      "label": "pre-debug-inherit",
+      "pc": 18446744005117673680,
+      "sp": 18446744005119835952,
+      "lr": 18446744005118075788,
+      "sctlr": 877943101,
+      "tcr": 148798842138,
+      "mair": 866948421544264959,
+      "ttbr0": 1629978624,
+      "ttbr1": 1629982720
+    }
+  ],
+  "active_table_pages": 66,
+  "active_table_bytes": 270336,
+  "active_table_sha256": "0ac96e0cd825d960e17af1029ac17d550e395ad6fcd173ba7b9f7b3466d6df42",
+  "nonzero_descriptors": 2679,
+  "high_data_pages_verified": 644,
+  "ttbr0_empty": true,
+  "physical_relay_mapped": false,
+  "snapshots": [
+    {
+      "label": "arm-vm-entry",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "fc3bc8847fee59dce5a468289aa5d72e64a0f52dd7792f991b5c981f9eafecda",
+          "crc32": 4290360201,
+          "words_changed_from_original": 305,
+          "delta_bytes": 3660
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "048ed3ca69698056829d93116f65f8361b8577e04f3f757b1355f7ea782afc59",
+          "crc32": 245568627,
+          "words_changed_from_original": 1763,
+          "delta_bytes": 21156
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "a4e5449fc51e2ef43bd7395dff9f270aa05b381256ad5e7df4fc93d6321cebb5",
+          "crc32": 566489415,
+          "words_changed_from_original": 8841,
+          "delta_bytes": 106092
+        }
+      ],
+      "delta_bytes": 130908
+    },
+    {
+      "label": "ttbr1-entry",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "331028ea5339917ef20d15e0b442049ee297a5dff4c149603f7b60560ad506d1",
+          "crc32": 721610504,
+          "words_changed_from_original": 378,
+          "delta_bytes": 4536
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "45e13b90ba7b9847ff7ac5ffb59a2506f80c19cb1dffadf718fba4f04d9829e8",
+          "crc32": 2152329576,
+          "words_changed_from_original": 1791,
+          "delta_bytes": 21492
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "36b65469eeee55e05563cae5c55b8de7e59e41f3aaf7adb05f2577cd477524aa",
+          "crc32": 442388831,
+          "words_changed_from_original": 8844,
+          "delta_bytes": 106128
+        }
+      ],
+      "delta_bytes": 132156
+    },
+    {
+      "label": "ttbr1-return",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "331028ea5339917ef20d15e0b442049ee297a5dff4c149603f7b60560ad506d1",
+          "crc32": 721610504,
+          "words_changed_from_original": 378,
+          "delta_bytes": 4536
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "45e13b90ba7b9847ff7ac5ffb59a2506f80c19cb1dffadf718fba4f04d9829e8",
+          "crc32": 2152329576,
+          "words_changed_from_original": 1791,
+          "delta_bytes": 21492
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "36b65469eeee55e05563cae5c55b8de7e59e41f3aaf7adb05f2577cd477524aa",
+          "crc32": 442388831,
+          "words_changed_from_original": 8844,
+          "delta_bytes": 106128
+        }
+      ],
+      "delta_bytes": 132156
+    },
+    {
+      "label": "ttbr0-entry",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "331028ea5339917ef20d15e0b442049ee297a5dff4c149603f7b60560ad506d1",
+          "crc32": 721610504,
+          "words_changed_from_original": 378,
+          "delta_bytes": 4536
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "45e13b90ba7b9847ff7ac5ffb59a2506f80c19cb1dffadf718fba4f04d9829e8",
+          "crc32": 2152329576,
+          "words_changed_from_original": 1791,
+          "delta_bytes": 21492
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "36b65469eeee55e05563cae5c55b8de7e59e41f3aaf7adb05f2577cd477524aa",
+          "crc32": 442388831,
+          "words_changed_from_original": 8844,
+          "delta_bytes": 106128
+        }
+      ],
+      "delta_bytes": 132156
+    },
+    {
+      "label": "ttbr0-return",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "331028ea5339917ef20d15e0b442049ee297a5dff4c149603f7b60560ad506d1",
+          "crc32": 721610504,
+          "words_changed_from_original": 378,
+          "delta_bytes": 4536
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "45e13b90ba7b9847ff7ac5ffb59a2506f80c19cb1dffadf718fba4f04d9829e8",
+          "crc32": 2152329576,
+          "words_changed_from_original": 1791,
+          "delta_bytes": 21492
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "36b65469eeee55e05563cae5c55b8de7e59e41f3aaf7adb05f2577cd477524aa",
+          "crc32": 442388831,
+          "words_changed_from_original": 8844,
+          "delta_bytes": 106128
+        }
+      ],
+      "delta_bytes": 132156
+    },
+    {
+      "label": "arm-vm-returned",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "ed9ce35c0a1275425fccc0211876d79e3ccc6b68b4e4afc50b1886f3c7fef900",
+          "crc32": 3398321375,
+          "words_changed_from_original": 395,
+          "delta_bytes": 4740
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "23f90f3e504fb04f64bf1e2118bfd21fea550709fa32c7f2a19ca42a708f2189",
+          "crc32": 403918846,
+          "words_changed_from_original": 1828,
+          "delta_bytes": 21936
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "248cfcbdb36957f4ef875902f14e2160b297ce6b4c20c912291aa511176f8d1a",
+          "crc32": 1981028017,
+          "words_changed_from_original": 8856,
+          "delta_bytes": 106272
+        }
+      ],
+      "delta_bytes": 132948
+    },
+    {
+      "label": "pre-debug-inherit",
+      "segments": [
+        {
+          "name": "__DATA_CONST",
+          "bytes": 901120,
+          "sha256": "ed9ce35c0a1275425fccc0211876d79e3ccc6b68b4e4afc50b1886f3c7fef900",
+          "crc32": 3398321375,
+          "words_changed_from_original": 395,
+          "delta_bytes": 4740
+        },
+        {
+          "name": "__DATA",
+          "bytes": 1163264,
+          "sha256": "23f90f3e504fb04f64bf1e2118bfd21fea550709fa32c7f2a19ca42a708f2189",
+          "crc32": 403918846,
+          "words_changed_from_original": 1828,
+          "delta_bytes": 21936
+        },
+        {
+          "name": "__BOOTDATA",
+          "bytes": 573440,
+          "sha256": "248cfcbdb36957f4ef875902f14e2160b297ce6b4c20c912291aa511176f8d1a",
+          "crc32": 1981028017,
+          "words_changed_from_original": 8856,
+          "delta_bytes": 106272
+        }
+      ],
+      "delta_bytes": 132948
+    }
+  ],
+  "scope": "Original arm_vm_init returned and original pmap active; no post-pmap Android return or handset execution",
+  "verifier_report": "artifacts/native-pmap-verification/20261029T003335.884868Z-nq0nercu/report.json",
+  "status": "QEMU observation independently verified; recovery design pending"
+}

@@ -1,0 +1,17 @@
+{
+  "normal_android_reboot": true,
+  "recovery_audit_without_extra_reboot": false,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "boot_partition_unchanged": true,
+  "transient_probe_absent": true,
+  "fdt_sha256": "2e318170142207601fea3ee78ed20a9de61cd395c14685537b4b55a7b93a0b73",
+  "flash_or_restore_performed": false,
+  "private_readback": "evidence/private/entry-probe-cleanup/20261027T155236Z",
+  "started_utc": "20261027T155236Z",
+  "transient_prefixes_checked": [
+    "raphael,entry-probe",
+    "raphael,sec-dxe",
+    "raphael,display-snapshot"
+  ]
+}

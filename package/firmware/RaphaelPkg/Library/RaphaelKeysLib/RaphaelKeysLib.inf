@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = RaphaelKeysLib
+  FILE_GUID = 56F97AA1-B62A-47A0-9F46-7C94F2244D7F
+  MODULE_TYPE = BASE
+  VERSION_STRING = 0.1
+  LIBRARY_CLASS = RaphaelKeysLib
+[Sources]
+  Keys.c
+[Packages]
+  MdePkg/MdePkg.dec
+  RaphaelPkg/RaphaelPkg.dec

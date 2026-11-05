@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "qemu_report": "artifacts/sec-dxe-qemu/20261028T080626.718885Z-bc2_pt48/report.json",
+  "qemu_report_sha256": "f97302c455df0e9ddd7aa420ad3dabfab6459fb7d238e80066b1c229247d56db",
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/GicEnableMap.c",
+      "sha256": "a9a174643f47b6322950f9834e94f0833b2d648842aba52b91f676c49bca3cfb"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelGicEnableMap.h",
+      "sha256": "0713054b37f6286d3b0bca2fd4e5b6ffac54e49b6d8b3e325c1ed7f0aff53374"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/Sec.c",
+      "sha256": "a91da02eaf0ea011909a4b8af4e24f20b8225c3faff546166816a42254e5e7e0"
+    }
+  ],
+  "decoder_sha256": "23793bed78775f9b93c36e40c3514f4ede2735eb59ac1b4ddf0eab6607330fbc",
+  "primary_header": {
+    "repository": "MiCode/Xiaomi_Kernel_OpenSource",
+    "revision": "663db50e195a8a54c8565ac4ab0c6d9ba7d80db0",
+    "path": "include/linux/irqchip/arm-gic-v3.h",
+    "sha256": "53bf4e7415e7db54bce490dd7a9d39f85a0aa5064150661ccab0e88ed9ead11e",
+    "constants": {
+      "GICD_CTLR": {
+        "value": 0,
+        "line": 25
+      },
+      "GICD_TYPER": {
+        "value": 4,
+        "line": 26
+      },
+      "GICD_ISENABLER": {
+        "value": 256,
+        "line": 35
+      },
+      "GICR_CTLR": {
+        "value": 0,
+        "line": 89
+      },
+      "GICR_ISENABLER0": {
+        "value": 256,
+        "line": 194
+      }
+    }
+  },
+  "specification": {
+    "document": "ARM IHI0069C (ID070116)",
+    "sha256": "026e7dba8d8efca43a3593a6914a2f7cba2ff71cd34583ced97d389d1108dcf6",
+    "sections_pdf_page": {
+      "8.9.24 GICD_TYPER": 510,
+      "8.9.15 GICD_ISENABLER": 491,
+      "8.11.2 GICR_CTLR": 519,
+      "8.11.15 GICR_ISENABLER0": 545,
+      "8.10 The GIC Redistri butor register map": 513
+    }
+  },
+  "spi_enable_bank_first": 1,
+  "spi_enable_bank_count": "GICD_TYPER.ITLinesNumber",
+  "redistributor_count": "validated dynamic GIC snapshot",
+  "passes": 2,
+  "mmio_write_callback": false,
+  "atomic_snapshot": false,
+  "secure_interrupts_observed": false,
+  "complete_gic_ownership_proven": false,
+  "result_storage": {
+    "bytes": 480,
+    "rva": 70272,
+    "fd_offset": 172672,
+    "physical_address": 1074569856,
+    "linker_map": "Build/RaphaelDiagnostic/DEBUG_CLANGPDB/AARCH64/RaphaelPkg/Sec/Sec/OUTPUT/RaphaelSec.dll.map",
+    "materialized_zero_data": true,
+    "within_sec_xip_pe": true
+  },
+  "handset_executed": false,
+  "limitations": [
+    "Only reviewed standard GICv3 INTID space",
+    "Nonsecure RAZ/WI values do not describe secure interrupts",
+    "Two matching passes are observations, not an atomic ownership transfer"
+  ]
+}

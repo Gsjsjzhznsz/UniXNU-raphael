@@ -1,0 +1,98 @@
+{
+  "request": "Human explicit one-time upstream refresh before continuing desktop bring-up",
+  "recorded_utc": "2026-10-31T23:53:53.089294+00:00",
+  "passed": true,
+  "active_sources_modified": false,
+  "projects": [
+    {
+      "name": "UniXNU",
+      "url": "https://github.com/UniXNU/UniXNU.git",
+      "branch": null,
+      "previous_path": "sources/UniXNU",
+      "previous_revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+      "path": "artifacts/upstream-candidates/20261031T235342Z/UniXNU",
+      "returncode": 0,
+      "revision": "407db1aefd4e4e50a944fcda73442bde566dbce1",
+      "resolved_branch": "main",
+      "commit": "2026-11-01T07:22:38+08:00\ndocs(porting): the priming list names every metallib of the OS image",
+      "changed_since_previous": true,
+      "passed": true
+    },
+    {
+      "name": "Adreno740",
+      "url": "https://github.com/UniXNU/Adreno740.git",
+      "branch": "feat/ipados27-gpu-parity",
+      "previous_path": "artifacts/upstream-candidates/20261031T163925Z/Adreno740",
+      "previous_revision": "b8956437c7a2feac58dccd6b29948d1b89fcc1df",
+      "path": "artifacts/upstream-candidates/20261031T235342Z/Adreno740",
+      "returncode": 0,
+      "revision": "10ac0eaa0ad8f24426da85d3570026081dc50bc5",
+      "resolved_branch": "feat/ipados27-gpu-parity",
+      "commit": "2026-11-01T05:18:19+08:00\nfeat(diag): record who set which GPU priority",
+      "changed_since_previous": true,
+      "passed": true
+    },
+    {
+      "name": "AdrenoMetal",
+      "url": "https://github.com/UniXNU/AdrenoMetal.git",
+      "branch": "feat/ipados27-gpu-parity",
+      "previous_path": "artifacts/upstream-candidates/20261031T163925Z/AdrenoMetal",
+      "previous_revision": "fc5ca0b274bec1c26b3a1a1ee2b911da33e15bd2",
+      "path": "artifacts/upstream-candidates/20261031T235342Z/AdrenoMetal",
+      "returncode": 0,
+      "revision": "a0a34fa2588efa982edc890980a27dbb4efff732",
+      "resolved_branch": "feat/ipados27-gpu-parity",
+      "commit": "2026-11-01T05:19:53+08:00\nfeat(plugin): set the GPU log switch from log-gpu=1",
+      "changed_since_previous": true,
+      "passed": true
+    },
+    {
+      "name": "GopFramebuffer",
+      "url": "https://github.com/UniXNU/GopFramebuffer.git",
+      "branch": "feat/ipados27-gpu-parity",
+      "previous_path": "artifacts/upstream-candidates/20261031T163925Z/GopFramebuffer",
+      "previous_revision": "74ff4c4165c0d84bbca82b1ec732677d2d62a98b",
+      "path": "artifacts/upstream-candidates/20261031T235342Z/GopFramebuffer",
+      "returncode": 0,
+      "revision": "74ff4c4165c0d84bbca82b1ec732677d2d62a98b",
+      "resolved_branch": "feat/ipados27-gpu-parity",
+      "commit": "2026-10-31T02:00:59+08:00\nfeat(display): count waits of 8 ms or more for the GPU",
+      "changed_since_previous": false,
+      "passed": true
+    }
+  ],
+  "hardware_qualified_on_raphael": false,
+  "submodules": {
+    "passed": true,
+    "returncode": 0,
+    "count": 19,
+    "status": [
+      " 149ef6d8ac1ea050918c42eb030024a5d623c9fd drivers/Adreno740 (149ef6d)",
+      " a0f0287be80a5d8aef5c6b97a6cab62129e152bd drivers/AdrenoMetal (a0f0287)",
+      " 42ff83e08b2265fe741d4adaf084bebe003452ba drivers/AppleKeyStoreState (heads/main)",
+      " 93a5030c5d983d0ef90f0fca93879d6e36ad1ba8 drivers/ArmCpu (heads/main)",
+      " 417ff95d6a6e8607ddea9309ec45c3bfd4a67c60 drivers/ArmDTPlatform (heads/main)",
+      " d1423a8bceac4be0478a93d9173587111c040084 drivers/ArmVirtPlatform (heads/main)",
+      " 3c75734014cdab0acd9541e88057b7606ee7ae08 drivers/DarwinBoot (heads/main)",
+      " 19ef3a75ad2c53da85b8d923553d922716fce377 drivers/GopFramebuffer (heads/main)",
+      " eac47baefe6a5d2368a70351e6ad1b6361bedbe2 drivers/QcomGeniSpi (heads/main)",
+      " 4be2d7eb05ef5a98126c91e0302c149140c0e3e1 drivers/RamBlock (heads/main)",
+      " 4a45326da5c2cd6fe6813d79ee43db20805628af drivers/SoftwareAES (heads/main)",
+      " 4e1013eb8c45077b57f8d38d61b389fe899ea1c3 drivers/VirtioMmioBlock (heads/main)",
+      " 70253216890b2afcaa6333948726f896f84fc757 drivers/VirtioMmioConsole (heads/main)",
+      " 20ad3d7aca14bd46aecab6335c780f5413fa054b kits/AdrenoFirmware (heads/main)",
+      " 282606b528b2595bc4274ea7490b62b323f35a5f kits/AdrenoPM4 (heads/main)",
+      " b356371a74cd158c2902f4886f373ebb0f833a36 kits/AirNir (heads/main)",
+      " 83969cd874503e65997ff7639f7dcf3d0a92cd17 kits/ArmSmmu4K (heads/main)",
+      " 974f043d0c71ba2e60331483a41c6c6d35274ee3 kits/VerifiedRoot (heads/main)",
+      " b74ed7c74a07f0eb5f81089c660905ecc4cabb7f kits/XnuPrelink (heads/main)"
+    ],
+    "checked_utc": "2026-10-31T23:59:17.509725+00:00"
+  },
+  "review": {
+    "VerifiedRoot": "Adds separately authenticated signed-header API; complete vr_open signature and hash-table verification retained. Not integrated this iteration.",
+    "XnuPrelink": "Adds fileset emission and function/data maps for newer kernels. Existing Darwin23 MH_EXECUTE path retained.",
+    "DarwinBoot": "Adds arm64e MH_EXECUTE support and separate root policy sidecar. Existing handset payload baseline retained.",
+    "decision": "Refresh complete; candidates and 19 locked dependency pins retained independently; no wholesale source replacement."
+  }
+}

@@ -1,0 +1,187 @@
+{
+  "kind": "actual C reversible pixel patch host execution; mocked RAM",
+  "passed": true,
+  "case_count": 14,
+  "cases": [
+    {
+      "name": "exact save write verify wait restore verify sequence",
+      "passed": true,
+      "status": 7,
+      "reads": 98304,
+      "writes": 65536,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "failed pattern readback still restores every original",
+      "passed": true,
+      "status": 4,
+      "reads": 65537,
+      "writes": 65536,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "missing successful read-only proof",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "incomplete pixels",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "incomplete counters",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "invalid timer",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "small width",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "small height",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "overflow width",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "short stride",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "unaligned base",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "out of 32-bit PA",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "extent mismatch",
+      "passed": true,
+      "status": 1,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    },
+    {
+      "name": "backup must fit declared stack",
+      "passed": true,
+      "status": 2,
+      "reads": 0,
+      "writes": 0,
+      "all_original_words_restored": true,
+      "mocked_hardware": true
+    }
+  ],
+  "command": [
+    "gcc",
+    "-shared",
+    "-fPIC",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-Werror",
+    "-fshort-wchar",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Include/X64",
+    "-I/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Include",
+    "-I/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt",
+    "-DFdtGetProp=fdt_getprop",
+    "-DFdtParentOffset=fdt_parent_offset",
+    "-DFdtPathOffset=fdt_path_offset",
+    "-DFdtAddressCells=fdt_address_cells",
+    "-DFdtSizeCells=fdt_size_cells",
+    "-DFdtNodeOffsetByCompatible=fdt_node_offset_by_compatible",
+    "-DFdtNodeOffsetByPhandle=fdt_node_offset_by_phandle",
+    "-DFdtFirstSubnode=fdt_first_subnode",
+    "-DFdtNextSubnode=fdt_next_subnode",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/DisplayProbe.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/SmmuProbe.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_ro.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_rw.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_wip.c",
+    "/home/guo/work/raphael-fresh/sources/mu_basecore/MdePkg/Library/BaseFdtLib/libfdt/libfdt/fdt_addresses.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/PixelProbe.c",
+    "/home/guo/work/raphael-fresh/uefi-raphael/RaphaelPkg/Sec/PixelWrite.c",
+    "-o",
+    "/home/guo/work/raphael-fresh/artifacts/pixel-write-host/20261027T171355Z/pixel-write.so"
+  ],
+  "handset_executed": false,
+  "mmio_register_writes": false,
+  "source_inputs": [
+    {
+      "path": "uefi-raphael/RaphaelPkg/Sec/PixelWrite.c",
+      "sha256": "02ef5e428e8d240ce6c0ca7d20dd0f09af8b8e4d452cc98f45d41ffc95350795"
+    },
+    {
+      "path": "uefi-raphael/RaphaelPkg/Include/RaphaelPixelWrite.h",
+      "sha256": "35db135ae64bf0649e9588854b9cafcce77f7c28a957e18d3d8ff33cb1b317fe"
+    },
+    {
+      "path": "scripts/pixel_write.py",
+      "sha256": "652e85f55d95ba91c4999efdce9de928d37f208d4b4ff3a670e6085c94a094a6"
+    },
+    {
+      "path": "scripts/validate_pixel_write.py",
+      "sha256": "e44425ab2f6841a00e2d66ec0e185dcfe4b3d477177a453c3833b583ab2734a7"
+    }
+  ]
+}
