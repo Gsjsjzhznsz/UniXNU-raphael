@@ -35,3 +35,7 @@ For the existing native backend and its exact source pins, follow [development/R
 See [publication notes](docs/PUBLICATION.zh-CN.md), [current handoff](development/docs/HANDOFF-20261101.zh-CN.md), [hardware evidence](development/docs/HARDWARE.zh-CN.md), and the [porting record](porting.toml).
 
 Official guides: [device repository](https://unixnu.com/zh/porting/device-repository), [SoC support](https://unixnu.com/zh/porting/soc-support), [records](https://unixnu.com/zh/porting/records), [bring-up](https://unixnu.com/zh/porting/bring-up), [log capture](https://unixnu.com/zh/porting/log-capture).
+
+## License
+
+Original port code is licensed under [BSD-2-Clause-Patent](LICENSE), matching the existing SPDX declarations and the upstream UniXNU device repositories. Existing per-file copyright and license notices remain applicable to their respective files; third-party dependencies retain their own licenses.

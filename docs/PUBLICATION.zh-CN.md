@@ -4,7 +4,7 @@
 
 - 设备：`guowenye/UniXNU-raphael`，板级配置、DTS、补丁、package、移植记录与工作流。
 - 共享平台：`guowenye/UniXNU-sm8150-common`，SoC配置、DTSI及`kits/Sm8150Platform`。
-- `feeds.toml`及`unixnu.lock`固定SoC提交`aced7f66f2ec832d1d09936b13738782852a6860`；本地覆盖仍通过忽略的`local.toml`设置。
+- `feeds.toml`及`unixnu.lock`固定SoC提交`c77321d82010250d6f100d7c17d7e721c17782bf`；本地覆盖仍通过忽略的`local.toml`设置。
 - 原大工作区的公开scripts、tests、docs、源码与工具锁保存在`development/`，恢复路径见其README；历史文档中绝对路径与private/artifacts引用只表示原实验位置。
 
 发布采用独立目录，不移动或清理活动工作区。只发布当前源码快照与公开文本摘要；备份、pycache、本机配置、设备dump、私有原始日志、厂商固件、原系统盘、owner私钥及生成镜像均未纳入本次提交。

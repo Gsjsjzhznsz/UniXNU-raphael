@@ -19,4 +19,4 @@ commit = "a00a4cc36da2110578bcf3b8eeeeb93dcc7f4e11"
 commit = "c0e60fb5ecfc54cf379c261d3f9572cc22ded891"
 
 [source."sm8150"]
-commit = "aced7f66f2ec832d1d09936b13738782852a6860"
+commit = "c77321d82010250d6f100d7c17d7e721c17782bf"

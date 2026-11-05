@@ -23,7 +23,7 @@ on:
         type: string
       soc_revision:
         description: Full SoC commit if a separate checkout is needed
-        default: aced7f66f2ec832d1d09936b13738782852a6860
+        default: c77321d82010250d6f100d7c17d7e721c17782bf
         required: false
         type: string
       uefi_repository:
