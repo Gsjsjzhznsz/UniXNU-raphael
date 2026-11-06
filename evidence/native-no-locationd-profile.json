@@ -1,0 +1,41 @@
+{
+  "implementation": "Add onlylocationd to first-desktop original launchd disabled-job preference after actual CoreLocation migration/UI-service wait; originalwatchdogd retained.",
+  "host": {
+    "passed": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "only_new_disabled_service": "com.apple.locationd",
+    "prior_fairplay_adid_commcenter_policy_retained": true,
+    "original_watchdogd_unchanged": true,
+    "os_systemos_images_unchanged": true,
+    "synthetic_service_replies": false,
+    "observer_seconds": 720,
+    "maximum_pet_seconds": 780,
+    "memory_mib": 1536,
+    "log_mib": 32,
+    "hardware_watchdog_return": true,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "limits": [
+    "No native location service capability claimed in this first-desktop profile.",
+    "Actual original watchdog behavior,service progress and physical desktop require handset."
+  ],
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Complete720s199processes1040threads,no locationd/CommCenter/no recordedpanic;CoreLocation migration stack absent,child sampled in originalPNG encoding,no desktop.",
+  "handset_result": {
+    "valid_records": 2717,
+    "bytes": 5552176,
+    "dropped": 0,
+    "snapshot_complete": true,
+    "process_count": 199,
+    "captured_threads": 1040,
+    "watchdog_panic": false,
+    "migration_findings": "No CLInternalPerformMigration in final child stacks; thread2258 sampled in original SplashBoard PNG encoding via ImageIO/libz deflate; thread2245 timed semaphore wait. One sample does not prove forward progress or a hang.",
+    "springboard_wait": "Original BKSSystemShellService check-in"
+  }
+}

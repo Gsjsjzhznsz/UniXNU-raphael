@@ -6,18 +6,23 @@ FIELDS='version status error transition_base transition_bytes transition_crc_bef
 MASK=0x0000fffffffff000
 
 def transition_image(base,grant,bytes_,relay,relay_bytes=1):
- assert base%4096==grant%4096==bytes_%4096==0 and bytes_ in (256*1048576,512*1048576,704*1048576) and grant>>30==(grant+bytes_-1)>>30
- words=[0]*2048;words[(grant>>30)&255]=(base+4096)|3;partial=2
+ assert base%4096==grant%4096==bytes_%4096==0 and bytes_ in (256*1048576,512*1048576,704*1048576,896*1048576,1536*1048576)
+ assert 0<=grant<grant+bytes_<=1<<38 and grant<=relay<relay+relay_bytes<=grant+bytes_ and 1<=relay_bytes<=2048
+ pages=6 if bytes_==1536*1048576 else 4
+ spans=((grant+bytes_-1)>>30)-(grant>>30)+1
+ words=[0]*(pages*512);partial=1+spans;assert partial+2<=pages
+ for i in range(spans):words[((grant>>30)+i)&255]=(base+(1+i)*4096)|3
  for block in range(grant&~0x1fffff,grant+bytes_,0x200000):
+  index=(1+(block>>30)-(grant>>30))*512+((block>>21)&511)
   flags=0x0040000000000601|(0 if relay<block+0x200000 and block<relay+relay_bytes else 1<<53)
-  if grant<=block and block+0x200000<=grant+bytes_:words[512+((block>>21)&511)]=block|flags
+  if grant<=block and block+0x200000<=grant+bytes_:words[index]=block|flags
   else:
-   assert partial<4;words[512+((block>>21)&511)]=(base+partial*4096)|3
+   assert partial<pages;words[index]=(base+partial*4096)|3
    for j in range(512):
     pa=block+j*4096
     if grant<=pa<pa+4096<=grant+bytes_:words[partial*512+j]=pa|(flags|2)
    partial+=1
- return struct.pack('<2048Q',*words)
+ return struct.pack('<'+str(len(words))+'Q',*words)
 
 def decode(raw,sparse,transition,adt_snapshot,original_adt,c,mmu):
  if c.get('trust_cache'):
@@ -29,7 +34,7 @@ def decode(raw,sparse,transition,adt_snapshot,original_adt,c,mmu):
  assert len(raw)==256;d=dict(zip(FIELDS,struct.unpack('>32Q',raw)));assert d['version']==1 and d['status']==3 and d['error']==d['reserved']==0
  assert all(d[k]==1 for k in ['transition_ok','root0_empty','relay_unmapped','capture_ok'])
  assert d['original_ttbr0']==mmu['ttbr0'] and d['original_ttbr1']==mmu['ttbr1'] and d['observed_transition_ttbr0']==d['transition_base']
- assert d['clean_base']==c['physical_base'] and d['clean_bytes']==c['window_bytes'] and d['transition_bytes']==len(transition)==16384
+ assert d['clean_base']==c['physical_base'] and d['clean_bytes']==c['window_bytes'] and d['transition_bytes']==len(transition)==(24576 if c['window_bytes']==1536*1048576 else 16384)
  assert d['transition_crc_before']==d['transition_crc_after']==zlib.crc32(transition)
  assert transition==transition_image(d['transition_base'],c['physical_base'],c['window_bytes'],mmu['relay_pa'],((c.get('early') or {}).get('compiled') or {}).get('bytes',1))
  assert d['sparse_capacity'] in (65536,131072,524288) and d['sparse_bytes']==len(sparse)<=d['sparse_capacity'] and 0<d['table_pages']<=256

@@ -53,7 +53,7 @@ def qualify_native_execution(path,payload):
  build=json.loads((ROOT/run['build']/'report.json').read_text())
  previous=json.loads((ROOT/build['payload']['external_payload_report']).read_text())
  assert build['payload']['bytes']==payload['payload_bytes'], 'Capacity must match the qualified transport'
- os_metadata_only=False;cell_encoding_changed=False;watchdog_budget_changed=False;pmgr_policy_changed=False;memory_budget_changed=False;watchdog_client_changed=False
+ os_metadata_only=False;cell_encoding_changed=False;watchdog_budget_changed=False;pmgr_policy_changed=False;memory_budget_changed=False;watchdog_client_changed=False;vfs_cache_changed=False;io_throttle_changed=False;platform_identity_changed=False
  if previous['adt_sha256']!=payload['adt_sha256']:
   from native_watchdog_budget import from_adt
   watchdog_budget_changed=from_adt((ROOT/previous['adt']).read_bytes())!=from_adt((ROOT/payload['adt']).read_bytes())
@@ -64,12 +64,24 @@ def qualify_native_execution(path,payload):
   from native_watchdog_client import KEY as WATCHDOG_CLIENT_KEY
   watchdog_client_changed=prior_tree['nodes']['chosen']['props'].get(WATCHDOG_CLIENT_KEY)!=next_tree['nodes']['chosen']['props'].get(WATCHDOG_CLIENT_KEY)
   memory_budget_changed=prior_tree['nodes']['chosen']['props'].get('darwinboot-memory-size')!=next_tree['nodes']['chosen']['props'].get('darwinboot-memory-size')
+  from native_vfs_adt import KEY as VFS_KEY
+  vfs_cache_changed=prior_tree['nodes']['defaults']['props'].get(VFS_KEY)!=next_tree['nodes']['defaults']['props'].get(VFS_KEY)
+  from native_io_throttle_adt import KEYS as IO_THROTTLE_KEYS
+  io_throttle_changed=any(prior_tree['nodes']['defaults']['props'].get(k)!=next_tree['nodes']['defaults']['props'].get(k) for k in IO_THROTTLE_KEYS)
+  from native_platform_identity_adt import KEY as PLATFORM_ID_KEY
+  platform_identity_changed=prior_tree['nodes']['chosen']['props'].get(PLATFORM_ID_KEY)!=next_tree['nodes']['chosen']['props'].get(PLATFORM_ID_KEY)
   cell_encoding_changed=any(a['props'].get(k)!=b['props'].get(k) for a,b in [(prior_tree,next_tree),(prior_tree['nodes']['arm-io'],next_tree['nodes']['arm-io'])] for k in ['#address-cells','#size-cells'])
   def hardware_tree(path,kernel,offline_keystore=False):
    raw=(ROOT/path).read_bytes();tree,end=parse(raw);assert end==len(raw)
    for parent,name in [(tree,'product'),(tree['nodes']['chosen'],'manifest-properties')]:
     if name in parent['nodes']:
      n=parent['nodes'].pop(name);assert n==dict(props={'name':name.encode()+b'\0'},nodes={}), 'Only empty OS container nodes may differ'
+   from native_platform_identity_adt import strip_platform_identity
+   strip_platform_identity(tree)
+   from native_vfs_adt import strip_vfs_default
+   strip_vfs_default(tree)
+   from native_io_throttle_adt import strip_io_throttle_defaults
+   strip_io_throttle_defaults(tree)
    from native_watchdog_budget import KEY,qualified
    watchdog=tree['nodes']['cpus']['nodes']['cpu0']['props'].pop(KEY,None)
    if watchdog is not None:qualified(watchdog)
@@ -99,7 +111,7 @@ def qualify_native_execution(path,payload):
    client=tree['nodes']['chosen']['props'].pop(WATCHDOG_CLIENT_KEY,None)
    if client is not None:qualify_property(client,raw,ROOT/kernel,offline_keystore=offline_keystore)
    owned=tree['nodes']['chosen']['props'].pop('darwinboot-memory-size',None)
-   assert owned in (None,struct.pack('<Q',512*1048576),struct.pack('<Q',704*1048576)), 'Only explicit512/704MiB extensions of the audited boot grant are supported'
+   assert owned in (None,struct.pack('<Q',512*1048576),struct.pack('<Q',704*1048576),struct.pack('<Q',896*1048576),struct.pack('<Q',1536*1048576)), 'Only explicit512/704/896/1536MiB extensions of the audited boot grant are supported'
    memory=tree['nodes']['chosen']['nodes'].get('memory-map')
    if memory is not None:
     trust=memory['props'].pop('TrustCache',None)
@@ -115,8 +127,8 @@ def qualify_native_execution(path,payload):
     assert matching==root_matching_from_kernel(ROOT/kernel)[0], 'Root matching must equal this kernel signed OS volume UUID'
    return tree
   assert hardware_tree(previous['adt'],previous['kernel'],bool(previous.get('ephemeral_offline_keystore')))==hardware_tree(payload['adt'],payload['kernel'],bool(payload.get('ephemeral_offline_keystore'))), 'All frozen handset hardware properties must match the qualified transport'
-  os_metadata_only=not cell_encoding_changed and not watchdog_budget_changed and not pmgr_policy_changed and not memory_budget_changed and not watchdog_client_changed
- return dict(report=str(path.resolve().relative_to(ROOT)),sha256=sha(path.read_bytes()),kernel_sha256=payload['kernel_sha256'],payload_sha256=payload['payload_sha256'],os_metadata_only=os_metadata_only,experimental_memory_budget_changed=memory_budget_changed,diagnostic_pmgr_policy_changed=pmgr_policy_changed,diagnostic_watchdog_client_changed=watchdog_client_changed,adt_cell_encoding_changed=cell_encoding_changed,diagnostic_watchdog_budget_changed=watchdog_budget_changed,exact_kernel_match=build['staging_kernel_sha256']==payload['kernel_sha256'],exact_payload_match=build['payload']['image_sha256']==payload['payload_sha256'],scope='Prior handset transport/capacity and frozen hardware ADT (explicit same-handset qualified 20s diagnostic watchdog contract, empty OS containers, pinned OS ABI policy and explicit 2/2 ADT cell declarations and exact signed OS UUID root matching and zero TrustCache binding and explicit linked original-PMGR unsupported-AON diagnostic policy may differ); current block authentication and all loaded-segment/args/ADT checks must pass in the same boot before branch; observer pet deadline and hardware restoration require same-run evidence')
+  os_metadata_only=not cell_encoding_changed and not watchdog_budget_changed and not pmgr_policy_changed and not memory_budget_changed and not watchdog_client_changed and not vfs_cache_changed and not io_throttle_changed and not platform_identity_changed
+ return dict(report=str(path.resolve().relative_to(ROOT)),sha256=sha(path.read_bytes()),kernel_sha256=payload['kernel_sha256'],payload_sha256=payload['payload_sha256'],os_metadata_only=os_metadata_only,experimental_memory_budget_changed=memory_budget_changed,experimental_vfs_cache_changed=vfs_cache_changed,experimental_io_throttle_changed=io_throttle_changed,port_assigned_platform_identity_changed=platform_identity_changed,diagnostic_pmgr_policy_changed=pmgr_policy_changed,diagnostic_watchdog_client_changed=watchdog_client_changed,adt_cell_encoding_changed=cell_encoding_changed,diagnostic_watchdog_budget_changed=watchdog_budget_changed,exact_kernel_match=build['staging_kernel_sha256']==payload['kernel_sha256'],exact_payload_match=build['payload']['image_sha256']==payload['payload_sha256'],scope='Prior handset transport/capacity and frozen hardware ADT (explicit same-handset qualified 20s diagnostic watchdog contract, empty OS containers, pinned OS ABI policy and explicit8192-vnode development policy and explicit 2/2 ADT cell declarations and exact signed OS UUID root matching and zero TrustCache binding and explicit linked original-PMGR unsupported-AON diagnostic policy may differ); current block authentication and all loaded-segment/args/ADT checks must pass in the same boot before branch; observer pet deadline and hardware restoration require same-run evidence')
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('--offline-keystore',action='store_true',help='Explicit unprotected state service on the ephemeral diagnostic Data only');p.add_argument('--packed-data-report',type=Path);p.add_argument('--inspection',type=Path,required=True);p.add_argument('--adt',type=Path,required=True);p.add_argument('--trust-cache-report',type=Path);p.add_argument('--fat-mib',type=int,choices=[20,128,160],default=128);a=p.parse_args()

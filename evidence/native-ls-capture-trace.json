@@ -1,0 +1,125 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261105T081841Z",
+  "extraction": "evidence/private/ufs-console-log/20261105T081332Z/20261105T084332Z-recovered-return",
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "desktop_verified": false,
+  "onsite_screen": "startup-text-then-black",
+  "owned_memory_mib": 704,
+  "log": {
+    "valid_records": 324,
+    "bytes": 97865,
+    "dropped": 0,
+    "first_counter": 3839506741,
+    "last_counter": 10774212274,
+    "invalid_tail": null,
+    "session": "a919a882-97a0-4ecc-9ceb-0eb492a47393",
+    "guards_unchanged": true,
+    "android_boot_changed": true,
+    "persistent_log_verified": true,
+    "continuous_log_verified": true,
+    "console_lines": 1428,
+    "progress_lines": 286,
+    "service_snapshot_captured": false
+  },
+  "time_origin": "first_persisted_log_record",
+  "log_span_ms": 361182.57984375,
+  "last_tick": {
+    "seconds": 361.1663841145833,
+    "poll": 2851,
+    "root": 7,
+    "init": 4,
+    "syscalls": 20517,
+    "watchdog_stage": 2,
+    "display_stage": 6,
+    "clients": 5,
+    "status": 0,
+    "frames": 449
+  },
+  "capture_phase_count": 26,
+  "last_capture_phase": [
+    {
+      "seconds": 361.18257984375,
+      "stage": "thread-begin",
+      "sequence": 3,
+      "poll": 2861,
+      "id": 781
+    }
+  ],
+  "ls_progress_samples": 2,
+  "display": null,
+  "display_content_scope": "Nonblack pixel count samples only first eight completed frames; later content unknown.",
+  "watchdog": null,
+  "budget": null,
+  "snapshot_completed": false,
+  "pressure_lines": [],
+  "vm_first": [
+    {
+      "seconds": 0.5184373958333334,
+      "free": 140296,
+      "active": 0,
+      "inactive": 0,
+      "wired": 39874
+    }
+  ],
+  "vm_last": [
+    {
+      "seconds": 335.0966028125,
+      "free": 1044,
+      "active": 22536,
+      "inactive": 20834,
+      "wired": 103880
+    },
+    {
+      "seconds": 345.62937958333333,
+      "free": 1186,
+      "active": 22467,
+      "inactive": 21400,
+      "wired": 103918
+    },
+    {
+      "seconds": 355.95907109375,
+      "free": 1008,
+      "active": 22298,
+      "inactive": 20977,
+      "wired": 103780
+    }
+  ],
+  "ufs_first": [
+    {
+      "seconds": 0.5184373958333334,
+      "requests": 0,
+      "bytes": 0,
+      "failures": 0
+    }
+  ],
+  "ufs_last": [
+    {
+      "seconds": 335.0966028125,
+      "requests": 467900,
+      "bytes": 4388697088,
+      "failures": 0
+    },
+    {
+      "seconds": 345.62937958333333,
+      "requests": 469265,
+      "bytes": 4395631616,
+      "failures": 0
+    },
+    {
+      "seconds": 355.95907109375,
+      "requests": 471646,
+      "bytes": 4407641088,
+      "failures": 0
+    }
+  ],
+  "android_boot_completed": true,
+  "root_verified": true,
+  "new_android_boot_id": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "interpretation": "Third sample sequence3 completed four referenced lsd threads,then thread781 capture entry persisted without completion. Specific internal operation and fault versus blocking remain unknown. Two full samples only,no final snapshot or native1800/720s proof.",
+  "next_candidate": "artifacts/desktop-ls-capture-trylock/20261105T084821Z"
+}

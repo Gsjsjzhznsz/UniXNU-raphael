@@ -100,9 +100,25 @@ def decode(raw,contract):
  return dict(**d,arm_init_entry_reached=True,arm_init_c_body_executed=bool(early),xnu_bootstrap_mmu_verified=True,full_xnu_boot_verified=False)
 
 
+def bootstrap_image(root,physical,virtual,bytes_,skip=0):
+ assert 0<=skip<bytes_ and skip%4096==0
+ words=[0]*8192;next_page=2;blocks=(bytes_-skip)//0x200000
+ physical=(physical+skip)&~0x1fffff;virtual=(virtual+skip)&((1<<38)-1)&~0x1fffff
+ assert blocks>0
+ for side,va in enumerate((physical,virtual)):
+  pa=physical;left=blocks
+  while left:
+   assert next_page<16
+   count=min(left,512-((va>>21)&511));words[side*512+((va>>30)&255)]=(root+next_page*4096)|3
+   for j in range(count):words[next_page*512+((va>>21)&511)+j]=(pa+j*0x200000)|0x601
+   next_page+=1;left-=count;va+=count*0x200000;pa+=count*0x200000
+ return struct.pack('<8192Q',*words)
+
+
 def audit_tables(raw,d,contract):
  assert len(raw)==65536 and zlib.crc32(raw)==d['tables_crc_after']
  base=d['tables'];used=set();entries=[]
+ assert raw==bootstrap_image(base,contract['physical_base'],contract['virtual_base'],contract['window_bytes'],contract['policy'].get('bootstrap_skip',0))
  if d['version']==2:d=dict(d,ttbr0=base,ttbr1=base+4096)
  def walk(root,address,high):
   bits=64-((d['tcr']>>(16 if high else 0))&63);assert bits==38
@@ -131,6 +147,6 @@ def audit_tables(raw,d,contract):
   else:
    for i,e in enumerate(words):
     if e:entries.append((at,i,e))
- assert len(used)==4 and len(entries)==2+blocks*2
+ assert len(used)>=4 and len(entries)==len(used)-2+blocks*2
  return dict(passed=True,bytes=len(raw),crc32=zlib.crc32(raw),sha256=sha(raw),table_pages=sorted(used),nonzero_descriptors=len(entries),block_pairs=blocks,
   original_tables_restored=d['tables_restored']==1,scope='Original bootstrap 2MiB blocks; partial base/end granules are not a full final kernel pmap claim')

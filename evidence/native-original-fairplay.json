@@ -1,0 +1,64 @@
+{
+  "implementation": "Explicit21H461 original FairPlayIOKit root with26 exact symbolic addends,155 frozen single branch-skipped inline words; original executable bytes preserved by emitter.",
+  "trigger": "Actual original fairplay51 null-iterator lookups for com_apple_driver_FairPlayIOKit then normal exits; original driver absent.",
+  "source_paths": [
+    "scripts/emit_fairplay_prelink.py",
+    "scripts/prepare_desktop_kernel.py",
+    "UniXNU-raphael/evidence/fairplay-inline-data-21H461.json"
+  ],
+  "host": {
+    "passed": true,
+    "actual_original_prelink_passed": true,
+    "original_executable_bytes_preserved": true,
+    "frozen_inline_words": 155,
+    "exact_symbolic_addends": 26,
+    "fallthrough_mutation_rejected": true,
+    "direct_incoming_mutation_rejected": true,
+    "prelink": "artifacts/desktop-prelink/20261106T062735Z",
+    "indirect_control_flow_proven": false,
+    "handset_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "limits": [
+    "Indirect obfuscated control flow remains unproven; experimental handset test required.",
+    "No synthetic FairPlay replies,service-policy changes or executable patching."
+  ],
+  "build": {
+    "passed": true,
+    "only_added_original_component": "com.apple.driver.FairPlayIOKit",
+    "original_executable_bytes_preserved": true,
+    "exact_symbolic_addends": 26,
+    "classified_inline_words": 155,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "observer_seconds": 360,
+    "maximum_pet_seconds": 420,
+    "memory_mib": 1536,
+    "log_mib": 32,
+    "original_services_preserved": true,
+    "hardware_watchdog_return": true,
+    "indirect_control_flow_proven": false,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Original driver registration/matching/open verified by independent UFS; original AES helper failure follows.",
+  "handset_result": {
+    "valid_records": 1464,
+    "bytes": 3255897,
+    "dropped": 0,
+    "process_count": 151,
+    "captured_threads": 619,
+    "fairplay_matching_successes": 16,
+    "fairplay_iterator_successes": 16,
+    "fairplay_open_successes": 16,
+    "fairplay_normal_exits": 16,
+    "crypto_helper_errors": 16,
+    "static_call": "Original line233 converts nonzero IOAESAccelerator vtable0x550 return toEINVAL(-22); this is not the raw AES result.",
+    "confirmed": "Original FairPlay driver registers,matches and opens successfully. Daemon then exits following original AES helper failure; initial missing-driver gap repaired.",
+    "unresolved": "Actual SoftwareAES error phase and nonsecret ABI arguments; MIG1203 still queues atlaunchd and no desktop."
+  }
+}

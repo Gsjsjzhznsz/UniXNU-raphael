@@ -28,14 +28,14 @@ def make_policy(kernel, adt, window, frequency, affinity, exit_complete=False, t
     base = min(s['virtual_address'] for s in segments)
     end = max(s['virtual_address'] + s['bytes'] for s in segments)
     owned = window.get('window_bytes', 256*1048576)
-    assert owned in (256*1048576,512*1048576,704*1048576)
+    assert owned in (256*1048576,512*1048576,704*1048576,896*1048576,1536*1048576)
     from validate_handset_adt import parse
     tree,parsed_bytes=parse(adt);assert parsed_bytes==len(adt)
     declared=tree['nodes']['chosen']['props'].get('darwinboot-memory-size',struct.pack('<Q',256*1048576))
     assert declared==struct.pack('<Q',owned), 'Loader ADT and exact memory grant must agree'
     assert base == window['virtual_base'] and end - base < 256 * 1048576 - 2 * 1048576
     candidate = window['base'] + (base & (2*1048576-1))
-    assert candidate>>30==(candidate+owned-1)>>30, 'Exact recovery mapping supports one L1 span; include kernel alignment offset'
+    assert owned==1536*1048576 or candidate>>30==(candidate+owned-1)>>30, 'Legacy grants retain their single-L1 placement'
     assert candidate + owned <= window['base'] + window['bytes'] - 0x40000
     assert any(s['protection'] & 4 and s['virtual_address'] <= entry < s['virtual_address'] + s['file_bytes'] for s in segments)
     args = align(end - base, 16384)

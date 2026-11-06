@@ -1,0 +1,769 @@
+{
+  "scope": "independent_handset_log",
+  "candidate": "artifacts/desktop-copy-queue/20261105T144653Z",
+  "source": "artifacts/native-bootstrap-attempt/display-copy-queue-source-20261105T144653Z/RaphaelDesktopDisplay.cpp",
+  "functional_change": "Handle a validated pending head with queued successors using original TAILQ removal and rearm after completion",
+  "host": {
+    "passed": true,
+    "scope": "host_build_and_recovery_qemu_only",
+    "candidate": "artifacts/desktop-copy-queue/20261105T144653Z",
+    "kernel": true,
+    "qemu": 39,
+    "handset_image": true,
+    "queue_regression": {
+      "passed": true,
+      "actual_source_methods_extracted": true,
+      "fifo_queue_lengths": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "old_single_pending_reproduced": true,
+      "invalid_backlink_and_unaccepted_successor_rejected": true,
+      "active_swap_blocks_reentry": true,
+      "asan_ubsan": true,
+      "handset_verified": false
+    },
+    "handset_boot_attempted": false,
+    "desktop_verified": false,
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261105T144906Z",
+      "payload": "evidence/private/handset-payload/20261105T144909Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T113210Z-vnode8192",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T144839Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261105T144910Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261105T144918Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261105T144924.153507Z-j94t6hxb/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261105T145032.527582Z-ly198ssw/report.json",
+      "handset_boot_attempted": false
+    }
+  },
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "handset_run": "evidence/private/android-return-run/20261105T145317Z",
+  "handset": {
+    "handset_run": "evidence/private/android-return-run/20261105T145317Z",
+    "extraction": "evidence/private/ufs-console-log/20261105T144834Z/20261105T151305Z-rooted-bootloop-readback",
+    "handset_boot_attempted": true,
+    "temporary_boot_accepted": true,
+    "desktop_verified": false,
+    "onsite_screen": "black",
+    "owned_memory_mib": 704,
+    "log": {
+      "valid_records": 958,
+      "bytes": 896954,
+      "dropped": 0,
+      "first_counter": 3830292528,
+      "last_counter": 17596729521,
+      "invalid_tail": null,
+      "session": "5d9179bf-b2af-42b6-a9ec-44cef1fe79a9",
+      "guards_unchanged": true,
+      "android_boot_changed": true,
+      "android_boot_completed": false,
+      "read_only_bootloop_salvage": true,
+      "persistent_log_verified": true,
+      "continuous_log_verified": true,
+      "console_lines": 7152,
+      "progress_lines": 605,
+      "service_snapshot_captured": true
+    },
+    "time_origin": "watchdog_start",
+    "log_span_ms": 717001.92671875,
+    "last_tick": {
+      "seconds": 720.0691620833334,
+      "poll": 6041,
+      "root": 7,
+      "init": 4,
+      "syscalls": 47624,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 5,
+      "status": 0,
+      "frames": 854
+    },
+    "capture_phase_count": 74,
+    "last_capture_phase": [
+      {
+        "seconds": 606.45190359375,
+        "stage": "done",
+        "sequence": 5,
+        "poll": 5021,
+        "id": 99
+      }
+    ],
+    "ls_progress_samples": 5,
+    "display": {
+      "clients": 5,
+      "validations": 857,
+      "rejected": 0,
+      "kicks": 1703,
+      "frames": 855,
+      "blank_frames": 0,
+      "retired": 855,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 8643024000,
+      "nonblack": 2648
+    },
+    "display_content_scope": "120-second bounded RGB90x195 submitted-frame samples with matching sampled framebuffer counters; physical panel output unverified.",
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 0,
+      "checkins": 55,
+      "last_checkin_counter": 17502328726,
+      "monitoring": true,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "budget": {
+      "hardware_seconds": 20,
+      "budget_ms": 780000,
+      "observer_seconds": 720.0,
+      "start_counter": 3768919000,
+      "capture_counter": 17594336331,
+      "counter_frequency": 19200000,
+      "elapsed_ms": 720073.8193229167,
+      "observer_deadline_reached": true,
+      "pets": 1278,
+      "last_pet_counter": 17588798784,
+      "status": 1
+    },
+    "snapshot_completed": true,
+    "pressure_lines": [],
+    "vm_first": [
+      {
+        "seconds": 3.58477859375,
+        "free": 140266,
+        "active": 0,
+        "inactive": 0,
+        "wired": 39918
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 694.13880140625,
+        "free": 394,
+        "active": 5707,
+        "inactive": 5638,
+        "wired": 127550
+      },
+      {
+        "seconds": 705.3526033333334,
+        "free": 717,
+        "active": 5568,
+        "inactive": 5383,
+        "wired": 127445
+      },
+      {
+        "seconds": 716.4708333854167,
+        "free": 1390,
+        "active": 5509,
+        "inactive": 5092,
+        "wired": 124912
+      }
+    ],
+    "ufs_first": [
+      {
+        "seconds": 3.58477859375,
+        "requests": 0,
+        "bytes": 0,
+        "failures": 0
+      }
+    ],
+    "ufs_last": [
+      {
+        "seconds": 694.13880140625,
+        "requests": 978190,
+        "bytes": 6944621568,
+        "failures": 0
+      },
+      {
+        "seconds": 705.3526033333334,
+        "requests": 1000923,
+        "bytes": 7059211264,
+        "failures": 0
+      },
+      {
+        "seconds": 716.4708333854167,
+        "requests": 1023999,
+        "bytes": 7171195904,
+        "failures": 0
+      }
+    ],
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "full_checkpoint_verified": false,
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "frame_analysis": "frame-analysis.json",
+    "onsite_observations": [
+      "boot_text",
+      "progress_bar",
+      "black"
+    ]
+  },
+  "copy": {
+    "sample_count": 61,
+    "console_release_observed": true,
+    "last_sample": {
+      "copy_ticks": 1405018222,
+      "max_ticks": 2141433,
+      "console_released": 1
+    },
+    "cumulative_copy_elapsed_seconds": 73.17803239583333,
+    "maximum_copy_elapsed_seconds": 0.11153296875,
+    "thumbnail_mismatches": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "scope": "Physical-counter elapsed time includes preemption; cumulative total is the last periodic sample, not an exact final total. Console release and sampled framebuffer agreement do not prove panel output or desktop.",
+    "desktop_verified": false,
+    "software_refresh_publications": [],
+    "copy_pacing_initializations": [
+      {
+        "hz": 2,
+        "timer_ready": 1
+      }
+    ],
+    "sampled_frame_cadence": [
+      {
+        "start_seconds": 265.8057463020833,
+        "end_seconds": 385.9896274479167,
+        "frame_delta": 187,
+        "frames_per_second": 1.555949085826998
+      },
+      {
+        "start_seconds": 385.9896274479167,
+        "end_seconds": 506.1529259895833,
+        "frame_delta": 240,
+        "frames_per_second": 1.9972820562742792
+      },
+      {
+        "start_seconds": 506.1529259895833,
+        "end_seconds": 626.3285007291666,
+        "frame_delta": 240,
+        "frames_per_second": 1.997078029541963
+      }
+    ],
+    "queue_log": [
+      "RPH DISPLAY QUEUE deferred=1 successor=0",
+      "RPH DISPLAY QUEUE deferred=2 successor=1",
+      "RPH DISPLAY TIMER fired=1",
+      "RPH DISPLAY QUEUE multi_head=1",
+      "RPH DISPLAY QUEUE deferred=3 successor=1",
+      "RPH DISPLAY TIMER fired=2",
+      "RPH DISPLAY QUEUE multi_head=2",
+      "RPH DISPLAY QUEUE deferred=4 successor=1",
+      "RPH DISPLAY TIMER fired=3",
+      "RPH DISPLAY QUEUE multi_head=3",
+      "RPH DISPLAY TIMER fired=4",
+      "RPH DISPLAY QUEUE multi_head=4"
+    ]
+  },
+  "frames": {
+    "thumbnails": [
+      {
+        "frame": 1,
+        "counter": 8872389329,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T144834Z/20261105T151305Z-rooted-bootloop-readback/frame-thumbnails/frame-000001.png",
+        "seconds": 265.8057463020833
+      },
+      {
+        "frame": 188,
+        "counter": 11179919847,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T144834Z/20261105T151305Z-rooted-bootloop-readback/frame-thumbnails/frame-000188.png",
+        "seconds": 385.9896274479167
+      },
+      {
+        "frame": 428,
+        "counter": 13487055179,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T144834Z/20261105T151305Z-rooted-bootloop-readback/frame-thumbnails/frame-000428.png",
+        "seconds": 506.1529259895833
+      },
+      {
+        "frame": 668,
+        "counter": 15794426214,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T144834Z/20261105T151305Z-rooted-bootloop-readback/frame-thumbnails/frame-000668.png",
+        "seconds": 626.3285007291666
+      }
+    ],
+    "ufs_time_samples": 61,
+    "ufs_elapsed_phases": {
+      "read_seconds": 341.1466135416667,
+      "verify_seconds": 17.085655520833335,
+      "publish_seconds": 5.018837864583333,
+      "max_chunk_seconds": 0.21693333333333334
+    },
+    "counter_frequency": 19200000,
+    "scope": "Elapsed phase totals include scheduling/preemption, not pure CPU or hardware latency. RGB images are sampled submitted pixels; framebuffer equality covers the same sample grid. Physical panel output still requires onsite observation.",
+    "service_cpu_ledger": [
+      {
+        "service": "SpringBoard",
+        "tid": 250,
+        "credited_cpu_seconds": 9.729045520833333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__dispatch_mach_send_and_wait_for_reply",
+          "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+          "_xpc_connection_send_message_with_reply_sync",
+          "-[BSXPCServiceConnectionMessage _sendSynchronously:]",
+          "-[BSXPCServiceConnectionMessage sendSynchronouslyWithError:]",
+          "___80+[BSXPCServiceConnectionProxy createImplementationOfProtocol:forClass:withName:]_block_invoke",
+          "-[BKSSystemShellService _checkIn]",
+          "_FBSystemShellInitialize",
+          "_SBSystemAppMain",
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 690,
+        "credited_cpu_seconds": 0.00018635416666666667,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_thread_event_wait_slow$VARIANT$armv81",
+          "___DISPATCH_WAIT_FOR_QUEUE__",
+          "__dispatch_sync_f_slow",
+          "____os_state_request_for_self_block_invoke",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 1843,
+        "credited_cpu_seconds": 0.028038229166666668,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 471,
+        "credited_cpu_seconds": 3.6980569270833334,
+        "user_symbols": [
+          "__ZN5dyld39MachOFile8trieWalkER11DiagnosticsPKhS4_PKc",
+          "__ZN5dyld39MachOFile8trieWalkER11DiagnosticsPKhS4_PKc",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZNK5dyld46Loader17hasExportedSymbolER11DiagnosticsRNS_12RuntimeStateEPKcNS0_18ExportedSymbolModeENS0_12ResolverModeEPNS0_14ResolvedSymbolEPN5dyld35ArrayIPKS0_EE",
+          "__ZN5dyld44APIs5dlsymEPvPKc",
+          "_init_EXStartService",
+          "__LSServerMain",
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 472,
+        "credited_cpu_seconds": 68.93427463541667,
+        "user_symbols": [
+          "__ZNK4objc15ObjectHashTable13forEachObjectEPKcU13block_pointerFvytRbE",
+          "__ZNK4objc15ObjectHashTable13forEachObjectEPKcU13block_pointerFvytRbE",
+          "__ZN5dyld44APIs25_dyld_for_each_objc_classEPKcU13block_pointerFvPvbPbE",
+          "__ZL13getClass_implPKc",
+          "__ZL23getClassExceptSomeSwiftPKc",
+          "_look_up_class",
+          "__decodeObject",
+          "___44-[NSXPCDecoder _decodeArrayOfObjectsForKey:]_block_invoke",
+          "__NSXPCSerializationIterateArrayObject",
+          "-[NSXPCDecoder _decodeArrayOfObjectsForKey:]",
+          "-[NSArray(NSArray) initWithCoder:]",
+          "__decodeObject",
+          "-[NSXPCDecoder _decodeObjectOfClasses:atObject:]",
+          "__NSXPCSerializationDecodeTypedObjCValuesFromArray",
+          "__NSXPCSerializationDecodeInvocationArgumentArray",
+          "-[NSXPCDecoder __decodeXPCObject:allowingSimpleMessageSend:outInvocation:outArguments:outArgumentsMaxCount:outMethodSignature:outSelector:isReply:replySelector:]",
+          "-[NSXPCDecoder _decodeReplyFromXPCObject:forSelector:]",
+          "-[NSXPCConnection _decodeAndInvokeReplyBlockWithEvent:sequence:replyInfo:]"
+        ],
+        "kernel_frames": [
+          {
+            "symbol": "_thread_invoke",
+            "offset": 1196
+          },
+          {
+            "symbol": "_thread_block_reason",
+            "offset": 256
+          },
+          {
+            "symbol": "_throttle_lowpri_io",
+            "offset": 828
+          },
+          {
+            "symbol": "_vm_fault_internal",
+            "offset": 11300
+          },
+          {
+            "symbol": "_vm_fault$XNU_INTERNAL",
+            "offset": 20
+          },
+          {
+            "symbol": "_handle_user_abort",
+            "offset": 240
+          },
+          {
+            "symbol": "_sleh_synchronous",
+            "offset": 1440
+          },
+          {
+            "symbol": "_fleh_synchronous",
+            "offset": 40
+          },
+          {
+            "symbol": "fleh_dispatch64_common",
+            "offset": 164
+          }
+        ]
+      },
+      {
+        "service": "lsd",
+        "tid": 479,
+        "credited_cpu_seconds": 0.26897234375,
+        "user_symbols": [
+          "_objc_retain_x0",
+          "___CFSetApplyFunction_block_invoke",
+          "_CFBasicHashApply",
+          "_CFSetApplyFunction",
+          "_CFRunLoopCopyAllModes",
+          "___CFFinalizeRunLoop",
+          "___CFTSDFinalize",
+          "__pthread_tsd_cleanup",
+          "__pthread_exit",
+          "__pthread_exit",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 587,
+        "credited_cpu_seconds": 0.04122041666666667,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1161,
+        "credited_cpu_seconds": 0.020489479166666668,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__dispatch_mach_send_and_wait_for_reply",
+          "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+          "_xpc_connection_send_message_with_reply_sync",
+          "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+          "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+          "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+          "__NSXPCDistantObjectSimpleMessageSend1",
+          "-[MCProfileConnection checkIn]",
+          "-[MCProfileConnection(Private) checkInIfNeeded]",
+          "-[MCProfileConnection(Misc) trustedCodeSigningIdentities]",
+          "___73-[LSApplicationRestrictionsManager _pruneObsoleteTrustedSignerIdentities]_block_invoke",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1687,
+        "credited_cpu_seconds": 0.0643303125,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1688,
+        "credited_cpu_seconds": 0.001880625,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1695,
+        "credited_cpu_seconds": 0.0614703125,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 335,
+        "credited_cpu_seconds": 5.072286770833333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          null,
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 452,
+        "credited_cpu_seconds": 0.03429911458333333,
+        "user_symbols": [
+          null,
+          null,
+          null,
+          "__dispatch_client_callout",
+          "__dispatch_continuation_pop$VARIANT$armv81",
+          "__dispatch_source_invoke$VARIANT$armv81",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": [
+          {
+            "symbol": "_thread_invoke",
+            "offset": 1196
+          },
+          {
+            "symbol": "_thread_block_reason",
+            "offset": 256
+          },
+          {
+            "symbol": "_throttle_lowpri_io",
+            "offset": 828
+          },
+          {
+            "symbol": "_vm_fault_internal",
+            "offset": 11300
+          },
+          {
+            "symbol": "_vm_fault$XNU_INTERNAL",
+            "offset": 20
+          },
+          {
+            "symbol": "_handle_user_abort",
+            "offset": 240
+          },
+          {
+            "symbol": "_sleh_synchronous",
+            "offset": 1440
+          },
+          {
+            "symbol": "_fleh_synchronous",
+            "offset": 40
+          },
+          {
+            "symbol": "fleh_dispatch64_common",
+            "offset": 164
+          }
+        ]
+      },
+      {
+        "service": "backboardd",
+        "tid": 482,
+        "credited_cpu_seconds": 1.7115177083333333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__ZN2CA6Render6Server13server_threadEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 490,
+        "credited_cpu_seconds": 23.578915625,
+        "user_symbols": [
+          "___semwait_signal",
+          "_nanosleep",
+          "_usleep",
+          "__ZN2CA12WindowServerL17swap_wait_timeoutERNS_19IOMobileFramebufferEjjPd",
+          "__ZN2CA12WindowServer12IOMFBDisplay11can_update_Ejdd",
+          "__ZN2CA12WindowServer12IOMFBDisplay10can_updateEjdd",
+          "__ZN2CA12WindowServer6Server15render_for_timeEdPK11CVTimeStampyPK17CATimingReferencej",
+          "__ZN2CA12WindowServer11IOMFBServer14vsync_callbackEP21__IOMobileFramebufferyyyPv",
+          "__ZL22display_timer_callbackP12__CFMachPortPvlS1_",
+          "___CFMachPortPerform",
+          "___CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE1_PERFORM_FUNCTION__",
+          "___CFRunLoopDoSource1",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 673,
+        "credited_cpu_seconds": 0.0019706770833333334,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 674,
+        "credited_cpu_seconds": 0.00163484375,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 675,
+        "credited_cpu_seconds": 0.0016026041666666667,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 676,
+        "credited_cpu_seconds": 0.0015574479166666666,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      }
+    ],
+    "onsite_screen": "black",
+    "desktop_verified": false
+  },
+  "exceptions": {
+    "selected_service_exceptions": [],
+    "service_exit_counts": {},
+    "scope": "First selected-service exception records and explicitly logged service exits only;absence does not cover unselected processes.",
+    "desktop_verified": false
+  },
+  "conclusions": [
+    "958 records/896954 bytes/zero drops;five LS samples and720073ms final snapshot complete.Android boot/root/new boot ID/transient cleanup verified.Original failed/null report retained.",
+    "Timer callbacks and multi-head submissions observed;855 retired frames,zero transfer errors.Late sample rates1.997Hz confirm sustained queue progress.",
+    "Against working unpaced differential-copy ancestor:copy elapsed366.571->73.178s;BackBoard submit CPU400.070->23.579s.Different frames per window are intended by pacing;not a desktop proof.",
+    "Four sampled RGB thumbnails remain loading bar and match sampled framebuffer.SpringBoard final main stack waits for original BKSSystemShellService check-in reply,not the earlier LS database wait.LS complete seeding not independently proved.",
+    "BackBoard57 final first8-thread snapshot is explicitly truncated.Actual BKS receiver may be omitted.Next adds bounded independent32-thread BackBoard receiver capture without changing services or submission behavior."
+  ]
+}

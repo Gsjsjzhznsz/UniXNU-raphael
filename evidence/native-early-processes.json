@@ -1,0 +1,223 @@
+{
+  "candidate": "artifacts/desktop-early-processes/20261106T022045Z",
+  "parent_candidate": "artifacts/desktop-pageable-data/20261105T182953Z",
+  "functional_changes": [],
+  "diagnostic_change": "Add independently named allproc snapshots at600s and1000s from first observer tick; final1800s snapshot retained.",
+  "cause": "Original watchdogd panicked at1229s of persisted log; final allproc missing. Pageable Data fixes wired growth but process-thrashing and CommCenter remain.",
+  "unchanged": [
+    "pageable Data",
+    "704MiB ownership",
+    "8192 vnode",
+    "original services and watchdogd panic",
+    "1800/1860s observer/pet",
+    "2Hz display",
+    "stable private platform UUID",
+    "16MiB log",
+    "ephemeral Data seed"
+  ],
+  "expected": [
+    "Capture all live process PIDs beyond255 before panic",
+    "Trace CommCenter, migration and SpringBoard wait chains",
+    "No desktop assertion without physical screen"
+  ],
+  "status": "host_qualified_ready_for_handset",
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "host": {
+    "passed": true,
+    "scope": "source_host_build_and_recovery_QEMU_only",
+    "host_regression": {
+      "passed": true,
+      "actual_C_body": true,
+      "asan_ubsan": true,
+      "thread_counts": [
+        0,
+        1,
+        32,
+        33,
+        512,
+        513
+      ],
+      "pid_above255": true,
+      "thread_reference_pairs": true,
+      "no_capture_before600s": true,
+      "exact_deadlines600s1000s_once": true,
+      "final_snapshot_unchanged": true,
+      "partial_capture_preserves_completed_early_groups": true,
+      "previous_full_and_panic_decode_compatible": true,
+      "scope": "Host simulation of actual enumeration/schedule with counters,procs and threads mocked;no handset proof."
+    },
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261106T022204Z",
+      "payload": "evidence/private/handset-payload/20261106T022207Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T174010Z-watchdog-budget",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261106T022134Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261106T022209Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261106T022216Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261106T022222.811491Z-zmkx4txi/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261106T022334.601478Z-3xt0howf/report.json",
+      "handset_boot_attempted": false
+    },
+    "qemu_checks": 39,
+    "record_areas": 13,
+    "layout_check": true,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "scope": "host_passed_handset_capture_running",
+  "handset_run": "evidence/private/android-return-run/20261106T022413Z",
+  "handset_result": {
+    "log_records": 3403,
+    "log_bytes": 6457475,
+    "dropped": 0,
+    "log_span_seconds": 1153.4767348958333,
+    "time_origin": "first_persisted_log_record",
+    "early_snapshots": [
+      {
+        "sequence": 1,
+        "complete": true,
+        "process_count": 127,
+        "captured_threads": 573,
+        "truncated_processes": 0,
+        "capture_elapsed_seconds": 1.49793734375
+      },
+      {
+        "sequence": 2,
+        "complete": true,
+        "process_count": 130,
+        "captured_threads": 624,
+        "truncated_processes": 0,
+        "capture_elapsed_seconds": 1.4250674479166667
+      }
+    ],
+    "panic_reason": "no successful checkins from mediaserverd (2 induced crashes) \nservice: backboardd (2 induced crashes), total successful checkins in 1352 seconds: 4, last successful checkin: 151 seconds ago\nservice: mediaserverd (2 induced crashes), no successful checkins in 1352 seconds\nservice: audiomxd (2 induced crashes), no successful checkins in 1352 seconds\nservice: logd, total successful checkins in 1352 seconds: 19, last successful checkin: 0 seconds ago\nservice: thermalmonitord, total successful checkins in 1352 seconds: 16, last successful checkin: 0 seconds ago\nservice: runningboardd, total successful checkins in 1352 seconds: 16, last successful checkin: 0 seconds ago\nservice: configd, total successful checkins in 1352 seconds: 19, last successful checkin: 0 seconds ago\nservice: CommCenter, total successful checkins in 1352 seconds: 17, last successful checkin: 0 seconds ago",
+    "service_exits": [
+      {
+        "seconds": 1011.6595985416667,
+        "pid": 57,
+        "name": "backboardd",
+        "status": 9,
+        "reason_namespace": 1,
+        "reason_code": 4,
+        "reason_flags": 0,
+        "free": 3724,
+        "active": 4185,
+        "inactive": 3889,
+        "wired": 74148
+      },
+      {
+        "seconds": 1063.7311274479166,
+        "pid": 440,
+        "name": "backboardd",
+        "status": 9,
+        "reason_namespace": 20,
+        "reason_code": 1,
+        "reason_flags": 5,
+        "free": 1153,
+        "active": 5584,
+        "inactive": 5504,
+        "wired": 73833
+      },
+      {
+        "seconds": 1129.00095546875,
+        "pid": 459,
+        "name": "backboardd",
+        "status": 9,
+        "reason_namespace": 20,
+        "reason_code": 2,
+        "reason_flags": 6,
+        "free": 349,
+        "active": 4947,
+        "inactive": 4858,
+        "wired": 73514
+      }
+    ],
+    "last_tick": {
+      "seconds": 1153.4767348958333,
+      "poll": 10181,
+      "root": 7,
+      "init": 4,
+      "syscalls": 77400,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 7,
+      "status": 0,
+      "frames": 1109
+    },
+    "data_last": [
+      {
+        "seconds": 1125.9434242708332,
+        "allocated_bytes": 223838208,
+        "reads": 11609,
+        "writes": 9500,
+        "failures": 0,
+        "zero_write_bytes": 1581056
+      },
+      {
+        "seconds": 1136.12769109375,
+        "allocated_bytes": 223891456,
+        "reads": 11637,
+        "writes": 9550,
+        "failures": 0,
+        "zero_write_bytes": 1581056
+      },
+      {
+        "seconds": 1146.3284809375,
+        "allocated_bytes": 223891456,
+        "reads": 11655,
+        "writes": 9557,
+        "failures": 0,
+        "zero_write_bytes": 1581056
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 1125.9434242708332,
+        "free": 1190,
+        "active": 4856,
+        "inactive": 4676,
+        "wired": 73667
+      },
+      {
+        "seconds": 1136.12769109375,
+        "free": 417,
+        "active": 4947,
+        "inactive": 4801,
+        "wired": 73917
+      },
+      {
+        "seconds": 1146.3284809375,
+        "free": 132,
+        "active": 4989,
+        "inactive": 4924,
+        "wired": 73827
+      }
+    ],
+    "ls_pid98_cpu_seconds_at_snapshots": [
+      28.0202415625,
+      75.31971473958333
+    ],
+    "ls_progress": "SamePID98/tid477 progresses through app/plugin registration to OpenStaging/persona initialization; not a fixed seeding deadlock.",
+    "springboard_late_wait": "BKSSystemShellService check-in",
+    "aks_selector10_unsupported": 12,
+    "late_frame_sample_count": 6,
+    "last_thumbnail": "Viewed frame1070: loading bar",
+    "sampled_framebuffer_mismatches": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "final_native_screen": "Unknown after last user progress-bar report; Android automatic return verified by host",
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "desktop_verified": false,
+    "next_step": "Use new upstream software key wrapping against12 observed unsupported selector10 requests; keep memory/display/service policy."
+  }
+}

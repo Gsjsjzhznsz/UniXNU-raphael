@@ -1,0 +1,32 @@
+{
+  "request": "User authorized one-time upstream pull while handset capture runs on2026-11-06",
+  "started_utc": "2026-11-06T02:44:29.484888+00:00",
+  "candidate": "artifacts/upstream-candidates/20261106T024429Z/UniXNU",
+  "active_tree_modified": false,
+  "passed": false,
+  "active_backend_revision": "f0721e9745c45ad2600cd69c74730f1cca55d56a",
+  "previous_main": "350ddc2a23dcaea7d74d8a469259c2efcec3e4a9",
+  "main_revision": "e2fdae4312d0acc3d8a52bc457101e7918095e6a",
+  "main_commit": "e2fdae4312d0acc3d8a52bc457101e7918095e6a\n2026-11-06T02:23:21+08:00\ndocs: describe the current Bluetooth driver and key wrapping",
+  "new_commits": 36,
+  "failure": "submodules failed: Z/UniXNU/drivers/QcomBaseband'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/drivers/QcomGeniSpi'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/drivers/VirtioMmioBlock'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/drivers/RamBlock'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/drivers/SoftwareAES'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/kits/AdrenoFirmware'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/drivers/VirtioMmioConsole'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/kits/AdrenoPM4'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/kits/ArmSmmu4K'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/kits/AirNir'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/kits/VerifiedRoot'...\nCloning into '/home/guo/work/raphael-fresh/artifacts/upstream-candidates/20261106T024429Z/UniXNU/kits/XnuPrelink'...\nSubmodule path 'drivers/Adreno740': checked out '6fa7bae2a5b3b523e790eb3e0348af4d98969e4d'\nSubmodule path 'drivers/AdrenoMetal': checked out '6416a76e0a287d85afbcddda21192388460e155c'\nFrom https://github.com/UniXNU/AppleKeyStoreState\n * branch            8c70daf814aafdf4a3d35e40dde0322655fd0a83 -> FETCH_HEAD\nSubmodule path 'drivers/AppleKeyStoreState': checked out '8c70daf814aafdf4a3d35e40dde0322655fd0a83'\nfatal: remote error: upload-pack: not our ref 2e11cda72740b985dedde3e32ba72b0fd64eb475\nfatal: Fetched in submodule path 'drivers/ArmCpu', but it did not contain 2e11cda72740b985dedde3e32ba72b0fd64eb475. Direct fetching of that commit failed.\n",
+  "completed_utc": "2026-11-06T02:46:08.019726+00:00",
+  "submodule_status": " 6fa7bae2a5b3b523e790eb3e0348af4d98969e4d drivers/Adreno740 (heads/main)\n 6416a76e0a287d85afbcddda21192388460e155c drivers/AdrenoMetal (remotes/origin/fix/gmem-swap-trace-1-g6416a76)\n 8c70daf814aafdf4a3d35e40dde0322655fd0a83 drivers/AppleKeyStoreState (8c70daf)\n+93a5030c5d983d0ef90f0fca93879d6e36ad1ba8 drivers/ArmCpu (heads/main)\n 417ff95d6a6e8607ddea9309ec45c3bfd4a67c60 drivers/ArmDTPlatform (heads/main)\n d1423a8bceac4be0478a93d9173587111c040084 drivers/ArmVirtPlatform (heads/main)\n 3c75734014cdab0acd9541e88057b7606ee7ae08 drivers/DarwinBoot (heads/main)\n e47c1b8de169cd2bd0b885c7d85e433010e3cdf2 drivers/GopFramebuffer (heads/main)\n dd0199cf3300764ed52b23f4a47761f91fab21a2 drivers/QcomBaseband (heads/main)\n eac47baefe6a5d2368a70351e6ad1b6361bedbe2 drivers/QcomGeniSpi (heads/main)\n 4be2d7eb05ef5a98126c91e0302c149140c0e3e1 drivers/RamBlock (heads/main)\n 4a45326da5c2cd6fe6813d79ee43db20805628af drivers/SoftwareAES (heads/main)\n 4e1013eb8c45077b57f8d38d61b389fe899ea1c3 drivers/VirtioMmioBlock (heads/main)\n 70253216890b2afcaa6333948726f896f84fc757 drivers/VirtioMmioConsole (heads/main)\n 20ad3d7aca14bd46aecab6335c780f5413fa054b kits/AdrenoFirmware (heads/main)\n 282606b528b2595bc4274ea7490b62b323f35a5f kits/AdrenoPM4 (heads/main)\n b356371a74cd158c2902f4886f373ebb0f833a36 kits/AirNir (heads/main)\n 83969cd874503e65997ff7639f7dcf3d0a92cd17 kits/ArmSmmu4K (heads/main)\n 974f043d0c71ba2e60331483a41c6c6d35274ee3 kits/VerifiedRoot (heads/main)\n ef4fe4f9ec59faa04eba24025bac0fa2985dbe5b kits/XnuPrelink (remotes/origin/fix/sheng-ipados27-startup-pipeline-2-gef4fe4f)\n",
+  "submodule_count": 20,
+  "submodules_ready": false,
+  "ready_submodule_count": 19,
+  "unresolved_submodules": [
+    "+93a5030c5d983d0ef90f0fca93879d6e36ad1ba8 drivers/ArmCpu (heads/main)"
+  ],
+  "remaining_submodules_returncode": 0,
+  "adoption": "Independent downloaded candidate; active backend, build pins and running handset experiment retained",
+  "relevance": [
+    "Main gained36 commits; most are Bluetooth/runtime/docs/device indexing, including raphael-guowenye.",
+    "GopFramebuffer,RamBlock,DarwinBoot gitlinks unchanged versus prior candidate.",
+    "AppleKeyStoreState adds software wrapping selectors10/11 and related queries; parent actual log records10 failed selector10 requests(e00002c7). This covers a concrete interface gap; effect on desktop remains unverified.",
+    "ArmCpu required2e11cda72740b985dedde3e32ba72b0fd64eb475 is unavailable from its configured official remote;19of20 gitlinks resolved."
+  ],
+  "handset_experiment_changed": false,
+  "tests_run": [],
+  "parent_aks_selector10_unsupported_count": 10
+}

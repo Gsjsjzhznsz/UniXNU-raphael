@@ -1,0 +1,230 @@
+{
+  "scope": "independent_handset_log",
+  "candidate": "artifacts/desktop-copy-pace/20261105T140919Z",
+  "source": "artifacts/native-bootstrap-attempt/display-copy-pace-source/RaphaelDesktopDisplay.cpp",
+  "functional_change": "Original-workloop timer caps actual validated software submissions to2Hz;nominal display metadata retained from working diff-handoff parent.",
+  "host": {
+    "passed": true,
+    "scope": "host_build_and_recovery_qemu_only",
+    "candidate": "artifacts/desktop-copy-pace/20261105T140919Z",
+    "kernel": true,
+    "qemu": 39,
+    "handset_image": true,
+    "nominal_display_metadata": "unchanged_from_diff_handoff_parent",
+    "software_submission_target_hz": 2,
+    "handset_boot_attempted": false,
+    "desktop_verified": false,
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261105T141017Z",
+      "payload": "evidence/private/handset-payload/20261105T141020Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T113210Z-vnode8192",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T140950Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261105T141022Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261105T141028Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261105T141035.836990Z-gre_bp48/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261105T141143.350170Z-ubrpjgwf/report.json",
+      "handset_boot_attempted": false
+    }
+  },
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "handset": {
+    "handset_run": "evidence/private/android-return-run/20261105T141301Z",
+    "extraction": "evidence/private/ufs-console-log/20261105T140946Z/20261105T143508Z-rooted-bootloop-readback",
+    "handset_boot_attempted": true,
+    "temporary_boot_accepted": true,
+    "desktop_verified": false,
+    "onsite_screen": "progress_bar",
+    "owned_memory_mib": 704,
+    "log": {
+      "valid_records": 814,
+      "bytes": 401999,
+      "dropped": 0,
+      "first_counter": 3826739465,
+      "last_counter": 17591221193,
+      "invalid_tail": null,
+      "session": "fc7949b2-8610-42e8-90e0-1e0fc6679971",
+      "guards_unchanged": true,
+      "android_boot_changed": true,
+      "android_boot_completed": false,
+      "read_only_bootloop_salvage": true,
+      "persistent_log_verified": true,
+      "continuous_log_verified": true,
+      "console_lines": 4152,
+      "progress_lines": 639,
+      "service_snapshot_captured": true
+    },
+    "time_origin": "watchdog_start",
+    "log_span_ms": 716900.09,
+    "last_tick": {
+      "seconds": 720.04368078125,
+      "poll": 6381,
+      "root": 7,
+      "init": 4,
+      "syscalls": 55601,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 6,
+      "status": 0,
+      "frames": 9
+    },
+    "capture_phase_count": 68,
+    "last_capture_phase": [
+      {
+        "seconds": 606.02551625,
+        "stage": "done",
+        "sequence": 5,
+        "poll": 5261,
+        "id": 97
+      }
+    ],
+    "ls_progress_samples": 5,
+    "display": {
+      "clients": 6,
+      "validations": 11,
+      "rejected": 0,
+      "kicks": 13,
+      "frames": 9,
+      "blank_frames": 0,
+      "retired": 9,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 90979200,
+      "nonblack": 2648
+    },
+    "display_content_scope": "120-second bounded RGB90x195 submitted-frame samples with matching sampled framebuffer counters; physical panel output unverified.",
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 1,
+      "checkins": 55,
+      "last_checkin_counter": 17511101345,
+      "monitoring": false,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "budget": {
+      "hardware_seconds": 20,
+      "budget_ms": 780000,
+      "observer_seconds": 720.0,
+      "start_counter": 3765403675,
+      "capture_counter": 17590300865,
+      "counter_frequency": 19200000,
+      "elapsed_ms": 720046.7286458333,
+      "observer_deadline_reached": true,
+      "pets": 1343,
+      "last_pet_counter": 17588253082,
+      "status": 1
+    },
+    "snapshot_completed": true,
+    "pressure_lines": [],
+    "vm_first": [
+      {
+        "seconds": 3.5827972395833334,
+        "free": 140264,
+        "active": 0,
+        "inactive": 0,
+        "wired": 39922
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 692.4189878645833,
+        "free": 1112,
+        "active": 4367,
+        "inactive": 4362,
+        "wired": 130387
+      },
+      {
+        "seconds": 702.58578515625,
+        "free": 1009,
+        "active": 4452,
+        "inactive": 4447,
+        "wired": 130135
+      },
+      {
+        "seconds": 712.7521241666667,
+        "free": 488,
+        "active": 4332,
+        "inactive": 4065,
+        "wired": 130024
+      }
+    ],
+    "ufs_first": [
+      {
+        "seconds": 3.5827972395833334,
+        "requests": 0,
+        "bytes": 0,
+        "failures": 0
+      }
+    ],
+    "ufs_last": [
+      {
+        "seconds": 692.4189878645833,
+        "requests": 1157492,
+        "bytes": 7857046528,
+        "failures": 0
+      },
+      {
+        "seconds": 702.58578515625,
+        "requests": 1186138,
+        "bytes": 7997715456,
+        "failures": 0
+      },
+      {
+        "seconds": 712.7521241666667,
+        "requests": 1213900,
+        "bytes": 8133211136,
+        "failures": 0
+      }
+    ],
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "full_checkpoint_verified": false,
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "frame_analysis": "frame-analysis.json"
+  },
+  "copy": {
+    "sample_count": 64,
+    "console_release_observed": true,
+    "last_sample": {
+      "copy_ticks": 19088051,
+      "max_ticks": 5793257,
+      "console_released": 1
+    },
+    "cumulative_copy_elapsed_seconds": 0.9941693229166667,
+    "maximum_copy_elapsed_seconds": 0.30173213541666666,
+    "thumbnail_mismatches": [
+      0
+    ],
+    "scope": "Physical-counter elapsed time includes preemption; cumulative total is the last periodic sample, not an exact final total. Console release and sampled framebuffer agreement do not prove panel output or desktop.",
+    "desktop_verified": false,
+    "software_refresh_publications": [],
+    "copy_pacing_initializations": [
+      {
+        "hz": 2,
+        "timer_ready": 1
+      }
+    ],
+    "sampled_frame_cadence": []
+  },
+  "exceptions": {
+    "selected_service_exceptions": [],
+    "service_exit_counts": {},
+    "scope": "First selected-service exception records and explicitly logged service exits only;absence does not cover unselected processes.",
+    "desktop_verified": false
+  },
+  "conclusions": [
+    "814 records/401999 bytes/zero drops;five LS samples and720046ms final snapshot complete.Android boot/root/new boot ID/transient cleanup verified;original failed/null retained.",
+    "Original nominal metadata restored;no selected-service exception recorded.Nine frames retired,13 kicks,11 validations;actual2Hz cadence not established.Copy elapsed0.994s is not accepted as performance improvement because submissions stop.",
+    "Final service capture scans onlyPID1..255;late servicePIDs may be omitted.BackBoard CPU or LS completion cannot be concluded from absence.LS sampled original scan through606s.",
+    "Source defect:asynchronous deferral permits multiple queued requests,but onlyPending rejects any head with a successor.Next fixes original TAILQ head removal and schedules the remaining queue after completion;handset causality pending."
+  ]
+}

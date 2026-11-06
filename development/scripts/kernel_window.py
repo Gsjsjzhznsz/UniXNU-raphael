@@ -11,7 +11,7 @@ def encode_policy(policy):
     base, size, virtual = (policy[k] for k in ('base', 'bytes', 'virtual_base'))
     guards = policy['guards']
     owned = policy.get('window_bytes', WINDOW)
-    assert owned in (WINDOW, 2*WINDOW, 704*1048576), 'Only explicit 256/512/704 MiB recovery windows are supported by this implementation'
+    assert owned in (WINDOW, 2*WINDOW, 704*1048576, 896*1048576,1536*1048576), 'Only explicit 256/512/704/896/1536 MiB recovery windows are supported by this implementation'
     assert policy['experimental_boot_grant'] is True
     assert base > 0 and base % BLOCK == 0 and size == owned + BLOCK
     assert base + size < 1 << 64 and virtual % 4096 == 0
@@ -45,3 +45,19 @@ def check_log(raw, policy):
                 reserved_map_verified=True, released_map_verified=True,
                 allocate_address_loader_code_verified=True, restored_map_verified=True,
                 full_physical_ownership_proven=False, kernel_executed=False)
+
+
+def select_handset_window(audit, owned):
+    """Select an existing audited candidate that fits the explicit recovery grant."""
+    assert audit['passed'] and audit['memory_views_agree']
+    for candidate in audit['candidates']:
+        if not candidate['every_kernel_offset_fits']:
+            continue
+        base = candidate['aligned_example']['base']
+        if base + owned + BLOCK > candidate['run']['end_exclusive']:
+            continue
+        # Include every possible 2MiB loader alignment offset.
+        if owned <= 896*1048576 and base >> 30 != (base + owned + BLOCK - 1) >> 30:
+            continue
+        return candidate
+    raise AssertionError('No audited candidate fits the explicit recovery window')

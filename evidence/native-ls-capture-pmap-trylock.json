@@ -1,0 +1,128 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261105T092115Z",
+  "extraction": "evidence/private/ufs-console-log/20261105T091812Z/20261105T094901Z-rooted-bootloop-readback",
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "desktop_verified": false,
+  "onsite_screen": "black-screen",
+  "owned_memory_mib": 704,
+  "log": {
+    "valid_records": 321,
+    "bytes": 100972,
+    "dropped": 0,
+    "first_counter": 3837161907,
+    "last_counter": 10766856291,
+    "invalid_tail": null,
+    "session": "1d808c0f-50f8-4ef3-9bd2-0c457b989ef6",
+    "guards_unchanged": true,
+    "android_boot_changed": true,
+    "android_boot_completed": false,
+    "read_only_bootloop_salvage": true,
+    "persistent_log_verified": true,
+    "continuous_log_verified": true,
+    "console_lines": 1461,
+    "progress_lines": 281,
+    "service_snapshot_captured": false
+  },
+  "time_origin": "first_persisted_log_record",
+  "log_span_ms": 360921.5825,
+  "last_tick": {
+    "seconds": 360.907464375,
+    "poll": 2801,
+    "root": 7,
+    "init": 4,
+    "syscalls": 22051,
+    "watchdog_stage": 2,
+    "display_stage": 6,
+    "clients": 5,
+    "status": 0,
+    "frames": 438
+  },
+  "capture_phase_count": 26,
+  "last_capture_phase": [
+    {
+      "seconds": 360.9215825,
+      "stage": "thread-begin",
+      "sequence": 3,
+      "poll": 2811,
+      "id": 599
+    }
+  ],
+  "ls_progress_samples": 2,
+  "display": null,
+  "display_content_scope": "Nonblack pixel count samples only first eight completed frames; later content unknown.",
+  "watchdog": null,
+  "budget": null,
+  "snapshot_completed": false,
+  "pressure_lines": [],
+  "vm_first": [
+    {
+      "seconds": 0.5183866666666667,
+      "free": 140296,
+      "active": 0,
+      "inactive": 0,
+      "wired": 39867
+    }
+  ],
+  "vm_last": [
+    {
+      "seconds": 340.15729296875,
+      "free": 1021,
+      "active": 22727,
+      "inactive": 21130,
+      "wired": 100523
+    },
+    {
+      "seconds": 350.45553885416666,
+      "free": 1385,
+      "active": 22035,
+      "inactive": 20030,
+      "wired": 100903
+    },
+    {
+      "seconds": 360.907464375,
+      "free": 857,
+      "active": 22072,
+      "inactive": 20829,
+      "wired": 100998
+    }
+  ],
+  "ufs_first": [
+    {
+      "seconds": 0.5183866666666667,
+      "requests": 0,
+      "bytes": 0,
+      "failures": 0
+    }
+  ],
+  "ufs_last": [
+    {
+      "seconds": 340.15729296875,
+      "requests": 468163,
+      "bytes": 4383802368,
+      "failures": 0
+    },
+    {
+      "seconds": 350.45553885416666,
+      "requests": 472607,
+      "bytes": 4407460864,
+      "failures": 0
+    },
+    {
+      "seconds": 360.907464375,
+      "requests": 474548,
+      "bytes": 4417700864,
+      "failures": 0
+    }
+  ],
+  "android_boot_completed": true,
+  "root_verified": true,
+  "new_android_boot_id": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "interpretation": "Pmap try-lock did not remove capture interruption:sequence3/poll2811,lsd98 thread599 entry without return,360922ms,two full samples,last438 frames. No final snapshot. Separate source investigation confirmed unbalanced diagnostic pmap/ledger references;host reproduction passes. Actual device causal effect pending corrected image.",
+  "android_recovery_note": "Read-only log salvage while Android system_server restarted with ActivityStarter/RootWindowContainer NullPointerException. Recovery recorded RescueParty;one normal adb reboot eventually reached sys.boot_completed=1,root,new boot ID and transient cleanup. Android crash relation to native experiment unproven.",
+  "next_candidate": "artifacts/desktop-ls-capture-ledger-ref/20261105T093840Z"
+}

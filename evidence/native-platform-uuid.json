@@ -1,0 +1,3476 @@
+{
+  "scope": "local_handset_independent_ufs_log",
+  "candidate": "artifacts/desktop-platform-uuid/20261105T170854Z",
+  "functional_change": "Supply persistent private port-assigned UUIDv4 to existing original-first platform identity adapter;no service/kernel/window changes",
+  "host_regression": {
+    "passed": true,
+    "stable_private_identity": true,
+    "only_adt_property": "/chosen/unixnu-platform-uuid",
+    "all_other_adt_bytes_preserved": true,
+    "malformed_or_nonv4_rejected": 3,
+    "existing_linked_consumer": true,
+    "kernel_reused_from_parent": false,
+    "handset_verified": false,
+    "rebuild_reason": "New private log allocation is compiled into native kernel;rebuild same functional sources for new log binding",
+    "adt_only_behavior_change": true
+  },
+  "baseline": "evidence/native-all-services.json",
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "host": {
+    "passed": true,
+    "scope": "host_build_and_recovery_qemu_only",
+    "candidate": "artifacts/desktop-platform-uuid/20261105T170854Z",
+    "host_regression": {
+      "passed": true,
+      "stable_private_identity": true,
+      "only_adt_property": "/chosen/unixnu-platform-uuid",
+      "all_other_adt_bytes_preserved": true,
+      "malformed_or_nonv4_rejected": 3,
+      "existing_linked_consumer": true,
+      "kernel_reused_from_parent": false,
+      "handset_verified": false,
+      "rebuild_reason": "New private log allocation is compiled into native kernel;rebuild same functional sources for new log binding",
+      "adt_only_behavior_change": true
+    },
+    "qemu_checks": 39,
+    "kernel": true,
+    "handset_image": true,
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261105T171251Z",
+      "payload": "evidence/private/handset-payload/20261105T171255Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T170854Z-platform-uuid",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T171221Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261105T171257Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261105T171304Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261105T171310.625420Z-pcc91mru/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261105T171418.704905Z-0wov8t2d/report.json",
+      "handset_boot_attempted": false
+    },
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_run": "evidence/private/android-return-run/20261105T171504Z",
+  "handset": {
+    "handset_run": "evidence/private/android-return-run/20261105T171504Z",
+    "extraction": "evidence/private/ufs-console-log/20261105T170919Z/20261105T173458Z-rooted-bootloop-readback",
+    "handset_boot_attempted": true,
+    "temporary_boot_accepted": true,
+    "desktop_verified": false,
+    "onsite_screen": "progress_bar",
+    "screen_observations": [
+      {
+        "at_utc": "2026-11-05T17:23:54.107010+00:00",
+        "screen": "progress_bar",
+        "source": "user"
+      }
+    ],
+    "owned_memory_mib": 704,
+    "log": {
+      "valid_records": 1888,
+      "bytes": 3404681,
+      "dropped": 0,
+      "first_counter": 3820691332,
+      "last_counter": 17615117282,
+      "invalid_tail": null,
+      "session": "7dc452a5-82bf-40f6-8343-40cb9ff4ac42",
+      "guards_unchanged": true,
+      "android_boot_changed": true,
+      "android_boot_completed": false,
+      "read_only_bootloop_salvage": true,
+      "persistent_log_verified": true,
+      "continuous_log_verified": true,
+      "console_lines": 36690,
+      "progress_lines": 608,
+      "service_snapshot_captured": true
+    },
+    "time_origin": "watchdog_start",
+    "log_span_ms": 718459.6848958334,
+    "last_tick": {
+      "seconds": 720.0255774479167,
+      "poll": 6071,
+      "root": 7,
+      "init": 4,
+      "syscalls": 58989,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 5,
+      "status": 0,
+      "frames": 893
+    },
+    "capture_phase_count": 66,
+    "last_capture_phase": [
+      {
+        "seconds": 606.11180703125,
+        "stage": "done",
+        "sequence": 5,
+        "poll": 5041,
+        "id": 98
+      }
+    ],
+    "ls_progress_samples": 5,
+    "display": {
+      "clients": 5,
+      "validations": 896,
+      "rejected": 0,
+      "kicks": 1781,
+      "frames": 894,
+      "blank_frames": 0,
+      "retired": 894,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 9037267200,
+      "nonblack": 2648
+    },
+    "display_content_scope": "120-second bounded RGB90x195 submitted-frame samples with matching sampled framebuffer counters; physical panel output unverified.",
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 0,
+      "checkins": 55,
+      "last_checkin_counter": 17485552300,
+      "monitoring": true,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "budget": {
+      "hardware_seconds": 20,
+      "budget_ms": 780000,
+      "observer_seconds": 720.0,
+      "start_counter": 3759361308,
+      "capture_counter": 17583944217,
+      "counter_frequency": 19200000,
+      "elapsed_ms": 720030.35984375,
+      "observer_deadline_reached": true,
+      "pets": 1286,
+      "last_pet_counter": 17583852145,
+      "status": 1
+    },
+    "snapshot_completed": true,
+    "pressure_lines": [],
+    "vm_first": [
+      {
+        "seconds": 3.5825077604166666,
+        "free": 140245,
+        "active": 0,
+        "inactive": 0,
+        "wired": 39956
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 690.9870040104166,
+        "free": 134,
+        "active": 6565,
+        "inactive": 5732,
+        "wired": 124175
+      },
+      {
+        "seconds": 702.0005722395833,
+        "free": 140,
+        "active": 6730,
+        "inactive": 6668,
+        "wired": 123861
+      },
+      {
+        "seconds": 713.0211151041667,
+        "free": 912,
+        "active": 7031,
+        "inactive": 6711,
+        "wired": 123248
+      }
+    ],
+    "ufs_first": [
+      {
+        "seconds": 3.5825077604166666,
+        "requests": 0,
+        "bytes": 0,
+        "failures": 0
+      }
+    ],
+    "ufs_last": [
+      {
+        "seconds": 690.9870040104166,
+        "requests": 971818,
+        "bytes": 6962697216,
+        "failures": 0
+      },
+      {
+        "seconds": 702.0005722395833,
+        "requests": 993141,
+        "bytes": 7071757312,
+        "failures": 0
+      },
+      {
+        "seconds": 713.0211151041667,
+        "requests": 1003253,
+        "bytes": 7119827968,
+        "failures": 0
+      }
+    ],
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "full_checkpoint_verified": false,
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "frame_analysis": "frame-analysis.json"
+  },
+  "platform_analysis": {
+    "configd_captured": true,
+    "configd_sampled_in_uuid_wait": false,
+    "configd_sampled_in_uuid_resource_wait": false,
+    "lockdownd_captured": true,
+    "lockdownd_sampled_in_preferences_monitor": false,
+    "all_process_summary": {
+      "complete": true,
+      "process_count": 120,
+      "captured_threads": 568,
+      "truncated_processes": 0,
+      "capture_elapsed_seconds": 1.4716167708333334,
+      "scope": "Original allproc enumeration snapshot;processes exiting before callback may be absent,newly spawned processes after enumeration may be absent.Each process references at most512 threads;explicit total and truncation retained."
+    },
+    "selected_processes": [
+      {
+        "pid": 124,
+        "name": "com.apple.migrat",
+        "threads": [
+          {
+            "tid": 718,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "-[NSRunLoop(NSRunLoop) runMode:beforeDate:]",
+              "-[NSRunLoop(NSRunLoop) run]",
+              "__xpc_objc_main",
+              "__xpc_main",
+              "__xpc_create_bootstrap_pipe",
+              "?",
+              "start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 191618,
+              "credit_ticks": 1289720,
+              "debit_ticks": 1098102,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 173785730885,
+              "actions": 32,
+              "sample_counter": 17598459526
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 719,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 2450,
+              "credit_ticks": 1399128,
+              "debit_ticks": 1396678,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 173785928385,
+              "actions": 32,
+              "sample_counter": 17598459593
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 720,
+            "state": 65,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "__dispatch_mach_send_and_wait_for_reply",
+              "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+              "_xpc_connection_send_message_with_reply_sync",
+              "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+              "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+              "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+              "__NSXPCDistantObjectSimpleMessageSend1",
+              "___LAUNCH_SERVICES_IS_RESEEDING_ITS_DATABASE_AND_MAY_BLOCK__",
+              "__LSCopyServerStore",
+              "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+              "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+              "__LSDBEnumeratorGetNextObject",
+              "-[_LSDBEnumerator countByEnumeratingWithState:objects:count:]",
+              "?"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 1413829,
+              "credit_ticks": 1413829,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 484106889583,
+              "actions": 32,
+              "sample_counter": 17598459817
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      },
+      {
+        "pid": 99,
+        "name": "com.apple.datami",
+        "threads": [
+          {
+            "tid": 483,
+            "state": 4,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "-[NSRunLoop(NSRunLoop) runMode:beforeDate:]",
+              "-[NSRunLoop(NSRunLoop) run]",
+              "__xpc_objc_main",
+              "__xpc_main",
+              "__xpc_create_bootstrap_pipe",
+              "?",
+              "start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 38637481,
+              "credit_ticks": 109084264,
+              "debit_ticks": 70446783,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 172303341875,
+              "actions": 32,
+              "sample_counter": 17605190710
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 486,
+            "state": 65,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "__dispatch_mach_send_and_wait_for_reply",
+              "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+              "_xpc_connection_send_message_with_reply_sync",
+              "-[DMXPCConnection sendMessageSync:]",
+              "-[DMMigrationPluginWrapperConnection runPluginAtPath:withIdentifier:parameters:completion:]",
+              "?",
+              "?",
+              "__dispatch_client_callout",
+              "__dispatch_lane_barrier_sync_invoke_and_complete",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 3341466,
+              "credit_ticks": 8533071,
+              "debit_ticks": 5191605,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 487693523489,
+              "actions": 32,
+              "sample_counter": 17605190936
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 487,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 157335,
+              "credit_ticks": 157335,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 524695358489,
+              "actions": 32,
+              "sample_counter": 17605191155
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 496,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 1713455,
+              "credit_ticks": 1787776,
+              "debit_ticks": 74321,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 487538041093,
+              "actions": 32,
+              "sample_counter": 17605191365
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 497,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 81778,
+              "credit_ticks": 82124,
+              "debit_ticks": 346,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 522165986302,
+              "actions": 32,
+              "sample_counter": 17605191586
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 501,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 118435,
+              "credit_ticks": 125233,
+              "debit_ticks": 6798,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 487381129166,
+              "actions": 32,
+              "sample_counter": 17605191814
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 833,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 1320228,
+              "credit_ticks": 1320228,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 464037191770,
+              "actions": 32,
+              "sample_counter": 17605192039
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 849,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 1927902,
+              "credit_ticks": 1927902,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 457298029062,
+              "actions": 32,
+              "sample_counter": 17605192258
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1370,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 2827997,
+              "credit_ticks": 2827997,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 361043500833,
+              "actions": 32,
+              "sample_counter": 17605192485
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1503,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 1426495,
+              "credit_ticks": 1426495,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 314868070833,
+              "actions": 32,
+              "sample_counter": 17605192719
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1519,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 1876649,
+              "credit_ticks": 1876649,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 301935635312,
+              "actions": 32,
+              "sample_counter": 17605192949
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1671,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 981410,
+              "credit_ticks": 981410,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 244726517864,
+              "actions": 32,
+              "sample_counter": 17605193166
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1810,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 387616,
+              "credit_ticks": 387616,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 192943659479,
+              "actions": 32,
+              "sample_counter": 17605193387
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1898,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 623966,
+              "credit_ticks": 626186,
+              "debit_ticks": 2220,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 161303464375,
+              "actions": 32,
+              "sample_counter": 17605193607
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1930,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 265649,
+              "credit_ticks": 265649,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 149234477083,
+              "actions": 32,
+              "sample_counter": 17605193825
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1935,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 1184109,
+              "credit_ticks": 1185255,
+              "debit_ticks": 1146,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 148836732500,
+              "actions": 32,
+              "sample_counter": 17605194035
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1995,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 683074,
+              "credit_ticks": 683074,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 134899895104,
+              "actions": 32,
+              "sample_counter": 17605194248
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2038,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 71905,
+              "credit_ticks": 71905,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 118875167135,
+              "actions": 32,
+              "sample_counter": 17605194469
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2053,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 623023,
+              "credit_ticks": 623023,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 112098870000,
+              "actions": 32,
+              "sample_counter": 17605194684
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2101,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 256882,
+              "credit_ticks": 256882,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 89840573020,
+              "actions": 32,
+              "sample_counter": 17605194904
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2130,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 750548,
+              "credit_ticks": 750548,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 77818451875,
+              "actions": 32,
+              "sample_counter": 17605195135
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2160,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 385891,
+              "credit_ticks": 387001,
+              "debit_ticks": 1110,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 65903472604,
+              "actions": 32,
+              "sample_counter": 17605195349
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2169,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 867698,
+              "credit_ticks": 867698,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 63538817812,
+              "actions": 32,
+              "sample_counter": 17605195416
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2219,
+            "state": 4,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [
+              "_thread_invoke",
+              "_thread_block_reason",
+              "_thread_preempted_in_kernel",
+              "_kernel_preempt_check",
+              "_workq_park_and_unlock",
+              "_workq_select_threadreq_or_park_and_unlock",
+              "_workq_kernreturn",
+              "_unix_syscall",
+              "_sleh_synchronous",
+              "_fleh_synchronous",
+              "fleh_dispatch64_common"
+            ],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 752557,
+              "credit_ticks": 752557,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 48191594583,
+              "actions": 32,
+              "sample_counter": 17605195515
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2276,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 337779,
+              "credit_ticks": 337779,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 29939431875,
+              "actions": 32,
+              "sample_counter": 17605195728
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2317,
+            "state": 65,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "?",
+              "?",
+              "?",
+              "-[DMXPCConnection _handleMessage:]",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 86497,
+              "credit_ticks": 86497,
+              "debit_ticks": 0,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 10639261302,
+              "actions": 32,
+              "sample_counter": 17605195947
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2333,
+            "state": 4,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 6048000000,
+              "balance_ticks": 45541,
+              "credit_ticks": 47819,
+              "debit_ticks": 2278,
+              "refill_period_ns": 315000000000,
+              "since_last_refill_ns": 3416258177,
+              "actions": 32,
+              "sample_counter": 17605196013
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      },
+      {
+        "pid": 98,
+        "name": "lsd",
+        "threads": [
+          {
+            "tid": 477,
+            "state": 1,
+            "user_symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "-[_LSInstallProgressService performJournalRecovery]",
+              "___43+[_LSInstallProgressService beginListening]_block_invoke",
+              "__dispatch_client_callout",
+              "__dispatch_once_callout",
+              "__LSServerMain",
+              "start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 62952392,
+              "credit_ticks": 63355099,
+              "debit_ticks": 402707,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 525402770781,
+              "actions": 32,
+              "sample_counter": 17606289718
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 478,
+            "state": 4,
+            "user_symbols": [
+              "_CFEqual",
+              "____CFBasicHashFindBucket_Linear",
+              "____CFBasicHashFindBucket_Linear",
+              "_CFBasicHashAddValue",
+              "___CFPropertyListCreateTopLevelKeyPaths",
+              "__CFPropertyListCreateFiltered",
+              "__CFBundleCreateFilteredInfoPlistWithData",
+              "__CFBundleCreateFilteredInfoPlist",
+              "_MILoadInfoPlistWithError",
+              "-[MIBundle infoPlistSubset]",
+              "-[MIBundle _validateWithError:]",
+              "-[MIExecutableBundle _validateWithError:]",
+              "-[MIBundle initWithParentBundle:parentSubdirectory:bundleName:error:]",
+              "___71+[MIBundle bundlesInParentBundle:subDirectory:matchingPredicate:error:]_block_invoke",
+              "___80-[MIFileManager enumerateURLsForItemsInDirectoryAtURL:ignoreSymlinks:withBlock:]_block_invoke",
+              "__CallClientBlock",
+              "_TraverseDirectoryWithPostTraversal",
+              "-[MIFileManager enumerateURLsForItemsInDirectoryAtURL:ignoreSymlinks:withBlock:]"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 5549009,
+              "credit_ticks": 1243655565,
+              "debit_ticks": 1238106556,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 2140441875,
+              "actions": 32,
+              "sample_counter": 17606289958
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 479,
+            "state": 65,
+            "user_symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+              "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+              "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+              "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+              "_message_handler_message",
+              "_message_handler",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 323033,
+              "credit_ticks": 323996,
+              "debit_ticks": 963,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 525244907968,
+              "actions": 32,
+              "sample_counter": 17606290179
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 593,
+            "state": 65,
+            "user_symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "-[_LSInstallProgressService restoreInactiveInstalls]",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 137876,
+              "credit_ticks": 138191,
+              "debit_ticks": 315,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 503076233645,
+              "actions": 32,
+              "sample_counter": 17606290341
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 731,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 197311,
+              "credit_ticks": 11269116,
+              "debit_ticks": 11071805,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 16638057968,
+              "actions": 32,
+              "sample_counter": 17606290418
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1572,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 423763,
+              "credit_ticks": 11737586,
+              "debit_ticks": 11313823,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 16277883385,
+              "actions": 32,
+              "sample_counter": 17606290490
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1936,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 7722,
+              "credit_ticks": 1047656,
+              "debit_ticks": 1039934,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 22591795208,
+              "actions": 32,
+              "sample_counter": 17606290549
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      },
+      {
+        "pid": 71,
+        "name": "lockdownd",
+        "threads": [
+          {
+            "tid": 335,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "?",
+              "start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 5360960,
+              "credit_ticks": 34659996,
+              "debit_ticks": 29299036,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 349591655312,
+              "actions": 32,
+              "sample_counter": 17610269259
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 618,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 3650,
+              "credit_ticks": 1409561,
+              "debit_ticks": 1405911,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 202861656041,
+              "actions": 32,
+              "sample_counter": 17610269340
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      },
+      {
+        "pid": 57,
+        "name": "backboardd",
+        "threads": [
+          {
+            "tid": 324,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "?",
+              "start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 6233211,
+              "credit_ticks": 108161250,
+              "debit_ticks": 101928039,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 169595407656,
+              "actions": 32,
+              "sample_counter": 17611909207
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 460,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 1193800,
+              "credit_ticks": 3762262,
+              "debit_ticks": 2568462,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 110420036458,
+              "actions": 32,
+              "sample_counter": 17611909281
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 465,
+            "state": 4,
+            "user_symbols": [
+              "_kevent_qos",
+              "__dispatch_kq_poll",
+              "__dispatch_kq_drain",
+              "__dispatch_event_loop_poke$VARIANT$armv81",
+              "?",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [
+              "_thread_invoke",
+              "_thread_block_reason",
+              "_thread_preempted_in_kernel",
+              "_kernel_preempt_check",
+              "_knote_unlock",
+              "_kevent_register",
+              "_kevent_modern_internal",
+              "_kevent_qos",
+              "_unix_syscall",
+              "_sleh_synchronous",
+              "_fleh_synchronous",
+              "fleh_dispatch64_common"
+            ],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 207638,
+              "credit_ticks": 208872,
+              "debit_ticks": 1234,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 528141595364,
+              "actions": 32,
+              "sample_counter": 17611909484
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 468,
+            "state": 65,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "__dispatch_mach_send_and_wait_for_reply",
+              "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+              "_xpc_connection_send_message_with_reply_sync",
+              "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+              "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+              "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+              "__NSXPCDistantObjectSimpleMessageSend1",
+              "___LAUNCH_SERVICES_IS_RESEEDING_ITS_DATABASE_AND_MAY_BLOCK__",
+              "__LSCopyServerStore",
+              "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+              "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+              "__ZN14LaunchServices19URLPropertyProviderL21prepareIsPackageValueERNS_8Database7ContextEPU34objcproto23FSNodePropertyProviding11objc_objectP11__FileCachePK10__CFStringPNS0_5StateEPU15__autoreleasingP7NSError",
+              "__ZN14LaunchServices19URLPropertyProviderL13prepareValuesEPK7__CFURLP11__FileCachePKPK10__CFStringPPKvlSC_PP9__CFError",
+              "__ZL22prepareValuesForBitmapPK7__CFURLP11__FileCacheP19_FilePropertyBitmapPP9__CFError"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 673993,
+              "credit_ticks": 674266,
+              "debit_ticks": 273,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 525754320729,
+              "actions": 32,
+              "sample_counter": 17611909700
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 503,
+            "state": 4,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "__ZN2CA6Render6Server13server_threadEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 12638788,
+              "credit_ticks": 37384492,
+              "debit_ticks": 24745704,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 162193572447,
+              "actions": 32,
+              "sample_counter": 17611909826
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 508,
+            "state": 4,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 13311,
+              "credit_ticks": 465410822,
+              "debit_ticks": 465397511,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 1486944322,
+              "actions": 16,
+              "sample_counter": 17611909979
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 679,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 3503,
+              "credit_ticks": 65053,
+              "debit_ticks": 61550,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 457638063020,
+              "actions": 16,
+              "sample_counter": 17611910146
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 680,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 2771,
+              "credit_ticks": 28057,
+              "debit_ticks": 25286,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 457637362239,
+              "actions": 16,
+              "sample_counter": 17611910295
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 681,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 2595,
+              "credit_ticks": 31540,
+              "debit_ticks": 28945,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 457417081666,
+              "actions": 16,
+              "sample_counter": 17611910458
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 682,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 1679,
+              "credit_ticks": 26460,
+              "debit_ticks": 24781,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 457323323645,
+              "actions": 16,
+              "sample_counter": 17611910612
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 683,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+              "__ZL10thread_funPv",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 1100,
+              "credit_ticks": 24478,
+              "debit_ticks": 23378,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 457323228645,
+              "actions": 16,
+              "sample_counter": 17611910755
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 684,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "?",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 304308,
+              "credit_ticks": 1152780,
+              "debit_ticks": 848472,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 129596835156,
+              "actions": 32,
+              "sample_counter": 17611910896
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 685,
+            "state": 65,
+            "user_symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "?",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 280475,
+              "credit_ticks": 280475,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 490499056197,
+              "actions": 32,
+              "sample_counter": 17611911040
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 686,
+            "state": 4,
+            "user_symbols": [
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 778334,
+              "credit_ticks": 778334,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 490353544583,
+              "actions": 32,
+              "sample_counter": 17611911080
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 688,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 2617296,
+              "credit_ticks": 6030120,
+              "debit_ticks": 3412824,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 126591515416,
+              "actions": 32,
+              "sample_counter": 17611911158
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 689,
+            "state": 65,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "__dispatch_mach_send_and_wait_for_reply",
+              "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+              "_xpc_connection_send_message_with_reply_sync",
+              "-[DMXPCConnection sendMessageSync:]",
+              "-[DMConnection migrateCheckingNecessity:lastRelevantPlugin:testMigrationInfrastructureOnly:]",
+              "-[DMClientAPIController _migrateWithConnection:checkNecessity:lastRelevantPlugin:testMigrationInfrastructureOnly:]",
+              "__DMPerformMigration",
+              "?",
+              "?",
+              "?",
+              "?",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 77790,
+              "credit_ticks": 77790,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 489462801979,
+              "actions": 32,
+              "sample_counter": 17611911339
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 697,
+            "state": 4,
+            "user_symbols": [
+              "___78-[PLClientLogger xpcSendMessageWithRateLimitingforClient:withKey:withPayload:]_block_invoke_3",
+              "__dispatch_client_callout",
+              "__dispatch_continuation_pop$VARIANT$armv81",
+              "__dispatch_source_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [
+              "_thread_invoke",
+              "_thread_block_reason",
+              "_thread_preempted_in_kernel",
+              "_ml_set_interrupts_enabled_with_debug",
+              "_lck_rw_done",
+              "_vm_fault_cleanup",
+              "_vm_fault_page",
+              "_vm_fault_internal",
+              "_vm_fault$XNU_INTERNAL",
+              "_handle_user_abort",
+              "_sleh_synchronous",
+              "_fleh_synchronous",
+              "fleh_dispatch64_common"
+            ],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 149114,
+              "credit_ticks": 3205713,
+              "debit_ticks": 3056599,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 126537745833,
+              "actions": 32,
+              "sample_counter": 17611911513
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 735,
+            "state": 65,
+            "user_symbols": [
+              "___ulock_wait2",
+              "__os_unfair_lock_lock_slow",
+              "____ZL35_LSSessionInitMemoryWarningListenerv_block_invoke_2",
+              "__dispatch_client_callout",
+              "__dispatch_continuation_pop$VARIANT$armv81",
+              "__dispatch_source_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_item",
+              "__dispatch_kevent_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 682892,
+              "credit_ticks": 682892,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 481943066250,
+              "actions": 32,
+              "sample_counter": 17611911641
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 767,
+            "state": 4,
+            "user_symbols": [
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 615739,
+              "credit_ticks": 615739,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 477632847187,
+              "actions": 32,
+              "sample_counter": 17611911684
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1469,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 986728,
+              "credit_ticks": 3305197,
+              "debit_ticks": 2318469,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 146610642291,
+              "actions": 32,
+              "sample_counter": 17611911763
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2238,
+            "state": 4,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 903729,
+              "credit_ticks": 903729,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 39212646822,
+              "actions": 32,
+              "sample_counter": 17611911831
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      },
+      {
+        "pid": 37,
+        "name": "configd",
+        "threads": [
+          {
+            "tid": 320,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "?",
+              "start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 954667,
+              "credit_ticks": 45923947,
+              "debit_ticks": 44969280,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 195609601562,
+              "actions": 32,
+              "sample_counter": 17612869905
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 576,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "?",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 690400,
+              "credit_ticks": 2652162,
+              "debit_ticks": 1961762,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 100541902500,
+              "actions": 32,
+              "sample_counter": 17612870051
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1071,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "_captived_thread",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 564501,
+              "credit_ticks": 2122831,
+              "debit_ticks": 1558330,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 225690138385,
+              "actions": 32,
+              "sample_counter": 17612870197
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1112,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "?",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 142334,
+              "credit_ticks": 142334,
+              "debit_ticks": 0,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 410620442968,
+              "actions": 32,
+              "sample_counter": 17612870341
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1148,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "___CFRunLoopServiceMachPort",
+              "___CFRunLoopRun",
+              "_CFRunLoopRunSpecific",
+              "_CFRunLoopRun",
+              "?",
+              "__pthread_start",
+              "_thread_start"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 1149836,
+              "credit_ticks": 1150176,
+              "debit_ticks": 340,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 403568793072,
+              "actions": 32,
+              "sample_counter": 17612870491
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 1843,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 1950028,
+              "credit_ticks": 1950662,
+              "debit_ticks": 634,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 146658309010,
+              "actions": 32,
+              "sample_counter": 17612870560
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 2307,
+            "state": 4,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 34,
+              "limit_ticks": 1728000000,
+              "balance_ticks": 50717,
+              "credit_ticks": 50910,
+              "debit_ticks": 193,
+              "refill_period_ns": 180000000000,
+              "since_last_refill_ns": 6600659427,
+              "actions": 32,
+              "sample_counter": 17612870615
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      },
+      {
+        "pid": 27,
+        "name": "SpringBoard",
+        "threads": [
+          {
+            "tid": 250,
+            "state": 1,
+            "user_symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "_mach_msg_overwrite",
+              "_mach_msg",
+              "__dispatch_mach_send_and_wait_for_reply",
+              "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+              "_xpc_connection_send_message_with_reply_sync",
+              "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+              "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+              "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+              "__NSXPCDistantObjectSimpleMessageSend1",
+              "___LAUNCH_SERVICES_WAS_ASKED_TO_PERFORM_BLOCKING_IO_ON_THE_MAIN_QUEUE__",
+              "__LSCopyServerStore",
+              "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+              "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+              "-[LSApplicationRecord _initWithNode:bundleIdentifier:placeholderBehavior:systemPlaceholder:itemID:forceInBundleContainer:context:error:]",
+              "-[LSApplicationRecord initWithBundleIdentifier:fetchingPlaceholder:error:]",
+              "___81-[CCSModuleRepository _queue_filterModuleMetadataByAssociatedBundleAvailability:]_block_invoke"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 66,
+              "limit_ticks": 518400,
+              "balance_ticks": 162264,
+              "credit_ticks": 142463222,
+              "debit_ticks": 142300958,
+              "refill_period_ns": 30000000,
+              "since_last_refill_ns": 488421211041,
+              "actions": 16,
+              "sample_counter": 17614601486
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 366,
+            "state": 65,
+            "user_symbols": [
+              "___ulock_wait2",
+              "__os_unfair_lock_lock_slow",
+              "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+              "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+              "__LSDBEnumeratorGetNextObject",
+              "-[_LSDBEnumerator countByEnumeratingWithState:objects:count:]",
+              "-[NSEnumerator allObjects]",
+              "-[FBApplicationDataStoreRepositoryManager clearExpiredUninstalledApplicationsFromStoreIfNecessary]",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 2,
+              "limit_ticks": 9223372036854775807,
+              "balance_ticks": 1500730,
+              "credit_ticks": 1500730,
+              "debit_ticks": 0,
+              "refill_period_ns": 0,
+              "since_last_refill_ns": 917427172343,
+              "actions": 32,
+              "sample_counter": 17614601728
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 690,
+            "state": 1,
+            "user_symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 2,
+              "limit_ticks": 9223372036854775807,
+              "balance_ticks": 13239990,
+              "credit_ticks": 13239990,
+              "debit_ticks": 0,
+              "refill_period_ns": 0,
+              "since_last_refill_ns": 917427178177,
+              "actions": 32,
+              "sample_counter": 17614601831
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          },
+          {
+            "tid": 695,
+            "state": 65,
+            "user_symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_thread_event_wait_slow$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "____os_state_request_for_self_block_invoke",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ],
+            "kernel_symbols": [],
+            "cpu_ledger": {
+              "options": 2,
+              "limit_ticks": 9223372036854775807,
+              "balance_ticks": 2184,
+              "credit_ticks": 2184,
+              "debit_ticks": 0,
+              "refill_period_ns": 0,
+              "since_last_refill_ns": 917427189947,
+              "actions": 32,
+              "sample_counter": 17614602065
+            },
+            "task_busy": false,
+            "pmap_busy": false
+          }
+        ]
+      }
+    ],
+    "ls_progress": [
+      {
+        "seconds": 123.35756578125,
+        "threads": []
+      },
+      {
+        "seconds": 243.4659490625,
+        "threads": [
+          {
+            "tid": 477,
+            "symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_end_ownership$VARIANT$armv81",
+              "__dispatch_lane_barrier_sync_invoke_and_complete",
+              "-[LSDatabaseBlockingFetchServer startRunningIfNecessary]",
+              "__LSServerMain",
+              "start"
+            ]
+          },
+          {
+            "tid": 478,
+            "symbols": [
+              "_mach_msg2_trap",
+              "_mach_msg2_internal",
+              "__dispatch_mach_msg_send",
+              "__dispatch_mach_send_drain",
+              "__dispatch_mach_send_msg",
+              "__dispatch_mach_send_and_wait_for_reply",
+              "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+              "_xpc_connection_send_message_with_reply_sync",
+              "__block_invoke",
+              "_container_xpc_send_message",
+              "_container_xpc_send_sync_message",
+              "___container_invalidate_code_signing_cache_block_invoke",
+              "_os_activity_apply_f",
+              "_container_invalidate_code_signing_cache",
+              "-[ICLWorkspace enumerateBuiltInSystemContentWithBlock:error:]",
+              "____LSServer_LSEnumerateAndRegisterAllBundles_block_invoke.745",
+              "_timeWorkBlock",
+              "-[LSRebuildStatisticsGatherer performSystemContentScan:]"
+            ]
+          },
+          {
+            "tid": 479,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+              "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+              "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+              "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+              "_message_handler_message",
+              "_message_handler",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ]
+          },
+          {
+            "tid": 593,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 731,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          }
+        ]
+      },
+      {
+        "seconds": 364.23602265625,
+        "threads": [
+          {
+            "tid": 477,
+            "symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "-[_LSInstallProgressService performJournalRecovery]",
+              "___43+[_LSInstallProgressService beginListening]_block_invoke",
+              "__dispatch_client_callout",
+              "__dispatch_once_callout",
+              "__LSServerMain",
+              "start"
+            ]
+          },
+          {
+            "tid": 478,
+            "symbols": [
+              "__LSGetDirectoryClassForNode",
+              "__ZL41_LSCreateRegistrationDataForDirectoryNodeP9LSContextP18LSRegistrationInfoPK7__CFURLP17_LSBundleProviderP6FSNodePK14__CFDictionaryPPK9__CFArray",
+              "__LSCreateRegistrationData",
+              "__ZL36_LSServerCreateBundleDataAndRegisterP9LSContextP18LSRegistrationInfoP6NSDataPK7__CFURLPK14__CFDictionaryPjPPK9__CFArrayPh",
+              "__ZL23_LSDispatchRegistrationP9LSContextPKcPK18LSRegistrationInfoP6NSDataS7_PK7__CFURLPK14__CFDictionaryPjPPK9__CFArrayPh",
+              "__ZL24_LSRegisterDirectoryNodeP9LSContextP6FSNodeS2_PK18LSRegistrationInfoP6NSDataPK14__CFDictionaryPPK9__CFArrayPhPj",
+              "__ZL21_LSRegisterBundleNodeP9LSContextjP6FSNodeS2_jPK14__CFDictionaryPPK9__CFArrayPhPjPU15__autoreleasingP7NSError",
+              "__LSFindOrRegisterBundleNode",
+              "_registerApplicationWithDictionary",
+              "___registerSingleMIDict_block_invoke",
+              "-[LSDBExecutionContext syncWrite:]",
+              "-[LSDatabaseRebuildContext registerItems:]",
+              "__LSServer_LSRegisterICLItem",
+              "____LSServer_LSEnumerateAndRegisterAllBundles_block_invoke_2.747",
+              "___61-[ICLWorkspace enumerateBuiltInSystemContentWithBlock:error:]_block_invoke",
+              "-[MILaunchServicesDatabaseGatherer _scanBundle:inContainer:addingToBundleSet:enumeratingEntry:withError:]",
+              "-[MILaunchServicesDatabaseGatherer scanExecutableBundle:inContainer:forPersona:withError:]",
+              "___52-[MIFilesystemScanner _scanAppsDirectory:withError:]_block_invoke"
+            ]
+          },
+          {
+            "tid": 479,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+              "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+              "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+              "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+              "_message_handler_message",
+              "_message_handler",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ]
+          },
+          {
+            "tid": 593,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "-[_LSInstallProgressService restoreInactiveInstalls]",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 731,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 776,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 1199,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          }
+        ]
+      },
+      {
+        "seconds": 485.19216473958335,
+        "threads": [
+          {
+            "tid": 477,
+            "symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "-[_LSInstallProgressService performJournalRecovery]",
+              "___43+[_LSInstallProgressService beginListening]_block_invoke",
+              "__dispatch_client_callout",
+              "__dispatch_once_callout",
+              "__LSServerMain",
+              "start"
+            ]
+          },
+          {
+            "tid": 478,
+            "symbols": [
+              "-[NSArray isEqual:]",
+              "_CFEqual",
+              "_CFEqual",
+              "____CFBasicHashFindBucket_Linear",
+              "_CFBasicHashAddValue",
+              "___CFPropertyListCreateTopLevelKeyPaths",
+              "__CFPropertyListCreateFiltered",
+              "__CFBundleCreateFilteredInfoPlistWithData",
+              "__CFBundleCreateFilteredInfoPlist",
+              "_MILoadInfoPlistWithError",
+              "-[MIBundle infoPlistSubset]",
+              "-[MIBundle _validateWithError:]",
+              "-[MIExecutableBundle _validateWithError:]",
+              "-[MIBundle initWithBundleParentURL:parentSubdirectory:bundleName:error:]",
+              "-[MIBundle initWithBundleURL:error:]",
+              "+[MIBundle bundleForURL:error:]",
+              "___52-[MIFilesystemScanner _scanAppsDirectory:withError:]_block_invoke",
+              "___80-[MIFileManager enumerateURLsForItemsInDirectoryAtURL:ignoreSymlinks:withBlock:]_block_invoke"
+            ]
+          },
+          {
+            "tid": 479,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+              "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+              "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+              "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+              "_message_handler_message",
+              "_message_handler",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ]
+          },
+          {
+            "tid": 593,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "-[_LSInstallProgressService restoreInactiveInstalls]",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 731,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 1561,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 1572,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          }
+        ]
+      },
+      {
+        "seconds": 606.0756623958333,
+        "threads": [
+          {
+            "tid": 477,
+            "symbols": [
+              "_kevent_id",
+              "__dispatch_kq_poll",
+              "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+              "___DISPATCH_WAIT_FOR_QUEUE__",
+              "__dispatch_sync_f_slow",
+              "-[_LSInstallProgressService performJournalRecovery]",
+              "___43+[_LSInstallProgressService beginListening]_block_invoke",
+              "__dispatch_client_callout",
+              "__dispatch_once_callout",
+              "__LSServerMain",
+              "start"
+            ]
+          },
+          {
+            "tid": 478,
+            "symbols": [
+              "_tiny_malloc_should_clear",
+              "_tiny_malloc_should_clear",
+              "_szone_malloc_should_clear",
+              "___CFStringAppendFormatCore",
+              "__CFStringCreateWithFormatAndArgumentsReturningMetadata",
+              "_CFStringCreateWithFormatAndArguments",
+              "_CFStringCreateWithFormat",
+              "____CFBundleCreateFilteredInfoPlistWithData_block_invoke_2",
+              "___NSSET_IS_CALLING_OUT_TO_A_BLOCK__",
+              "-[__NSSetI enumerateObjectsWithOptions:usingBlock:]",
+              "__CFBundleCreateFilteredInfoPlistWithData",
+              "__CFBundleCreateFilteredInfoPlist",
+              "_MILoadInfoPlistWithError",
+              "-[MIBundle infoPlistSubset]",
+              "-[MIBundle _validateWithError:]",
+              "-[MIExecutableBundle _validateWithError:]",
+              "-[MIBundle initWithParentBundle:parentSubdirectory:bundleName:error:]",
+              "___71+[MIBundle bundlesInParentBundle:subDirectory:matchingPredicate:error:]_block_invoke"
+            ]
+          },
+          {
+            "tid": 479,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+              "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+              "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+              "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+              "_message_handler_message",
+              "_message_handler",
+              "__xpc_connection_call_event_handler",
+              "__xpc_connection_mach_event",
+              "__dispatch_client_callout4",
+              "__dispatch_mach_msg_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_mach_invoke$VARIANT$armv81",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh"
+            ]
+          },
+          {
+            "tid": 593,
+            "symbols": [
+              "___ulock_wait",
+              "__dlock_wait",
+              "__dispatch_group_wait_slow",
+              "-[_LSInstallProgressService restoreInactiveInstalls]",
+              "__dispatch_call_block_and_release",
+              "__dispatch_client_callout",
+              "__dispatch_lane_serial_drain$VARIANT$armv81",
+              "__dispatch_lane_invoke$VARIANT$armv81",
+              "__dispatch_root_queue_drain_deferred_wlh",
+              "__dispatch_workloop_worker_thread",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 731,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 1572,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          },
+          {
+            "tid": 1936,
+            "symbols": [
+              "___workq_kernreturn",
+              "__pthread_wqthread",
+              "_start_wqthread"
+            ]
+          }
+        ]
+      }
+    ],
+    "desktop_verified": false,
+    "scope": "One final sampled state plus five LS snapshots;absence of a sampled wait alone does not prove every operation completed. Compare actual service progress and panel observation."
+  },
+  "frame_analysis": {
+    "thumbnails": [
+      {
+        "frame": 1,
+        "counter": 8699413068,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T170919Z/20261105T173458Z-rooted-bootloop-readback/frame-thumbnails/frame-000001.png",
+        "seconds": 257.2943625
+      },
+      {
+        "frame": 210,
+        "counter": 11006140461,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T170919Z/20261105T173458Z-rooted-bootloop-readback/frame-thumbnails/frame-000210.png",
+        "seconds": 377.43641421875
+      },
+      {
+        "frame": 450,
+        "counter": 13313341317,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T170919Z/20261105T173458Z-rooted-bootloop-readback/frame-thumbnails/frame-000450.png",
+        "seconds": 497.60312546875
+      },
+      {
+        "frame": 690,
+        "counter": 15620568103,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T170919Z/20261105T173458Z-rooted-bootloop-readback/frame-thumbnails/frame-000690.png",
+        "seconds": 617.7711872395834
+      }
+    ],
+    "ufs_time_samples": 61,
+    "ufs_elapsed_phases": {
+      "read_seconds": 335.21022119791667,
+      "verify_seconds": 16.61205703125,
+      "publish_seconds": 4.8721629166666665,
+      "max_chunk_seconds": 0.11447526041666667
+    },
+    "counter_frequency": 19200000,
+    "scope": "Elapsed phase totals include scheduling/preemption, not pure CPU or hardware latency. RGB images are sampled submitted pixels; framebuffer equality covers the same sample grid. Physical panel output still requires onsite observation.",
+    "service_cpu_ledger": [
+      {
+        "service": "SpringBoard",
+        "tid": 250,
+        "credited_cpu_seconds": 7.419959479166667,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__dispatch_mach_send_and_wait_for_reply",
+          "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+          "_xpc_connection_send_message_with_reply_sync",
+          "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+          "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+          "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+          "__NSXPCDistantObjectSimpleMessageSend1",
+          "___LAUNCH_SERVICES_WAS_ASKED_TO_PERFORM_BLOCKING_IO_ON_THE_MAIN_QUEUE__",
+          "__LSCopyServerStore",
+          "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+          "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+          "-[LSApplicationRecord _initWithNode:bundleIdentifier:placeholderBehavior:systemPlaceholder:itemID:forceInBundleContainer:context:error:]",
+          "-[LSApplicationRecord initWithBundleIdentifier:fetchingPlaceholder:error:]",
+          "___81-[CCSModuleRepository _queue_filterModuleMetadataByAssociatedBundleAvailability:]_block_invoke"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 366,
+        "credited_cpu_seconds": 0.07816302083333333,
+        "user_symbols": [
+          "___ulock_wait2",
+          "__os_unfair_lock_lock_slow",
+          "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+          "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+          "__LSDBEnumeratorGetNextObject",
+          "-[_LSDBEnumerator countByEnumeratingWithState:objects:count:]",
+          "-[NSEnumerator allObjects]",
+          "-[FBApplicationDataStoreRepositoryManager clearExpiredUninstalledApplicationsFromStoreIfNecessary]",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 690,
+        "credited_cpu_seconds": 0.6895828125,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 695,
+        "credited_cpu_seconds": 0.00011375,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_thread_event_wait_slow$VARIANT$armv81",
+          "___DISPATCH_WAIT_FOR_QUEUE__",
+          "__dispatch_sync_f_slow",
+          "____os_state_request_for_self_block_invoke",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 477,
+        "credited_cpu_seconds": 3.2997447395833333,
+        "user_symbols": [
+          "_kevent_id",
+          "__dispatch_kq_poll",
+          "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+          "___DISPATCH_WAIT_FOR_QUEUE__",
+          "__dispatch_sync_f_slow",
+          "-[_LSInstallProgressService performJournalRecovery]",
+          "___43+[_LSInstallProgressService beginListening]_block_invoke",
+          "__dispatch_client_callout",
+          "__dispatch_once_callout",
+          "__LSServerMain",
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 478,
+        "credited_cpu_seconds": 64.77372734375,
+        "user_symbols": [
+          "_CFEqual",
+          "____CFBasicHashFindBucket_Linear",
+          "____CFBasicHashFindBucket_Linear",
+          "_CFBasicHashAddValue",
+          "___CFPropertyListCreateTopLevelKeyPaths",
+          "__CFPropertyListCreateFiltered",
+          "__CFBundleCreateFilteredInfoPlistWithData",
+          "__CFBundleCreateFilteredInfoPlist",
+          "_MILoadInfoPlistWithError",
+          "-[MIBundle infoPlistSubset]",
+          "-[MIBundle _validateWithError:]",
+          "-[MIExecutableBundle _validateWithError:]",
+          "-[MIBundle initWithParentBundle:parentSubdirectory:bundleName:error:]",
+          "___71+[MIBundle bundlesInParentBundle:subDirectory:matchingPredicate:error:]_block_invoke",
+          "___80-[MIFileManager enumerateURLsForItemsInDirectoryAtURL:ignoreSymlinks:withBlock:]_block_invoke",
+          "__CallClientBlock",
+          "_TraverseDirectoryWithPostTraversal",
+          "-[MIFileManager enumerateURLsForItemsInDirectoryAtURL:ignoreSymlinks:withBlock:]"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 479,
+        "credited_cpu_seconds": 0.016874791666666666,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_group_wait_slow",
+          "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+          "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+          "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+          "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+          "_message_handler_message",
+          "_message_handler",
+          "__xpc_connection_call_event_handler",
+          "__xpc_connection_mach_event",
+          "__dispatch_client_callout4",
+          "__dispatch_mach_msg_invoke$VARIANT$armv81",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_mach_invoke$VARIANT$armv81",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 593,
+        "credited_cpu_seconds": 0.007197447916666667,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_group_wait_slow",
+          "-[_LSInstallProgressService restoreInactiveInstalls]",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 731,
+        "credited_cpu_seconds": 0.586933125,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1572,
+        "credited_cpu_seconds": 0.6113326041666667,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1936,
+        "credited_cpu_seconds": 0.054565416666666665,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 324,
+        "credited_cpu_seconds": 5.6333984375,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          null,
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 460,
+        "credited_cpu_seconds": 0.19595114583333334,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 465,
+        "credited_cpu_seconds": 0.01087875,
+        "user_symbols": [
+          "_kevent_qos",
+          "__dispatch_kq_poll",
+          "__dispatch_kq_drain",
+          "__dispatch_event_loop_poke$VARIANT$armv81",
+          null,
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": [
+          {
+            "symbol": "_thread_invoke",
+            "offset": 1196
+          },
+          {
+            "symbol": "_thread_block_reason",
+            "offset": 256
+          },
+          {
+            "symbol": "_thread_preempted_in_kernel",
+            "offset": 24
+          },
+          {
+            "symbol": "_kernel_preempt_check",
+            "offset": 44
+          },
+          {
+            "symbol": "_knote_unlock",
+            "offset": 368
+          },
+          {
+            "symbol": "_kevent_register",
+            "offset": 2504
+          },
+          {
+            "symbol": "_kevent_modern_internal",
+            "offset": 240
+          },
+          {
+            "symbol": "_kevent_qos",
+            "offset": 268
+          },
+          {
+            "symbol": "_unix_syscall",
+            "offset": 776
+          },
+          {
+            "symbol": "_sleh_synchronous",
+            "offset": 1184
+          },
+          {
+            "symbol": "_fleh_synchronous",
+            "offset": 40
+          },
+          {
+            "symbol": "fleh_dispatch64_common",
+            "offset": 164
+          }
+        ]
+      },
+      {
+        "service": "backboardd",
+        "tid": 468,
+        "credited_cpu_seconds": 0.03511802083333333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__dispatch_mach_send_and_wait_for_reply",
+          "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+          "_xpc_connection_send_message_with_reply_sync",
+          "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+          "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+          "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+          "__NSXPCDistantObjectSimpleMessageSend1",
+          "___LAUNCH_SERVICES_IS_RESEEDING_ITS_DATABASE_AND_MAY_BLOCK__",
+          "__LSCopyServerStore",
+          "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+          "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+          "__ZN14LaunchServices19URLPropertyProviderL21prepareIsPackageValueERNS_8Database7ContextEPU34objcproto23FSNodePropertyProviding11objc_objectP11__FileCachePK10__CFStringPNS0_5StateEPU15__autoreleasingP7NSError",
+          "__ZN14LaunchServices19URLPropertyProviderL13prepareValuesEPK7__CFURLP11__FileCachePKPK10__CFStringPPKvlSC_PP9__CFError",
+          "__ZL22prepareValuesForBitmapPK7__CFURLP11__FileCacheP19_FilePropertyBitmapPP9__CFError"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 503,
+        "credited_cpu_seconds": 1.9471089583333334,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__ZN2CA6Render6Server13server_threadEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 508,
+        "credited_cpu_seconds": 24.240146979166667,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 679,
+        "credited_cpu_seconds": 0.0033881770833333333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 680,
+        "credited_cpu_seconds": 0.0014613020833333333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      }
+    ],
+    "onsite_screen": "progress_bar",
+    "desktop_verified": false
+  },
+  "conclusion": "Confirmed configd advanced from gethostuuid resource wait into original CFRunLoop and additional configuration threads;lockdownd no longer sampled in PreferencesMonitor. LS still actively parses original application info plists at720s;SpringBoard/migration wait for LS. No desktop."
+}

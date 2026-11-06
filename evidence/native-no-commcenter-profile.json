@@ -1,0 +1,45 @@
+{
+  "implementation": "Add onlyCommCenter to first-desktop original launchd disabled-job preference after actual CommCenter watchdog panic; originalwatchdogd retained.",
+  "host": {
+    "passed": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "only_new_disabled_service": "com.apple.CommCenter",
+    "prior_fairplay_adid_policy_retained": true,
+    "original_watchdogd_unchanged": true,
+    "os_systemos_images_unchanged": true,
+    "synthetic_service_replies": false,
+    "observer_seconds": 720,
+    "maximum_pet_seconds": 780,
+    "memory_mib": 1536,
+    "log_mib": 32,
+    "hardware_watchdog_return": true,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "limits": [
+    "No native baseband/telephony capability claimed.",
+    "Actual original watchdog behavior,service progress and physical desktop require handset."
+  ],
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Complete720s snapshot,CommCenter absent and originalwatchdogd healthy; original location/UI-service waits remain,no desktop.",
+  "handset_result": {
+    "valid_records": 2605,
+    "bytes": 5277844,
+    "dropped": 0,
+    "snapshot_complete": true,
+    "process_count": 197,
+    "captured_threads": 973,
+    "watchdog_panic": false,
+    "springboard_wait": "BKSSystemShellService check-in",
+    "backboard_main": "OriginalCFRunLoop",
+    "launchservices_main": "Original server mainCFRunLoop;database writer actively deflatesCSStore.",
+    "migration_wait": "Child263 waits originalCoreLocation migration NSXPC reply; other child thread2728 sendsMIG40224 toBackBoard57 for launch-image rendering.",
+    "locationd_wait": "MainCFRunLoop;separate threads synchronously waitActivityKit/SpringBoard,BacklightServices andIDS.",
+    "inferred_cycle": "Migration completion gates SpringBoard check-in while location service has synchronous UI-service dependencies; exact causal cycle not proven."
+  }
+}

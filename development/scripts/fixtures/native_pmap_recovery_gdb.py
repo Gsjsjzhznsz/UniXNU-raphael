@@ -39,7 +39,7 @@ try:
  off=next(i for i in range(0,len(code),4) if struct.unpack_from('<I',code,i)[0]==0xd5181010)
  loads=[i for i in range(off+4,len(code),4) if struct.unpack_from('<I',code,i)[0]&0xff00001f==0x58000010];assert loads
  state=qword(literal(code,relay,loads[0],16));pmap=qword(state+592);transition=qword(pmap+24);early=qword(state+584)
- assert qword(state)==2 and qword(pmap)==1 and qword(pmap+32)==16384
+ assert qword(state)==2 and qword(pmap)==1 and qword(pmap+32)==(24576 if c["window_bytes"]==1536*1048576 else 16384)
  tables={};levels={}
  def visit(pa,level):
   assert pa&4095==0 and c['physical_base']<=pa<pa+4096<=c['physical_base']+c['window_bytes']
@@ -51,7 +51,7 @@ try:
  if s['case']=='trace':
   blob=b''.join(tables[k] for k in sorted(tables));(out/'active-tables.bin').write_bytes(blob)
   (out/'active-pages.json').write_text(json.dumps([dict(physical=pa,level=levels[pa],offset=i*4096,sha256=hashlib.sha256(tables[pa]).hexdigest()) for i,pa in enumerate(sorted(tables))],indent=2)+chr(10))
-  (out/'transition.bin').write_bytes(mem(transition,16384));adt=qword(pmap+192);adtbytes=qword(pmap+200);(out/'adt.bin').write_bytes(mem(adt,adtbytes))
+  (out/'transition.bin').write_bytes(mem(transition,qword(pmap+32)));adt=qword(pmap+192);adtbytes=qword(pmap+200);(out/'adt.bin').write_bytes(mem(adt,adtbytes))
   for i,x in enumerate(c['early']['ranges']):(out/('range-'+str(i)+'.bin')).write_bytes(mem(x['virtual']+c['physical_delta'],x['bytes']))
  elif s['case']=='transition-corrupt':
   at=transition+511*8;before=qword(at);assert before==0;gdb.selected_inferior().write_memory(at,struct.pack('<Q',1));record('transition-unused-corrupted',address=at,before=0,after=1)

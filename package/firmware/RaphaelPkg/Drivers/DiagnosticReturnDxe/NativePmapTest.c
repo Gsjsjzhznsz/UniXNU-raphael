@@ -7,7 +7,7 @@
 #include <Library/MemoryAllocationLib.h>
 #include <Library/CacheMaintenanceLib.h>
 #define TABLE_MASK 0x0000fffffffff000ULL
-#define TABLE_BYTES (4*EFI_PAGE_SIZE)
+#define TABLE_BYTES (6*EFI_PAGE_SIZE)
 #define PAGE_LIMIT 256
 STATIC RAPHAEL_NATIVE_PMAP_STATE mState;
 STATIC UINT64 *mTransition;
@@ -20,29 +20,18 @@ STATIC_ASSERT(sizeof(RAPHAEL_NATIVE_PMAP_RESULT)==256,"pmap wire ABI");
 STATIC_ASSERT(OFFSET_OF(RAPHAEL_NATIVE_PMAP_RESULT,ObservedTransitionTtbr0)==80,"relay pmap ABI");
 STATIC BOOLEAN Owned(UINT64 P,UINT64 N){return N&&P>=mBase&&P-mBase<=mBytes&&N<=mBytes-(P-mBase);}
 EFI_STATUS RaphaelPrepareNativePmap(VOID){
- mTransition=AllocatePages(4);if(!mTransition)return EFI_OUT_OF_RESOURCES;
+ mTransition=AllocatePages(6);if(!mTransition)return EFI_OUT_OF_RESOURCES;
  UINT64 Arena=FixedPcdGet64(PcdRaphaelArenaBase),Heap=FixedPcdGet32(PcdRaphaelArenaSize)-RAPHAEL_NATIVE_FAT_BYTES,At=(UINTN)mTransition;
  if(At<Arena||At-Arena>Heap||TABLE_BYTES>Heap-(At-Arena)||(At&4095))return EFI_COMPROMISED_DATA;
  return EFI_SUCCESS;
 }
 EFI_STATUS RaphaelArmNativePmap(UINT64 Base,UINT64 Bytes,UINT64 Relay,UINT64 RelayBytes,UINT64 Tcr,UINT64 Args){
- // No mapping outside the actual loader allocation; at most one L1 entry.
- if(!mTransition||(Base&4095)||(Bytes&4095)||(Bytes!=SIZE_256MB&&Bytes!=SIZE_512MB&&Bytes!=704ULL*SIZE_1MB)||Base+Bytes<Base||((Base>>30)!=((Base+Bytes-1)>>30))||
-  Relay<Base||Relay>=Base+Bytes||!RelayBytes||RelayBytes>2048||RelayBytes>Base+Bytes-Relay||(Tcr&63)!=26||((Tcr>>16)&63)!=26||((Tcr>>14)&3)||((Tcr>>30)&3)!=2)return EFI_COMPROMISED_DATA;
+ // Map only the actual loader grant, including partial boundary blocks.
+ if(!mTransition||(Tcr&63)!=26||((Tcr>>16)&63)!=26||((Tcr>>14)&3)||((Tcr>>30)&3)!=2)return EFI_COMPROMISED_DATA;
  mBase=Base;mBytes=Bytes;mRelay=Relay;ZeroMem(&mState,sizeof(mState));ZeroMem(mTransition,TABLE_BYTES);
- UINT64 Root=(UINTN)mTransition,L2=Root+4096;UINTN Partial=2;
- mTransition[(Base>>30)&255]=L2|3;
- UINT64 First=Base&~0x1fffffULL,End=Base+Bytes;
- for(UINT64 Block=First;Block<End;Block+=SIZE_2MB){
-  UINT64 Flags=0x0040000000000601ULL;if(!RaphaelNativeRelayBlock(Block,Relay,RelayBytes))Flags|=1ULL<<53;
-  if(Block>=Base&&End-Block>=SIZE_2MB)mTransition[512+((Block>>21)&511)]=Block|Flags;
-  else {
-   if(Partial>=4)return EFI_COMPROMISED_DATA;UINT64 L3=Root+Partial*4096;mTransition[512+((Block>>21)&511)]=L3|3;
-   for(UINTN J=0;J<512;++J){UINT64 P=Block+J*4096;if(Owned(P,4096))mTransition[Partial*512+J]=P|(Flags|2);}
-   ++Partial;
-  }
- }
- RAPHAEL_NATIVE_PMAP_RESULT *R=&mState.Result;R->Version=1;R->Status=1;R->TransitionBase=Root;R->TransitionBytes=TABLE_BYTES;R->TransitionCrcBefore=CalculateCrc32(mTransition,TABLE_BYTES);
+ UINT64 Root=(UINTN)mTransition;UINTN TransitionBytes=RaphaelNativeTransitionPages(Bytes)*EFI_PAGE_SIZE;
+ if(!RaphaelNativeTransitionTables(mTransition,Root,Base,Bytes,Relay,RelayBytes))return EFI_COMPROMISED_DATA;
+ RAPHAEL_NATIVE_PMAP_RESULT *R=&mState.Result;R->Version=1;R->Status=1;R->TransitionBase=Root;R->TransitionBytes=TransitionBytes;R->TransitionCrcBefore=CalculateCrc32(mTransition,TransitionBytes);
  R->CleanBase=Base;R->CleanBytes=Bytes;R->SparseCapacity=sizeof(mSparse);mState.Sparse=(UINTN)mSparse;
  if(!Owned(Args,4096))return EFI_COMPROMISED_DATA;R->AdtPhysical=Args+4096;R->AdtBytes=ReadUnaligned32((VOID *)(UINTN)(Args+0x68));
  if(!R->AdtBytes||R->AdtBytes>sizeof(mAdtBefore)||!Owned(R->AdtPhysical,R->AdtBytes)||
@@ -82,7 +71,7 @@ STATIC BOOLEAN Walk(UINT64 Root,UINT64 Va,UINT64 *Pa){
 }
 BOOLEAN RaphaelCaptureNativePmap(UINT64 Root0,UINT64 Root1,UINT64 Checkpoint,UINT64 *Physical){
  RAPHAEL_NATIVE_PMAP_RESULT *R=&mState.Result;R->OriginalTtbr0=Root0;R->OriginalTtbr1=Root1;
- R->TransitionCrcAfter=CalculateCrc32(mTransition,TABLE_BYTES);R->TransitionOk=R->TransitionCrcAfter==R->TransitionCrcBefore&&R->ObservedTransitionTtbr0==R->TransitionBase;
+ R->TransitionCrcAfter=CalculateCrc32(mTransition,(UINTN)R->TransitionBytes);R->TransitionOk=R->TransitionCrcAfter==R->TransitionCrcBefore&&R->ObservedTransitionTtbr0==R->TransitionBase;
  BOOLEAN Valid=!(Root0&4095)&&!(Root1&4095)&&Root0!=Root1&&Visit(Root0,1)&&Visit(Root1,1);R->CaptureOk=Valid;
  UINT64 Pa=0;if(Valid){
   R->Root0Empty=TRUE;for(UINTN I=0;I<512;++I)if(((CONST UINT64 *)(UINTN)Root0)[I])R->Root0Empty=FALSE;

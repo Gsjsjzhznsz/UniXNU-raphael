@@ -1,0 +1,142 @@
+{
+  "candidate": "artifacts/desktop-aks-wrap/20261106T025300Z",
+  "source_revision": "8c70daf814aafdf4a3d35e40dde0322655fd0a83",
+  "change": "Generic upstream software key wrapping with existing16-byte private ADT UUID callback",
+  "host_regression": {
+    "passed": true,
+    "source_revision": "8c70daf814aafdf4a3d35e40dde0322655fd0a83",
+    "upstream_actual_cpp_and_key_format_harness": true,
+    "board_callback_actual_body": true,
+    "board_callback_asan_ubsan": true,
+    "identity_from_existing16byte_adt": true,
+    "missing_identity_returns0": true,
+    "source_host_only": true,
+    "handset_executed": false
+  },
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "host_build": {
+    "passed": true,
+    "qemu_checks": 39,
+    "selected_revision": "8c70daf814aafdf4a3d35e40dde0322655fd0a83",
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261106T025443Z",
+      "payload": "evidence/private/handset-payload/20261106T025446Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T174010Z-watchdog-budget",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261106T025414Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261106T025447Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261106T025455Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261106T025502.177494Z-fathvmue/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261106T025611.242298Z-drb30vxr/report.json",
+      "handset_boot_attempted": false
+    }
+  },
+  "handset_run": "evidence/private/android-return-run/20261106T025712Z",
+  "temporary_boot_accepted": true,
+  "status": "waiting_capture",
+  "handset_result": {
+    "candidate": "artifacts/desktop-aks-wrap/20261106T025300Z",
+    "handset_run": "evidence/private/android-return-run/20261106T025712Z",
+    "records": 2219,
+    "bytes": 3843504,
+    "dropped": 0,
+    "log_span_seconds": 916.3299953125,
+    "aks_results": [
+      {
+        "selector": 0,
+        "result": "0x0",
+        "count": 64
+      },
+      {
+        "selector": 7,
+        "result": "0x0",
+        "count": 52
+      },
+      {
+        "selector": 10,
+        "result": "0x0",
+        "count": 7
+      },
+      {
+        "selector": 11,
+        "result": "0x0",
+        "count": 2
+      },
+      {
+        "selector": 14,
+        "result": "0x0",
+        "count": 2
+      },
+      {
+        "selector": 17,
+        "result": "0x0",
+        "count": 51
+      },
+      {
+        "selector": 26,
+        "result": "0x0",
+        "count": 1
+      },
+      {
+        "selector": 27,
+        "result": "0x0",
+        "count": 1
+      },
+      {
+        "selector": 31,
+        "result": "0xe00002c7",
+        "count": 5
+      },
+      {
+        "selector": 34,
+        "result": "0xe00002c7",
+        "count": 1
+      },
+      {
+        "selector": 35,
+        "result": "0x0",
+        "count": 5
+      },
+      {
+        "selector": 93,
+        "result": "0xe00002c7",
+        "count": 1
+      },
+      {
+        "selector": 101,
+        "result": "0x0",
+        "count": 1
+      }
+    ],
+    "snapshots": [
+      {
+        "sequence": 1,
+        "complete": true,
+        "process_count": 131,
+        "captured_threads": 657,
+        "truncated_processes": 0,
+        "capture_elapsed_seconds": 1.619176875
+      }
+    ],
+    "ls_samples": 7,
+    "service_exits": [],
+    "panic_recorded": false,
+    "memory_wait_observed": true,
+    "last_tick": {
+      "seconds": 916.3299953125,
+      "poll": 7991,
+      "root": 7,
+      "init": 4,
+      "syscalls": 66847,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 5,
+      "status": 0,
+      "frames": 822
+    },
+    "android_recovery": "manual",
+    "android_boot_completed": true,
+    "desktop_verified": false,
+    "scope": "Selector10 succeeded7 times and selector11 succeeded2 times. No recorded panic or service exit before log ended. No final snapshot; cause of halt unknown. Memory pressure is observed, not proven sole desktop blocker."
+  }
+}

@@ -6,6 +6,12 @@ from entry_probe import ROOT,sha
 from inspect_device import read_fdt
 ADB='/mnt/d/Android/platform-tools/adb.exe';FB='/mnt/d/Android/platform-tools/fastboot.exe'
 
+def clean_hardware_return_verified(desc, report):
+ return bool(desc.get('hardware_watchdog_return') and
+             report.get('android_boot_completed') and report.get('root_verified') and
+             report.get('new_android_boot_id') and
+             report.get('return_transient_property_names') == [])
+
 def main():
  p=argparse.ArgumentParser();p.add_argument('--serial',required=True);p.add_argument('--build',type=Path,required=True);p.add_argument('--runtime-only',action='store_true',help='Check execution and recovery without repeating source or boot-partition hashes');p.add_argument('--resume-readback',type=Path,help='Re-decode an already saved matching handset readback, then perform normal cleanup; no new temporary boot');p.add_argument('--resume-live-return',type=Path,help='Collect a late Android return from an already accepted boot; never boot an image');a=p.parse_args();assert not (a.resume_readback and a.resume_live_return)
  build=a.build.resolve();assert build.is_relative_to(ROOT/'evidence/private/android-return-build');desc=json.loads((build/'report.json').read_text());assert desc['passed'] and desc['structure_checked'] and not desc['android_return_qemu']
@@ -110,6 +116,7 @@ def main():
    v=SimpleNamespace(stdout=(out/'after.dtb').read_bytes(),returncode=0)
   try:
    tree=read_fdt(v.stdout);chosen=next(n for n in tree.walk() if n.name=='chosen' and n.parent is tree)
+   report['return_transient_property_names']=[k for k in chosen.properties if k.startswith('raphael,')]
    report['nonce_matched']=chosen.strings('raphael,sec-dxe-id')==[desc['identifier']]
    wire=chosen.properties.get('raphael,android-return');d=chosen.properties.get('raphael,sec-dxe')
    report['return_record_found']=bool(wire and len(wire)==80);report['sec_record_found']=bool(d and len(d)==48*8)
@@ -302,18 +309,28 @@ def main():
   # adbd may disconnect before the Windows client returns, including a host
   # timeout after the reboot was accepted. Establish cleanup from the new boot
   # and FDT instead of treating the transport return code as handset state.
-  v=call(ADB,'reboot');report['cleanup_reboot_command_returned_ok']=bool(v and v.returncode==0)
-  time.sleep(2);report['cleanup_android_completed']=android(time.monotonic()+140,prior_boot_id=(out/'after-boot-id.txt').read_bytes())
-  if report['cleanup_android_completed']:
-   v=root('cat /proc/sys/kernel/random/boot_id',file='cleanup-boot-id.txt')
-   report['cleanup_new_android_boot_id']=bool(v and v.returncode==0 and v.stdout.strip() and v.stdout!=(out/'after-boot-id.txt').read_bytes())
-   v=root('id');report['cleanup_root_verified']=bool(v and b'uid=0' in v.stdout)
-   report['cleanup_boot_unchanged']=None
-   if not a.runtime_only:
-    v=root('sha256sum /dev/block/bootdevice/by-name/boot');report['cleanup_boot_unchanged']=bool(v and v.stdout.decode().split()[0]==desc['source_sha256'])
-   v=root('cat /sys/firmware/fdt',file='cleanup.dtb')
-   if v and v.returncode==0:
-    tree=read_fdt(v.stdout);chosen=next(n for n in tree.walk() if n.name=='chosen' and n.parent is tree);report['cleanup_transient_properties_absent']=not any(k.startswith('raphael,') for k in chosen.properties)
+  if clean_hardware_return_verified(desc, report):
+   # Hardware reset already produced a new rooted Android boot with a clean FDT.
+   # This is independent return evidence, not a recovered native checkpoint.
+   report.update(cleanup_reboot_performed=False, cleanup_new_boot_required=False,
+       cleanup_reboot_command_returned_ok=None, cleanup_android_completed=True,
+       cleanup_new_android_boot_id=None, cleanup_root_verified=True,
+       cleanup_transient_properties_absent=True, cleanup_boot_unchanged=None,
+       clean_hardware_return_verified=True)
+  else:
+   report['cleanup_reboot_performed']=True
+   v=call(ADB,'reboot');report['cleanup_reboot_command_returned_ok']=bool(v and v.returncode==0)
+   time.sleep(2);report['cleanup_android_completed']=android(time.monotonic()+140,prior_boot_id=(out/'after-boot-id.txt').read_bytes())
+   if report['cleanup_android_completed']:
+    v=root('cat /proc/sys/kernel/random/boot_id',file='cleanup-boot-id.txt')
+    report['cleanup_new_android_boot_id']=bool(v and v.returncode==0 and v.stdout.strip() and v.stdout!=(out/'after-boot-id.txt').read_bytes())
+    v=root('id');report['cleanup_root_verified']=bool(v and b'uid=0' in v.stdout)
+    report['cleanup_boot_unchanged']=None
+    if not a.runtime_only:
+     v=root('sha256sum /dev/block/bootdevice/by-name/boot');report['cleanup_boot_unchanged']=bool(v and v.stdout.decode().split()[0]==desc['source_sha256'])
+    v=root('cat /sys/firmware/fdt',file='cleanup.dtb')
+    if v and v.returncode==0:
+     tree=read_fdt(v.stdout);chosen=next(n for n in tree.walk() if n.name=='chosen' and n.parent is tree);report['cleanup_transient_properties_absent']=not any(k.startswith('raphael,') for k in chosen.properties)
   if desc.get('ufs_write_probe') and report.get('cleanup_root_verified'):
    try:
     from ufs_write_probe import check_live

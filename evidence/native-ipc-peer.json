@@ -1,0 +1,36 @@
+{
+  "implementation": "Read-only IPC endpoint candidates in existing thread words106..127, original128-word ABI retained. Try-locks only; failed acquisitions explicitly recorded. Original fairplay/location process exit and terminate reasons added to existing logger.",
+  "static_finding": "Original locationd thread769 repeatedly sends MIG1203; original fairplayd.A2 has matching1200..1203 MIG server and24-byte request1203 handler. Static match alone does not prove runtime receiver.",
+  "host": {
+    "original_osfmk_bsd_werror_objects": true,
+    "actual_helper_asan_ubsan_cases": 18,
+    "decoder_cases": 18,
+    "malformed_record_rejections": 3,
+    "old_prefix_and_record_size_preserved": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "limits": [
+    "Saved trap arguments require matching mach_msg2 PC.",
+    "Special reply send-once copyout PID and destination-port receiver PID have different meanings.",
+    "No visible desktop; original daemon exit cause awaits runtime IOKit results."
+  ],
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Independent IPC telemetry recovered; original full-checkpoint failed/null retained",
+  "handset_result": {
+    "valid_records": 2428,
+    "bytes": 4825634,
+    "dropped": 0,
+    "process_count": 191,
+    "captured_threads": 865,
+    "matching_trap_threads": 229,
+    "fairplay_exits": 51,
+    "all_fairplay_exit_status_zero": true,
+    "confirmed": "Original fairplayd repeatedly exits normally; MIG1203 requests queue at launchd-owned receive port. No active fairplay receiver in final snapshot.",
+    "unproven": "Cause of original daemon normal exit; missing original FairPlayIOKit is a concrete candidate but not yet observed as the failing runtime lookup."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "branch": "feat/usb",
+  "revision": "8a9910d7acfc2395ebf268161b89e2b71c4cd1fc",
+  "candidate": "artifacts/upstream-candidates/20261106T154225Z/UniXNU-usb",
+  "passed": true,
+  "active_backend_modified": false,
+  "handset_executed": false,
+  "qcom_dwc3_revision": "e4efe95c903a737e0f5955e5b50a8fb4d2a7d718",
+  "xnu_prelink_revision": "f24e3983659d3f46010478fa3cfa06ebeb0a5e9f",
+  "scope": "USB branch and its two relevant source components retained separately; other branch dependencies not initialized. No raphael adaptation/build/handset claim.",
+  "completed_utc": "2026-11-06T15:46:54.848559+00:00"
+}

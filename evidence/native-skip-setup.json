@@ -1,0 +1,109 @@
+{
+  "implementation": "Official skip-setup and no-auto-dim preference profile on fresh ephemeral Data seed.",
+  "source": "sources/UniXNU/scripts/seed-data-skip-setup.py",
+  "host": {
+    "passed": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "observer_seconds": 1800,
+    "maximum_pet_seconds": 1860,
+    "log_mib": 32,
+    "owned_memory_mib": 1536,
+    "hardware_watchdog_return": true,
+    "functional_change": "Official skip-setup and no-auto-dim preference profile on fresh ephemeral Data seed.",
+    "other_kernel_arguments_identical": true,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "seed_review": {
+    "passed": true,
+    "source": "sources/UniXNU/scripts/seed-data-skip-setup.py",
+    "build": "21H461",
+    "preference_changes": [
+      {
+        "path": "/private/var/mobile/Library/Preferences/com.apple.migration.plist",
+        "merged_values": {
+          "LastSystemVersion": "21H461",
+          "DMUserDataDisposition": {
+            "SyntheticDidUpgrade": false,
+            "buildVersion": "21H461"
+          }
+        },
+        "original_keys_preserved": true,
+        "uid": 501,
+        "gid": 501,
+        "mode": "0600"
+      },
+      {
+        "path": "/private/var/mobile/Library/Preferences/com.apple.springboard.plist",
+        "merged_values": {
+          "BKNoWatchdogs": true,
+          "FBLaunchWatchdogExceptions": {
+            "com.apple.purplebuddy": 100.0
+          },
+          "MCForceShowCloudConfigurationUI": false,
+          "SBDisableAutoDim": true,
+          "SBDontDimOrLockOnAC": true,
+          "SBDisableIdleSleep": true
+        },
+        "original_keys_preserved": true,
+        "uid": 501,
+        "gid": 501,
+        "mode": "0600"
+      },
+      {
+        "path": "/private/var/mobile/Library/Preferences/com.apple.purplebuddy.plist",
+        "merged_values": {
+          "SetupDone": true,
+          "SetupFinishedAllSteps": true,
+          "SetupVersion": 11,
+          "daemonizeNeedsToRun": false
+        },
+        "original_keys_preserved": true,
+        "uid": 501,
+        "gid": 501,
+        "mode": "0600"
+      },
+      {
+        "path": "/private/var/mobile/Library/Preferences/com.apple.purplebuddy.notbackedup.plist",
+        "merged_values": {
+          "ShouldRunDiagnosticsMiniBuddy": false,
+          "ShouldRunHSA2MiniBuddy": false,
+          "ShouldRunKeychainSyncMiniBuddy": false,
+          "ShouldRunMesaMiniBuddy": false,
+          "ShouldRunPaymentMiniBuddy": false,
+          "ShouldRunStandardMiniBuddy": false,
+          "SilentICDPUpgrade": false
+        },
+        "original_keys_preserved": true,
+        "uid": 501,
+        "gid": 501,
+        "mode": "0600"
+      },
+      {
+        "path": "/private/var/mobile/Library/Preferences/com.apple.managedconfiguration.notbackedup.plist",
+        "merged_values": {
+          "LockdownActivationIndicatesCloudConfigurationAvailable": false
+        },
+        "original_keys_preserved": true,
+        "uid": 501,
+        "gid": 501,
+        "mode": "0600"
+      }
+    ],
+    "source_seed_preserved": true,
+    "adt_unchanged": true,
+    "disabled_services_unchanged": true,
+    "original_watchdogd_unchanged": true,
+    "synthetic_service_replies": false,
+    "persistent": false,
+    "desktop_verified": false,
+    "force_no_buddy_used": false,
+    "force_no_buddy_reason": "Original internal preferences only exist when os_variant_has_internal_ui(com.apple.purplebuddy); not used."
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "handset_status": "Temporary boot accepted; awaiting original home UI and automatic log recovery.",
+  "handset_run": "evidence/private/android-return-run/20261106T180944Z"
+}

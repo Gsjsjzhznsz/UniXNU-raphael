@@ -32,7 +32,7 @@ def main():
   compile=['g++','-std=c++17','-O1','-g','-Wall','-Wextra','-Werror','-fsanitize=address,undefined','-I'+str(ROOT/'UniXNU-sm8150-common/kits/Sm8150Platform'),str(fixture),'-o',str(out/'ufs-qtest')]
   built=subprocess.run(compile,capture_output=True);(out/'build.log').write_bytes(built.stdout+built.stderr);assert built.returncode==0,built.stderr.decode()
   disk=out/'synthetic.raw'
-  with disk.open('xb') as f:f.truncate(8*1024*1024);f.seek(7*4096);f.write(bytes((i*29+7)&255 for i in range(4096)))
+  with disk.open('xb') as f:f.truncate(40*1024*1024);f.seek(7*4096);f.write(bytes((i*29+7)&255 for i in range(4096)))
   command=[args.qemu,'-machine','virt,gic-version=3,virtualization=off','-cpu','cortex-a76','-m','256M','-nodefaults','-nographic','-S','-qtest','unix:'+str(sock)+',server=on,wait=off','-device','ufs,id=ufs0,addr=01.0','-drive','if=none,id=ufsDisk,file='+str(disk)+',format=raw,readonly='+('off' if args.diagnostic_writes else 'on'),'-device','ufs-lu,bus=ufs0,drive=ufsDisk,lun=0']
   report.update(qemu_command=command,compile_command=compile,resources=dict(ecam=ecam,bar=bar,ram=ram,source='same emulator generated FDT'),qemu_version=subprocess.check_output([args.qemu,'--version'],text=True).splitlines()[0])
   with (out/'qemu.log').open('wb') as log:
@@ -47,7 +47,7 @@ def main():
    count=sum(line.startswith(b'PASS ') for line in result.stdout.splitlines())
    if args.diagnostic_writes:
     process.terminate();process.wait(timeout=5);sock.unlink(missing_ok=True)
-    raw=disk.read_bytes();pattern=bytes((i*13+0x63)&255 for i in range(4096));expected=bytearray(8*1024*1024);expected[7*4096:8*4096]=bytes((i*29+7)&255 for i in range(4096));expected[11*4096:12*4096]=pattern
+    raw=disk.read_bytes();pattern=bytes((i*13+0x63)&255 for i in range(4096));expected=bytearray(40*1024*1024);expected[7*4096:8*4096]=bytes((i*29+7)&255 for i in range(4096));expected[11*4096:12*4096]=pattern;expected[64*4096:65*4096]=pattern;expected[8255*4096:8256*4096]=pattern
     assert raw==expected,'Model media changed outside declared diagnostic allocation'
     process=subprocess.Popen(command,stdout=log,stderr=subprocess.STDOUT)
     for _ in range(100):

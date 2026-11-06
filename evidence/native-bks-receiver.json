@@ -1,0 +1,2942 @@
+{
+  "scope": "independent_handset_log",
+  "candidate": "artifacts/desktop-bks-receiver/20261105T151856Z",
+  "functional_change": "Independent bounded32-thread BackBoard receiver snapshot to inspect original BKS check-in wait",
+  "source": "package/drivers/RaphaelServiceObserver.c",
+  "host_regression": {
+    "passed": true,
+    "actual_c_body_extracted": true,
+    "clock_reads_mocked": true,
+    "process_thread_lifetime_counts": [
+      0,
+      1,
+      8,
+      32,
+      40
+    ],
+    "missing_process_and_absent_slot": true,
+    "asan_ubsan": true,
+    "old_snapshot_decodes_identically": true,
+    "new_32_thread_decode": true,
+    "rejected_malformed_records": 6,
+    "handset_verified": false,
+    "profiled_priority_actual_source_test": true
+  },
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "additional_observation": "LS and migration stacks both await MCProfileConnection checkIn;profiled141 present but omitted by previous service priorities.Add profiled to retained8 selected processes.",
+  "host": {
+    "passed": true,
+    "scope": "host_build_and_recovery_qemu_only",
+    "candidate": "artifacts/desktop-bks-receiver/20261105T151856Z",
+    "kernel": true,
+    "qemu": 39,
+    "handset_image": true,
+    "receiver_regression": {
+      "passed": true,
+      "actual_c_body_extracted": true,
+      "clock_reads_mocked": true,
+      "process_thread_lifetime_counts": [
+        0,
+        1,
+        8,
+        32,
+        40
+      ],
+      "missing_process_and_absent_slot": true,
+      "asan_ubsan": true,
+      "old_snapshot_decodes_identically": true,
+      "new_32_thread_decode": true,
+      "rejected_malformed_records": 6,
+      "handset_verified": false,
+      "profiled_priority_actual_source_test": true
+    },
+    "handset_boot_attempted": false,
+    "desktop_verified": false,
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261105T152559Z",
+      "payload": "evidence/private/handset-payload/20261105T152602Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T113210Z-vnode8192",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T152531Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261105T152603Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261105T152610Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261105T152617.670799Z-heqeo_p0/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261105T152726.432296Z-v6bwwmy_/report.json",
+      "handset_boot_attempted": false
+    }
+  },
+  "handset_run": "evidence/private/android-return-run/20261105T153215Z",
+  "handset": {
+    "handset_run": "evidence/private/android-return-run/20261105T153215Z",
+    "extraction": "evidence/private/ufs-console-log/20261105T152526Z/20261105T155115Z-rooted-bootloop-readback",
+    "handset_boot_attempted": true,
+    "temporary_boot_accepted": true,
+    "desktop_verified": false,
+    "onsite_screen": "progress_bar",
+    "screen_observations": [
+      {
+        "at_utc": "2026-11-05T15:42:09.877985+00:00",
+        "screen": "progress_bar",
+        "source": "user"
+      }
+    ],
+    "owned_memory_mib": 704,
+    "log": {
+      "valid_records": 967,
+      "bytes": 952451,
+      "dropped": 0,
+      "first_counter": 3821740470,
+      "last_counter": 17587457338,
+      "invalid_tail": null,
+      "session": "fc147e5b-1eb3-45d1-85ec-39a228926be4",
+      "guards_unchanged": true,
+      "android_boot_changed": true,
+      "android_boot_completed": false,
+      "read_only_bootloop_salvage": true,
+      "persistent_log_verified": true,
+      "continuous_log_verified": true,
+      "console_lines": 7831,
+      "progress_lines": 603,
+      "service_snapshot_captured": true
+    },
+    "time_origin": "watchdog_start",
+    "log_span_ms": 716964.4202083333,
+    "last_tick": {
+      "seconds": 720.0054746354167,
+      "poll": 6021,
+      "root": 7,
+      "init": 4,
+      "syscalls": 55742,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 5,
+      "status": 0,
+      "frames": 867
+    },
+    "capture_phase_count": 70,
+    "last_capture_phase": [
+      {
+        "seconds": 605.4965638541667,
+        "stage": "done",
+        "sequence": 5,
+        "poll": 4991,
+        "id": 99
+      }
+    ],
+    "ls_progress_samples": 5,
+    "display": {
+      "clients": 5,
+      "validations": 870,
+      "rejected": 0,
+      "kicks": 1729,
+      "frames": 868,
+      "blank_frames": 0,
+      "retired": 868,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 8774438400,
+      "nonblack": 2648
+    },
+    "display_content_scope": "120-second bounded RGB90x195 submitted-frame samples with matching sampled framebuffer counters; physical panel output unverified.",
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 0,
+      "checkins": 55,
+      "last_checkin_counter": 17531628870,
+      "monitoring": true,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "budget": {
+      "hardware_seconds": 20,
+      "budget_ms": 780000,
+      "observer_seconds": 720.0,
+      "start_counter": 3760390092,
+      "capture_counter": 17584569254,
+      "counter_frequency": 19200000,
+      "elapsed_ms": 720009.3313541666,
+      "observer_deadline_reached": true,
+      "pets": 1272,
+      "last_pet_counter": 17580615270,
+      "status": 1
+    },
+    "snapshot_completed": true,
+    "pressure_lines": [],
+    "vm_first": [
+      {
+        "seconds": 3.583538177083333,
+        "free": 140257,
+        "active": 0,
+        "inactive": 0,
+        "wired": 39936
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 696.5750984375,
+        "free": 677,
+        "active": 6708,
+        "inactive": 6110,
+        "wired": 124105
+      },
+      {
+        "seconds": 707.5936890625,
+        "free": 1270,
+        "active": 7086,
+        "inactive": 6661,
+        "wired": 124131
+      },
+      {
+        "seconds": 718.5095785416667,
+        "free": 511,
+        "active": 7073,
+        "inactive": 6588,
+        "wired": 123915
+      }
+    ],
+    "ufs_first": [
+      {
+        "seconds": 3.583538177083333,
+        "requests": 0,
+        "bytes": 0,
+        "failures": 0
+      }
+    ],
+    "ufs_last": [
+      {
+        "seconds": 696.5750984375,
+        "requests": 1007975,
+        "bytes": 7123022848,
+        "failures": 0
+      },
+      {
+        "seconds": 707.5936890625,
+        "requests": 1030316,
+        "bytes": 7235822592,
+        "failures": 0
+      },
+      {
+        "seconds": 718.5095785416667,
+        "requests": 1036439,
+        "bytes": 7265219584,
+        "failures": 0
+      }
+    ],
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "full_checkpoint_verified": false,
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "frame_analysis": "frame-analysis.json"
+  },
+  "backboard": {
+    "pid": 57,
+    "captured": true,
+    "threads_truncated": false,
+    "seconds": 720.1308803125,
+    "threads": [
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 323,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x100461288",
+            "unslid_va": "0xe51bd288",
+            "image": null
+          },
+          {
+            "pc": "0x1c4702228",
+            "unslid_va": "0x1a945e228",
+            "image": "/usr/lib/dyld",
+            "symbol": "start",
+            "symbol_kind": "local",
+            "offset": 1520
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 6060528,
+          "credit_ticks": 105403721,
+          "debit_ticks": 99343193,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 165202796354,
+          "actions": 32,
+          "sample_counter": 17586897264
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 456,
+        "state": 1,
+        "wait_event": 18446744016257235680,
+        "continuation": {
+          "symbol": "_workq_unpark_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a248e8",
+            "unslid_va": "0x1cb7808e8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "___workq_kernreturn",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1f88c6580",
+            "unslid_va": "0x1dd622580",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_wqthread",
+            "symbol_kind": "export",
+            "offset": 360
+          },
+          {
+            "pc": "0x1f88c3ccc",
+            "unslid_va": "0x1dd61fccc",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 1472670,
+          "credit_ticks": 5403742,
+          "debit_ticks": 3931072,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 165195337239,
+          "actions": 32,
+          "sample_counter": 17586897495
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 458,
+        "state": 65,
+        "wait_event": 18446744016249348928,
+        "continuation": {
+          "symbol": "_ulock_wait_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a2abdc",
+            "unslid_va": "0x1cb786bdc",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "___ulock_wait",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1aa82b3ec",
+            "unslid_va": "0x18f5873ec",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dlock_wait",
+            "symbol_kind": "local",
+            "offset": 52
+          },
+          {
+            "pc": "0x1aa82b784",
+            "unslid_va": "0x18f587784",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_group_wait_slow",
+            "symbol_kind": "local",
+            "offset": 52
+          },
+          {
+            "pc": "0x10046e3e4",
+            "unslid_va": "0xe51ca3e4",
+            "image": null
+          },
+          {
+            "pc": "0x1aa859c9c",
+            "unslid_va": "0x18f5b5c9c",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_call_block_and_release",
+            "symbol_kind": "local",
+            "offset": 24
+          },
+          {
+            "pc": "0x1aa85acc0",
+            "unslid_va": "0x18f5b6cc0",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_client_callout",
+            "symbol_kind": "local",
+            "offset": 16
+          },
+          {
+            "pc": "0x1aa8368f8",
+            "unslid_va": "0x18f5928f8",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_serial_drain$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 680
+          },
+          {
+            "pc": "0x1aa837374",
+            "unslid_va": "0x18f593374",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_invoke$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 372
+          },
+          {
+            "pc": "0x1aa840a34",
+            "unslid_va": "0x18f59ca34",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_root_queue_drain_deferred_wlh",
+            "symbol_kind": "local",
+            "offset": 260
+          },
+          {
+            "pc": "0x1aa840338",
+            "unslid_va": "0x18f59c338",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_workloop_worker_thread",
+            "symbol_kind": "local",
+            "offset": 388
+          },
+          {
+            "pc": "0x1f88c6534",
+            "unslid_va": "0x1dd622534",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_wqthread",
+            "symbol_kind": "export",
+            "offset": 284
+          },
+          {
+            "pc": "0x1f88c3ccc",
+            "unslid_va": "0x1dd61fccc",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 656778,
+          "credit_ticks": 658807,
+          "debit_ticks": 2029,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 524765837447,
+          "actions": 32,
+          "sample_counter": 17586897766
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 462,
+        "state": 4,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_thread_preempted",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1f88c3cc4",
+            "unslid_va": "0x1dd61fcc4",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 0
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 954,
+          "credit_ticks": 1386978,
+          "debit_ticks": 1386024,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 341496286770,
+          "actions": 32,
+          "sample_counter": 17586897927
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 465,
+        "state": 4,
+        "wait_event": 0,
+        "continuation": null,
+        "kernel_frames": [
+          {
+            "symbol": "_thread_invoke",
+            "offset": 1196
+          },
+          {
+            "symbol": "_thread_block_reason",
+            "offset": 256
+          },
+          {
+            "symbol": "_throttle_lowpri_io",
+            "offset": 828
+          },
+          {
+            "symbol": "_vm_fault_internal",
+            "offset": 11300
+          },
+          {
+            "symbol": "_vm_fault$XNU_INTERNAL",
+            "offset": 20
+          },
+          {
+            "symbol": "_handle_user_abort",
+            "offset": 240
+          },
+          {
+            "symbol": "_sleh_synchronous",
+            "offset": 1224
+          },
+          {
+            "symbol": "_fleh_synchronous",
+            "offset": 40
+          },
+          {
+            "symbol": "fleh_dispatch64_common",
+            "offset": 164
+          }
+        ],
+        "frames": [
+          {
+            "pc": "0x1c38ca850",
+            "unslid_va": "0x1a8626850",
+            "image": "/System/Library/PrivateFrameworks/CoreAnalytics.framework/CoreAnalytics",
+            "symbol": "-[AnalyticsConfigurationObserver .cxx_construct]",
+            "symbol_kind": "local",
+            "offset": 0
+          },
+          {
+            "pc": "0x19b39d1a8",
+            "unslid_va": "0x1800f91a8",
+            "image": "/usr/lib/libobjc.A.dylib",
+            "symbol": "_object_cxxConstructFromClass",
+            "symbol_kind": "local",
+            "offset": 120
+          },
+          {
+            "pc": "0x19b39cfb8",
+            "unslid_va": "0x1800f8fb8",
+            "image": "/usr/lib/libobjc.A.dylib",
+            "symbol": "_objc_alloc_init",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x100774254",
+            "unslid_va": "0xe54d0254",
+            "image": null
+          },
+          {
+            "pc": "0x1007741b4",
+            "unslid_va": "0xe54d01b4",
+            "image": null
+          },
+          {
+            "pc": "0x1aa859c9c",
+            "unslid_va": "0x18f5b5c9c",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_call_block_and_release",
+            "symbol_kind": "local",
+            "offset": 24
+          },
+          {
+            "pc": "0x1aa85acc0",
+            "unslid_va": "0x18f5b6cc0",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_client_callout",
+            "symbol_kind": "local",
+            "offset": 16
+          },
+          {
+            "pc": "0x1aa8368f8",
+            "unslid_va": "0x18f5928f8",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_serial_drain$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 680
+          },
+          {
+            "pc": "0x1aa837374",
+            "unslid_va": "0x18f593374",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_invoke$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 372
+          },
+          {
+            "pc": "0x1aa840a34",
+            "unslid_va": "0x18f59ca34",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_root_queue_drain_deferred_wlh",
+            "symbol_kind": "local",
+            "offset": 260
+          },
+          {
+            "pc": "0x1aa840338",
+            "unslid_va": "0x18f59c338",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_workloop_worker_thread",
+            "symbol_kind": "local",
+            "offset": 388
+          },
+          {
+            "pc": "0x1f88c6534",
+            "unslid_va": "0x1dd622534",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_wqthread",
+            "symbol_kind": "export",
+            "offset": 284
+          },
+          {
+            "pc": "0x1f88c3ccc",
+            "unslid_va": "0x1dd61fccc",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 118190,
+          "credit_ticks": 119179,
+          "debit_ticks": 989,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 520310195520,
+          "actions": 32,
+          "sample_counter": 17586898209
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 498,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a46e8a54",
+            "unslid_va": "0x189444a54",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA6Render6Server13server_threadEPv",
+            "symbol_kind": "local",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 12239857,
+          "credit_ticks": 36415110,
+          "debit_ticks": 24175253,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 158149389583,
+          "actions": 32,
+          "sample_counter": 17586898415
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 502,
+        "state": 4,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1a495abac",
+            "unslid_va": "0x1896b6bac",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+            "symbol_kind": "local",
+            "offset": 428
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 66,
+          "limit_ticks": 518400,
+          "balance_ticks": 15629,
+          "credit_ticks": 457986223,
+          "debit_ticks": 457970594,
+          "refill_period_ns": 30000000,
+          "since_last_refill_ns": 150928750,
+          "actions": 16,
+          "sample_counter": 17586898619
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 680,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1a495abac",
+            "unslid_va": "0x1896b6bac",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+            "symbol_kind": "local",
+            "offset": 428
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 66,
+          "limit_ticks": 518400,
+          "balance_ticks": 3388,
+          "credit_ticks": 35529,
+          "debit_ticks": 32141,
+          "refill_period_ns": 30000000,
+          "since_last_refill_ns": 472930185572,
+          "actions": 16,
+          "sample_counter": 17586898886
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 681,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1a495abac",
+            "unslid_va": "0x1896b6bac",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+            "symbol_kind": "local",
+            "offset": 428
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 66,
+          "limit_ticks": 518400,
+          "balance_ticks": 2777,
+          "credit_ticks": 26014,
+          "debit_ticks": 23237,
+          "refill_period_ns": 30000000,
+          "since_last_refill_ns": 472929838958,
+          "actions": 16,
+          "sample_counter": 17586899162
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 682,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1a495abac",
+            "unslid_va": "0x1896b6bac",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+            "symbol_kind": "local",
+            "offset": 428
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 66,
+          "limit_ticks": 518400,
+          "balance_ticks": 2739,
+          "credit_ticks": 24784,
+          "debit_ticks": 22045,
+          "refill_period_ns": 30000000,
+          "since_last_refill_ns": 472929563333,
+          "actions": 16,
+          "sample_counter": 17586900050
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 683,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1a495abac",
+            "unslid_va": "0x1896b6bac",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+            "symbol_kind": "local",
+            "offset": 428
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 66,
+          "limit_ticks": 518400,
+          "balance_ticks": 2789,
+          "credit_ticks": 24390,
+          "debit_ticks": 21601,
+          "refill_period_ns": 30000000,
+          "since_last_refill_ns": 472929262812,
+          "actions": 16,
+          "sample_counter": 17586900411
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 684,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1a495abac",
+            "unslid_va": "0x1896b6bac",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+            "symbol_kind": "local",
+            "offset": 428
+          },
+          {
+            "pc": "0x1a4963e28",
+            "unslid_va": "0x1896bfe28",
+            "image": "/System/Library/Frameworks/QuartzCore.framework/QuartzCore",
+            "symbol": "__ZL10thread_funPv",
+            "symbol_kind": "local",
+            "offset": 28
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 66,
+          "limit_ticks": 518400,
+          "balance_ticks": 2744,
+          "credit_ticks": 26037,
+          "debit_ticks": 23293,
+          "refill_period_ns": 30000000,
+          "since_last_refill_ns": 472928957604,
+          "actions": 16,
+          "sample_counter": 17586900696
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 685,
+        "state": 1,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1a3165a6c",
+            "unslid_va": "0x187ec1a6c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopServiceMachPort",
+            "symbol_kind": "local",
+            "offset": 156
+          },
+          {
+            "pc": "0x1a31650dc",
+            "unslid_va": "0x187ec10dc",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFRunLoopRun",
+            "symbol_kind": "local",
+            "offset": 1208
+          },
+          {
+            "pc": "0x1a31647d0",
+            "unslid_va": "0x187ec07d0",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRunSpecific",
+            "symbol_kind": "export",
+            "offset": 572
+          },
+          {
+            "pc": "0x1a31ce348",
+            "unslid_va": "0x187f2a348",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFRunLoopRun",
+            "symbol_kind": "export",
+            "offset": 60
+          },
+          {
+            "pc": "0x1af12b7a0",
+            "unslid_va": "0x193e877a0",
+            "image": "/System/Library/Frameworks/CoreMotion.framework/CoreMotion"
+          },
+          {
+            "pc": "0x1f88c782c",
+            "unslid_va": "0x1dd62382c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_start",
+            "symbol_kind": "export",
+            "offset": 104
+          },
+          {
+            "pc": "0x1f88c3cd8",
+            "unslid_va": "0x1dd61fcd8",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_thread_start",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 164014,
+          "credit_ticks": 1035760,
+          "debit_ticks": 871746,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 125377654062,
+          "actions": 32,
+          "sample_counter": 17586900966
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 686,
+        "state": 65,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1aa82d538",
+            "unslid_va": "0x18f589538",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_mach_send_and_wait_for_reply",
+            "symbol_kind": "local",
+            "offset": 524
+          },
+          {
+            "pc": "0x1aa82d8d4",
+            "unslid_va": "0x18f5898d4",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 56
+          },
+          {
+            "pc": "0x1f8917df0",
+            "unslid_va": "0x1dd673df0",
+            "image": "/usr/lib/system/libxpc.dylib",
+            "symbol": "_xpc_connection_send_message_with_reply_sync",
+            "symbol_kind": "export",
+            "offset": 256
+          },
+          {
+            "pc": "0x1a2124d10",
+            "unslid_va": "0x186e80d10",
+            "image": "/System/Library/Frameworks/Foundation.framework/Foundation",
+            "symbol": "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+            "symbol_kind": "local",
+            "offset": 12
+          },
+          {
+            "pc": "0x1a2121528",
+            "unslid_va": "0x186e7d528",
+            "image": "/System/Library/Frameworks/Foundation.framework/Foundation",
+            "symbol": "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+            "symbol_kind": "local",
+            "offset": 2024
+          },
+          {
+            "pc": "0x1a2190b10",
+            "unslid_va": "0x186eecb10",
+            "image": "/System/Library/Frameworks/Foundation.framework/Foundation",
+            "symbol": "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+            "symbol_kind": "local",
+            "offset": 112
+          },
+          {
+            "pc": "0x1a21907cc",
+            "unslid_va": "0x186eec7cc",
+            "image": "/System/Library/Frameworks/Foundation.framework/Foundation",
+            "symbol": "__NSXPCDistantObjectSimpleMessageSend1",
+            "symbol_kind": "local",
+            "offset": 56
+          },
+          {
+            "pc": "0x1a300cb5c",
+            "unslid_va": "0x187d68b5c",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "___LAUNCH_SERVICES_IS_RESEEDING_ITS_DATABASE_AND_MAY_BLOCK__",
+            "symbol_kind": "local",
+            "offset": 16
+          },
+          {
+            "pc": "0x1a2f77dd0",
+            "unslid_va": "0x187cd3dd0",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "__LSCopyServerStore",
+            "symbol_kind": "local",
+            "offset": 892
+          },
+          {
+            "pc": "0x1a2f312d4",
+            "unslid_va": "0x187c8d2d4",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+            "symbol_kind": "local",
+            "offset": 932
+          },
+          {
+            "pc": "0x1a2f30eb8",
+            "unslid_va": "0x187c8ceb8",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+            "symbol_kind": "local",
+            "offset": 108
+          },
+          {
+            "pc": "0x1a2f5fb5c",
+            "unslid_va": "0x187cbbb5c",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "__ZN14LaunchServices19URLPropertyProviderL21prepareIsPackageValueERNS_8Database7ContextEPU34objcproto23FSNodePropertyProviding11objc_objectP11__FileCachePK10__CFStringPNS0_5StateEPU15__autoreleasingP7NSError",
+            "symbol_kind": "local",
+            "offset": 76
+          },
+          {
+            "pc": "0x1a2f5f218",
+            "unslid_va": "0x187cbb218",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "__ZN14LaunchServices19URLPropertyProviderL13prepareValuesEPK7__CFURLP11__FileCachePKPK10__CFStringPPKvlSC_PP9__CFError",
+            "symbol_kind": "local",
+            "offset": 1204
+          },
+          {
+            "pc": "0x19c9d687c",
+            "unslid_va": "0x18173287c",
+            "image": "/System/Library/PrivateFrameworks/CoreServicesInternal.framework/CoreServicesInternal",
+            "symbol": "__ZL22prepareValuesForBitmapPK7__CFURLP11__FileCacheP19_FilePropertyBitmapPP9__CFError",
+            "symbol_kind": "local",
+            "offset": 448
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 397981,
+          "credit_ticks": 397981,
+          "debit_ticks": 0,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 486286364010,
+          "actions": 32,
+          "sample_counter": 17586901312
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 687,
+        "state": 4,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_thread_preempted",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1f88c3cc4",
+            "unslid_va": "0x1dd61fcc4",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 0
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 638755,
+          "credit_ticks": 638755,
+          "debit_ticks": 0,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 485798137604,
+          "actions": 32,
+          "sample_counter": 17586901486
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 695,
+        "state": 65,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_ipc_mqueue_receive_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24b58",
+            "unslid_va": "0x1cb780b58",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_trap",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1e6a28224",
+            "unslid_va": "0x1cb784224",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg2_internal",
+            "symbol_kind": "export",
+            "offset": 76
+          },
+          {
+            "pc": "0x1e6a281b0",
+            "unslid_va": "0x1cb7841b0",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg_overwrite",
+            "symbol_kind": "export",
+            "offset": 492
+          },
+          {
+            "pc": "0x1e6a27fb8",
+            "unslid_va": "0x1cb783fb8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "_mach_msg",
+            "symbol_kind": "export",
+            "offset": 20
+          },
+          {
+            "pc": "0x1aa82d538",
+            "unslid_va": "0x18f589538",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_mach_send_and_wait_for_reply",
+            "symbol_kind": "local",
+            "offset": 524
+          },
+          {
+            "pc": "0x1aa82d8d4",
+            "unslid_va": "0x18f5898d4",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 56
+          },
+          {
+            "pc": "0x1f8917df0",
+            "unslid_va": "0x1dd673df0",
+            "image": "/usr/lib/system/libxpc.dylib",
+            "symbol": "_xpc_connection_send_message_with_reply_sync",
+            "symbol_kind": "export",
+            "offset": 256
+          },
+          {
+            "pc": "0x1ed475e58",
+            "unslid_va": "0x1d21d1e58",
+            "image": "/System/Library/PrivateFrameworks/DataMigration.framework/DataMigration",
+            "symbol": "-[DMXPCConnection sendMessageSync:]",
+            "symbol_kind": "local",
+            "offset": 52
+          },
+          {
+            "pc": "0x1ed47a4fc",
+            "unslid_va": "0x1d21d64fc",
+            "image": "/System/Library/PrivateFrameworks/DataMigration.framework/DataMigration",
+            "symbol": "-[DMConnection migrateCheckingNecessity:lastRelevantPlugin:testMigrationInfrastructureOnly:]",
+            "symbol_kind": "local",
+            "offset": 176
+          },
+          {
+            "pc": "0x1ed478ac0",
+            "unslid_va": "0x1d21d4ac0",
+            "image": "/System/Library/PrivateFrameworks/DataMigration.framework/DataMigration",
+            "symbol": "-[DMClientAPIController _migrateWithConnection:checkNecessity:lastRelevantPlugin:testMigrationInfrastructureOnly:]",
+            "symbol_kind": "local",
+            "offset": 160
+          },
+          {
+            "pc": "0x1ed4770bc",
+            "unslid_va": "0x1d21d30bc",
+            "image": "/System/Library/PrivateFrameworks/DataMigration.framework/DataMigration",
+            "symbol": "__DMPerformMigration",
+            "symbol_kind": "export",
+            "offset": 292
+          },
+          {
+            "pc": "0x1004bfe90",
+            "unslid_va": "0xe521be90",
+            "image": null
+          },
+          {
+            "pc": "0x100460a9c",
+            "unslid_va": "0xe51bca9c",
+            "image": null
+          },
+          {
+            "pc": "0x10046077c",
+            "unslid_va": "0xe51bc77c",
+            "image": null
+          },
+          {
+            "pc": "0x100460a14",
+            "unslid_va": "0xe51bca14",
+            "image": null
+          },
+          {
+            "pc": "0x1aa859c9c",
+            "unslid_va": "0x18f5b5c9c",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_call_block_and_release",
+            "symbol_kind": "local",
+            "offset": 24
+          },
+          {
+            "pc": "0x1aa85acc0",
+            "unslid_va": "0x18f5b6cc0",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_client_callout",
+            "symbol_kind": "local",
+            "offset": 16
+          },
+          {
+            "pc": "0x1aa8368f8",
+            "unslid_va": "0x18f5928f8",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_serial_drain$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 680
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 88442,
+          "credit_ticks": 88442,
+          "debit_ticks": 0,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 483999551458,
+          "actions": 32,
+          "sample_counter": 17586901785
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 742,
+        "state": 4,
+        "wait_event": 0,
+        "continuation": {
+          "symbol": "_thread_preempted",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1f88c3cc4",
+            "unslid_va": "0x1dd61fcc4",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 0
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 479049,
+          "credit_ticks": 3202456,
+          "debit_ticks": 2723407,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 293866203697,
+          "actions": 32,
+          "sample_counter": 17586901954
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 978,
+        "state": 1,
+        "wait_event": 18446744016257866640,
+        "continuation": {
+          "symbol": "_workq_unpark_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a248e8",
+            "unslid_va": "0x1cb7808e8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "___workq_kernreturn",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1f88c6580",
+            "unslid_va": "0x1dd622580",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_wqthread",
+            "symbol_kind": "export",
+            "offset": 360
+          },
+          {
+            "pc": "0x1f88c3ccc",
+            "unslid_va": "0x1dd61fccc",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 808465,
+          "credit_ticks": 3824527,
+          "debit_ticks": 3016062,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 62867723489,
+          "actions": 32,
+          "sample_counter": 17586902162
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 983,
+        "state": 65,
+        "wait_event": 18446744016249348448,
+        "continuation": {
+          "symbol": "_ulock_wait_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a24970",
+            "unslid_va": "0x1cb780970",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "___ulock_wait2",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1f88100e0",
+            "unslid_va": "0x1dd56c0e0",
+            "image": "/usr/lib/system/libsystem_platform.dylib",
+            "symbol": "__os_unfair_lock_lock_slow",
+            "symbol_kind": "local",
+            "offset": 184
+          },
+          {
+            "pc": "0x1a2f488f8",
+            "unslid_va": "0x187ca48f8",
+            "image": "/System/Library/Frameworks/CoreServices.framework/CoreServices",
+            "symbol": "____ZL35_LSSessionInitMemoryWarningListenerv_block_invoke_2",
+            "symbol_kind": "local",
+            "offset": 40
+          },
+          {
+            "pc": "0x1aa85acc0",
+            "unslid_va": "0x18f5b6cc0",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_client_callout",
+            "symbol_kind": "local",
+            "offset": 16
+          },
+          {
+            "pc": "0x1aa833004",
+            "unslid_va": "0x18f58f004",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_continuation_pop$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 532
+          },
+          {
+            "pc": "0x1aa843a78",
+            "unslid_va": "0x18f59fa78",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_source_invoke$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 1540
+          },
+          {
+            "pc": "0x1aa840798",
+            "unslid_va": "0x18f59c798",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_root_queue_drain_deferred_item",
+            "symbol_kind": "local",
+            "offset": 268
+          },
+          {
+            "pc": "0x1aa840108",
+            "unslid_va": "0x18f59c108",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_kevent_worker_thread",
+            "symbol_kind": "local",
+            "offset": 496
+          },
+          {
+            "pc": "0x1f88c656c",
+            "unslid_va": "0x1dd62256c",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_wqthread",
+            "symbol_kind": "export",
+            "offset": 340
+          },
+          {
+            "pc": "0x1f88c3ccc",
+            "unslid_va": "0x1dd61fccc",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 312475,
+          "credit_ticks": 312475,
+          "debit_ticks": 0,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 423140870208,
+          "actions": 32,
+          "sample_counter": 17586902430
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 1672,
+        "state": 1,
+        "wait_event": 18446744016257636912,
+        "continuation": {
+          "symbol": "_workq_unpark_continue",
+          "offset": 0
+        },
+        "kernel_frames": [],
+        "frames": [
+          {
+            "pc": "0x1e6a248e8",
+            "unslid_va": "0x1cb7808e8",
+            "image": "/usr/lib/system/libsystem_kernel.dylib",
+            "symbol": "___workq_kernreturn",
+            "symbol_kind": "export",
+            "offset": 8
+          },
+          {
+            "pc": "0x1f88c6580",
+            "unslid_va": "0x1dd622580",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "__pthread_wqthread",
+            "symbol_kind": "export",
+            "offset": 360
+          },
+          {
+            "pc": "0x1f88c3ccc",
+            "unslid_va": "0x1dd61fccc",
+            "image": "/usr/lib/system/libsystem_pthread.dylib",
+            "symbol": "_start_wqthread",
+            "symbol_kind": "export",
+            "offset": 8
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 1627954,
+          "credit_ticks": 4455661,
+          "debit_ticks": 2827707,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 52889652864,
+          "actions": 32,
+          "sample_counter": 17586902617
+        }
+      },
+      {
+        "pmap_lock_busy": false,
+        "task_lock_busy": false,
+        "tid": 1956,
+        "state": 4,
+        "wait_event": 0,
+        "continuation": null,
+        "kernel_frames": [
+          {
+            "symbol": "_thread_invoke",
+            "offset": 1196
+          },
+          {
+            "symbol": "_thread_block_reason",
+            "offset": 256
+          },
+          {
+            "symbol": "_thread_preempted_in_kernel",
+            "offset": 24
+          },
+          {
+            "symbol": "_ml_set_interrupts_enabled_with_debug",
+            "offset": 64
+          },
+          {
+            "symbol": "_lck_rw_done",
+            "offset": 652
+          },
+          {
+            "symbol": "_vm_fault_cleanup",
+            "offset": 368
+          },
+          {
+            "symbol": "_vm_fault_page",
+            "offset": 6608
+          },
+          {
+            "symbol": "_vm_fault_internal",
+            "offset": 4168
+          },
+          {
+            "symbol": "_vm_fault$XNU_INTERNAL",
+            "offset": 20
+          },
+          {
+            "symbol": "_handle_user_abort",
+            "offset": 240
+          },
+          {
+            "symbol": "_sleh_synchronous",
+            "offset": 1440
+          },
+          {
+            "symbol": "_fleh_synchronous",
+            "offset": 40
+          },
+          {
+            "symbol": "fleh_dispatch64_common",
+            "offset": 164
+          }
+        ],
+        "frames": [
+          {
+            "pc": "0x1f880f414",
+            "unslid_va": "0x1dd56b414",
+            "image": "/usr/lib/system/libsystem_platform.dylib",
+            "symbol": "__platform_memmove",
+            "symbol_kind": "export",
+            "offset": 548
+          },
+          {
+            "pc": "0x1a311acb8",
+            "unslid_va": "0x187e76cb8",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "_CFStringGetBytes",
+            "symbol_kind": "export",
+            "offset": 524
+          },
+          {
+            "pc": "0x1a3169c8c",
+            "unslid_va": "0x187ec5c8c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___writeObject15",
+            "symbol_kind": "local",
+            "offset": 1008
+          },
+          {
+            "pc": "0x1a316a240",
+            "unslid_va": "0x187ec6240",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___writeObject15",
+            "symbol_kind": "local",
+            "offset": 2468
+          },
+          {
+            "pc": "0x1a316a240",
+            "unslid_va": "0x187ec6240",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___writeObject15",
+            "symbol_kind": "local",
+            "offset": 2468
+          },
+          {
+            "pc": "0x1a316a240",
+            "unslid_va": "0x187ec6240",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___writeObject15",
+            "symbol_kind": "local",
+            "offset": 2468
+          },
+          {
+            "pc": "0x1a316a240",
+            "unslid_va": "0x187ec6240",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___writeObject15",
+            "symbol_kind": "local",
+            "offset": 2468
+          },
+          {
+            "pc": "0x1a316a240",
+            "unslid_va": "0x187ec6240",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___writeObject15",
+            "symbol_kind": "local",
+            "offset": 2468
+          },
+          {
+            "pc": "0x1a316976c",
+            "unslid_va": "0x187ec576c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "___CFBinaryPlistWrite15",
+            "symbol_kind": "local",
+            "offset": 188
+          },
+          {
+            "pc": "0x1a321476c",
+            "unslid_va": "0x187f7076c",
+            "image": "/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation",
+            "symbol": "__CFXPCCreateXPCMessageWithCFObject",
+            "symbol_kind": "export",
+            "offset": 196
+          },
+          {
+            "pc": "0x1be2dc9fc",
+            "unslid_va": "0x1a30389fc",
+            "image": "/System/Library/PrivateFrameworks/PowerLog.framework/PowerLog",
+            "symbol": "-[PLClientLogger xpcSendMessage:withClientID:withKey:withPayload:]",
+            "symbol_kind": "local",
+            "offset": 104
+          },
+          {
+            "pc": "0x1be2dcf28",
+            "unslid_va": "0x1a3038f28",
+            "image": "/System/Library/PrivateFrameworks/PowerLog.framework/PowerLog",
+            "symbol": "-[PLClientLogger batchTasksCacheFlush]",
+            "symbol_kind": "local",
+            "offset": 252
+          },
+          {
+            "pc": "0x1aa85acc0",
+            "unslid_va": "0x18f5b6cc0",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_client_callout",
+            "symbol_kind": "local",
+            "offset": 16
+          },
+          {
+            "pc": "0x1aa833004",
+            "unslid_va": "0x18f58f004",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_continuation_pop$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 532
+          },
+          {
+            "pc": "0x1aa843a78",
+            "unslid_va": "0x18f59fa78",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_source_invoke$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 1540
+          },
+          {
+            "pc": "0x1aa83677c",
+            "unslid_va": "0x18f59277c",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_serial_drain$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 300
+          },
+          {
+            "pc": "0x1aa837374",
+            "unslid_va": "0x18f593374",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_lane_invoke$VARIANT$armv81",
+            "symbol_kind": "local",
+            "offset": 372
+          },
+          {
+            "pc": "0x1aa840a34",
+            "unslid_va": "0x18f59ca34",
+            "image": "/usr/lib/system/libdispatch.dylib",
+            "symbol": "__dispatch_root_queue_drain_deferred_wlh",
+            "symbol_kind": "local",
+            "offset": 260
+          }
+        ],
+        "cpu_ledger": {
+          "options": 34,
+          "limit_ticks": 1728000000,
+          "balance_ticks": 285545,
+          "credit_ticks": 285545,
+          "debit_ticks": 0,
+          "refill_period_ns": 180000000000,
+          "since_last_refill_ns": 118087092395,
+          "actions": 32,
+          "sample_counter": 17586902991
+        }
+      }
+    ]
+  },
+  "copy": {
+    "sample_count": 61,
+    "console_release_observed": true,
+    "last_sample": {
+      "copy_ticks": 1427859876,
+      "max_ticks": 1835443,
+      "console_released": 1
+    },
+    "cumulative_copy_elapsed_seconds": 74.367701875,
+    "maximum_copy_elapsed_seconds": 0.09559598958333333,
+    "thumbnail_mismatches": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "scope": "Physical-counter elapsed time includes preemption; cumulative total is the last periodic sample, not an exact final total. Console release and sampled framebuffer agreement do not prove panel output or desktop.",
+    "desktop_verified": false,
+    "software_refresh_publications": [],
+    "copy_pacing_initializations": [
+      {
+        "hz": 2,
+        "timer_ready": 1
+      }
+    ],
+    "sampled_frame_cadence": [
+      {
+        "start_seconds": 260.95875901041666,
+        "end_seconds": 381.34935494791665,
+        "frame_delta": 191,
+        "frames_per_second": 1.586502654236851
+      },
+      {
+        "start_seconds": 381.34935494791665,
+        "end_seconds": 501.5012697916667,
+        "frame_delta": 240,
+        "frames_per_second": 1.9974712871792748
+      },
+      {
+        "start_seconds": 501.5012697916667,
+        "end_seconds": 621.6710068229166,
+        "frame_delta": 240,
+        "frames_per_second": 1.9971750453076915
+      }
+    ],
+    "queue_log": [
+      "RPH DISPLAY QUEUE deferred=1 successor=0",
+      "RPH DISPLAY QUEUE deferred=2 successor=1",
+      "RPH DISPLAY TIMER fired=1",
+      "RPH DISPLAY QUEUE multi_head=1",
+      "RPH DISPLAY QUEUE deferred=3 successor=1",
+      "RPH DISPLAY TIMER fired=2",
+      "RPH DISPLAY QUEUE multi_head=2",
+      "RPH DISPLAY QUEUE deferred=4 successor=1",
+      "RPH DISPLAY TIMER fired=3",
+      "RPH DISPLAY QUEUE multi_head=3",
+      "RPH DISPLAY TIMER fired=4",
+      "RPH DISPLAY QUEUE multi_head=4"
+    ]
+  },
+  "frames": {
+    "thumbnails": [
+      {
+        "frame": 1,
+        "counter": 8770798265,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T152526Z/20261105T155115Z-rooted-bootloop-readback/frame-thumbnails/frame-000001.png",
+        "seconds": 260.95875901041666
+      },
+      {
+        "frame": 192,
+        "counter": 11082297707,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T152526Z/20261105T155115Z-rooted-bootloop-readback/frame-thumbnails/frame-000192.png",
+        "seconds": 381.34935494791665
+      },
+      {
+        "frame": 432,
+        "counter": 13389214472,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T152526Z/20261105T155115Z-rooted-bootloop-readback/frame-thumbnails/frame-000432.png",
+        "seconds": 501.5012697916667
+      },
+      {
+        "frame": 672,
+        "counter": 15696473423,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T152526Z/20261105T155115Z-rooted-bootloop-readback/frame-thumbnails/frame-000672.png",
+        "seconds": 621.6710068229166
+      }
+    ],
+    "ufs_time_samples": 61,
+    "ufs_elapsed_phases": {
+      "read_seconds": 345.91684729166667,
+      "verify_seconds": 16.49650375,
+      "publish_seconds": 4.767388697916667,
+      "max_chunk_seconds": 0.11471192708333333
+    },
+    "counter_frequency": 19200000,
+    "scope": "Elapsed phase totals include scheduling/preemption, not pure CPU or hardware latency. RGB images are sampled submitted pixels; framebuffer equality covers the same sample grid. Physical panel output still requires onsite observation.",
+    "service_cpu_ledger": [
+      {
+        "service": "SpringBoard",
+        "tid": 249,
+        "credited_cpu_seconds": 7.588151614583333,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__dispatch_mach_send_and_wait_for_reply",
+          "_dispatch_mach_send_with_result_and_wait_for_reply$VARIANT$armv81",
+          "_xpc_connection_send_message_with_reply_sync",
+          "___NSXPCCONNECTION_IS_WAITING_FOR_A_SYNCHRONOUS_REPLY__",
+          "-[NSXPCConnection _sendInvocation:orArguments:count:methodSignature:selector:withProxy:]",
+          "-[NSXPCConnection _sendSelector:withProxy:arg1:]",
+          "__NSXPCDistantObjectSimpleMessageSend1",
+          "___LAUNCH_SERVICES_WAS_ASKED_TO_PERFORM_BLOCKING_IO_ON_THE_MAIN_QUEUE__",
+          "__LSCopyServerStore",
+          "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+          "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+          "-[LSApplicationRecord _initWithNode:bundleIdentifier:placeholderBehavior:systemPlaceholder:itemID:forceInBundleContainer:context:error:]",
+          "-[LSApplicationRecord initWithBundleIdentifier:fetchingPlaceholder:error:]",
+          "___81-[CCSModuleRepository _queue_filterModuleMetadataByAssociatedBundleAvailability:]_block_invoke"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 367,
+        "credited_cpu_seconds": 0.04958859375,
+        "user_symbols": [
+          "___ulock_wait2",
+          "__os_unfair_lock_lock_slow",
+          "__ZL20_LSContextInitCommonP9LSContextP17_LSDServiceDomainmPU15__autoreleasingP7NSError",
+          "__ZN14LaunchServices8Database7Context4_getEP17_LSDServiceDomainm",
+          "__LSDBEnumeratorGetNextObject",
+          "-[_LSDBEnumerator countByEnumeratingWithState:objects:count:]",
+          "-[NSEnumerator allObjects]",
+          "-[FBApplicationDataStoreRepositoryManager clearExpiredUninstalledApplicationsFromStoreIfNecessary]",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 692,
+        "credited_cpu_seconds": 0.025213697916666666,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_thread_event_wait_slow$VARIANT$armv81",
+          "___DISPATCH_WAIT_FOR_QUEUE__",
+          "__dispatch_sync_f_slow",
+          "____os_state_request_for_self_block_invoke",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "SpringBoard",
+        "tid": 1471,
+        "credited_cpu_seconds": 0.016293697916666666,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 323,
+        "credited_cpu_seconds": 5.4897771354166665,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          null,
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 456,
+        "credited_cpu_seconds": 0.2814448958333333,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 458,
+        "credited_cpu_seconds": 0.03431286458333333,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_group_wait_slow",
+          null,
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 462,
+        "credited_cpu_seconds": 0.0722384375,
+        "user_symbols": [
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 465,
+        "credited_cpu_seconds": 0.006207239583333334,
+        "user_symbols": [
+          "-[AnalyticsConfigurationObserver .cxx_construct]",
+          "_object_cxxConstructFromClass",
+          "_objc_alloc_init",
+          null,
+          null,
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": [
+          {
+            "symbol": "_thread_invoke",
+            "offset": 1196
+          },
+          {
+            "symbol": "_thread_block_reason",
+            "offset": 256
+          },
+          {
+            "symbol": "_throttle_lowpri_io",
+            "offset": 828
+          },
+          {
+            "symbol": "_vm_fault_internal",
+            "offset": 11300
+          },
+          {
+            "symbol": "_vm_fault$XNU_INTERNAL",
+            "offset": 20
+          },
+          {
+            "symbol": "_handle_user_abort",
+            "offset": 240
+          },
+          {
+            "symbol": "_sleh_synchronous",
+            "offset": 1224
+          },
+          {
+            "symbol": "_fleh_synchronous",
+            "offset": 40
+          },
+          {
+            "symbol": "fleh_dispatch64_common",
+            "offset": 164
+          }
+        ]
+      },
+      {
+        "service": "backboardd",
+        "tid": 498,
+        "credited_cpu_seconds": 1.8966203125,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "__ZN2CA6Render6Server13server_threadEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 502,
+        "credited_cpu_seconds": 23.853449114583334,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "backboardd",
+        "tid": 680,
+        "credited_cpu_seconds": 0.00185046875,
+        "user_symbols": [
+          "_mach_msg2_trap",
+          "_mach_msg2_internal",
+          "_mach_msg_overwrite",
+          "_mach_msg",
+          "___CFRunLoopServiceMachPort",
+          "___CFRunLoopRun",
+          "_CFRunLoopRunSpecific",
+          "_CFRunLoopRun",
+          "__ZN2CA12WindowServer11IOMFBServer11thread_bodyEPv",
+          "__ZL10thread_funPv",
+          "__pthread_start",
+          "_thread_start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 486,
+        "credited_cpu_seconds": 3.398103177083333,
+        "user_symbols": [
+          "_kevent_id",
+          "__dispatch_kq_poll",
+          "__dispatch_event_loop_wait_for_ownership$VARIANT$armv81",
+          "___DISPATCH_WAIT_FOR_QUEUE__",
+          "__dispatch_sync_f_slow",
+          "-[_LSInstallProgressService performJournalRecovery]",
+          "___43+[_LSInstallProgressService beginListening]_block_invoke",
+          "__dispatch_client_callout",
+          "__dispatch_once_callout",
+          "__LSServerMain",
+          "start"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 488,
+        "credited_cpu_seconds": 65.27342828125,
+        "user_symbols": [
+          "_CF_IS_OBJC",
+          "_CFDictionarySetValue",
+          "_CFDictionarySetValue",
+          "___CFPropertyListCreateFilteredDictionary",
+          "___CFBinaryPlistCreateObjectFiltered",
+          "__CFPropertyListCreateFiltered",
+          "__LSPlistDataGetValuesForKeys",
+          "__LSPlistDataGetValueForKey",
+          "-[_LSDataBackedPropertyList _getValue:forPropertyListKey:]",
+          "-[_LSLazyPropertyList objectForKey:ofClass:valuesOfClass:]",
+          "-[_LSLazyPropertyList objectForKey:ofClass:]",
+          "-[_LSStringsFileContent subscriptLoctableWithLocale:]",
+          "-[_LSStringsFileContent uncheckedObjectsForKeys:forLocaleCode:fromBundle:cacheLocalizations:]",
+          "-[_LSStringLocalizer enumerateLocalizedStringsForKeys:usingBlock:]",
+          "___129+[_LSStringLocalizer gatherLocalizedStringsForCFBundle:infoDictionary:domains:delegatesMightBeMainBundle:legacyLocalizationList:]_block_invoke_2",
+          "___NSDICTIONARY_IS_CALLING_OUT_TO_A_BLOCK__",
+          "-[__NSDictionaryM enumerateKeysAndObjectsWithOptions:usingBlock:]",
+          "+[_LSStringLocalizer gatherLocalizedStringsForCFBundle:infoDictionary:domains:delegatesMightBeMainBundle:legacyLocalizationList:]"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 497,
+        "credited_cpu_seconds": 0.4576752604166667,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 611,
+        "credited_cpu_seconds": 0.009188645833333333,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_group_wait_slow",
+          "___LAUNCH_SERVICES_CLIENTS_ARE_WAITING_FOR_THE_DATABASE_TO_FINISH_SEEDING__",
+          "-[LSDatabaseBlockingFetchClient getServerStoreBlockingWithCompletionHandler:]",
+          "___NSXPCCONNECTION_IS_CALLING_OUT_TO_EXPORTED_OBJECT_S1__",
+          "-[NSXPCConnection _decodeAndInvokeMessageWithEvent:reply:flags:]",
+          "_message_handler_message",
+          "_message_handler",
+          "__xpc_connection_call_event_handler",
+          "__xpc_connection_mach_event",
+          "__dispatch_client_callout4",
+          "__dispatch_mach_msg_invoke$VARIANT$armv81",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_mach_invoke$VARIANT$armv81",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 612,
+        "credited_cpu_seconds": 0.008998333333333334,
+        "user_symbols": [
+          "___ulock_wait",
+          "__dlock_wait",
+          "__dispatch_group_wait_slow",
+          "-[_LSInstallProgressService restoreInactiveInstalls]",
+          "__dispatch_call_block_and_release",
+          "__dispatch_client_callout",
+          "__dispatch_lane_serial_drain$VARIANT$armv81",
+          "__dispatch_lane_invoke$VARIANT$armv81",
+          "__dispatch_root_queue_drain_deferred_wlh",
+          "__dispatch_workloop_worker_thread",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1473,
+        "credited_cpu_seconds": 0.46792369791666666,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      },
+      {
+        "service": "lsd",
+        "tid": 1546,
+        "credited_cpu_seconds": 0.04337864583333333,
+        "user_symbols": [
+          "___workq_kernreturn",
+          "__pthread_wqthread",
+          "_start_wqthread"
+        ],
+        "kernel_frames": []
+      }
+    ],
+    "onsite_screen": "progress_bar",
+    "desktop_verified": false
+  },
+  "exceptions": {
+    "selected_service_exceptions": [],
+    "service_exit_counts": {},
+    "scope": "First selected-service exception records and explicitly logged service exits only;absence does not cover unselected processes.",
+    "desktop_verified": false
+  },
+  "conclusions": [
+    "967 records/952451 bytes/zero drops;five LS samples and720009ms final snapshot complete.Android boot/root/new boot ID/transient cleanup verified.Original failed/null report retained.",
+    "Independent BackBoard snapshot captures all21 threads without truncation;worker695 waits on original data migration;worker686 and profiled1436 await LS database.",
+    "SpringBoard final main thread now waits on LS application record lookup;original BKS-check-in wait is not stationary across runs.LS488 still performs localization and property-list scan;no permanent BKS deadlock established.",
+    "Profiled receiver is present142 and sampled;observed startup worker still runs and other worker waits for LaunchServices,not all threads blocked on check-in lock.",
+    "868 frames,zero transfer errors;four RGB loading-bar samples match framebuffer.UFS7265219584 logical bytes,345.917s read elapsed includes preemption;multiple sampled threads in throttle_lowpri_io.All mounted volumes already report solidstate.",
+    "Onsite progress bar confirmed;final native screen not supplied.User restored Android.No desktop."
+  ]
+}

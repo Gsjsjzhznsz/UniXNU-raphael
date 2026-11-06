@@ -4,9 +4,26 @@
 #include <RaphaelDiagnostic.h>
 #include <Library/BaseMemoryLib.h>
 #include <Library/DebugLib.h>
+#include <Library/BaseLib.h>
+#include <Library/ArmLib.h>
 STATIC UINT32 Read(UINT64 Base,UINT32 Offset){return *(volatile UINT32 *)(UINTN)(Base+Offset);}
 STATIC VOID Write(UINT64 Base,UINT32 Offset,UINT32 Value){
  *(volatile UINT32 *)(UINTN)(Base+Offset)=Value;__asm__ volatile("dsb sy":::"memory");
+}
+// Explicit diagnostic return mode: preserve the already armed hardware dog.
+// Persisted UFS records survive the reset; no full FDT checkpoint is returned.
+VOID RaphaelNativeWatchdogResetReturn(VOID){
+ if(!FixedPcdGetBool(PcdRaphaelHardwareWatchdogReturn))return;
+ RAPHAEL_NATIVE_WATCHDOG_RESULT *R=RaphaelNativeWatchdogResult();
+ // Use only this image's existing, qualified resource and thresholds.
+ if(!R->Armed||!R->Base||R->Seconds!=20||!R->Frequency)return;
+ Write(R->Base,8,0);
+ Write(R->Base,16,(UINT32)(R->Frequency*R->Seconds));
+ Write(R->Base,20,(UINT32)(R->Frequency*(R->Seconds+1)));
+ Write(R->Base,8,1);Write(R->Base,4,1);
+ DEBUG((DEBUG_INFO,"NATIVE_WATCHDOG_RESET_RETURN armed; waiting for hardware bite\n"));
+ ArmDisableInterrupts();
+ for(;;)CpuPause();
 }
 BOOLEAN RaphaelNativeWatchdogStop(VOID){
  RAPHAEL_NATIVE_WATCHDOG_RESULT *R=RaphaelNativeWatchdogResult();

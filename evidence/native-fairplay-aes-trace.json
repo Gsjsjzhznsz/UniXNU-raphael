@@ -1,0 +1,62 @@
+{
+  "implementation": "Scope SoftwareAES descriptor entry and all8 original return sites to fairplay; nonsecret argument metadata/status, no return or callback changes.",
+  "source_paths": [
+    "patches/software-aes/raphael-fairplay-result-trace.patch",
+    "scripts/build-raphael-aes-trace.py"
+  ],
+  "prior_handset": "Original FairPlay driver16 successful matches/iterator/open,then16 normal exits following original line233 AES-helper failure; raw AES return unknown.",
+  "host": {
+    "passed": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "source_preservation": {
+      "passed": true,
+      "original_statements_restored_byte_identical": true,
+      "return_sites": 8,
+      "key_material_logged": false,
+      "functional_returns_changed": false
+    },
+    "original_fairplay_driver_selected": true,
+    "observer_seconds": 360,
+    "maximum_pet_seconds": 420,
+    "memory_mib": 1536,
+    "log_mib": 32,
+    "hardware_watchdog_return": true,
+    "original_aes_behavior_preserved": true,
+    "original_services_preserved": true,
+    "key_material_logged": false,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Actual special selector2201 rejection confirmed; original checkpoint failed/null preserved.",
+  "handset_result": {
+    "valid_records": 1459,
+    "bytes": 3261754,
+    "dropped": 0,
+    "process_count": 154,
+    "captured_threads": 618,
+    "aes_events": 28,
+    "aes_failures": 14,
+    "actual_failure": {
+      "pid": 80,
+      "phase": "unsupported",
+      "status": 3758097095,
+      "bytes": 32,
+      "iv": 1,
+      "key": 1,
+      "bits": 128,
+      "selector": 2201,
+      "operation": 0,
+      "input_offset": 0,
+      "output_offset": 0,
+      "status_hex": "0xe00002c7"
+    },
+    "confirmed": "All14 original fairplay AES requests use special selector2201,128bits,32bytes,presentIV,encrypt operation0; SoftwareAES rejects at unsupported-key branch with0xe00002c7. Raw-key CBC is not reached.",
+    "source_behavior": "Original SoftwareAES supports raw selector0 and rejects every other selector; no key material logged or substitute key introduced."
+  }
+}

@@ -5,6 +5,13 @@ extern "C" void raphael_offline_keystore_probe(void);
 // Original-family development adapter over the audited inherited framebuffer.
 #include "OriginalLegacyFramebufferABI.h"
 #include "NativeLegacyRequest.h"
+#if RAPHAEL_UFS_CONSOLE_LOG
+#include "RaphaelFrameProbe.h"
+static struct rph_frame_probe frameProbe;
+extern "C" int raphael_display_copy_thumbnail(unsigned char *out,unsigned size,uint64_t meta[5]) {
+ return rph_frame_copy(&frameProbe,out,size,meta);
+}
+#endif
 #include <IOKit/IOMemoryDescriptor.h>
 #include <IOKit/IOLib.h>
 #include <IOKit/IOPlatformExpert.h>
@@ -33,6 +40,7 @@ volatile uint64_t raphael_display_validations,raphael_display_rejected,raphael_d
 volatile uint64_t raphael_display_frames,raphael_display_blank_frames,raphael_display_retired;
 volatile uint64_t raphael_display_bytes,raphael_display_nonblack,raphael_display_reject_reason;
 volatile uint64_t raphael_display_transfer_status,raphael_display_client_status,raphael_display_power_status;
+volatile uint64_t raphael_display_copy_ticks,raphael_display_copy_max_ticks,raphael_display_console_released;
 __attribute__((noinline)) void raphael_display_frame_checkpoint(void) { __asm__ volatile("" ::: "memory"); }
 volatile uint64_t raphael_display_base, raphael_display_width, raphael_display_height;
 __attribute__((noinline)) void raphael_display_checkpoint(void) { __asm__ volatile("" ::: "memory"); }
@@ -41,7 +49,7 @@ class RaphaelDesktopDisplay : public IOMobileFramebufferLegacy {
  OSDeclareDefaultStructors(RaphaelDesktopDisplay)
  IOMemoryMap *mapping=nullptr;
  const void *validated[8]={};
- bool kicking=false;
+ bool kicking=false;bool graphicsOwned=false;
  static uint32_t word(const void *p,unsigned offset) {uint32_t v;memcpy(&v,(const char *)p+offset,4);return v;}
  static void *pointer(const void *p,unsigned offset) {void *v;memcpy(&v,(const char *)p+offset,8);return v;}
  static void putPointer(void *p,unsigned offset,const void *v) {memcpy((char *)p+offset,&v,8);}
@@ -145,6 +153,12 @@ public:
   kicking=true;
   const void *request=pointer(this,0x1568);
   if(!accepted(request) || !onlyPending(request)){kicking=false;return;}
+  if(!graphicsOwned) {
+   // Original XNU console/progress owns this buffer until graphics takes it.
+   // UFS capture runs before console suppression, so serial logs remain intact.
+   initialize_screen(NULL,kPEReleaseScreen);
+   graphicsOwned=true;raphael_display_console_released=1;
+  }
   auto surface=(OSObject *)pointer(request,2624);
   bool copied=false;
   uint64_t length=raphael_display_width*raphael_display_height*4;
@@ -161,8 +175,22 @@ public:
     IOMemoryMap *source=memory->map();
     if(source && source->getVirtualAddress() && source->getLength()>=raphael_surface_allocation(surface)) {
      uint64_t stride=raphael_surface_stride(surface);
+     uint64_t copyStart,copyEnd;__asm__ volatile("mrs %0,cntpct_el0":"=r"(copyStart));
      copied=native_legacy_copy_pixels((volatile void *)mapping->getVirtualAddress(),mapping->getLength(),
       raphael_display_row_bytes,(const void *)source->getVirtualAddress(),source->getLength(),stride,width,height);
+     __asm__ volatile("dsb sy\n mrs %0,cntpct_el0":"=r"(copyEnd)::"memory");
+     raphael_display_copy_ticks=raphael_display_copy_ticks+(copyEnd-copyStart);
+     if(copyEnd-copyStart>raphael_display_copy_max_ticks)raphael_display_copy_max_ticks=copyEnd-copyStart;
+#if RAPHAEL_UFS_CONSOLE_LOG
+     if(copied) {
+      uint64_t counter,frequency;
+      __asm__ volatile("mrs %0,cntpct_el0":"=r"(counter));
+      __asm__ volatile("mrs %0,cntfrq_el0":"=r"(frequency));
+      rph_frame_capture(&frameProbe,(const void *)source->getVirtualAddress(),source->getLength(),stride,
+       (const volatile void *)mapping->getVirtualAddress(),mapping->getLength(),raphael_display_row_bytes,
+       width,height,raphael_display_frames+1,counter,frequency);
+     }
+#endif
      if(copied && raphael_display_frames<8) {
       uint64_t scan[5];
       if(native_legacy_frame_scan((const void *)source->getVirtualAddress(),source->getLength(),stride,width,height,scan))

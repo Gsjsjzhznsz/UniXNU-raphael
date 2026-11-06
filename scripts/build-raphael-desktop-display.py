@@ -75,7 +75,7 @@ public:
  IOReturn setPowerState(unsigned long,IOService *) override;
  void installBootDimensions(uint32_t w,uint32_t h) {memcpy((char *)this+0x16b0,&w,4);memcpy((char *)this+0x16b4,&h,4);}
 """
-known={184:'IOReturn supportedFrameInfo(uint32_t,uint32_t *,char *,uint32_t *)',188:'IOReturn getDotPitch(uint32_t *)',213:'bool isMainDisplay()',249:'void getDisplayDimensions(uint32_t *,uint32_t *)',288:'bool startHardware()',290:'void kickSwapQueue()',295:'void completeCurrentSwap()',296:'bool validateSwap(const void *)',354:'int setDisplayState(void *,bool)',337:'IOReturn collectCompletionReports(uint32_t,void *,uint32_t *,uint32_t)'}
+known={184:'IOReturn supportedFrameInfo(uint32_t,uint32_t *,char *,uint32_t *)',188:'IOReturn getDotPitch(uint32_t *)',213:'bool isMainDisplay()',249:'void getDisplayDimensions(uint32_t *,uint32_t *)',288:'bool startHardware()',290:'void kickSwapQueue()',295:'void completeCurrentSwap()',296:'bool validateSwap(const void *)',301:'bool getRefreshAttributes(uint64_t *,bool)',354:'int setDisplayState(void *,bool)',337:'IOReturn collectCompletionReports(uint32_t,void *,uint32_t *,uint32_t)'}
 for i in range(168,358):header+=' virtual '+known.get(i,'void opaque%d()'%i)+('=0' if i in pure else '')+';\n'
 header+='};\nstatic_assert(sizeof(IOService)==136 && sizeof(IOMobileFramebufferLegacy)==0x18a0);\n'
 (out/'OriginalLegacyFramebufferABI.h').write_text(header)
@@ -103,6 +103,9 @@ offline_aks=os.environ.get('RAPHAEL_OFFLINE_KEYSTORE')=='1'
 handset_display=os.environ.get('RAPHAEL_HANDSET_DISPLAY')=='1'
 assert not handset_display or os.environ.get('RAPHAEL_HANDSET_UFS')=='1'
 cmd+=['-DRAPHAEL_OFFLINE_KEYSTORE='+str(int(offline_aks)),'-DRAPHAEL_HANDSET_DISPLAY='+str(int(handset_display))]
+if os.environ.get('RAPHAEL_UFS_CONSOLE_LOG_REPORT'):
+ cmd+=['-DRAPHAEL_UFS_CONSOLE_LOG=1']
+ (out/'RaphaelFrameProbe.h').write_bytes((root/'kits/raphael/drivers/RaphaelFrameProbe.h').read_bytes())
 r=subprocess.run(cmd,cwd=recipe['directory'],capture_output=True,text=True);(out/'compile.log').write_text(r.stdout+r.stderr)
 if r.returncode:raise SystemExit(r.stderr[-5000:])
 buf=obj.read_bytes();im=macho(buf);st=next(p for c,p,_ in im['commands'] if c==2);sy,count,strings,_=struct.unpack_from('<4I',buf,st+8);symbols=[]
@@ -122,6 +125,11 @@ assert all(compiled) and vt+16+358*8 not in relocs and '___cxa_pure_virtual' not
 bindings={'__ZN25IOMobileFramebufferLegacyC2EPK11OSMetaClass':0xfffffff0057865cc,'__ZN25IOMobileFramebufferLegacyD2Ev':0xfffffff005786618,'__ZN25IOMobileFramebufferLegacy10gMetaClassE':0xfffffff006b35940,'__ZTV25IOMobileFramebufferLegacy':vptr-16}
 bindings.update({'_raphael_surface_'+label:address for label,(address,offset,size) in surface_getters.items()})
 bindings['_raphael_legacy_mark_swap']=0xfffffff005789d78
+# Pinned original OS software refresh publisher dispatches virtual slot301.
+assert methods[301]==0xfffffff00579ea5c
+assert read(0xfffffff00579ebb8,12)==bytes.fromhex('ff0302d1fd7b07a9fdc30191')
+assert bytes.fromhex('08b544f9') in read(0xfffffff00579ebb8,0x130)
+bindings['_raphael_legacy_set_refresh']=0xfffffff00579ebb8
 owned=[]
 for i,n in enumerate(compiled):
  if n.startswith(('__ZN21RaphaelDesktopDisplay','__ZNK21RaphaelDesktopDisplay')):owned.append(i)
@@ -137,18 +145,24 @@ archive=out/'libNativeLegacyDisplay.late.a';archive.unlink(missing_ok=True)
 subprocess.run(['xcrun','ar','rcs',archive,late,out/'bindings.o'],check=True)
 if offline_aks:
  # Generic pinned OS ABI component; no other board callbacks or hardware data.
- upstream=Path(os.environ['RAPHAEL_WORKSPACE'])/'sources/UniXNU/drivers/AppleKeyStoreState'
+ default_keystore=Path(os.environ['RAPHAEL_WORKSPACE'])/'sources/UniXNU/drivers/AppleKeyStoreState'
+ override_keystore=os.environ.get('RAPHAEL_KEYSTORE_SOURCE')
+ upstream=Path(override_keystore).resolve() if override_keystore else default_keystore
  revision=subprocess.check_output(['git','-C',upstream,'rev-parse','HEAD'],text=True).strip()
- assert revision=='42ff83e08b2265fe741d4adaf084bebe003452ba'
+ expected='8c70daf814aafdf4a3d35e40dde0322655fd0a83' if override_keystore else '42ff83e08b2265fe741d4adaf084bebe003452ba'
+ assert revision==expected
+ software_wrapping=bool(override_keystore)
+ # Freeze the selected generic implementation beside its compile record.
+ keystore_source=out/'NativeKeyStoreEvents.cpp';keystore_source.write_bytes((upstream/'NativeKeyStoreEvents.cpp').read_bytes())
  objects=[]
- for name,original in [('NativeKeyStoreEvents',upstream/'NativeKeyStoreEvents.cpp'),('RaphaelOfflineKeyStore',root/'kits/raphael/drivers/RaphaelOfflineKeyStore.cpp')]:
+ for name,original in [('NativeKeyStoreEvents',keystore_source),('RaphaelOfflineKeyStore',root/'kits/raphael/drivers/RaphaelOfflineKeyStore.cpp')]:
   target=out/(name+'.o');commands=[str(target) if v==str(obj) else str(original) if v==str(source) else v for v in cmd]
   result=subprocess.run(commands,cwd=recipe['directory'],capture_output=True,text=True)
   (out/(name+'-compile.log')).write_text(result.stdout+result.stderr)
   if result.returncode:raise SystemExit(result.stderr[-5000:])
   objects.append(target)
  subprocess.run(['xcrun','ar','rcs',archive,*objects],check=True)
- (out/'offline-keystore.json').write_text(json.dumps(dict(component='AppleKeyStoreState',revision=revision,ephemeral_unprotected_data_only=True,key_operations_available=False,handset_qualified=False,boot_argument='raphael-offline-keystore=1'),indent=2)+'\n')
+ (out/'offline-keystore.json').write_text(json.dumps(dict(component='AppleKeyStoreState',revision=revision,source=str(upstream),ephemeral_unprotected_data_only=True,key_operations_available=software_wrapping,software_wrapping=software_wrapping,hardware_protection=False,handset_qualified=False,boot_argument='raphael-offline-keystore=1'),indent=2)+'\n')
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 (out/'build-report.json').write_text(json.dumps(dict(archive_sha256=sha(archive),source_sha256={str(p.relative_to(root)):sha(p) for p in [source,out/'OriginalLegacyFramebufferABI.h',out/'NativeLegacyRequest.h']},original_family_text_sha256=plan['original_executable_sha256'][family],virtual_entries=358,owned_entries=owned,bindings={n:hex(a) for n,a in bindings.items()},surface_getters={n:dict(address=hex(a),offset=o,size=z) for n,(a,o,z) in surface_getters.items()},runtime_qualified=False,handset_qualified=False,handset_candidate=handset_display,inherited_framebuffer_only=True),indent=2)+'\n')
 print('RaphaelDesktopDisplay: 358-slot original ABI bound; real ARM64 archive built; runtime pending')

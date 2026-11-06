@@ -240,10 +240,14 @@ def decode_service_thread(t,record_words,resolve):
   for k in range(t[60]):
    fp,lr=t[64+k*2:66+k*2];assert fp%16==0 and fp>previous and t[12]<=fp<=t[12]+1048576;previous=fp
    user_frames.append(dict(fp=fp,lr=lr))
-  result.update(shared_cache_slide=None if t[58]==0xffffffff else t[58],user_fp=t[59],user_frame_status=t[61],user_frames=user_frames,user_x6_x7=list(t[56:58]))
+  result.update(task_lock_busy=bool(t[62]),pmap_lock_busy=bool(t[63]),shared_cache_slide=None if t[58]==0xffffffff else t[58],user_fp=t[59],user_frame_status=t[61],user_frames=user_frames,user_x6_x7=list(t[56:58]))
   if t[96]==0x314c4454485052:
    signed=lambda v:v-(1<<64) if v&(1<<63) else v
    result['thread_cpu_ledger']=dict(options=t[97],limit_ticks=t[98],balance_ticks=signed(t[99]),credit_ticks=signed(t[100]),debit_ticks=signed(t[101]),refill_period_ns=t[102],since_last_refill_ns=t[103],actions=t[104],sample_counter=t[105])
+  if t[106]==0x31435049485052:
+   assert t[107]==1 and t[109]<=9 and t[117]<=3
+   signed32=lambda v:(v&0xffffffff)-(1<<32) if v&(1<<31) else v&0xffffffff
+   result['ipc_wait_candidate']=dict(version=t[107],remote_name=t[108],lookup_status=t[109],remote_port=t[110],entry_bits=t[111],receiver_pid=signed32(t[112]),receiver_name=t[113],receiver_space=t[114],kobject_type=t[115],special_reply_port=t[116],special_reply_status=t[117],reply_send_once_copyout_pid=signed32(t[118]),special_reply_link_state=t[119],reply_message_count=t[120],message_id=t[121],options=t[122],saved_pc=t[123],sender_space=t[124],remote_message_count=t[125],special_inheritor_port=t[126],special_reply_receive_name=t[127],saved_receive_name=t[20]>>32,requires_matching_mach_msg2_pc=True,scope='Remote-name receiver and special-reply send-once copyout process are distinct observations; saved trap fields require matching PC. Special-reply attribution also requires matching the saved receive name. Neither alone proves a deadlock.')
  return result
 
 def decode_service_spawn_snapshot(read,symbols,resolve):

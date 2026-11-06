@@ -1,0 +1,52 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261105T072851Z",
+  "extraction": "evidence/private/ufs-console-log/20261104T182901Z/20261105T080417Z-recovered-return",
+  "valid_records": 297,
+  "bytes": 93412,
+  "dropped": 0,
+  "complete_final_snapshot": false,
+  "ls_progress_samples": 2,
+  "ls_progress": [
+    {
+      "sequence": 1,
+      "pid": 0,
+      "interpretation": "lsd not yet present"
+    },
+    {
+      "sequence": 2,
+      "pid": 98,
+      "tid": 612,
+      "interpretation": "original LS system-content scan"
+    }
+  ],
+  "last_tick": {
+    "poll": 2841,
+    "frames": 457,
+    "clients": 5
+  },
+  "ufs_last": {
+    "requests": 474681,
+    "bytes": 4421227520,
+    "failures": 0
+  },
+  "ram_data_resident_bytes": 160370688,
+  "vm_last": {
+    "free": 387,
+    "active": 22606,
+    "inactive": 20934,
+    "wired": 103232
+  },
+  "log_span_ms": 361415.92625,
+  "panic_recorded": false,
+  "pressure_kill_recorded": false,
+  "android_boot_completed": true,
+  "root_verified": true,
+  "new_android_boot_id": true,
+  "transient_property_names": [],
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "desktop_verified": false,
+  "onsite_screen": "loading-bar-or-black",
+  "interpretation": "Log stops near the third120s sampling boundary, before any third persisted snapshot. The interrupted operation is unknown; LS deadlock and full1800s execution are not established.",
+  "next_candidate": "artifacts/desktop-ls-capture-trace/20261105T081126Z"
+}

@@ -1,0 +1,51 @@
+{
+  "implementation": "Ephemeral first-desktop launchd disabled-job preference for fairplayd.A2/adid. Original job binaries/plists, source AES special-key rejection and other services retained.",
+  "reason": "Actual fairplay requests specialAES2201 and receivesUnsupported; original KeepAlive holds queued MIG1203. Upstream USB desktop documentation records these jobs disabled.",
+  "host": {
+    "passed": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "disabled_services": [
+      "com.apple.fairplayd.A2",
+      "com.apple.adid"
+    ],
+    "only_added_seed_file": "/private/var/db/com.apple.xpc.launchd/disabled.plist",
+    "original_seed_preserved": true,
+    "os_systemos_images_unchanged": true,
+    "source_special_aes_rejection_preserved": true,
+    "synthetic_service_replies": false,
+    "observer_seconds": 720,
+    "maximum_pet_seconds": 780,
+    "memory_mib": 1536,
+    "log_mib": 32,
+    "hardware_watchdog_return": true,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "limits": [
+    "Special hardware AES/FairPlay/adid capabilities not implemented or claimed.",
+    "Launchd override consumption, migration and visible desktop await handset."
+  ],
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Profile effect and removal of prior MIG1203 wait verified; original CommCenter watchdog panic interrupted full enumeration,no desktop.",
+  "handset_result": {
+    "valid_records": 2387,
+    "bytes": 4712675,
+    "dropped": 0,
+    "whole_snapshot_complete": false,
+    "named_services_captured": true,
+    "closed_processes": 170,
+    "captured_threads": 840,
+    "original_launchd_disabled_profile_effect": "No original fairplay/AES starts or exits recorded; prior queued MIG1203 absent and locationd main is originalCFRunLoop.",
+    "springboard_wait": "Original BKSSystemShellService check-in",
+    "backboard_wait": "Original CFPrefs system message and migration work remain",
+    "migration_wait": "Original CoreLocation migration NSXPC reply,progress beyond prior FairPlay1203 wait.",
+    "stop_reason": "Original watchdogd requests panic forCommCenter180s without successful checkin after2 induced crashes; watchdogd behavior preserved.",
+    "clean_hardware_return_verified": true,
+    "extra_android_reboot_performed": false
+  }
+}

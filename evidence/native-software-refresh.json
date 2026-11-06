@@ -1,0 +1,325 @@
+{
+  "scope": "independent_handset_log",
+  "candidate": "artifacts/desktop-software-refresh/20261105T133049Z",
+  "handset": {
+    "handset_run": "evidence/private/android-return-run/20261105T133438Z",
+    "extraction": "evidence/private/ufs-console-log/20261105T133049Z/20261105T135633Z-rooted-bootloop-readback",
+    "handset_boot_attempted": true,
+    "temporary_boot_accepted": true,
+    "desktop_verified": false,
+    "onsite_screen": "black",
+    "owned_memory_mib": 704,
+    "log": {
+      "valid_records": 828,
+      "bytes": 456390,
+      "dropped": 0,
+      "first_counter": 3819945084,
+      "last_counter": 17587468371,
+      "invalid_tail": null,
+      "session": "1c3c9215-9c70-499d-96a8-664d4f46805e",
+      "guards_unchanged": true,
+      "android_boot_changed": true,
+      "android_boot_completed": false,
+      "read_only_bootloop_salvage": true,
+      "persistent_log_verified": true,
+      "continuous_log_verified": true,
+      "console_lines": 5574,
+      "progress_lines": 634,
+      "service_snapshot_captured": true
+    },
+    "time_origin": "watchdog_start",
+    "log_span_ms": 717058.50453125,
+    "last_tick": {
+      "seconds": 720.1058620833334,
+      "poll": 6331,
+      "root": 7,
+      "init": 4,
+      "syscalls": 56413,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 5,
+      "status": 0,
+      "frames": 0
+    },
+    "capture_phase_count": 70,
+    "last_capture_phase": [
+      {
+        "seconds": 605.94715828125,
+        "stage": "done",
+        "sequence": 5,
+        "poll": 5221,
+        "id": 98
+      }
+    ],
+    "ls_progress_samples": 5,
+    "display": {
+      "clients": 5,
+      "validations": 0,
+      "rejected": 0,
+      "kicks": 0,
+      "frames": 0,
+      "blank_frames": 0,
+      "retired": 0,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 0,
+      "nonblack": 0
+    },
+    "display_content_scope": "Zero submitted frames and no RGB thumbnails captured.",
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 0,
+      "checkins": 58,
+      "last_checkin_counter": 17569033391,
+      "monitoring": true,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "budget": {
+      "hardware_seconds": 20,
+      "budget_ms": 780000,
+      "observer_seconds": 720.0,
+      "start_counter": 3758579396,
+      "capture_counter": 17584894461,
+      "counter_frequency": 19200000,
+      "elapsed_ms": 720120.5763020833,
+      "observer_deadline_reached": true,
+      "pets": 1331,
+      "last_pet_counter": 17582474551,
+      "status": 1
+    },
+    "snapshot_completed": true,
+    "pressure_lines": [],
+    "vm_first": [
+      {
+        "seconds": 3.5843458854166665,
+        "free": 140267,
+        "active": 0,
+        "inactive": 0,
+        "wired": 39924
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 697.30886578125,
+        "free": 1035,
+        "active": 7372,
+        "inactive": 7310,
+        "wired": 100039
+      },
+      {
+        "seconds": 707.6250502604166,
+        "free": 911,
+        "active": 5884,
+        "inactive": 5869,
+        "wired": 100249
+      },
+      {
+        "seconds": 717.9377202604167,
+        "free": 130,
+        "active": 6862,
+        "inactive": 7012,
+        "wired": 99941
+      }
+    ],
+    "ufs_first": [
+      {
+        "seconds": 3.5843458854166665,
+        "requests": 0,
+        "bytes": 0,
+        "failures": 0
+      }
+    ],
+    "ufs_last": [
+      {
+        "seconds": 697.30886578125,
+        "requests": 617923,
+        "bytes": 5193659392,
+        "failures": 0
+      },
+      {
+        "seconds": 707.6250502604166,
+        "requests": 644631,
+        "bytes": 5323330560,
+        "failures": 0
+      },
+      {
+        "seconds": 717.9377202604167,
+        "requests": 670888,
+        "bytes": 5455107072,
+        "failures": 0
+      }
+    ],
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "full_checkpoint_verified": false,
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "frame_analysis": "frame-analysis.json",
+    "onsite_observations": [
+      "boot_text",
+      "black"
+    ]
+  },
+  "copy": {
+    "sample_count": 64,
+    "console_release_observed": false,
+    "last_sample": {
+      "copy_ticks": 0,
+      "max_ticks": 0,
+      "console_released": 0
+    },
+    "cumulative_copy_elapsed_seconds": 0.0,
+    "maximum_copy_elapsed_seconds": 0.0,
+    "thumbnail_mismatches": [],
+    "scope": "Physical-counter elapsed time includes preemption; cumulative total is the last periodic sample, not an exact final total. Console release and sampled framebuffer agreement do not prove panel output or desktop.",
+    "desktop_verified": false,
+    "software_refresh_publications": [
+      {
+        "hz": 2,
+        "published": 1
+      }
+    ],
+    "sampled_frame_cadence": []
+  },
+  "exceptions": [
+    {
+      "name": "SpringBoard",
+      "exception": 6,
+      "codes": [
+        1,
+        7464535876
+      ],
+      "occurrences": 32,
+      "frames": [
+        {
+          "pc": "0x1bcebc744",
+          "unslid_va": "0x19f3d0744",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplayMode _initWithWidth:height:preferredScale:scaleOverride:refreshRate:gamut:hdr:rotation:virtual:validityCheck:]",
+          "symbol_kind": "local",
+          "offset": 580
+        },
+        {
+          "pc": "0x1bcebc744",
+          "unslid_va": "0x19f3d0744",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplayMode _initWithWidth:height:preferredScale:scaleOverride:refreshRate:gamut:hdr:rotation:virtual:validityCheck:]",
+          "symbol_kind": "local",
+          "offset": 580
+        },
+        {
+          "pc": "0x1bcecdf8c",
+          "unslid_va": "0x19f3e1f8c",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplayMode _initWithCADisplayMode:scale:rotation:]",
+          "symbol_kind": "local",
+          "offset": 208
+        },
+        {
+          "pc": "0x1bcebb99c",
+          "unslid_va": "0x19f3cf99c",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplayConfiguration _initWithImmutableDisplay:originalDisplay:assertIfInvalid:]",
+          "symbol_kind": "local",
+          "offset": 652
+        },
+        {
+          "pc": "0x1bcecb8cc",
+          "unslid_va": "0x19f3df8cc",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplaySource _updateForInitialization:forTransformInvalidation:]",
+          "symbol_kind": "local",
+          "offset": 152
+        },
+        {
+          "pc": "0x1bcecb6d0",
+          "unslid_va": "0x19f3df6d0",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplaySource initWithDisplay:alwaysConnected:triggers:monitor:]",
+          "symbol_kind": "local",
+          "offset": 772
+        },
+        {
+          "pc": "0x1bcecaf8c",
+          "unslid_va": "0x19f3def8c",
+          "image": "/System/Library/PrivateFrameworks/FrontBoardServices.framework/FrontBoardServices",
+          "symbol": "-[FBSDisplayMonitor _initWithBookendObserver:transformer:]",
+          "symbol_kind": "local",
+          "offset": 284
+        },
+        {
+          "pc": "0x1c4bd684c",
+          "unslid_va": "0x1a70ea84c",
+          "image": "/System/Library/PrivateFrameworks/FrontBoard.framework/FrontBoard",
+          "symbol": "___34+[FBDisplayManager sharedInstance]_block_invoke",
+          "symbol_kind": "local",
+          "offset": 260
+        },
+        {
+          "pc": "0x1ad0a2cc0",
+          "unslid_va": "0x18f5b6cc0",
+          "image": "/usr/lib/system/libdispatch.dylib",
+          "symbol": "__dispatch_client_callout",
+          "symbol_kind": "local",
+          "offset": 16
+        },
+        {
+          "pc": "0x1ad0740e4",
+          "unslid_va": "0x18f5880e4",
+          "image": "/usr/lib/system/libdispatch.dylib",
+          "symbol": "__dispatch_once_callout",
+          "symbol_kind": "local",
+          "offset": 28
+        },
+        {
+          "pc": "0x1c4b95fb0",
+          "unslid_va": "0x1a70a9fb0",
+          "image": "/System/Library/PrivateFrameworks/FrontBoard.framework/FrontBoard",
+          "symbol": "+[FBDisplayManager sharedInstance]",
+          "symbol_kind": "local",
+          "offset": 112
+        },
+        {
+          "pc": "0x1c4be4484",
+          "unslid_va": "0x1a70f8484",
+          "image": "/System/Library/PrivateFrameworks/FrontBoard.framework/FrontBoard",
+          "symbol": "_FBSystemShellInitialize",
+          "symbol_kind": "export",
+          "offset": 376
+        },
+        {
+          "pc": "0x1ed524d60",
+          "unslid_va": "0x1cfa38d60",
+          "image": "/System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard",
+          "symbol": "_SBSystemAppMain",
+          "symbol_kind": "export",
+          "offset": 5088
+        },
+        {
+          "pc": "0x1c6f4a228",
+          "unslid_va": "0x1a945e228",
+          "image": "/usr/lib/dyld",
+          "symbol": "start",
+          "symbol_kind": "local",
+          "offset": 1520
+        }
+      ]
+    }
+  ],
+  "conclusions": [
+    "Published=1 but zero submitted/completed frames;software2Hz cadence was not validated. No native panic recorded;watchdog58 checkins,zero failures.",
+    "SpringBoard first exception is EXC_BREAKPOINT at original FBSDisplayMode validity check,32 occurrences;original exception delivery unchanged. This candidate regresses display initialization.",
+    "828 records/456390 bytes,zero drops;five LS samples and720120ms final snapshot complete. LS continues original database scan;final signature-validation IPC wait.",
+    "Android boot_completed,root,new boot ID and absence of transient FDT properties verified;original failed/null run report preserved.",
+    "Next step traces original refresh-property consumer before selecting a corrected software cadence;no identical image rerun."
+  ],
+  "desktop_verified": false
+}

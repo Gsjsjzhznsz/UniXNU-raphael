@@ -1,0 +1,37 @@
+{
+  "implementation": "Observe original matching dictionary provider/name, original iterator-next result and actual client-open result for fairplay only. No extra matching, next-object consumption, client open, permission grant or synthesized reply.",
+  "prior_handset": "Original daemon51 normal exits, MIG1203 queued atlaunchd; actual IOKit failure remains unknown.",
+  "host": {
+    "passed": true,
+    "original_iokit_function_statements_preserved": true,
+    "scoped_process_prefix": "fairplay",
+    "original_matching_iterator_open_call_counts_preserved": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "observer_seconds": 720,
+    "maximum_pet_seconds": 780,
+    "memory_mib": 1536,
+    "log_mib": 32,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "Independent original IOKit result recovered; absent driver lookup confirmed; original full-checkpoint failed/null retained",
+  "handset_result": {
+    "valid_records": 2531,
+    "bytes": 5112724,
+    "dropped": 0,
+    "process_count": 195,
+    "captured_threads": 934,
+    "fairplay_matching_requests": 51,
+    "requested_class": "com_apple_driver_FairPlayIOKit",
+    "returned_iterator_class": "<none>",
+    "fairplay_normal_exits": 51,
+    "confirmed": "Original fairplay queries the absent FairPlayIOKit class; all51 calls return no iterator, followed by normal exit. Concrete startup dependency gap confirmed.",
+    "unproven": "Whether original driver import resolves fairplay service and queued MIG1203, and what later desktop dependencies remain."
+  }
+}

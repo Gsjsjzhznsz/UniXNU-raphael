@@ -407,7 +407,7 @@ VOID EFIAPI SecFinish (UINT64 Status) {
             if(!RaphaelNativePmapSparseRange(Sparse,Length,Base,Bytes))D->FdtCopy=0;
             else if(FdtSetProp(Fdt,Chosen,"raphael,native-pmap-tables",(VOID *)(UINTN)Sparse,(UINT32)Length))D->FdtCopy=0;
             UINT64 Transition=Pmap->Result.TransitionBase,TransitionBytes=Pmap->Result.TransitionBytes;
-            if(TransitionBytes!=16384||Transition<Base||Transition-Base>Bytes||TransitionBytes>Bytes-(Transition-Base))D->FdtCopy=0;
+            if(TransitionBytes!=RaphaelNativeTransitionPages(Pmap->Result.CleanBytes)*4096||Transition<Base||Transition-Base>Bytes||TransitionBytes>Bytes-(Transition-Base))D->FdtCopy=0;
             else if(FdtSetProp(Fdt,Chosen,"raphael,native-pmap-transition",(VOID *)(UINTN)Transition,(UINT32)TransitionBytes))D->FdtCopy=0;
             UINT64 Adt=Pmap->AdtSnapshot,AdtBytes=Pmap->Result.AdtBytes;
             if(!AdtBytes||AdtBytes>65536||Adt<Base||Adt-Base>Bytes||AdtBytes>Bytes-(Adt-Base))D->FdtCopy=0;

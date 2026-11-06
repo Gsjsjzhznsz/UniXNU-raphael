@@ -1,5 +1,3 @@
-> Historical 2026-11-01 snapshot. See README.md and development/docs/HANDOFF-20261101.zh-CN.md for the 2026-11-05 status. Later local runs reached launchd main and display-service frames, but no visible desktop.
-
 # Sanitized local progress, 2026-11-01
 
 This is a source-maintained summary of existing local runs, not a replacement for immutable, publicly accessible device logs. No complete commit captures the dirty device/SoC/workspace implementation. Consequently porting.toml uses implemented/planned levels, not formal host-verified/device-verified status. Local hardware results below remain real observations with that publication limit.

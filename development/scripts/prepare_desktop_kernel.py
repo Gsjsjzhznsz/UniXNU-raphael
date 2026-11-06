@@ -20,6 +20,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--kernelcache', type=Path, required=True)
     parser.add_argument('--inspection', type=Path, default=ROOT / 'UniXNU-raphael/evidence/native-kernel-structure.json')
+    parser.add_argument('--original-fairplay', action='store_true', help='Explicit21H461 original FairPlayIOKit import with audited symbol addends')
     args = parser.parse_args()
     upstream = ROOT / 'sources/UniXNU'
     sys.path.insert(0, str(upstream / 'scripts'))
@@ -41,6 +42,11 @@ def main():
     command = [sys.executable, str(upstream / 'kits/XnuPrelink/emit_prelink.py'),
                '--kernel', str(kernel), '--prelinked', str(cache),
                '--slide=' + profile['slide'], '--output', str(candidate)]
+    if args.original_fairplay:
+        if ctx.board['board']['os_profile'] != 'ipados-17.7.11-21H461':
+            raise ValueError('Original FairPlay addends are qualified only for the explicit21H461 candidate')
+        command[1] = str(ROOT / 'scripts/emit_fairplay_prelink.py')
+        command += ['--root', 'com.apple.driver.FairPlayIOKit']
     for name in profile['roots']:
         command += ['--root', name]
     if profile.get('early_security_init'):

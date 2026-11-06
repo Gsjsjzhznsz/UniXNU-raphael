@@ -120,7 +120,7 @@ def inspect_fd(raw, base):
                 assert section_type==0x19 and n>=68
                 wp_magic,wp_version,wp_total,wp_base,wp_size,wp_virtual,wp_window,wp_guards=struct.unpack_from('<8Q',raw,pos+4)
                 assert wp_magic==MAGIC and wp_version==1 and wp_total==n-4==64+16*wp_guards and 1<=wp_guards<=128
-                assert wp_window in (WINDOW,2*WINDOW,704*1048576) and wp_size==wp_window+BLOCK and wp_base%BLOCK==0 and wp_virtual%4096==0
+                assert wp_window in (WINDOW,2*WINDOW,704*1048576,896*1048576,1536*1048576) and wp_size==wp_window+BLOCK and wp_base%BLOCK==0 and wp_virtual%4096==0
                 assert wp_base+wp_size<1<<64
                 for wp_i in range(wp_guards):
                     wp_a,wp_length=struct.unpack_from('<2Q',raw,pos+68+16*wp_i)
@@ -171,7 +171,7 @@ def inspect_fd(raw, base):
                     assert trust[0]==start
                     assert 0<trust[1]<=16*1048576 and trust[0]+trust[1]<=words[10]-2*1048576
                     assert trust[2]<=0xffffffff and trust[3]+16<=words[7]
-                assert words[4]>words[3] and words[3]<=words[5]<words[4] and words[10] in (256*1048576,512*1048576,704*1048576)
+                assert words[4]>words[3] and words[3]<=words[5]<words[4] and words[10] in (256*1048576,512*1048576,704*1048576,896*1048576,1536*1048576)
                 section['native_load_policy_sha256']=sha(raw[pos+4:pos+n])
             if guid==UFS_WRITE_GUID:
                 from ufs_write_probe import inspect_policy

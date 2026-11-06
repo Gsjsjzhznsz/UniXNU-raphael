@@ -2,6 +2,9 @@
 # Isolated SEC/DXE diagnostic. Every placement is supplied by a generated layout.
 # No default handset addresses. Native payload/loader support is opt-in.
 [Defines]
+!ifndef RAPHAEL_HARDWARE_WATCHDOG_RETURN
+  DEFINE RAPHAEL_HARDWARE_WATCHDOG_RETURN = FALSE
+!endif
 !ifndef RAPHAEL_UFS_WRITE_PROBE
   DEFINE RAPHAEL_UFS_WRITE_PROBE = FALSE
 !endif
@@ -294,6 +297,7 @@
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogBase|$(RAPHAEL_NATIVE_WATCHDOG_BASE)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogHz|$(RAPHAEL_NATIVE_WATCHDOG_HZ)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogSeconds|$(RAPHAEL_NATIVE_WATCHDOG_SECONDS)
+  gRaphaelTokenSpaceGuid.PcdRaphaelHardwareWatchdogReturn|$(RAPHAEL_HARDWARE_WATCHDOG_RETURN)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeKallocZones|$(RAPHAEL_NATIVE_KALLOC_ZONES)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativePlatformTest|$(RAPHAEL_NATIVE_PLATFORM_TEST)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativePmapTest|$(RAPHAEL_NATIVE_PMAP_TEST)
@@ -381,6 +385,7 @@
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogBase|$(RAPHAEL_NATIVE_WATCHDOG_BASE)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogHz|$(RAPHAEL_NATIVE_WATCHDOG_HZ)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogSeconds|$(RAPHAEL_NATIVE_WATCHDOG_SECONDS)
+  gRaphaelTokenSpaceGuid.PcdRaphaelHardwareWatchdogReturn|$(RAPHAEL_HARDWARE_WATCHDOG_RETURN)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeKallocZones|$(RAPHAEL_NATIVE_KALLOC_ZONES)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativePlatformTest|$(RAPHAEL_NATIVE_PLATFORM_TEST)
   gRaphaelTokenSpaceGuid.PcdRaphaelNativePmapTest|$(RAPHAEL_NATIVE_PMAP_TEST)

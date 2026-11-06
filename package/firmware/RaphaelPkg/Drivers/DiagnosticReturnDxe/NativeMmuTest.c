@@ -170,18 +170,8 @@ STATIC BOOLEAN Translate(UINT64 Root,UINT64 Address,BOOLEAN High,UINT64 *Physica
 }
 STATIC BOOLEAN ExactTables(VOID) {
   RAPHAEL_NATIVE_MMU_RESULT *R=&gRaphaelNativeMmu;
-  UINT64 Pb=(R->ExpectedPhysBase+mP.BootstrapSkip)&~0x1fffffULL,Vb=(R->ExpectedVirtBase+mP.BootstrapSkip)&((1ULL<<38)-1)&~0x1fffffULL;
-  UINTN Pi=(Pb>>21)&511,Vi=(Vb>>21)&511,Blocks=(R->ExpectedMemBytes-mP.BootstrapSkip)>>21;
-  if(!Blocks||Blocks>352||Pi+Blocks>512||Vi+Blocks>512)return FALSE;
-  for(UINTN Page=0;Page<16;++Page)for(UINTN I=0;I<512;++I) {
-    UINT64 Expected=0;
-    if(Page==0&&I==((Pb>>30)&255))Expected=(R->Tables+8192)|3;
-    if(Page==1&&I==((Vb>>30)&255))Expected=(R->Tables+12288)|3;
-    if(Page==2&&I>=Pi&&I<Pi+Blocks)Expected=(Pb+((I-Pi)<<21))|0x601;
-    if(Page==3&&I>=Vi&&I<Vi+Blocks)Expected=(Pb+((I-Vi)<<21))|0x601;
-    if(ReadUnaligned64((VOID *)(mTablesAfter+Page*4096+I*8))!=Expected)return FALSE;
-  }
-  return TRUE;
+  return RaphaelNativeBootstrapTablesMatch((CONST UINT64 *)mTablesAfter,R->Tables,
+    R->ExpectedPhysBase,R->ExpectedVirtBase,R->ExpectedMemBytes,mP.BootstrapSkip);
 }
 EFI_STATUS RaphaelArmNativeMmu(UINT64 Entry,UINT64 Args) {
   RAPHAEL_NATIVE_MMU_RESULT *R=&gRaphaelNativeMmu;RAPHAEL_DIAGNOSTIC *D=RaphaelDiagnostic();
@@ -261,6 +251,7 @@ EFI_STATUS RaphaelArmNativeMmu(UINT64 Entry,UINT64 Args) {
 }
 VOID RaphaelMmuCaptured(VOID) {
   RAPHAEL_NATIVE_MMU_RESULT *R=&gRaphaelNativeMmu;
+  RaphaelNativeWatchdogResetReturn();
   BOOLEAN WatchdogOk=RaphaelNativeWatchdogStop();
   BOOLEAN PlatformOk=!FixedPcdGetBool(PcdRaphaelNativePlatformTest)||RestorePlatform();
   if(RaphaelNativePlatformStop()>=13)PlatformOk=RaphaelRestoreNativeGic(&mMmuState.Gic)&&PlatformOk;

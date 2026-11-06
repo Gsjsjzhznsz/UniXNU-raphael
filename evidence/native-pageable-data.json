@@ -1,0 +1,135 @@
+{
+  "candidate": "artifacts/desktop-pageable-data/20261105T182953Z",
+  "parent_candidate": "artifacts/desktop-platform-long/20261105T174010Z",
+  "functional_changes": [
+    "CPU-only sparse Data pages: wired IOMallocZero/IOFree to original IOMallocPageableZero/IOFreePageable;all three allocation sites and both release loops paired"
+  ],
+  "cause": {
+    "backboard_jetsam": "RPH SERVICE EXIT pid=57 name=backboardd status=9 reason_namespace=1 reason_code=4 reason_flags=0 free=1294 active=6373 inactive=6406 wired=125774",
+    "ram_data_allocated_bytes": 236015616,
+    "original_watchdog_failure": true
+  },
+  "unchanged": [
+    "704MiB memory ownership",
+    "original services and binaries",
+    "2Hz display queue",
+    "1800/1860s observer/pet and20s hardware threshold",
+    "stable private platform identity",
+    "same ephemeral Data seed;no backing-store writes"
+  ],
+  "expected": [
+    "Data content and I/O remain correct",
+    "wired pressure reduces as Data grows",
+    "BackBoard not killed for VM page shortage;screen proof still required"
+  ],
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "host": {
+    "passed": true,
+    "scope": "host_build_existing_sparse_IO_regression_and_recovery_QEMU_only",
+    "data_page_allocators": 3,
+    "matching_page_release_loops": 2,
+    "original_pageable_API_defined_in_native_kernel": true,
+    "qemu_checks": 39,
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261105T183104Z",
+      "payload": "evidence/private/handset-payload/20261105T183107Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T174010Z-watchdog-budget",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T183035Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261105T183109Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261105T183116Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261105T183123.294837Z-op2tu04w/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261105T183231.648099Z-d20k42u7/report.json",
+      "handset_boot_attempted": false
+    },
+    "handset_boot_attempted": false,
+    "desktop_verified": false,
+    "compiled_RamBlock_pageable_imports": [
+      "_IOMallocPageableZero",
+      "_IOFreePageable"
+    ]
+  },
+  "scope": "host_passed_handset_independent_UFS_verified_no_desktop",
+  "handset_run": "evidence/private/android-return-run/20261105T183513Z",
+  "handset_result": "artifacts/desktop-pageable-data/20261105T182953Z/handset-result.json",
+  "handset": {
+    "automatic_reboot_reported": true,
+    "panic_reason": "no successful checkins from CommCenter (4 induced crashes) in 180 seconds\nservice: backboardd, total successful checkins in 1428 seconds: 30, last successful checkin: 0 seconds ago\nservice: mediaserverd, total successful checkins in 1428 seconds: 31, last successful checkin: 0 seconds ago\nservice: audiomxd, total successful checkins in 1428 seconds: 31, last successful checkin: 0 seconds ago\nservice: logd, total successful checkins in 1428 seconds: 35, last successful checkin: 0 seconds ago\nservice: thermalmonitord, total successful checkins in 1428 seconds: 35, last successful checkin: 0 seconds ago\nservice: runningboardd, total successful checkins in 1428 seconds: 35, last successful checkin: 0 seconds ago\nservice: configd, total successful checkins in 1428 seconds: 34, last successful checkin: 0 seconds ago\nservice: CommCenter (4 induced crashes), total successful checkins in 1428 seconds: 2, last successful checkin: 180 seconds ago\n",
+    "reason_scope": "Original watchdogd selector2 requested panic for missed CommCenter checkins; not normal1800s observer completion.",
+    "log_records": 1595,
+    "log_bytes": 1299787,
+    "dropped": 0,
+    "time_origin": "first_persisted_log_record",
+    "log_span_seconds": 1229.4322670312501,
+    "last_tick": {
+      "seconds": 1229.43226703125,
+      "poll": 10931,
+      "root": 7,
+      "init": 4,
+      "syscalls": 95656,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 7,
+      "status": 0,
+      "frames": 1205
+    },
+    "ls_samples": 10,
+    "final_snapshot_captured": false,
+    "all_processes_captured": false,
+    "service_exits": [
+      {
+        "seconds": 879.5712301041667,
+        "pid": 57,
+        "name": "backboardd",
+        "status": 9,
+        "reason_namespace": 1,
+        "reason_code": 5,
+        "reason_flags": 0,
+        "free": 34954,
+        "active": 5115,
+        "inactive": 4199,
+        "wired": 71006
+      }
+    ],
+    "backboard_exit_reason": {
+      "namespace": 1,
+      "code": 5,
+      "meaning": "JETSAM_REASON_MEMORY_PROCTHRASHING",
+      "source": "sources/apple-xnu-native/bsd/sys/kern_memorystatus.h:295"
+    },
+    "data_last": {
+      "seconds": 1226.3252630208333,
+      "allocated_bytes": 223297536,
+      "reads": 13585,
+      "writes": 12419,
+      "failures": 0,
+      "zero_write_bytes": 483328
+    },
+    "data_scope": "Allocated buffer bytes; pageable buffers may be compressed. Actual physical residency is not measured.",
+    "vm_last": {
+      "seconds": 1226.3252630208333,
+      "free": 293,
+      "active": 7586,
+      "inactive": 7389,
+      "wired": 74764
+    },
+    "parent_vm_last": {
+      "seconds": 1017.0279205208333,
+      "free": 986,
+      "active": 4376,
+      "inactive": 4342,
+      "wired": 127816
+    },
+    "wired_last_difference_mib": 207.234375,
+    "comparison_scope": "Raw final samples at different elapsed times; not measured exact Data residency or a matched-duration benchmark.",
+    "thumbnail_count": 8,
+    "thumbnail_content": "All eight sampled submitted RGB frames are progress bar; last frame1179 viewed.",
+    "ls_pid_scope": "Later periodic PID0 means no lsd found below256; process may have restarted above255. Full allproc missing, so later lsd state unknown.",
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "desktop_verified": false,
+    "next_step": "Retain pageable Data; capture all processes at600s and1000s before original watchdogd panic, preserve original services and final1800s observer."
+  }
+}

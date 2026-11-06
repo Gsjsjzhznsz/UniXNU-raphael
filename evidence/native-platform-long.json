@@ -1,0 +1,132 @@
+{
+  "scope": "handset_log_recovered_original_watchdog_panic",
+  "candidate": "artifacts/desktop-platform-long/20261105T174010Z",
+  "functional_change": "Existing explicit v6 observer1800s/pet1860s contract after confirmed UUID repair and active LS work at720s;retain20s hardware threshold",
+  "host_regression": {
+    "passed": true,
+    "only_adt_property": "/cpus/cpu0/unixnu,diagnostic-watchdog",
+    "only_contract_change": "720s/780s to existing1800s/1860s",
+    "all_other_adt_bytes_preserved": true,
+    "hardware_threshold_seconds": 20,
+    "platform_identity_preserved": true,
+    "services_and_display_sources_unchanged": true,
+    "handset_verified": false
+  },
+  "baseline": "evidence/native-platform-uuid.json",
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "host": {
+    "passed": true,
+    "scope": "host_build_and_recovery_qemu_only",
+    "candidate": "artifacts/desktop-platform-long/20261105T174010Z",
+    "host_regression": {
+      "passed": true,
+      "only_adt_property": "/cpus/cpu0/unixnu,diagnostic-watchdog",
+      "only_contract_change": "720s/780s to existing1800s/1860s",
+      "all_other_adt_bytes_preserved": true,
+      "hardware_threshold_seconds": 20,
+      "platform_identity_preserved": true,
+      "services_and_display_sources_unchanged": true,
+      "handset_verified": false
+    },
+    "qemu_checks": 39,
+    "kernel": true,
+    "handset_image": true,
+    "pointers": {
+      "prelink": "artifacts/desktop-prelink/20261105T174221Z",
+      "payload": "evidence/private/handset-payload/20261105T174224Z",
+      "memory_budget": "evidence/private/handset-storage-adt/20261105T174010Z-watchdog-budget",
+      "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T174031Z/report.json",
+      "stage": "evidence/private/handset-system-disks/20261105T174226Z",
+      "extent_plan": "evidence/private/ufs-readonly/20261105T174233Z",
+      "qemu_report": "artifacts/native-staging-qemu/20261105T174240.382437Z-jng5i17e/report.json",
+      "handset_build_report": "evidence/private/android-return-build/20261105T174349.457998Z-bvfl8ncz/report.json",
+      "handset_boot_attempted": false
+    },
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_run": "evidence/private/android-return-run/20261105T174751Z",
+  "handset_result": "artifacts/desktop-platform-long/20261105T174010Z/handset-result.json",
+  "termination_analysis": "artifacts/desktop-platform-long/20261105T174010Z/termination-analysis.json",
+  "handset": {
+    "automatic_reboot_reported": true,
+    "panic_reason": "no successful checkins from mediaserverd (2 induced crashes) \nservice: backboardd, total successful checkins in 1224 seconds: 19, last successful checkin: 0 seconds ago\nservice: mediaserverd (2 induced crashes), no successful checkins in 1224 seconds\nservice: audiomxd (2 induced crashes), no successful checkins in 1224 seconds\nservice: logd, total successful checkins in 1224 seconds: 19, last successful checkin: 0 seconds ago\nservice: thermalmonitord (2 induced crashes), no successful checkins in 1224 seconds\nservice: runningboardd, total successful checkins in 1224 seconds: 14, last successful checkin: 0 seconds ago\nservice: configd, total successful checkins in 1224 seconds: 13, last successful checkin: 0 seconds ago\nservice: CommCenter (2 induced crashes), total successful checkins in 1224 seconds: 1, last successful checkin: 180 seconds ago\n",
+    "reason_scope": "Original watchdogd selector2 text persisted before kernel panic;not hardware20s expiry or observer1800s deadline.",
+    "log_records": 1271,
+    "log_bytes": 848080,
+    "dropped": 0,
+    "log_span_seconds": 1025.3112781770833,
+    "time_origin": "first_persisted_log_record",
+    "last_tick": {
+      "seconds": 1025.3112781770833,
+      "poll": 9091,
+      "root": 7,
+      "init": 4,
+      "syscalls": 65904,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 6,
+      "status": 0,
+      "frames": 782
+    },
+    "ls_samples": 8,
+    "final_snapshot_captured": false,
+    "all_processes_captured": false,
+    "final_budget_watchdog_metrics": null,
+    "thumbnail_count": 4,
+    "thumbnails": [
+      {
+        "frame": 1,
+        "counter": 8162439723,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T174027Z/20261105T180930Z-automatic-return/frame-thumbnails/frame-000001.png",
+        "seconds": 225.4959684375
+      },
+      {
+        "frame": 215,
+        "counter": 10472297838,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T174027Z/20261105T180930Z-automatic-return/frame-thumbnails/frame-000215.png",
+        "seconds": 345.80107859375
+      },
+      {
+        "frame": 455,
+        "counter": 12779329551,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T174027Z/20261105T180930Z-automatic-return/frame-thumbnails/frame-000455.png",
+        "seconds": 465.9589803125
+      },
+      {
+        "frame": 595,
+        "counter": 15216504848,
+        "nonblack": 55,
+        "framebuffer_nonblack": 55,
+        "mismatches": 0,
+        "path": "/home/guo/work/raphael-fresh/evidence/private/ufs-console-log/20261105T174027Z/20261105T180930Z-automatic-return/frame-thumbnails/frame-000595.png",
+        "seconds": 592.8951936979166
+      }
+    ],
+    "pressure_lines": [
+      "RPH SERVICE EXIT pid=57 name=backboardd status=9 reason_namespace=1 reason_code=4 reason_flags=0 free=1294 active=6373 inactive=6406 wired=125774"
+    ],
+    "last_ram_data_resident_bytes": 236015616,
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "desktop_verified": false,
+    "backboard_exit_reason": {
+      "namespace": 1,
+      "code": 4,
+      "meaning": "JETSAM_REASON_MEMORY_VMPAGESHORTAGE",
+      "source": "sources/apple-xnu-native/bsd/sys/kern_memorystatus.h:294"
+    }
+  }
+}

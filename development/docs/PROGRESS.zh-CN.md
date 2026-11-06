@@ -1,3 +1,355 @@
+# 官方跳过首次设置候选已实机启动
+
+180944Z官方skip-setup/no-auto-dim候选唯一临时启动已接受；仅更改独立临时Data种子中的官方21H461首次设置/保持亮屏配置，保留1536MiB/32MiB日志/2Hz及1800/1860秒合同、原watchdogd和现有服务策略。887记录内核、39项恢复QEMU及手机镜像已通过。自动回收进行中，不再常规询问画面；原欢迎UI已实机确认，主屏幕仍待验。候选：`artifacts/desktop-skip-setup/20261106T175720Z`。
+
+# 实机欢迎UI及正常SpringBoard事件循环已确认
+
+172949Z长窗口已自动回Android，回收6710条/13949575字节/dropped0；600秒183进程883线程、1000秒209进程1092线程、1800秒189进程655线程均完整。SpringBoard27在1005秒进入原SBDashBoardSetupViewController欢迎文字动画，最终进入UIApplication事件循环，已越过原BKS签到等待；用户两次报告你好欢迎页且持续超过60秒。2698帧、13张RGB采样framebuffer差异0，实际查看低分辨率样本为深灰欢迎背景和细小元素，不能独立读出欢迎文字；无图标桌面。原watchdog165次签到/0失败，无记录panic/压力kill。Android/root/新boot ID/临时FDT清理成立；原完整failed/null保持。下一候选采用官方21H461 skip-setup及no-auto-dim临时Data偏好，已完成887记录内核、39项恢复QEMU和手机镜像。证据：`artifacts/desktop-no-locationd-long/20261106T172309Z/interpretation.json`。
+
+# 实机首次显示原生你好欢迎界面
+
+北京时间2026-11-07约01:50，172949Z长窗口实机用户明确报告“目前开机了，显示的是苹果你好欢迎页面”。这是本机首次越过进度条进入原生首次设置欢迎UI的现场证据；当前采集仍运行，持续60秒及对应UFS/RGB待回收。D01仍未完成，欢迎页不等同含StatusBar/Dock的SpringBoard桌面；原failed/null完整checkpoint判据保持。后续重点由迁移阻塞转为原首次设置流程及桌面，取消常规画面询问。证据：`artifacts/desktop-no-locationd-long/20261106T172309Z/native-hello-observation.json`。
+
+# 原系统启动图迁移定时等待已定位
+
+对170225Z子进程248/thread2245解析原SpringBoard.migrator相对方法表及反汇编：三个返回PC共同匹配装载基址0x100867000，对应performSystemAppMigrationRecreating:、performSplashBoardSystemLaunchImagesMigrationRecreating:、performMigration。原dispatch_time传入300000000000ns，原dispatch_semaphore_wait使用300秒期限，回调原生signal；返回后不按timeout结果跳转。未捕获装载映像UUID、未测本次实际等待起点，不宣称已超时/迁移完成；当前同配置30分钟自动观察继续。证据：`artifacts/desktop-no-locationd/20261106T165808Z/migration-timeout-analysis.json`。
+
+# 无定位服务同配置30分钟自动实机观察中
+
+172949Z唯一临时启动已接受，同无定位首桌面服务配置，原seed/1536MiB/32MiB日志/2Hz显示保持；使用已有1800/1860秒内核及ADT匹配合同与600/1000/1800秒全进程采样。自动回收后比较迁移子进程的原PNG编码/定时等待是否变化、原watchdogd与RGB；不再询问常规屏幕状态。尚无桌面。候选：`artifacts/desktop-no-locationd-long/20261106T172309Z`。
+
+# 无定位服务同配置30分钟候选构建完成
+
+同无定位服务配置长窗口候选构建通过：只将已有720/780秒合同改为1800/1860秒及既有600/1000/1800进程采样，原seed/服务/1536MiB/32MiB日志/2Hz显示与20秒硬件阈值保持。887记录内核、预链接/载荷、39项恢复QEMU及临时镜像通过；等待原PNG启动快照编码及迁移是否继续。无新桌面证据。候选：`artifacts/desktop-no-locationd-long/20261106T172309Z`。
+
+# 无定位配置解除CoreLocation迁移栈，原启动快照仍在编码
+
+170225Z实机自动回Android，2717条/5552176字节/dropped0，720秒完整199进程1040线程；locationd/CommCenter不在完整快照，无记录watchdog panic/压力kill。迁移child248最终线程不再有CLInternalPerformMigration，thread2258采样在原SplashBoard启动快照PNG编码（ImageIO/libz deflate），thread2245等定时信号量；单样本不能证明持续进展或死锁。SB仍等原BKS签到，851帧/五张RGB采样framebuffer差异0，末张已打开仍进度条，无桌面；原完整failed/null保留。下一轮保持服务/内存/显示，仅使用已有1800/1860秒匹配合同及600/1000/1800秒进程采样，判别冷启动快照生成与持续等待；旧30分钟轮次仍有FairPlay阻塞，不能代替当前配置。用户要求取消常规画面询问，继续自动回收。证据：`artifacts/desktop-no-locationd/20261106T165808Z/interpretation.json`。
+
+# 无定位首桌面配置自动实机观察中
+
+170225Z唯一临时启动接受；在已无CommCenter的首桌面配置中只新增停用com.apple.locationd，原迁移框架/错误处理、原watchdogd和720/780秒、1536MiB/32MiB日志/2Hz显示/硬件狗保持。与NoCommCenter基线的其他内核参数及ADT逐字节相同，只有disabled.plist多一项locationd。等待原迁移处理定位服务不可用时的实际行为、SpringBoard和RGB画面。按用户最新偏好不再逐轮询问屏幕状态，自动启动/等待/回收；仅自动恢复失败需要手动操作时提醒。候选：`artifacts/desktop-no-locationd/20261106T165808Z`。
+
+# 无定位首桌面候选构建完成
+
+仅在上一首桌面配置中再停用com.apple.locationd的新候选构建通过；原watchdogd、其余seed/OS、特殊AES拒绝及720/780秒合同保持。887记录内核、预链接/载荷、恢复QEMU39项及临时手机镜像通过。等待locationd未注册时原watchdogd实际行为、迁移/SpringBoard与现场桌面；不宣称本机定位能力。候选：`artifacts/desktop-no-locationd/20261106T165808Z`。
+
+# 无CommCenter配置恢复完整快照，定位迁移/UI同步依赖
+
+163425Z实机自动回Android，2605条/5277844字节/dropped0，720秒完整197进程973线程；CommCenter未出现在完整快照，原watchdogd无panic，压力kill无记录。MIG1203保持消失，BackBoard主线程和LS主线程已到原CFRunLoop；LS数据库写线程在CSStore deflate。SB仍等BKS签到；迁移child263等CoreLocation NSXPC，定位后台线程同步等ActivityKit/SpringBoard、BLS及IDS，另有迁移thread2728通过MIG40224请求BackBoard渲染启动图。存在启动互等假设，尚未证明完整因果。977帧、五张RGB采样framebuffer差异0，末张已打开仍加载条，无桌面；原完整failed/null保持。下一候选只再停用locationd，使用原迁移错误处理/回退，不伪造迁移完成；原watchdogd及720/780秒合同保持。证据：`artifacts/desktop-no-commcenter/20261106T163033Z/interpretation.json`。
+
+# 无CommCenter首桌面实机观察中
+
+163425Z唯一临时启动接受；只在已验证fairplay/adid停用配置中增加com.apple.CommCenter，原watchdogd/其他服务、720/780秒、1536MiB/32MiB日志/2Hz显示/硬件狗保持。等待原watchdogd在CommCenter未注册情况下的实际行为、迁移和SpringBoard桌面；上一155932Z日志已解除MIG1203，原CommCenter看门狗panic和部分全进程证据单独保留。候选：`artifacts/desktop-no-commcenter/20261106T163033Z`。
+
+# 无CommCenter首桌面候选构建完成
+
+仅在上一首桌面配置中再停用com.apple.CommCenter的新候选构建通过；原watchdogd、其余seed/OS、特殊AES拒绝及720/780秒合同保持。887记录内核、预链接/载荷、恢复QEMU39项及临时手机镜像通过。等待CommCenter未注册时原watchdogd实际行为、迁移/SpringBoard与现场桌面；不宣称本机基带功能。候选：`artifacts/desktop-no-commcenter/20261106T163033Z`。
+
+# 首桌面配置已解除FairPlay等待，原CommCenter看门狗中断
+
+155932Z实机自动回Android，2387条/4712675字节/dropped0；720秒命名服务段完整，原watchdogd因CommCenter两次诱导重启后180秒未签到请求panic，整体快照在ALLPROC_0171_000中断。读回端修复可选末段导致全部完整段被隐藏的问题，保留captured=false，从原始闭合段恢复170进程840线程，不补写尾段；旧完整快照新旧解码相同。FairPlay/AES启动已无记录，MIG1203消失，locationd主线程到原CFRunLoop；SB仍等BKS，BackBoard有CFPrefs同步等待，迁移child仍等CoreLocation迁移NSXPC。871帧、五张RGB采样framebuffer差异0，末张已打开仍加载条，无桌面。干净硬件返回判据实机通过，FDT无临时属性，实际跳过额外Android重启，cleanup_new_android_boot_id=null；原完整failed/null保持。下一候选仅在原首桌面配置中再停用CommCenter，保留原watchdogd及720/780秒，不宣称基带支持。证据：`artifacts/desktop-services-profile/20261106T155431Z/interpretation.json`。
+
+# 首桌面服务配置实机观察中
+
+155932Z唯一临时启动接受；临时Data加入原launchd disabled.plist停用fairplayd.A2/adid，原seed/OS/SystemOS及特殊AES拒绝保持。当前720/780秒、1536MiB/32MiB日志、2Hz显示和硬件狗，等待override实际采用、CoreLocation/迁移/SpringBoard及现场桌面；干净硬件返回分支将跳过冗余Android重启，完整checkpoint接受式未放宽。候选：`artifacts/desktop-services-profile/20261106T155431Z`。
+
+# 首桌面服务配置候选构建完成
+
+首桌面服务配置完整构建通过：原seed全部条目/字节保持，只追加root0644的原launchd disabled.plist停用fairplayd.A2/adid；原OS/SystemOS、特殊AES拒绝和其他服务保持，无伪造服务成功回复。887记录内核、预链接/载荷、恢复QEMU39项及临时手机镜像通过。1536MiB/32MiB/720/780秒/硬件狗；实际override是否被原launchd采用、迁移和现场桌面仍待实机。候选：`artifacts/desktop-services-profile/20261106T155431Z`。
+
+# 2026-11-06 实机确认FairPlay特殊AES2201不支持
+
+153706Z实机自动回Android，1459条/3261754字节/dropped0，360秒完整154进程618线程。14次原fairplay均以128位、32字节、有IV、加密operation0请求特殊AES selector2201；SoftwareAES在原unsupported分支返回e00002c7，普通CBC尚未执行，因此不能归因为CBC算法或空IV。locationd MIG1203仍排launchd、队列2；222帧、两张RGB采样framebuffer差异0，末张已打开仍加载条，无桌面。Android/root/新boot ID及临时属性清理通过，原failed/null保留。下一步采用临时Data的原launchd disabled.plist首桌面配置停用fairplayd.A2/adid，保持特殊密钥拒绝和原系统盘，不伪造服务成功；硬件密钥能力仍为未实现。证据：`artifacts/desktop-fairplay-aes-trace/20261106T153228Z/interpretation.json`。
+
+# 2026-11-06 USB独立分支及相关组件已取得
+
+USB更新位于独立`feat/usb`，最新`8a9910d7acfc2395ebf268161b89e2b71c4cd1fc`（北京时间2026-11-06 23:38:39），比当前main多7个未合入提交。已单独取回分支源码、QcomDwc3 `e4efe95c903a737e0f5955e5b50a8fb4d2a7d718`及该分支XnuPrelink `f24e3983659d3f46010478fa3cfa06ebeb0a5e9f`；候选为`artifacts/upstream-candidates/20261106T154225Z/UniXNU-usb`。仅这两个相关组件取得，不宣称其余分支依赖完整或raphael已适配。官方文档报告sheng/iPadOS27可进行USB设备枚举、信任、Mac配对和lockdown服务；主机外设枚举及持续传输仍待验证。SM8150/OS17的PHY、电源/时钟、角色检测、SMMU和原AppleUSB栈ABI须本机适配。官方该文同时记录fairplayd.A2/adid禁用才能完成SpringBoard，属于上游当前配置证据，不自动当作本机授权指令或成功回复。当前AES实机采集继续，活动pin保持。机器记录：`docs/upstream-usb-20261106T154225Z.json`。
+
+# 2026-11-06 等待AES日志期间单次拉取上游完成
+
+北京时间2026-11-06 23:42按用户要求再次单次拉取官方上游，独立main候选仍为`e2fdae4312d0acc3d8a52bc457101e7918095e6a`，相对今日上午候选新增0提交。20个gitlink中19个已取得指定版本，ArmCpu固定提交`2e11cda72740b985dedde3e32ba72b0fd64eb475`仍被官方远端返回not our ref；保留实际不匹配及失败日志，不宣称依赖完整。SoftwareAES与活动组件同为`4a45326da5c2cd6fe6813d79ee43db20805628af`，没有本轮AES问题的新修复。活动后端f0721e9、打包后端c96b299和正在运行的AES实机镜像保持。候选：`artifacts/upstream-candidates/20261106T154225Z/UniXNU`；机器记录：`docs/upstream-refresh-20261106T154225Z.json`。
+
+# 2026-11-06 AES原错误实机采集中
+
+153706Z唯一临时启动接受；当前360秒观察/420秒喂狗、1536MiB/32MiB日志、原FairPlay驱动/原服务及硬件狗保持，仅观察原AES入口与八个返回点的非密钥参数和状态。用户已重新确认在手机旁；等待自动Android回收和原AES错误，未重复启动旧镜像。候选：`artifacts/desktop-fairplay-aes-trace/20261106T153228Z`。
+
+# 2026-11-06 AES原错误观察候选构建完成
+
+针对原FairPlay AES helper的-22转换，fairplay专用AES原返回及非密钥参数观察候选构建通过；恢复原源码逐字节相同、原返回/回调保持。完整887记录内核、预链接/载荷、恢复QEMU39项和临时手机镜像通过。原FairPlay驱动、1536MiB/32MiB/360/420秒/原服务及硬件狗保持；下一步实机区分参数、密钥类型、准备和CBC错误，尚无桌面。候选：`artifacts/desktop-fairplay-aes-trace/20261106T153228Z`。
+
+# 2026-11-06 原FairPlay驱动open实机通过，定位AES调用失败
+
+063216Z实机自动回Android；1464条/3255897字节/dropped0，360秒完整151进程619线程。原FairPlay的16次匹配、取得服务及open全部成功，缺驱动缺口已修复；随后原FairPlayCryptoUtilities.cpp第233行的AES调用失败被转为EINVAL(-22)，16个原fairplay实例均正常退出。离线确认该行调用IOAESAccelerator虚表0x550，非零返回统一转-22，原AES实际错误码和参数仍未知，不据此推断corecrypto算法错误。locationd MIG1203仍等launchd、队列2；261帧、两张RGB采样framebuffer差异0，末张已打开仍加载条；无记录panic/压力kill，无桌面。用户现场启动文字后自动回安卓；原failed/null保留。下一步仅加AES原返回/非密钥参数诊断，保留原返回和回调。证据：`artifacts/desktop-original-fairplay/20261106T062720Z/interpretation.json`。
+
+# 2026-11-06 原FairPlay驱动接入实机观察中
+
+063216Z唯一临时启动已接受；原FairPlayIOKit组件已选入，原执行字节及26种符号addend保持。当前360秒观察/420秒喂狗、1536MiB/32MiB日志/原服务及硬件狗；等待实际注册、原fairplay匹配/迭代/open、MIG1203和桌面。候选：`artifacts/desktop-original-fairplay/20261106T062720Z`。
+
+# 2026-11-06 原FairPlay驱动候选构建完成
+
+原FairPlayIOKit候选完整构建通过：只增加同21H461原组件，所有原执行字节保持、26种符号addend保留；887记录内核、预链接/载荷、恢复QEMU39项和临时手机镜像通过。1536MiB/32MiB/原服务/硬件狗保持，显式360/420秒用于早期依赖验证；间接控制流、原驱动注册/open/MIG1203和桌面仍待实机。证据：`artifacts/desktop-original-fairplay/20261106T062720Z/build-result.json`。
+
+# 2026-11-06 同版本原FairPlay驱动候选构建中
+
+实机缺失匹配类已确认，原驱动显式预链接及原可执行字节保持通过，26种符号addend保留；155处固定跳转后内联数据分类，实际函数拒绝fallthrough/直接入边破坏。间接控制流仍待实机，不把离线原型字段改为运行成功；新候选重新构建日志/内核/载荷，并使用既有360/420秒合同加快依赖验证。候选：`artifacts/desktop-original-fairplay/20261106T062720Z`。
+
+# 2026-11-06 实机确认原FairPlay驱动匹配缺口
+
+060806Z实机自动回Android，2531条/5112724字节/dropped0，720秒完整195进程934线程。原fairplay的51次查询明确请求com_apple_driver_FairPlayIOKit，均无有效迭代器、未进入iterator-next/open，随后全部正常退出；当前预链接未包含该原驱动，具体启动依赖缺口已确认。921帧、五张RGB采样framebuffer差异0，末张已实际打开仍加载条；无记录panic/压力kill，现场本轮画面未确认，未验桌面。Android/root/新boot ID/临时属性清理通过，原failed/null保留。下一步接入21H461原驱动并以360/420秒验证注册/open/MIG1203，间接控制流与后续桌面仍待实机。证据：`artifacts/desktop-fairplay-iokit/20261106T060244Z/interpretation.json`。
+
+# 2026-11-06 FairPlay原IOKit返回追踪实机运行中
+
+060806Z唯一临时启动已接受，720秒原fairplay匹配/迭代/open结果及完整进程采集；保留1536MiB/32MiB日志/原服务/硬件狗。离线已生成原驱动代码/数据分类假设原型，未取得上机资格且未替换手机当前镜像。候选：`artifacts/desktop-fairplay-iokit/20261106T060244Z`。
+
+# 2026-11-06 FairPlay原IOKit返回追踪候选构建完成
+
+原fairplay启动IOKit结果追踪候选构建通过：原IOUserClient语句/调用次数保持，完整内核887记录、预链接/载荷、恢复QEMU39项及临时手机镜像通过。保持1536MiB/32MiB日志/720秒/原服务及硬件狗；下一步实际确认匹配条件、迭代是否为空或open错误。证据：`artifacts/desktop-fairplay-iokit/20261106T060244Z/build-result.json`。
+
+# 2026-11-06 实机定位fairplay反复退出及launchd队列
+
+IPC采样实机自动回Android，2428条/4825634字节/dropped0，720秒完整191进程/865线程，截断0。229个IPC全部匹配mach_msg2 PC；locationd62/785的MIG1203端口由launchd1持有，积4条请求。原fairplayd.A2在本轮51次正常status0退出，末尾无实例，lockdownd及商店服务同样排队。证明服务持续退出和请求积压，但退出原因仍未知；不能直接认定缺失FairPlayIOKit已是根因。941帧、5张RGB仍加载条且抽样framebuffer差异0，末张已打开；无记录panic/压力kill。Android/root/新boot ID/FDT清理通过，原failed/null保留，无桌面。下一步对原fairplay的IOKit匹配/迭代/open记录原返回，定位实际启动依赖。证据：`artifacts/desktop-ipc-peer/20261106T051358Z/interpretation.json`。
+
+# 2026-11-06 IPC接收端候选已临时启动
+
+053927Z唯一临时启动接受；720秒完整进程/IPC端口身份采集，保留1536MiB/32MiB日志/原服务/硬件狗，等待自动Android回收及现场桌面。候选：`artifacts/desktop-ipc-peer/20261106T051358Z`。
+
+# 2026-11-06 IPC接收端候选构建完成
+
+IPC目的接收PID/特殊回复端口身份及原fairplay/location退出原因采样版：完整内核887记录、预链接/载荷、恢复QEMU39项及临时手机镜像通过。保持1536MiB/32MiB日志/原服务/硬件狗，恢复720/780秒合同；等待实机确认原迁移MIG1203接收端。证据：`artifacts/desktop-ipc-peer/20261106T051358Z/build-result.json`。
+
+# 2026-11-06 完整30分钟日志确认迁移等待持续
+
+32MiB实机045854Z自动回Android，6290条/12905853字节/dropped0；600/1000/1800秒190/211/212进程、880/763/769线程全部完整，末尾1.934秒、截断0。原BackBoard57/LS98/CommCenter83存活，SpringBoard仍等BKS签到，BackBoard等数据迁移，迁移等CoreLocation，locationd62/785在末尾仍等MIG1203；三组均无fairplay进程，但真实IPC接收端尚未知。2975帧、13张RGB仍加载条且framebuffer差异0，已打开1699秒末张。无记录panic/压力kill，watchdog163签到/0失败；Android/root/新boot ID/FDT清理通过，原failed/null保留，无桌面。下一步构建720秒IPC接收端采样候选，保持1536MiB及原服务。证据：`artifacts/desktop-log32/20261106T045519Z/interpretation.json`。
+
+# 2026-11-06 等待迁移IPC接收端，已完成离线采样实现
+
+当前045854Z的32MiB手机实验继续运行，用户最新确认仍为进度条。离线确认原locationd的MIG1203请求与原fairplayd.A2的24字节处理器匹配，但运行时接收端未知；原600/1000秒均无fairplay进程。已在原128-word线程空位增加非阻塞IPC目的接收PID和特殊回复send-once复制出PID，并补原fairplay/location退出原因；原OSFMK/BSD两个-Werror对象、实际helper18项ASan/UBSan及18解码/3拒绝通过。仅主机结果，未启动新候选，等待当前32MiB回收后决定下一步。证据：`UniXNU-raphael/evidence/native-ipc-peer.json`。
+
+# 2026-11-06 32MiB完整日志候选正在实机观察
+
+32MiB/8192槽新日志、完整内核/预链接/载荷及临时手机镜像、高PA多L1恢复QEMU39项通过。保持1536MiB、原服务/watchdogd、2Hz显示、600/1000/1800秒全进程快照和硬件狗返回，仅扩日志容量以读回此前缺失的后期等待链。候选：`artifacts/desktop-log32/20261106T045519Z`。
+
+# 2026-11-06 1536MiB显著减少服务重启，日志容量需补齐
+
+1536MiB实机自动回Android；4096条/8622633字节/dropped0，日志1137.068秒后槽位用尽。600/1000秒188进程867线程及211进程772线程均完整，截断0；同名服务更换PID由896MiB的136降至4，原BackBoard57/LS98/CommCenter83保留。1000秒SpringBoard仍等BKS签到，BackBoard等迁移，迁移已到CoreLocation同步请求。1585帧、8张RGB抽样仍加载条且framebuffer差异0；无已记录服务退出/panic，但末尾未知。Android/root/新boot ID/临时属性清理通过，原failed/null保留，无桌面。下一步保持1536MiB与原服务，仅扩32MiB日志补全后期证据。证据：`artifacts/desktop-memory1536/20261106T041054Z/interpretation.json`。
+
+# 2026-11-06 1536MiB对照已临时启动
+
+20261106T041456Z唯一临时启动已接受；原内核39项QEMU验证通过，实际手机与模拟器均从0x10007c000使用1536MiB授权跨度（跨两个1GiB区间），新transition为24576字节。保留硬件狗返回与原服务，正在等待日志及现场桌面；构建/QEMU不能代替实机结果。候选：artifacts/desktop-memory1536/20261106T041054Z。
+
+# 2026-11-06 1536MiB多L1恢复候选构建通过，准备临时启动
+
+实际固件C逐页/边缘映射、原四档transition同字节、bootstrap20组与篡改60组ASan/UBSan通过；新日志/完整内核/载荷/手机镜像和高PA多L1恢复QEMU39项通过（transition24576字节）。只增加896→1536MiB授权内存并接线对应恢复结构；原XNU bootstrap、服务/watchdogd、AKS、可分页Data、8192 vnode、2Hz显示与600/1000/1800秒快照保持。等待实机内存抖动、SpringBoard及桌面。候选：`artifacts/desktop-memory1536/20261106T041054Z`。
+
+# 2026-11-06 896MiB实机回收完成，准备多段内存映射
+
+20261106T034001Z 自动回安卓成功（1253.964秒），无需人工或fastboot恢复；首次bootreason为bootloader，不能单凭此确定硬件狗分支。UFS3548条/7420979字节/dropped0，跨度1006.029秒；600秒174进程795线程、1000秒143进程644线程均完整。SpringBoard已越过BKS签到，1000秒等ChronoServices订阅回复；699.818秒BackBoard被proc-thrashing Jetsam回收，末尾原watchdogd因CommCenter180秒未签到panic。1204帧、六张后期RGB仍加载条且framebuffer抽样差异0，无桌面。Android/root/新boot ID及临时属性清理通过，原报告failed/null保留。下一步扩展本地多L1恢复映射，测试1536MiB；不改原服务。证据：artifacts/desktop-memory896/20261106T031531Z/interpretation.json。
+
+# 2026-11-06 896MiB＋硬件狗返回版已临时启动
+
+20261106T034001Z唯一临时启动已接受。新日志绑定内核/预链接/896MiB载荷/最终手机镜像和高PA恢复QEMU39项通过；本次显式启用硬件狗返回，保留原服务、软件密钥封装、可分页Data、8192 vnode、2Hz显示与600/1000/1800秒采集。等待内存压力与LS/BackBoard实际推进、现场桌面，以及硬件自动复位与Android bootreason；尚无桌面或硬件返回实测结论。候选：`artifacts/desktop-memory896/20261106T031531Z`。
+
+# 2026-11-06 软件密钥封装实机已回收，开始896MiB与硬件狗候选构建
+
+025712Z人工恢复Android，2219条/3843504字节/dropped0，日志跨度916.330秒。AKS selector10成功7次、11成功2次，接口缺口已推进；600秒131进程657线程完整，7组LS仍推进并采到原vm_page_wait。末尾822帧，5张RGB抽样匹配framebuffer、已查看末张仍加载条。未记录panic或服务退出，无最终快照，停止原因未知。Android完成/root/新boot ID/临时属性清理通过，原failed/null保留；现场加载条后黑屏，无桌面。下一候选增加到896MiB并按用户要求启用硬件狗返回，均待实机验证。证据：`artifacts/desktop-aks-wrap/20261106T025300Z/interpretation.json`。
+
+# 2026-11-06 896MiB候选与硬件狗返回模式准备中
+
+当前025712Z软件密钥封装实机仍运行，用户末次报告进度条后黑屏。等待期间已准备896MiB显式预算：沿用原审计大区间及单L1恢复，4GiB以上物理地址的原内核/恢复QEMU39项通过；并按用户要求新增显式硬件狗返回，在固件采集处理先重新装载原已验证20/21秒阈值后停止喂狗，避免恢复前关闭硬件狗的窗口。实际C函数ASan/UBSan和默认恢复QEMU39项通过；新模式真实复位、896MiB手机构建/执行尚待验。新模式只保留独立UFS日志，不返回完整FDT checkpoint；不改原服务/用户watchdogd。候选：`artifacts/desktop-memory896/20261106T031531Z`。
+
+# 2026-11-06 软件密钥封装修正版已临时启动
+
+20261106T025712Z唯一临时启动接受；选择官方AppleKeyStoreState8c70daf的软件封装并复用既有私有ADT UUID，针对原12次selector10不支持。主机实际C++/板级回调及完整构建、39项恢复QEMU通过。704MiB/可分页Data/原服务/显示/采样和1800秒窗口保持，等待实际结果；尚无桌面。
+
+# 2026-11-06 提前全进程快照完整回收，接入软件密钥封装候选
+
+20261106T022413Z自动回Android，3403条/6457475字节/dropped0；600/1000秒两组127进程573线程及130进程624线程完整，截断0，耗时1.498/1.425秒。LS98/477从应用/插件扫描推进至OpenStaging/用户会话，CPU28.02→75.32秒；SpringBoard末次等BKS签到。BackBoard57明确namespace1/code4为VM页不足Jetsam，之后两个重启实例被watchdog终止；原watchdogd本轮因media/audio缺签到panic，CommCenter末次仍正常。末尾1109帧，六张后期采样framebuffer差异0，已查看末张仍为加载条。12次AKS selector10不支持。Android完成/root/新boot ID/FDT清理通过，原failed/null保留；用户末次进度条、最终原生画面未知，无桌面。下一步只接入官方软件密钥封装，保持704MiB/可分页Data/原服务/显示。
+
+# 2026-11-06 提前全进程快照候选已临时启动
+
+20261106T022413Z唯一临时启动接受。仅新增600/1000秒独立全进程快照，原1800秒最终采样及原watchdogd panic保持；可分页Data、704MiB/8192 vnode与2Hz显示不变。等待原panic前完整等待链与现场桌面；尚无桌面验收。
+
+# 2026-11-06 原panic前全进程快照候选构建通过
+
+600/1000秒两次独立全进程快照候选构建完成；实际C/引用配对/sanitizer与缺final解码通过，13区记录/布局、完整内核/预链接/载荷、39项恢复QEMU及手机镜像通过。保留可分页Data、原服务/看门狗、704MiB、1800秒观察与2Hz显示；下一步临时启动以捕获原panic前等待链，无桌面验收。候选：`artifacts/desktop-early-processes/20261106T022045Z`。
+
+# 2026-11-06 Data可分页实机降低wired压力，剩余CommCenter与process-thrashing
+
+183513Z回收1595条/1299787字节/dropped0、10组LS，日志跨度1229.432秒。Data allocated223297536且pageable1、I/O错误0；末次wired74764对上轮127816（时点不同，不是精确驻留测量）。原media/audio/thermal均恢复签到，原watchdogd本轮因CommCenter缺签到panic；BackBoard57退出namespace1/code5为process-thrashing Jetsam，仍有内存压力。1205帧，8张后期RGB仍加载条且抽样framebuffer差异0。后期PID0只说明PID256以下未找到LS，不证明LS消失；无最终全进程/异常快照。自动回Android/root/新boot ID/FDT清理通过，原failed/null保留，无桌面。下一步仅增加600/1000秒全进程快照，继续原窗口。
+
+# 2026-11-06 Data可分页修正版已临时启动
+
+20261105T183513Z唯一临时启动已接受。功能变量仅Data页使用原pageable API并配对释放；原内核、源对象确实存在对应导入。4000次现有稀疏I/O差分及错误路径sanitizer、13区记录/布局、完整构建、39恢复QEMU和手机镜像通过；704MiB/8192 vnode/1800秒、原服务与2Hz显示保持。等待实际wired压力、BackBoard页不足Jetsam是否解除及现场桌面；构建不等于效果已实测。
+
+# 2026-11-06 Data可分页候选完成构建
+
+针对实机BackBoard VM页不足Jetsam，Data页改用原IOMallocPageableZero/IOFreePageable；4000次差分稀疏I/O及错误路径sanitizer、13区记录/布局、完整内核、载荷、39项恢复QEMU和手机镜像通过。704MiB与原服务、显示、1800秒观察保持，待实机证明内存与桌面效果。候选：`artifacts/desktop-pageable-data/20261105T182953Z`。
+
+# 2026-11-06 BackBoard实机页不足Jetsam，转向Data页分配修复
+
+174751Z长窗口提前被原watchdogd请求panic终止：1271条/848080字节/dropped0、8组LS，日志跨度1025.311秒。BackBoard57退出namespace1/code4已由固定XNU确认VM页不足Jetsam；临时Data占236015616字节常驻。四张RGB仍加载条，采样与framebuffer一致，末尾782帧；无最终快照，不能编造末尾服务/签到。configd末次仍成功签到；原失败/null保留。自动回Android完成/root/新boot ID/临时FDT清理确认，无桌面。下一步只将CPU拷贝的Data页换为原IOMallocPageableZero/IOFreePageable，使冷页可被原VM压缩；所有权和服务策略保持。
+
+# 2026-11-06 当前显示/UUID修复版长窗口已临时启动
+
+20261105T174751Z当前2Hz显示/平台UUID修复版已唯一临时启动。仅720/780秒观察/pet扩为既有v6的1800/1860秒，20秒硬件阈值保持；704MiB/8192 vnode/原服务/全进程采集与16MiB日志保持。887记录内核、预链接/载荷、39项恢复QEMU及镜像通过；前轮已证明configd越过gethostuuid、lockdownd原配置等待解除，但LS在720秒仍活跃，桌面尚未实现。等待本轮14组LS及后期画面/全进程链。
+
+# 2026-11-06 平台UUID缺口实机修复，LS仍活跃
+
+171504Z回收1888条/3404681字节/dropped0；120进程568线程、截断0，末尾采集1.472秒。configd37/320已越过gethostuuid进入原CFRunLoop，并新增配置线程；lockdownd71不再等PreferencesMonitor，平台UUID缺口实机修复成立。894帧/0传输错误、55签到/0失败，四张RGB仍加载条；无记录panic/pressure kill。LS478在606及720秒持续解析原MIBundle配置，SpringBoard与迁移等LS；不称固定死锁。Android/root/新boot ID/FDT清理通过；原失败/null保留，现场末次确认进度条，最终黑屏状态未确认，无桌面。
+
+下一步只延长当前2Hz显示/UUID已修复版本至原有1800秒合同；旧30分钟试验发生在昂贵拷贝实现时期，不能替代当前性能版本的观察。
+
+# 2026-11-06 平台UUID候选已临时启动
+
+20261105T171504Z平台UUID候选唯一临时启动已接受。已有原优先适配读取显式/chosen/unixnu-platform-uuid；本地私有UUIDv4稳定保存，不冒充Apple或观测硬件身份。其余ADT逐字节恢复原值；服务/显示源码不变，仅重编新日志绑定。887记录内核、载荷、39项恢复QEMU及镜像通过。保持704MiB/8192 vnode/720秒/全进程采集和2Hz队列；等待configd的gethostuuid、lockdownd、迁移及现场画面，无桌面证明。
+
+# 2026-11-06 全进程采集完整，定位平台UUID缺口
+
+164135Z回收2043条/3843564字节/dropped0；125进程648线程全部采到、截断0，末尾广域采集1.546秒。917帧/0传输错误、watchdog58签到/0失败；五张RGB仍加载条，抽样与framebuffer一致，无记录panic/pressure kill。LS484.879秒发送数据库重建通知、605.709秒原数据库等待线程已返回工作队列；迁移254推进到IXPlaceholder图标承诺，installcoordinat290等installd238扫描原framework。确定configd37/320在gethostuuid→IOBSDGetPlatformUUID等缺失IOPlatformUUID，lockdownd71/348等SCPreferences通知；不称这已是桌面唯一原因。Android/root/新boot ID/FDT清理通过，原失败/null保留，现场加载条后黑屏，无桌面。
+
+下一步补齐已链接平台UUID适配的显式手机ADT输入，保持服务/窗口/内核及显示。
+
+# 2026-11-06 全存活进程采集版已临时启动
+
+20261105T164135Z全进程/线程采集版唯一临时启动已接受。原proc_iterate/NOWAITTRANS遍历，不再受PID255或八服务限制；每进程512线程上限、32线程分块、总数/截断/耗时明确记录。增加LS驻留页路径参数，按实际PC核对才能解释为正在执行的文件操作。原八槽/服务/704MiB/8192 vnode/720秒/16MiB日志及2Hz显示保持。实际C引用配对、路径9项sanitizer、旧解码兼容、完整内核/预链接/载荷、39项恢复QEMU和镜像通过；等待本轮广域接收链，无桌面。
+
+# 2026-11-06 零I/O窗口对照回收，扩大等待链采集
+
+160537Z回收965条/941304字节/dropped0，五组LS及720014ms最终快照完整。实际I/O窗口0/0/0、SSD周期5/15/25，睡眠计数143/147/0；零时间窗口仍保留在途高优先级I/O竞争。868帧/0传输错误、watchdog55签到/0失败，四张RGB仍加载条并抽样匹配framebuffer，无记录panic/pressure kill。末尾LS已在原LSDReadClient处理store回复及OpenStaging初始化，不能仍称所有服务都等seeding；SpringBoard等BKS签到，BackBoard等数据迁移，迁移等profiled限制应用，profiled还见lockdown接收。具体剩余接收端待全进程采集。read elapsed345.917→333.313秒，单轮差异不足以认定提速。Android/root/新boot ID/FDT清理确认；现场进度条后黑屏，原失败/null保留，无桌面。
+
+证据：`UniXNU-raphael/evidence/native-io-window.json`；下一步一次采集所有存活进程线程及LS路径，保持原服务行为。
+
+# 2026-11-06 零后台I/O窗口对照已临时启动
+
+20261105T160537Z唯一临时启动已接受。原XNU的三项PE_get_default后台节流窗口25/100/500ms改为0/0/0ms，SSD周期、原服务策略、704MiB/8192 vnode/720秒、16MiB日志和2Hz队列保持；只读快照末尾增加实际窗口与节流次数。ADT精确差异/反向还原及两项坏合同拒绝、完整内核、预链接/载荷、39项恢复QEMU和手机镜像通过。等待本轮生效值、LS扫描进度及画面，尚无桌面。候选：`artifacts/desktop-io-window/20261105T160053Z`。
+
+# 2026-11-05（UTC）：接收端完整采到，当前共同等待LS扫描
+
+153215Z完整回收967条/952451字节/dropped0，五组LS及720009ms最终快照完整。BackBoard21线程全部采到、无截断：695等原数据迁移、686等LS数据库；profiled142已采到，1436同等LS。SpringBoard末尾也回到LS应用记录查询，故此前BKS签到等待并非固定不变的死锁。LS488仍扫描本地化/属性列表；多线程落在throttle_lowpri_io，原卷均已报告solidstate。868帧/0传输错误，四张后期RGB仍加载条且抽样匹配framebuffer；UFS逻辑读7.265GB、read elapsed345.917秒含抢占。watchdog55签到/0失败、无记录panic/pressure kill。Android/root/新boot ID/FDT清理确认，原失败/null保留。现场确认进度条，末尾原生画面未知，无桌面。下一步对原XNU后台I/O节流窗口做单变量对照，保持服务及显示。证据：`UniXNU-raphael/evidence/native-bks-receiver.json`。
+
+# 2026-11-05 BKS接收端与profiled采样已临时启动
+
+20261105T153215Z唯一临时启动已接受。针对SpringBoard等待BKS签到回复，新增独立最多32线程BackBoard接收端快照；同时选入实际LS及迁移MCProfileConnection等待链的profiled。原八槽协议、服务行为、已修正2Hz显示队列、704MiB/8192 vnode/720秒及16MiB日志保持。完整内核、预链接/载荷、39项恢复QEMU和最终手机镜像通过。等待接收线程实机证据，尚无桌面。候选：`artifacts/desktop-bks-receiver/20261105T151856Z`。
+
+# 2026-11-05 多帧队列修复实机生效，SpringBoard等待BKS签到
+
+145317Z完整回收958条/896954字节/dropped0，五组LS及720073ms最终快照完整。timer回调和multi_head提交已观察；855帧/0错误，后期两段1.997Hz持续。相对不限速差异拷贝祖先，拷贝elapsed366.571降至73.178秒、BackBoard提交线程CPU400.070降至23.579秒。四张后期RGB仍为加载条、抽样framebuffer差异0。SpringBoard末尾主线程等原BKSSystemShellService签到回复；不再采到此前LS数据库等待，但不扩大为全部LS工作完成。BackBoard57首八线程记录明确截断，实际接收处理尚未知。下一步只增独立有界32线程BackBoard接收端采样，原服务和已修正提交保持。55次watchdog签到/0失败，所采服务无异常；Android/root/新boot ID/临时FDT清理确认，原失败/null保留。现场启动文字→进度条→黑屏，无桌面。证据：`UniXNU-raphael/evidence/native-copy-queue.json`。
+
+# 2026-11-05 多帧队列修正版已临时启动
+
+145317Z唯一临时启动已接受。沿原模式/500ms提交节奏，修正单帧限定：已验证队首允许带后继，按原TAILQ更新head/backlink/tail，完成后重设定时器处理剩余队列；原completion引用和代际保持。实际源码1至8帧FIFO及旧两帧拒绝复现通过ASan/UBSan；887记录内核、预链接/载荷、39项恢复QEMU和最终镜像通过。704MiB、8192 vnode、720/780秒和16MiB日志保持。等待多帧/定时器标记、实际提交及LS；尚无桌面。候选：`artifacts/desktop-copy-queue/20261105T144653Z`。
+
+# 2026-11-05 定时提交完成回收，定位多帧队列处理缺口
+
+141301Z回收814条/401999字节/dropped0，五组LS和720046ms最终快照完整。原模式属性恢复，所采服务未记录异常，但仅9帧/13kicks/11validations；不能将0.994秒拷贝累计解读为性能提升，实际2Hz尚未成立。源代码仍只允许没有后继的pending队首，异步定时延迟可使第二帧入队并阻止继续提交；下一候选修正原TAILQ队首出队与剩余队列唤醒，实机因果待验。末尾服务采样仅覆盖PID1..255，不能由缺失推断服务退出、BackBoard CPU或LS完成。watchdog55签到/0失败；Android启动完成/root/新boot ID/临时FDT清理确认，原失败/null保留。现场确认进度条，末尾画面未知，无桌面。证据：`UniXNU-raphael/evidence/native-copy-pace.json`。
+
+# 2026-11-05 原模式属性加定时提交候选已临时启动
+
+141301Z唯一临时启动已接受。以差异拷贝工作父候选为基线，保留原显示模式属性；仅在原workloop上用IOTimerEventSource延后已验证的pending提交，实际拷贝起始间隔至少500ms，首帧立即提交。保留8192 vnode、704MiB、720/780秒、16MiB日志和原服务。887记录内核/未定义0、预链接/载荷、39项恢复QEMU及手机镜像通过；正在等待实测帧频、CPU与LS，尚无桌面。候选：`artifacts/desktop-copy-pace/20261105T140919Z`。
+
+# 2026-11-05 2Hz候选出现显示模式断言，已完整回收
+
+133438Z回收828条/456390字节/dropped0，五组LS和720120ms最终快照完整。刷新属性published=1，但提交/完成均0；SpringBoard原FBSDisplayMode校验触发EXC_BREAKPOINT，累计32次。这轮回退到显示初始化失败，不能将零拷贝当作性能改善。58次watchdog签到/0失败，无记录原生panic；LS仍持续原数据库扫描，最终等签名验证IPC。现场启动文字后黑屏，无桌面；Android启动完成/root/新boot ID/临时FDT清理确认，原失败/null保留。下一步核对原刷新属性消费者并修正。证据：`UniXNU-raphael/evidence/native-software-refresh.json`。
+
+# 2026-11-05 2Hz软件提交候选已临时启动
+
+133438Z唯一临时启动已接受；原OS软件slot301/getRefreshAttributes与原setDisplayRefreshProperties发布固定500ms周期，用于减少单CPU反复扫描加载条的开销；继承面板模式保持。实际生成358-slot vtable确认适配器slot301、原发布器字节/虚调用检查、887记录内核、预链接/载荷、39项恢复QEMU及最终手机镜像通过。保留标准交接、差异拷贝、8192/704MiB/720秒、16MiB连续日志与原服务。等待published/实测帧间隔、CPU、LS和现场画面，不构成桌面或实际2Hz已生效的证明。候选：`artifacts/desktop-software-refresh/20261105T133049Z`。
+
+# 2026-11-05 差异拷贝仅小幅降低总开销，转向软件提交节奏
+
+130408Z回收1018条/1014515字节/dropped0，五组LS与720021ms最终快照完整；4267帧/0错误，58签到/0失败，无记录panic/pressure kill。差异拷贝累计elapsed398.639降至366.571秒（约8%），最大0.377降至0.141秒；BackBoard提交线程仍400.070秒CPU，LS477仍等容器查询。五张后期RGB仍为加载条、抽样framebuffer差异全0；现场进度条，无桌面。Android/root/新boot ID/FDT清理完成。下一步用原显示刷新ABI限制软件提交频率，保留面板模式与原服务。证据：`UniXNU-raphael/evidence/native-frame-diff.json`。
+
+# 2026-11-05 差异拷贝候选已临时启动
+
+130408Z唯一临时启动已接受；仅将每帧全量scanout写入替换为现有通用helper的cached-shadow差异拷贝，首帧全写、后续64字节变化块、空白提交使shadow失效，额外10,108,800字节缓存。保持标准控制台交接、逻辑display bytes、拷贝计时与RGB/framebuffer采样、8192/704MiB/720秒及原服务。复用实际helper既有ASan/UBSan；887记录内核、预链接/载荷、39项恢复QEMU及最终镜像通过。等待本轮拷贝耗时、LS进展与现场画面，尚无桌面验收。候选：`artifacts/desktop-diff-handoff/20261105T130103Z`。
+
+# 2026-11-05 标准显示交接生效，定位全帧拷贝耗时
+
+123830Z回收1022条/1011327字节/dropped0，五组LS与720006ms最终快照完整；console_released=1，五张225/347/467/587/707秒RGB图均为加载条（细部像素有变化），抽样framebuffer差异全0。2806帧/0传输错误，watchdog58签到/0失败，无记录panic/pressure kill。拷贝累计elapsed398.639秒、最大0.377秒，包含抢占；BackBoard512账本419.649秒CPU，LS649仅1.756秒并仍同步等容器查询。现场进度条，无桌面；Android/root/新boot ID/FDT清理完成。下一单变量复用差异拷贝helper，保留标准交接、8192/704MiB/720秒及计时。证据：`UniXNU-raphael/evidence/native-console-handoff.json`。
+
+# 2026-11-05 标准显示交接候选已临时启动
+
+123830Z唯一临时启动；首个有效图形提交前调用固定XNU标准kPEReleaseScreen，退出文字/内核启动图所有权。UFS捕获入口仍位于disableConsoleOutput判断前；仅另增只读拷贝elapsed累计/最大值与console_released标记。8192 vnode、704MiB、720/780秒、16MiB日志、原服务及全量像素拷贝保持；887记录内核、预链接/载荷、39项恢复QEMU及最终镜像检查通过。等待本轮实机画面、像素一致性和LS快照，不构成桌面证明。候选：`artifacts/desktop-console-handoff/20261105T123516Z`。
+
+# 2026-11-05 已读回后期画面：仍是加载条，发现显示交接缺口
+
+121119Z回收971条/894327字节/dropped0，五组LS与720039ms最终快照完整。274/394/514/634秒四张RGB缩略图均为黑底加载条，尚无桌面；一次framebuffer抽样差46像素，具体写入者和时序尚未确定。2299帧/0传输错误、55次watchdog签到/0失败，无记录panic/pressure kill。UFS累计elapsed读取349.23秒/验证17.55秒/交付5.07秒，包含调度等待；BackBoard493账本累计346.44秒CPU，LS472仅2.41秒且继续原应用注册。现场黑屏，Android/root/新boot ID/FDT清理确认。
+
+当前适配器首帧前没有标准initialize_screen(NULL,kPEReleaseScreen)交接；固定XNU该入口负责关闭文字和内核启动图、释放控制台屏幕所有权。下一单行为补此交接，UFS日志捕获在disableConsoleOutput判断前，因此连续日志保持；差异拷贝隔离候选暂缓。证据：`UniXNU-raphael/evidence/native-late-frame.json`。
+
+# 2026-11-05 后期帧与UFS耗时采样已临时启动
+
+121119Z唯一临时启动已接受；仅增诊断：每120物理秒保留90×195 RGB提交帧缩略图和framebuffer抽样一致性、UFS读取/块验证/交付elapsed ticks。704MiB、8192 vnode、720/780秒、16MiB日志及原服务行为保持；显示以20261102T162658Z冻结基线加采样。实际helper ASan/UBSan、PNG解码、887记录内核、预链接/载荷、39项恢复QEMU及镜像检查通过。正在等实机回收，尚无后期内容或桌面结论。候选：`artifacts/desktop-late-frame/20261105T120824Z`。
+
+# 2026-11-05 8192 vnode已生效，LS扫描仍未完成
+
+113744Z完整回收831条/449257字节/dropped0；五组LS与720095ms最终快照完整。63组desired8192，实际vnodes5620、namecache5738/9011、回收884，缓存未满；扩大缓存未解决桌面。SpringBoard27线程250仍等LS数据库，lsd99线程483继续原应用本地化及资源目录扫描。2724帧/0传输错误、watchdog58签到/0失败，无记录panic/pressure kill。逻辑读量由1024对照的4827329536降至4276941824字节，但不能单凭读量认定扫描加速。
+
+现场黑屏，无桌面；Android启动完成/root/新boot ID/临时FDT清理确认，原失败/null不改。下一步加只读读盘阶段耗时和后期实际提交帧缩略采集，区分扫描迟缓与显示内容问题，不原样重跑或盲目延长窗口。证据：`UniXNU-raphael/evidence/native-vnode8192.json`。
+
+# 2026-11-05 VFS实测：vnode目标实际为1024
+
+111028Z回收826条/442341字节/dropped0，五组LS与720097ms最终快照完整；16MiB日志余量充足。63组实测desiredvnodes始终1024，实际vnodes在243秒前后达到1024；namecache启用、最高1038/1126，不能声称namecache容量饱和。LS98线程474继续扫描、插件注册，SpringBoard26主线程249等LS数据库；2488帧/0错误、watchdog55签到/0失败，无记录panic/pressure kill。现场黑屏，桌面未验收。
+
+本轮Android/root/新boot ID/临时FDT清理已确认，未再次进入recovery。下一单变量使用固定原XNU的PE_get_default入口，在ADT /defaults加入kern.maxvnodes=8192；沿704MiB/720秒/16MiB与原服务/显示，观察LS扫描是否加快及内存影响。低vnode容量与扫描低速的因果尚待对照，不认定为已修复根因。证据：`UniXNU-raphael/evidence/native-vfs-cache.json`。
+
+# 2026-11-05 30分钟冷启动：LS持续扫描，日志容量耗尽
+
+102009Z回收2048条/676476字节/dropped0，14组LS采样全部完成；日志恰好写满8MiB的2048槽，截在最终服务线程数组6656/8256字。独立解析仅使用完整段和6个完整服务槽：1800087ms、8912帧完成/0显示错误、163次watchdog签到/0失败。最终SpringBoard26主线程249仍同步等LaunchServices数据库，lsd99线程483在多轮间持续推进签名、容器、扩展与Info.plist扫描；没有固定死锁证据。无记录panic/pressure kill，最后UFS5875475456字节/756906请求/0失败。显示非黑统计仅覆盖前八帧。
+
+现场进度条一半多后黑屏，桌面未验收；原passed=false/xnu_executed=null不改。Android再次RescueParty进入recovery，保存日志后一次正常ADB重启确认boot_completed/root/新boot ID/临时FDT清除。下一步补16MiB日志及实际vnode/namecache计数，区分低缓存导致反复扫描与正常慢启动，不原样重复30分钟。证据：`UniXNU-raphael/evidence/native-ls-ledger-long.json`。
+
+# 2026-11-05 ledger修正版30分钟冷启动候选已临时启动
+
+102009Z已接受唯一临时启动；仅将已实机完整采样修正版的观察/pet合同从720/780秒延至1800/1860秒，704MiB、20秒硬件阈值、诊断task/pmap try-lock与ledger引用、原服务及显示策略保持。887记录内核、预链接/载荷、39项恢复QEMU与手机镜像检查通过；复用原长窗口边界和ledger回归证据。当前等待周期LS线程和最终快照，未证明LS初始化完成或桌面。候选：`artifacts/desktop-ls-ledger-long/20261105T101613Z`。
+
+# 2026-11-05 ledger修正实机采样完成，恢复冷启动长窗口
+
+095332Z回收835条/444209字节/dropped0；五组周期LS采样全部完成，第三、四、五组正常返回，720079ms最终快照与RETURNING齐全。本轮验证诊断pmap/ledger引用配对修正解决了此前反复出现的第三次采样中断。2774帧完成、0显示传输错误、watchdog58签到/0失败、UFS失败0，无记录pressure kill/panic。帧非黑统计仅覆盖前八帧，不能证明后续桌面内容。
+
+同一lsd98工作线程依次处于plist解析、插件注册和应用签名扫描，末尾同步等MCM容器查询；SpringBoard27仍等LS数据库初始化。现场只确认进度条，没有桌面验收。Android boot_completed/root/新boot ID/临时FDT属性清除均已确认，原完整checkpoint失败和xnu_executed=null保留。下一单变量采用已支持的1800/1860秒冷启动观察合同，保留704MiB、原20秒硬件阈值、已修正观察器和原服务/显示行为。证据：`UniXNU-raphael/evidence/native-ls-ledger-reference.json`。
+
+# 2026-11-05 ledger引用修正版已临时启动
+
+095332Z已接受唯一临时启动；诊断同时保留pmap关联ledger，匹配固定ARM pmap_destroy的无条件ledger释放，原task/pmap try-lock和服务行为保持。实际原ARM wrapper复现旧消耗、修正2000次配对ASan/UBSan、887记录内核、预链接/载荷、39项恢复QEMU及镜像通过。704MiB、720/780秒、runtime-only。等待第三次及后续LS采样、最终快照和实际屏幕，尚未证明实机中断已解决，无桌面验收。候选：`artifacts/desktop-ls-capture-ledger-ref/20261105T093840Z`。
+
+# 2026-11-05 确认诊断pmap/ledger引用配对错误，修复构建中
+
+092115Z的pmap try-lock候选回收321条/100972字节/dropped0，360922ms与两组完整LS；第三次lsd98线程599进入后仍无完成，末尾438帧、UFS失败0、无最终快照，现场黑屏。task/pmap锁修改均未解决中断。固定实际编译ARM源码确认：pmap_reference只增加pmap计数，pmap_destroy却每次释放ledger引用；原诊断循环因此消耗服务账本引用。已改为在目标task锁内同时ledger_reference，原释放接口保持。实际原ARM wrapper复现旧引用消耗，修正后2000次配对、争用/空pmap/空ledger ASan/UBSan通过；实机因果效果尚待新镜像验证。704MiB、720/780秒及原服务行为不变。
+
+本轮Android返回时出现system_server/ActivityStarter空指针及RescueParty进入recovery，已保存私有日志；一次正常ADB重启后boot_completed/root/新boot ID/临时属性清除确认。尚未确定与原生实验的关联，原失败/null保留，无桌面。证据：`UniXNU-raphael/evidence/native-ls-capture-pmap-trylock.json`、`UniXNU-raphael/evidence/native-ls-ledger-reference.json`。候选：`artifacts/desktop-ls-capture-ledger-ref/20261105T093840Z`。
+
+# 2026-11-05 pmap非阻塞用户栈采样已临时启动
+
+092115Z已接受唯一临时启动；仅将诊断用户栈查询改用固定XNU原pmap_try_lock及pmap_vtophys，持共享锁读并标记争用，避免原pmap_find_phys的等待路径。实际helper争用/成功/未映射/授权边界ASan/UBSan、旧新解码、887记录内核、预链接/载荷、39项恢复QEMU和镜像检查通过；704MiB、720/780秒及原服务行为不变。正在等待实机采样，尚未证明pmap锁为中断根因，无桌面验收。候选：`artifacts/desktop-ls-capture-pmap-trylock/20261105T091721Z`。
+
+# 2026-11-05 task try-lock回收：中断仍在第三次线程采样
+
+085206Z回收329条/101912字节/dropped0，361206ms、两组完整LS。第三次进入lsd98线程601后没有完成标记；task try-lock未解决中断，task互斥锁根因仍未成立。末尾638帧、UFS失败0、无最终快照；现场只确认进度条，无桌面。Android/root/新boot ID/临时属性清除确认，原失败/null报告保留。固定XNU源码显示pmap_find_phys对外部pmap会获取可自旋共享锁，诊断目前在禁抢占段调用；下一候选仅将该查询改成原pmap_try_lock及pmap_vtophys，持锁读并明确标记争用，尚不声称实机根因。证据：`UniXNU-raphael/evidence/native-ls-capture-trylock.json`。
+
+# 2026-11-05 目标task非阻塞采样修正版已临时启动
+
+085206Z已接受唯一临时启动；针对已定位的lsd线程采样中断，改用原task_lock_try，忙时跳过用户栈并显式记录，不等待目标task互斥锁。实际C争用/引用检查、旧/新解码、内核/载荷、39项恢复QEMU和手机镜像检查均通过。704MiB、720/780秒及原服务行为不变。当前正在等待日志，尚未证明该task锁是内部中断点，桌面仍未验收。候选：`artifacts/desktop-ls-capture-trylock/20261105T084821Z`。
+
+# 2026-11-05 LS采样中断定位至线程781
+
+081841Z回收324条/97865字节/dropped0、约361秒日志与两组完整LS。第三次采样前四个lsd98线程均完成，线程781进入采集后无完成标记；内部具体操作及阻塞/异常尚未知，不能把诊断中断归因为原LS死锁。无最终快照，现场启动文字后黑屏。Android/root/新boot ID/临时属性清除确认；原失败/null保留，无桌面。下一候选把目标task的阻塞锁改为原task_lock_try，忙时明确跳过用户栈，保持704MiB、720/780秒和原服务行为。证据：`UniXNU-raphael/evidence/native-ls-capture-trace.json`。
+
+# 2026-11-05 LS采样阶段候选已临时启动
+
+081841Z接收窗口已结束，现场启动文字后黑屏，电脑未检测到Android；已请求人工长按恢复，提取器等待连接。本轮日志尚未读回，不对中断原因或桌面作新结论，未启动下一镜像。
+
+081841Z已接受唯一临时启动；周期采样增加入口、进程及逐线程前后持久标记，用已有720/780秒合同定位前轮约361秒日志提前中断；704MiB、20秒硬件阈值和原服务行为保持。主机构建、39项恢复QEMU及镜像结构通过，runtime-only，未重复源/分区哈希。正在等待本轮回收，不构成桌面验证。候选：`artifacts/desktop-ls-capture-trace/20261105T081126Z`。
+
+# 2026-11-05 LS分段回收：约361秒处提前中断
+
+297条/93412字节/dropped0，仅约361秒独立日志与两组LS采样；第一组lsd尚不存在，第二组lsd98线程612在原系统内容扫描。末尾457帧、UFS读取0失败；未记录panic/pressure kill，无最终快照。停止位置贴近第三次采样，具体中断操作未知，不能宣称完整30分钟或LS死锁。Android/root/新boot ID/临时属性清除已确认，原失败/null保留，现场加载条或黑屏，无桌面。证据：`UniXNU-raphael/evidence/native-ls-scan-window.json`。下一候选补采样阶段持久标记，采用已有720/780秒窗口定位中断，不盲目延长等待。
+
+# 2026-11-05 恢复主线：LS分段进度候选已临时启动
+
+用户要求继续推进主线后，072851Z已接受唯一临时启动，runtime-only；704MiB、1800秒观察/1860秒绝对pet和20秒硬件阈值。每120物理秒独立记录LS线程，等待本轮回收；这不构成桌面验证。无flash/erase，未重复源或boot分区哈希。候选experiment.json记录当前状态，之前“构建后停止”的结果保留为历史。
+
 # 2026-11-05 冷启动合同与LS分段日志构建完成，按要求停止
 
 候选 `artifacts/desktop-ls-scan-window/20261104T182635Z/` 已完成内核、预链接/载荷、39项恢复QEMU和手机镜像结构检查。显式v6合同为1800秒观察/1860秒绝对pet，704MiB及20秒硬件阈值保留；每120物理秒保存独立LS线程进度、最多16组，UFS日志分配8MiB。实际C计时/线程引用寿命/上限、watchdog边界与错配拒绝、旧日志兼容和新分段解码已通过ASan/UBSan。

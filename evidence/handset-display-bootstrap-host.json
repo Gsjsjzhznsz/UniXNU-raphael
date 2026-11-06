@@ -33,7 +33,7 @@
     },
     {
       "path": "UniXNU-sm8150-common/README.md",
-      "sha256": "1a26dfac619031d8eebb71e3278e9eb71730db1d78634c3840f5d823d1111d3c"
+      "sha256": "b89d2896da8fd85080a5ac4d88240ea47f843e170205b434545f4b854e0aca3d"
     },
     {
       "path": "UniXNU-sm8150-common/AGENTS.md",
@@ -42,6 +42,10 @@
     {
       "path": "UniXNU-sm8150-common/soc.toml",
       "sha256": "e281f520fea2d808d59272ccf37d63a231b5728489c864202d08c514e4958dcb"
+    },
+    {
+      "path": "UniXNU-sm8150-common/LICENSE",
+      "sha256": "5b1d3d911103cb0f41641ec0964c5ac1f7e229f57aa072b6ac38bae913a1307b"
     },
     {
       "path": "UniXNU-sm8150-common/dts/sm8150.dtsi",
@@ -65,11 +69,11 @@
     },
     {
       "path": "UniXNU-sm8150-common/kits/Sm8150Platform/RaphaelUfsBlock.cpp",
-      "sha256": "dbe6bf6b36baf50d2785c64e144de32ef51f17c133b01ccb7977723d00c39b49"
+      "sha256": "add6683dd2d2e7bcc51f2290426afb012200efd2005e61299ccc98c38c5355fc"
     },
     {
       "path": "UniXNU-sm8150-common/kits/Sm8150Platform/RaphaelUfsLogPolicy.h",
-      "sha256": "0e3388c0d9c6a337a72542ca6e7da4af682134ef0e89c3195e15f12756a3fe92"
+      "sha256": "1b40e395495a0f6bf47eaf5c838d6c6da36f2dc0e8ebf46dbadd671cebc9c0be"
     },
     {
       "path": "UniXNU-sm8150-common/kits/Sm8150Platform/RaphaelBootCpu.cpp",
@@ -97,7 +101,7 @@
     },
     {
       "path": "UniXNU-sm8150-common/kits/Sm8150Platform/RaphaelUfsTransport.h",
-      "sha256": "77292b950bebba29821646149505eaf24dea10fa648e9eabbd7192091050af69"
+      "sha256": "bb7d84d10737cf3f8e463335c869f5a35495d97b0119babfd15a37b7a38abf11"
     },
     {
       "path": "UniXNU-sm8150-common/kits/Sm8150Platform/RaphaelExtentPlan.h",
@@ -141,7 +145,7 @@
     },
     {
       "path": "UniXNU-raphael/porting.toml",
-      "sha256": "3cce4becf496709991e8fea4d0a5a2b306ab3afecec9b7940eb1498290ced1a4"
+      "sha256": "bc0be2ff84cef05c407c8a28ed6baa026da1799bf29cda24c0cdb6c9a212c875"
     },
     {
       "path": "UniXNU-raphael/proprietary-files.txt",
@@ -149,7 +153,7 @@
     },
     {
       "path": "UniXNU-raphael/README.md",
-      "sha256": "37478b910a6fe1d24fb30700d0d14e331c9bbd0b6f9f50be6d2bf4873ca72b9b"
+      "sha256": "b2a30c2d8050b7f944e27f204d0dbfd3539ea97f8163a48aa969ca4397ac3a21"
     },
     {
       "path": "UniXNU-raphael/feeds.toml",
@@ -170,6 +174,10 @@
     {
       "path": "UniXNU-raphael/proprietary-inputs.json",
       "sha256": "509a36a3d27ed384ccf106c780468f215a0f8099fa716526d525fcfbdfc02667"
+    },
+    {
+      "path": "UniXNU-raphael/LICENSE",
+      "sha256": "5b1d3d911103cb0f41641ec0964c5ac1f7e229f57aa072b6ac38bae913a1307b"
     },
     {
       "path": "UniXNU-raphael/docs/HANDSET-UFS-WRITE.zh-CN.md",
@@ -209,7 +217,7 @@
     },
     {
       "path": "UniXNU-raphael/scripts/build-raphael-desktop-display.py",
-      "sha256": "1a282394d26d588c88ba9bc6caf6b9d289673540e47bfbf187c3bc61f3632695"
+      "sha256": "4f10168687ef72278dfeae5c0cf7b25a6ca97cf1e3197d746dcdc8fbfaeef814"
     },
     {
       "path": "UniXNU-raphael/scripts/build-raphael-storage-bindings.py",
@@ -238,6 +246,10 @@
     {
       "path": "UniXNU-raphael/scripts/build-raphael-pthread.py",
       "sha256": "520d42123819178cad7826dcfff046a06ee9cd4776f98d5440b4ab53711af6d6"
+    },
+    {
+      "path": "UniXNU-raphael/scripts/build-raphael-aes-trace.py",
+      "sha256": "c2d6f7d1f16f8d28b23a987086ea6caea76d983d69b8de8f0a5c25306fb4d905"
     },
     {
       "path": "UniXNU-raphael/scripts/build-raphael-cpu.py",
@@ -309,7 +321,7 @@
     },
     {
       "path": "UniXNU-raphael/package/README.md",
-      "sha256": "875f49f1d23c23912c43c23fac6f9abf72a94172afab1cf0e4bd87e561cba1a0"
+      "sha256": "caaa73950671d42bdc7ff498cf4c821672fb294b8f55d08a4d8c990347bc5311"
     },
     {
       "path": "UniXNU-raphael/scripts/__pycache__/build-raphael-cpu.cpython-312.pyc",
@@ -389,7 +401,7 @@
     },
     {
       "path": "UniXNU-raphael/patches/xnu/service-observer.series",
-      "sha256": "b109d2438d05f6f65680c68204be8c07df2a6b8379bb08a7949a16bd6e1695f3"
+      "sha256": "af4fc90461ddcd40cafb4217e43209696c607812648cad3f43ac74a30cf5b01b"
     },
     {
       "path": "UniXNU-raphael/patches/xnu/raphael-cpu-ownership.patch",
@@ -398,6 +410,10 @@
     {
       "path": "UniXNU-raphael/patches/xnu/watchdog-display-client-checkpoint.series",
       "sha256": "03f3feab0ade98932c046bf2f98360315f36638472eb9150746ddabf623f4edb"
+    },
+    {
+      "path": "UniXNU-raphael/patches/xnu/raphael-fairplay-iokit-trace.patch",
+      "sha256": "b7a4c783b13729f36cd70e49e2ab860c2ad01ddf558095bc2dc4cd5d492d958e"
     },
     {
       "path": "UniXNU-raphael/patches/xnu/raphael-root-observer.patch",
@@ -516,16 +532,20 @@
       "sha256": "4cd6c167402065b87d5b8c2e1a3efab7c981b3e5f6b7d5d0e7cc25f72652c8d4"
     },
     {
+      "path": "UniXNU-raphael/patches/software-aes/raphael-fairplay-result-trace.patch",
+      "sha256": "1e0c1687a0c23373c4c4bc527f2e45dfb83f43013900449cbfd95b5b07269334"
+    },
+    {
       "path": "UniXNU-raphael/package/firmware/README.md",
       "sha256": "df8302f4dae16fc2cbc8f9bb9c1531444c958e1ea70f1f95e799bca792198edf"
     },
     {
       "path": "UniXNU-raphael/package/drivers/RaphaelServiceThreadObserver.c",
-      "sha256": "7e683988d9f093fc28637129d3af6bbf14387938d97d5fa900aea149b1ec77e3"
+      "sha256": "9889f61487cd2db0c4d9c4ecf501717c895b1384f88dca05a48e561144946a1e"
     },
     {
       "path": "UniXNU-raphael/package/drivers/RaphaelDesktopDisplay.cpp",
-      "sha256": "4f4eb1756948ca81510bb1b564ac5be33097f4d3aa8905c13d832973df74ad55"
+      "sha256": "fd7031e1e4d4171f1bc4a55f22573cdfa844507d10de75189114470ca5a93711"
     },
     {
       "path": "UniXNU-raphael/package/drivers/RaphaelUfsConsoleLog.c",
@@ -541,15 +561,19 @@
     },
     {
       "path": "UniXNU-raphael/package/drivers/RaphaelServiceObserver.c",
-      "sha256": "fae738dad060f625518430964f4ae01bff277e7eea75db2bf11111902ce938c5"
+      "sha256": "7a73a0413bc741bac64b7e2d985047821cbcf7c8d6914180edcb98dd2862417c"
     },
     {
       "path": "UniXNU-raphael/package/drivers/RaphaelNativeConsole.c",
-      "sha256": "11e635145fc16c6f34349d2549572ff1612e4ebe37e7b79e31b5e1758c1c34e4"
+      "sha256": "50c530715048f93542b8266c44247b0a4eeb285154196809287cedcf918dcf99"
+    },
+    {
+      "path": "UniXNU-raphael/package/drivers/RaphaelFrameProbe.h",
+      "sha256": "edbcf7e43bb7dcc17806824afb3b42e7ac9b8cef09be06e4a9b9cb9191f8b4ae"
     },
     {
       "path": "UniXNU-raphael/package/drivers/RaphaelOfflineKeyStore.cpp",
-      "sha256": "1b13834f98250404d3dfd5baf4b76388ae49f7b62e0cf0cd67010d2006e82515"
+      "sha256": "959cc682b39a3269b8955d642a7420c34e56f9abdef917dd61928cb44bf1edf9"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/RamAlias.dsc",
@@ -557,7 +581,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/RaphaelPkg.dec",
-      "sha256": "6b23f6866f0b925bbc581897768e79479dde1d5bfa2b74e5a9221c517b72f55e"
+      "sha256": "cd80cf7ed6ee7f50b9af8475a2ecdc726f91736f1265f203f584d899fce9bfc2"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Diagnostic.fdf",
@@ -569,7 +593,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Diagnostic.dsc",
-      "sha256": "6b24e0c1ffbc52718fcd656e74cd1bf2ca45fee8230ee0dd75f69045bb73dff3"
+      "sha256": "a6f969799e27df040f702e84a13319b44ece5d53ee3f68d592f27fe861f3e458"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/MemoryContract.dsc",
@@ -585,7 +609,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Sec/Sec.c",
-      "sha256": "345e1c6b117edd0000e0ce5c71b87cde1b6f71146f94321cef64d77aefdad891"
+      "sha256": "45c385aed391ec4e90d6af51b84d57928a8ec64185d72f913ba4cfd29171bfde"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Sec/PixelProbe.c",
@@ -665,7 +689,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Sec/KernelWindow.c",
-      "sha256": "f4069eea83ef9e5dc1e38edd9fa794fdff516ac49b232f235a00da7c033a307b"
+      "sha256": "0ca4a1a026cc4e26514dc7b02c3de9655a076bf2e093a978d454ece6ab2771b0"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Sec/SecEntry.S",
@@ -793,7 +817,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Include/RaphaelNativeWatchdog.h",
-      "sha256": "636f20c25fbd1f3fcd4d3df1e861934ebc847a7363daabbe518a2ab87e046047"
+      "sha256": "0701e3982fd5c568c64903bbd528df8a24f8e5e05a3cae0e721e79efa90a109c"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Include/RaphaelAndroidReturn.h",
@@ -829,7 +853,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Include/RaphaelUfsTransport.h",
-      "sha256": "77292b950bebba29821646149505eaf24dea10fa648e9eabbd7192091050af69"
+      "sha256": "bb7d84d10737cf3f8e463335c869f5a35495d97b0119babfd15a37b7a38abf11"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Include/RaphaelNativeMmu.h",
@@ -849,7 +873,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Include/RaphaelNativePmap.h",
-      "sha256": "ff49e8d27b25274f670ce7ff373ee5224178e5b6e28d3d27e1760da78da17254"
+      "sha256": "61f7fccba0c618c5d13a8228990ddb5d13a395831f5fee831f5196e01d4f3634"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Include/RaphaelDiagnostic.h",
@@ -1033,7 +1057,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/NativeMmuTest.c",
-      "sha256": "5b7d1698a4ff230851b5ad76f3f363e377a6820e8b8ac8c47e549951e0b53d40"
+      "sha256": "dc9edb2c37118e3ce6cadb41a95e4deef1ef2c28e488152d16ceb8fdf41a9d41"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/NativeEntryTest.c",
@@ -1061,7 +1085,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/NativeWatchdog.c",
-      "sha256": "612296194e0ad75e6f75ddfec982f3c2ba03dd63b8b01d7092062a85c7818021"
+      "sha256": "3f361143032fa6a9e473fb08fb627a13ab5bfe0ab89e2d7c49fb748fddcf2702"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/DarwinTest.c",
@@ -1073,7 +1097,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/DiagnosticReturnDxe.inf",
-      "sha256": "874bc0bc1a6de08bcd67a496e187fff82e8584ac4f95dcec2e67db02fd00144a"
+      "sha256": "642e512e60b7f5c0b0f6b3f1f40407ec49a7ba245266e6f6306ee9e61186f176"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/NativeEarlyTest.c",
@@ -1081,7 +1105,7 @@
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/NativePmapTest.c",
-      "sha256": "f47162432f365404e86d35b136d9773125350384e85469f219d0c131f8984d0f"
+      "sha256": "9b09a4ffc98d62bc4ecd4a33c3c7a51d78f7c5e2fae4ccac7e06bd1902cb1f6b"
     },
     {
       "path": "UniXNU-raphael/package/firmware/RaphaelPkg/Drivers/DiagnosticReturnDxe/PhysicalTimerTest.c",
@@ -1144,9 +1168,9 @@
       "sha256": "3231f0bd0d658fc6c961af2d2dcfa22d55ec8d89abe4e27e55bf77d4594ccf93"
     }
   ],
-  "artifact_directory": "artifacts/native-bootstrap-attempt/20261104T182904Z",
+  "artifact_directory": "artifacts/native-bootstrap-attempt/20261106T180601Z",
   "backend": "pinned unixnu.kernel.build; no kernel.prelink invocation",
-  "runner_sha256": "ff3f3f1a2398c4d2f0b96372a0fd6bb4aa73106d6d9695622f24556a395685e9",
+  "runner_sha256": "ecf654fbf16c19cd68ac91306633fad3baff2a3858aff682518e8879345c5680",
   "source_tree_dirty": true,
   "local_source_changes": [
     "docs/drivers/ram-block.md",
@@ -1159,12 +1183,12 @@
   "service_spawn_waits": false,
   "native_console": true,
   "observer_budget_ms": 1860000,
-  "ufs_console_log_report": "evidence/private/ufs-console-log/20261104T182901Z/report.json",
+  "ufs_console_log_report": "evidence/private/ufs-console-log/20261106T180556Z/report.json",
   "native_ufs_write_probe": null,
   "selected_display_source": {
-    "path": "artifacts/native-bootstrap-attempt/20261102T162658Z/snapshot/UniXNU-raphael/package/drivers/RaphaelDesktopDisplay.cpp",
-    "sha256": "813e47bd33f8bb4b2acd1ffa6f4c6a4f4f79c53a4df80a0da6cd2923fa3efdd6",
-    "frozen_path": "artifacts/native-bootstrap-attempt/20261104T182904Z/selected-inputs/RaphaelDesktopDisplay.cpp",
+    "path": "artifacts/native-bootstrap-attempt/display-copy-queue-source-20261105T144653Z/RaphaelDesktopDisplay.cpp",
+    "sha256": "b310efd637a92fea8be97801b0ed1b6896cfed8ebd819afc36b4f6091f8e6a27",
+    "frozen_path": "artifacts/native-bootstrap-attempt/20261106T180601Z/selected-inputs/RaphaelDesktopDisplay.cpp",
     "live_source_preserved": true
   },
   "modules": [
@@ -1179,6 +1203,12 @@
       "name": "edk2",
       "path": "/home/guo/work/raphael-fresh/sources/mu_basecore",
       "commit": "cfb93724a06ff86ff5ba971413368a7809ee42a5"
+    },
+    {
+      "kind": "patch",
+      "name": "software-aes",
+      "path": "/home/guo/work/raphael-fresh/UniXNU-raphael/patches/software-aes",
+      "commit": "14d0e6ad84f5950411e687b01868fba8647c9609"
     },
     {
       "kind": "patch",
@@ -1591,6 +1621,10 @@
     {
       "path": "/home/guo/work/raphael-fresh/UniXNU-raphael/patches/xnu/raphael-service-observer.patch",
       "sha256": "cfb73443a7f62a8fce53e2c747b8eafed9daa0d3b551c6f7ff407890501acae5"
+    },
+    {
+      "path": "/home/guo/work/raphael-fresh/UniXNU-raphael/patches/xnu/raphael-fairplay-iokit-trace.patch",
+      "sha256": "b7a4c783b13729f36cd70e49e2ab860c2ad01ddf558095bc2dc4cd5d492d958e"
     },
     {
       "path": "/home/guo/work/raphael-fresh/UniXNU-raphael/patches/xnu/raphael-watchdog-method-checkpoint.patch",
@@ -2638,14 +2672,14 @@
     }
   ],
   "native_macho": {
-    "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/native-kernel.macho",
+    "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/native-kernel.macho",
     "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/tree/build/xnu/ios-obj/DEVELOPMENT_ARM64_BCM2837/mach.development.bcm2837.unstripped.noctf",
-    "bytes": 92458984,
-    "sha256": "4bfdeb3a83976be1a9abaa68dbbcab8e685a76f9149217a40e601f8bd420e3b9",
+    "bytes": 92530128,
+    "sha256": "667db82258814b143bfb753265316442a6886f259a07612a65ccaf7683a8e9b9",
     "filetype": 2,
     "load_commands": 25
   },
-  "compile_records_root": "artifacts/native-bootstrap-attempt/20261104T182904Z/compile-records",
+  "compile_records_root": "artifacts/native-bootstrap-attempt/20261106T180601Z/compile-records",
   "frozen_compile_records": [
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/ah_core.o.json",
@@ -2777,7 +2811,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/cpu_copy_in_cksum.o.json",
-      "sha256": "88c1cb4b6f252fc09e92656cabf9c656f8faa814c857aea09f5660a96ee51094"
+      "sha256": "8295c37f2fc2249058e0440f2fc6276614f794f59c1faa2f3c33fa69f2521a77"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/cpu_copy_in_cksum_gen.o.json",
@@ -2785,7 +2819,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/cpu_in_cksum.o.json",
-      "sha256": "ab8cfc2b5c95ad78bffeecdc44c055ce046d194bd6d27a6018ba31a4128ceeee"
+      "sha256": "a0b3e27de7e81b464879cc8f3fa227adf89c32a8b42a9ea6564be5fa2ebd7d3b"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/cpu_in_cksum_gen.o.json",
@@ -2793,7 +2827,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/cpu_memcmp_mask.o.json",
-      "sha256": "f3a2170f05abb43af4f2f9e49949bc7308dac05b6a71ac96c9695b78078f9642"
+      "sha256": "f2e301abadc43d160cfa1c255809eb1dc3aec9b9d277404169fdb221b3a35622"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/bsd/DEVELOPMENT/crc32.o.json",
@@ -4713,23 +4747,23 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/WKdmCompress_16k.o.json",
-      "sha256": "27a60bbe029e8b5d86ce8cab8060c9c3cf1bdc01777d928ddc6f7e97d060de2c"
+      "sha256": "b7b10124a52853c1b6593f6f3c4e8dab53902e4ad0067e6bf5249fb7b23d008a"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/WKdmCompress_4k.o.json",
-      "sha256": "572f2b7c27e57c3b35c902d3f963c216a3eec20c90aa0b34f2d8418043a1a3c0"
+      "sha256": "45f0467278becab709d81b92f4336f90d116c21c684e1df25bd033ea7a33e2e9"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/WKdmData.o.json",
-      "sha256": "580ca3b6c705a30fdaae858cf076b304b188f9d3d1615601ceee4b4aa7db159f"
+      "sha256": "7993e4269202fbc938aac09f0456320a79e400dd8043db77cdb4936f2e6a5939"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/WKdmDecompress_16k.o.json",
-      "sha256": "50eba9630931a495f17d8ecec1db52531da95480507c549a14e57f1f61b522d7"
+      "sha256": "b4dc8c93df811ea7c7125d49811edeb07bd64b3e9c4de4f546dba5d033e25d47"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/WKdmDecompress_4k.o.json",
-      "sha256": "3611ae96ae3d828dd7e73673a0fc9362588cafc509bbc19692bad8716ccd44df"
+      "sha256": "e908fa2c880fe8ae917e2bd938916f2fcd5c248da99f29726efb2dbd8b71e38a"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/action.o.json",
@@ -4745,7 +4779,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/alternate_debugger_asm.o.json",
-      "sha256": "597c5f95e207141672d835d591438832b76986c98861f160e6d4bf254996b3a2"
+      "sha256": "e3afb331f68ad6d79f4fc98bd1f760c648ec4f3c27a215ee21fc0d0a5f5af257"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/analytics.o.json",
@@ -4789,7 +4823,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/bcopy.o.json",
-      "sha256": "b15bfd9e36841b5c8bf837fb91794c8973f0c59c7e2eeebdf822ebe5a830b020"
+      "sha256": "e0c8d9accdad32134dc5ea543bd5820554179a9733623815abb983eb860b2991"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/bitmap_test.o.json",
@@ -4817,7 +4851,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/bzero.o.json",
-      "sha256": "57739e7b9d3ebcd5884d95d2b7e07ad4b13a34f0248fa7484bf0f68fbe982ce0"
+      "sha256": "96bf104ca438f346982939479dd4e2e1faa37a5b1712b35b54566d9ca1b0f4e9"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/caches.o.json",
@@ -4825,7 +4859,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/caches_asm.o.json",
-      "sha256": "637d782979dd614050597d524dd5dedffa64fdfc3ce160d241ffbd2c157c80d8"
+      "sha256": "87b391cb57f7fee85cb9c3d295c254f847b2a68555981586ed590fd10d82dfe4"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/callstack.o.json",
@@ -4993,11 +5027,11 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/cswitch.o.json",
-      "sha256": "22197a8ee89cffd52e69fc89dce1488cf54b929c8dbe8dbdbc822fd7ed31b6af"
+      "sha256": "df8a259cfb0df64ee00f90c37eeece4f9035445deeae20281cb7e4aa6fa67c60"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/data.o.json",
-      "sha256": "19f19b12b4e510c62976000c305001518d7a1a5ed799b5f71517af0fa77a70b5"
+      "sha256": "1c808b4c09b43a8184f35ccc7081cd65d6533a78c332ec1709aadc9ee1fc17d6"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/dbgwrap.o.json",
@@ -5121,7 +5155,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/gxf_exceptions.o.json",
-      "sha256": "6f609db1194dddbbdc6059983991cb194080f6ed617dbf5781e5d6e8925cd18b"
+      "sha256": "d1cd69e2f30bd0512dbe41bb599da99251ca77a956d28b5b259704f0e601cb3c"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/host.o.json",
@@ -5145,7 +5179,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/iofilter_asm.o.json",
-      "sha256": "c01e73029f6e4ac1bac6efe7553e3a486d4608b8c9e28f3cbc6240586e537ed1"
+      "sha256": "000091c84f4dade733bf8449ddb159d6beb5402fb8341a2e69502f49fe800657"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/iokit_rpc.o.json",
@@ -5381,7 +5415,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/locore.o.json",
-      "sha256": "fb05a2734ef3cacb47b008e4e6bcf535e34f2dcf3b3a6fec97b0ed5c84f9904a"
+      "sha256": "bc484fc6c0df1244d76a641e6e8ba17bbaa3946b71008978d70c1dc1a63f502c"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/loose_ends.o.json",
@@ -5397,11 +5431,11 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/lz4_decode_arm64.o.json",
-      "sha256": "95737763bdf13ed4a06548222579cde795734a6a0e021985d2925d2ce84d1fce"
+      "sha256": "8d4d189b15f424d99602ea3c24f943aee82671eeb226e991606684242dfc9215"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/lz4_encode_arm64.o.json",
-      "sha256": "a79565d0df9caf6c4ef63acbf253a0b285602afae9d2eae8e68d4d74a2cfb5ec"
+      "sha256": "b4103e71eb029ae3ec65de4e39cd5505b5a6c53168132119636f87a2c0053969"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/mach_debug.o.json",
@@ -5485,7 +5519,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/machine_routines_asm.o.json",
-      "sha256": "c5af7183d56a635350c5c4cbb4dcda8901fd3eaf1e57c4a32c395ef9b1f55284"
+      "sha256": "5d0a3696e71f8e7bf4c07239038d1ea3aded98f2fc4d5079537b4959285ef9ff"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/machine_routines_common.o.json",
@@ -5497,7 +5531,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/memcmp_zero.o.json",
-      "sha256": "6ed835da953beaa104afd01afbe38492b04703a12a409040fb989863acbf226d"
+      "sha256": "20b527d9420251bdd532eb22ed256dfdc477aa09811e94e659cdb305a3935305"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/meminfo.o.json",
@@ -5585,7 +5619,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/pinst.o.json",
-      "sha256": "f60fc5baf16d79b2db0055899296bb983a5f4e0e6560e11b6bb0946fa1762ccd"
+      "sha256": "b3b3aa2262e48218ec5cba32f7431dbad0b01c8dbba74f1b60aa73a0f085f943"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/platform_tests.o.json",
@@ -5593,7 +5627,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/platform_tests_asm.o.json",
-      "sha256": "f068b777db28cadd9382b588b9ea351e5ea008a256def1435c316cbd684d3ad5"
+      "sha256": "448c5ee3d29044ff96a158a43a0a567f4f606e4f5d77d3a19f07305d76cdf592"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/pmap.o.json",
@@ -5729,7 +5763,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/sha256_compress_arm64.o.json",
-      "sha256": "bb76c6433000ba86a875905e9473cc499b81c7fa48ee00e158a02cb6d858e9d0"
+      "sha256": "a2c8efce183188f84a6d194c9730a975042f03e0f95924c528cd5776073325f6"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/sleh.o.json",
@@ -5749,7 +5783,7 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/start.o.json",
-      "sha256": "16c6fdb85605938336edd0ef7fc83c8911cd8ee618e505269c2ee9629bee7595"
+      "sha256": "9c86586e709de078a728086622d26a425b4b1740ae4b7bf7bdfb56ce347379a9"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/startup.o.json",
@@ -5765,11 +5799,11 @@
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/strncmp.o.json",
-      "sha256": "9d452bfd46196575c483eaf970c5e969a7773cbe5a063b068a6868036a277c91"
+      "sha256": "6d03c99d40d7918d1dd3d262a52d39258b3b116432e769824013ee0b29013a22"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/strnlen.o.json",
-      "sha256": "02ca6dfd67dc26d379c5471c7d5c268a39c4d3913237057f2f8dedb037c15eea"
+      "sha256": "5c3b1ed278f4c7309e692a46b85ceba904df0aadef837c057523a720fcbc26e6"
     },
     {
       "path": "DEVELOPMENT_ARM64_BCM2837/osfmk/DEVELOPMENT/subrs.o.json",
@@ -6200,669 +6234,684 @@
   "compile_records": 887,
   "auxiliary_artifacts": [
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/build-report-namespaced.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/build-report-namespaced.json",
       "bytes": 87273,
-      "sha256": "d03bd53f1060dc1271138d4a747f40748c78949517114e8a7fdd76720c55f1c9"
+      "sha256": "b522978be8366a7f7d89e673d9fff9b98338c3266f1aa21ed0e6206a7ff6fea7"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/build-report.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/build-report.json",
       "bytes": 87274,
-      "sha256": "cd87d30203e477fb1ccf6e17620eef0303b610b2544309738225df316a75a07d"
+      "sha256": "a8d33d01ba72999a13d81858e0e05006ec972af988a9ae307fea8f538829a939"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/compile-command-namespaced.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/compile-command-namespaced.json",
       "bytes": 15102,
       "sha256": "0e473c92b160859989a996c1d7461e5ec1f4c58288cd7d1623424b54f660580f"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/compile-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/compile-command.json",
       "bytes": 14934,
       "sha256": "57effc607da90d45b671cb0982db3cbcfa3288cdff0d37a16c28d87782b29187"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/libcorecrypto_kernel_noasm-namespaced.a",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/libcorecrypto_kernel_noasm-namespaced.a",
       "bytes": 927664,
-      "sha256": "bbe204fe2e0d06db3bbfd1fe0584095148ab8c97c8a9c10bde7ebaead618d94e"
+      "sha256": "bb6af5c996507b5daf744754bfc124158e8777a83114213d73f990dfed34629e"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/libcorecrypto_kernel_noasm.a",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/libcorecrypto_kernel_noasm.a",
       "bytes": 924784,
-      "sha256": "d4c4262580fe7255b06eba70de514c4af414edecdfadd98147568334572fef59"
+      "sha256": "a57f7721f62fb0e2cd832c3a7190eb04c0ce8972f39f6aeb354b44388b6933d1"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/link-survey-namespaced.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/link-survey-namespaced.json",
       "bytes": 1087,
       "sha256": "07364cfdc02d6d991d248d2390ad7431187f0b81eb2ac54a9d90a8b5d65ba515"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/link-survey.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/link-survey.json",
       "bytes": 2618,
       "sha256": "7ca65532da4a5385bb2ac9ea4f379c27c2fd8da0aec2018521c0a496e1c410b4"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/namespace.h",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/namespace.h",
       "bytes": 2869,
       "sha256": "6667fe114298ff4032a9975904b99d7bc17d2e67d17d544404578c4d5fccdcd2"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/corecrypto-2023/project.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/corecrypto-2023/project.json",
       "bytes": 1766434,
       "sha256": "9dfc3f50cfe30b8b73822d069939f9cec63e7bdd7aba66e2c1991ee12345e048"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armdt-platform/ArmDTPlatform.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armdt-platform/ArmDTPlatform.o",
       "bytes": 194152,
       "sha256": "2c968718668ad51d02632733a68c7fdb0c4fef33bf2068eb478b2d5874c32705"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armdt-platform/compile-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armdt-platform/compile-command.json",
       "bytes": 8936,
       "sha256": "647a18f74a824e3ed36ca8ebb51c5d01fc077d9d1e51e596f676c3a0b7c32d75"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armdt-platform/compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armdt-platform/compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armdt-platform/libArmDTPlatform.a",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armdt-platform/libArmDTPlatform.a",
       "bytes": 195512,
-      "sha256": "4536f332bba7385a873dd11e97cd2a1a87c96d9aa0c7d4fa3cfbacdc1995d22b"
+      "sha256": "b1b6b2dfa171cd28d74a392ff766418d52259fac793c201b74d7050cf1357618"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/OriginalWatchdogABI.h",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/OriginalWatchdogABI.h",
       "bytes": 568,
       "sha256": "ba05a7dc960bcbae3151b1e7b7fbe46bde66d96701fead03dc52093cf0bb2924"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelBootCpu.cpp",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelBootCpu.cpp",
       "bytes": 13147,
       "sha256": "e2c943d32e7dfa659a1af20c7b84a6c365acb33ba7c2b57a2cfd1e94f4830d08"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelBootCpu.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelBootCpu.o",
       "bytes": 218072,
       "sha256": "792b71082a24f2a3b09f74e01c9c2eb1f57269121f917b4a270f90459e5d5db6"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.cpp",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.cpp",
       "bytes": 17246,
       "sha256": "f65ec553e242b5d85db6e6811aa49e309520c34ced991f17278e2c8fd259a8cd"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.h",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.h",
       "bytes": 2850,
       "sha256": "20d678d9fd51a53de1c0a923e2dd6b713fe7a594824c1efd2a4579aad7511880"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.late.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.late.o",
       "bytes": 293139,
       "sha256": "cdecd6c03e43280f3817ba7a7330e537df3addf637c34a1a8c04f7a86524de30"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelDiagnosticWatchdog.o",
       "bytes": 293272,
       "sha256": "201f3c5166732b9d128efd5b36cfa855e2e2f9b294042c5086d9486f815ac42b"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelGicLocal.h",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelGicLocal.h",
       "bytes": 1780,
       "sha256": "5e7c610618a96083caa845e42877eed4b861a07eab002a9cf29adb74cc00beec"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelNativeReturn.S",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelNativeReturn.S",
       "bytes": 4400,
       "sha256": "4be0791d310bd65d25a451827059e3ebe081994d50dd1326c5ca0fddf3a0ce2f"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelNativeReturn.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelNativeReturn.o",
       "bytes": 2136,
       "sha256": "b312c2a9451f71bb62d58df564b26fafc3d0a16db4568d1ccd1b8f8b5fa0c5c9"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelPmgrCompat.cpp",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelPmgrCompat.cpp",
       "bytes": 2816,
       "sha256": "bc2f0dd0d85e36dfdb8ee66473e5de8b1cb3e726eb910415ea8aa68e4e6c3772"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/RaphaelPmgrCompat.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/RaphaelPmgrCompat.o",
       "bytes": 156880,
       "sha256": "db4ac5dc31493bdcf8cc65ba579e8af0f99dc4030c34d55884580c64242d47f4"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/compile-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/compile-command.json",
       "bytes": 8863,
       "sha256": "a705da2832f96a856c5c70fc28001dd10292d0997f7e3135fc63580960cbbe88"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/diagnostic-watchdog-disassembly.txt",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/diagnostic-watchdog-disassembly.txt",
       "bytes": 114515,
       "sha256": "c2ed4a5af759f86fe3017cb7aa394790e22561a69bff3b516589ba7018558850"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/libArmCpu.a",
-      "bytes": 882632,
-      "sha256": "5490e1485d340863cabcfd05dfbc7dc471b1b68f17a80f4e1586f0730afc6d69"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/libArmCpu.a",
+      "bytes": 964192,
+      "sha256": "1cc4bcff65f1a66d2a2efd34192df5062c63f5f65e9372169895fc6ec57b0965"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/original-watchdog-bindings.S",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/original-watchdog-bindings.S",
       "bytes": 268,
       "sha256": "3ba7b0364cd1303f67b492b8322fbf8a73987f0b7b55ddf8b7f8d7c61ebe0e20"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/original-watchdog-bindings.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/original-watchdog-bindings.o",
       "bytes": 472,
       "sha256": "4d71f215d39cd0dd2bd59231ff10200d9d0874eb1dcbe628fe62733e8ef0ae6c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/provenance.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/provenance.json",
       "bytes": 367,
-      "sha256": "fad417bac5ec7de4c46f03d161f0b7b8560f634e5b7862098cd409f73a10e49c"
+      "sha256": "b00f8a9e7b73e9a5cf0bda77e553c72bc59213db31c2c7acd8956a7f81f4cddb"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/armcpu/watchdog-abi.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/armcpu/watchdog-abi.json",
       "bytes": 698,
       "sha256": "e30105fdf142535d1f3d73535054eaf444bb7a4e4c8a2b68cbfa0bded4015115"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/kern_init.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/kern_init.log",
       "bytes": 5793,
       "sha256": "d04824fa1269c2a4c49095dc735dd0b561338de00e4b87f61b3238eed13eaebf"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/kern_init.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/kern_init.o",
       "bytes": 3120,
       "sha256": "078a698c038d4b74c462ed77724147063746ab252aea22e32ee34d87b627e438"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/kern_support.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/kern_support.log",
       "bytes": 3343,
       "sha256": "952a1784ed32301fd698c0343d241ac017a797c2f9617e20f6312a4549d00999"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/kern_support.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/kern_support.o",
       "bytes": 10368,
       "sha256": "504df62a9525915cb3563d1747191918f99fd9485f2e85c2a3074f79dfe383b0"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/kern_synch.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/kern_synch.log",
       "bytes": 6253,
       "sha256": "7f3eabc550aa5897637bb13dbc4a353eed25bde8b372ad0eadd1ddb55033e5fa"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/kern_synch.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/kern_synch.o",
       "bytes": 34328,
       "sha256": "7d3cecca3851f457a6c2419cce5f686b7199664ed07af1185b84c33e021405e3"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/libpthread_kernel.a",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/libpthread_kernel.a",
       "bytes": 56216,
-      "sha256": "c0a2d66684e3aad5a254641c962ce1e3801c8362a8b37079a2b3db5a77dbf1f5"
+      "sha256": "0cd2ec33b968e828571402b68aaf1d182dcc08928a551247639ff83505242f11"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/namespace.h",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/namespace.h",
       "bytes": 96,
       "sha256": "7b416ad7463de531975703aecd683c792d99281371c2566c628dc84bbd5c84e5"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/report.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/report.json",
       "bytes": 326,
       "sha256": "7137064fd62d59f4cfe71e0e59377803f6cb0176d3b92ffe0b42844b46a1be17"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/source_pthread_bootstrap.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/source_pthread_bootstrap.log",
       "bytes": 80811,
       "sha256": "cb5cf467f2d4455df2b52403db951a8846ae6668dd3355227ad4cdfb47d2dcea"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/libpthread-kernel/source_pthread_bootstrap.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/libpthread-kernel/source_pthread_bootstrap.o",
       "bytes": 6792,
       "sha256": "e42bb84855161095288381ba712f33989e686869bb5ba358b151ee8edc7134c5"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-ufs/RaphaelUfsBlock.o",
-      "bytes": 337840,
-      "sha256": "91343a80a4b0d1a5e50ce951a9fc12eb7e5953dd67612165a7975256fe098952"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-ufs/RaphaelUfsBlock.o",
+      "bytes": 339184,
+      "sha256": "18099d53a3da76fc5808d8c791d1a6610f081704e0990c251ef49915ba45ebb7"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-ufs/compile-run.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-ufs/compile-run.log",
       "bytes": 12048,
-      "sha256": "836c78d5539532b98962123ff8ab361041888271eae184d96e9f7ee5b054d7ea"
+      "sha256": "90b62fce0af2ea252f343f740ed713b91e5f7c2bca48d268d4cd8a5d76628d9e"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-ufs/provenance.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-ufs/provenance.json",
       "bytes": 297,
-      "sha256": "ecebd67597b24bff541454585f5e5c211e721c7ce60b3f7cbc2418a784e22ae2"
+      "sha256": "aef272ef082765aa1f348c50008b95b07598f18f0735c5641a984363fe5687d0"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/storage-abi/headers.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/storage-abi/headers.json",
       "bytes": 2089,
       "sha256": "15d1fb98444e25bbd66d341f73c042331f46876455491c7a429258afeb46e114"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/storage-abi/interface-audit.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/storage-abi/interface-audit.json",
       "bytes": 45207,
       "sha256": "8938485925dd34155405a6e365194bda961d789cfb8979e185f866df21de924e"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/storage-abi/raphael-provenance.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/storage-abi/raphael-provenance.json",
       "bytes": 502,
       "sha256": "d344b33db9fc3fb4af01067dac30e03096a270932aa4f97739807b8bd9ac4d31"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/libVerifiedRootWithData.a",
-      "bytes": 74055688,
-      "sha256": "eca55b8969391b64ffea194fe8d3d503dae7ff835cb45cce0d1f47111a99940e"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/libVerifiedRootWithData.a",
+      "bytes": 74058368,
+      "sha256": "3ad10ebd19db23a683f171f1331c12177d26ca05c141ecb695eeb5cc7d3e706f"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/payload.S",
-      "bytes": 201,
-      "sha256": "e66bcd814092cd28497eb124d67b933498e49db448c5f5fe2bd52f972c25ff10"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/payload.S",
+      "bytes": 212,
+      "sha256": "367f1d40415e85ffde4b48c9ee429a7393ed3ca94f87a33d5f4d041522926b0b"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/payload.o",
-      "bytes": 612208,
-      "sha256": "cf5acc7b7f544ab82c60b14a1bb4465b730beb7b1a029f0dd58550c233afd3f0"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/payload.o",
+      "bytes": 613432,
+      "sha256": "1ddde57e9bc842738b7152c6b03778d1896f2a20cdec965db8c3051e12d90827"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/provenance.json",
-      "bytes": 542,
-      "sha256": "2760438926e08739bde96f5a8129c769ee733a46bed9ae7db0f459563f91d2eb"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/provenance.json",
+      "bytes": 553,
+      "sha256": "fbcc8270ed704ed559074892706172fdda9b2fb12da7840beb0643a5c5689a31"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/seed.o",
-      "bytes": 98744,
-      "sha256": "c4287930b0a4731a75d942a735111670b05923e6b010134a1f39a7000995246c"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/seed.o",
+      "bytes": 100200,
+      "sha256": "49aff0ec5c2d709cb9a95761c8b56811e2a0e0f3a3a6a27bb4c2b4baad6730a9"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-data-seed/seed_entries.h",
-      "bytes": 25996,
-      "sha256": "5b9c265a85a214254fbdd2258fd847b6ff20f54d5f3c4a3dfc35402a871c9c9a"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-data-seed/seed_entries.h",
+      "bytes": 26734,
+      "sha256": "e5d390fe79fdfb2bfa6a528af0224bd9527150433f7ffe7329517c2d9b32590a"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/NativeRamBlock.o",
-      "bytes": 305328,
-      "sha256": "341d4b4e17034123b280abd67b84e1cd5447782b9cc28cc4dd33d4c3eaa1f3df"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/NativeRamBlock.o",
+      "bytes": 305944,
+      "sha256": "de552c5bf2b9be49b7cea72f23090ccfe1e32e08a25fe2f7fac333614ea7e0ef"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/RamBlock.o",
-      "bytes": 305328,
-      "sha256": "341d4b4e17034123b280abd67b84e1cd5447782b9cc28cc4dd33d4c3eaa1f3df"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/RamBlock.o",
+      "bytes": 305944,
+      "sha256": "de552c5bf2b9be49b7cea72f23090ccfe1e32e08a25fe2f7fac333614ea7e0ef"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/bindings.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/bindings.json",
       "bytes": 1276,
-      "sha256": "b1c79efec618cc535a14cc0ad5fd74773a6277f8241a2d9736be205653bee2d9"
+      "sha256": "a64427fc7d7148534ac57cb5b506ccc46bc9c81e95e04ee79da62581bb326f07"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/compile-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/compile-command.json",
       "bytes": 9082,
       "sha256": "3a4ac0d3208b3eb8c883d3937a7213f66b04078229aa44de506f8f4812dfc474"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/libRamBlock.a",
-      "bytes": 309120,
-      "sha256": "fb5cb17e579c8a43aa75a6cc097cdb32dd832e07ecde16218ddee0c7c5899c78"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/libRamBlock.a",
+      "bytes": 309736,
+      "sha256": "7c0452a18c32e4f57cb7a556ca77f201f2443186bc249a62e6832e5c12e0313c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/original-bindings.S",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/original-bindings.S",
       "bytes": 1500,
       "sha256": "3836daa743cfb82cd54a40eda3f29a6f1d29b199a3d08e95f65c82bc86735780"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/ram-block/original-bindings.o",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/ram-block/original-bindings.o",
       "bytes": 1088,
       "sha256": "de7a90286512003939fc223fbf0107728b8fa890eab764172818f95353387603"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/NativeKeyStoreEvents-compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/NativeKeyStoreEvents-compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/NativeKeyStoreEvents.o",
-      "bytes": 244984,
-      "sha256": "0d1df41abb0b40053296ba1b5ff6056b5a0930675740d80b706c55167a0a7d08"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/NativeKeyStoreEvents.cpp",
+      "bytes": 16490,
+      "sha256": "9a25c253658195c1dfe2c9fa0aa4481929ec84a0d96c39c7f1dde9f3ac55460a"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/NativeLegacyRequest.h",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/NativeKeyStoreEvents.o",
+      "bytes": 276512,
+      "sha256": "1f692ae4970efcefbe804b351ee205144fb2f7c1261de914bd73f9ce79499cc7"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/NativeLegacyRequest.h",
       "bytes": 9893,
       "sha256": "81e89e1f40f2f1d0919567f53bc0564c650488843082693d00b9ea256cafae21"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/OriginalLegacyFramebufferABI.h",
-      "bytes": 6348,
-      "sha256": "4ac11d081f9897decb732c706d10ae4b6d130b33cabf085133dd7e5d76fd1c41"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/OriginalLegacyFramebufferABI.h",
+      "bytes": 6374,
+      "sha256": "2e1bd143b027f5390a68e544c3fdd5d0afca1ec5323f2d43634e0fcb2ff800c6"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/RaphaelDesktopDisplay.cpp",
-      "bytes": 14857,
-      "sha256": "813e47bd33f8bb4b2acd1ffa6f4c6a4f4f79c53a4df80a0da6cd2923fa3efdd6"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/RaphaelDesktopDisplay.cpp",
+      "bytes": 19443,
+      "sha256": "b310efd637a92fea8be97801b0ed1b6896cfed8ebd819afc36b4f6091f8e6a27"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/RaphaelDesktopDisplay.late.o",
-      "bytes": 305970,
-      "sha256": "3686c78fcf5571ed32416075d3599c5b93f3fca61c719a3fbc26e8e7760c86b0"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/RaphaelDesktopDisplay.late.o",
+      "bytes": 336654,
+      "sha256": "9d499ffe3eaa4a1c4fc6b0462f2e65ab6855462ddd4c6e627936441160be8c8b"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/RaphaelDesktopDisplay.o",
-      "bytes": 306096,
-      "sha256": "802c7752aa5e37c156c2f6917ea2ec30d16c05cb97d4d753be3c52974125bfc3"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/RaphaelDesktopDisplay.o",
+      "bytes": 336784,
+      "sha256": "c67994091892a1e55f19dd8f7637cc9ea169083913ecde88222545cd21cce50b"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/RaphaelOfflineKeyStore-compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/RaphaelFrameProbe.h",
+      "bytes": 2983,
+      "sha256": "edbcf7e43bb7dcc17806824afb3b42e7ac9b8cef09be06e4a9b9cb9191f8b4ae"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/RaphaelOfflineKeyStore-compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/RaphaelOfflineKeyStore.o",
-      "bytes": 156856,
-      "sha256": "b5026865cd1f8db7e34dea7063a34f34fda346357823527592bd8602b6c4a5c7"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/RaphaelOfflineKeyStore.o",
+      "bytes": 158120,
+      "sha256": "5796d947c0bfceddfa6e94e0abce672f2608864b76816ac0b5979ae8942b7053"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/bindings.o",
-      "bytes": 11976,
-      "sha256": "5c4445802ec19134ca594d00468975196b22d947c5914235a5a64bd77d5e1c10"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/bindings.o",
+      "bytes": 11968,
+      "sha256": "f6390f5f93c813fed33c8153679bf13fe0729e3efd354d743b843447cd6ac863"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/build-report.json",
-      "bytes": 15881,
-      "sha256": "58d10f3daf821b2dca96cdf8b26e39b06e0115978601de7667934f3fe65ae7a9"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/build-report.json",
+      "bytes": 15882,
+      "sha256": "5cb5927e543da99e6b0c1e3175a0c4eeb60bbdb4b6ddc96c8f6d1b346651d57c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/compile-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/compile-command.json",
       "bytes": 9302,
       "sha256": "8ead99fcb70c2cd22a6c31ae7bcc29f81bd41505d60a636ce6e1deb1071e2c9c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/libNativeLegacyDisplay.late.a",
-      "bytes": 734320,
-      "sha256": "406a343377efcd47c17c44248a8c461b95eac781b5c496582cea5fc9290f8b5d"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/libNativeLegacyDisplay.late.a",
+      "bytes": 797968,
+      "sha256": "bc4f80340c8f867b5d8ebd0afe8e6c5c66d07e674009634916b02ed3831165e2"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/offline-keystore.json",
-      "bytes": 257,
-      "sha256": "6dc3ebb13539f0c0a8d32134ef451645d7f25cf869185db7d4372f33c9ccbe9a"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/offline-keystore.json",
+      "bytes": 442,
+      "sha256": "257dfdb461db6ba0a6b50ec424a85b0edddd5dcd14216cda12ad0236ec5baea5"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/native-legacy-display/original-bindings.S",
-      "bytes": 23278,
-      "sha256": "2388b8f0a3f4a33e252bda7972039155f9ac1faf7bf7ddab43226ff36b225818"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/native-legacy-display/original-bindings.S",
+      "bytes": 23264,
+      "sha256": "32c3e00d51bff82cad81e1dd428eb8b87b3fbcf967f34aa47683dec6db3bb8cb"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelNativeConsole-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelNativeConsole-command.json",
       "bytes": 8720,
       "sha256": "2036746b00154e652529b06adb0e7483778d07281befdc46baec0016e57c4a28"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelNativeConsole-compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelNativeConsole-compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelNativeConsole.c",
-      "bytes": 3693,
-      "sha256": "11e635145fc16c6f34349d2549572ff1612e4ebe37e7b79e31b5e1758c1c34e4"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelNativeConsole.c",
+      "bytes": 5887,
+      "sha256": "50c530715048f93542b8266c44247b0a4eeb285154196809287cedcf918dcf99"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelNativeConsole.o",
-      "bytes": 10704,
-      "sha256": "31b47ab35cb11815cfa3ad6dbedfd0f9015432fb2d2df2e0af30ccc2c52d2676"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelNativeConsole.o",
+      "bytes": 15824,
+      "sha256": "9e7f0b2cc7678865dd73f0848f4dc09986318219d5197dbc8fd88b8c6d54ec73"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceObserver-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceObserver-command.json",
       "bytes": 8453,
       "sha256": "ad425983a0b12597c25638eba9993970f5f8eecb0d5324cc101400697dfe2070"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceObserver-compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceObserver-compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceObserver.c",
-      "bytes": 12713,
-      "sha256": "fae738dad060f625518430964f4ae01bff277e7eea75db2bf11111902ce938c5"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceObserver.c",
+      "bytes": 20208,
+      "sha256": "7a73a0413bc741bac64b7e2d985047821cbcf7c8d6914180edcb98dd2862417c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceObserver.o",
-      "bytes": 76688,
-      "sha256": "d215f18a2e83d60471f9b8aea53ae848df28c3ebf842ec83ff9ba521ad0e1e88"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceObserver.o",
+      "bytes": 89720,
+      "sha256": "5ec0855499d4c612544188c96ff43becab99540740d84cd1dfe02d5ca79fdad1"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver-command.json",
       "bytes": 8736,
       "sha256": "87c5c16ab632138dd59fbd99e34094f8379d80ed9e5038679bf35c6c7349bfad"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver-compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver-compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver.c",
-      "bytes": 4122,
-      "sha256": "7e683988d9f093fc28637129d3af6bbf14387938d97d5fa900aea149b1ec77e3"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver.c",
+      "bytes": 9000,
+      "sha256": "9889f61487cd2db0c4d9c4ecf501717c895b1384f88dca05a48e561144946a1e"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver.o",
-      "bytes": 72888,
-      "sha256": "58abf8911e23694fe42d7f3fc425ae83da165655de4ee3ef5c98cad417cad46b"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelServiceThreadObserver.o",
+      "bytes": 87096,
+      "sha256": "01daf61d6d076e5e68117788701951a08b0777778b45750b9a244bdcb39ac246"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog-command.json",
       "bytes": 8720,
       "sha256": "79316938d3df399584c7b9b7a2c03e22788f8c3bca930a6d4aa296e0b11de15c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog-compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog-compile.log",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog.c",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog.c",
       "bytes": 4882,
       "sha256": "9f1ba58a709e57e4ebf7e14608e28cd82eddea711776812055405abf1896dfd0"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog.o",
-      "bytes": 45200,
-      "sha256": "cdaf2548ed2d205807fb099fd2b8be07c25e1ca9622f3ec5e434ec3bb88daa6a"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelUfsConsoleLog.o",
+      "bytes": 94360,
+      "sha256": "83932d065e428409184adbc4e93a6fa3caaea5214f3e3960cbf08e3134117f76"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/RaphaelUfsLogAllocation.h",
-      "bytes": 24745,
-      "sha256": "1dcfde2ee2e54c7f5b7939126c2d9d41f43bdebf66199b9f82f2da61417adb42"
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/RaphaelUfsLogAllocation.h",
+      "bytes": 98474,
+      "sha256": "fb01f30a7d1a6b0e346702e73349dc0cebb95377b85125a454b6ce83835ab441"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/compile-command.json",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/compile-command.json",
       "bytes": 8542,
       "sha256": "dae493f46a691a0bda10b178009630c37d3a23b3e4ded4e9542f7027b19bdc9d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/auxiliary/raphael-service-observer/compile.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/auxiliary/raphael-service-observer/compile.log",
       "bytes": 1338,
       "sha256": "43886972844e5b636d84ee0fb0ee7f1cdb8a26b52a781353d64cf71b89180103"
     }
   ],
   "logs": [
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-05-build-corecrypto-14.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-05-build-corecrypto-14.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-05-build-corecrypto-14.log",
       "sha256": "d7d092a49007486d63f51d0eba09f8589945c78ce95acc17ed41be184929e80d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-06-build-corecrypto-14.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-06-build-corecrypto-14.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-06-build-corecrypto-14.log",
       "sha256": "d7d092a49007486d63f51d0eba09f8589945c78ce95acc17ed41be184929e80d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-07-build-corecrypto-14.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-07-build-corecrypto-14.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-07-build-corecrypto-14.log",
       "sha256": "7f2ad6e1d55abb196e9c8c08767eff66423a9af353b68ccab2153f36a737cc2d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-07-build-raphael-cpu.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-07-build-raphael-cpu.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-07-build-raphael-cpu.log",
       "sha256": "b81e0c8799862b06c7444da15d212e4e1ee10292d7bfeb350c014831e2bbc727"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-08-build-raphael-cpu.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-08-build-raphael-cpu.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-08-build-raphael-cpu.log",
       "sha256": "b81e0c8799862b06c7444da15d212e4e1ee10292d7bfeb350c014831e2bbc727"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-08-build-raphael-pthread.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-08-build-raphael-pthread.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-08-build-raphael-pthread.log",
       "sha256": "75c554a4285d0abbb12cc79365e2e38d617ff7a1e95892da4baef701e559882c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-09-build-raphael-pthread.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-09-build-raphael-pthread.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-09-build-raphael-pthread.log",
       "sha256": "75c554a4285d0abbb12cc79365e2e38d617ff7a1e95892da4baef701e559882c"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-09-build-raphael-service-observer.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-09-build-raphael-service-observer.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-09-build-raphael-service-observer.log",
       "sha256": "d4ef2fa21d8b23fadc10493ea24859acc250fcc7f84978197d9699ae010ba319"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-09-build-raphael-storage-bindings.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-09-build-raphael-storage-bindings.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-09-build-raphael-storage-bindings.log",
       "sha256": "c6c407b15492d6b36356fe0ab372de860f9e6000e8eed3cad70a6fdda86fdbd1"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-10-build-raphael-root-policy.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-10-build-raphael-root-policy.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-10-build-raphael-root-policy.log",
       "sha256": "7965e0fe696e8f75a34c438461e128440f20993b5d28f59f6c66f517dc6b302d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-10-build-raphael-service-observer.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-10-build-raphael-service-observer.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-10-build-raphael-service-observer.log",
       "sha256": "d4ef2fa21d8b23fadc10493ea24859acc250fcc7f84978197d9699ae010ba319"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-10-build-raphael-storage-bindings.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-10-build-raphael-storage-bindings.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-10-build-raphael-storage-bindings.log",
       "sha256": "c6c407b15492d6b36356fe0ab372de860f9e6000e8eed3cad70a6fdda86fdbd1"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-11-build-raphael-root-policy.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-11-build-raphael-root-policy.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-11-build-raphael-root-policy.log",
       "sha256": "7965e0fe696e8f75a34c438461e128440f20993b5d28f59f6c66f517dc6b302d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-11-build-raphael-storage-bindings.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-11-build-raphael-storage-bindings.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-11-build-raphael-storage-bindings.log",
       "sha256": "c6c407b15492d6b36356fe0ab372de860f9e6000e8eed3cad70a6fdda86fdbd1"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-11-build-raphael-ufs.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-11-build-raphael-ufs.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-11-build-raphael-ufs.log",
       "sha256": "15c10ba9a0aedefc7695268e1e4e9c36018d018b4b4e09b484143fb8b59f7689"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-12-build-raphael-data-seed.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-12-build-raphael-data-seed.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-12-build-raphael-data-seed.log",
       "sha256": "5074cec74945ed64b6158b73f2f96aee8c1396e59bbdee1bbf2243d54be835f8"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-12-build-raphael-root-policy.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-12-build-raphael-root-policy.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-12-build-raphael-root-policy.log",
       "sha256": "7965e0fe696e8f75a34c438461e128440f20993b5d28f59f6c66f517dc6b302d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-12-build-raphael-ufs.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-12-build-raphael-ufs.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-12-build-raphael-ufs.log",
       "sha256": "07f5cf1f03ed433636edf5bd0f5eb3a9c0daed0b84b1a4d472b210b33f55e2d1"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-13-build-raphael-data-seed.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-13-build-raphael-data-seed.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-13-build-raphael-data-seed.log",
       "sha256": "5074cec74945ed64b6158b73f2f96aee8c1396e59bbdee1bbf2243d54be835f8"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-13-build-raphael-desktop-display.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-13-build-raphael-desktop-display.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-13-build-raphael-desktop-display.log",
       "sha256": "4ac498d3871a3763be87ad118b531cacb3350024e42f4221df9d0ddbd5106ae8"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-13-build-raphael-ufs.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-13-build-raphael-ufs.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-13-build-raphael-ufs.log",
-      "sha256": "af9ad95352412f380aca97a9e80bf63e7556cce6c9e5b39c868071ccbe5b2c49"
+      "sha256": "a6b4a19731daa9bec635395abf32a949de3058ed73ad3c5a9a28b547c7796f1a"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-14-build-raphael-data-seed.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-14-build-raphael-data-seed.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-14-build-raphael-data-seed.log",
       "sha256": "5074cec74945ed64b6158b73f2f96aee8c1396e59bbdee1bbf2243d54be835f8"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-14-build-raphael-desktop-display.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-14-build-raphael-desktop-display.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-14-build-raphael-desktop-display.log",
       "sha256": "4ac498d3871a3763be87ad118b531cacb3350024e42f4221df9d0ddbd5106ae8"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/archive-15-build-raphael-desktop-display.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-15-build-raphael-desktop-display.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-15-build-raphael-desktop-display.log",
       "sha256": "4ac498d3871a3763be87ad118b531cacb3350024e42f4221df9d0ddbd5106ae8"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/component-AppleKeyStoreState.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/archive-16-build-raphael-aes-trace.log",
+      "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/archive-16-build-raphael-aes-trace.log",
+      "sha256": "fd1d7a3ea6636bd71559bd516a9da994087327c1c9118c9a60ee861a775046c6"
+    },
+    {
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/component-AppleKeyStoreState.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/component-AppleKeyStoreState.log",
       "sha256": "152e5568281f90adc75f0a08f36fc9b3b68ab30e65e9891aeb253cd5fca959d7"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/component-ArmDTPlatform.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/component-ArmDTPlatform.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/component-ArmDTPlatform.log",
       "sha256": "2c2a612ecaa5920afe8672010aaf427f11fd3b60437b3e9d5a2b074b20d880f3"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/component-RamBlock.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/component-RamBlock.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/component-RamBlock.log",
       "sha256": "bc6885edca80aa5b81e101ac7d29f4af9c95f9d959463d3e22c4bdb8261ed020"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/component-SoftwareAES.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/component-SoftwareAES.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/component-SoftwareAES.log",
       "sha256": "69f01ff178a6518d90b01877bfdfae244a2a192e29d6c3b3dfc4e1d2cc9ca8de"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/component-VirtioMmioBlock.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/component-VirtioMmioBlock.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/component-VirtioMmioBlock.log",
       "sha256": "49770adc9c9fc20a68c893f909cdba6ea14d4719980a513de952a466497ad97d"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/kernel-bootstrap.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/kernel-bootstrap.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/kernel-bootstrap.log",
       "sha256": "4a49d3ddda9148ff498eb62739d11d583765ee132a1867b10dadd8c2e0bbb335"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/kernel.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/kernel.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/kernel.log",
-      "sha256": "dd53a978db0f6183e14c7b0dd946122141f6e0ace0bb90c161dbd91dc3c8f454"
+      "sha256": "77b20b8e74d35b87a3587068adc7ec832a3d28a2ab533356eaccec1734c59e0e"
     },
     {
-      "path": "artifacts/native-bootstrap-attempt/20261104T182904Z/logs/storage-headers.log",
+      "path": "artifacts/native-bootstrap-attempt/20261106T180601Z/logs/storage-headers.log",
       "build_path": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/logs/storage-headers.log",
       "sha256": "7fd4103f9811df96b8142a756b57a495c05ec355f4ebd6d2cf0229c0594f4cbd"
     }

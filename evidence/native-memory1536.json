@@ -1,0 +1,20 @@
+{
+  "state": "handset_analysis_complete",
+  "memory_mib": 1536,
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "candidate": "artifacts/desktop-memory1536/20261106T041054Z",
+  "qemu_report": "artifacts/native-staging-qemu/20261106T041308.298513Z-n034bjo1/report.json",
+  "qemu_checks": 39,
+  "transition_bytes": 24576,
+  "hardware_watchdog_return": true,
+  "unassisted_android_return": true,
+  "log_records": 4096,
+  "log_span_seconds": 1137.06841953125,
+  "log_capacity_exhausted": true,
+  "process_replacements_parent": 136,
+  "process_replacements_candidate": 4,
+  "backboard_original_pid_retained": true,
+  "original_failed_null_retained": true,
+  "interpretation": "artifacts/desktop-memory1536/20261106T041054Z/interpretation.json"
+}

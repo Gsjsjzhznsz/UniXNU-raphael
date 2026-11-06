@@ -103,9 +103,11 @@ def make_adt(out, blob, window, frequency, affinity, handset, ufs_plans=None, qe
     assert not (handset and (qemu_dt_platform or qemu_pmgr_nub))
     root_model=b'unixnu,raphael-dt-policy-fixture\0' if qemu_dt_platform else fdt.properties['model']
     root_compatible=root_model if qemu_dt_platform else fdt.properties['compatible']
+    from native_platform_identity_adt import assigned_identity,KEY as PLATFORM_ID_KEY
+    platform_identity=[(PLATFORM_ID_KEY,assigned_identity())] if handset else []
     tree = node('device-tree', [('model', root_model), ('compatible', root_compatible), ('#address-cells', struct.pack('<I', 2)), ('#size-cells', struct.pack('<I', 2))], [
         node('chosen', [('dram-base', struct.pack('<Q', dram_base)), ('dram-size', struct.pack('<Q', dram_size)),
-            ('random-seed', os.urandom(64)), *os_chosen_properties(), *empty_nvram_proxy(),
+            ('random-seed', os.urandom(64)), *os_chosen_properties(), *platform_identity, *empty_nvram_proxy(),
             *([('unixnu,diagnostic-pmgr-nub', struct.pack('<I',1))] if qemu_pmgr_nub else []),
             *([('darwinboot-memory-size', struct.pack('<Q',window['window_bytes']))] if window.get('window_bytes',256*1048576)!=256*1048576 else []),
             *([('unixnu,qemu-root-observer-ms', struct.pack('<I',40000))] if qemu_dt_platform else [])], [node('memory-map', []), node('manifest-properties', [])]),

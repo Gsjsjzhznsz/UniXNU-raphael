@@ -1,20 +1,20 @@
 #!/usr/bin/env python3
-"""Derive an explicit512/704MiB loader budget from the qualified handset ADT."""
+"""Derive an explicit512/704/896/1536MiB loader budget from the qualified handset ADT."""
 import argparse,datetime,json,struct,sys
 from pathlib import Path
 from entry_probe import ROOT,sha
 from validate_handset_adt import parse
 
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--adt',type=Path,required=True);p.add_argument('--mib',type=int,choices=[512,704],default=512);p.add_argument('--data-report',type=Path);a=p.parse_args()
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--adt',type=Path,required=True);p.add_argument('--mib',type=int,choices=[512,704,896,1536],default=512);p.add_argument('--data-report',type=Path);a=p.parse_args()
  source=a.adt.resolve();assert source.is_relative_to(ROOT/'evidence/private/handset-storage-adt')
  tree,end=parse(source.read_bytes());assert end==source.stat().st_size
- props=tree['nodes']['chosen']['props'];previous=struct.unpack('<Q',props.get('darwinboot-memory-size',struct.pack('<Q',256*1048576)))[0];assert previous in (256*1048576,512*1048576) and previous<a.mib*1048576
+ props=tree['nodes']['chosen']['props'];previous=struct.unpack('<Q',props.get('darwinboot-memory-size',struct.pack('<Q',256*1048576)))[0];assert previous in (256*1048576,512*1048576,704*1048576,896*1048576) and previous<a.mib*1048576
  audit_path=ROOT/'UniXNU-raphael/evidence/kernel-window-audit.json';audit=json.loads(audit_path.read_text())
  assert audit['passed'] and audit['memory_views_agree']
- from kernel_window import BLOCK,encode_policy
- base=next(c['aligned_example']['base'] for c in audit['candidates'] if c['every_kernel_offset_fits'])
+ from kernel_window import BLOCK,encode_policy,select_handset_window
  owned=a.mib*1048576
+ base=select_handset_window(audit,owned)['aligned_example']['base']
  assert any(s['base']<=base and base+owned+BLOCK<=s['end_exclusive'] for s in audit['structural_unreserved_runs'])
  encode_policy(dict(base=base,bytes=owned+BLOCK,window_bytes=owned,virtual_base=0,experimental_boot_grant=True,guards=[dict(base=g['base'],bytes=g['bytes']) for g in audit['excluded_ranges']]))
  props['darwinboot-memory-size']=struct.pack('<Q',owned)

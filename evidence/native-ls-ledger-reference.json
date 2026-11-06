@@ -1,0 +1,212 @@
+{
+  "scope": "host_and_independent_handset_log",
+  "candidate": "artifacts/desktop-ls-capture-ledger-ref/20261105T093840Z",
+  "change": "Pair diagnostic native ARM pmap release with an explicit ledger retain in addition to pmap_reference.",
+  "native_contract": {
+    "reference": "pmap_reference increments pmap ref_count only.",
+    "release": "pmap_destroy always calls ledger_dereference,including nonfinal pmap release.",
+    "lifetime": "Retain ledger while target task lock protects the pmap; release through original pmap_destroy after capture."
+  },
+  "host": {
+    "passed": true,
+    "actual_pinned_arm_pmap_wrappers": true,
+    "compiled_pmap_source": "artifacts/native-bootstrap/raphael/ipados-17.7.11-21H461/raphael_handset_display/tree/.cache/xnu-work/osfmk/arm/pmap/pmap.c",
+    "legacy_ledger_reference_drain_reproduced": true,
+    "actual_corrected_acquisition_branch": true,
+    "balanced_capture_iterations": 2000,
+    "busy_and_null_pmap_preserved": true,
+    "null_ledger_preserved": true,
+    "sanitizers": [
+      "address",
+      "undefined"
+    ],
+    "handset_executed": false
+  },
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "host_build": {
+    "passed": true,
+    "scope": "host_build_and_recovery_qualification",
+    "handset_boot_attempted": false,
+    "desktop_verified": false,
+    "owned_memory_mib": 704,
+    "observer_seconds": 720,
+    "absolute_pet_budget_seconds": 780,
+    "kernel_build_report": "artifacts/native-bootstrap-attempt/20261105T095020Z/report.json",
+    "qemu_report": "artifacts/native-staging-qemu/20261105T095106.449539Z-38q46hh5/report.json",
+    "qemu_pass_count": 39,
+    "handset_build_report": "evidence/private/android-return-build/20261105T095214.520653Z-m3q6jhna/report.json",
+    "host_report": "host-report.json"
+  },
+  "handset": {
+    "handset_run": "evidence/private/android-return-run/20261105T095332Z",
+    "extraction": "evidence/private/ufs-console-log/20261105T095016Z/20261105T101234Z-recovered-return",
+    "handset_boot_attempted": true,
+    "temporary_boot_accepted": true,
+    "desktop_verified": false,
+    "onsite_screen": "progress-bar-observed",
+    "owned_memory_mib": 704,
+    "log": {
+      "valid_records": 835,
+      "bytes": 444209,
+      "dropped": 0,
+      "first_counter": 3824142807,
+      "last_counter": 17590863720,
+      "invalid_tail": null,
+      "session": "1ce87735-268b-44c8-bedb-b8d50a5f4f8f",
+      "guards_unchanged": true,
+      "android_boot_changed": true,
+      "persistent_log_verified": true,
+      "continuous_log_verified": true,
+      "console_lines": 5407,
+      "progress_lines": 634,
+      "service_snapshot_captured": true
+    },
+    "time_origin": "watchdog_start",
+    "log_span_ms": 717016.71421875,
+    "last_tick": {
+      "seconds": 720.0537341145833,
+      "poll": 6331,
+      "root": 7,
+      "init": 4,
+      "syscalls": 33502,
+      "watchdog_stage": 2,
+      "display_stage": 6,
+      "clients": 5,
+      "status": 0,
+      "frames": 2773
+    },
+    "capture_phase_count": 72,
+    "last_capture_phase": [
+      {
+        "seconds": 605.77294359375,
+        "stage": "done",
+        "sequence": 5,
+        "poll": 5231,
+        "id": 98
+      }
+    ],
+    "ls_progress_samples": 5,
+    "display": {
+      "clients": 5,
+      "validations": 2775,
+      "rejected": 0,
+      "kicks": 2775,
+      "frames": 2774,
+      "blank_frames": 0,
+      "retired": 2774,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 28041811200,
+      "nonblack": 2648
+    },
+    "display_content_scope": "Nonblack pixel count samples only first eight completed frames; later content unknown.",
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 0,
+      "checkins": 58,
+      "last_checkin_counter": 17574908782,
+      "monitoring": true,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "budget": {
+      "hardware_seconds": 20,
+      "budget_ms": 780000,
+      "observer_seconds": 720.0,
+      "start_counter": 3762780183,
+      "capture_counter": 17588294526,
+      "counter_frequency": 19200000,
+      "elapsed_ms": 720078.87203125,
+      "observer_deadline_reached": true,
+      "pets": 1329,
+      "last_pet_counter": 17583787883,
+      "status": 1
+    },
+    "snapshot_completed": true,
+    "pressure_lines": [],
+    "vm_first": [
+      {
+        "seconds": 3.7144108854166666,
+        "free": 140299,
+        "active": 0,
+        "inactive": 0,
+        "wired": 39862
+      }
+    ],
+    "vm_last": [
+      {
+        "seconds": 696.9208205208333,
+        "free": 871,
+        "active": 29391,
+        "inactive": 28825,
+        "wired": 74185
+      },
+      {
+        "seconds": 707.35964359375,
+        "free": 1189,
+        "active": 29426,
+        "inactive": 29001,
+        "wired": 74163
+      },
+      {
+        "seconds": 717.7539400520833,
+        "free": 1413,
+        "active": 29171,
+        "inactive": 28830,
+        "wired": 74248
+      }
+    ],
+    "ufs_first": [
+      {
+        "seconds": 3.7144108854166666,
+        "requests": 0,
+        "bytes": 0,
+        "failures": 0
+      }
+    ],
+    "ufs_last": [
+      {
+        "seconds": 696.9208205208333,
+        "requests": 429440,
+        "bytes": 4208280576,
+        "failures": 0
+      },
+      {
+        "seconds": 707.35964359375,
+        "requests": 430566,
+        "bytes": 4213863424,
+        "failures": 0
+      },
+      {
+        "seconds": 717.7539400520833,
+        "requests": 431188,
+        "bytes": 4217017344,
+        "failures": 0
+      }
+    ],
+    "android_boot_completed": true,
+    "root_verified": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "full_checkpoint_verified": false,
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "capture_interruption_resolved_this_run": true,
+    "capture_sequences_completed": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "interpretation": "All five periodic captures,including third/fourth/fifth,and720s final snapshot completed after ledger-reference correction. LS worker changes from plist parsing to plugin registration to application signature scanning;final sample waits for MCM container query. SpringBoard still waits for LS seeding. No desktop verified.",
+    "panic_lines": [],
+    "next_step": "Existing1800/1860s contract with same corrected observer and original service/display behavior to observe cold LS seeding completion."
+  }
+}

@@ -38,7 +38,7 @@ BOOLEAN RaphaelPrepareKernelWindow (CONST RAPHAEL_RANGE *Ram, UINTN RamCount,
   if (Policy.Magic != RAPHAEL_KERNEL_WINDOW_MAGIC || Policy.Version != 1 ||
       Policy.TotalBytes != Bytes || !Policy.GuardCount || Policy.GuardCount > 128 ||
       Bytes != 64 + 16 * Policy.GuardCount || ProtectedCount > 128 ||
-      (Policy.WindowBytes != SIZE_256MB && Policy.WindowBytes != SIZE_512MB && Policy.WindowBytes != 704ULL*SIZE_1MB) || Policy.Bytes != Policy.WindowBytes + SIZE_2MB ||
+      (Policy.WindowBytes != SIZE_256MB && Policy.WindowBytes != SIZE_512MB && Policy.WindowBytes != 704ULL*SIZE_1MB && Policy.WindowBytes != 896ULL*SIZE_1MB && Policy.WindowBytes != 1536ULL*SIZE_1MB) || Policy.Bytes != Policy.WindowBytes + SIZE_2MB ||
       (Policy.Base & (SIZE_2MB - 1)) || (Policy.VirtualBase & EFI_PAGE_MASK) ||
       Policy.Base > MAX_UINT64 - Policy.Bytes || ArmGetPhysicalAddressBits () >= 64 ||
       Policy.Base + Policy.Bytes > LShiftU64 (1, ArmGetPhysicalAddressBits ())) return FALSE;

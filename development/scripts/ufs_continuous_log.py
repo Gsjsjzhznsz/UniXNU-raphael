@@ -54,7 +54,7 @@ def check_live(metadata,serial):
  assert root(serial,'dd if=/dev/block/sda bs=4096 skip='+str(d['log_lbas'][0])+' count=1 2>/dev/null')==bytes(BLOCK),'Log session has already been used; allocate a new file'
  return dict(verified=True,log_blocks=d['log_blocks'],guards_unchanged=True,first_slot_unused=True)
 def main():
- p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='action',required=True);a=sub.add_parser('prepare');a.add_argument('--mib',type=int,choices=[2,4,8],default=8);a.add_argument('--resume-stage',type=Path);a=sub.add_parser('extract');a.add_argument('--report',type=Path,required=True);a.add_argument('--label',default='readback');a.add_argument('--kernel',type=Path,help='Decode persisted service snapshots with the matching frozen kernel');a=p.parse_args();serial=connected()
+ p=argparse.ArgumentParser(description=__doc__);sub=p.add_subparsers(dest='action',required=True);a=sub.add_parser('prepare');a.add_argument('--mib',type=int,choices=[2,4,8,16,32],default=8);a.add_argument('--resume-stage',type=Path);a=sub.add_parser('extract');a.add_argument('--report',type=Path,required=True);a.add_argument('--label',default='readback');a.add_argument('--kernel',type=Path,help='Decode persisted service snapshots with the matching frozen kernel');a=p.parse_args();serial=connected()
  assert b'uid=0' in root(serial,'id') and root(serial,'getprop sys.boot_completed').strip()==b'1'
  if a.action=='prepare':
   assert b'raphael,' not in root(serial,'ls /sys/firmware/devicetree/base/chosen/'),'Normal Android reboot required'

@@ -3,9 +3,9 @@
 No driver or original OS code is patched. This is host interface evidence only.
 """
 from pathlib import Path
-import datetime,json,shutil,subprocess
+import argparse,datetime,json,shutil,subprocess
 from entry_probe import ROOT
-source=ROOT/'sources/UniXNU/drivers/AppleKeyStoreState'
+parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,default=ROOT/'sources/UniXNU/drivers/AppleKeyStoreState');args=parser.parse_args();source=args.source.resolve()
 out=ROOT/'artifacts/offline-keystore-host'/datetime.datetime.now(datetime.timezone.utc).strftime('%Y%m%dT%H%M%SZ')
 out.mkdir(parents=True,exist_ok=False)
 text=(source/'test_closed_boundary.py').read_text()
@@ -17,5 +17,5 @@ text=text.replace('#include <cassert>','#include <cstdint>\n#include <cassert>')
 shutil.copyfile(source/'NativeKeyStoreEvents.cpp',out/'NativeKeyStoreEvents.cpp')
 run=subprocess.run(['python3',str(out/'test_closed_boundary.py')],capture_output=True,text=True)
 (out/'host.log').write_text(run.stdout+run.stderr)
-report=dict(passed=run.returncode==0,source_revision=subprocess.check_output(['git','-C',source,'rev-parse','HEAD'],text=True).strip(),harness_change='Host-only fake constant, explicit cstdint include and braces for GCC indentation warning; original source and assertions unchanged',returncode=run.returncode,handset_executed=False,real_iokit_registration_tested=False,key_operations_available=False)
+report=dict(passed=run.returncode==0,source_revision=subprocess.check_output(['git','-C',source,'rev-parse','HEAD'],text=True).strip(),harness_change='Host-only fake constant, explicit cstdint include and braces for GCC indentation warning; original source and assertions unchanged',returncode=run.returncode,handset_executed=False,real_iokit_registration_tested=False,key_operations_available='native_aks_device_id' in (source/'NativeKeyStoreEvents.cpp').read_text())
 (out/'report.json').write_text(json.dumps(report,indent=2)+'\n');print(out);print(json.dumps(report,indent=2));raise SystemExit(run.returncode)

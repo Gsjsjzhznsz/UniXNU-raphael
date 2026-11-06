@@ -72,7 +72,7 @@ int main(int argc,char **argv){try{
  // explicitly observed and retried here, never hidden by the transport.
  v=t.testUnitReady(0);if(v==Result::ScsiError&&t.last.senseKey==6){printf("OBSERVED unit attention %u/%u\n",t.last.asc,t.last.ascq);v=t.testUnitReady(0);}check(v==Result::Ok,"real UFS TEST UNIT READY");
  Geometry g{};v=t.capacity(0,g);if(v!=Result::Ok)printf("capacity result=%d status=%u sense=%u/%u\n",int(v),t.last.status,t.last.senseKey,t.last.asc);
- check(v==Result::Ok&&g.blocks*g.bytes==8*1024*1024&&g.bytes==4096,"real UFS READ CAPACITY 16 geometry");
+ check(v==Result::Ok&&g.blocks*g.bytes==40*1024*1024&&g.bytes==4096,"real UFS READ CAPACITY 16 geometry");
  uint8_t block[4096]{};check(t.read(0,7,1,block,sizeof(block))==Result::Ok,"real UFS READ 16 DMA completion");bool same=true;for(unsigned i=0;i<sizeof(block);++i)same=same&&block[i]==uint8_t((i*29+7)&255);check(same,"all known block bytes match synthetic disk");
  check(t.read(0,g.blocks,1,block,sizeof(block))==Result::Invalid,"reject capacity boundary");check(t.read(0,0,2,block,sizeof(block))==Result::Invalid,"reject caller byte mismatch");
  io.badTag=true;check(t.read(0,7,1,block,sizeof(block))==Result::ResponseError,"reject mismatched response task tag");
@@ -115,7 +115,7 @@ int main(int argc,char **argv){try{
   check(read10.enableDiagnosticWrites(bad)==Result::WriteDenied,"write window requires actual capacity match");
   bad=window;bad.lun=1;check(read10.enableDiagnosticWrites(bad)==Result::WriteDenied,"diagnostic writes reject other LUN");
   bad=window;bad.first=0;check(read10.enableDiagnosticWrites(bad)==Result::WriteDenied,"diagnostic writes reject GPT LBA0");
-  bad=window;bad.blocks=4097;check(read10.enableDiagnosticWrites(bad)==Result::WriteDenied,"diagnostic allocation bounded to16MiB");
+  bad=window;bad.blocks=8193;check(read10.enableDiagnosticWrites(bad)==Result::WriteDenied,"diagnostic allocation bounded to32MiB");
   bad=window;bad.first=g10.blocks;check(read10.enableDiagnosticWrites(bad)==Result::WriteDenied,"write window refuses capacity overflow");
   RaphaelStorage::UfsWritePolicy policy{0x3157525346485052ULL,1,g10.blocks,1,g10.blocks-1,11,1,4096,{},{}};
   memcpy(policy.replacement,pattern,4096);
@@ -154,6 +154,14 @@ int main(int argc,char **argv){try{
  }
  check(read10.restore()==Result::Ok,"READ10 mode restores inherited configuration");
  before=io.writes;check(read10.writeDiagnostic(0,11,1,block,sizeof(block))==Result::WriteDenied&&io.writes==before,"restoration revokes write authorization");
+ if(writeTest){
+  Transport<Qtest> wide(io,buffers,ReadCommand::Read10);check(wide.takeOver(true)==Result::Ok,"32MiB log transport attaches");Geometry gw{};check(wide.capacity(0,gw)==Result::Ok,"32MiB log obtains actual model capacity");
+  check(wide.enableDiagnosticWrites({64,8192,gw.blocks,4096,0})==Result::Ok,"accept exact32MiB log window");
+  uint8_t pat[4096];for(unsigned i=0;i<sizeof(pat);++i)pat[i]=uint8_t(i*13+0x63);
+  for(uint64_t lba:{64ULL,8255ULL}){check(wide.writeDiagnostic(0,lba,1,pat,sizeof(pat))==Result::Ok,"32MiB window first/last WRITE10");check(wide.flushDiagnostic()==Result::Ok,"32MiB log flush");check(wide.read(0,lba,1,block,sizeof(block))==Result::Ok&&!memcmp(block,pat,sizeof(block)),"32MiB window exact readback");}
+  before=io.writes;check(wide.writeDiagnostic(0,8256,1,pat,sizeof(pat))==Result::WriteDenied&&io.writes==before,"32MiB upper guard rejected without IO");
+  check(wide.restore()==Result::Ok,"32MiB log restores inherited controller");
+ }
  Transport<Qtest> timeout(io,buffers);check(timeout.takeOver(true)==Result::Ok,"independent timeout case owns buffers");
  io.stuck=true;check(timeout.testUnitReady(0)==Result::Busy,"refuse outstanding request before submission");io.stuck=false;
  // Force an actual submitted request to appear incomplete to the caller.

@@ -1,0 +1,125 @@
+{
+  "handset_run": "evidence/private/android-return-run/20261105T085206Z",
+  "extraction": "evidence/private/ufs-console-log/20261105T084905Z/20261105T091250Z-recovered-return",
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "desktop_verified": false,
+  "onsite_screen": "progress-bar-observed",
+  "owned_memory_mib": 704,
+  "log": {
+    "valid_records": 329,
+    "bytes": 101912,
+    "dropped": 0,
+    "first_counter": 3836460611,
+    "last_counter": 10771611158,
+    "invalid_tail": null,
+    "session": "8a23fb74-1a41-4c8b-ba2a-02d077d1ddce",
+    "guards_unchanged": true,
+    "android_boot_changed": true,
+    "persistent_log_verified": true,
+    "continuous_log_verified": true,
+    "console_lines": 1478,
+    "progress_lines": 286,
+    "service_snapshot_captured": false
+  },
+  "time_origin": "first_persisted_log_record",
+  "log_span_ms": 361205.75765625,
+  "last_tick": {
+    "seconds": 361.18948640625,
+    "poll": 2851,
+    "root": 7,
+    "init": 4,
+    "syscalls": 21750,
+    "watchdog_stage": 2,
+    "display_stage": 6,
+    "clients": 5,
+    "status": 0,
+    "frames": 638
+  },
+  "capture_phase_count": 28,
+  "last_capture_phase": [
+    {
+      "seconds": 361.20575765625,
+      "stage": "thread-begin",
+      "sequence": 3,
+      "poll": 2861,
+      "id": 601
+    }
+  ],
+  "ls_progress_samples": 2,
+  "display": null,
+  "display_content_scope": "Nonblack pixel count samples only first eight completed frames; later content unknown.",
+  "watchdog": null,
+  "budget": null,
+  "snapshot_completed": false,
+  "pressure_lines": [],
+  "vm_first": [
+    {
+      "seconds": 0.5183338541666667,
+      "free": 140297,
+      "active": 0,
+      "inactive": 0,
+      "wired": 39869
+    }
+  ],
+  "vm_last": [
+    {
+      "seconds": 335.30680270833335,
+      "free": 1329,
+      "active": 36552,
+      "inactive": 35639,
+      "wired": 70703
+    },
+    {
+      "seconds": 345.7228682291667,
+      "free": 1386,
+      "active": 36287,
+      "inactive": 34139,
+      "wired": 70731
+    },
+    {
+      "seconds": 356.03104317708335,
+      "free": 1035,
+      "active": 35924,
+      "inactive": 34223,
+      "wired": 68661
+    }
+  ],
+  "ufs_first": [
+    {
+      "seconds": 0.5183338541666667,
+      "requests": 0,
+      "bytes": 0,
+      "failures": 0
+    }
+  ],
+  "ufs_last": [
+    {
+      "seconds": 335.30680270833335,
+      "requests": 368409,
+      "bytes": 3894404096,
+      "failures": 0
+    },
+    {
+      "seconds": 345.7228682291667,
+      "requests": 372134,
+      "bytes": 3912750080,
+      "failures": 0
+    },
+    {
+      "seconds": 356.03104317708335,
+      "requests": 375202,
+      "bytes": 3928011776,
+      "failures": 0
+    }
+  ],
+  "android_boot_completed": true,
+  "root_verified": true,
+  "new_android_boot_id": true,
+  "transient_property_names": [],
+  "full_checkpoint_verified": false,
+  "original_report_passed": false,
+  "xnu_executed": null,
+  "interpretation": "Third LS capture again stopped after thread entry: lsd98 thread601, sequence3/poll2861,361205ms. Two full samples only. task_lock_try did not remove interruption; task mutex root cause remains unproven. Captured completed samples had no busy task flag. User confirmed progress bar, no desktop.",
+  "next_candidate": "artifacts/desktop-ls-capture-pmap-trylock/20261105T091721Z"
+}

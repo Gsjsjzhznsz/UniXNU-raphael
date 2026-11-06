@@ -262,6 +262,8 @@ def build_firmware(out, values, identifier, scope, stop_stage=4, display_probe=F
     assert not native_load_test or (sparse_arena and android_return and darwin_test and not native_boot.get("handoff",True))
     native_watchdog=native_boot.get('watchdog') if native_boot else None
     watchdog_seconds=native_watchdog.get('seconds',20) if native_watchdog else 20
+    hardware_watchdog_return=bool(native_boot and native_boot.get('hardware_watchdog_return'))
+    assert not hardware_watchdog_return or (native_watchdog and native_boot.get('platform_test') and native_boot.get('platform_stop')=='root-observer' and scope!='QEMU only'), 'Hardware reset return needs the qualified handset watchdog and UFS observer'
     assert watchdog_seconds in (20,), 'Explicit bounded native watchdog budget required'
     watchdog_map_fixture=bool(native_watchdog and native_watchdog.get('mapping_fixture'))
     assert not watchdog_map_fixture or (scope=='QEMU only' and ufs_read and stop_stage in [3,4] and android_return and android_return.get('qemu'))
@@ -419,6 +421,7 @@ def build_firmware(out, values, identifier, scope, stop_stage=4, display_probe=F
         (out/'android-return.bin').write_bytes(android_return['stub'])
         command += ['-D','RAPHAEL_ANDROID_RETURN_POLICY='+str(out/'android-return-policy.bin'),'-D','RAPHAEL_ANDROID_RETURN_STUB='+str(out/'android-return.bin')]
     command += ['-D','RAPHAEL_FD_BLOCKS='+hex(values['FdSize']//4096)]
+    command += ['-D','RAPHAEL_HARDWARE_WATCHDOG_RETURN='+('TRUE' if hardware_watchdog_return else 'FALSE')]
     command += ['-D','RAPHAEL_NATIVE_WATCHDOG_BASE='+hex(native_watchdog['base'] if native_watchdog else 0),'-D','RAPHAEL_NATIVE_WATCHDOG_HZ='+str(native_watchdog['frequency'] if native_watchdog else 0),'-D','RAPHAEL_NATIVE_WATCHDOG_SECONDS='+str(watchdog_seconds)]
     command += ['-D','RAPHAEL_NATIVE_KALLOC_ZONES='+str(native_kalloc_zones)]
     command += ['-D','RAPHAEL_NATIVE_PLATFORM_TEST='+('TRUE' if native_platform_test else 'FALSE')]
@@ -562,6 +565,8 @@ def build_firmware(out, values, identifier, scope, stop_stage=4, display_probe=F
     report['native_boot'] = bool(native_boot)
     report['native_handoff'] = native_handoff
     report['native_watchdog'] = native_watchdog if native_platform_test else None
+    report['hardware_watchdog_return'] = hardware_watchdog_return
+    report['return_evidence_scope'] = ('Hardware reset and independent UFS logs; no returned full native checkpoint' if hardware_watchdog_return else 'Original diagnostic handback')
     report['ufs_watchdog'] = native_watchdog if ufs_read else None
     report['ufs_watchdog_mapping_fixture'] = watchdog_map_fixture
     report['ufs_handoff'] = ufs_handoff

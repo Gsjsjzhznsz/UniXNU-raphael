@@ -1,0 +1,14 @@
+{
+  "state": "handset_recovered_analysis_complete_no_desktop",
+  "candidate": "artifacts/desktop-memory896/20261106T031531Z",
+  "memory_mib": 896,
+  "handset_boot_attempted": true,
+  "desktop_verified": false,
+  "hardware_address_source": "Existing kernel-window-audit.json candidate2, not another board",
+  "host_regression": "artifacts/desktop-memory896/20261106T031531Z/host-regression.json",
+  "qemu_report": "artifacts/native-staging-qemu/20261106T032217.407508Z-p3r33wuh/report.json",
+  "qemu_checks": 39,
+  "hardware_watchdog_return": "automatic Android return observed; bootreason bootloader does not identify reset cause",
+  "unassisted_android_return": true,
+  "interpretation": "artifacts/desktop-memory896/20261106T031531Z/interpretation.json"
+}

@@ -9,4 +9,5 @@ typedef struct {
 } RAPHAEL_NATIVE_WATCHDOG_RESULT;
 EFI_STATUS RaphaelNativeWatchdogArm(VOID);
 BOOLEAN RaphaelNativeWatchdogStop(VOID);
+VOID RaphaelNativeWatchdogResetReturn(VOID);
 #endif

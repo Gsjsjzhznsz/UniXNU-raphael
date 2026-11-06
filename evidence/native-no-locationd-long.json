@@ -1,0 +1,133 @@
+{
+  "implementation": "Same original disabled-job profile,no additional disabled jobs;explicit existing long observer contract.",
+  "host": {
+    "passed": true,
+    "full_kernel_compile_records": 887,
+    "recovery_qemu_checks": 39,
+    "handset_image_build": true,
+    "observer_seconds": 1800,
+    "maximum_pet_seconds": 1860,
+    "owned_memory_mib": 1536,
+    "log_mib": 32,
+    "hardware_watchdog_return": true,
+    "original_seed_unchanged": true,
+    "only_runtime_contract_change": "existing1800/1860s observer/pet,600/1000/1800s process capture",
+    "other_kernel_arguments_identical": true,
+    "handset_boot_attempted": false,
+    "desktop_verified": false
+  },
+  "handset_executed": true,
+  "desktop_verified": false,
+  "limits": [
+    "No physical desktop evidence yet;original failed/null full checkpoint retained."
+  ],
+  "handset_boot_attempted": true,
+  "temporary_boot_accepted": true,
+  "handset_status": "User directly reports original native Apple hello/welcome UI at~01:50Shanghai;continuous capture still active,no SpringBoard desktop acceptance.",
+  "onsite_native_hello_reported": true,
+  "handset_result": {
+    "handset_run": "evidence/private/android-return-run/20261106T172949Z",
+    "extraction": "evidence/private/ufs-console-log/20261106T172310Z/20261106T180429Z-automatic-return",
+    "automatic_android_return": true,
+    "android_boot_completed": true,
+    "new_android_boot_id": true,
+    "transient_property_names": [],
+    "valid_records": 6710,
+    "bytes": 13949575,
+    "dropped": 0,
+    "snapshots": [
+      {
+        "label": "early1",
+        "complete": true,
+        "processes": 183,
+        "threads": 883
+      },
+      {
+        "label": "early2",
+        "complete": true,
+        "processes": 209,
+        "threads": 1092
+      },
+      {
+        "label": "final",
+        "complete": true,
+        "processes": 189,
+        "threads": 655
+      }
+    ],
+    "display": {
+      "clients": 5,
+      "validations": 2700,
+      "rejected": 0,
+      "kicks": 5369,
+      "frames": 2698,
+      "blank_frames": 3,
+      "retired": 2698,
+      "reject_reason": 0,
+      "transfer_status": 0,
+      "client_status": 0,
+      "power_status": 0,
+      "bytes": 27273542400,
+      "nonblack": 0
+    },
+    "watchdog": {
+      "stage": 4,
+      "opens": 1,
+      "closes": 0,
+      "checkins": 165,
+      "last_checkin_counter": 38137797444,
+      "monitoring": true,
+      "counter_frequency": 19200000,
+      "failures": 0,
+      "last_selector": 1,
+      "missed_checkin": false
+    },
+    "panic_lines": [],
+    "pressure_lines": [],
+    "springboard_pid": 27,
+    "springboard_1000s": "Original SBDashBoardSetupViewController localized greeting animation",
+    "springboard_final": "Original UIApplication event runloop; previous BKS check-in wait has returned",
+    "onsite_hello": {
+      "handset_run": "evidence/private/android-return-run/20261106T172949Z",
+      "candidate": "artifacts/desktop-no-locationd-long/20261106T172309Z",
+      "observed_utc": "2026-11-06T17:50:40.210632+00:00",
+      "source": "direct_user_report",
+      "user_text": "目前开机了，显示的是苹果你好欢迎页面",
+      "visible_original_welcome_ui": true,
+      "sustained_60_seconds_verified": true,
+      "desktop_verified": false,
+      "independent_ufs_log_pending": false,
+      "full_checkpoint_status_unchanged": true,
+      "sustained_evidence": "User followup reports still continuously on initial page more than60s after initialHello report; not a desktop.",
+      "followup_utc": "2026-11-06T18:03:29.854358+00:00",
+      "followup_user_text": "目前我需要强制重启吗，他一直在初始页面",
+      "independent_ufs_interpretation": "interpretation.json"
+    },
+    "frame_samples": 13,
+    "rgb_samples_viewed": [
+      863,
+      1814,
+      2530
+    ],
+    "rgb_observation": "Dark/gray welcome-style background and tiny elements at90x195; exact greeting text not independently readable. No home icon grid/Dock.",
+    "sampled_framebuffer_differences": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "original_report_passed": false,
+    "xnu_executed": null,
+    "desktop_verified": false,
+    "next_action": "Official21H461 skip-setup/no-auto-dim ephemeralData seed; keep current services/memory/display/observer."
+  }
+}

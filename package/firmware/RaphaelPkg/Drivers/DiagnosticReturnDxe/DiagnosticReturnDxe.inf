@@ -75,6 +75,7 @@
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogBase
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogHz
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeWatchdogSeconds
+  gRaphaelTokenSpaceGuid.PcdRaphaelHardwareWatchdogReturn
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeKallocZones
   gRaphaelTokenSpaceGuid.PcdRaphaelNativePlatformTest
   gRaphaelTokenSpaceGuid.PcdRaphaelNativeEarlyTest

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: BSD-2-Clause-Patent
-// Ephemeral, unprotected development Data only. No key or passcode operations.
+// Ephemeral, unprotected development Data; optional software wrapping, no passcode protection.
 #include <IOKit/IOService.h>
 #include <IOKit/IOPlatformExpert.h>
 #include <IOKit/IOLib.h>
@@ -28,9 +28,18 @@ bool native_aks_state_enabled(void) {
 }
 // The explicitly enabled scratch Data volume has no passcode. In the pinned
 // 21H461 SBFMobileKeyBag ABI, sls == 3 means no passcode; sls == 0 means
-// unlocked and still makes hasPasscodeSet true. This service has no key or
-// passcode operations and must never describe a protected user volume.
+// unlocked and still makes hasPasscodeSet true. Optional software wrapping
+// does not turn this scratch volume into a protected user volume.
 uint32_t native_aks_lock_state(void) { return 3; }
+// The same private port-assigned UUID already consumed by IOPlatformUUID.
+// No board identifier or fallback is invented when the ADT input is absent.
+size_t native_aks_device_id(uint8_t *out,size_t capacity) {
+ DTEntry chosen=nullptr;const void *value=nullptr;unsigned length=0;
+ if(!out || capacity<16 || SecureDTLookupEntry(nullptr,"/chosen",&chosen)!=kSuccess ||
+    SecureDTGetProperty(chosen,"unixnu-platform-uuid",&value,&length)!=kSuccess ||
+    !value || length!=16)return 0;
+ memcpy(out,value,16);return 16;
+}
 void native_keyevents_open_refused(void) {raphael_offline_aks_refused=raphael_offline_aks_refused+1;}
 void native_aks_opened(void) {raphael_offline_aks_opens=raphael_offline_aks_opens+1;}
 void native_aks_call(uint32_t selector,int32_t result) {

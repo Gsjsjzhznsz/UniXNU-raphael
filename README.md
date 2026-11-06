@@ -2,11 +2,13 @@
 
 Independent [UniXNU](https://github.com/UniXNU/UniXNU) port for **Redmi K20 Pro / Xiaomi Mi 9T Pro (`raphael`, SM8150)**, paired with [UniXNU-sm8150-common](https://github.com/guowenye/UniXNU-sm8150-common).
 
-## Current status — 2026-11-05
+## Current status - 2026-11-07
 
-Local handset experiments have mounted original APFS/SystemOS, entered original launchd, used ephemeral writable Data, started SpringBoard and submitted display-service frames. The latest recovered 12-minute sample recorded 2,237 completed frames and no display transfer error; the user observed a loading bar followed by a black screen. SpringBoard still waits for LaunchServices database initialization. **A visible desktop and interaction have not been verified.**
+The physical raphael handset now reaches the original iPadOS 17.7.11 (21H461) Hello UI and, with the official temporary skip-setup preferences, the native date-and-clock lock screen. The user supplied a lock-screen photograph and confirmed that swiping had no effect. **The icon home screen and touch interaction are not yet verified.**
 
-The latest candidate adds a 30-minute observation contract and independent LaunchServices progress snapshots every 120 physical seconds. Kernel/payload build, 39 recovery-QEMU checks and boot-image structure checks passed. That candidate has **not** been booted on the handset. Public summaries are source-maintained notes; historical raw device logs remain private and do not establish formal public `device-verified` status.
+Continuous UFS logs confirm original SpringBoard entering its UI event loop. Automatic watchdog return and log recovery remain enabled. Current work adds an independent GT9889 touch provider: the pinned Xiaomi source identifies SE19 I2C address 0x5d and the Normandy frame protocol. Host-tested packet decoding is present; native bus/HID integration and physical interaction are pending. See [touch status](docs/TOUCH-DRIVER.zh-CN.md).
+
+Historical raw logs, device data, vendor firmware, OS images and generated boot images remain private. Public notes describe implementation and local results; they do not upgrade the formal porting-record evidence level.
 
 ## Repository layout
 
