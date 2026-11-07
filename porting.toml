@@ -333,6 +333,11 @@ next_action = ["Standard console handoff is observed and five sampled framebuffe
 
 [[area.evidence]]
 kind = "source"
+reference = "development/scripts/fixtures/goodix_protocol_host.c"
+result = "Host-only Goodix fixture checks ACK failures, state preservation, invalid ranges and recovery; no device access."
+
+[[area.evidence]]
+kind = "source"
 reference = "evidence/porting-status-20261101.md"
 result = "Sanitized source-maintained progress and evidence limits; no public device-log assertion."
 
