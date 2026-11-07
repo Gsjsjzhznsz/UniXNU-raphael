@@ -8,6 +8,8 @@
 #define RPH_GOODIX_CONTACTS 10
 struct rph_goodix_contact { uint8_t id,width; uint16_t x,y; };
 struct rph_goodix_frame { uint8_t count; struct rph_goodix_contact contacts[RPH_GOODIX_CONTACTS]; };
+// Zero means the complete transfer succeeded; short transfers must be errors.
+// A write error does not establish whether the controller accepted the ACK.
 struct rph_goodix_bus {
  void *context;
  int (*read)(void *,uint16_t,uint8_t *,size_t);

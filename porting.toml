@@ -193,7 +193,7 @@ paths = ["package/firmware/RaphaelPkg/Drivers/PmicInputDxe/**", "package/firmwar
 inputs = ["Observed qpnp_pon/gpio-keys and Goodix GT9889 binding; sensor bus, pins/IRQ, protocol, firmware, touch IDs and coordinate transform need device-specific validation."]
 configuration = ["Firmware PMIC key diagnostics are separate from an XNU HID/Goodix driver; no other-board touch component selected."]
 procedure = ["Inventory pinned Xiaomi Goodix driver and current-device binding; measure a read-only transaction, then design bounded IRQ/event/coordinate handling."]
-findings = ["Firmware keys do not demonstrate native OS touch or reliable desktop interaction.", "2026-11-07: original Hello UI and native lock screen observed; swiping has no effect because no native Goodix/HID provider is integrated. Independent Normandy packet decoding and read/ACK core pass host ASan/UBSan fixtures; native bus, HID delivery and physical interaction remain pending.", "The host protocol core now preserves the previously published frame if acknowledgement fails and rejects register ranges that would wrap. Sanitizer fixtures cover failure, recovery and rejected packet acknowledgements. No handset interaction was performed; hardware acknowledgement behavior still needs validation."]
+findings = ["Firmware keys do not demonstrate native OS touch or reliable desktop interaction.", "2026-11-07: original Hello UI and native lock screen observed; swiping has no effect because no native Goodix/HID provider is integrated. Independent Normandy packet decoding and read/ACK core pass host ASan/UBSan fixtures; native bus, HID delivery and physical interaction remain pending.", "The host protocol core preserves the previously published frame if acknowledgement fails and rejects register ranges that would wrap. Sanitizer fixtures cover failures and a simulated ACK-cleared latch; ambiguous ACK completion and contact resynchronization need a hardware-backed contract. No handset interaction was performed."]
 completion = ["Native HID events with stable contact IDs and correct1080x2340 coordinates; press/move/release and key recovery visible in system UI."]
 limits = ["No native handset touch/HID implementation or interaction proof.", "This source snapshot does not replace the exact source state of historical experiments. Raw logs and device inputs remain private; source summaries do not establish a formal public verification level."]
 next_action = ["Pin the matching Goodix protocol/firmware and board interrupt/pin inputs before implementing a native input provider."]
@@ -334,7 +334,7 @@ next_action = ["Standard console handoff is observed and five sampled framebuffe
 [[area.evidence]]
 kind = "source"
 reference = "development/scripts/fixtures/goodix_protocol_host.c"
-result = "Host-only Goodix fixture checks ACK failures, state preservation, invalid ranges and recovery; no device access."
+result = "Host-only Goodix fixture checks ACK failures, state preservation, invalid ranges and a simulated ACK-cleared latch; bus completion and contact resynchronization remain unqualified. No device access."
 
 [[area.evidence]]
 kind = "source"
