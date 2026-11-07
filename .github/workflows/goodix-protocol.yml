@@ -1,0 +1,19 @@
+name: Goodix protocol host tests
+
+on: [push, pull_request]
+
+permissions:
+  contents: read
+
+jobs:
+  goodix-protocol:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile and run sanitizer fixture
+        run: |
+          gcc -std=c11 -Wall -Wextra -Werror -fsanitize=address,undefined \
+            -fno-omit-frame-pointer -I package/drivers \
+            development/scripts/fixtures/goodix_protocol_host.c \
+            -o "$RUNNER_TEMP/goodix-protocol-host"
+          "$RUNNER_TEMP/goodix-protocol-host"

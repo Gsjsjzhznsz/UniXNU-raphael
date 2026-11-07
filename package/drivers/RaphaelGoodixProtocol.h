@@ -35,19 +35,21 @@ static inline int rph_goodix_decode(const uint8_t *data,size_t length,struct rph
 }
 static inline int rph_goodix_poll(struct rph_goodix_bus *bus,uint16_t coordinates,struct rph_goodix_frame *out,uint8_t *status) {
  uint8_t data[84]={0};
- if(!bus || !bus->read || !bus->write || !coordinates)return RPH_GOODIX_INVALID;
+ if(!bus || !bus->read || !bus->write || !out || !coordinates || coordinates>UINT16_MAX-83u)return RPH_GOODIX_INVALID;
  if(bus->read(bus->context,coordinates,data,12))return RPH_GOODIX_IO;
  if(status)*status=data[0];
  if(!(data[0]&0x80))return (data[0]&0x40)?RPH_GOODIX_REQUEST:RPH_GOODIX_NONE;
  unsigned count=data[1]&15;
  int result=RPH_GOODIX_INVALID;
+ struct rph_goodix_frame next;
  if(count<=RPH_GOODIX_CONTACTS) {
   if(count>1 && bus->read(bus->context,(uint16_t)(coordinates+12),data+12,8*(count-1)))result=RPH_GOODIX_IO;
-  else result=rph_goodix_decode(data,sizeof(data),out);
+  else result=rph_goodix_decode(data,sizeof(data),&next);
  }
  // The hardware latches the packet until this ACK, including rejected packets.
  // An ACK failure cannot be reported as a successful frame (would replay it).
  uint8_t clear=0;
  if(bus->write(bus->context,coordinates,&clear,1))return RPH_GOODIX_IO;
+ if(result==RPH_GOODIX_FRAME)*out=next;
  return result;
 }

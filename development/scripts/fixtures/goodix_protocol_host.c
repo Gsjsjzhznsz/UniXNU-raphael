@@ -20,13 +20,17 @@ int main(void) {
  f.packet[1]=0;checksum(f.packet);assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==1 && frame.count==0);
  f.packet[1]=10;for(unsigned i=0;i<10;++i)contact(f.packet,i,i,i*100,i*200);checksum(f.packet);
  assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==1 && frame.count==10);
- f.packet[9]^=1;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-2 && frame.count==10);f.packet[9]^=1;
- contact(f.packet,1,0,100,200);checksum(f.packet);assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-3);
- contact(f.packet,1,1,1080,200);checksum(f.packet);assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-3);
- f.packet[1]=15;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-3);
+ unsigned a=f.acks;f.packet[9]^=1;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-2 && frame.count==10 && f.acks==a+1);f.packet[9]^=1;
+ a=f.acks;contact(f.packet,1,0,100,200);checksum(f.packet);assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-3 && f.acks==a+1);
+ a=f.acks;contact(f.packet,1,1,1080,200);checksum(f.packet);assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-3 && f.acks==a+1);
+ a=f.acks;f.packet[1]=15;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-3 && f.acks==a+1);
  f.packet[1]=2;contact(f.packet,1,1,100,200);checksum(f.packet);f.reads=0;f.fail_read=1;
- assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-1);f.fail_read=0;f.fail_ack=1;
- assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-1);f.fail_ack=0;
- f.packet[0]=0x40;unsigned a=f.acks;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==2 && f.acks==a);
+ a=f.acks;struct rph_goodix_frame saved=frame;
+ assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-1 && f.acks==a+1 && memcmp(&frame,&saved,sizeof(frame))==0);f.fail_read=0;f.fail_ack=1;
+ a=f.acks;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==-1 && f.acks==a+1 && memcmp(&frame,&saved,sizeof(frame))==0);f.fail_ack=0;
+ assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==1 && frame.count==2);
+ f.packet[0]=0x40;a=f.acks;assert(rph_goodix_poll(&bus,0x9000,&frame,&status)==2 && f.acks==a);
+ unsigned reads=f.reads;assert(rph_goodix_poll(&bus,0xffad,&frame,&status)==RPH_GOODIX_INVALID && f.reads==reads);
+ assert(rph_goodix_poll(&bus,0x9000,NULL,&status)==RPH_GOODIX_INVALID && f.reads==reads);
  puts("PASS Goodix: press/move/release, reordered IDs, ten contacts, checksum, bounds, I/O failure and ACK");
 }

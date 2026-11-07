@@ -4,4 +4,6 @@
 
 固定Xiaomi raphael-p-oss 663db50e195a8a54c8565ac4ab0c6d9ba7d80db0描述GT9889位于SE19/I2C0x5d，GPIO54复位、122中断、98/100电源，坐标0..1079、0..2339。坐标寄存器来自匹配的私有Goodix配置文件，不能直接采用源码默认常量。
 
-独立Normandy帧解码、分段读取和应答位于package/drivers/RaphaelGoodixProtocol.h。ASan/UBSan主机fixture覆盖按下/移动/抬起、ID重排、十触点、坏校验、越界及总线失败。当前尚未连接实机总线与原IOHIDFamily；仍须原生自动日志及最后真实滑动验证。构建通过不等于触摸可用。
+独立Normandy帧解码、分段读取和应答位于package/drivers/RaphaelGoodixProtocol.h。ASan/UBSan主机fixture覆盖按下/移动/抬起、ID重排、十触点、坏校验、越界及总线失败。应答失败时不发布新帧，寄存器范围溢出时拒绝访问；测试还检查坏帧应答及失败后恢复。硬件是否具有相应锁存和应答行为仍需实机核实。
+
+现有Helium的raphael触摸实现是I2C轮询和字符设备路径，不是可直接复用的iPadOS原生HID；其芯片识别及寄存器配置需结合本机固件核实。UniXNU当前单核中断实现未提供通用SPI分发，不能直接启用触摸中断；独占资源、控制器状态恢复、HID ABI及实机输入均待验证。主机测试不等于触摸可用。
