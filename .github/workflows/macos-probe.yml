@@ -2,11 +2,12 @@ name: macos probe
 on:
   workflow_dispatch:
 jobs:
-  probe-linux:
-    runs-on: ubuntu-latest
+  probe-mac15:
+    runs-on: macos-15
     steps:
-      - run: echo ubuntu ok
-  probe-mac:
-    runs-on: macos-14
-    steps:
-      - run: echo macos ok && sw_vers
+      - run: |
+          sw_vers
+          ls /Applications | grep -i xcode
+          xcode-select -p
+          xcodebuild -version
+          which iig || echo no-iig
